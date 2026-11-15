@@ -1,0 +1,207 @@
+﻿1. Table Partitioning
+1.1 Mục đích chính của partitioning trong SQL Server là gì?
+A. Tăng số lượng cột trong bảng
+B. Tối ưu hiệu suất bằng cách chia nhỏ bảng lớn 
+C. Giảm kích thước file log
+D. Tăng số lượng chỉ mục
+1.2 Partitioning key phải là một phần của chỉ mục nào nếu bảng có clustered index?
+A. Primary key
+B. Foreign key
+C. Clustered index key 
+D. Unique constraint
+1.3 Partition function dùng để làm gì?
+A. Tạo chỉ mục cho bảng
+B. Xác định kiểu dữ liệu của partitioning key và các điểm ranh giới 
+C. Tạo filegroup mới
+D. Nén dữ liệu trong bảng
+1.4 Trong Azure SQL Database, partitioning được hỗ trợ như thế nào?
+A. Không hỗ trợ partitioning
+B. Partitioning chỉ trên filegroup phụ
+C. Partitioning chỉ trên PRIMARY filegroup 
+D. Partitioning với nén dữ liệu
+1.5 Điều kiện nào sau đây là đúng với partitioning key?
+A. Có thể là bất kỳ kiểu dữ liệu nào
+B. Có thể là TEXT hoặc XML
+C. Không được là kiểu VARCHAR(MAX) 
+D. Phải là khóa chính
+1.6 Khi tạo partition scheme, điều gì xảy ra nếu bạn dùng từ khóa ALL TO?
+A. Mỗi partition được lưu ở filegroup khác nhau
+B. Tất cả partition được lưu ở cùng một filegroup 
+C. Partition không được tạo
+D. Partition được lưu ở bộ nhớ
+1.7 Một chỉ mục được xem là “aligned” khi nào?
+A. Khi nó nằm trên cùng filegroup với bảng
+B. Khi nó dùng cùng partition function với bảng 
+C. Khi nó là clustered index
+D. Khi nó là nonclustered index
+1.8 Partitioning key nên được chọn dựa trên tiêu chí nào?
+A. Là cột có giá trị NULL nhiều nhất
+B. Là cột không được dùng trong truy vấn
+C. Là cột được dùng làm điều kiện lọc trong truy vấn 
+D. Là cột có kiểu dữ liệu TEXT
+2. Implementing Partitioning
+2.1 Để partition bảng đã tồn tại, bạn cần thực hiện bước nào?
+A. Xóa bảng và tạo lại
+B. Xóa clustered index và tạo lại trên partition scheme 
+C. Thêm cột mới làm partition key
+D. Nén bảng trước khi partition
+2.2 Partition function được tạo với cú pháp nào?
+A. CREATE PARTITION SCHEME
+B. CREATE PARTITION FUNCTION 
+C. CREATE INDEX
+D. CREATE TABLE
+2.3 Khi tạo bảng mới trên partition scheme, bạn cần chỉ định gì trong câu lệnh CREATE TABLE?
+A. Filegroup
+B. Partition function
+C. Partition scheme và cột partitioning key 
+D. Chỉ mục chính
+2.4 Khi dùng RANGE LEFT trong partition function, giá trị bằng điểm ranh giới sẽ được đưa vào partition nào?
+A. Bên phải điểm ranh giới
+B. Bên trái điểm ranh giới 
+C. Partition cuối cùng
+D. Partition đầu tiên
+2.5 Khi tạo partition scheme, bạn có thể ánh xạ partition đến đâu?
+A. Chỉ đến PRIMARY filegroup
+B. Đến nhiều filegroup khác nhau 
+C. Chỉ đến bộ nhớ
+D. Chỉ đến một bảng
+2.6 Khi tạo clustered index trên partition scheme, điều gì xảy ra?
+A. Bảng được chia theo cột chỉ mục
+B. Bảng được nén
+C. Bảng được partition theo cột chỉ mục 
+D. Bảng được lưu trên filegroup mặc định
+2.7 Để kiểm tra phân phối dữ liệu sau khi partition, bạn nên làm gì?
+A. Dùng sp_help
+B. Dùng $PARTITION function 
+C. Dùng sys.tables
+D. Dùng sys.indexes
+2.8 Khi tạo bảng ExistingOrders, dữ liệu được lưu ở đâu trước khi partition?
+A. Trên bộ nhớ
+B. Trên filegroup phụ
+C. Trên PRIMARY filegroup 
+D. Trên partition scheme
+3. Monitoring Partitioned Tables
+3.1 Hàm nào dùng để kiểm tra số lượng dòng trong từng partition?
+A. COUNT(*)
+B. $PARTITION 
+C. GETPARTITION()
+D. PARTITION_COUNT()
+3.2 Khi dùng $PARTITION với một partition function khác, bạn có thể làm gì?
+A. Xóa dữ liệu trong partition
+B. Nén partition
+C. Đánh giá cách phân phối dữ liệu nếu dùng function mới 
+D. Tạo chỉ mục mới
+3.3 Lệnh nào dùng để thêm điểm ranh giới mới vào partition function?
+A. MERGE
+B. SWITCH
+C. SPLIT 
+D. ADD RANGE
+3.4 SWITCH hoạt động như thế nào?
+A. Di chuyển dữ liệu giữa các filegroup
+B. Di chuyển dữ liệu giữa bảng và partition bằng cách thay đổi metadata 
+C. Nén dữ liệu trong partition
+D. Xóa dữ liệu trong partition
+3.5 Khi nào SQL Server thực hiện checkpoint tự động?
+A. Sau mỗi lần INSERT
+B. Sau mỗi lần tạo bảng
+C. Khi file log vượt quá 1.5 GB kể từ checkpoint trước đó 
+D. Khi có lỗi hệ thống
+3.6 Để partition elimination hoạt động, điều kiện nào phải được thỏa mãn?
+A. Bảng phải có clustered index
+B. Partitioning key phải nằm trong mệnh đề WHERE 
+C. Bảng phải được nén
+D. Partition phải nằm trên filegroup riêng
+3.7 Khi dùng MERGE trên partition function, điều gì xảy ra?
+A. Tạo thêm partition mới
+B. Gộp hai partition lại bằng cách xóa điểm ranh giới 
+C. Di chuyển dữ liệu sang bảng khác
+D. Nén dữ liệu trong partition
+3.8 Lệnh nào dùng để xem các giá trị ranh giới của một partition function?
+A. SELECT * FROM sys.tables
+B. EXEC sp_help_partition
+C. SELECT FROM sys.partition_range_values JOIN sys.partition_functions 
+D. SELECT * FROM sys.filegroups
+4. Table Compression
+4.1 Row compression giúp tiết kiệm không gian bằng cách nào?
+A. Nén toàn bộ bảng thành một file
+B. Sử dụng ít byte hơn cho dữ liệu nhỏ 
+C. Xóa các dòng NULL
+D. Di chuyển dữ liệu sang bộ nhớ
+4.2 Page compression bao gồm những kỹ thuật nào?
+A. Row và XML compression
+B. Prefix và dictionary compression 
+C. Columnstore và row compression
+D. Hash và anchor compression
+4.3 Lệnh nào dùng để ước lượng hiệu quả nén dữ liệu?
+A. sp_compress_table
+B. sp_estimate_data_compression_savings 
+C. sp_partition_stats
+D. sp_index_usage
+4.4 Khi thực hiện page compression, điều gì xảy ra trước tiên?
+A. Dictionary compression
+B. Row compression 
+C. Columnstore compression
+D. Filegroup mapping
+4.5 Dictionary compression hoạt động như thế nào?
+A. Nén dữ liệu theo từng cột
+B. Tìm các giá trị trùng lặp và lưu vào từ điển 
+C. Xóa các dòng NULL
+D. Di chuyển dữ liệu sang bảng khác
+4.6 Khi nén bảng bằng page compression, điều gì có thể ảnh hưởng đến hiệu suất?
+A. Số lượng chỉ mục
+B. Chu kỳ CPU tăng lên do xử lý nén/giải nén 
+C. Số lượng filegroup
+D. Loại partition scheme
+4.7 Unicode được nén như thế nào trong row compression?
+A. Luôn dùng 2 byte
+B. Dùng 1 byte nếu có thể 
+C. Không thể nén
+D. Dùng dictionary compression
+4.8 Lệnh nào dùng để nén một partition cụ thể?
+A. ALTER PARTITION SCHEME
+B. ALTER TABLE ... REBUILD PARTITION = n WITH (DATA_COMPRESSION = ROW) 
+C. CREATE PARTITION FUNCTION
+D. ALTER INDEX ... REBUILD
+
+
+5. Memory-Optimized Tables
+5.1 Bộ nhớ chính là nơi lưu trữ chính của bảng nào?
+A. Partitioned table
+B. Memory-optimized table 
+C. Compressed table
+D. Columnstore table
+5.2 Memory-optimized table có thể có độ bền như thế nào?
+A. Chỉ lưu trên disk
+B. Durable hoặc non-durable 
+C. Chỉ lưu trên memory
+D. Chỉ lưu trên filegroup phụ
+5.3 Lệnh nào dùng để tạo bảng memory-optimized?
+A. CREATE MEMORY TABLE
+B. CREATE TABLE ... WITH (MEMORY_OPTIMIZED = ON) 
+C. CREATE TABLE ... FILESTREAM
+D. CREATE TABLE ... PARTITIONED
+5.4 Loại chỉ mục nào được hỗ trợ bởi memory-optimized table?
+A. Clustered index
+B. Full-text index
+C. Nonclustered hash index 
+D. XML index
+5.5 Khi cập nhật dữ liệu trong memory-optimized table, điều gì xảy ra?
+A. Dữ liệu được ghi đè
+B. Một dòng bị xóa và dòng mới được chèn 
+C. Dữ liệu được nén lại
+D. Dữ liệu được lưu vào filegroup phụ
+5.6 Quá trình MERGE trong memory-optimized table dùng để làm gì?
+A. Nén dữ liệu
+B. Xóa dòng đã bị đánh dấu xóa 
+C. Di chuyển dữ liệu sang bảng khác
+D. Tạo chỉ mục mới
+5.7 Khi migrate bảng đã nén sang memory-optimized table, điều gì cần lưu ý?
+A. Không cần thay đổi gì
+B. Phải tính lại kích thước vì memory-optimized không hỗ trợ nén 
+C. Phải xóa clustered index
+D. Phải tạo lại partition scheme
+5.8 Khi nào checkpoint tự động được thực hiện trong memory-optimized table?
+A. Sau mỗi lần INSERT
+B. Khi file log vượt quá 1.5 GB 
+C. Khi bảng bị xóa
+D. Khi tạo chỉ mục mới

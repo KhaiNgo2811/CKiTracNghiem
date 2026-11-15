@@ -1,0 +1,593 @@
+{
+  "chapterId": "HOT",
+  "chapterName": "Câu hỏi tủ (đề năm ngoái)",
+  "topics": [
+    {
+      "topicId": "HOT_T1",
+      "topicName": "Đề năm ngoái – câu 1 đến 50 (giữ số thứ tự câu)",
+      "questions": [
+        {
+          "id": "HOT_Q1",
+          "question": "Firebolt là một nền tảng có đặc điểm:",
+          "options": {
+            "A": "Tập trung vào tốc độ truy vấn cực nhanh cho các ứng dụng phân tích thời gian thực",
+            "B": "Kiến trúc Serverless mạnh mẽ, tích hợp sẵn các mô hình AI/ML của Google",
+            "C": "Tiên phong trong tách rời Compute/Storage và chia sẻ dữ liệu an toàn",
+            "D": "Mang trải nghiệm Warehouse vào nền tảng Lakehouse cho hiệu năng cao"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_Q2",
+          "question": "Trong chiến lược quản lý chi phí của Modern Data Warehouse, cơ chế nào được dùng để tránh tính toán lại những kết quả cũ?",
+          "options": {
+            "A": "Caching",
+            "B": "Refreshing",
+            "C": "Filtering",
+            "D": "Cleaning"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_Q3",
+          "question": "Data Catalog là gì?",
+          "options": {
+            "A": "Nơi lưu trữ và phân tích toàn bộ Metadata của hệ thống",
+            "B": "Lớp quản trị bảo mật tập trung cho toàn bộ hệ sinh thái",
+            "C": "Sử dụng AI để hỗ trợ việc ánh xạ và tích hợp dữ liệu",
+            "D": "Thư viện chứa thông tin và vị trí của mọi nguồn dữ liệu trong công ty"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_Q4",
+          "question": "Data Fabric có mục tiêu quan trọng là gì?",
+          "options": {
+            "A": "Tập trung vào Hiệu năng & Hợp nhất ba tầng kỹ thuật",
+            "B": "Tập trung vào Con người & Tổ chức",
+            "C": "Tập trung vào Kết nối & Ảo hóa các nguồn dữ liệu rời rạc",
+            "D": "Tập trung vào Quy trình vận hành"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_Q5",
+          "question": "Bucket Policies có chức năng gì?",
+          "options": {
+            "A": "Kiểm soát quyền truy cập chi tiết dựa trên danh tính người dùng",
+            "B": "Quy định quyền truy cập cho toàn bộ Data Container từ bên ngoài",
+            "C": "Sử dụng giao thức TLS để bảo vệ dữ liệu khi di chuyển qua mạng",
+            "D": "Lưu lại các bản sao của file để khôi phục"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_Q6",
+          "question": "Với Micro-partitioning, mỗi phân vùng thường có từ...",
+          "options": {
+            "A": "500MB đến 1GB dữ liệu nén",
+            "B": "10MB đến 100MB dữ liệu nén",
+            "C": "50MB đến 500MB dữ liệu nén",
+            "D": "100MB đến 200MB dữ liệu nén"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_Q7",
+          "question": "Trong chiến lược Clustering, Clustering Key được chọn dựa trên...",
+          "options": {
+            "A": "Column (cột)",
+            "B": "Row (dòng)",
+            "C": "Cell",
+            "D": "Table"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_Q8",
+          "question": "Accumulating Snapshot Fact Tables phù hợp cho...",
+          "options": {
+            "A": "Tính toán trên các bảng có giao dịch khổng lồ",
+            "B": "Các bài toán Drill-down chi tiết",
+            "C": "Phân tích xu hướng",
+            "D": "Tối ưu hóa chuỗi cung ứng và vận hành"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_Q9",
+          "question": "Bridge Table dùng để làm gì?",
+          "options": {
+            "A": "So sánh hiệu năng giữa các bảng chiều",
+            "B": "Lưu sự kiện không có số liệu",
+            "C": "Giải quyết mối quan hệ nhiều-nhiều (M-M)",
+            "D": "Tính toán real time giữa các bước"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_Q10",
+          "question": "Fact table được kết hợp với Dimension table bằng phép toán nào?",
+          "options": {
+            "A": "Union",
+            "B": "Join",
+            "C": "Select",
+            "D": "Except"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_Q11",
+          "question": "Một đặc tính của Snowflake Evolution (Schema Evolution) là gì?",
+          "options": {
+            "A": "Hỗ trợ thay đổi cấu trúc mà không cần ghi lại (rewrite) toàn bộ bảng",
+            "B": "Quản lý tập trung và kiểm soát các thay đổi của luồng Kafka Streaming",
+            "C": "Tự động phát hiện thay đổi ở nguồn và đồng bộ thay đổi vào đích",
+            "D": "Giúp kho dữ liệu tự động điều chỉnh cấu trúc bảng khi nguồn thay đổi"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_Q12",
+          "question": "Singular Test (dbt) thực hiện chức năng nào?",
+          "options": {
+            "A": "Kiểm tra tính duy nhất / không null trên một cột bằng khai báo sẵn",
+            "B": "Viết câu lệnh SQL riêng biệt để kiểm tra các tình huống nghiệp vụ đặc thù",
+            "C": "Tự động sinh thêm các điều kiện lọc cho model",
+            "D": "Đưa code vào trình duyệt để kiểm thử"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_Q13",
+          "question": "Sự kết hợp mạnh mẽ giữa Jinja và Dynamic SQL có thể...",
+          "options": {
+            "A": "Giúp giảm thiểu hơn 20% số dòng code dư thừa so với cách viết truyền thống",
+            "B": "Giúp giảm thiểu hơn 30% số dòng code dư thừa so với cách viết truyền thống",
+            "C": "Giúp giảm thiểu hơn 70% số dòng code dư thừa so với cách viết truyền thống",
+            "D": "Giúp giảm thiểu hơn 50% số dòng code dư thừa so với cách viết truyền thống"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_Q14",
+          "question": "Apache Airflow có đặc tính là gì?",
+          "options": {
+            "A": "Quản lý việc tạo ra dữ liệu",
+            "B": "Theo dõi nguồn gốc (lineage) và trạng thái dữ liệu",
+            "C": "Giám sát tác vụ đang chạy",
+            "D": "Quản lý vòng đời và chất lượng code"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_Q15",
+          "question": "Storage Mirroring có những đặc điểm nào?",
+          "options": {
+            "A": "Giúp quản lý toàn bộ khối lượng công việc trên một trung tâm kiểm soát duy nhất",
+            "B": "Tự động sao chép dữ liệu từ nguồn mà không cần xây dựng pipeline ETL",
+            "C": "Nhận bản sao dữ liệu từ hệ thống nguồn và liên tục cập nhật theo sự thay đổi",
+            "D": "Truy vấn trực tiếp dữ liệu nguồn mà không cần sao chép/di chuyển"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_Q16",
+          "question": "Giả sử dataset D có 10 mẫu thuộc 2 lớp: 6 mẫu Good và 4 mẫu Bad. Entropy của D xấp xỉ bao nhiêu?",
+          "options": {
+            "A": "0.912 bit",
+            "B": "0.971 bit",
+            "C": "0.794 bit",
+            "D": "0.719 bit"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_Q17",
+          "question": "Khách hàng có thu nhập thấp nhất 5 triệu, cao nhất 10 triệu. Thu nhập 8 triệu sau khi chuẩn hóa Min-Max có giá trị là bao nhiêu?",
+          "options": {
+            "A": "0.67",
+            "B": "0.70",
+            "C": "0.60",
+            "D": "0.83"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_Q18",
+          "question": "Ngân hàng X chia khách hàng thành 3 nhóm theo Equal-width Binning. Thu nhập thấp nhất 100 triệu, cao nhất 700 triệu. Nhóm thu nhập thấp nhất nằm trong khoảng nào?",
+          "options": {
+            "A": "Từ 100 triệu đến 300 triệu",
+            "B": "Từ 150 triệu đến 290 triệu",
+            "C": "Từ 210 triệu đến 250 triệu",
+            "D": "Từ 250 triệu đến 280 triệu"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_Q19",
+          "question": "Cho công thức Info_A(D) = Σ(j=1→v) (|Dⱼ|/|D|) × Info(Dⱼ). Trong công thức trên, v đại diện cho gì?",
+          "options": {
+            "A": "Các giá trị khác nhau của mỗi lớp",
+            "B": "Các giá trị khác nhau của mỗi Entropy",
+            "C": "Các giá trị khác nhau của mỗi thuộc tính",
+            "D": "Các giá trị khác nhau của mỗi mẫu tin"
+          },
+          "correctAnswer": "C",
+          "images": [
+            "assets/img/eq_infoA.png"
+          ]
+        },
+        {
+          "id": "HOT_Q20",
+          "question": "Trong công thức Info(D) = −Σ(i=1→m) pᵢ·log₂(pᵢ), m là gì?",
+          "options": {
+            "A": "Số lượng lớp",
+            "B": "Số lượng thuộc tính",
+            "C": "Số lượng giá trị của một thuộc tính",
+            "D": "Số lượng Entropy"
+          },
+          "correctAnswer": "A",
+          "images": [
+            "assets/img/eq_info.png"
+          ]
+        },
+        {
+          "id": "HOT_Q21",
+          "question": "Z-Score Normalization hữu ích khi nào?",
+          "options": {
+            "A": "Khi dữ liệu có nhiều ngoại lai và khi biết trước Min-Max",
+            "B": "Khi dữ liệu có nhiều ngoại lai hoặc khi biết trước Min-Max",
+            "C": "Khi dữ liệu có nhiều ngoại lai hoặc khi không biết trước Min-Max",
+            "D": "Khi dữ liệu có nhiều ngoại lai và khi không biết trước Min-Max"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_Q22",
+          "question": "Decimal Scaling được xác định dựa trên...",
+          "options": {
+            "A": "Giá trị lớn nhất của thuộc tính",
+            "B": "Giá trị tuyệt đối lớn nhất của thuộc tính",
+            "C": "Giá trị tuyệt đối nhỏ nhất của thuộc tính",
+            "D": "Giá trị nhỏ nhất của thuộc tính"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_Q23",
+          "question": "Phương pháp Equal-frequency Binning hiệu quả cho...",
+          "options": {
+            "A": "Dữ liệu bị lệch",
+            "B": "Dữ liệu bị nhiễu",
+            "C": "Dữ liệu phân phối chuẩn",
+            "D": "Dữ liệu có ít thuộc tính"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_Q24",
+          "question": "Mục đích của Discretization là gì?",
+          "options": {
+            "A": "Tăng số lượng giá trị và hỗ trợ các thuật toán",
+            "B": "Giảm số lượng giá trị",
+            "C": "Giảm số lượng giá trị và hỗ trợ các thuật toán",
+            "D": "Tăng số lượng giá trị chuyển hóa"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_Q25",
+          "question": "PCA (Principal Component Analysis) là phương pháp giảm chiều giúp giữ lại tối đa ... của dữ liệu",
+          "options": {
+            "A": "Số chiều dữ liệu",
+            "B": "Độ lệch chuẩn của dữ liệu",
+            "C": "Tính nhất quán của dữ liệu",
+            "D": "Phương sai của dữ liệu"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_Q26",
+          "question": "Dùng SMA (k = 3) theo dõi giá đóng cửa cổ phiếu X trong 6 ngày: 75, 79, 38, 80, 82, 85 (USD). SMA ngày 4 là bao nhiêu?",
+          "options": {
+            "A": "66 USD",
+            "B": "67 USD",
+            "C": "78 USD",
+            "D": "88 USD"
+          },
+          "correctAnswer": "A",
+          "images": [
+            "assets/img/sma_table.png"
+          ]
+        },
+        {
+          "id": "HOT_Q27",
+          "question": "Theo slide Apriori, nếu có n = 6 item đơn lẻ phổ biến thì số itemset gồm 2 phần tử được sinh ra để kiểm tra sơ bộ xấp xỉ bao nhiêu (n²/2)?",
+          "options": {
+            "A": "16",
+            "B": "18",
+            "C": "8",
+            "D": "12"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_Q28",
+          "question": "Cho CSDL giao dịch gồm 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Biết Leverage(X→Y) = Sup(X∪Y) − Sup(X)×Sup(Y). Với L: {c} → {d,e}, Leverage(L) là bao nhiêu?",
+          "options": {
+            "A": "0.074",
+            "B": "0.741",
+            "C": "0.047",
+            "D": "0.174"
+          },
+          "correctAnswer": "C",
+          "images": [
+            "assets/img/txn_table.png",
+            "assets/img/eq_leverage.png"
+          ]
+        },
+        {
+          "id": "HOT_Q29",
+          "question": "Cho CSDL giao dịch gồm 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với L: {c} → {d,e}, Sup(L) = Sup({c,d,e}) là bao nhiêu?",
+          "options": {
+            "A": "0.571",
+            "B": "0.357",
+            "C": "0.731",
+            "D": "0.375"
+          },
+          "correctAnswer": "D",
+          "images": [
+            "assets/img/txn_table.png"
+          ]
+        },
+        {
+          "id": "HOT_Q30",
+          "question": "Cho CSDL giao dịch gồm 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với L: {c} → {d,e}, Confidence(L) là bao nhiêu?",
+          "options": {
+            "A": "0.982",
+            "B": "0.924",
+            "C": "0.429",
+            "D": "0.249"
+          },
+          "correctAnswer": "C",
+          "images": [
+            "assets/img/txn_table.png"
+          ]
+        },
+        {
+          "id": "HOT_Q31",
+          "question": "Cho CSDL giao dịch gồm 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với FP-Growth, Minsup = 4, chuỗi item có thứ tự để chuẩn bị xây FP-Tree có thể là...",
+          "options": {
+            "A": "b, c, e, d",
+            "B": "c, a, b, d",
+            "C": "c, e, d, b",
+            "D": "d, c, b, e"
+          },
+          "correctAnswer": "C",
+          "images": [
+            "assets/img/txn_table.png"
+          ]
+        },
+        {
+          "id": "HOT_Q32",
+          "question": "Cho một phần thông tin của bảng Conditional Pattern Base: X:{Y:4,Z:3}; Y:{X:4,Z:4,T:4}; Z:{X:3,Y:4,T:3}; T:{Y:4,Z:3}. Với Minsup = 4, những tập phổ biến có 2 items chứa X là những tập nào?",
+          "options": {
+            "A": "{X,Y}",
+            "B": "{X,Y}, {X,Z}",
+            "C": "{X,Z}",
+            "D": "{X,T}"
+          },
+          "correctAnswer": "A",
+          "images": [
+            "assets/img/cpb_table.png"
+          ]
+        },
+        {
+          "id": "HOT_Q33",
+          "question": "Cho bảng Conditional Pattern Base: X:{Y:4,Z:3}; Y:{X:4,Z:4,T:4}; Z:{X:3,Y:4,T:3}; T:{Y:4,Z:3}. Với FP-Growth, Minsup = 4, những tập phổ biến có 2 items không chứa X là những tập nào?",
+          "options": {
+            "A": "{T,Z}, {Y,Z}",
+            "B": "{Y,Z}, {T,Y}",
+            "C": "{T,Z}, {T,Y}",
+            "D": "{Z,T}, {X,Y}"
+          },
+          "correctAnswer": "B",
+          "images": [
+            "assets/img/cpb_table.png"
+          ]
+        },
+        {
+          "id": "HOT_Q34",
+          "question": "Thông thường người ta chọn ngưỡng minsup là bao nhiêu?",
+          "options": {
+            "A": "3%",
+            "B": "1.5%",
+            "C": "2%",
+            "D": "1%"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_Q36",
+          "question": "Cho đồ thị liên kết (các cạnh: 1→2; 2→5; 3→1, 3→2, 3→4, 3→5; 4→3, 4→5; 5→4). PageRank khởi tạo bằng 1, d = 0.85. Giá trị PageRank của Page 2 ở vòng lặp đầu tiên là bao nhiêu?",
+          "options": {
+            "A": "0.2521",
+            "B": "1.2125",
+            "C": "1.2521",
+            "D": "0.2125"
+          },
+          "correctAnswer": "B",
+          "images": [
+            "assets/img/pagerank_graph.png",
+            "assets/img/eq_pagerank.png"
+          ]
+        },
+        {
+          "id": "HOT_Q37",
+          "question": "Cho đồ thị liên kết (các cạnh: 1→2; 2→5; 3→1, 3→2, 3→4, 3→5; 4→3, 4→5; 5→4). PageRank khởi tạo bằng 1, d = 0.85. Giá trị PageRank của Page 1 ở vòng lặp đầu tiên là bao nhiêu?",
+          "options": {
+            "A": "0.3256",
+            "B": "0.3265",
+            "C": "0.3625",
+            "D": "0.2536"
+          },
+          "correctAnswer": "C",
+          "images": [
+            "assets/img/pagerank_graph.png",
+            "assets/img/eq_pagerank.png"
+          ]
+        },
+        {
+          "id": "HOT_Q38",
+          "question": "Cho cây CPT sau (xây từ s1 = ⟨A,B,C,D,F⟩, s2 = ⟨D,C,B,E⟩, s3 = ⟨E,A,D,C,B⟩, s4 = ⟨E,G,A,D,B,C⟩). Phần tử có điểm dự đoán cao nhất khi dự đoán chuỗi ⟨D, C⟩ với giải thuật CPT là phần tử nào?",
+          "options": {
+            "A": "E",
+            "B": "B",
+            "C": "C",
+            "D": "F"
+          },
+          "correctAnswer": "B",
+          "images": [
+            "assets/img/cpt_tree.png"
+          ]
+        },
+        {
+          "id": "HOT_Q39",
+          "question": "Cho cấu trúc CPT+ gồm Prediction Tree, Inverted Index và Lookup Table như hình (x = AB). Hình ảnh minh họa cho chiến lược nén/tối ưu nào đã được áp dụng?",
+          "options": {
+            "A": "PNR (Prediction with improved Noise Reduction)",
+            "B": "FSC (Frequent Subsequence Compression)",
+            "C": "SBC (Simple Branches Compression)",
+            "D": "Không áp dụng chiến lược nào"
+          },
+          "correctAnswer": "B",
+          "images": [
+            "assets/img/cpt_plus_fsc.png"
+          ]
+        },
+        {
+          "id": "HOT_Q40",
+          "question": "Thông tin nào liên quan đến BFS (Breadth-First Search)?",
+          "options": {
+            "A": "Khám phá các mối quan hệ sâu và nhiều tầng giữa các thực thể",
+            "B": "Duyệt ontology để tìm các khái niệm con trong một lĩnh vực tri thức",
+            "C": "Xây dựng cây phân cấp (taxonomy) từ dữ liệu đồ thị",
+            "D": "Tìm đường đi ngắn nhất giữa hai thực thể trong đồ thị tri thức"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_Q41",
+          "question": "Thông tin nào liên quan đến DFS (Depth-First Search)?",
+          "options": {
+            "A": "Duyệt ontology để tìm các khái niệm con trong một lĩnh vực tri thức",
+            "B": "Hỗ trợ hệ thống gợi ý sản phẩm dựa trên các sản phẩm đã mua",
+            "C": "Tìm đường đi ngắn nhất giữa hai thực thể trong đồ thị tri thức",
+            "D": "Đề xuất kết nối mới trong mạng xã hội thông qua các mối quan hệ gần"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_Q42",
+          "question": "Dữ liệu thô trên Blockchain tồn tại ở dạng nào?",
+          "options": {
+            "A": "bit/hex",
+            "B": "byte/decimal",
+            "C": "byte/hex (phi cấu trúc)",
+            "D": "bit/decimal"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_Q43",
+          "question": "Một ví dụ của BI Tools là:",
+          "options": {
+            "A": "Looker",
+            "B": "ChatGPT",
+            "C": "Gemini",
+            "D": "DeepSeek"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_Q44",
+          "question": "IVFFLAT là khái niệm liên quan đến...",
+          "options": {
+            "A": "Embedding",
+            "B": "Vector Index",
+            "C": "Semantic Match",
+            "D": "Fuzzy Search"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_Q45",
+          "question": "Kỹ thuật CLM liên quan đến...",
+          "options": {
+            "A": "Bảo mật ô dữ liệu",
+            "B": "Bảo mật dòng dữ liệu",
+            "C": "Bảo mật cột dữ liệu",
+            "D": "Bảo mật toàn bộ bảng dữ liệu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_Q46",
+          "question": "Đạo luật AI Act phân loại các hệ thống AI thành bao nhiêu mức độ rủi ro?",
+          "options": {
+            "A": "7 mức độ rủi ro",
+            "B": "6 mức độ rủi ro",
+            "C": "4 mức độ rủi ro",
+            "D": "8 mức độ rủi ro"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_Q47",
+          "question": "Hệ thống truy vấn đa phương thức (multimodal) thường xử lý Text, Table, Image và một dạng dữ liệu cần truy vấn theo quan hệ giữa các thực thể (GraphRAG). Đó là dạng nào?",
+          "options": {
+            "A": "Graph",
+            "B": "Text",
+            "C": "Table",
+            "D": "Image"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_Q48",
+          "question": "Ngưỡng ε (độ chênh lệch giữa 2 PR của 2 vòng lặp liên tiếp) thường được chọn là bao nhiêu?",
+          "options": {
+            "A": "0.0001",
+            "B": "0.001",
+            "C": "0.01",
+            "D": "0.00001"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_Q49",
+          "question": "Chỉ số damping factor thường được các nhà nghiên cứu sử dụng với giá trị là bao nhiêu?",
+          "options": {
+            "A": "90%",
+            "B": "75%",
+            "C": "80%",
+            "D": "85%"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_Q50",
+          "question": "Số lượng các trang mà trang p liên kết đến được ký hiệu là gì?",
+          "options": {
+            "A": "C(p)",
+            "B": "T(p)",
+            "C": "PR(p)",
+            "D": "L(p)"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+﻿Chủ đề 1:. Tổng quan về Metadata
+1. Metadata trong SQL Server là gì? 
+A. Dữ liệu người dùng
+B. Dữ liệu mô tả cấu trúc và trạng thái hệ thống 
+C. Dữ liệu tạm thời
+D. Dữ liệu backup
+2. Metadata giúp ích gì trong quản trị hệ thống? 
+A. Tăng tốc độ mạng
+B. Giám sát, tối ưu và chẩn đoán hệ thống 
+C. Tăng dung lượng lưu trữ
+D. Tự động hóa backup
+3. Metadata được lưu trữ ở đâu trong SQL Server?
+A. Trong bảng người dùng
+B. Trong các catalog views và DMVs 
+C. Trong file log
+D. Trong tempdb
+Chủ đề 2: Catalog Views
+4. Catalog views cung cấp loại thông tin nào?
+A. Thống kê hiệu suất
+B. Cấu trúc tĩnh của cơ sở dữ liệu 
+C. Truy vấn đang chạy
+D. Thông tin mạng
+5. View nào chứa thông tin về tất cả các database trong instance? 
+A. sys.tables
+B. sys.databases 
+C. sys.columns
+D. sys.indexes
+6. View nào mô tả các mối quan hệ giữa các đối tượng trong database? 
+A. sys.dm_exec_requests
+B. sys.objects 
+C. sys.dm_os_wait_stats
+D. sys.dm_db_file_space_usage
+Chủ đề 3: Dynamic Management Views (DMVs)
+7. DMVs cung cấp loại thông tin nào? 
+A. Cấu trúc bảng
+B. Trạng thái động của hệ thống 
+C. Lịch sử backup
+D. Cấu hình mạng
+8. DMV nào dùng để theo dõi các truy vấn đang thực thi? 
+A. sys.dm_exec_sessions
+B. sys.dm_exec_requests 
+C. sys.dm_os_wait_stats
+D. sys.dm_exec_connections
+9. DMV nào dùng để phân tích các loại chờ trong hệ thống? 
+A. sys.dm_exec_query_stats
+B. sys.dm_os_wait_stats 
+C. sys.dm_exec_requests
+D. sys.dm_os_schedulers
+10. DMV nào cung cấp thông tin về bộ nhớ và hiệu suất? 
+A. sys.dm_exec_requests
+B. sys.dm_os_performance_counters 
+C. sys.dm_db_file_space_usage
+D. sys.dm_server_registry
+Chủ đề 4: Metadata về hiệu suất và bộ nhớ
+11. “Memory Grants Pending” phản ánh điều gì? 
+A. Số lượng truy vấn đang chạy
+B. Số truy vấn đang chờ cấp phát bộ nhớ 
+C. Số lượng bảng trong bộ nhớ
+D. Số lượng index bị lỗi
+12. “Buffer Cache Hit Ratio” càng cao thì: 
+A. Hệ thống càng chậm
+B. Cần thêm RAM
+C. Hiệu suất truy xuất dữ liệu càng tốt 
+D. Tăng số lượng index
+13. “Average Latch Wait Time” phản ánh: 
+A. Thời gian chờ truy vấn
+B. Thời gian trung bình chờ latch để truy cập bộ nhớ 
+C. Thời gian backup
+D. Thời gian khởi động dịch vụ
+Chủ đề 5: Metadata về dung lượng và file
+14. Metadata nào giúp theo dõi dung lượng file dữ liệu? 
+A. sys.dm_exec_requests
+B. sys.master_files 
+C. sys.dm_os_wait_stats
+D. sys.dm_exec_sessions
+15. DMV nào dùng để kiểm tra dung lượng sử dụng của các file trong tempdb? 
+A. sys.dm_os_buffer_descriptors
+B. sys.dm_db_file_space_usage 
+C. sys.dm_io_virtual_file_stats
+D. sys.database_files
+16. DMV nào cung cấp thống kê I/O cho các file dữ liệu và log?
+A. sys.dm_exec_requests
+B. sys.dm_io_virtual_file_stats 
+C. sys.dm_db_file_space_usage
+D. sys.dm_exec_sessions
+Chủ đề 6: Metadata về blocking và page-level
+17. Hàm nào dùng để giải mã chuỗi page_resource? 
+A. sys.fn_get_sql
+B. sys.fn_PageResCracker 
+C. sys.fn_index_usage
+D. sys.fn_get_waits
+18. DMV nào trả về thông tin header của một trang dữ liệu cụ thể? 
+A. sys.dm_exec_requests
+B. sys.dm_db_page_info 
+C. sys.dm_os_buffer_descriptors
+D. sys.dm_db_index_physical_stats
+19. View nào (dù đã lỗi thời) vẫn được dùng để kiểm tra blocking? 
+A. sys.dm_exec_sessions
+B. sys.sysprocesses 
+C. sys.dm_exec_requests
+D. sys.dm_os_wait_stats
+Chủ đề 7: Metadata về dịch vụ và cấu hình
+20. DMV nào cung cấp thông tin về các dịch vụ SQL Server đang chạy? 
+A. sys.dm_exec_requests
+B. sys.dm_server_services 
+C. sys.dm_os_sys_info
+D. sys.dm_server_registry

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ôn tập trắc nghiệm</title>
+<link rel="stylesheet" href="vendor/bootstrap.min.css">
+<link rel="stylesheet" href="vendor/bootstrap-icons.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-dark app-navbar mb-4 shadow-sm">
+  <div class="container">
+    <span class="navbar-brand"><i class="bi bi-mortarboard-fill"></i> Ôn tập trắc nghiệm <small id="navSubjectLabel" class="opacity-75"></small></span>
+    <button class="btn btn-outline-light btn-sm" id="btnChangeSubject"><i class="bi bi-arrow-left-right"></i> Đổi môn</button>
+  </div>
+</nav>
+
+<div class="container pb-5">
+
+  <!-- ============ CHỌN MÔN ============ -->
+  <section id="view-subjects" class="d-none">
+    <h4 class="mb-3"><i class="bi bi-journal-bookmark-fill text-primary"></i> Chọn môn học</h4>
+    <div class="row g-3" id="subjectCardsContainer"></div>
+  </section>
+
+  <!-- ============ TRANG CHỦ ============ -->
+  <section id="view-home" class="d-none">
+    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+      <h4 class="mb-0"><i class="bi bi-collection-fill text-primary"></i> Danh sách chương</h4>
+      <div class="d-flex gap-2 flex-wrap">
+        <button class="btn btn-outline-dark btn-sm" id="btnSwitchSubject"><i class="bi bi-arrow-left-right"></i> Đổi môn</button>
+        <button class="btn btn-outline-primary btn-sm" id="btnExportData"><i class="bi bi-download"></i> Xuất tiến độ</button>
+        <label class="btn btn-outline-secondary btn-sm mb-0">
+          <i class="bi bi-upload"></i> Nhập tiến độ
+          <input type="file" id="importFileInput" accept="application/json" hidden>
+        </label>
+        <button class="btn btn-outline-danger btn-sm" id="btnResetData"><i class="bi bi-trash3"></i> Reset toàn bộ</button>
+      </div>
+    </div>
+
+    <div class="row g-3 mb-4" id="chapterCardsContainer"></div>
+
+    <div class="summary-section shadow-sm">
+      <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+        <h5 class="mb-0"><i class="bi bi-bar-chart-line-fill text-primary"></i> Tổng hợp tất cả chương</h5>
+        <button class="btn btn-success btn-sm" id="btnPracticeWrong"><i class="bi bi-bullseye"></i> Luyện tập riêng các câu hay sai</button>
+      </div>
+      <p id="summaryStatsText" class="text-muted"></p>
+      <div class="row g-4 mb-4">
+        <div class="col-md-7">
+          <canvas id="barChartCanvas" height="220"></canvas>
+        </div>
+        <div class="col-md-5">
+          <canvas id="donutChartCanvas" height="220"></canvas>
+        </div>
+      </div>
+
+      <h6><i class="bi bi-x-octagon-fill text-danger"></i> Câu hỏi hay sai</h6>
+      <div class="table-responsive">
+        <table class="table table-hover align-middle">
+          <thead>
+            <tr>
+              <th>Chương</th>
+              <th>Chủ đề</th>
+              <th>Câu hỏi</th>
+              <th class="text-center">Số lần sai</th>
+              <th class="text-center">Xem lại</th>
+            </tr>
+          </thead>
+          <tbody id="wrongTableBody"></tbody>
+        </table>
+        <p id="wrongTableEmpty" class="text-muted text-center d-none">Chưa có câu nào sai. Tốt lắm! <i class="bi bi-emoji-smile"></i></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRANG CHƯƠNG: chọn chủ đề ============ -->
+  <section id="view-chapter" class="d-none">
+    <button class="btn btn-link px-0 mb-2" id="btnBackHome"><i class="bi bi-arrow-left"></i> Về trang chủ</button>
+    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+      <h4 class="mb-0" id="chapterTitle"></h4>
+      <div class="d-flex gap-2 flex-wrap">
+        <button class="btn btn-outline-secondary" id="btnViewChapterWrongHistory"><i class="bi bi-clock-history"></i> Xem lịch sử sai chương này</button>
+        <button class="btn btn-primary" id="btnStartFullChapter"><i class="bi bi-play-fill"></i> Làm toàn bộ chương</button>
+      </div>
+    </div>
+    <div class="list-group" id="topicListContainer"></div>
+  </section>
+
+  <!-- ============ TRANG LÀM BÀI ============ -->
+  <section id="view-quiz" class="d-none">
+    <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-2">
+      <h5 class="mb-0" id="quizChapterLabel"></h5>
+      <span><i class="bi bi-stopwatch"></i> <span id="quizTimer">00:00</span></span>
+    </div>
+    <div class="progress mb-3" style="height: 22px;">
+      <div class="progress-bar bg-info" id="quizProgressBar" role="progressbar" style="width:0%">0/0</div>
+    </div>
+
+    <div class="row g-3 align-items-start">
+      <div class="col-lg-9">
+        <div id="quizBody"></div>
+
+        <div class="d-flex justify-content-between align-items-center mt-3" id="quizSingleNav">
+          <button class="btn btn-outline-secondary" id="btnPrevQuestion"><i class="bi bi-arrow-left"></i> Câu trước</button>
+          <span id="quizQuestionCounter" class="fw-semibold"></span>
+          <button class="btn btn-outline-secondary" id="btnNextQuestion">Câu sau <i class="bi bi-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="card shadow-sm quiz-nav-panel sticky-top">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
+              <h6 class="mb-0"><i class="bi bi-grid-3x3-gap-fill"></i> Bảng câu hỏi</h6>
+              <span id="quizFlaggedCount" class="badge bg-warning text-dark">0 cờ</span>
+            </div>
+            <div class="d-flex flex-wrap gap-2 mb-3 small text-muted">
+              <span id="quizAnsweredCount">Đã làm 0/0</span>
+              <span>•</span>
+              <span>Nhấp số câu để nhảy nhanh</span>
+            </div>
+            <div id="quizQuestionList" class="quiz-question-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <button class="btn btn-danger btn-lg" id="btnSubmitQuiz"><i class="bi bi-send-check-fill"></i> Nộp bài</button>
+    </div>
+  </section>
+
+  <!-- ============ TRANG KẾT QUẢ ============ -->
+  <section id="view-result" class="d-none">
+    <div class="card shadow-sm mb-4">
+      <div class="card-body text-center">
+        <h3 id="resultScoreText" class="text-primary"></h3>
+        <p id="resultChapterText" class="mb-1"></p>
+        <p id="resultTimeText" class="text-muted"></p>
+        <div class="d-flex justify-content-center gap-2 mt-3">
+          <button class="btn btn-outline-primary" id="btnRetryChapter"><i class="bi bi-arrow-repeat"></i> Làm lại chương này</button>
+          <button class="btn btn-secondary" id="btnBackHomeFromResult"><i class="bi bi-house-door-fill"></i> Về trang chủ</button>
+        </div>
+      </div>
+    </div>
+
+    <h5><i class="bi bi-list-check text-primary"></i> Chi tiết bài làm</h5>
+    <div class="table-responsive">
+      <table class="table table-bordered align-middle">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Câu hỏi</th>
+            <th>Đáp án đã chọn</th>
+            <th>Đáp án đúng</th>
+            <th class="text-center">Kết quả</th>
+          </tr>
+        </thead>
+        <tbody id="resultDetailBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============ MODAL: Cấu hình bài làm ============ -->
+<div class="modal fade" id="quizConfigModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-sliders"></i> Cấu hình bài làm</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Số lượng câu hỏi</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="countMode" id="countModeAll" value="all" checked>
+            <label class="form-check-label" for="countModeAll">Tất cả (<span id="configMaxCount"></span> câu)</label>
+          </div>
+          <div class="form-check d-flex align-items-center gap-2">
+            <input class="form-check-input" type="radio" name="countMode" id="countModeCustom" value="custom">
+            <label class="form-check-label" for="countModeCustom">Số câu tuỳ chọn:</label>
+            <input type="number" class="form-control form-control-sm" style="width:90px" id="configCountInput" min="1" value="10">
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="configShuffleQ" checked>
+            <label class="form-check-label" for="configShuffleQ">Xáo trộn thứ tự câu hỏi</label>
+          </div>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="configShuffleO" checked>
+            <label class="form-check-label" for="configShuffleO">Xáo trộn thứ tự đáp án</label>
+          </div>
+        </div>
+        <div class="mb-2">
+          <label class="form-label fw-semibold">Kiểu hiển thị</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="viewMode" id="viewModeSingle" value="single" checked>
+            <label class="form-check-label" for="viewModeSingle">Xem từng câu</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="viewMode" id="viewModeScroll" value="scroll">
+            <label class="form-check-label" for="viewModeScroll">Cuộn toàn bộ</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Huỷ</button>
+        <button class="btn btn-primary" id="btnConfirmConfig"><i class="bi bi-rocket-takeoff"></i> Bắt đầu làm bài</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: Xác nhận nộp bài ============ -->
+<div class="modal fade" id="confirmSubmitModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-send-check"></i> Xác nhận nộp bài</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body"><p id="confirmSubmitText"></p></div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Tiếp tục làm bài</button>
+        <button class="btn btn-danger" id="btnConfirmSubmit">Nộp bài</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: Xác nhận reset ============ -->
+<div class="modal fade" id="resetConfirmModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-exclamation-triangle-fill text-danger"></i> Xác nhận reset</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><i class="bi bi-exclamation-triangle-fill text-warning"></i> Toàn bộ lịch sử làm bài, thống kê câu sai và điểm cao nhất sẽ bị xoá vĩnh viễn. Bạn có chắc chắn?</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Huỷ</button>
+        <button class="btn btn-danger" id="btnConfirmReset">Xoá toàn bộ</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: Xem chi tiết câu sai ============ -->
+<div class="modal fade" id="wrongDetailModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Chi tiết câu hỏi</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="wrongDetailModalBody"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: Lịch sử sai của chương ============ -->
+<div class="modal fade" id="chapterWrongHistoryModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="chapterWrongHistoryTitle">Lịch sử sai của chương</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p id="chapterWrongHistorySummary" class="text-muted mb-3"></p>
+        <div class="table-responsive">
+          <table class="table table-hover align-middle">
+            <thead>
+              <tr>
+                <th>Câu hỏi</th>
+                <th class="text-center">Số lần sai</th>
+                <th>Đáp án đúng</th>
+                <th>Lần chọn sai gần nhất</th>
+                <th class="text-center">Xem chi tiết</th>
+              </tr>
+            </thead>
+            <tbody id="chapterWrongHistoryBody"></tbody>
+          </table>
+        </div>
+        <p id="chapterWrongHistoryEmpty" class="text-muted text-center d-none">Chưa có câu nào sai trong chương này.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: Phóng to ảnh ============ -->
+<div class="modal fade" id="imageZoomModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-zoom-in"></i> Hình minh hoạ</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center bg-white"><img id="imageZoomTarget" src="" alt="" class="img-fluid"></div>
+    </div>
+  </div>
+</div>
+
+<script src="vendor/bootstrap.bundle.min.js"></script>
+<script src="vendor/chart.js"></script>
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

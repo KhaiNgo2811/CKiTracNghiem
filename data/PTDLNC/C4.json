@@ -1,0 +1,762 @@
+{
+  "chapterId": "C4",
+  "chapterName": "Truy xuất, Xử lý và Lưu trữ Dữ liệu",
+  "topics": [
+    {
+      "topicId": "C4_T1",
+      "topicName": "CSV, Excel, JSON và bảng HTML",
+      "questions": [
+        {
+          "id": "C4_T1_Q1",
+          "question": "Hàm NumPy nào đọc dữ liệu CSV thành mảng, đọc dưới dạng chuỗi rồi mới chuyển kiểu?",
+          "options": {
+            "A": "<code>np.readcsv()</code>",
+            "B": "<code>np.loadjson()</code>",
+            "C": "<code>np.fromfile_csv()</code>",
+            "D": "<code>np.genfromtxt()</code>"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T1_Q2",
+          "question": "Vì sao <code>genfromtxt()</code> thường chạy chậm?",
+          "options": {
+            "A": "Vì nó kết nối Internet",
+            "B": "Vì nó luôn nén dữ liệu",
+            "C": "Phải đọc dưới dạng chuỗi trước rồi mới chuyển sang kiểu dữ liệu phù hợp (hai giai đoạn)",
+            "D": "Vì nó chỉ chạy trên một nhân CPU"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q3",
+          "question": "Với file CSV, tham số <code>delimiter</code> của <code>genfromtxt()</code> cần đặt là gì?",
+          "options": {
+            "A": "<code>'\\t'</code>",
+            "B": "<code>';'</code> bắt buộc",
+            "C": "<code>','</code>",
+            "D": "<code>' '</code> (mặc định khoảng trắng)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q4",
+          "question": "Tham số <code>skip_header</code> của <code>genfromtxt()</code> dùng để làm gì?",
+          "options": {
+            "A": "Bỏ qua số dòng đầu (thường là dòng tiêu đề) để tránh lỗi chuyển đổi số",
+            "B": "Bỏ qua cột đầu tiên",
+            "C": "Bỏ qua các dòng cuối",
+            "D": "Bỏ qua dòng trống ở giữa file"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T1_Q5",
+          "question": "Hàm NumPy nào lưu mảng dữ liệu ra file dạng văn bản/CSV?",
+          "options": {
+            "A": "<code>np.savetxt()</code>",
+            "B": "<code>np.dump_json()</code>",
+            "C": "<code>np.writecsv()</code>",
+            "D": "<code>np.to_csv()</code>"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T1_Q6",
+          "question": "Hàm pandas nào đọc file JSON thành DataFrame?",
+          "options": {
+            "A": "<code>pd.load_json_file()</code>",
+            "B": "<code>pd.parse_json()</code>",
+            "C": "<code>pd.json_to_df()</code>",
+            "D": "<code>pd.read_json()</code>"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T1_Q7",
+          "question": "Tham số <code>orient</code> của <code>df.to_json()</code> dùng để làm gì?",
+          "options": {
+            "A": "Chọn kiểu nén",
+            "B": "Chọn mã hóa file",
+            "C": "Tùy biến cấu trúc JSON đầu ra (ví dụ <code>orient=\"columns\"</code>)",
+            "D": "Chọn tên bảng"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q8",
+          "question": "<code>pd.read_html()</code> trả về gì?",
+          "options": {
+            "A": "Một DataFrame duy nhất",
+            "B": "Một chuỗi HTML thô",
+            "C": "Một từ điển JSON",
+            "D": "Một danh sách (list) các DataFrame, mỗi bảng <code>&lt;table&gt;</code> một DataFrame"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T1_Q9",
+          "question": "Khi dùng <code>pd.read_html()</code>, vì sao cần chỉ mục như <code>df_list[0]</code>?",
+          "options": {
+            "A": "Để đổi tên bảng",
+            "B": "Để lọc theo ngày",
+            "C": "Để chọn đúng bảng cần dùng trong danh sách các bảng tìm thấy",
+            "D": "Để chọn đúng cột"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q10",
+          "question": "Thư viện nào thường dùng để lấy mã nguồn HTML từ URL trước khi <code>read_html</code>?",
+          "options": {
+            "A": "<code>requests</code>",
+            "B": "<code>pymongo</code>",
+            "C": "<code>pickle</code>",
+            "D": "<code>boto3</code>"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T1_Q11",
+          "question": "Hàm nào xuất DataFrame thành mã HTML thô?",
+          "options": {
+            "A": "<code>df.html()</code>",
+            "B": "<code>df.write_html_table()</code>",
+            "C": "<code>df.to_html()</code>",
+            "D": "<code>df.to_web()</code>"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C4_T2",
+      "topicName": "HDF5, Parquet và Pickle",
+      "questions": [
+        {
+          "id": "C4_T2_Q1",
+          "question": "Để pandas xử lý định dạng HDF5 cần cài package nào?",
+          "options": {
+            "A": "<code>sqlalchemy</code>",
+            "B": "<code>pyarrow</code>",
+            "C": "<code>boto3</code>",
+            "D": "<code>tables</code> (PyTables)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T2_Q2",
+          "question": "Khi <code>pd.read_hdf()</code>, tham số nào bắt buộc khai báo?",
+          "options": {
+            "A": "<code>key</code> (tên bảng bên trong file)",
+            "B": "<code>engine</code>",
+            "C": "<code>orient</code>",
+            "D": "<code>delimiter</code>"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T2_Q3",
+          "question": "<code>df.to_hdf('file.h5', key='t', mode='w', format='table')</code> có đặc điểm nào?",
+          "options": {
+            "A": "Luôn nén thành CSV",
+            "B": "Phù hợp lưu dữ liệu khoa học có cấu trúc phức tạp và dung lượng rất lớn",
+            "C": "Chỉ lưu được dữ liệu chuỗi",
+            "D": "Chỉ lưu được một cột"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T2_Q4",
+          "question": "Parquet lưu trữ dữ liệu theo kiểu nào?",
+          "options": {
+            "A": "Theo đồ thị",
+            "B": "Theo cột (columnar)",
+            "C": "Theo hàng dạng văn bản",
+            "D": "Theo cặp khóa–giá trị"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T2_Q5",
+          "question": "Ưu điểm của Parquet là gì?",
+          "options": {
+            "A": "Dễ đọc bằng mắt thường như CSV",
+            "B": "Nén dữ liệu tốt và tối ưu tốc độ truy vấn cho Big Data",
+            "C": "Chỉ dùng được trong Python",
+            "D": "Không cần thư viện bổ sung"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T2_Q6",
+          "question": "Engine phổ biến nhất để đọc/ghi Parquet bằng pandas là gì?",
+          "options": {
+            "A": "<code>httpx</code>",
+            "B": "<code>pyarrow</code>",
+            "C": "<code>pymysql</code>",
+            "D": "<code>tables</code>"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T2_Q7",
+          "question": "Định dạng Pickle là gì?",
+          "options": {
+            "A": "Một cơ sở dữ liệu NoSQL",
+            "B": "Định dạng văn bản chuẩn trao đổi giữa mọi ngôn ngữ",
+            "C": "Định dạng lưu dữ liệu theo cột cho Big Data",
+            "D": "Định dạng nhị phân đặc thù của Python để lưu đối tượng như DataFrame"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T2_Q8",
+          "question": "Ưu điểm chính khi lưu DataFrame bằng Pickle là gì?",
+          "options": {
+            "A": "Nén tốt hơn Parquet",
+            "B": "Giữ nguyên vẹn 100% kiểu dữ liệu (dtype) của các cột và rất nhanh",
+            "C": "Có thể mở bằng Excel",
+            "D": "Dễ chia sẻ với hệ thống dùng ngôn ngữ khác"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T2_Q9",
+          "question": "Hạn chế của Pickle là gì?",
+          "options": {
+            "A": "Không thích hợp để chia sẻ dữ liệu với hệ thống dùng ngôn ngữ lập trình khác",
+            "B": "Làm mất kiểu dữ liệu cột",
+            "C": "Không đọc lại được trong Python",
+            "D": "Không lưu được DataFrame"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T2_Q10",
+          "question": "Cặp hàm đọc và ghi Pickle của pandas là gì?",
+          "options": {
+            "A": "<code>pd.read_pkl_file()</code> và <code>df.pickle_out()</code>",
+            "B": "<code>pd.load()</code> và <code>df.dump()</code>",
+            "C": "<code>pd.read_pickle()</code> và <code>df.to_pickle()</code>",
+            "D": "<code>pd.open_pickle()</code> và <code>df.save_pickle()</code>"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T2_Q11",
+          "question": "Pickle thường được dùng cho mục đích nào?",
+          "options": {
+            "A": "Truyền dữ liệu qua REST API",
+            "B": "Lưu dữ liệu đồ thị",
+            "C": "Lưu trữ trung gian trong nội bộ dự án Python",
+            "D": "Chia sẻ dữ liệu công khai đa ngôn ngữ"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C4_T3",
+      "topicName": "Cơ sở dữ liệu quan hệ và ORM: SQLite, MySQL, to_sql, Pony",
+      "questions": [
+        {
+          "id": "C4_T3_Q1",
+          "question": "Thư viện nào tích hợp sẵn trong Python để làm việc với SQLite?",
+          "options": {
+            "A": "<code>sqlalchemy</code>",
+            "B": "<code>pymysql</code>",
+            "C": "<code>pony</code>",
+            "D": "<code>sqlite3</code>"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T3_Q2",
+          "question": "Đối tượng nào dùng để chạy lệnh SQL trong <code>sqlite3</code>?",
+          "options": {
+            "A": "<code>bucket</code>",
+            "B": "<code>session</code>",
+            "C": "<code>cursor</code> (qua <code>cursor.execute()</code>)",
+            "D": "<code>engine</code>"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T3_Q3",
+          "question": "<code>cursor.fetchall()</code> làm gì?",
+          "options": {
+            "A": "Lấy toàn bộ dữ liệu trả về từ truy vấn",
+            "B": "Lưu thay đổi xuống CSDL",
+            "C": "Đóng kết nối",
+            "D": "Tạo bảng mới"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T3_Q4",
+          "question": "<code>conn.commit()</code> dùng để làm gì?",
+          "options": {
+            "A": "Đọc dữ liệu",
+            "B": "Mở kết nối",
+            "C": "Lưu (xác nhận) các thay đổi vào CSDL",
+            "D": "Xóa bảng"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T3_Q5",
+          "question": "Để kết nối MySQL từ Python cần gói trung gian nào?",
+          "options": {
+            "A": "<code>redis</code>",
+            "B": "<code>boto3</code>",
+            "C": "<code>pymysql</code> hoặc <code>mysql-connector-python</code>",
+            "D": "<code>sqlite3</code>"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T3_Q6",
+          "question": "Hàm <code>connect()</code> của MySQL yêu cầu khai báo thông số nào?",
+          "options": {
+            "A": "host, user, password, database",
+            "B": "Chỉ URL API",
+            "C": "Chỉ bucket",
+            "D": "Chỉ tên file"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T3_Q7",
+          "question": "Làm sao đưa kết quả <code>fetchall()</code> sang pandas?",
+          "options": {
+            "A": "Dùng <code>pd.to_sql()</code>",
+            "B": "Dùng <code>pd.read_pickle()</code>",
+            "C": "Truyền thẳng vào <code>pd.DataFrame(records)</code>",
+            "D": "Dùng <code>pd.read_html()</code>"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T3_Q8",
+          "question": "Để ghi cả DataFrame vào CSDL nhanh bằng <code>to_sql()</code> cần kết hợp thư viện nào?",
+          "options": {
+            "A": "boto3",
+            "B": "pyarrow",
+            "C": "httpx",
+            "D": "SQLAlchemy (tạo engine kết nối)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T3_Q9",
+          "question": "<code>df.to_sql('t', con=engine, if_exists='append', index=False)</code>, tham số <code>if_exists='append'</code> làm gì?",
+          "options": {
+            "A": "Chỉ tạo bảng rỗng",
+            "B": "Báo lỗi nếu bảng đã tồn tại",
+            "C": "Chèn thêm dữ liệu vào bảng đã có",
+            "D": "Xóa bảng cũ rồi tạo lại"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T3_Q10",
+          "question": "<code>index=False</code> trong <code>to_sql()</code> có tác dụng gì?",
+          "options": {
+            "A": "Không ghi cột index của DataFrame vào bảng SQL",
+            "B": "Ghi bảng ở chế độ chỉ đọc",
+            "C": "Không ghi dữ liệu số",
+            "D": "Không ghi tên cột"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T3_Q11",
+          "question": "Pony ORM là gì?",
+          "options": {
+            "A": "Một CSDL dạng đồ thị",
+            "B": "Một dịch vụ lưu trữ cloud",
+            "C": "Thư viện ORM cho phép làm việc với CSDL bằng cú pháp Python hướng đối tượng thay vì tự viết SQL",
+            "D": "Một thư viện vẽ biểu đồ"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T3_Q12",
+          "question": "Trong Pony ORM, bảng được định nghĩa như thế nào?",
+          "options": {
+            "A": "Dưới dạng bucket",
+            "B": "Dưới dạng Class kế thừa <code>db.Entity</code>",
+            "C": "Dưới dạng Series",
+            "D": "Dưới dạng file CSV"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T3_Q13",
+          "question": "Lệnh <code>db.generate_mapping(create_tables=True)</code> của Pony làm gì?",
+          "options": {
+            "A": "Chỉ đóng kết nối",
+            "B": "Xóa toàn bộ bảng",
+            "C": "Chỉ in cấu trúc bảng",
+            "D": "Dịch các Class định nghĩa thành bảng thực tế trong CSDL nếu chưa tồn tại"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T3_Q14",
+          "question": "<code>sql_debug(True)</code> trong Pony dùng để làm gì?",
+          "options": {
+            "A": "Tự động hiển thị các câu lệnh SQL để debug",
+            "B": "Mã hóa dữ liệu",
+            "C": "Xóa log",
+            "D": "Tăng tốc truy vấn"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T3_Q15",
+          "question": "Cú pháp truy vấn đặc trưng của Pony thay cho <code>SELECT * FROM mytable</code> là gì?",
+          "options": {
+            "A": "<code>pd.read_sql('mytable')</code>",
+            "B": "<code>db.query('mytable')</code>",
+            "C": "<code>mytable.find_all()</code>",
+            "D": "<code>select(e for e in mytable)[:]</code>"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C4_T4",
+      "topicName": "NoSQL: MongoDB, Cassandra, Redis, Neo4j",
+      "questions": [
+        {
+          "id": "C4_T4_Q1",
+          "question": "MongoDB là cơ sở dữ liệu loại nào?",
+          "options": {
+            "A": "Quan hệ dạng bảng",
+            "B": "Đồ thị",
+            "C": "NoSQL dạng Document (lưu dữ liệu dạng JSON/từ điển)",
+            "D": "Key–Value lưu trên RAM"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T4_Q2",
+          "question": "Thư viện Python để làm việc với MongoDB là gì?",
+          "options": {
+            "A": "<code>neo4j</code>",
+            "B": "<code>redis</code>",
+            "C": "<code>cassandra-driver</code>",
+            "D": "<code>pymongo</code>"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T4_Q3",
+          "question": "Hàm nào ghi một document vào collection MongoDB?",
+          "options": {
+            "A": "<code>insert_one()</code>",
+            "B": "<code>set()</code>",
+            "C": "<code>session.run()</code>",
+            "D": "<code>execute()</code>"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T4_Q4",
+          "question": "Cách đưa dữ liệu từ MongoDB vào pandas là gì?",
+          "options": {
+            "A": "Dùng <code>pd.read_hdf()</code>",
+            "B": "Dùng <code>cursor.fetchall()</code>",
+            "C": "<code>collection.find()</code>, ép sang list rồi bọc trong <code>pd.DataFrame()</code>",
+            "D": "Dùng <code>r.get()</code>"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T4_Q5",
+          "question": "Cassandra là cơ sở dữ liệu loại nào?",
+          "options": {
+            "A": "Document",
+            "B": "Đồ thị",
+            "C": "Key–Value trên RAM",
+            "D": "NoSQL phân tán dạng cột"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T4_Q6",
+          "question": "Thư viện và đối tượng nào dùng để kết nối Cassandra?",
+          "options": {
+            "A": "<code>redis</code> với <code>Redis</code>",
+            "B": "<code>cassandra-driver</code> với đối tượng <code>Cluster</code>",
+            "C": "<code>pymongo</code> với <code>MongoClient</code>",
+            "D": "<code>boto3</code> với <code>client</code>"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T4_Q7",
+          "question": "Redis là cơ sở dữ liệu loại nào?",
+          "options": {
+            "A": "Đồ thị",
+            "B": "Key–Value lưu trên RAM",
+            "C": "Quan hệ",
+            "D": "Document"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T4_Q8",
+          "question": "Cơ sở dữ liệu nào ghi dữ liệu bằng <code>r.set()</code> và đọc dữ liệu bằng <code>r.get()</code>?",
+          "options": {
+            "A": "Redis",
+            "B": "Cassandra",
+            "C": "Neo4j",
+            "D": "MongoDB"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T4_Q9",
+          "question": "Cổng mặc định của <code>redis.Redis()</code> là bao nhiêu?",
+          "options": {
+            "A": "7687",
+            "B": "3306",
+            "C": "27017",
+            "D": "6379"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T4_Q10",
+          "question": "Neo4j là cơ sở dữ liệu loại nào?",
+          "options": {
+            "A": "Document",
+            "B": "Key–Value",
+            "C": "Đồ thị (Graph)",
+            "D": "Cột"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T4_Q11",
+          "question": "Ngôn ngữ truy vấn của Neo4j là gì?",
+          "options": {
+            "A": "MQL",
+            "B": "GraphQL",
+            "C": "Cypher",
+            "D": "SQL thuần"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T4_Q12",
+          "question": "Trong Neo4j (Cypher), lệnh nào dùng để tạo Node/Relationship nếu chưa có và lệnh nào để truy vấn?",
+          "options": {
+            "A": "<code>MERGE</code> để tạo; <code>MATCH ... RETURN</code> để truy vấn",
+            "B": "<code>PUT</code> để tạo; <code>FIND</code> để truy vấn",
+            "C": "<code>INSERT</code> để tạo; <code>SELECT</code> để truy vấn",
+            "D": "<code>SET</code> để tạo; <code>GET</code> để truy vấn"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T4_Q13",
+          "question": "Đối tượng nào dùng để kết nối Neo4j trong Python?",
+          "options": {
+            "A": "<code>GraphDatabase.driver()</code> kèm URI và auth",
+            "B": "<code>MongoClient()</code>",
+            "C": "<code>Cluster()</code>",
+            "D": "<code>boto3.client()</code>"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T4_Q14",
+          "question": "Trong Neo4j, kết quả truy vấn có thể được trích xuất bằng phương thức nào?",
+          "options": {
+            "A": "<code>.data()</code>",
+            "B": "<code>.fetchall()</code>",
+            "C": "<code>.find()</code>",
+            "D": "<code>.readall()</code>"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "C4_T5",
+      "topicName": "Cloud Storage và API: AWS S3, Azure Blob, REST/GraphQL",
+      "questions": [
+        {
+          "id": "C4_T5_Q1",
+          "question": "Amazon S3 quản lý file theo không gian lưu trữ nào?",
+          "options": {
+            "A": "Container",
+            "B": "Collection",
+            "C": "Cluster",
+            "D": "Bucket"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T5_Q2",
+          "question": "Thư viện Python để thao tác AWS S3 là gì?",
+          "options": {
+            "A": "<code>boto3</code>",
+            "B": "<code>azure.storage.blob</code>",
+            "C": "<code>pymongo</code>",
+            "D": "<code>requests</code>"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T5_Q3",
+          "question": "Cặp phương thức tải file lên và tải về của S3 qua boto3 là gì?",
+          "options": {
+            "A": "<code>upload_file()</code> và <code>download_file()</code>",
+            "B": "<code>put()</code> và <code>get()</code>",
+            "C": "<code>insert_one()</code> và <code>find()</code>",
+            "D": "<code>upload_blob()</code> và <code>download_blob()</code>"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T5_Q4",
+          "question": "Khi khởi tạo <code>boto3.client('s3')</code> cần thông tin gì?",
+          "options": {
+            "A": "Chỉ URI Cypher",
+            "B": "Chỉ tên bucket",
+            "C": "Chỉ chuỗi SQL",
+            "D": "Access Key, Secret Key và Region"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T5_Q5",
+          "question": "Azure Blob Storage quản lý dữ liệu theo cấu trúc nào?",
+          "options": {
+            "A": "Database và Collection",
+            "B": "Keyspace và Table",
+            "C": "Container và tên Blob",
+            "D": "Bucket và Object key"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T5_Q6",
+          "question": "Đối tượng nào khởi tạo nhanh bằng một chuỗi kết nối trong Azure Blob?",
+          "options": {
+            "A": "<code>boto3.client()</code>",
+            "B": "<code>GraphDatabase.driver()</code>",
+            "C": "<code>BlobServiceClient.from_connection_string()</code>",
+            "D": "<code>MongoClient()</code>"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T5_Q7",
+          "question": "Cặp phương thức ghi và tải toàn bộ nội dung file trong Azure Blob là gì?",
+          "options": {
+            "A": "<code>set()</code> và <code>get()</code>",
+            "B": "<code>upload_blob()</code> và <code>download_blob().readall()</code>",
+            "C": "<code>upload_file()</code> và <code>download_file()</code>",
+            "D": "<code>to_pickle()</code> và <code>read_pickle()</code>"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T5_Q8",
+          "question": "<code>requests.get(API_URL, timeout=10)</code> dùng để làm gì?",
+          "options": {
+            "A": "Gửi yêu cầu lấy dữ liệu từ máy chủ REST với giới hạn thời gian chờ",
+            "B": "Ghi dữ liệu vào CSDL",
+            "C": "Tải file lên S3",
+            "D": "Tạo bảng SQL"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T5_Q9",
+          "question": "<code>response.raise_for_status()</code> làm gì?",
+          "options": {
+            "A": "Tăng thời gian chờ",
+            "B": "Đóng kết nối",
+            "C": "Tự động báo lỗi nếu mã trạng thái HTTP không thành công (404, 500...)",
+            "D": "Chuyển JSON sang DataFrame"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T5_Q10",
+          "question": "<code>response.json()</code> trả về gì?",
+          "options": {
+            "A": "Một file nhị phân",
+            "B": "Chuỗi HTML thô",
+            "C": "Dữ liệu JSON đã chuyển thành list/dict của Python",
+            "D": "Một DataFrame"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T5_Q11",
+          "question": "httpx khác requests ở điểm nào theo slide?",
+          "options": {
+            "A": "Chỉ dùng được cho Azure",
+            "B": "Không hỗ trợ HTTP",
+            "C": "Chỉ dùng cho GraphQL",
+            "D": "Thế hệ mới, cú pháp tương tự nhưng hỗ trợ lập trình bất đồng bộ (async)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T5_Q12",
+          "question": "Cách dùng httpx an toàn nhất theo slide là gì?",
+          "options": {
+            "A": "Chỉ dùng trong vòng lặp vô hạn",
+            "B": "Dùng cùng <code>sqlite3.connect</code>",
+            "C": "Mở kết nối và không bao giờ đóng",
+            "D": "Trong khối <code>with httpx.Client(timeout=10.0) as client:</code> để tự động quản lý và đóng kết nối"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T5_Q13",
+          "question": "GraphQL khác REST ở điểm cốt lõi nào?",
+          "options": {
+            "A": "Phải định nghĩa chuỗi query cụ thể để chỉ lấy đúng các trường cần thiết",
+            "B": "Luôn lấy toàn bộ dữ liệu có sẵn",
+            "C": "Chỉ dùng cho CSDL đồ thị",
+            "D": "Không dùng HTTP"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T5_Q14",
+          "question": "Phương thức HTTP nào thường dùng khi gửi truy vấn GraphQL bằng requests?",
+          "options": {
+            "A": "GET",
+            "B": "POST (<code>requests.post(url, json={\"query\": query})</code>)",
+            "C": "DELETE",
+            "D": "HEAD"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T5_Q15",
+          "question": "Dữ liệu GraphQL trả về thường được truy xuất như thế nào?",
+          "options": {
+            "A": "Qua <code>.fetchall()</code>",
+            "B": "Qua các khóa tương ứng, ví dụ <code>data[\"data\"][\"countries\"]</code>",
+            "C": "Qua <code>r.get()</code>",
+            "D": "Chỉ qua <code>.readall()</code>"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    }
+  ]
+}

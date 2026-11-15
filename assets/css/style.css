@@ -1,0 +1,256 @@
+/* style.css — Giao diện tuỳ chỉnh, tông xanh dương/tím kiểu Azota */
+
+:root {
+  --primary-grad: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+}
+
+body {
+  background-color: #f4f5fa;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.app-navbar {
+  background: var(--primary-grad) !important;
+}
+
+.chapter-card {
+  border: none;
+  border-radius: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.chapter-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.15) !important;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+.option-item {
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  margin-bottom: 0.4rem;
+  transition: background-color 0.15s ease;
+}
+.option-item:hover {
+  background-color: #f0f0fb;
+}
+
+.question-card {
+  transition: opacity 0.2s ease;
+}
+
+#quizProgressBar {
+  transition: width 0.3s ease;
+}
+
+.table-success td, .table-danger td {
+  vertical-align: middle;
+}
+
+section.d-none {
+  display: none !important;
+}
+
+.summary-section {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+#quizTimer {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.quiz-nav-panel {
+  top: 1rem;
+}
+
+.quiz-nav-panel .card-body {
+  overflow: visible;
+}
+
+@media (min-width: 992px) {
+  .quiz-nav-panel {
+    align-self: flex-start;
+    position: sticky;
+    top: 1rem;
+  }
+
+  .quiz-nav-panel .card-body {
+    max-height: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .quiz-nav-panel {
+    position: static;
+    top: auto;
+  }
+}
+
+.quiz-question-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(2.75rem, 1fr));
+  gap: 0.5rem;
+}
+
+.quiz-nav-btn {
+  min-width: 2.75rem;
+  aspect-ratio: 1;
+  font-weight: 600;
+}
+
+.question-card .badge {
+  white-space: normal;
+}
+
+/* ===== Nâng cấp giao diện (Bootstrap Icons) ===== */
+.app-navbar {
+  box-shadow: 0 4px 18px rgba(79, 70, 229, 0.25) !important;
+}
+.app-navbar .navbar-brand i {
+  font-size: 1.35rem;
+  vertical-align: -2px;
+  margin-right: 0.25rem;
+}
+
+.btn {
+  border-radius: 10px;
+  font-weight: 500;
+}
+.btn-primary {
+  background: var(--primary-grad);
+  border: none;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%);
+}
+.btn i {
+  margin-right: 0.2rem;
+  vertical-align: -1px;
+}
+
+.chapter-card .card-title {
+  font-weight: 700;
+}
+.chapter-card .progress {
+  border-radius: 99px;
+  background-color: #e8e9f7;
+}
+.chapter-card .progress-bar {
+  background: var(--primary-grad);
+  border-radius: 99px;
+}
+
+.subject-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  background: var(--primary-grad);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
+}
+
+#view-subjects h4, #view-home h4, #view-chapter h4 {
+  font-weight: 700;
+}
+
+.list-group-item {
+  border: none;
+  border-radius: 10px !important;
+  margin-bottom: 0.5rem;
+  padding: 0.9rem 1.1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.list-group-item:hover {
+  transform: translateX(3px);
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.15);
+}
+
+.option-item {
+  border: 1.5px solid #e5e7f3;
+  background: #fff;
+  cursor: pointer;
+}
+.option-item .form-check-label {
+  cursor: pointer;
+  width: 100%;
+}
+.option-item:hover {
+  border-color: #a5a0f5;
+}
+.option-item:has(input:checked) {
+  border-color: #4f46e5;
+  background: #eeedff;
+}
+
+.question-card {
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.quiz-nav-btn {
+  border-radius: 10px;
+}
+
+.modal-content {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+.modal-header {
+  border-bottom: 1px solid #eceefa;
+}
+.modal-footer {
+  border-top: 1px solid #eceefa;
+}
+
+.summary-section {
+  border: 1px solid #eceefa;
+}
+
+#view-result .card h3 {
+  font-weight: 800;
+}
+.table > :not(caption) > * > * {
+  vertical-align: middle;
+}
+
+#view-subjects, #view-home, #view-chapter, #view-quiz, #view-result {
+  animation: fadeInUp 0.3s ease;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* ===== Ảnh trong câu hỏi (công thức, đồ thị, bảng) ===== */
+.q-images {
+  margin: 0.5rem 0 0.75rem;
+}
+.q-image {
+  display: block;
+  max-width: 100%;
+  max-height: 340px;
+  margin: 0.6rem auto;
+  padding: 0.5rem;
+  background: #fff;
+  border: 1px solid #e5e7f3;
+  border-radius: 10px;
+  cursor: zoom-in;
+}
+td .q-image {
+  max-height: 160px;
+}

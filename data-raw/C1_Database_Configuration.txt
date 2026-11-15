@@ -1,0 +1,130 @@
+﻿Chủ đề 1: File, Filegroup và Cấu trúc vật lý
+Câu 1: File dữ liệu chính trong SQL Server có phần mở rộng là gì?
+A. .ndf
+B. .ldf
+C. .mdf 
+D. .dbf
+Câu 2: Filegroup nào chứa các bảng hệ thống trong SQL Server?
+A. Filestream filegroup
+B. User-defined filegroup
+C. Primary filegroup 
+D. Memory Optimized filegroup
+Câu 3: Một filegroup có thể chứa bao nhiêu file dữ liệu?
+A. Chỉ một
+B. Tối đa ba
+C. Không giới hạn 
+D. Tối đa tám
+Câu 4: File dữ liệu phụ trong SQL Server có phần mở rộng là gì?
+A. .mdf
+B. .ldf
+C. .ndf 
+D. .log
+Câu 5: Filegroup giúp quản lý lưu trữ theo cách nào?
+A. Vật lý
+B. Logic 
+C. Tạm thời
+D. Phân quyền
+Chủ đề 2: Page, Extent và Quản lý không gian
+Câu 1: Một page trong SQL Server có kích thước bao nhiêu?
+A. 4KB
+B. 8KB 
+C. 16KB
+D. 64KB
+Câu 2: Một extent gồm bao nhiêu page?
+A. 4
+B. 8 
+C. 16
+D. 64
+Câu 3: Mixed extent có thể chứa page của bao nhiêu đối tượng?
+A. Một
+B. Hai
+C. Nhiều 
+D. Không xác định
+Câu 4: Uniform extent chứa page của bao nhiêu đối tượng?
+A. Một 
+B. Hai
+C. Nhiều
+D. Tất cả
+Câu 5: Bản đồ nào quản lý extent đã cấp phát?
+A. SGAM
+B. PFS
+C. DCM
+D. GAM
+Chủ đề 3: Allocation Unit và IAM
+Câu 1: Allocation unit nào luôn tồn tại trong mỗi phân vùng?
+A. IN_ROW_DATA 
+B. ROW_OVERFLOW_DATA
+C. LOB_DATA
+D. SYSTEM_DATA
+Câu 2: Allocation unit nào chứa dữ liệu vượt quá giới hạn dòng 8,060 byte?
+A. IN_ROW_DATA
+B. ROW_OVERFLOW_DATA 
+C. LOB_DATA
+D. SYSTEM_DATA
+Câu 3: Allocation unit nào chứa dữ liệu kiểu LOB như XML, VARCHAR(MAX)?
+A. IN_ROW_DATA
+B. ROW_OVERFLOW_DATA
+C. LOB_DATA 
+D. SYSTEM_DATA
+Câu 4: IAM dùng để làm gì?
+A. Quản lý trạng thái page
+B. Ánh xạ extent cho allocation unit 
+C. Theo dõi giao dịch
+D. Quản lý log
+Câu 5: Nếu allocation unit trải rộng nhiều file, IAM sẽ được tổ chức như thế nào?
+A. IAM block
+B. IAM chain 
+C. IAM group
+D. IAM segment
+Chủ đề 4: DCM, BCM và Quản lý thay đổi
+Câu 1: DCM dùng để theo dõi điều gì?
+A. Giao dịch chưa commit
+B. Extent đã thay đổi sau backup 
+C. Page bị lỗi
+D. File bị khóa
+Câu 2: BCM dùng để theo dõi điều gì?
+A. Giao dịch hệ thống
+B. Extent bị thay đổi bởi thao tác bulk logged 
+C. Page bị phân mảnh
+D. Index bị lỗi
+Câu 3: BCM có ý nghĩa trong recovery model nào?
+A. Simple
+B. Full
+C. Bulk-logged 
+D. Snapshot
+Câu 4: DCM giúp tăng tốc loại backup nào?
+A. Full backup
+B. Log backup
+C. Differential backup 
+D. Snapshot backup
+Câu 5: DCM và BCM là loại cấu trúc gì?
+A. Log chain
+B. Metadata
+C. Bitmap 
+D. Segment
+Chủ đề 5: Transaction Log, Checkpoint và Recovery
+Câu 1: Transaction log ghi lại điều gì?
+A. Chỉ các thao tác SELECT
+B. Các thay đổi dữ liệu và giao dịch 
+C. Cấu trúc bảng
+D. Các bản ghi hệ thống
+Câu 2: Phần log từ MinLSN đến bản ghi cuối cùng được gọi là gì?
+A. Log tail
+B. Dirty log
+C. Active log 
+D. Recovery log
+Câu 3: Khi checkpoint xảy ra, thông tin nào được ghi vào boot page của database?
+A. Tên filegroup
+B. Số lượng page đã ghi
+C. LSN bắt đầu của checkpoint 
+D. Danh sách bảng hệ thống
+Câu 4: Trong SQL Server, transaction log được chia thành các phần nhỏ gọi là gì?
+A. Extent
+B. Segment
+C. Virtual Log File (VLF) 
+D. Log block
+Câu 5: Dirty page là gì?
+A. Trang chứa dữ liệu bị lỗi
+B. Trang đã bị thay đổi nhưng chưa ghi xuống đĩa 
+C. Trang bị khóa bởi giao dịch
+D. Trang chứa dữ liệu NULL

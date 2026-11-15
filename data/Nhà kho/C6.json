@@ -1,0 +1,430 @@
+{
+  "chapterId": "C6",
+  "chapterName": "In-Database Machine Learning và MLOps",
+  "topics": [
+    {
+      "topicId": "C6_T1",
+      "topicName": "Kiến trúc In-Database ML",
+      "questions": [
+        {
+          "id": "C6_T1_Q1",
+          "question": "Hệ quả của cách tiếp cận ML truyền thống (trích xuất dữ liệu ra máy chủ ML riêng) là gì?",
+          "options": {
+            "A": "Không có hệ quả",
+            "B": "Giảm chi phí di chuyển",
+            "C": "Tăng cường Data Governance",
+            "D": "Tốn băng thông, trễ thời gian, nguy cơ về bảo mật"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T1_Q2",
+          "question": "Ưu điểm cốt lõi của In-Database ML là gì?",
+          "options": {
+            "A": "Loại bỏ độ trễ và chi phí dịch chuyển dữ liệu, đảm bảo bảo mật và Data Governance",
+            "B": "Tăng nguy cơ rò rỉ",
+            "C": "Chỉ hỗ trợ dữ liệu nhỏ",
+            "D": "Phải trích xuất dữ liệu ra ngoài"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T1_Q3",
+          "question": "Governance trong In-Database ML nghĩa là gì?",
+          "options": {
+            "A": "Chỉ admin được xem bảng",
+            "B": "Không cần phân quyền",
+            "C": "Mô hình tự do truy cập",
+            "D": "Phân quyền dùng mô hình ML (RBAC) giống như phân quyền truy cập bảng dữ liệu"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T1_Q4",
+          "question": "Supervised Learning huấn luyện trên loại dữ liệu nào?",
+          "options": {
+            "A": "Dữ liệu streaming",
+            "B": "Labeled Data",
+            "C": "Dữ liệu ảnh",
+            "D": "Unlabeled Data"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T1_Q5",
+          "question": "Hai bài toán của Supervised Learning là gì?",
+          "options": {
+            "A": "Clustering và Anomaly Detection",
+            "B": "Classification và Regression",
+            "C": "Association và Clustering",
+            "D": "Reduction và Sampling"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T1_Q6",
+          "question": "Hai bài toán của Unsupervised Learning là gì?",
+          "options": {
+            "A": "Regression và Forecasting",
+            "B": "Classification và Regression",
+            "C": "Prediction và Evaluation",
+            "D": "Clustering và Anomaly Detection"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C6_T2",
+      "topicName": "PageRank và CPT (Compact Prediction Tree)",
+      "questions": [
+        {
+          "id": "C6_T2_Q1",
+          "question": "Công thức PageRank với damping factor d là gì?",
+          "options": {
+            "A": "PR(p) = (1 − d) × Σ C(q)",
+            "B": "PR(p) = d × Σ PR(q) × C(q)",
+            "C": "PR(p) = (1 − d) + d × Σ PR(q)/C(q)",
+            "D": "PR(p) = Σ PR(q) / d"
+          },
+          "correctAnswer": "C",
+          "images": [
+            "assets/img/eq_pagerank.png"
+          ]
+        },
+        {
+          "id": "C6_T2_Q2",
+          "question": "Chỉ số damping factor thường được các nhà nghiên cứu sử dụng với giá trị bao nhiêu?",
+          "options": {
+            "A": "0.85",
+            "B": "0.99",
+            "C": "0.5",
+            "D": "0.15"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T2_Q3",
+          "question": "Điều kiện dừng của vòng lặp PageRank thường là gì?",
+          "options": {
+            "A": "Độ chênh lệch giữa 2 vòng lặp liên tiếp nhỏ hơn ε (thường 0.0001)",
+            "B": "Khi mọi PR bằng 1",
+            "C": "Sau đúng 3 vòng",
+            "D": "Khi PR bằng 0"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T2_Q4",
+          "question": "Cho đồ thị liên kết: 1→2; 2→5; 3→1, 3→2, 3→4, 3→5; 4→3, 4→5; 5→4. PageRank khởi tạo = 1, d = 0.85. PR vòng lặp đầu của Page 2 là bao nhiêu? (Page 2 nhận link từ 1 và 3; Page 1 trỏ ra 1 nơi, Page 3 trỏ ra 4 nơi)",
+          "options": {
+            "A": "1.2125",
+            "B": "0.15",
+            "C": "1.0",
+            "D": "1.7"
+          },
+          "correctAnswer": "A",
+          "images": [
+            "assets/img/pagerank_graph.png"
+          ]
+        },
+        {
+          "id": "C6_T2_Q5",
+          "question": "Với cùng đồ thị trên (Page 1 chỉ nhận link từ Page 3; Page 3 trỏ ra 4 nơi), PR vòng lặp đầu của Page 1 là bao nhiêu?",
+          "options": {
+            "A": "1.0",
+            "B": "0.25",
+            "C": "0.3625",
+            "D": "0.85"
+          },
+          "correctAnswer": "C",
+          "images": [
+            "assets/img/pagerank_graph.png"
+          ]
+        },
+        {
+          "id": "C6_T2_Q6",
+          "question": "Cây CPT gồm những thành phần nào?",
+          "options": {
+            "A": "FP-Tree, Header Table và Node-link",
+            "B": "Dendrogram, Grid, Cell",
+            "C": "Root, Leaf và Hash",
+            "D": "Prediction Tree, Inverted Index và Lookup Table"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T2_Q7",
+          "question": "Trong CPT, Lookup Table dùng để làm gì?",
+          "options": {
+            "A": "Trỏ đến nút cuối của mỗi chuỗi (sequence) trong cây dự đoán",
+            "B": "Lưu support của item",
+            "C": "Lưu từ điển Hex",
+            "D": "Lưu độ tin cậy luật"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T2_Q8",
+          "question": "Trong CPT, Inverted Index dùng để làm gì?",
+          "options": {
+            "A": "Cho biết mỗi item xuất hiện trong những chuỗi nào (ma trận item × sequence)",
+            "B": "Lưu tên bảng",
+            "C": "Lưu độ lệch chuẩn",
+            "D": "Lưu giá trị PageRank"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T2_Q9",
+          "question": "Cây CPT chứa các chuỗi: s1 = A,B,C,D,F; s2 = D,C,B,E; s3 = E,A,D,C,B; s4 = E,G,A,D,B,C. Khi dự đoán chuỗi <D, C>, phần tử có điểm dự đoán cao nhất là gì? (Xét các chuỗi chứa cả D và C, lấy phần đuôi sau item cuối của chuỗi truy vấn)",
+          "options": {
+            "A": "A",
+            "B": "E",
+            "C": "B",
+            "D": "F"
+          },
+          "correctAnswer": "C",
+          "images": [
+            "assets/img/cpt_tree.png"
+          ]
+        },
+        {
+          "id": "C6_T2_Q10",
+          "question": "Cho cấu trúc CPT+ gồm Prediction Tree, Inverted Index và Lookup Table như hình (x = AB). Hình ảnh minh họa cho chiến lược nén/tối ưu nào đã được áp dụng?",
+          "options": {
+            "A": "FSC (Frequent Subsequence Compression)",
+            "B": "Không áp dụng chiến lược nào",
+            "C": "SBC (Simple Branches Compression)",
+            "D": "PNR (Prediction with improved Noise Reduction)"
+          },
+          "correctAnswer": "A",
+          "images": [
+            "assets/img/cpt_plus_fsc.png"
+          ]
+        },
+        {
+          "id": "C6_T2_Q11",
+          "question": "FSC (Frequent Subsequence Compression) trong CPT+ làm gì?",
+          "options": {
+            "A": "Gộp các nhánh đơn không rẽ nhánh thành một nút",
+            "B": "Loại bỏ nhiễu ở bước dự đoán",
+            "C": "Mã hóa Inverted Index bằng SHA-256",
+            "D": "Thay chuỗi con xuất hiện thường xuyên (ví dụ AB) bằng một ký hiệu mới (x = AB) để nén cây dự đoán"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T2_Q12",
+          "question": "SBC (Simple Branches Compression) trong CPT+ làm gì?",
+          "options": {
+            "A": "Thay chuỗi con thường xuyên bằng ký hiệu mới",
+            "B": "Chia nhỏ cây thành nhiều cây con",
+            "C": "Gộp các nhánh đơn (chuỗi nút không rẽ nhánh) thành một nút để nén cây",
+            "D": "Loại bỏ nhiễu ở bước dự đoán"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T2_Q13",
+          "question": "PNR (Prediction with improved Noise Reduction) trong CPT+ thuộc giai đoạn nào?",
+          "options": {
+            "A": "Giai đoạn nén cây",
+            "B": "Giai đoạn xây Lookup Table",
+            "C": "Giai đoạn dự đoán: cải tiến cách tính điểm, giảm ảnh hưởng của nhiễu",
+            "D": "Giai đoạn mã hóa chuỗi"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T2_Q14",
+          "question": "Trong công thức PageRank, số lượng các trang mà trang p liên kết đến (out-degree) được ký hiệu là gì?",
+          "options": {
+            "A": "L(p)",
+            "B": "C(p)",
+            "C": "T(p)",
+            "D": "PR(p)"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C6_T3",
+      "topicName": "Huấn luyện mô hình bằng SQL và tích hợp Python",
+      "questions": [
+        {
+          "id": "C6_T3_Q1",
+          "question": "Câu lệnh nào trong BigQuery ML dùng để khởi tạo và huấn luyện mô hình?",
+          "options": {
+            "A": "ML.PREDICT",
+            "B": "ML.EVALUATE",
+            "C": "CREATE MODEL",
+            "D": "SELECT MODEL"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T3_Q2",
+          "question": "ML.EVALUATE trong BigQuery ML dùng để làm gì?",
+          "options": {
+            "A": "Dự báo trên dữ liệu mới",
+            "B": "Huấn luyện mô hình",
+            "C": "Trích xuất các chỉ số đánh giá (ROC-AUC, F1-Score) bằng câu SELECT",
+            "D": "Xóa mô hình"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T3_Q3",
+          "question": "ML.PREDICT trong BigQuery ML dùng để làm gì?",
+          "options": {
+            "A": "Gọi mô hình để dự báo trên các bảng dữ liệu mới",
+            "B": "Khởi tạo mô hình",
+            "C": "Đánh giá mô hình",
+            "D": "Nén dữ liệu"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T3_Q4",
+          "question": "Snowflake Cortex ML Functions cung cấp các hàm nào?",
+          "options": {
+            "A": "FP-Growth và Apriori",
+            "B": "Forecasting và Anomaly Detection",
+            "C": "CREATE MODEL và ML.PREDICT",
+            "D": "Dendrogram và Grid"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T3_Q5",
+          "question": "Snowpark là gì?",
+          "options": {
+            "A": "Thư viện API dạng DataFrame cho phép viết Python/R/Scala nhưng thực thi bên trong Snowflake",
+            "B": "Hệ thống streaming",
+            "C": "Định dạng bảng",
+            "D": "Công cụ CDC"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T3_Q6",
+          "question": "Cơ chế Push-down của Snowpark làm gì?",
+          "options": {
+            "A": "Kéo dữ liệu về máy cá nhân",
+            "B": "Mã hóa dữ liệu",
+            "C": "Sao chép dữ liệu ra ngoài",
+            "D": "Biên dịch mã Python thành câu lệnh SQL tối ưu chạy song song trên cụm của kho dữ liệu"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T3_Q7",
+          "question": "Cơ chế Sandboxing trong Secure Runtime Environment nhằm mục đích gì?",
+          "options": {
+            "A": "Sao lưu dữ liệu",
+            "B": "Tăng tốc truy vấn",
+            "C": "Chạy mã Python/R trong không gian cô lập, ngăn mã độc xâm nhập hạ tầng dữ liệu",
+            "D": "Nén dữ liệu"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C6_T4",
+      "topicName": "Feature Store, MLOps, AutoML và UDF",
+      "questions": [
+        {
+          "id": "C6_T4_Q1",
+          "question": "Feature Store là gì?",
+          "options": {
+            "A": "Kho lưu trữ tập trung quản lý, lưu trữ và phân phối các đặc trưng đã tính sẵn cho nhiều mô hình tái sử dụng",
+            "B": "Cơ sở dữ liệu giao dịch",
+            "C": "Công cụ CDC",
+            "D": "Kho lưu trữ ảnh"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T4_Q2",
+          "question": "Ba lợi ích lớn của Feature Store là gì?",
+          "options": {
+            "A": "Speed, Cost, Size",
+            "B": "Discovery (tái sử dụng), Consistency (nhất quán), Lineage (truy vết)",
+            "C": "Bronze, Silver, Gold",
+            "D": "Backup, Restore, Archive"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T4_Q3",
+          "question": "Model Registry trong MLOps là gì?",
+          "options": {
+            "A": "Công cụ nén dữ liệu",
+            "B": "Danh mục lưu trữ tập trung các mô hình đã huấn luyện, quản lý trạng thái mô hình",
+            "C": "Thư viện Python",
+            "D": "Bảng log truy cập"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T4_Q4",
+          "question": "Model Versioning ràng buộc phiên bản mô hình với những gì?",
+          "options": {
+            "A": "Đúng phiên bản dữ liệu (Data Version) và mã nguồn tạo ra nó",
+            "B": "Chỉ tên mô hình",
+            "C": "Chỉ người tạo",
+            "D": "Chỉ ngày tạo"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T4_Q5",
+          "question": "Data Drift là hiện tượng gì?",
+          "options": {
+            "A": "Mô hình bị xóa",
+            "B": "Mối quan hệ đầu vào – nhãn thay đổi",
+            "C": "Phân phối dữ liệu đầu vào thực tế thay đổi so với dữ liệu huấn luyện",
+            "D": "Dữ liệu bị mã hóa"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T4_Q6",
+          "question": "Concept Drift là hiện tượng gì?",
+          "options": {
+            "A": "Mối quan hệ giữa thuộc tính đầu vào và nhãn mục tiêu bị thay đổi",
+            "B": "Thiếu dữ liệu",
+            "C": "Phân phối đầu vào thay đổi",
+            "D": "Lỗi mạng"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T4_Q7",
+          "question": "AutoML tự động hóa những bước nào?",
+          "options": {
+            "A": "Chỉ vẽ biểu đồ",
+            "B": "Chỉ phân quyền",
+            "C": "Chọn đặc trưng, huấn luyện nhiều thuật toán và Hyperparameter Tuning",
+            "D": "Chỉ lưu dữ liệu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T4_Q8",
+          "question": "Triển khai mô hình dưới dạng UDF cho phép làm gì?",
+          "options": {
+            "A": "Dự báo tức thời bằng câu lệnh SELECT thông thường",
+            "B": "Chỉ dự báo theo batch hàng tuần",
+            "C": "Phải viết API phức tạp",
+            "D": "Không cần mô hình"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    }
+  ]
+}

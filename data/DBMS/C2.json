@@ -1,0 +1,476 @@
+{
+  "chapterId": "C2",
+  "chapterName": "Table Optimizations",
+  "topics": [
+    {
+      "topicId": "C2_T1",
+      "topicName": "Table Partitioning",
+      "questions": [
+        {
+          "id": "C2_T1_Q1",
+          "question": "Mục đích chính của partitioning trong SQL Server là gì?",
+          "options": {
+            "A": "Tăng số lượng cột trong bảng",
+            "B": "Tối ưu hiệu suất bằng cách chia nhỏ bảng lớn",
+            "C": "Giảm kích thước file log",
+            "D": "Tăng số lượng chỉ mục"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T1_Q2",
+          "question": "Partitioning key phải là một phần của chỉ mục nào nếu bảng có clustered index?",
+          "options": {
+            "A": "Primary key",
+            "B": "Foreign key",
+            "C": "Clustered index key",
+            "D": "Unique constraint"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T1_Q3",
+          "question": "Partition function dùng để làm gì?",
+          "options": {
+            "A": "Tạo chỉ mục cho bảng",
+            "B": "Xác định kiểu dữ liệu của partitioning key và các điểm ranh giới",
+            "C": "Tạo filegroup mới",
+            "D": "Nén dữ liệu trong bảng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T1_Q4",
+          "question": "Trong Azure SQL Database, partitioning được hỗ trợ như thế nào?",
+          "options": {
+            "A": "Không hỗ trợ partitioning",
+            "B": "Partitioning chỉ trên filegroup phụ",
+            "C": "Partitioning chỉ trên PRIMARY filegroup",
+            "D": "Partitioning với nén dữ liệu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T1_Q5",
+          "question": "Điều kiện nào sau đây là đúng với partitioning key?",
+          "options": {
+            "A": "Có thể là bất kỳ kiểu dữ liệu nào",
+            "B": "Có thể là TEXT hoặc XML",
+            "C": "Không được là kiểu VARCHAR(MAX)",
+            "D": "Phải là khóa chính"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T1_Q6",
+          "question": "Khi tạo partition scheme, điều gì xảy ra nếu bạn dùng từ khóa ALL TO?",
+          "options": {
+            "A": "Mỗi partition được lưu ở filegroup khác nhau",
+            "B": "Tất cả partition được lưu ở cùng một filegroup",
+            "C": "Partition không được tạo",
+            "D": "Partition được lưu ở bộ nhớ"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T1_Q7",
+          "question": "Một chỉ mục được xem là “aligned” khi nào?",
+          "options": {
+            "A": "Khi nó nằm trên cùng filegroup với bảng",
+            "B": "Khi nó dùng cùng partition function với bảng",
+            "C": "Khi nó là clustered index",
+            "D": "Khi nó là nonclustered index"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T1_Q8",
+          "question": "Partitioning key nên được chọn dựa trên tiêu chí nào?",
+          "options": {
+            "A": "Là cột có giá trị NULL nhiều nhất",
+            "B": "Là cột không được dùng trong truy vấn",
+            "C": "Là cột được dùng làm điều kiện lọc trong truy vấn",
+            "D": "Là cột có kiểu dữ liệu TEXT"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C2_T2",
+      "topicName": "Implementing Partitioning",
+      "questions": [
+        {
+          "id": "C2_T2_Q1",
+          "question": "Để partition bảng đã tồn tại, bạn cần thực hiện bước nào?",
+          "options": {
+            "A": "Xóa bảng và tạo lại",
+            "B": "Xóa clustered index và tạo lại trên partition scheme",
+            "C": "Thêm cột mới làm partition key",
+            "D": "Nén bảng trước khi partition"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T2_Q2",
+          "question": "Partition function được tạo với cú pháp nào?",
+          "options": {
+            "A": "CREATE PARTITION SCHEME",
+            "B": "CREATE PARTITION FUNCTION",
+            "C": "CREATE INDEX",
+            "D": "CREATE TABLE"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T2_Q3",
+          "question": "Khi tạo bảng mới trên partition scheme, bạn cần chỉ định gì trong câu lệnh CREATE TABLE?",
+          "options": {
+            "A": "Filegroup",
+            "B": "Partition function",
+            "C": "Partition scheme và cột partitioning key",
+            "D": "Chỉ mục chính"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T2_Q4",
+          "question": "Khi dùng RANGE LEFT trong partition function, giá trị bằng điểm ranh giới sẽ được đưa vào partition nào?",
+          "options": {
+            "A": "Bên phải điểm ranh giới",
+            "B": "Bên trái điểm ranh giới",
+            "C": "Partition cuối cùng",
+            "D": "Partition đầu tiên"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T2_Q5",
+          "question": "Khi tạo partition scheme, bạn có thể ánh xạ partition đến đâu?",
+          "options": {
+            "A": "Chỉ đến PRIMARY filegroup",
+            "B": "Đến nhiều filegroup khác nhau",
+            "C": "Chỉ đến bộ nhớ",
+            "D": "Chỉ đến một bảng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T2_Q6",
+          "question": "Khi tạo clustered index trên partition scheme, điều gì xảy ra?",
+          "options": {
+            "A": "Bảng được chia theo cột chỉ mục",
+            "B": "Bảng được nén",
+            "C": "Bảng được partition theo cột chỉ mục",
+            "D": "Bảng được lưu trên filegroup mặc định"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T2_Q7",
+          "question": "Để kiểm tra phân phối dữ liệu sau khi partition, bạn nên làm gì?",
+          "options": {
+            "A": "Dùng sp_help",
+            "B": "Dùng $PARTITION function",
+            "C": "Dùng sys.tables",
+            "D": "Dùng sys.indexes"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T2_Q8",
+          "question": "Khi tạo bảng ExistingOrders, dữ liệu được lưu ở đâu trước khi partition?",
+          "options": {
+            "A": "Trên bộ nhớ",
+            "B": "Trên filegroup phụ",
+            "C": "Trên PRIMARY filegroup",
+            "D": "Trên partition scheme"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C2_T3",
+      "topicName": "Monitoring Partitioned Tables",
+      "questions": [
+        {
+          "id": "C2_T3_Q1",
+          "question": "Hàm nào dùng để kiểm tra số lượng dòng trong từng partition?",
+          "options": {
+            "A": "COUNT(*)",
+            "B": "$PARTITION",
+            "C": "GETPARTITION()",
+            "D": "PARTITION_COUNT()"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T3_Q2",
+          "question": "Khi dùng $PARTITION với một partition function khác, bạn có thể làm gì?",
+          "options": {
+            "A": "Xóa dữ liệu trong partition",
+            "B": "Nén partition",
+            "C": "Đánh giá cách phân phối dữ liệu nếu dùng function mới",
+            "D": "Tạo chỉ mục mới"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T3_Q3",
+          "question": "Lệnh nào dùng để thêm điểm ranh giới mới vào partition function?",
+          "options": {
+            "A": "MERGE",
+            "B": "SWITCH",
+            "C": "SPLIT",
+            "D": "ADD RANGE"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T3_Q4",
+          "question": "SWITCH hoạt động như thế nào?",
+          "options": {
+            "A": "Di chuyển dữ liệu giữa các filegroup",
+            "B": "Di chuyển dữ liệu giữa bảng và partition bằng cách thay đổi metadata",
+            "C": "Nén dữ liệu trong partition",
+            "D": "Xóa dữ liệu trong partition"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T3_Q5",
+          "question": "Khi nào SQL Server thực hiện checkpoint tự động?",
+          "options": {
+            "A": "Sau mỗi lần INSERT",
+            "B": "Sau mỗi lần tạo bảng",
+            "C": "Khi file log vượt quá 1.5 GB kể từ checkpoint trước đó",
+            "D": "Khi có lỗi hệ thống"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T3_Q6",
+          "question": "Để partition elimination hoạt động, điều kiện nào phải được thỏa mãn?",
+          "options": {
+            "A": "Bảng phải có clustered index",
+            "B": "Partitioning key phải nằm trong mệnh đề WHERE",
+            "C": "Bảng phải được nén",
+            "D": "Partition phải nằm trên filegroup riêng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T3_Q7",
+          "question": "Khi dùng MERGE trên partition function, điều gì xảy ra?",
+          "options": {
+            "A": "Tạo thêm partition mới",
+            "B": "Gộp hai partition lại bằng cách xóa điểm ranh giới",
+            "C": "Di chuyển dữ liệu sang bảng khác",
+            "D": "Nén dữ liệu trong partition"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T3_Q8",
+          "question": "Lệnh nào dùng để xem các giá trị ranh giới của một partition function?",
+          "options": {
+            "A": "SELECT * FROM sys.tables",
+            "B": "EXEC sp_help_partition",
+            "C": "SELECT FROM sys.partition_range_values JOIN sys.partition_functions",
+            "D": "SELECT * FROM sys.filegroups"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C2_T4",
+      "topicName": "Table Compression",
+      "questions": [
+        {
+          "id": "C2_T4_Q1",
+          "question": "Row compression giúp tiết kiệm không gian bằng cách nào?",
+          "options": {
+            "A": "Nén toàn bộ bảng thành một file",
+            "B": "Sử dụng ít byte hơn cho dữ liệu nhỏ",
+            "C": "Xóa các dòng NULL",
+            "D": "Di chuyển dữ liệu sang bộ nhớ"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T4_Q2",
+          "question": "Page compression bao gồm những kỹ thuật nào?",
+          "options": {
+            "A": "Row và XML compression",
+            "B": "Prefix và dictionary compression",
+            "C": "Columnstore và row compression",
+            "D": "Hash và anchor compression"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T4_Q3",
+          "question": "Lệnh nào dùng để ước lượng hiệu quả nén dữ liệu?",
+          "options": {
+            "A": "sp_compress_table",
+            "B": "sp_estimate_data_compression_savings",
+            "C": "sp_partition_stats",
+            "D": "sp_index_usage"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T4_Q4",
+          "question": "Khi thực hiện page compression, điều gì xảy ra trước tiên?",
+          "options": {
+            "A": "Dictionary compression",
+            "B": "Row compression",
+            "C": "Columnstore compression",
+            "D": "Filegroup mapping"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T4_Q5",
+          "question": "Dictionary compression hoạt động như thế nào?",
+          "options": {
+            "A": "Nén dữ liệu theo từng cột",
+            "B": "Tìm các giá trị trùng lặp và lưu vào từ điển",
+            "C": "Xóa các dòng NULL",
+            "D": "Di chuyển dữ liệu sang bảng khác"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T4_Q6",
+          "question": "Khi nén bảng bằng page compression, điều gì có thể ảnh hưởng đến hiệu suất?",
+          "options": {
+            "A": "Số lượng chỉ mục",
+            "B": "Chu kỳ CPU tăng lên do xử lý nén/giải nén",
+            "C": "Số lượng filegroup",
+            "D": "Loại partition scheme"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T4_Q7",
+          "question": "Unicode được nén như thế nào trong row compression?",
+          "options": {
+            "A": "Luôn dùng 2 byte",
+            "B": "Dùng 1 byte nếu có thể",
+            "C": "Không thể nén",
+            "D": "Dùng dictionary compression"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T4_Q8",
+          "question": "Lệnh nào dùng để nén một partition cụ thể?",
+          "options": {
+            "A": "ALTER PARTITION SCHEME",
+            "B": "ALTER TABLE ... REBUILD PARTITION = n WITH (DATA_COMPRESSION = ROW)",
+            "C": "CREATE PARTITION FUNCTION",
+            "D": "ALTER INDEX ... REBUILD"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C2_T5",
+      "topicName": "Memory-Optimized Tables",
+      "questions": [
+        {
+          "id": "C2_T5_Q1",
+          "question": "Bộ nhớ chính là nơi lưu trữ chính của bảng nào?",
+          "options": {
+            "A": "Partitioned table",
+            "B": "Memory-optimized table",
+            "C": "Compressed table",
+            "D": "Columnstore table"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T5_Q2",
+          "question": "Memory-optimized table có thể có độ bền như thế nào?",
+          "options": {
+            "A": "Chỉ lưu trên disk",
+            "B": "Durable hoặc non-durable",
+            "C": "Chỉ lưu trên memory",
+            "D": "Chỉ lưu trên filegroup phụ"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T5_Q3",
+          "question": "Lệnh nào dùng để tạo bảng memory-optimized?",
+          "options": {
+            "A": "CREATE MEMORY TABLE",
+            "B": "CREATE TABLE ... WITH (MEMORY_OPTIMIZED = ON)",
+            "C": "CREATE TABLE ... FILESTREAM",
+            "D": "CREATE TABLE ... PARTITIONED"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T5_Q4",
+          "question": "Loại chỉ mục nào được hỗ trợ bởi memory-optimized table?",
+          "options": {
+            "A": "Clustered index",
+            "B": "Full-text index",
+            "C": "Nonclustered hash index",
+            "D": "XML index"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T5_Q5",
+          "question": "Khi cập nhật dữ liệu trong memory-optimized table, điều gì xảy ra?",
+          "options": {
+            "A": "Dữ liệu được ghi đè",
+            "B": "Một dòng bị xóa và dòng mới được chèn",
+            "C": "Dữ liệu được nén lại",
+            "D": "Dữ liệu được lưu vào filegroup phụ"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T5_Q6",
+          "question": "Quá trình MERGE trong memory-optimized table dùng để làm gì?",
+          "options": {
+            "A": "Nén dữ liệu",
+            "B": "Xóa dòng đã bị đánh dấu xóa",
+            "C": "Di chuyển dữ liệu sang bảng khác",
+            "D": "Tạo chỉ mục mới"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T5_Q7",
+          "question": "Khi migrate bảng đã nén sang memory-optimized table, điều gì cần lưu ý?",
+          "options": {
+            "A": "Không cần thay đổi gì",
+            "B": "Phải tính lại kích thước vì memory-optimized không hỗ trợ nén",
+            "C": "Phải xóa clustered index",
+            "D": "Phải tạo lại partition scheme"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T5_Q8",
+          "question": "Khi nào checkpoint tự động được thực hiện trong memory-optimized table?",
+          "options": {
+            "A": "Sau mỗi lần INSERT",
+            "B": "Khi file log vượt quá 1.5 GB",
+            "C": "Khi bảng bị xóa",
+            "D": "Khi tạo chỉ mục mới"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,586 @@
+{
+  "chapterId": "C8",
+  "chapterName": "Locking and Blocking",
+  "topics": [
+    {
+      "topicId": "C8_T1",
+      "topicName": "LOCKING",
+      "questions": [
+        {
+          "id": "C8_T1_Q1",
+          "question": "SQL Server sử dụng cơ chế nào để kiểm soát quyền truy cập đồng thời vào dữ liệu?",
+          "options": {
+            "A": "Triggers",
+            "B": "Indexes",
+            "C": "Locks",
+            "D": "Views"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T1_Q2",
+          "question": "Loại khóa nào được sử dụng khi một giao dịch đọc dữ liệu?",
+          "options": {
+            "A": "Exclusive Lock",
+            "B": "Shared Lock",
+            "C": "Update Lock",
+            "D": "Intent Lock"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C8_T1_Q3",
+          "question": "Loại khóa nào được sử dụng khi một giao dịch sửa đổi dữ liệu?",
+          "options": {
+            "A": "Shared Lock",
+            "B": "Intent Lock",
+            "C": "Exclusive Lock",
+            "D": "Schema Lock"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T1_Q4",
+          "question": "Khóa Update Lock ngăn chặn điều gì?",
+          "options": {
+            "A": "Đọc bởi các giao dịch khác",
+            "B": "Chèn các hàng mới",
+            "C": "Tình trạng Deadlock trong quá trình cập nhật",
+            "D": "Phân mảnh chỉ mục (Index fragmentation)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T1_Q5",
+          "question": "Khóa nào được đặt trước khi chuyển đổi sang Khóa Exclusive Lock?",
+          "options": {
+            "A": "Shared Lock",
+            "B": "Update Lock",
+            "C": "Intent Lock",
+            "D": "Schema Lock"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C8_T1_Q6",
+          "question": "Mục đích của Khóa Intent Locks là gì?",
+          "options": {
+            "A": "Ngăn chặn hiện tượng đọc bóng ma (phantom reads)",
+            "B": "Chặn các thay đổi về lược đồ (schema)",
+            "C": "Biểu thị ý định khóa các tài nguyên ở cấp thấp hơn",
+            "D": "Tối ưu hóa các phép nối (joins)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T1_Q7",
+          "question": "Loại khóa nào được sử dụng trong quá trình sửa đổi lược đồ (schema)?",
+          "options": {
+            "A": "Shared Lock",
+            "B": "Exclusive Lock",
+            "C": "Update Lock",
+            "D": "Schema Modification Lock (Sch-M)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C8_T1_Q8",
+          "question": "Chế độ khóa nào cho phép nhiều giao dịch đọc cùng một dữ liệu đồng thời?",
+          "options": {
+            "A": "Exclusive",
+            "B": "Update",
+            "C": "Shared",
+            "D": "Schema"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T1_Q9",
+          "question": "Điều gì xảy ra khi một giao dịch giữ một Khóa Exclusive Lock?",
+          "options": {
+            "A": "Các giao dịch khác có thể đọc",
+            "B": "Các giao dịch khác có thể ghi",
+            "C": "Các giao dịch khác bị chặn không thể đọc và ghi",
+            "D": "Các chỉ mục (indexes) được tạo lại"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T1_Q10",
+          "question": "Khóa nào tương thích với Khóa Shared Lock?",
+          "options": {
+            "A": "Exclusive Lock",
+            "B": "Shared Lock",
+            "C": "Update Lock",
+            "D": "Schema Lock"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C8_T2",
+      "topicName": "BLOCKING (HÀNH VI CHẶN)",
+      "questions": [
+        {
+          "id": "C8_T2_Q1",
+          "question": "Hiện tượng blocking trong SQL Server là gì?",
+          "options": {
+            "A": "Một dạng của deadlock",
+            "B": "Một loại chỉ mục (index)",
+            "C": "Sự chậm trễ do một giao dịch đang giữ khóa mà một giao dịch khác cần",
+            "D": "Một quá trình sao lưu (backup)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T2_Q2",
+          "question": "Loại khóa nào có khả năng gây ra blocking cao nhất?",
+          "options": {
+            "A": "Shared Lock",
+            "B": "Intent Lock",
+            "C": "Exclusive Lock",
+            "D": "Schema Lock"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T2_Q3",
+          "question": "Hiện tượng Blocking xảy ra khi:",
+          "options": {
+            "A": "Hai giao dịch cùng đọc một dữ liệu",
+            "B": "Một giao dịch được commit",
+            "C": "Một giao dịch phải chờ một khóa đang bị giữ bởi một giao dịch khác",
+            "D": "Một trigger được kích hoạt"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T2_Q4",
+          "question": "Công cụ nào giúp xác định hiện tượng blocking trong SQL Server?",
+          "options": {
+            "A": "Profiler",
+            "B": "SSMS",
+            "C": "sys.dm_exec_requests",
+            "D": "sp_helptext"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T2_Q5",
+          "question": "Mức độ cô lập (isolation level) nào dễ bị blocking nhất?",
+          "options": {
+            "A": "Read Uncommitted",
+            "B": "Snapshot",
+            "C": "Serializable",
+            "D": "Read Committed Snapshot"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T2_Q6",
+          "question": "Triệu chứng phổ biến của hiện tượng blocking là gì?",
+          "options": {
+            "A": "Truy vấn thực thi nhanh",
+            "B": "Phân mảnh chỉ mục (Index fragmentation)",
+            "C": "Các truy vấn chạy mất nhiều thời gian (long-running)",
+            "D": "Thay đổi lược đồ (schema)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T2_Q7",
+          "question": "Làm thế nào để giảm thiểu hiện tượng blocking?",
+          "options": {
+            "A": "Sử dụng nhiều chỉ mục (indexes) hơn",
+            "B": "Giữ cho các giao dịch ngắn gọn",
+            "C": "Vô hiệu hóa các trigger",
+            "D": "Tăng bộ nhớ (memory)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C8_T2_Q8",
+          "question": "Lệnh nào hiển thị các phiên (sessions) đang bị blocking hiện tại?",
+          "options": {
+            "A": "sp_helpdb",
+            "B": "sp_who",
+            "C": "sp_who2",
+            "D": "sp_helptext"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T2_Q9",
+          "question": "Kết quả của việc blocking quá mức là gì?",
+          "options": {
+            "A": "Hiệu suất nhanh hơn",
+            "B": "Tạo ra nhiều bản sao lưu hơn",
+            "C": "Giảm tính đồng thời và thông lượng (throughput)",
+            "D": "Lỗi lược đồ (schema corruption)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T2_Q10",
+          "question": "Tính năng nào của SQL Server giúp giảm blocking trong quá trình đọc?",
+          "options": {
+            "A": "Indexes",
+            "B": "Triggers",
+            "C": "Read Committed Snapshot Isolation (RCSI)",
+            "D": "Stored Procedures"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C8_T3",
+      "topicName": "DEADLOCKS (BẾ TẮC)",
+      "questions": [
+        {
+          "id": "C8_T3_Q1",
+          "question": "Deadlock là gì?",
+          "options": {
+            "A": "Một lần đăng nhập thất bại",
+            "B": "Một chỉ mục (index) bị thiếu",
+            "C": "Một vòng lặp các giao dịch chờ đợi các khóa của nhau",
+            "D": "Một thay đổi về lược đồ (schema)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T3_Q2",
+          "question": "Công cụ nào phát hiện deadlocks?",
+          "options": {
+            "A": "sp_helptext",
+            "B": "sp_who2",
+            "C": "Extended Events",
+            "D": "SQL Agent"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T3_Q3",
+          "question": "Điều gì xảy ra khi SQL Server phát hiện một deadlock?",
+          "options": {
+            "A": "Nó sẽ chờ đợi vô thời hạn",
+            "B": "Nó sẽ commit tất cả các giao dịch",
+            "C": "Nó sẽ hủy (kill) một giao dịch để làm \"nạn nhân\" (victim)",
+            "D": "Nó sẽ khởi động lại cơ sở dữ liệu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T3_Q4",
+          "question": "Trace flag nào bật tính năng ghi nhật ký biểu đồ deadlock (deadlock graph)?",
+          "options": {
+            "A": "1118",
+            "B": "1204",
+            "C": "1222",
+            "D": "2528"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T3_Q5",
+          "question": "Làm thế nào để giảm thiểu deadlocks?",
+          "options": {
+            "A": "Sử dụng các trigger",
+            "B": "Tăng bộ nhớ (memory)",
+            "C": "Truy cập các đối tượng theo cùng một thứ tự",
+            "D": "Vô hiệu hóa việc ghi nhật ký (logging)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T3_Q6",
+          "question": "Nạn nhân của deadlock (deadlock victim) là gì?",
+          "options": {
+            "A": "Giao dịch gây ra deadlock",
+            "B": "Giao dịch được chọn để hoàn tác (roll back)",
+            "C": "Giao dịch có nhiều khóa nhất",
+            "D": "Giao dịch được commit đầu tiên"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C8_T3_Q7",
+          "question": "Mức độ cô lập (isolation level) nào làm tăng nguy cơ deadlock?",
+          "options": {
+            "A": "Read Uncommitted",
+            "B": "Snapshot",
+            "C": "Serializable",
+            "D": "Read Committed Snapshot"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T3_Q8",
+          "question": "SQL Server sử dụng công cụ gì để phát hiện deadlocks?",
+          "options": {
+            "A": "Quét chỉ mục (Index scan)",
+            "B": "Leo thang khóa (Lock escalation)",
+            "C": "Biểu đồ chờ đợi (Wait-for graph)",
+            "D": "Bộ tối ưu hóa truy vấn (Query optimizer)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T3_Q9",
+          "question": "Chiến lược nào sau đây giúp ngăn ngừa deadlock?",
+          "options": {
+            "A": "Sử dụng nhiều chỉ mục (indexes) hơn",
+            "B": "Giữ cho các giao dịch ngắn gọn và có thể dự đoán được",
+            "C": "Vô hiệu hóa các trigger",
+            "D": "Sử dụng con trỏ (cursors)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C8_T3_Q10",
+          "question": "Cách tốt nhất để phân tích deadlocks là gì?",
+          "options": {
+            "A": "sp_helptext",
+            "B": "SQL Profiler",
+            "C": "Extended Events kết hợp với deadlock graph",
+            "D": "SSIS"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C8_T4",
+      "topicName": "LOCK ESCALATION & CONCURRENCY (LEO THANG KHÓA & TÍNH ĐỒNG THỜI)",
+      "questions": [
+        {
+          "id": "C8_T4_Q1",
+          "question": "Leo thang khóa (lock escalation) là gì?",
+          "options": {
+            "A": "Khóa nhiều hàng hơn",
+            "B": "Khóa ít hàng hơn",
+            "C": "Chuyển đổi nhiều khóa cấp hàng/trang thành một khóa cấp bảng",
+            "D": "Giải phóng các khóa sớm hơn"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T4_Q2",
+          "question": "Cấp độ khóa nào có tính chi tiết (granular) cao nhất?",
+          "options": {
+            "A": "Table (Bảng)",
+            "B": "Partition (Phân vùng)",
+            "C": "Row (Hàng)",
+            "D": "Page (Trang)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T4_Q3",
+          "question": "Điều gì kích hoạt việc leo thang khóa?",
+          "options": {
+            "A": "Thay đổi lược đồ (schema)",
+            "B": "Tạo lại chỉ mục (Index rebuild)",
+            "C": "Có quá nhiều khóa cấp hàng/trang",
+            "D": "Sao lưu (Backup)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T4_Q4",
+          "question": "Mức độ cô lập (isolation level) nào tránh được việc sử dụng khóa trong quá trình đọc?",
+          "options": {
+            "A": "Serializable",
+            "B": "Repeatable Read",
+            "C": "Snapshot Isolation",
+            "D": "Read Committed"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T4_Q5",
+          "question": "Đồng thời lạc quan (optimistic concurrency) là gì?",
+          "options": {
+            "A": "Sử dụng khóa để ngăn chặn xung đột",
+            "B": "Giả định không có xung đột và kiểm tra lúc commit",
+            "C": "Chặn người dùng khác",
+            "D": "Sử dụng các trigger"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C8_T4_Q6",
+          "question": "Đồng thời bi quan (pessimistic concurrency) là gì?",
+          "options": {
+            "A": "Sử dụng phiên bản hàng (row versioning)",
+            "B": "Sử dụng các gợi ý truy vấn (query hints)",
+            "C": "Khóa dữ liệu để ngăn chặn xung đột",
+            "D": "Sử dụng các bảng tạm (temp tables)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T4_Q7",
+          "question": "Tính năng nào của SQL Server sử dụng phiên bản hàng (row versioning)?",
+          "options": {
+            "A": "Read Uncommitted",
+            "B": "Serializable",
+            "C": "Snapshot Isolation",
+            "D": "Repeatable Read"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T4_Q8",
+          "question": "Mức độ cô lập mặc định trong SQL Server là gì?",
+          "options": {
+            "A": "Snapshot",
+            "B": "Serializable",
+            "C": "Read Committed",
+            "D": "Repeatable Read"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T4_Q9",
+          "question": "Mức độ cô lập nào ngăn chặn hiện tượng đọc dữ liệu rác (dirty reads) nhưng cho phép đọc không lặp lại (nonrepeatable reads)?",
+          "options": {
+            "A": "Read Uncommitted",
+            "B": "Read Committed",
+            "C": "Serializable",
+            "D": "Snapshot"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C8_T4_Q10",
+          "question": "Mức độ cô lập nào ngăn chặn tất cả các hiện tượng bất thường bao gồm cả đọc bóng ma (phantom reads)?",
+          "options": {
+            "A": "Read Committed",
+            "B": "Repeatable Read",
+            "C": "Serializable",
+            "D": "Read Uncommitted"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C8_T5",
+      "topicName": "Bài test lms",
+      "questions": [
+        {
+          "id": "C8_T5_Q1",
+          "question": "Khi SQL Server khóa một tài nguyên bên trong một bảng, nó sẽ thiết lập một intent lock lên tài nguyên ...",
+          "options": {
+            "A": "ngay phía phải nó trong cấu trúc phân cấp.",
+            "B": "ngay phía trái nó trong cấu trúc phân cấp.",
+            "C": "ngay phía trên nó trong cấu trúc phân cấp.",
+            "D": "ngay phía dưới nó trong cấu trúc phân cấp."
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T5_Q2",
+          "question": "Snapshot Isolation có chức năng:",
+          "options": {
+            "A": "Tránh được hoàn toàn Phantom read.",
+            "B": "Tránh được hoàn toàn Dirty read, Nonrepeatable read, Phantom read.",
+            "C": "Tránh được hoàn toàn Phantom read, Nonrepeatable read",
+            "D": "Tránh được hoàn toàn Dirty read, Phantom read."
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C8_T5_Q3",
+          "question": "Dirty Read xảy ra khi nào?",
+          "options": {
+            "A": "1 giao dịch đọc dữ liệu chưa được commit của nhiều giao dịch khác",
+            "B": "1 giao dịch đọc dữ liệu chưa được commit của 1 giao dịch khác",
+            "C": "1 giao dịch xóa dữ liệu chưa được commit của một giao dịch khác",
+            "D": "1 giao dịch cập nhật chưa được commit của một giao dịch khác"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C8_T5_Q4",
+          "question": "SQL Server kích hoạt nâng cấp khóa khi:",
+          "options": {
+            "A": "Số lượng bảng được thiết lập trong cơ sở dữ liệu vượt quá ngưỡng bộ nhớ cho phép.",
+            "B": "Số lượng khóa được thiết lập trong instance vượt quá ngưỡng bộ nhớ cho phép.",
+            "C": "Số lượng bảng được thiết lập trong instance vượt quá ngưỡng bộ nhớ cho phép.",
+            "D": "Số lượng cơ sở dữ liệu được thiết lập trong instance vượt quá ngưỡng bộ nhớ cho phép"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C8_T5_Q5",
+          "question": "HoBT liên quan đến",
+          "options": {
+            "A": "Cấu trúc dữ liệu dạng Object",
+            "B": "Cấu trúc dữ liệu dạng XML",
+            "C": "Cấu trúc dữ liệu dạng Tree",
+            "D": "Cấu trúc dữ liệu dạng Bảng"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T5_Q6",
+          "question": "Một ví dụ để Lock Granularity thiết lập khóa ở cấp độ mịn thấp nhất có thể:",
+          "options": {
+            "A": "Row Level",
+            "B": "Table Level",
+            "C": "Object Level",
+            "D": "Query Level"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C8_T5_Q7",
+          "question": "Khóa một RID (định vị dòng) hoặc KEY (khóa) thì tạo một intent lock trên",
+          "options": {
+            "A": "page chứa dòng đó.",
+            "B": "table chứa dòng đó.",
+            "C": "extent chứa dòng đó",
+            "D": "vùng nhớ chứa dòng đó."
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C8_T5_Q8",
+          "question": "Nonrepeatable Read xảy ra khi nào?",
+          "options": {
+            "A": "2 giao dịch đọc cùng một dòng dữ liệu hai lần nhưng nhận được các kết quả khác nhau mỗi lần.",
+            "B": "1 giao dịch đọc cùng một dòng dữ liệu hai lần nhưng nhận được các kết quả khác nhau mỗi lần.",
+            "C": "2 giao dịch đọc một dòng dữ liệu ba lần nhưng nhận được các kết quả khác nhau mỗi lần.",
+            "D": "1 giao dịch cập nhật một dòng dữ liệu ba lần nhưng nhận được các kết quả khác nhau mỗi lần."
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C8_T5_Q9",
+          "question": "Cấp độ cô lập nào đảm bảo rằng không có dòng nào được thêm vào trong dải các dòng dữ liệu đang được truy cập ?",
+          "options": {
+            "A": "Repeatable Read",
+            "B": "Snapshot",
+            "C": "Serializable",
+            "D": "Read Committed"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T5_Q10",
+          "question": "Phantom Read xảy ra khi nào ?",
+          "options": {
+            "A": "1 giao dịch đọc một dải các dòng dữ liệu một lần nhưng nhận được số lượng dòng khác nhau ở lần đọc thứ hai.",
+            "B": "1 giao dịch đọc một dải các dòng dữ liệu hai lần nhưng nhận được số lượng dòng khác nhau ở lần đọc thứ hai.",
+            "C": "1 giao dịch đọc cùng một dòng dữ liệu hai lần nhưng nhận được các kết quả khác nhau mỗi lần.",
+            "D": "1 giao dịch đọc dữ liệu chưa được commit của 1 giao dịch khác"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2270 @@
+{
+  "chapterId": "ATTT_BO",
+  "chapterName": "Bộ đề ôn tập ATBM HTTT (đáp án tự giải)",
+  "topics": [
+    {
+      "topicId": "ATTT_BO_T1",
+      "topicName": "BÀI 1 – Hệ thống thông tin, rủi ro và hạ tầng CNTT",
+      "questions": [
+        {
+          "id": "ATTT_BO_T1_Q1",
+          "question": "Thuật ngữ nào mô tả khả năng một điều xấu xảy ra đối với một tài sản?",
+          "options": {
+            "A": "Rủi ro (Risk)",
+            "B": "Mối đe dọa (Threat)",
+            "C": "Lỗ hổng (Vulnerability)",
+            "D": "Biện pháp đối phó (Countermeasure)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T1_Q2",
+          "question": "Thuật ngữ nào mô tả bất kỳ hành động nào có thể gây thiệt hại cho một tài sản?",
+          "options": {
+            "A": "Rủi ro (Risk)",
+            "B": "Lỗ hổng (Vulnerability)",
+            "C": "Tài sản (Asset)",
+            "D": "Mối đe dọa (Threat)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T1_Q3",
+          "question": "Thuật ngữ nào mô tả điểm yếu cho phép một mối đe dọa được hiện thực hóa hoặc tác động đến tài sản?",
+          "options": {
+            "A": "Mối đe dọa (Threat)",
+            "B": "Rủi ro (Risk)",
+            "C": "Lỗ hổng (Vulnerability)",
+            "D": "Kiểm soát (Control)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T1_Q4",
+          "question": "Quản trị viên của Hùng quên đổi mật khẩu mặc định trên bộ định tuyến sau khi lắp đặt. Mật khẩu mặc định này là ví dụ của yếu tố nào?",
+          "options": {
+            "A": "Mối đe dọa (Threat)",
+            "B": "Lỗ hổng (Vulnerability)",
+            "C": "Tài sản (Asset)",
+            "D": "Biện pháp đối phó (Countermeasure)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T1_Q5",
+          "question": "Một cơn bão lớn có thể làm ngập trung tâm dữ liệu của công ty. Cơn bão trong tình huống này là gì?",
+          "options": {
+            "A": "Mối đe dọa (Threat)",
+            "B": "Lỗ hổng (Vulnerability)",
+            "C": "Tài sản (Asset)",
+            "D": "Chính sách (Policy)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T1_Q6",
+          "question": "Nguyên tắc nào trong bộ ba CIA nhằm ngăn chặn việc tiết lộ thông tin cho người không được phép?",
+          "options": {
+            "A": "Toàn vẹn (Integrity)",
+            "B": "Sẵn sàng (Availability)",
+            "C": "Trách nhiệm giải trình (Accountability)",
+            "D": "Bảo mật (Confidentiality)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T1_Q7",
+          "question": "Nguyên tắc nào trong bộ ba CIA nhằm bảo đảm dữ liệu không bị sửa đổi trái phép?",
+          "options": {
+            "A": "Bảo mật (Confidentiality)",
+            "B": "Sẵn sàng (Availability)",
+            "C": "Toàn vẹn (Integrity)",
+            "D": "Xác thực (Authentication)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T1_Q8",
+          "question": "Nguyên tắc nào trong bộ ba CIA bảo đảm hệ thống và dữ liệu có thể truy cập được khi cần?",
+          "options": {
+            "A": "Bảo mật (Confidentiality)",
+            "B": "Sẵn sàng (Availability)",
+            "C": "Toàn vẹn (Integrity)",
+            "D": "Ủy quyền (Authorization)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T1_Q9",
+          "question": "Lan mã hóa tệp bảng lương trước khi lưu lên máy chủ chia sẻ để người ngoài bộ phận không đọc được. Cô đang bảo vệ nguyên tắc nào?",
+          "options": {
+            "A": "Bảo mật",
+            "B": "Toàn vẹn",
+            "C": "Sẵn sàng",
+            "D": "Chống chối bỏ"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T1_Q10",
+          "question": "Một tấn công từ chối dịch vụ phân tán (DDoS) làm trang web bán hàng không thể truy cập được. Nguyên tắc nào bị ảnh hưởng chính?",
+          "options": {
+            "A": "Bảo mật",
+            "B": "Toàn vẹn",
+            "C": "Quyền riêng tư",
+            "D": "Sẵn sàng"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T1_Q11",
+          "question": "Kẻ tấn công sửa số tiền trong một giao dịch đang lưu trong cơ sở dữ liệu. Nguyên tắc nào bị vi phạm?",
+          "options": {
+            "A": "Bảo mật",
+            "B": "Sẵn sàng",
+            "C": "Toàn vẹn",
+            "D": "Xác thực"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T1_Q12",
+          "question": "Một máy chủ chạy 700 giờ và ngừng hoạt động 20 giờ trong một tháng 720 giờ. Tính sẵn sàng của máy chủ xấp xỉ bao nhiêu?",
+          "options": {
+            "A": "2,8%",
+            "B": "97,2%",
+            "C": "99,0%",
+            "D": "96,0%"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T1_Q13",
+          "question": "Một hệ thống trong tháng 30 ngày (720 giờ) ngừng hoạt động tổng cộng 7,2 giờ. Tính sẵn sàng là bao nhiêu?",
+          "options": {
+            "A": "99%",
+            "B": "92,8%",
+            "C": "90%",
+            "D": "99,9%"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T1_Q14",
+          "question": "Máy chủ web của Juan ngừng hoạt động đúng một ngày trong tháng 30 ngày và không có sự cố nào khác. Thời gian hoạt động (uptime) trong tháng là bao nhiêu?",
+          "options": {
+            "A": "30 ngày",
+            "B": "1 ngày",
+            "C": "31 ngày",
+            "D": "29 ngày"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T1_Q15",
+          "question": "Công thức tính tính sẵn sàng (A) là gì?",
+          "options": {
+            "A": "Tổng downtime / Tổng uptime",
+            "B": "Tổng uptime × Tổng downtime",
+            "C": "Tổng uptime / (Tổng uptime + Tổng downtime)",
+            "D": "Tổng downtime / (Tổng uptime + Tổng downtime)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T1_Q16",
+          "question": "Đại lượng nào cho biết thời gian trung bình cần để sửa chữa một thành phần hỏng?",
+          "options": {
+            "A": "MTTF",
+            "B": "MTTR",
+            "C": "MTBF",
+            "D": "RTO"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T1_Q17",
+          "question": "Đại lượng nào cho biết thời gian trung bình một thành phần hoạt động cho đến khi hỏng lần đầu?",
+          "options": {
+            "A": "MTTF",
+            "B": "MTTR",
+            "C": "RTO",
+            "D": "Downtime"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T1_Q18",
+          "question": "Đại lượng nào cho biết thời gian trung bình giữa hai lần hỏng liên tiếp của một hệ thống?",
+          "options": {
+            "A": "MTTR",
+            "B": "MTTF",
+            "C": "RTO",
+            "D": "MTBF"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T1_Q19",
+          "question": "Một thành phần có MTTF là 400 giờ và MTTR là 8 giờ. MTBF xấp xỉ bao nhiêu?",
+          "options": {
+            "A": "392 giờ",
+            "B": "50 giờ",
+            "C": "408 giờ",
+            "D": "3.200 giờ"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T1_Q20",
+          "question": "Đại lượng nào xác định khoảng thời gian tối đa chấp nhận được để khôi phục một hệ thống sau sự cố?",
+          "options": {
+            "A": "MTTF",
+            "B": "RTO",
+            "C": "MTBF",
+            "D": "Uptime"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T1_Q21",
+          "question": "Miền nào trong bảy miền của hạ tầng CNTT bao gồm những người truy cập hệ thống, ứng dụng và dữ liệu?",
+          "options": {
+            "A": "Miền người dùng (User Domain)",
+            "B": "Miền máy trạm (Workstation Domain)",
+            "C": "Miền WAN",
+            "D": "Miền ứng dụng hệ thống"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T1_Q22",
+          "question": "Tường lửa và vùng DMZ chủ yếu thuộc miền nào của hạ tầng CNTT?",
+          "options": {
+            "A": "Miền người dùng",
+            "B": "Miền máy trạm",
+            "C": "Miền truy cập từ xa",
+            "D": "Miền LAN-to-WAN"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T1_Q23",
+          "question": "Nhân viên dùng VPN để kết nối vào mạng công ty từ nhà. Kết nối này thuộc miền nào?",
+          "options": {
+            "A": "Miền LAN",
+            "B": "Miền người dùng",
+            "C": "Miền truy cập từ xa (Remote Access Domain)",
+            "D": "Miền máy trạm"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T1_Q24",
+          "question": "Theo slide, mắt xích yếu nhất trong an ninh của hạ tầng CNTT là gì?",
+          "options": {
+            "A": "Máy chủ",
+            "B": "Người dùng",
+            "C": "Tường lửa",
+            "D": "Đường truyền WAN"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T1_Q25",
+          "question": "Trong miền người dùng, bộ phận nào chịu trách nhiệm giải trình về việc kiểm tra lý lịch nhân viên?",
+          "options": {
+            "A": "Bộ phận nhân sự (HR)",
+            "B": "Bộ phận kế toán",
+            "C": "Bộ phận bảo vệ",
+            "D": "Nhà cung cấp dịch vụ Internet"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T1_Q26",
+          "question": "Biện pháp nào KHÔNG giúp giảm rủi ro do yếu tố người dùng?",
+          "options": {
+            "A": "Kiểm tra kỹ lý lịch ứng viên",
+            "B": "Luân chuyển quyền truy cập giữa các vị trí",
+            "C": "Kiểm toán các biện pháp kiểm soát an ninh hằng năm",
+            "D": "Cho nhân viên giữ vĩnh viễn quyền truy cập vào mọi hệ thống nhạy cảm"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T1_Q27",
+          "question": "Thành phần nào của khung chính sách an ninh CNTT là văn bản ngắn gọn xác định đường lối hành động áp dụng cho toàn tổ chức?",
+          "options": {
+            "A": "Tiêu chuẩn (Standard)",
+            "B": "Quy trình (Procedure)",
+            "C": "Chính sách (Policy)",
+            "D": "Hướng dẫn (Guideline)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T1_Q28",
+          "question": "Thành phần nào định nghĩa chi tiết bằng văn bản cách sử dụng phần cứng và phần mềm?",
+          "options": {
+            "A": "Chính sách (Policy)",
+            "B": "Tiêu chuẩn (Standard)",
+            "C": "Hướng dẫn (Guideline)",
+            "D": "Quy trình (Procedure)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T1_Q29",
+          "question": "Thành phần nào là các chỉ dẫn bằng văn bản về cách thực hiện chính sách và tiêu chuẩn?",
+          "options": {
+            "A": "Quy trình (Procedure)",
+            "B": "Chính sách (Policy)",
+            "C": "Tiêu chuẩn (Standard)",
+            "D": "Hướng dẫn (Guideline)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T1_Q30",
+          "question": "Thành phần nào của khung chính sách chỉ đưa ra các gợi ý thay vì hành động bắt buộc?",
+          "options": {
+            "A": "Chính sách (Policy)",
+            "B": "Tiêu chuẩn (Standard)",
+            "C": "Quy trình (Procedure)",
+            "D": "Hướng dẫn (Guideline)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T1_Q31",
+          "question": "Loại dữ liệu nào là dữ liệu về con người cần được giữ riêng tư?",
+          "options": {
+            "A": "Dữ liệu mật (Confidential)",
+            "B": "Dữ liệu chỉ dùng nội bộ",
+            "C": "Dữ liệu riêng tư (Private data)",
+            "D": "Dữ liệu phạm vi công cộng"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T1_Q32",
+          "question": "Loại dữ liệu nào là thông tin hoặc dữ liệu thuộc sở hữu của tổ chức?",
+          "options": {
+            "A": "Dữ liệu riêng tư (Private data)",
+            "B": "Dữ liệu mật (Confidential)",
+            "C": "Dữ liệu phạm vi công cộng",
+            "D": "Dữ liệu chỉ dùng nội bộ"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T1_Q33",
+          "question": "Loại dữ liệu nào được chia sẻ nội bộ trong tổ chức?",
+          "options": {
+            "A": "Chỉ dùng nội bộ (Internal use only)",
+            "B": "Dữ liệu phạm vi công cộng",
+            "C": "Dữ liệu riêng tư",
+            "D": "Dữ liệu mật"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T1_Q34",
+          "question": "Thông cáo báo chí đã được công bố rộng rãi cho công chúng thuộc loại dữ liệu nào?",
+          "options": {
+            "A": "Dữ liệu mật",
+            "B": "Dữ liệu riêng tư",
+            "C": "Chỉ dùng nội bộ",
+            "D": "Dữ liệu phạm vi công cộng (Public domain)"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "ATTT_BO_T2",
+      "topicName": "BÀI 3 – Tấn công độc hại, mối đe dọa và lỗ hổng",
+      "questions": [
+        {
+          "id": "ATTT_BO_T2_Q43",
+          "question": "Hacker nào được ủy quyền tìm điểm yếu của hệ thống để giúp tổ chức khắc phục?",
+          "options": {
+            "A": "Hacker mũ đen (black-hat)",
+            "B": "Hacker mũ xám (gray-hat)",
+            "C": "Hacker mũ trắng (white-hat)",
+            "D": "Cracker"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T2_Q44",
+          "question": "Hacker nào xâm nhập hệ thống trái phép với mục đích gây hại hoặc trục lợi?",
+          "options": {
+            "A": "Hacker mũ trắng (white-hat)",
+            "B": "Hacker mũ đen (black-hat)",
+            "C": "Chuyên gia kiểm thử xâm nhập được thuê",
+            "D": "Kiểm toán viên nội bộ"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T2_Q45",
+          "question": "Hacker mũ xám (gray-hat) được mô tả là gì?",
+          "options": {
+            "A": "Nằm giữa hacker mũ trắng và hacker mũ đen",
+            "B": "Luôn làm việc theo hợp đồng ủy quyền",
+            "C": "Luôn gây hại cho tổ chức",
+            "D": "Chỉ tấn công hệ thống chính phủ"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T2_Q46",
+          "question": "Hoạt động nào sau đây KHÔNG phải là hoạt động gây vi phạm an ninh theo slide?",
+          "options": {
+            "A": "Tấn công từ chối dịch vụ (DoS)",
+            "B": "Nghe lén đường truyền (wiretapping)",
+            "C": "Sử dụng cửa hậu (backdoor) để truy cập tài nguyên",
+            "D": "Sao lưu dữ liệu theo lịch"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T2_Q47",
+          "question": "Tấn công nào nhằm làm quá tải tài nguyên để người dùng hợp lệ không sử dụng được dịch vụ?",
+          "options": {
+            "A": "Nghe lén",
+            "B": "Sửa đổi dữ liệu",
+            "C": "Từ chối dịch vụ (DoS)",
+            "D": "Giả mạo danh tính"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T2_Q48",
+          "question": "Điểm khác biệt giữa DoS và DDoS là gì?",
+          "options": {
+            "A": "DDoS chỉ tấn công dữ liệu, không ảnh hưởng dịch vụ",
+            "B": "DDoS dùng nhiều máy phối hợp cùng tấn công",
+            "C": "DoS luôn dùng nhiều máy hơn DDoS",
+            "D": "DoS chỉ nhằm đánh cắp mật khẩu"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T2_Q49",
+          "question": "Kẻ tấn công cài thiết bị nghe trộm vào đường cáp mạng để đọc dữ liệu truyền qua. Đây là hoạt động nào?",
+          "options": {
+            "A": "Nghe lén (wiretapping)",
+            "B": "Từ chối dịch vụ",
+            "C": "Sửa đổi dữ liệu",
+            "D": "Bịa đặt thông tin"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T2_Q50",
+          "question": "Lập trình viên để lại một lối vào bí mật trong ứng dụng để sau này truy cập mà không cần xác thực. Lối vào này là gì?",
+          "options": {
+            "A": "Tường lửa",
+            "B": "Chứng chỉ số",
+            "C": "Bản vá bảo mật",
+            "D": "Cửa hậu (backdoor)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T2_Q51",
+          "question": "Một nhân viên vô tình sửa nhầm bảng giá trong cơ sở dữ liệu. Đây thuộc loại hoạt động nào?",
+          "options": {
+            "A": "Tấn công DDoS",
+            "B": "Nghe lén",
+            "C": "Thay đổi dữ liệu ngoài ý muốn (accidental data modification)",
+            "D": "Tấn công cửa hậu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T2_Q52",
+          "question": "Bốn loại tấn công độc hại theo slide là gì?",
+          "options": {
+            "A": "Bảo mật, toàn vẹn, sẵn sàng, xác thực",
+            "B": "Bịa đặt, chặn bắt, gián đoạn, sửa đổi",
+            "C": "Nhận dạng, xác thực, ủy quyền, giải trình",
+            "D": "Giảm thiểu, chuyển giao, chấp nhận, tránh"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T2_Q53",
+          "question": "Kẻ tấn công tạo ra một bản ghi giao dịch giả để đánh lừa hệ thống. Đây là loại tấn công nào?",
+          "options": {
+            "A": "Bịa đặt (Fabrication)",
+            "B": "Chặn bắt (Interception)",
+            "C": "Gián đoạn (Interruption)",
+            "D": "Sửa đổi (Modification)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T2_Q54",
+          "question": "Kẻ tấn công đọc lén email đang truyền đi mà không làm thay đổi nội dung. Đây là loại tấn công nào?",
+          "options": {
+            "A": "Bịa đặt (Fabrication)",
+            "B": "Sửa đổi (Modification)",
+            "C": "Gián đoạn (Interruption)",
+            "D": "Chặn bắt (Interception)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T2_Q55",
+          "question": "Kẻ tấn công cắt đứt đường truyền khiến máy chủ không thể truy cập. Đây là loại tấn công nào?",
+          "options": {
+            "A": "Chặn bắt (Interception)",
+            "B": "Bịa đặt (Fabrication)",
+            "C": "Gián đoạn (Interruption)",
+            "D": "Sửa đổi (Modification)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T2_Q56",
+          "question": "Kẻ tấn công thay đổi nội dung tệp cấu hình trên máy chủ mà không được phép. Đây là loại tấn công nào?",
+          "options": {
+            "A": "Chặn bắt (Interception)",
+            "B": "Sửa đổi (Modification)",
+            "C": "Gián đoạn (Interruption)",
+            "D": "Bịa đặt (Fabrication)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T2_Q57",
+          "question": "Loại tấn công nào chủ yếu đe dọa tính sẵn sàng của tài sản?",
+          "options": {
+            "A": "Gián đoạn (Interruption)",
+            "B": "Chặn bắt (Interception)",
+            "C": "Sửa đổi (Modification)",
+            "D": "Bịa đặt (Fabrication)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T2_Q58",
+          "question": "Loại tấn công nào chủ yếu đe dọa tính bảo mật của dữ liệu đang truyền?",
+          "options": {
+            "A": "Gián đoạn (Interruption)",
+            "B": "Sửa đổi (Modification)",
+            "C": "Từ chối dịch vụ",
+            "D": "Chặn bắt (Interception)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T2_Q59",
+          "question": "Loại tấn công nào chủ yếu đe dọa tính toàn vẹn của dữ liệu?",
+          "options": {
+            "A": "Chặn bắt (Interception)",
+            "B": "Gián đoạn (Interruption)",
+            "C": "Sửa đổi (Modification)",
+            "D": "Nghe lén thụ động"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T2_Q60",
+          "question": "Một email giả mạo ngân hàng lừa nhân viên cung cấp mật khẩu. Đây thuộc nhóm tấn công nào theo slide?",
+          "options": {
+            "A": "Tấn công vào tính sẵn sàng",
+            "B": "Tấn công vào con người",
+            "C": "Tấn công vào tài sản CNTT bằng phần cứng",
+            "D": "Tấn công vật lý vào cửa ra vào"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T2_Q61",
+          "question": "Một tấn công làm cạn tài nguyên máy chủ khiến dịch vụ ngừng hoạt động thuộc nhóm nào theo slide?",
+          "options": {
+            "A": "Tấn công vào tính sẵn sàng",
+            "B": "Tấn công vào con người",
+            "C": "Tấn công kỹ thuật xã hội",
+            "D": "Tấn công vào quyền riêng tư"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T2_Q62",
+          "question": "Mã độc cài trên máy chủ để đánh cắp dữ liệu thuộc nhóm tấn công nào theo slide?",
+          "options": {
+            "A": "Tấn công vào con người",
+            "B": "Tấn công vào tính sẵn sàng",
+            "C": "Tấn công bằng thiên tai",
+            "D": "Tấn công vào tài sản CNTT"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T2_Q63",
+          "question": "Duyệt web không phù hợp (unacceptable web-browsing) của nhân viên có thể dẫn đến điều gì?",
+          "options": {
+            "A": "Tăng tính sẵn sàng của hệ thống",
+            "B": "Giảm rủi ro cho tổ chức",
+            "C": "Vi phạm an ninh như nhiễm mã độc",
+            "D": "Củng cố chính sách bảo mật"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "ATTT_BO_T3",
+      "topicName": "BÀI 4 – Động lực của ngành an ninh thông tin: BIA, BCP, DRP",
+      "questions": [
+        {
+          "id": "ATTT_BO_T3_Q70",
+          "question": "Ba thành phần nào cùng giúp bảo vệ tài nguyên CNTT và duy trì hoạt động kinh doanh bình thường?",
+          "options": {
+            "A": "CIA, AAA và VPN",
+            "B": "BIA, BCP và DRP",
+            "C": "SLE, ALE và ARO",
+            "D": "MTTF, MTTR và MTBF"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T3_Q71",
+          "question": "Kế hoạch nào xác định các chức năng kinh doanh trọng yếu và tác động khi chúng bị gián đoạn?",
+          "options": {
+            "A": "Phân tích tác động kinh doanh (BIA)",
+            "B": "Kế hoạch khôi phục sau thảm họa (DRP)",
+            "C": "Kế hoạch mua sắm",
+            "D": "Kế hoạch tiếp thị"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T3_Q72",
+          "question": "Kế hoạch nào tập trung vào duy trì hoạt động của các chức năng kinh doanh trọng yếu trong và sau sự cố?",
+          "options": {
+            "A": "Chính sách sử dụng chấp nhận được",
+            "B": "Kế hoạch kiểm toán",
+            "C": "Phân tích rủi ro định lượng",
+            "D": "Kế hoạch duy trì hoạt động kinh doanh (BCP)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T3_Q73",
+          "question": "Kế hoạch nào tập trung vào khôi phục hạ tầng CNTT sau một thảm họa?",
+          "options": {
+            "A": "Phân tích tác động kinh doanh (BIA)",
+            "B": "Chính sách phân loại dữ liệu",
+            "C": "Kế hoạch khôi phục sau thảm họa (DRP)",
+            "D": "Kế hoạch đào tạo nhân viên"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T3_Q74",
+          "question": "Địa điểm khôi phục nào có tiện ích môi trường, phần cứng, phần mềm và dữ liệu giống trung tâm dữ liệu gốc?",
+          "options": {
+            "A": "Warm site",
+            "B": "Hot site",
+            "C": "Cold site",
+            "D": "Mobile site"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T3_Q75",
+          "question": "Địa điểm khôi phục nào có tiện ích môi trường và phần cứng máy tính cơ bản nhưng chưa có dữ liệu?",
+          "options": {
+            "A": "Warm site",
+            "B": "Hot site",
+            "C": "Cold site",
+            "D": "Multiple sites"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T3_Q76",
+          "question": "Địa điểm khôi phục nào chỉ có tiện ích môi trường cơ bản, không có hạ tầng CNTT?",
+          "options": {
+            "A": "Warm site",
+            "B": "Hot site",
+            "C": "Multiple sites",
+            "D": "Cold site"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T3_Q77",
+          "question": "Mobile site (trung tâm di động) là gì?",
+          "options": {
+            "A": "Một trung tâm dữ liệu trên đám mây",
+            "B": "Một văn phòng ảo cho nhân viên làm từ xa",
+            "C": "Một xe kéo có tiện ích cần thiết, có thể hoạt động như warm site hoặc cold site",
+            "D": "Một bản sao lưu trên thiết bị di động"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T3_Q78",
+          "question": "Một ngân hàng cần khôi phục dịch vụ trong vòng vài phút đến vài giờ sau sự cố. Phương án nào phù hợp nhất?",
+          "options": {
+            "A": "Cold site",
+            "B": "Hot site",
+            "C": "Warm site",
+            "D": "Không cần địa điểm khôi phục"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T3_Q79",
+          "question": "Một cửa hàng nhỏ có ngân sách hạn chế và chấp nhận mất vài tuần để hoạt động lại. Phương án nào phù hợp nhất?",
+          "options": {
+            "A": "Cold site",
+            "B": "Hot site",
+            "C": "Warm site",
+            "D": "Multiple sites"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T3_Q80",
+          "question": "Thời gian sẵn sàng điển hình của warm site là bao lâu?",
+          "options": {
+            "A": "Vài phút đến vài giờ",
+            "B": "Vài ngày đến vài tuần",
+            "C": "Tức thời",
+            "D": "Vài giờ đến vài ngày"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T3_Q81",
+          "question": "Thời gian sẵn sàng điển hình của cold site là bao lâu?",
+          "options": {
+            "A": "Vài phút đến vài giờ",
+            "B": "Vài giờ đến vài ngày",
+            "C": "Vài ngày đến vài tuần",
+            "D": "Tức thời"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T3_Q82",
+          "question": "Thời gian sẵn sàng điển hình của hot site là bao lâu?",
+          "options": {
+            "A": "Vài ngày đến vài tuần",
+            "B": "Vài phút đến vài giờ",
+            "C": "Vài tuần đến vài tháng",
+            "D": "Hơn một tháng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T3_Q83",
+          "question": "Phương án khôi phục nào có chi phí cao nhất trong ba loại hot, warm và cold?",
+          "options": {
+            "A": "Hot site",
+            "B": "Warm site",
+            "C": "Cold site",
+            "D": "Cả ba có chi phí như nhau"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T3_Q84",
+          "question": "Phương án khôi phục nào có đủ máy tính, kết nối, dữ liệu và nhân sự trực?",
+          "options": {
+            "A": "Warm site",
+            "B": "Cold site",
+            "C": "Không phương án nào",
+            "D": "Hot site"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T3_Q85",
+          "question": "Warm site có đặc điểm nào sau đây?",
+          "options": {
+            "A": "Có dữ liệu và nhân sự trực sẵn",
+            "B": "Không có máy tính và kết nối",
+            "C": "Có máy tính và kết nối nhưng không có dữ liệu và nhân sự",
+            "D": "Chỉ có xe kéo và không có tiện ích"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T3_Q86",
+          "question": "Khả năng cho phép nhân viên làm việc từ xa và kết nối vào hạ tầng CNTT gần như theo thời gian thực được gọi là gì?",
+          "options": {
+            "A": "Kiểm soát cấu hình",
+            "B": "Tính di động (Mobility)",
+            "C": "Phân loại dữ liệu",
+            "D": "Quản lý bản vá"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T3_Q87",
+          "question": "Bring Your Own Device (BYOD) nghĩa là gì?",
+          "options": {
+            "A": "Nhân viên dùng thiết bị cá nhân cho công việc và mục đích cá nhân",
+            "B": "Công ty cấp thiết bị cho mọi nhân viên",
+            "C": "Cấm hoàn toàn thiết bị di động",
+            "D": "Thuê ngoài việc quản lý thiết bị"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T3_Q88",
+          "question": "Rủi ro an ninh nổi bật của BYOD là gì?",
+          "options": {
+            "A": "Thiết bị luôn được công ty mã hóa",
+            "B": "Nhân viên không thể làm việc từ xa",
+            "C": "Không có rủi ro nào",
+            "D": "Dữ liệu công ty lẫn với dữ liệu cá nhân trên thiết bị khó kiểm soát"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T3_Q89",
+          "question": "Khi đánh giá tác động của thời gian ngừng hoạt động, slide nêu bốn khía cạnh nào?",
+          "options": {
+            "A": "Giá, chất lượng, thời gian, phạm vi",
+            "B": "Hot, warm, cold, mobile",
+            "C": "Con người, hệ thống, dữ liệu, tài sản",
+            "D": "Nhận dạng, xác thực, ủy quyền, giải trình"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T3_Q90",
+          "question": "Bước đầu tiên hợp lý để xây dựng kế hoạch duy trì hoạt động và khôi phục là gì?",
+          "options": {
+            "A": "Mua một địa điểm khôi phục",
+            "B": "Thực hiện phân tích tác động kinh doanh (BIA)",
+            "C": "Thuê thêm nhân viên bảo vệ",
+            "D": "Xóa nhật ký hệ thống"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "ATTT_BO_T4",
+      "topicName": "BÀI 5 – Kiểm soát truy cập",
+      "questions": [
+        {
+          "id": "ATTT_BO_T4_Q97",
+          "question": "Thành phần nào của kiểm soát truy cập trả lời câu hỏi \"Ai đang yêu cầu truy cập tài sản?\"",
+          "options": {
+            "A": "Nhận dạng (Identification)",
+            "B": "Xác thực (Authentication)",
+            "C": "Ủy quyền (Authorization)",
+            "D": "Trách nhiệm giải trình (Accountability)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T4_Q98",
+          "question": "Thành phần nào trả lời câu hỏi \"Danh tính của họ có thể được xác minh không?\"",
+          "options": {
+            "A": "Nhận dạng (Identification)",
+            "B": "Ủy quyền (Authorization)",
+            "C": "Trách nhiệm giải trình (Accountability)",
+            "D": "Xác thực (Authentication)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T4_Q99",
+          "question": "Thành phần nào xác định chính xác người yêu cầu được truy cập vào đâu và được làm gì?",
+          "options": {
+            "A": "Nhận dạng (Identification)",
+            "B": "Xác thực (Authentication)",
+            "C": "Ủy quyền (Authorization)",
+            "D": "Trách nhiệm giải trình (Accountability)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T4_Q100",
+          "question": "Thành phần nào bảo đảm có thể truy vết hành động đến từng cá nhân?",
+          "options": {
+            "A": "Nhận dạng (Identification)",
+            "B": "Trách nhiệm giải trình (Accountability)",
+            "C": "Xác thực (Authentication)",
+            "D": "Ủy quyền (Authorization)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T4_Q101",
+          "question": "Janet đang xác định tập quyền nên gán cho một nhân viên mới. Cô đang thực hiện giai đoạn nào của kiểm soát truy cập?",
+          "options": {
+            "A": "Ủy quyền",
+            "B": "Nhận dạng",
+            "C": "Xác thực",
+            "D": "Giải trình"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T4_Q102",
+          "question": "Minh nhập tên đăng nhập vào hệ thống. Bước này thuộc giai đoạn nào?",
+          "options": {
+            "A": "Xác thực",
+            "B": "Ủy quyền",
+            "C": "Giải trình",
+            "D": "Nhận dạng"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T4_Q103",
+          "question": "Sau khi nhập tên đăng nhập, Minh nhập thêm mật khẩu để chứng minh mình là ai. Bước này thuộc giai đoạn nào?",
+          "options": {
+            "A": "Nhận dạng",
+            "B": "Ủy quyền",
+            "C": "Xác thực",
+            "D": "Giải trình"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T4_Q104",
+          "question": "Quản trị viên xem nhật ký để biết ai đã xóa một tệp quan trọng. Hoạt động này gắn với thành phần nào?",
+          "options": {
+            "A": "Nhận dạng",
+            "B": "Trách nhiệm giải trình",
+            "C": "Xác thực",
+            "D": "Ủy quyền"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T4_Q105",
+          "question": "Kiểm soát việc ra vào tòa nhà, bãi đỗ xe và khu vực được bảo vệ thuộc loại kiểm soát truy cập nào?",
+          "options": {
+            "A": "Kiểm soát truy cập vật lý",
+            "B": "Kiểm soát truy cập logic",
+            "C": "Kiểm soát dựa trên vai trò",
+            "D": "Kiểm soát truy cập tùy ý"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T4_Q106",
+          "question": "Kiểm soát truy cập vào hệ thống máy tính hoặc mạng thuộc loại nào?",
+          "options": {
+            "A": "Kiểm soát truy cập vật lý",
+            "B": "Hàng rào bảo vệ",
+            "C": "Camera giám sát",
+            "D": "Kiểm soát truy cập logic"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T4_Q107",
+          "question": "Ví dụ nào sau đây là kiểm soát truy cập logic?",
+          "options": {
+            "A": "Hàng rào quanh khuôn viên",
+            "B": "Ổ khóa cửa phòng máy",
+            "C": "Mật khẩu đăng nhập",
+            "D": "Thẻ từ mở cửa tòa nhà"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T4_Q108",
+          "question": "Ví dụ nào sau đây là kiểm soát truy cập vật lý?",
+          "options": {
+            "A": "Mật khẩu tài khoản email",
+            "B": "Thẻ từ mở cửa phòng máy chủ",
+            "C": "Danh sách kiểm soát truy cập (ACL)",
+            "D": "Tường lửa mạng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T4_Q109",
+          "question": "Bốn thành phần trung tâm của chính sách kiểm soát truy cập là gì?",
+          "options": {
+            "A": "Người dùng, tài nguyên, hành động, mối quan hệ",
+            "B": "Nhận dạng, xác thực, ủy quyền, giải trình",
+            "C": "Chính sách, tiêu chuẩn, quy trình, hướng dẫn",
+            "D": "Private, community, public, hybrid"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T4_Q110",
+          "question": "Trong chính sách kiểm soát truy cập, \"người hoặc tiến trình sử dụng hệ thống (chủ thể)\" là thành phần nào?",
+          "options": {
+            "A": "Tài nguyên (Resources)",
+            "B": "Hành động (Actions)",
+            "C": "Mối quan hệ (Relationships)",
+            "D": "Người dùng (Users)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T4_Q111",
+          "question": "Trong chính sách kiểm soát truy cập, \"các đối tượng được bảo vệ trong hệ thống\" là thành phần nào?",
+          "options": {
+            "A": "Người dùng (Users)",
+            "B": "Hành động (Actions)",
+            "C": "Tài nguyên (Resources)",
+            "D": "Mối quan hệ (Relationships)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T4_Q112",
+          "question": "Trong chính sách kiểm soát truy cập, \"hoạt động mà người dùng được ủy quyền có thể thực hiện trên tài nguyên\" là thành phần nào?",
+          "options": {
+            "A": "Người dùng (Users)",
+            "B": "Hành động (Actions)",
+            "C": "Tài nguyên (Resources)",
+            "D": "Mối quan hệ (Relationships)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T4_Q113",
+          "question": "Trong chính sách kiểm soát truy cập, \"các điều kiện tùy chọn tồn tại giữa người dùng và tài nguyên\" là thành phần nào?",
+          "options": {
+            "A": "Mối quan hệ (Relationships)",
+            "B": "Người dùng (Users)",
+            "C": "Tài nguyên (Resources)",
+            "D": "Hành động (Actions)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T4_Q114",
+          "question": "Phương pháp nào sau đây KHÔNG phải là phương pháp nhận dạng được nêu trong slide?",
+          "options": {
+            "A": "Tên người dùng",
+            "B": "Thẻ thông minh",
+            "C": "Sinh trắc học",
+            "D": "Mã hóa khóa công khai"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T4_Q115",
+          "question": "Mật khẩu thuộc loại xác thực nào?",
+          "options": {
+            "A": "Quyền sở hữu (thứ bạn có)",
+            "B": "Đặc điểm (thứ độc nhất của bạn)",
+            "C": "Tri thức (thứ bạn biết)",
+            "D": "Vị trí (nơi bạn đang ở)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T4_Q116",
+          "question": "Thẻ thông minh (smart card) thuộc loại xác thực nào?",
+          "options": {
+            "A": "Tri thức (thứ bạn biết)",
+            "B": "Quyền sở hữu (thứ bạn có)",
+            "C": "Đặc điểm (thứ độc nhất của bạn)",
+            "D": "Hành động (thứ bạn làm)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T4_Q117",
+          "question": "Quét vân tay thuộc loại xác thực nào?",
+          "options": {
+            "A": "Đặc điểm (thứ độc nhất của bạn)",
+            "B": "Tri thức",
+            "C": "Quyền sở hữu",
+            "D": "Vị trí"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T4_Q118",
+          "question": "Hệ thống chỉ cho phép đăng nhập khi người dùng đang ở trong mạng văn phòng. Đây là loại xác thực nào?",
+          "options": {
+            "A": "Tri thức",
+            "B": "Quyền sở hữu",
+            "C": "Đặc điểm",
+            "D": "Vị trí (nơi bạn đang ở)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T4_Q119",
+          "question": "Cách người dùng gõ phím hoặc ký tên được dùng làm yếu tố xác thực thuộc loại nào?",
+          "options": {
+            "A": "Tri thức",
+            "B": "Quyền sở hữu",
+            "C": "Hành động (thứ bạn làm / cách bạn làm)",
+            "D": "Vị trí"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T4_Q120",
+          "question": "Hệ thống yêu cầu mật khẩu và mã OTP gửi về điện thoại. Việc kết hợp này thuộc nhóm nào?",
+          "options": {
+            "A": "Xác thực một yếu tố",
+            "B": "Xác thực đa yếu tố",
+            "C": "Chỉ là nhận dạng",
+            "D": "Kiểm soát truy cập vật lý"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T4_Q121",
+          "question": "Mật khẩu kết hợp với thẻ thông minh là sự kết hợp của hai loại xác thực nào?",
+          "options": {
+            "A": "Tri thức và quyền sở hữu",
+            "B": "Tri thức và vị trí",
+            "C": "Đặc điểm và hành động",
+            "D": "Quyền sở hữu và vị trí"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T4_Q122",
+          "question": "Trong Windows, các quyền chia sẻ (share permissions) gồm những mức nào?",
+          "options": {
+            "A": "Full, Modify, Read-execute, Special",
+            "B": "Admin, User, Guest, Anonymous",
+            "C": "Create, Delete, Rename, Move",
+            "D": "Full, Change, Read, Deny"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T4_Q123",
+          "question": "Quyền bảo mật (security permissions) của Windows KHÔNG bao gồm quyền nào sau đây?",
+          "options": {
+            "A": "Modify",
+            "B": "Read-execute",
+            "C": "Change",
+            "D": "List folder contents"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T4_Q124",
+          "question": "Loại đám mây nào dành cho một tổ chức duy nhất, do tổ chức hoặc bên thứ ba quản lý?",
+          "options": {
+            "A": "Đám mây cộng đồng (Community)",
+            "B": "Đám mây riêng (Private)",
+            "C": "Đám mây công cộng (Public)",
+            "D": "Đám mây lai (Hybrid)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T4_Q125",
+          "question": "Loại đám mây nào được chia sẻ giữa vài tổ chức và do một trong số đó hoặc bên thứ ba quản lý?",
+          "options": {
+            "A": "Đám mây cộng đồng (Community)",
+            "B": "Đám mây riêng",
+            "C": "Đám mây công cộng",
+            "D": "Đám mây lai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T4_Q126",
+          "question": "Loại đám mây nào mở cho công chúng sử dụng và do nhà cung cấp bên thứ ba quản lý?",
+          "options": {
+            "A": "Đám mây riêng",
+            "B": "Đám mây cộng đồng",
+            "C": "Đám mây lai",
+            "D": "Đám mây công cộng (Public)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T4_Q127",
+          "question": "Loại đám mây nào gồm các thành phần của nhiều hơn một loại đám mây?",
+          "options": {
+            "A": "Đám mây riêng",
+            "B": "Đám mây công cộng",
+            "C": "Đám mây lai (Hybrid)",
+            "D": "Đám mây cộng đồng"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T4_Q128",
+          "question": "Ba trường đại học cùng xây dựng một hạ tầng đám mây dùng chung do một trường vận hành. Đây là loại đám mây nào?",
+          "options": {
+            "A": "Riêng (Private)",
+            "B": "Cộng đồng (Community)",
+            "C": "Công cộng (Public)",
+            "D": "Lai (Hybrid)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T4_Q129",
+          "question": "Công ty vừa dùng đám mây riêng cho dữ liệu nhạy cảm vừa dùng đám mây công cộng cho website. Đây là mô hình nào?",
+          "options": {
+            "A": "Lai (Hybrid)",
+            "B": "Riêng (Private)",
+            "C": "Cộng đồng (Community)",
+            "D": "Công cộng thuần (Public)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T4_Q130",
+          "question": "Đâu là ưu điểm của điện toán đám mây theo slide?",
+          "options": {
+            "A": "Dữ liệu riêng tư luôn an toàn hơn",
+            "B": "Không cần kết nối mạng",
+            "C": "Không cần tin tưởng nhà cung cấp",
+            "D": "Không cần duy trì trung tâm dữ liệu và địa điểm khôi phục thảm họa"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T4_Q131",
+          "question": "Đâu là nhược điểm của điện toán đám mây theo slide?",
+          "options": {
+            "A": "Cung cấp tài nguyên theo yêu cầu",
+            "B": "Không cần duy trì trung tâm dữ liệu",
+            "C": "Nhu cầu truy cập mạng liên tục",
+            "D": "Giao trách nhiệm về hiệu năng và kết nối cho bên ngoài"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "ATTT_BO_T5",
+      "topicName": "BÀI 6 – Vận hành và quản trị an ninh",
+      "questions": [
+        {
+          "id": "ATTT_BO_T5_Q140",
+          "question": "Bốn bước của quá trình kiểm soát truy cập theo đúng thứ tự là gì?",
+          "options": {
+            "A": "Ủy quyền, nhận dạng, giải trình, xác thực",
+            "B": "Nhận dạng, xác thực, ủy quyền, giải trình",
+            "C": "Xác thực, giải trình, nhận dạng, ủy quyền",
+            "D": "Giải trình, ủy quyền, nhận dạng, xác thực"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T5_Q141",
+          "question": "Tài liệu nào sau đây thuộc các yêu cầu tài liệu phổ biến về an ninh?",
+          "options": {
+            "A": "Danh sách tài sản nhạy cảm",
+            "B": "Bảng chấm công hằng tuần",
+            "C": "Danh sách thực đơn căng tin",
+            "D": "Lịch nghỉ lễ"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T5_Q142",
+          "question": "Yêu cầu tài liệu phổ biến nào mô tả ai có quyền hạn đối với an ninh?",
+          "options": {
+            "A": "Danh sách tài sản nhạy cảm",
+            "B": "Quy trình thanh toán lương",
+            "C": "Báo cáo doanh thu",
+            "D": "Thẩm quyền của những người chịu trách nhiệm về an ninh"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T5_Q143",
+          "question": "Tổ chức phải tuân thủ các quy tắc ở hai cấp độ nào?",
+          "options": {
+            "A": "Tuân thủ phần cứng và phần mềm",
+            "B": "Tuân thủ vật lý và logic",
+            "C": "Tuân thủ quy định pháp luật và tuân thủ nội bộ của tổ chức",
+            "D": "Tuân thủ công khai và bí mật"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T5_Q144",
+          "question": "Luật hoặc quy định do cơ quan nhà nước ban hành mà tổ chức bắt buộc phải tuân thủ thuộc loại tuân thủ nào?",
+          "options": {
+            "A": "Tuân thủ tổ chức (organizational)",
+            "B": "Tuân thủ quy định (regulatory)",
+            "C": "Tuân thủ tùy chọn",
+            "D": "Tuân thủ kỹ thuật"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T5_Q145",
+          "question": "Chính sách nội bộ do chính công ty đặt ra và yêu cầu nhân viên làm theo thuộc loại tuân thủ nào?",
+          "options": {
+            "A": "Tuân thủ tổ chức (organizational)",
+            "B": "Tuân thủ quy định (regulatory)",
+            "C": "Tuân thủ quốc tế",
+            "D": "Không phải tuân thủ"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T5_Q146",
+          "question": "Ưu điểm chính của việc thuê ngoài chức năng an ninh là gì?",
+          "options": {
+            "A": "Hiểu biết sâu về nội bộ tổ chức",
+            "B": "Phát triển năng lực nội bộ",
+            "C": "Không phải trả phí liên tục",
+            "D": "Trình độ chuyên môn cao"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T5_Q147",
+          "question": "Nhược điểm nào của việc thuê ngoài chức năng an ninh được nêu trong slide?",
+          "options": {
+            "A": "Luôn có trình độ chuyên môn thấp",
+            "B": "Không bao giờ vi phạm chính sách",
+            "C": "Bên thuê ngoài có thể không có kiến thức nội bộ và phải trả phí liên tục",
+            "D": "Không liên quan đến dữ liệu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T5_Q148",
+          "question": "Điều nào sau đây KHÔNG phải mối quan ngại chính khi thuê ngoài theo slide?",
+          "options": {
+            "A": "Quyền riêng tư",
+            "B": "Chọn màu sắc logo của nhà cung cấp",
+            "C": "Rủi ro",
+            "D": "Tuân thủ chính sách"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T5_Q149",
+          "question": "Mối quan ngại nào liên quan đến việc ai là chủ sở hữu dữ liệu và kết quả công việc khi thuê ngoài?",
+          "options": {
+            "A": "Quyền sở hữu (Ownership)",
+            "B": "Quyền riêng tư",
+            "C": "Rủi ro",
+            "D": "Tuân thủ chính sách"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T5_Q150",
+          "question": "Năm thành phần của hạ tầng một chính sách an ninh CNTT là gì?",
+          "options": {
+            "A": "Bảo mật, toàn vẹn, sẵn sàng, xác thực, ủy quyền",
+            "B": "Hot, warm, cold, mobile, multiple",
+            "C": "Full, incremental, differential, mirror, clone",
+            "D": "Chính sách, tiêu chuẩn, quy trình, cấu hình cơ sở, hướng dẫn"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T5_Q151",
+          "question": "Thành phần nào trong hạ tầng chính sách là mức tối thiểu về cấu hình an ninh cần có cho một hệ thống?",
+          "options": {
+            "A": "Hướng dẫn (Guideline)",
+            "B": "Chính sách (Policy)",
+            "C": "Cấu hình cơ sở (Baseline)",
+            "D": "Quy trình (Procedure)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T5_Q152",
+          "question": "Hoạt động nào là quản lý các thiết lập cơ sở (baseline) của một thiết bị hệ thống?",
+          "options": {
+            "A": "Kiểm soát thay đổi (Change control)",
+            "B": "Kiểm soát cấu hình (Configuration control)",
+            "C": "Kiểm toán bên ngoài",
+            "D": "Phân loại dữ liệu"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T5_Q153",
+          "question": "Hoạt động nào là quản lý các thay đổi đối với cấu hình?",
+          "options": {
+            "A": "Kiểm soát thay đổi (Change control)",
+            "B": "Kiểm soát cấu hình (Configuration control)",
+            "C": "Phân tích rủi ro",
+            "D": "Sao lưu dữ liệu"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T5_Q154",
+          "question": "Trước khi đưa thay đổi vào vận hành, một đồng nghiệp khác kiểm tra lại toàn bộ thay đổi. Đây là biện pháp nào?",
+          "options": {
+            "A": "Kế hoạch hoàn tác (Back-out plan)",
+            "B": "Cập nhật tài liệu",
+            "C": "Kiểm toán bên ngoài",
+            "D": "Đánh giá chéo (Peer review)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T5_Q155",
+          "question": "Kế hoạch nào bảo đảm nếu thay đổi không hoạt động đúng thì có thể khôi phục hệ thống về trạng thái tốt đã biết?",
+          "options": {
+            "A": "Đánh giá chéo (Peer review)",
+            "B": "Tài liệu hóa (Documentation)",
+            "C": "Kế hoạch hoàn tác (Back-out plan)",
+            "D": "Phân loại dữ liệu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T5_Q156",
+          "question": "Việc luôn cập nhật tài liệu cho khớp với thiết kế thực tế của hệ thống thuộc vấn đề nào của kiểm soát thay đổi?",
+          "options": {
+            "A": "Đánh giá chéo (Peer review)",
+            "B": "Tài liệu hóa (Documentation)",
+            "C": "Kế hoạch hoàn tác (Back-out plan)",
+            "D": "Kiểm thử hộp đen"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T5_Q157",
+          "question": "Mai triển khai bản cập nhật cho máy chủ nhưng không có cách quay về phiên bản cũ khi bản cập nhật gây lỗi. Thiếu sót nào của kiểm soát thay đổi?",
+          "options": {
+            "A": "Thiếu kế hoạch hoàn tác (back-out plan)",
+            "B": "Thiếu đánh giá chéo",
+            "C": "Thiếu phân loại dữ liệu",
+            "D": "Thiếu địa điểm khôi phục"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T5_Q158",
+          "question": "Karen quyết định một nhóm người dùng được tạo người thụ hưởng mới, còn nhóm khác được phát hành séc cho họ. Nguyên tắc nào được áp dụng?",
+          "options": {
+            "A": "Đặc quyền tối thiểu",
+            "B": "Phòng thủ theo chiều sâu",
+            "C": "Kiểm soát vật lý",
+            "D": "Phân tách nhiệm vụ (Separation of duties)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T5_Q159",
+          "question": "Luân chuyển công việc và kỳ nghỉ bắt buộc giúp giảm thiểu rủi ro nào?",
+          "options": {
+            "A": "Hỏng phần cứng",
+            "B": "Thiên tai",
+            "C": "Gian lận hoặc hành vi sai trái bị che giấu lâu dài",
+            "D": "Mất kết nối Internet"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T5_Q160",
+          "question": "Nguyên tắc đặc quyền tối thiểu (least privilege) có nghĩa là gì?",
+          "options": {
+            "A": "Cấp toàn quyền cho mọi quản trị viên",
+            "B": "Chỉ cấp quyền đủ để người dùng hoàn thành công việc",
+            "C": "Cấp quyền theo thâm niên",
+            "D": "Không cấp quyền cho ai"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T5_Q161",
+          "question": "Nguyên tắc cần-để-biết (need to know) có nghĩa là gì?",
+          "options": {
+            "A": "Chỉ được truy cập thông tin cần thiết cho công việc của mình",
+            "B": "Mọi nhân viên được xem mọi thông tin",
+            "C": "Chỉ giám đốc mới được xem thông tin",
+            "D": "Thông tin phải được công khai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T5_Q162",
+          "question": "Hợp đồng nào xác định mức dịch vụ nhà cung cấp cam kết với tổ chức?",
+          "options": {
+            "A": "Chính sách sử dụng chấp nhận được",
+            "B": "Kế hoạch hoàn tác",
+            "C": "Báo cáo kiểm toán",
+            "D": "Thỏa thuận mức dịch vụ (SLA)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T5_Q163",
+          "question": "Chính sách nào quy định nhân viên được và không được làm gì khi sử dụng tài nguyên CNTT của công ty?",
+          "options": {
+            "A": "Kế hoạch BCP",
+            "B": "Phân tích BIA",
+            "C": "Chính sách sử dụng chấp nhận được (AUP)",
+            "D": "Thỏa thuận mức dịch vụ"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T5_Q164",
+          "question": "Một công ty thuê ngoài việc giám sát an ninh và lo ngại bên kia xem được dữ liệu khách hàng. Mối quan ngại này chủ yếu thuộc nhóm nào?",
+          "options": {
+            "A": "Màu sắc thương hiệu",
+            "B": "Quyền riêng tư và an ninh dữ liệu",
+            "C": "Giá văn phòng phẩm",
+            "D": "Chiến lược quảng cáo"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "ATTT_BO_T6",
+      "topicName": "BÀI 7 – Kiểm toán, kiểm thử và giám sát các biện pháp kiểm soát an ninh",
+      "questions": [
+        {
+          "id": "ATTT_BO_T6_Q173",
+          "question": "Ricky xem xét nhật ký bảo mật để đánh giá độc lập các biện pháp kiểm soát an ninh. Ricky đang thực hiện hoạt động nào?",
+          "options": {
+            "A": "Kiểm toán (Audit)",
+            "B": "Giám sát (Monitor)",
+            "C": "Cải thiện (Improve)",
+            "D": "Bảo vệ (Secure)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T6_Q174",
+          "question": "Ba bước đầu của kế hoạch kiểm toán theo slide gồm những gì?",
+          "options": {
+            "A": "Viết báo cáo, ký tên, lưu hồ sơ",
+            "B": "Mua công cụ, cài đặt, đào tạo",
+            "C": "Sao lưu, khôi phục, kiểm thử",
+            "D": "Xác định mục tiêu, các lĩnh vực cần bảo đảm, nhân sự tham gia"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T6_Q175",
+          "question": "Bước nào khi xác định kế hoạch kiểm toán là xác định hệ thống hoặc quy trình kinh doanh cần rà soát?",
+          "options": {
+            "A": "Phỏng vấn nhân sự",
+            "B": "Viết báo cáo cuối",
+            "C": "Xác định mục tiêu",
+            "D": "Tiêu hủy dữ liệu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T6_Q176",
+          "question": "Hoạt động nào KHÔNG thuộc việc xác định phạm vi kế hoạch kiểm toán theo slide?",
+          "options": {
+            "A": "Khảo sát địa điểm",
+            "B": "Phát hành báo cáo kiểm toán cuối cùng",
+            "C": "Xem xét tài liệu",
+            "D": "Xem xét nhật ký máy chủ và ứng dụng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T6_Q177",
+          "question": "Việc xem xét kết quả kiểm thử xâm nhập thuộc bước nào của kế hoạch kiểm toán?",
+          "options": {
+            "A": "Xác định phạm vi",
+            "B": "Viết báo cáo",
+            "C": "Thu thập chữ ký",
+            "D": "Đóng dự án"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T6_Q178",
+          "question": "Phương pháp nào sau đây là phương pháp thu thập dữ liệu kiểm toán?",
+          "options": {
+            "A": "Chỉ cài phần mềm diệt virus",
+            "B": "Chỉ xóa nhật ký cũ",
+            "C": "Chỉ cập nhật hệ điều hành",
+            "D": "Phỏng vấn, bảng câu hỏi và quan sát"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T6_Q179",
+          "question": "Trong thu thập dữ liệu kiểm toán, quan sát giúp phân biệt điều gì?",
+          "options": {
+            "A": "Giá phần cứng và phần mềm",
+            "B": "Số lượng nhân viên",
+            "C": "Quy trình trên giấy và cách công việc thực sự được thực hiện",
+            "D": "Màu sắc giao diện"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T6_Q180",
+          "question": "Mục tiêu kiểm toán đối với phần mềm diệt virus là gì?",
+          "options": {
+            "A": "Chỉ cài trên máy chủ",
+            "B": "Luôn cập nhật và áp dụng trên toàn bộ hệ thống",
+            "C": "Chỉ cập nhật mỗi năm một lần",
+            "D": "Chỉ cài trên máy của quản trị viên"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T6_Q181",
+          "question": "Mục tiêu kiểm toán đối với hệ thống phát hiện xâm nhập và giám sát sự kiện là gì?",
+          "options": {
+            "A": "Xem xét nhật ký",
+            "B": "Khóa cửa phòng máy",
+            "C": "Kiểm tra pin dự phòng",
+            "D": "Dán nhãn phương tiện"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T6_Q182",
+          "question": "Mục tiêu kiểm toán đối với chính sách tăng cường bảo mật hệ thống (system hardening) là gì?",
+          "options": {
+            "A": "Nhãn phương tiện",
+            "B": "Thỏa thuận bảo trì",
+            "C": "Nguồn điện dự phòng",
+            "D": "Cổng và dịch vụ"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T6_Q183",
+          "question": "Mục tiêu kiểm toán đối với các biện pháp mật mã là gì?",
+          "options": {
+            "A": "Cổng và dịch vụ",
+            "B": "Tuổi thọ phương tiện",
+            "C": "Quản lý khóa và việc sử dụng",
+            "D": "Cửa đã khóa"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T6_Q184",
+          "question": "Mục tiêu kiểm toán đối với lập kế hoạch dự phòng (contingency planning) gồm những kế hoạch nào?",
+          "options": {
+            "A": "SLE, ALE và ARO",
+            "B": "BCP, DRP và COOP",
+            "C": "Policy, standard và guideline",
+            "D": "Hot, warm và cold"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T6_Q185",
+          "question": "Mục tiêu kiểm toán đối với kiểm soát truy cập (access control) là gì?",
+          "options": {
+            "A": "Cần-để-biết và đặc quyền tối thiểu",
+            "B": "Mọi người đều có toàn quyền",
+            "C": "Chỉ giám đốc mới có quyền",
+            "D": "Không cần ghi chép"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T6_Q186",
+          "question": "Mục tiêu kiểm toán đối với an ninh vật lý là gì?",
+          "options": {
+            "A": "Cổng và dịch vụ",
+            "B": "Quản lý khóa mật mã",
+            "C": "Cập nhật phần mềm diệt virus",
+            "D": "Cửa được khóa và nguồn điện được giám sát"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T6_Q187",
+          "question": "Mục tiêu kiểm toán đối với quy trình kiểm soát thay đổi là gì?",
+          "options": {
+            "A": "Chỉ cần phê duyệt miệng",
+            "B": "Cho phép thay đổi không cần ghi lại",
+            "C": "Có tài liệu và không có thay đổi trái phép",
+            "D": "Chỉ kiểm tra hằng năm"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T6_Q188",
+          "question": "Mục tiêu kiểm toán đối với bảo vệ phương tiện lưu trữ (media protection) gồm những gì?",
+          "options": {
+            "A": "Cổng và dịch vụ",
+            "B": "Tuổi thọ, dán nhãn, lưu trữ và vận chuyển",
+            "C": "Quản lý khóa",
+            "D": "Xem xét nhật ký"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T6_Q189",
+          "question": "Mục tiêu kiểm toán đối với bảo trì phần cứng và phần mềm gồm những gì?",
+          "options": {
+            "A": "Thỏa thuận bảo trì, bảo dưỡng và dự báo nhu cầu tương lai",
+            "B": "Chỉ ghi nhật ký",
+            "C": "Chỉ dán nhãn phương tiện",
+            "D": "Chỉ kiểm tra cổng"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T6_Q190",
+          "question": "Kiểm thử nào không dựa trực tiếp vào kiến thức về kiến trúc hay thiết kế của chương trình?",
+          "options": {
+            "A": "Kiểm thử hộp trắng (White-box)",
+            "B": "Kiểm thử hộp xám (Gray-box)",
+            "C": "Đánh giá mã nguồn",
+            "D": "Kiểm thử hộp đen (Black-box)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T6_Q191",
+          "question": "Kiểm thử nào dựa trên kiến thức về thiết kế và mã nguồn của ứng dụng?",
+          "options": {
+            "A": "Kiểm thử hộp đen (Black-box)",
+            "B": "Kiểm thử hộp xám (Gray-box)",
+            "C": "Kiểm thử hộp trắng (White-box)",
+            "D": "Phỏng vấn người dùng"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T6_Q192",
+          "question": "Kiểm thử nào nằm giữa kiểm thử hộp đen và hộp trắng?",
+          "options": {
+            "A": "Kiểm thử hộp đen",
+            "B": "Kiểm thử hộp xám (Gray-box)",
+            "C": "Kiểm thử hộp trắng",
+            "D": "Kiểm thử hiệu năng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T6_Q193",
+          "question": "Một chuyên gia kiểm thử chỉ biết địa chỉ website mục tiêu và không có thông tin nội bộ nào. Đây là kiểu kiểm thử nào?",
+          "options": {
+            "A": "Hộp đen",
+            "B": "Hộp trắng",
+            "C": "Hộp xám",
+            "D": "Kiểm toán nội bộ"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T6_Q194",
+          "question": "Một chuyên gia kiểm thử được cung cấp toàn bộ mã nguồn và tài liệu thiết kế của ứng dụng. Đây là kiểu kiểm thử nào?",
+          "options": {
+            "A": "Hộp đen",
+            "B": "Hộp xám",
+            "C": "Kiểm toán tuân thủ",
+            "D": "Hộp trắng"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T6_Q195",
+          "question": "Mẹo nào sau đây đúng khi thực hiện kiểm thử bảo mật?",
+          "options": {
+            "A": "Công cụ luôn cho kết quả chính xác tuyệt đối",
+            "B": "Không cần bảo vệ hệ thống khi kiểm thử",
+            "C": "Công cụ cũng có thể mắc lỗi nên cần kiểm chứng kết quả",
+            "D": "Kiểm thử càng giả tạo càng tốt"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T6_Q196",
+          "question": "Theo slide, các bài kiểm thử bảo mật nên như thế nào?",
+          "options": {
+            "A": "Chỉ làm trên môi trường hoàn toàn giả lập",
+            "B": "Càng giống thực tế càng tốt",
+            "C": "Không cần lập kế hoạch",
+            "D": "Chỉ làm một lần duy nhất"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T6_Q197",
+          "question": "Curtis kiểm toán một hệ thống quản lý danh tính. Câu hỏi nào ÍT có khả năng nằm trong phạm vi kiểm toán của anh?",
+          "options": {
+            "A": "Hợp đồng quảng cáo năm nay được ký với đơn vị nào?",
+            "B": "Tài khoản người nghỉ việc có bị vô hiệu hóa kịp thời không?",
+            "C": "Quyền truy cập có được rà soát định kỳ không?",
+            "D": "Hoạt động đăng nhập có được ghi nhật ký không?"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T6_Q198",
+          "question": "Hoạt động kiểm tra bảo mật nào dùng công cụ quét để tìm các dịch vụ đang chạy trên hệ thống?",
+          "options": {
+            "A": "Phỏng vấn nhân viên",
+            "B": "Khảo sát địa điểm",
+            "C": "Xem xét chính sách",
+            "D": "Quét cổng và dịch vụ (port/service scanning)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T6_Q199",
+          "question": "Việc so sánh thiết lập hiện tại của thiết bị với cấu hình chuẩn giúp kiểm toán viên làm gì?",
+          "options": {
+            "A": "Tăng dung lượng ổ đĩa",
+            "B": "Xóa nhật ký cũ",
+            "C": "Phát hiện các điểm khác biệt so với cấu hình chuẩn",
+            "D": "Thay đổi chính sách"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T6_Q200",
+          "question": "Giai đoạn \"kiểm toán\" trong rà soát bảo mật khác với \"giám sát\" ở chỗ nào?",
+          "options": {
+            "A": "Kiểm toán là theo dõi liên tục theo thời gian thực",
+            "B": "Kiểm toán là đánh giá độc lập về mức độ hiệu quả của các biện pháp kiểm soát",
+            "C": "Kiểm toán chỉ dành cho phần cứng",
+            "D": "Kiểm toán là cài đặt bản vá"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "ATTT_BO_T7",
+      "topicName": "BÀI 8 – Rủi ro, ứng phó và khôi phục",
+      "questions": [
+        {
+          "id": "ATTT_BO_T7_Q209",
+          "question": "Nguyên tắc cân bằng khi quản lý rủi ro là gì?",
+          "options": {
+            "A": "Không chi cho việc bảo vệ một tài sản nhiều hơn giá trị của nó",
+            "B": "Luôn chi tối đa cho mọi biện pháp bảo vệ",
+            "C": "Chỉ bảo vệ tài sản có giá trị thấp",
+            "D": "Bỏ qua chi phí"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T7_Q210",
+          "question": "Biện pháp đối phó không gắn với rủi ro tương ứng nào được slide mô tả là gì?",
+          "options": {
+            "A": "Một chính sách bắt buộc",
+            "B": "Một bản vá khẩn cấp",
+            "C": "Một chuẩn quốc tế",
+            "D": "Một giải pháp đi tìm vấn đề"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T7_Q211",
+          "question": "Ba yếu tố của rủi ro theo slide là gì?",
+          "options": {
+            "A": "Chính sách, tiêu chuẩn, quy trình",
+            "B": "Hot, warm, cold",
+            "C": "Tài sản, mối đe dọa, lỗ hổng",
+            "D": "Full, incremental, differential"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T7_Q212",
+          "question": "Công thức tính tổn thất kỳ vọng đơn lẻ (SLE) là gì?",
+          "options": {
+            "A": "SLE = ALE × ARO",
+            "B": "SLE = AV × EF",
+            "C": "SLE = AV / EF",
+            "D": "SLE = ARO + EF"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T7_Q213",
+          "question": "Công thức tính tổn thất kỳ vọng hằng năm (ALE) là gì?",
+          "options": {
+            "A": "ALE = SLE × ARO",
+            "B": "ALE = AV × EF",
+            "C": "ALE = AV + SLE",
+            "D": "ALE = ARO / SLE"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T7_Q214",
+          "question": "ARO (annualized rate of occurrence) là gì?",
+          "options": {
+            "A": "Giá trị của tài sản",
+            "B": "Tỷ lệ phần trăm tài sản bị mất mỗi lần sự cố",
+            "C": "Tổng chi phí của biện pháp đối phó",
+            "D": "Số sự cố xảy ra trong một năm"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T7_Q215",
+          "question": "Hệ số phơi nhiễm (EF) là gì?",
+          "options": {
+            "A": "Số sự cố mỗi năm",
+            "B": "Giá trị của tài sản",
+            "C": "Tỷ lệ phần trăm giá trị tài sản bị mất khi sự cố xảy ra",
+            "D": "Chi phí mua biện pháp đối phó"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T7_Q216",
+          "question": "Một tài sản có giá trị 800.000 USD, EF là 25%. SLE là bao nhiêu?",
+          "options": {
+            "A": "20.000 USD",
+            "B": "200.000 USD",
+            "C": "3.200.000 USD",
+            "D": "1.000.000 USD"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T7_Q217",
+          "question": "Với SLE là 200.000 USD và ARO là 3, ALE là bao nhiêu?",
+          "options": {
+            "A": "600.000 USD",
+            "B": "66.667 USD",
+            "C": "203.000 USD",
+            "D": "1.200.000 USD"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T7_Q218",
+          "question": "Tài sản trị giá 1,2 triệu USD, EF = 50%, ARO = 0,25. ALE là bao nhiêu?",
+          "options": {
+            "A": "600.000 USD",
+            "B": "300.000 USD",
+            "C": "2.400.000 USD",
+            "D": "150.000 USD"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T7_Q219",
+          "question": "Một sự cố xảy ra 6 lần trong 2 năm. ARO là bao nhiêu?",
+          "options": {
+            "A": "12",
+            "B": "0,33",
+            "C": "3",
+            "D": "6"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T7_Q220",
+          "question": "Một sự cố được dự đoán xảy ra trung bình 10 năm một lần. ARO là bao nhiêu?",
+          "options": {
+            "A": "10",
+            "B": "0,1",
+            "C": "1",
+            "D": "0,01"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T7_Q221",
+          "question": "Tài sản trị giá 300.000 USD mất hoàn toàn (EF = 100%) mỗi khi sự cố xảy ra, và sự cố xảy ra 10 năm một lần. ALE là bao nhiêu?",
+          "options": {
+            "A": "30.000 USD",
+            "B": "300.000 USD",
+            "C": "3.000.000 USD",
+            "D": "3.000 USD"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T7_Q222",
+          "question": "Tài sản trị giá 2 triệu USD, EF = 25%, ARO = 2. ALE là bao nhiêu?",
+          "options": {
+            "A": "500.000 USD",
+            "B": "4.000.000 USD",
+            "C": "250.000 USD",
+            "D": "1.000.000 USD"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T7_Q223",
+          "question": "ALE của một rủi ro là 150.000 USD. Một biện pháp đối phó có chi phí 200.000 USD mỗi năm. Kết luận nào hợp lý?",
+          "options": {
+            "A": "Nên triển khai vì biện pháp nào cũng đáng",
+            "B": "Chỉ nên triển khai nếu ARO bằng 0",
+            "C": "Không nên triển khai vì chi phí vượt tổn thất kỳ vọng",
+            "D": "Không thể kết luận gì"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T7_Q224",
+          "question": "ALE trước khi có biện pháp là 400.000 USD, sau khi có là 100.000 USD, chi phí biện pháp là 120.000 USD/năm. Lợi ích ròng hằng năm là bao nhiêu?",
+          "options": {
+            "A": "300.000 USD",
+            "B": "180.000 USD",
+            "C": "120.000 USD",
+            "D": "280.000 USD"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T7_Q225",
+          "question": "Tài sản trị giá 50.000 USD được đề xuất bảo vệ bằng biện pháp trị giá 80.000 USD. Nhận định nào đúng?",
+          "options": {
+            "A": "Chi phí biện pháp vượt giá trị tài sản nên khó biện minh",
+            "B": "Đây là lựa chọn tối ưu",
+            "C": "Luôn phải chọn biện pháp đắt nhất",
+            "D": "Cần tăng giá trị tài sản cho khớp"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T7_Q226",
+          "question": "Các chiến lược ứng phó với rủi ro tiêu cực theo slide là gì?",
+          "options": {
+            "A": "Khai thác, chia sẻ, tăng cường, chấp nhận",
+            "B": "Chỉ chấp nhận",
+            "C": "Chỉ tránh",
+            "D": "Giảm thiểu, chuyển giao, chấp nhận, tránh"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T7_Q227",
+          "question": "Các chiến lược ứng phó với rủi ro tích cực (cơ hội) theo slide là gì?",
+          "options": {
+            "A": "Giảm thiểu, chuyển giao, chấp nhận, tránh",
+            "B": "Chỉ tránh",
+            "C": "Khai thác, chia sẻ, tăng cường, chấp nhận",
+            "D": "Chỉ chuyển giao"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T7_Q228",
+          "question": "Công ty mua bảo hiểm an ninh mạng để bù đắp thiệt hại tài chính nếu bị tấn công. Đây là chiến lược nào?",
+          "options": {
+            "A": "Giảm thiểu (Reduce)",
+            "B": "Chuyển giao (Transfer)",
+            "C": "Chấp nhận (Accept)",
+            "D": "Tránh (Avoid)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T7_Q229",
+          "question": "Công ty quyết định không bán hàng ở một thị trường có rủi ro pháp lý quá cao. Đây là chiến lược nào?",
+          "options": {
+            "A": "Tránh (Avoid)",
+            "B": "Chuyển giao",
+            "C": "Giảm thiểu",
+            "D": "Chấp nhận"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T7_Q230",
+          "question": "Công ty lắp thêm tường lửa và đào tạo nhân viên để giảm xác suất bị tấn công. Đây là chiến lược nào?",
+          "options": {
+            "A": "Chuyển giao",
+            "B": "Tránh",
+            "C": "Chấp nhận",
+            "D": "Giảm thiểu (Reduce)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T7_Q231",
+          "question": "Công ty xét thấy chi phí xử lý một rủi ro nhỏ lớn hơn thiệt hại có thể xảy ra nên quyết định không làm gì. Đây là chiến lược nào?",
+          "options": {
+            "A": "Tránh",
+            "B": "Chuyển giao",
+            "C": "Chấp nhận (Accept)",
+            "D": "Giảm thiểu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T7_Q232",
+          "question": "Chiến lược nào chỉ áp dụng cho rủi ro tích cực?",
+          "options": {
+            "A": "Chuyển giao (Transfer)",
+            "B": "Khai thác (Exploit)",
+            "C": "Giảm thiểu (Reduce)",
+            "D": "Tránh (Avoid)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T7_Q233",
+          "question": "Một dự án có cơ hội giảm chi phí nếu nhà cung cấp giao sớm; công ty chủ động tạo điều kiện để cơ hội chắc chắn xảy ra. Đây là chiến lược nào?",
+          "options": {
+            "A": "Khai thác (Exploit)",
+            "B": "Chuyển giao",
+            "C": "Tránh",
+            "D": "Giảm thiểu"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T7_Q234",
+          "question": "Chiến lược \"chấp nhận\" (accept) áp dụng cho loại rủi ro nào?",
+          "options": {
+            "A": "Chỉ rủi ro tiêu cực",
+            "B": "Chỉ rủi ro tích cực",
+            "C": "Không áp dụng cho rủi ro nào",
+            "D": "Cả rủi ro tiêu cực và tích cực"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T7_Q235",
+          "question": "Ba loại sao lưu (backup) là gì?",
+          "options": {
+            "A": "Hot, warm, cold",
+            "B": "Riêng, cộng đồng, công cộng",
+            "C": "Toàn bộ, tăng dần, khác biệt",
+            "D": "Tri thức, sở hữu, đặc điểm"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T7_Q236",
+          "question": "Loại sao lưu nào sao chép tất cả dữ liệu được chọn?",
+          "options": {
+            "A": "Sao lưu tăng dần (Incremental)",
+            "B": "Sao lưu toàn bộ (Full)",
+            "C": "Sao lưu khác biệt (Differential)",
+            "D": "Sao lưu logic"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T7_Q237",
+          "question": "Loại sao lưu nào chỉ sao chép dữ liệu đã thay đổi kể từ lần sao lưu gần nhất (bất kể loại nào)?",
+          "options": {
+            "A": "Sao lưu tăng dần (Incremental)",
+            "B": "Sao lưu toàn bộ",
+            "C": "Sao lưu khác biệt (Differential)",
+            "D": "Sao lưu gương"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T7_Q238",
+          "question": "Loại sao lưu nào sao chép dữ liệu đã thay đổi kể từ lần sao lưu toàn bộ gần nhất?",
+          "options": {
+            "A": "Sao lưu tăng dần",
+            "B": "Sao lưu toàn bộ",
+            "C": "Sao lưu theo ngày",
+            "D": "Sao lưu khác biệt (Differential)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T7_Q239",
+          "question": "Nancy sao lưu toàn bộ vào Chủ nhật và sao lưu khác biệt từ Thứ Hai đến Thứ Sáu. Máy chủ hỏng sáng Thứ Tư. Cần khôi phục bao nhiêu bản sao lưu?",
+          "options": {
+            "A": "1",
+            "B": "3",
+            "C": "2",
+            "D": "4"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T7_Q240",
+          "question": "Công ty sao lưu toàn bộ vào Chủ nhật và sao lưu tăng dần từ Thứ Hai đến Thứ Sáu. Máy chủ hỏng sáng Thứ Năm. Cần khôi phục bao nhiêu bản sao lưu?",
+          "options": {
+            "A": "2",
+            "B": "4",
+            "C": "1",
+            "D": "5"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T7_Q241",
+          "question": "Công ty sao lưu toàn bộ vào Chủ nhật và sao lưu tăng dần các ngày trong tuần. Máy chủ hỏng sáng Thứ Sáu. Cần khôi phục bao nhiêu bản sao lưu?",
+          "options": {
+            "A": "5",
+            "B": "2",
+            "C": "1",
+            "D": "6"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T7_Q242",
+          "question": "So với sao lưu tăng dần, ưu điểm của sao lưu khác biệt khi khôi phục là gì?",
+          "options": {
+            "A": "Dung lượng sao lưu mỗi ngày luôn nhỏ hơn",
+            "B": "Không cần bản full",
+            "C": "Không tốn thời gian sao lưu",
+            "D": "Chỉ cần bản full và bản differential gần nhất"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_BO_T7_Q243",
+          "question": "Phương án khôi phục nào có thời gian sẵn sàng \"tức thời đến vài phút\" và đã trang bị sẵn máy tính, kết nối, dữ liệu, nhân sự?",
+          "options": {
+            "A": "Cold site",
+            "B": "Warm site",
+            "C": "Multiple sites",
+            "D": "Mobile site"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_BO_T7_Q244",
+          "question": "Trong bảng so sánh các phương án khôi phục, phương án nào KHÔNG được trang bị máy tính sẵn?",
+          "options": {
+            "A": "Hot site",
+            "B": "Cold site",
+            "C": "Warm site",
+            "D": "Multiple sites"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_BO_T7_Q245",
+          "question": "Trong bảng so sánh các phương án khôi phục, phương án nào có máy tính và kết nối nhưng chưa có dữ liệu và nhân sự?",
+          "options": {
+            "A": "Warm site",
+            "B": "Hot site",
+            "C": "Cold site",
+            "D": "Multiple sites"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_BO_T7_Q246",
+          "question": "Công ty Maria bị ngừng hệ thống và không ghi nhận doanh số nào trên trang bán hàng. Doanh số bị mất này thuộc loại chi phí nào?",
+          "options": {
+            "A": "Chi phí thay thế",
+            "B": "Chi phí nhân công",
+            "C": "Giá vốn hàng bán",
+            "D": "Chi phí cơ hội"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1050 @@
+{
+  "chapterId": "TH",
+  "chapterName": "Câu hỏi Tổng hợp - SQL Server (C1-C8)",
+  "topics": [
+    {
+      "topicId": "TH_C1",
+      "topicName": "Tổng hợp - C1: Database Configuration",
+      "questions": [
+        {
+          "id": "TH_C1_Q1",
+          "question": "Một database có 3 filegroup và mỗi filegroup có nhiều file dữ liệu với dung lượng trống khác nhau. SQL Server sẽ phân bổ extent mới cho các file trong cùng filegroup theo cơ chế nào?",
+          "options": {
+            "A": "Ghi tuần tự vào file đầu tiên cho đến khi đầy rồi mới chuyển sang file kế tiếp",
+            "B": "Proportional fill: phân bổ theo tỷ lệ dung lượng trống của từng file",
+            "C": "Chọn ngẫu nhiên một file bất kỳ trong filegroup",
+            "D": "Luôn ghi vào file có kích thước lớn nhất"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C1_Q2",
+          "question": "Kết hợp kiến thức về GAM, SGAM và PFS: khi SQL Server cần cấp phát một extent mới (uniform) cho một object, nó sẽ dựa vào bản đồ nào để tìm extent còn trống, và dựa vào bản đồ nào để biết trạng thái đầy/rỗng của từng page trong extent đó?",
+          "options": {
+            "A": "GAM tìm extent trống; PFS theo dõi trạng thái từng page",
+            "B": "PFS tìm extent trống; GAM theo dõi trạng thái từng page",
+            "C": "SGAM tìm extent trống; GAM theo dõi trạng thái từng page",
+            "D": "DCM tìm extent trống; BCM theo dõi trạng thái từng page"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TH_C1_Q3",
+          "question": "Xét mối liên hệ giữa DCM và differential backup: nếu bạn thực hiện differential backup ngay sau một full backup mà không có thay đổi dữ liệu nào, kích thước differential backup sẽ như thế nào và tại sao?",
+          "options": {
+            "A": "Rất lớn, vì DCM luôn đánh dấu toàn bộ extent",
+            "B": "Rất nhỏ, vì không có extent nào được đánh dấu thay đổi trong DCM kể từ full backup",
+            "C": "Bằng 0 byte vì differential backup không thể chạy khi chưa có thay đổi",
+            "D": "Lớn tương đương full backup vì DCM reset sau mỗi checkpoint"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C1_Q4",
+          "question": "Khi checkpoint xảy ra, SQL Server ghi các dirty page xuống đĩa và cập nhật LSN vào boot page. Nếu server bị crash ngay sau checkpoint nhưng trước khi commit một giao dịch đang chạy, quá trình recovery sẽ sử dụng thông tin nào để xác định điểm bắt đầu phân tích (analysis phase)?",
+          "options": {
+            "A": "Vị trí file dữ liệu (.mdf) gần nhất",
+            "B": "LSN của checkpoint được lưu trong boot page",
+            "C": "Thời gian tạo database",
+            "D": "Vị trí cuối cùng của transaction log (log tail)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C1_Q5",
+          "question": "So sánh vai trò của IAM (Index Allocation Map) với GAM/SGAM: IAM khác GAM/SGAM ở điểm nào về phạm vi quản lý?",
+          "options": {
+            "A": "IAM quản lý toàn bộ database, còn GAM/SGAM chỉ quản lý một bảng",
+            "B": "IAM quản lý extent được cấp cho MỘT allocation unit cụ thể, còn GAM/SGAM quản lý trạng thái cấp phát của TOÀN BỘ extent trong file",
+            "C": "IAM và GAM/SGAM hoàn toàn giống nhau về chức năng",
+            "D": "IAM chỉ dùng cho transaction log, GAM/SGAM chỉ dùng cho data file"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C1_Q6",
+          "question": "Kết hợp khái niệm VLF (Virtual Log File) với hiệu suất log backup: nếu transaction log có quá nhiều VLF nhỏ (log fragmentation), điều gì có thể xảy ra?",
+          "options": {
+            "A": "Không ảnh hưởng gì đến hiệu suất",
+            "B": "Làm chậm quá trình khởi động database, log backup và cả recovery, vì SQL Server phải xử lý qua rất nhiều VLF nhỏ",
+            "C": "Tự động gộp các VLF lại mỗi khi backup",
+            "D": "Chỉ ảnh hưởng đến differential backup, không ảnh hưởng log backup"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C1_Q7",
+          "question": "Thiết kế nhiều filegroup không chỉ giúp quản lý lưu trữ mà còn hỗ trợ chiến lược backup nào ở chương Backup & Restore?",
+          "options": {
+            "A": "Không liên quan gì đến backup",
+            "B": "Cho phép thực hiện Filegroup backup hoặc Partial backup, tách riêng dữ liệu ít thay đổi (read-only) khỏi dữ liệu thường xuyên cập nhật để tối ưu thời gian backup",
+            "C": "Chỉ hỗ trợ full backup nhanh hơn, không hỗ trợ backup từng phần",
+            "D": "Filegroup chỉ ảnh hưởng đến hiệu suất truy vấn, không liên quan đến backup"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C1_Q8",
+          "question": "Khi một page bị đầy và cần chèn thêm dòng dữ liệu vào giữa (do clustered index key không tăng dần), SQL Server thực hiện page split. Thao tác này ảnh hưởng như thế nào đến việc cấp phát extent (GAM/SGAM) đã học?",
+          "options": {
+            "A": "Không cần cấp phát thêm gì cả",
+            "B": "SQL Server phải cấp phát thêm page mới (có thể trong cùng extent nếu còn chỗ, hoặc extent mới) và cập nhật GAM/SGAM/PFS tương ứng, đồng thời di chuyển một phần dữ liệu sang page mới",
+            "C": "Page split luôn xóa toàn bộ extent cũ",
+            "D": "Page split chỉ xảy ra với Heap, không xảy ra với clustered index"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C1_Q9",
+          "question": "Boot page của database (page đầu tiên trong file chính) lưu trữ những thông tin quan trọng nào liên quan đến cả cấu hình và recovery?",
+          "options": {
+            "A": "Chỉ chứa tên database",
+            "B": "Chứa các thông tin như phiên bản database, LSN của checkpoint gần nhất, trạng thái database - những thông tin cần thiết ngay khi SQL Server mở database và bắt đầu recovery",
+            "C": "Chỉ chứa danh sách các user",
+            "D": "Chứa toàn bộ dữ liệu của bảng hệ thống sys.tables"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C1_Q10",
+          "question": "Trong recovery model SIMPLE, checkpoint có vai trò gì đặc biệt hơn so với FULL recovery model xét về việc truncate log?",
+          "options": {
+            "A": "Không có gì khác biệt giữa hai recovery model",
+            "B": "Trong SIMPLE, sau mỗi checkpoint (khi không còn giao dịch active), phần log đã ghi có thể được truncate ngay lập tức vì không cần giữ lại cho log backup; trong FULL, log chỉ được truncate sau khi có log backup thành công",
+            "C": "SIMPLE không bao giờ truncate log tự động",
+            "D": "FULL recovery model truncate log nhanh hơn SIMPLE"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "TH_C2",
+      "topicName": "Tổng hợp - C2: Table Optimizations",
+      "questions": [
+        {
+          "id": "TH_C2_Q1",
+          "question": "Một bảng được tạo trên partition scheme với clustered index dùng cùng partition function. Chỉ mục này được gọi là gì, và điều gì xảy ra nếu bạn tạo thêm một nonclustered index KHÔNG dùng partitioning key làm cột đầu?",
+          "options": {
+            "A": "Gọi là 'covering index'; nonclustered index sẽ tự động được partition theo key khác",
+            "B": "Gọi là 'aligned index'; nonclustered index đó sẽ là 'non-aligned' nếu không dùng chung partition scheme/function",
+            "C": "Gọi là 'unique index'; không ảnh hưởng gì đến partitioning",
+            "D": "Gọi là 'filtered index'; sẽ gây lỗi khi tạo bảng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C2_Q2",
+          "question": "Để triển khai chiến lược 'sliding window' (xóa dữ liệu cũ, thêm dữ liệu mới) trên một bảng đã partition theo tháng, bạn nên kết hợp các thao tác nào theo đúng thứ tự?",
+          "options": {
+            "A": "MERGE partition cũ nhất để xóa, sau đó SPLIT để tạo partition mới cho dữ liệu sắp tới, dùng SWITCH để nạp/xuất dữ liệu",
+            "B": "Chỉ cần DELETE trực tiếp dữ liệu cũ, không cần SPLIT/MERGE",
+            "C": "Luôn phải DROP TABLE và tạo lại partition function mỗi tháng",
+            "D": "Dùng ALTER TABLE REBUILD để xóa partition cũ"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TH_C2_Q3",
+          "question": "Bạn có một bảng lịch sử giao dịch rất lớn (VLDB), ít khi UPDATE nhưng thường xuyên SELECT theo khoảng thời gian. Kết hợp các kỹ thuật đã học, giải pháp tối ưu nhất là gì?",
+          "options": {
+            "A": "Chỉ dùng memory-optimized table để tăng tốc độ ghi",
+            "B": "Partitioning theo cột thời gian (để hỗ trợ partition elimination) kết hợp page/columnstore compression để tiết kiệm không gian và tăng tốc truy vấn phân tích",
+            "C": "Chỉ tạo thêm nonclustered index trên mọi cột",
+            "D": "Chuyển toàn bộ bảng sang dùng GUID làm khóa chính"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C2_Q4",
+          "question": "Khi migrate một bảng đã áp dụng page compression sang memory-optimized table, vì sao cần tính toán lại dung lượng lưu trữ?",
+          "options": {
+            "A": "Vì memory-optimized table nén dữ liệu tốt hơn page compression",
+            "B": "Vì memory-optimized table không hỗ trợ page/row compression nên dữ liệu sẽ chiếm nhiều bộ nhớ hơn dạng đã nén trên đĩa",
+            "C": "Vì memory-optimized table tự động chuyển sang columnstore",
+            "D": "Vì memory-optimized table bắt buộc phải partition lại"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C2_Q5",
+          "question": "Thao tác SWITCH partition yêu cầu điều kiện gì về cấu trúc giữa bảng nguồn và bảng đích để đảm bảo chỉ thay đổi metadata mà không di chuyển dữ liệu vật lý?",
+          "options": {
+            "A": "Chỉ cần cùng tên cột",
+            "B": "Cấu trúc bảng, chỉ mục (bao gồm cả tính 'aligned') và ràng buộc phải tương thích giữa hai bảng/partition",
+            "C": "Bảng đích phải luôn là bảng rỗng không có chỉ mục",
+            "D": "Không có yêu cầu gì đặc biệt"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C2_Q6",
+          "question": "Khi một bảng được partition thành nhiều phần, SQL Server có thể duy trì statistics như thế nào để tối ưu query plan cho từng partition?",
+          "options": {
+            "A": "SQL Server chỉ giữ một bộ statistics duy nhất cho toàn bảng, không phân biệt theo partition",
+            "B": "SQL Server hỗ trợ incremental statistics theo từng partition, cho phép cập nhật statistics của một partition mà không cần quét lại toàn bộ bảng",
+            "C": "Statistics không áp dụng được cho bảng đã partition",
+            "D": "Phải xóa toàn bộ statistics mỗi khi thêm partition mới"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C2_Q7",
+          "question": "So sánh chi phí CPU giữa Row compression và Page compression khi cùng áp dụng cho một bảng OLTP có tần suất ghi cao. Đâu là đánh đổi hợp lý?",
+          "options": {
+            "A": "Page compression luôn tốt hơn Row compression trong mọi trường hợp OLTP",
+            "B": "Row compression có overhead CPU thấp hơn, phù hợp hơn cho OLTP tần suất ghi cao; Page compression tiết kiệm không gian hơn nhưng tốn CPU hơn (do thêm dictionary/prefix compression), phù hợp hơn cho dữ liệu ít thay đổi (data warehouse)",
+            "C": "Cả hai loại nén đều không tốn thêm CPU",
+            "D": "Row compression chỉ áp dụng được cho bảng đã partition"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C2_Q8",
+          "question": "Kết hợp Memory-Optimized table với Natively Compiled Stored Procedure mang lại lợi ích tổng hợp gì so với chỉ dùng Memory-Optimized table với stored procedure thông thường (interop)?",
+          "options": {
+            "A": "Không có lợi ích thêm nào",
+            "B": "Natively compiled procedure được biên dịch thành mã máy (native code) khi tạo, giảm đáng kể overhead khi thực thi so với interop (vẫn phải qua trình thông dịch), tối đa hóa lợi ích tốc độ của memory-optimized table",
+            "C": "Chỉ giúp giảm dung lượng lưu trữ, không ảnh hưởng tốc độ",
+            "D": "Chỉ hoạt động với bảng disk-based, không hoạt động với memory-optimized table"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C2_Q9",
+          "question": "Nếu một bảng đã có nhiều nonclustered index để tối ưu nhiều loại truy vấn khác nhau, việc thêm partitioning theo một cột khác (không phải cột trong index đó) có thể tạo ra vấn đề gì?",
+          "options": {
+            "A": "Không có vấn đề gì, mọi index tự động tương thích với partitioning",
+            "B": "Các nonclustered index đó có thể trở thành 'non-aligned' với partition scheme của bảng, gây khó khăn khi thực hiện SWITCH partition và có thể ảnh hưởng đến hiệu suất một số thao tác quản trị",
+            "C": "Bảng sẽ tự động xóa các index không dùng partitioning key",
+            "D": "SQL Server sẽ từ chối tạo partition nếu bảng đã có index"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C2_Q10",
+          "question": "Khi nào nên chọn RANGE LEFT thay vì RANGE RIGHT trong partition function, xét theo ví dụ phân vùng dữ liệu theo cuối tháng (ví dụ ranh giới là ngày cuối cùng của mỗi tháng)?",
+          "options": {
+            "A": "Luôn dùng RANGE RIGHT bất kể ranh giới là gì",
+            "B": "Dùng RANGE LEFT khi giá trị ranh giới (vd 31/1) nên thuộc về partition bên trái (tháng 1) thay vì partition bên phải (tháng 2), phù hợp khi ranh giới là ngày cuối kỳ",
+            "C": "RANGE LEFT và RANGE RIGHT cho kết quả hoàn toàn giống nhau",
+            "D": "Chỉ dùng được RANGE LEFT với kiểu dữ liệu số nguyên"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "TH_C3",
+      "topicName": "Tổng hợp - C3: Indexes & Statistics",
+      "questions": [
+        {
+          "id": "TH_C3_Q1",
+          "question": "So sánh đường đi truy xuất dữ liệu: khi một bảng có nonclustered index nhưng bảng gốc là Heap, leaf level của nonclustered index sẽ trỏ đến gì? Còn nếu bảng có clustered index thì sao?",
+          "options": {
+            "A": "Cả hai trường hợp đều trỏ đến RID",
+            "B": "Trường hợp Heap trỏ đến RID (FileID:PageID:SlotNumber); trường hợp có clustered index thì trỏ đến giá trị của clustered index key (thực hiện key lookup)",
+            "C": "Cả hai trường hợp đều trỏ trực tiếp đến dữ liệu thực tế mà không cần lookup",
+            "D": "Trường hợp Heap trỏ đến clustered key; trường hợp clustered index trỏ đến RID"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C3_Q2",
+          "question": "Kết hợp kiến thức về clustered key và fragmentation: tại sao dùng GUID ngẫu nhiên (NEWID()) làm clustered key thường gây phân mảnh nhiều hơn so với dùng NEWSEQUENTIALID() hoặc cột IDENTITY tăng dần?",
+          "options": {
+            "A": "Vì GUID chiếm ít byte hơn nên gây page split nhiều hơn",
+            "B": "Vì giá trị GUID ngẫu nhiên không theo thứ tự, khiến dòng mới phải chèn xen giữa các page hiện có, gây page split và phân mảnh; giá trị tăng dần luôn chèn ở cuối, giảm page split",
+            "C": "Vì GUID không được SQL Server hỗ trợ làm clustered key",
+            "D": "Vì GUID luôn được lưu trong ROW_OVERFLOW_DATA"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C3_Q3",
+          "question": "Trong kiến trúc Columnstore index, khi một dòng bị UPDATE, kết hợp cơ chế deltastore + đánh dấu xóa logic, quá trình này diễn ra như thế nào?",
+          "options": {
+            "A": "Dòng cũ được ghi đè trực tiếp trong columnstore segment",
+            "B": "Dòng cũ được đánh dấu xóa logic (delete bitmap), dòng mới được chèn vào deltastore; sau đó Tuple Mover sẽ nén deltastore vào columnstore segment",
+            "C": "Toàn bộ segment chứa dòng đó bị xóa và tạo lại",
+            "D": "UPDATE không được hỗ trợ trên Columnstore index"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C3_Q4",
+          "question": "So sánh Hash index và Nonclustered index trong In-Memory OLTP: nếu truy vấn thường dùng BETWEEN hoặc ORDER BY trên một cột, loại index nào phù hợp hơn và tại sao?",
+          "options": {
+            "A": "Hash index, vì hash luôn nhanh hơn cho mọi loại truy vấn",
+            "B": "Nonclustered index (Bw-tree), vì nó trả dữ liệu theo thứ tự của khóa index, phù hợp cho range scan/ORDER BY; Hash index chỉ tối ưu cho so sánh bằng (=)",
+            "C": "Cả hai đều như nhau vì đều lưu trong bộ nhớ",
+            "D": "Không loại nào hỗ trợ range query trong In-Memory OLTP"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C3_Q5",
+          "question": "Khi kiểm tra avg_fragmentation_in_percent và avg_page_space_used_in_percent của một index, bạn quyết định dùng REORGANIZE hay REBUILD dựa trên tiêu chí tổng hợp nào?",
+          "options": {
+            "A": "Luôn dùng REBUILD vì nhanh hơn REORGANIZE trong mọi trường hợp",
+            "B": "Fragmentation thấp (~5-30%) thường dùng REORGANIZE (online, ít tốn tài nguyên); fragmentation cao (>30%) nên dùng REBUILD (có thể ONLINE/OFFLINE, cập nhật lại statistics đầy đủ)",
+            "C": "Chỉ cần xem avg_page_space_used_in_percent, bỏ qua fragmentation",
+            "D": "REORGANIZE và REBUILD cho kết quả hoàn toàn giống nhau nên chọn cái nào cũng được"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C3_Q6",
+          "question": "SQL Server tự động cập nhật statistics khi tỷ lệ dữ liệu thay đổi vượt ngưỡng nhất định (auto update statistics). Nếu ngưỡng này chưa đạt nhưng dữ liệu đã thay đổi đáng kể, hệ quả gì có thể xảy ra với query plan?",
+          "options": {
+            "A": "Không ảnh hưởng gì vì query optimizer không dùng statistics",
+            "B": "Query optimizer có thể ước lượng sai số dòng (cardinality estimation), dẫn đến chọn plan không tối ưu (vd dùng nested loop thay vì hash join), gây chậm truy vấn",
+            "C": "SQL Server sẽ tự động rebuild toàn bộ index khi statistics lỗi thời",
+            "D": "Statistics lỗi thời chỉ ảnh hưởng đến Columnstore index, không ảnh hưởng Rowstore"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C3_Q7",
+          "question": "So sánh việc thêm cột vào Included Columns của covering index với việc thêm cột đó vào phần khóa chính (key columns) của index: đâu là đánh đổi chính?",
+          "options": {
+            "A": "Không có sự khác biệt nào giữa hai cách",
+            "B": "Included columns chỉ được lưu ở leaf level (không ảnh hưởng thứ tự sắp xếp, giảm kích thước các cấp trung gian), trong khi thêm vào key columns sẽ ảnh hưởng đến thứ tự sắp xếp toàn bộ index và làm tăng kích thước ở mọi cấp (bao gồm root/intermediate)",
+            "C": "Included columns luôn làm index lớn hơn so với key columns",
+            "D": "Chỉ key columns mới được lưu ở leaf level, included columns thì không"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C3_Q8",
+          "question": "Filtered Index thường đi kèm với Filtered Statistics. Việc này mang lại lợi ích gì so với statistics thông thường trên toàn bảng?",
+          "options": {
+            "A": "Không có lợi ích gì thêm",
+            "B": "Filtered statistics chỉ tính toán trên tập con dữ liệu thỏa điều kiện WHERE của filtered index, giúp ước lượng cardinality chính xác hơn cho các truy vấn chỉ quan tâm đến tập con đó, so với statistics tổng quát trên toàn bảng có thể bị 'pha loãng'",
+            "C": "Filtered statistics luôn kém chính xác hơn statistics toàn bảng",
+            "D": "Filtered Index không thể có statistics riêng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C3_Q9",
+          "question": "Khi tỷ lệ số dòng cần trả về gần với 'tipping point' (khoảng 0.5-2%), Query Optimizer sẽ cân nhắc điều gì khi chọn giữa Index Seek + Key Lookup và Full Table/Clustered Index Scan?",
+          "options": {
+            "A": "Optimizer luôn chọn Index Seek bất kể tỷ lệ dòng trả về",
+            "B": "Optimizer so sánh chi phí ước tính: nếu số dòng cần lookup ít, Seek+Lookup rẻ hơn; nhưng khi vượt qua tipping point, chi phí của nhiều lần Key Lookup (mỗi lần là một I/O ngẫu nhiên) vượt qua chi phí quét tuần tự toàn bộ bảng, nên Optimizer chuyển sang Scan",
+            "C": "Optimizer luôn chọn Scan để đơn giản hóa kế hoạch truy vấn",
+            "D": "Tipping point không ảnh hưởng đến quyết định của Optimizer"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C3_Q10",
+          "question": "Batch execution mode của Columnstore Index xử lý dữ liệu theo lô (khoảng 1000 dòng/lần) thay vì từng dòng như Row mode truyền thống. Điều này mang lại lợi ích gì cho khối lượng công việc phân tích (analytical workload)?",
+          "options": {
+            "A": "Không có lợi ích gì đáng kể so với row mode",
+            "B": "Giảm đáng kể overhead CPU trên mỗi dòng (vì xử lý theo lô, tận dụng SIMD/vectorization), phù hợp với các truy vấn tổng hợp (aggregate), quét lượng lớn dữ liệu như trong data warehouse",
+            "C": "Batch mode chỉ hoạt động với OLTP, không hoạt động với data warehouse",
+            "D": "Batch mode làm tăng số lần truy cập đĩa so với row mode"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "TH_C4",
+      "topicName": "Tổng hợp - C4: SQL Server Security Model",
+      "questions": [
+        {
+          "id": "TH_C4_Q1",
+          "question": "Trình bày đúng thứ tự phân cấp bảo mật (security chain) trong SQL Server từ cấp cao nhất đến thấp nhất?",
+          "options": {
+            "A": "Database User → Login → Server Role → Database Role → Permission",
+            "B": "Login (cấp server) → Server Role/Database User (ánh xạ vào database) → Database Role → Permission trên object/schema",
+            "C": "Permission → Database Role → Login → Server Role",
+            "D": "Server Role → Login → Permission → Database User"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C4_Q2",
+          "question": "Trong một kịch bản Availability Group hoặc restore database sang instance khác, tại sao user trong database có thể bị 'orphaned' (SID không khớp với login ở instance mới), và cách khắc phục tổng hợp là gì?",
+          "options": {
+            "A": "Vì login và user luôn tự động đồng bộ SID, không có vấn đề gì",
+            "B": "Vì SID của login mới tạo trên instance khác không trùng SID đã lưu trong database user; khắc phục bằng cách dùng ALTER USER ... WITH LOGIN để map lại, hoặc dùng contained database để tách rời phụ thuộc vào SID cấp instance",
+            "C": "Vì database đã bị mã hóa bằng TDE nên user bị khóa",
+            "D": "Vì db_owner đã bị xóa khỏi database"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C4_Q3",
+          "question": "Nếu một user vừa được GRANT SELECT trên một bảng thông qua vai trò db_datareader, nhưng đồng thời bị DENY SELECT trực tiếp trên chính bảng đó, kết quả cuối cùng user đó có quyền gì?",
+          "options": {
+            "A": "Có quyền SELECT vì GRANT có hiệu lực cao hơn",
+            "B": "Không có quyền SELECT, vì DENY luôn được ưu tiên hơn GRANT trong SQL Server",
+            "C": "SQL Server sẽ báo lỗi xung đột quyền và không cho thực thi câu lệnh nào",
+            "D": "Quyền sẽ được cấp theo thứ tự lệnh chạy sau cùng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C4_Q4",
+          "question": "So sánh phạm vi giữa sysadmin (server role) và db_owner (database role): điều gì đúng khi mô tả sự khác biệt?",
+          "options": {
+            "A": "db_owner có quyền lớn hơn sysadmin vì kiểm soát toàn bộ instance",
+            "B": "sysadmin có toàn quyền trên TOÀN BỘ instance (mọi database, cấu hình server); db_owner chỉ có toàn quyền trong PHẠM VI một database cụ thể",
+            "C": "Hai vai trò này hoàn toàn giống nhau về phạm vi quyền",
+            "D": "sysadmin chỉ quản lý logins, không quản lý database"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C4_Q5",
+          "question": "Kết hợp GRANT/DENY ở cấp Schema và cấp Object: nếu một user được GRANT SELECT ở cấp Schema (CH10) nhưng không có permission riêng nào ở cấp bảng cụ thể trong schema đó, user có SELECT được bảng đó không?",
+          "options": {
+            "A": "Không, vì permission cấp schema không áp dụng xuống object bên trong",
+            "B": "Có, vì permission ở cấp Schema sẽ kế thừa xuống tất cả các object (bảng, view...) thuộc schema đó, trừ khi có DENY tường minh ở cấp object",
+            "C": "Chỉ áp dụng nếu user là db_owner",
+            "D": "Chỉ áp dụng cho stored procedure, không áp dụng cho bảng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C4_Q6",
+          "question": "So sánh Fixed Server Roles (như sysadmin) với User-Defined Server Roles: khi nào nên tạo một user-defined server role thay vì dùng fixed role có sẵn?",
+          "options": {
+            "A": "Không bao giờ nên tạo user-defined server role vì fixed role đã đủ dùng",
+            "B": "Khi cần một tập quyền tùy chỉnh ở cấp server (không khớp với bất kỳ fixed role nào), ví dụ chỉ cho phép xem cấu hình mà không cho thay đổi login, giúp áp dụng nguyên tắc 'least privilege' tốt hơn so với gán fixed role rộng quyền hơn nhu cầu thực tế",
+            "C": "User-defined server role luôn có quyền cao hơn sysadmin",
+            "D": "User-defined server role chỉ áp dụng được ở cấp database, không áp dụng ở cấp server"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C4_Q7",
+          "question": "Ownership chaining (chuỗi sở hữu) trong SQL Server hoạt động như thế nào khi một stored procedure truy cập một bảng, và điều này liên quan gì đến việc cấp quyền tối thiểu cho user?",
+          "options": {
+            "A": "User cần được cấp quyền trực tiếp trên cả bảng lẫn stored procedure",
+            "B": "Nếu procedure và bảng có cùng chủ sở hữu (owner), SQL Server chỉ kiểm tra quyền EXECUTE trên procedure, không kiểm tra quyền trực tiếp trên bảng bên dưới - cho phép cấp quyền tối thiểu (chỉ EXECUTE) mà vẫn cho phép procedure thao tác trên bảng",
+            "C": "Ownership chaining chỉ áp dụng cho view, không áp dụng cho stored procedure",
+            "D": "Ownership chaining luôn yêu cầu user phải là db_owner"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C4_Q8",
+          "question": "Trong SQL Server, module signing (ký số cho stored procedure bằng certificate) được dùng để làm gì kết hợp với mô hình cấp quyền?",
+          "options": {
+            "A": "Chỉ để mã hóa nội dung của stored procedure",
+            "B": "Cho phép cấp quyền gián tiếp thông qua một certificate được ký vào procedure: user chỉ cần quyền EXECUTE trên procedure, còn procedure (thông qua certificate) có quyền cần thiết trên các đối tượng bên dưới, ngay cả khi không có ownership chaining trực tiếp (ví dụ khi có cross-database access)",
+            "C": "Module signing thay thế hoàn toàn Login và User",
+            "D": "Module signing chỉ dùng để backup stored procedure"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C4_Q9",
+          "question": "Contained Database mang lại lợi ích bảo mật nào khi kết hợp với các kịch bản migrate/failover database (như Availability Group)?",
+          "options": {
+            "A": "Không có lợi ích gì đặc biệt về bảo mật",
+            "B": "Vì contained user lưu credential trực tiếp trong database (không phụ thuộc vào login ở cấp instance), nên khi database failover/migrate sang instance khác, user vẫn có thể xác thực trực tiếp mà không gặp vấn đề orphaned user/SID không khớp",
+            "C": "Contained database bắt buộc phải dùng Windows Authentication",
+            "D": "Contained database chỉ hoạt động khi bật TDE"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C4_Q10",
+          "question": "Kết hợp db_datareader và db_denydatawriter cho cùng một user sẽ tạo ra một vai trò tổng hợp nào trong thực tế?",
+          "options": {
+            "A": "User sẽ không có quyền gì cả vì hai vai trò xung đột",
+            "B": "User có quyền SELECT trên mọi bảng (từ db_datareader) nhưng bị từ chối mọi thao tác ghi (INSERT/UPDATE/DELETE) trên mọi bảng (từ db_denydatawriter) - tạo ra một tài khoản chỉ đọc (read-only) một cách tường minh và an toàn hơn so với chỉ dựa vào việc không cấp quyền ghi",
+            "C": "User sẽ có toàn quyền ghi vì db_datareader ghi đè db_denydatawriter",
+            "D": "Hai vai trò này không thể gán cùng lúc cho một user"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "TH_C5",
+      "topicName": "Tổng hợp - C5: Backup & Restore",
+      "questions": [
+        {
+          "id": "TH_C5_Q1",
+          "question": "Một hệ thống yêu cầu RPO = 15 phút và RTO càng nhanh càng tốt, database ở recovery model FULL. Chiến lược backup tổng hợp nào phù hợp nhất?",
+          "options": {
+            "A": "Chỉ Full backup hàng tuần, không cần log backup",
+            "B": "Full backup định kỳ (vd hàng đêm) + Differential backup (vd mỗi vài giờ) + Log backup mỗi 15 phút để đáp ứng RPO",
+            "C": "Chỉ Log backup liên tục, không cần Full/Differential",
+            "D": "Chuyển sang recovery model SIMPLE để backup nhanh hơn"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C5_Q2",
+          "question": "Khi khôi phục theo chuỗi Full → Differential → Log để đạt point-in-time recovery, thứ tự và tùy chọn RESTORE nào là đúng?",
+          "options": {
+            "A": "RESTORE Full WITH RECOVERY, sau đó RESTORE Differential WITH NORECOVERY, sau đó RESTORE Log WITH RECOVERY, STOPAT",
+            "B": "RESTORE Full WITH NORECOVERY → RESTORE Differential (bản mới nhất) WITH NORECOVERY → RESTORE các Log backup theo thứ tự, log cuối cùng dùng WITH RECOVERY và STOPAT nếu cần điểm khôi phục cụ thể",
+            "C": "Chỉ cần RESTORE Log là đủ, không cần Full/Differential",
+            "D": "RESTORE Differential trước, sau đó mới RESTORE Full"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C5_Q3",
+          "question": "Với một VLDB (Very Large Database) có nhiều filegroup, trong đó có filegroup chỉ đọc (read-only) chứa dữ liệu lịch sử, chiến lược backup nào giúp tiết kiệm thời gian và dung lượng backup nhất?",
+          "options": {
+            "A": "Full backup toàn bộ database mỗi lần, bất kể filegroup nào",
+            "B": "Partial backup (bỏ qua filegroup read-only) kết hợp Filegroup backup cho các filegroup ghi/đọc thường xuyên thay đổi, giảm đáng kể thời gian/dung lượng so với full backup toàn bộ",
+            "C": "Chỉ backup transaction log, bỏ qua toàn bộ dữ liệu",
+            "D": "Không cần backup filegroup read-only vĩnh viễn, kể cả lần đầu"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C5_Q4",
+          "question": "Kết hợp NORECOVERY/STANDBY trong kịch bản log shipping: tại sao secondary server thường dùng STANDBY thay vì NORECOVERY?",
+          "options": {
+            "A": "Vì STANDBY nhanh hơn NORECOVERY khi apply log",
+            "B": "Vì STANDBY cho phép database ở chế độ chỉ đọc (read-only) giữa các lần apply log, hữu ích cho reporting, trong khi NORECOVERY không cho truy vấn được",
+            "C": "Vì NORECOVERY sẽ xóa dữ liệu đã restore trước đó",
+            "D": "Không có sự khác biệt thực tế giữa hai tùy chọn"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C5_Q5",
+          "question": "Trước khi restore một backup quan trọng vào môi trường production, kết hợp thao tác nào giúp đảm bảo file backup không bị hỏng mà KHÔNG cần thực hiện restore thật sự?",
+          "options": {
+            "A": "RESTORE DATABASE WITH RECOVERY trực tiếp lên production",
+            "B": "Dùng RESTORE VERIFYONLY (hoặc Verify Backup Media trong SSMS) để kiểm tra tính hợp lệ của backup set trước khi restore chính thức",
+            "C": "Xóa database hiện tại rồi mới kiểm tra backup",
+            "D": "Không cần kiểm tra gì, cứ restore trực tiếp"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C5_Q6",
+          "question": "Trước khi restore một database production (đang online) về một thời điểm cụ thể, tại sao cần thực hiện tail-log backup ngay trước khi bắt đầu restore?",
+          "options": {
+            "A": "Không cần thiết, log cũ không quan trọng",
+            "B": "Tail-log backup ghi lại toàn bộ phần log chưa được backup tính đến thời điểm database gặp sự cố hoặc trước khi restore, đảm bảo không mất dữ liệu giữa lần log backup cuối cùng và thời điểm hiện tại, giúp có thể khôi phục đến đúng thời điểm gần nhất có thể",
+            "C": "Tail-log backup chỉ cần thiết khi dùng recovery model SIMPLE",
+            "D": "Tail-log backup thay thế hoàn toàn việc cần Full backup trước đó"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C5_Q7",
+          "question": "Copy-only backup khác gì so với backup thông thường, và khi nào nên dùng loại backup này kết hợp với chiến lược backup định kỳ đang có?",
+          "options": {
+            "A": "Copy-only backup thay thế hoàn toàn chiến lược full/differential/log backup định kỳ",
+            "B": "Copy-only backup không ảnh hưởng đến chuỗi backup log hay điểm mốc của differential backup (không reset DCM); phù hợp khi cần lấy một bản sao độc lập (vd để clone sang môi trường test) mà không làm gián đoạn lịch backup định kỳ đang chạy",
+            "C": "Copy-only backup chỉ dùng được cho transaction log, không dùng được cho full backup",
+            "D": "Copy-only backup luôn có kích thước lớn hơn full backup thông thường"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C5_Q8",
+          "question": "Bật backup compression giúp giảm dung lượng file backup nhưng đánh đổi với điều gì, và điều này ảnh hưởng thế nào đến chiến lược backup cho hệ thống có CPU hạn chế?",
+          "options": {
+            "A": "Backup compression không tốn thêm tài nguyên nào",
+            "B": "Backup compression tốn thêm CPU để nén dữ liệu trong lúc backup, nên với hệ thống đang chịu tải CPU cao, cần cân nhắc lên lịch backup vào giờ thấp điểm hoặc chấp nhận dung lượng backup lớn hơn để giảm áp lực CPU",
+            "C": "Backup compression chỉ khả dụng cho log backup, không khả dụng cho full backup",
+            "D": "Backup compression luôn làm backup chậm hơn backup không nén trong mọi trường hợp phần cứng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C5_Q9",
+          "question": "Kết hợp striping (nhiều thiết bị backup) với backup compression cho một database cực lớn, lợi ích tổng hợp đạt được là gì?",
+          "options": {
+            "A": "Không có lợi ích cộng hưởng nào giữa hai kỹ thuật này",
+            "B": "Striping giúp phân phối I/O ghi qua nhiều ổ đĩa/thiết bị song song để tăng tốc độ ghi backup, trong khi compression giảm lượng dữ liệu cần ghi; kết hợp cả hai giúp giảm đáng kể thời gian backup cho các database VLDB",
+            "C": "Striping chỉ hoạt động khi tắt compression",
+            "D": "Compression làm mất tác dụng của striping"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C5_Q10",
+          "question": "Nếu một bản differential backup bị hỏng (corrupt) nhưng bạn vẫn còn đầy đủ các log backup kể từ lần full backup gần nhất, bạn có thể khôi phục dữ liệu về thời điểm mong muốn không, và bằng cách nào?",
+          "options": {
+            "A": "Không thể khôi phục vì differential backup là bắt buộc trong chuỗi restore",
+            "B": "Vẫn có thể khôi phục: RESTORE Full backup WITH NORECOVERY, sau đó bỏ qua differential backup bị hỏng và áp dụng tuần tự TẤT CẢ các log backup kể từ sau full backup cho đến thời điểm mong muốn (log chain vẫn còn nguyên vẹn)",
+            "C": "Phải backup lại từ đầu vì mất differential backup",
+            "D": "Chỉ có thể khôi phục về đúng thời điểm của full backup, không thể xa hơn"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "TH_C6",
+      "topicName": "Tổng hợp - C6: Encryption",
+      "questions": [
+        {
+          "id": "TH_C6_Q1",
+          "question": "Trình bày đầy đủ chuỗi phân cấp mã hóa (encryption hierarchy) khi sử dụng TDE, từ cấp cao nhất đến DEK?",
+          "options": {
+            "A": "DEK → Certificate → DMK → SMK",
+            "B": "Service Master Key (SMK, mã hóa bằng DPAPI) → Database Master Key (DMK, mã hóa bằng SMK) → Certificate/Asymmetric Key (mã hóa bằng DMK) → Database Encryption Key (DEK, mã hóa bằng Certificate)",
+            "C": "SMK → DEK → DMK → Certificate",
+            "D": "DMK → SMK → DEK → Certificate"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C6_Q2",
+          "question": "So sánh TDE, Cell-Level Encryption và Always Encrypted về đối tượng cần bảo vệ chống lại: đâu là điểm khác biệt quan trọng nhất?",
+          "options": {
+            "A": "Cả ba đều bảo vệ chống lại DBA/sysadmin như nhau",
+            "B": "TDE bảo vệ dữ liệu 'at rest' (chống truy cập file vật lý); Cell-Level mã hóa ở cấp cột nhưng dữ liệu vẫn giải mã được khi truy vấn qua quyền hợp lệ (kể cả DBA); Always Encrypted bảo vệ dữ liệu ngay cả khỏi người dùng có đặc quyền cao (sysadmin/DBA) vì khóa giải mã nằm ở phía client",
+            "C": "TDE là công nghệ duy nhất bảo vệ chống lại DBA",
+            "D": "Cell-Level Encryption luôn mạnh hơn Always Encrypted"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C6_Q3",
+          "question": "Khi cần di chuyển một database đã bật TDE sang instance SQL Server khác bằng phương pháp backup/restore, kết hợp các bước cần thiết là gì?",
+          "options": {
+            "A": "Chỉ cần RESTORE DATABASE là đủ, TDE tự động hoạt động trên instance mới",
+            "B": "Phải backup Certificate (kèm Private Key, có mật khẩu bảo vệ) từ instance nguồn, sau đó restore Certificate đó lên instance đích trước khi RESTORE DATABASE, vì DEK được bảo vệ bởi Certificate đó",
+            "C": "Chỉ cần tạo DMK mới trên instance đích",
+            "D": "Phải tắt TDE trước khi backup rồi bật lại sau khi restore"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C6_Q4",
+          "question": "Always Encrypted có hạn chế là không thể thực hiện các phép so sánh phức tạp (như LIKE, so sánh khoảng giá trị) trên dữ liệu đã mã hóa. Secure Enclaves giải quyết vấn đề này bằng cách nào?",
+          "options": {
+            "A": "Giải mã toàn bộ dữ liệu ra file tạm trên đĩa để xử lý",
+            "B": "Tạo một vùng bộ nhớ được bảo vệ (trusted execution environment) trên server, cho phép giải mã và tính toán tạm thời bên trong vùng này mà không lộ dữ liệu ra ngoài, kể cả cho SQL Server engine",
+            "C": "Gửi dữ liệu đã mã hóa lên Azure để xử lý bên ngoài",
+            "D": "Loại bỏ hoàn toàn nhu cầu mã hóa cột đó"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C6_Q5",
+          "question": "Kết hợp EKM với TDE: khi dùng EKM (Extensible Key Management) với HSM của bên thứ ba, điều gì thay đổi trong chuỗi phân cấp mã hóa so với dùng Certificate lưu trong database master thông thường?",
+          "options": {
+            "A": "Không có gì thay đổi, EKM chỉ là tên gọi khác của DMK",
+            "B": "Khóa bảo vệ DEK (Asymmetric Key/Certificate) được tạo và lưu trữ trong HSM bên ngoài thay vì trong SQL Server, giúp tăng cường bảo mật và tuân thủ quy định vì private key không bao giờ rời khỏi HSM",
+            "C": "EKM thay thế hoàn toàn Database Encryption Key",
+            "D": "EKM chỉ áp dụng được cho Always Encrypted, không áp dụng cho TDE"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C6_Q6",
+          "question": "TDE được thiết kế để giảm thiểu overhead hiệu suất so với Cell-Level Encryption. Yếu tố kỹ thuật nào giúp TDE đạt được điều này?",
+          "options": {
+            "A": "TDE không thực sự mã hóa dữ liệu, chỉ giả lập",
+            "B": "TDE mã hóa/giải mã ở cấp page ngay khi đọc/ghi vào đĩa (I/O level), không cần ứng dụng hay câu truy vấn phải xử lý logic mã hóa/giải mã riêng lẻ cho từng cột như Cell-Level Encryption, giúp overhead nhất quán và thấp hơn nhiều so với việc mã hóa/giải mã ở cấp ứng dụng",
+            "C": "TDE chỉ mã hóa một phần nhỏ dữ liệu nên luôn nhanh hơn",
+            "D": "TDE và Cell-Level Encryption có hiệu suất hoàn toàn như nhau"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C6_Q7",
+          "question": "Trong Cell-Level Encryption, vì sao thường dùng Symmetric Key để mã hóa dữ liệu thực tế thay vì dùng trực tiếp Asymmetric Key hoặc Certificate?",
+          "options": {
+            "A": "Vì Symmetric Key không được SQL Server hỗ trợ nên phải dùng gián tiếp",
+            "B": "Vì mã hóa/giải mã bằng Symmetric Key nhanh hơn nhiều so với Asymmetric Key/Certificate (vốn có chi phí tính toán cao hơn); do đó thực hành phổ biến là dùng Certificate/Asymmetric Key để bảo vệ Symmetric Key, rồi dùng Symmetric Key đó để mã hóa dữ liệu thực tế - cân bằng giữa bảo mật và hiệu suất",
+            "C": "Asymmetric Key không thể dùng để mã hóa dữ liệu trong SQL Server",
+            "D": "Không có sự khác biệt về hiệu suất giữa hai loại khóa"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C6_Q8",
+          "question": "Vì sao việc sao lưu (backup) Service Master Key và Database Master Key được xem là bước bắt buộc trong kế hoạch Disaster Recovery, kết hợp với toàn bộ chuỗi phân cấp mã hóa đã học?",
+          "options": {
+            "A": "Vì SMK/DMK chứa toàn bộ dữ liệu người dùng",
+            "B": "Vì SMK/DMK nằm ở gốc của chuỗi phân cấp mã hóa; nếu mất và không có bản sao lưu, mọi khóa/chứng chỉ/dữ liệu được mã hóa dựa trên chuỗi này (bao gồm TDE, Cell-Level Encryption) đều KHÔNG THỂ giải mã được, dẫn đến mất dữ liệu vĩnh viễn dù file dữ liệu vẫn còn nguyên vẹn",
+            "C": "Vì quy định pháp luật yêu cầu, không liên quan đến kỹ thuật",
+            "D": "SMK/DMK tự động được sao lưu cùng với mỗi full backup nên không cần thao tác thêm"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C6_Q9",
+          "question": "Always Encrypted hỗ trợ hai loại mã hóa: Deterministic và Randomized. Sự khác biệt này ảnh hưởng thế nào đến khả năng truy vấn (ví dụ so sánh bằng WHERE column = value)?",
+          "options": {
+            "A": "Cả hai loại đều cho phép so sánh bằng và range query như nhau",
+            "B": "Deterministic encryption luôn tạo ra cùng một giá trị mã hóa cho cùng một dữ liệu đầu vào, cho phép thực hiện so sánh bằng (=) và JOIN trên cột đó, nhưng dễ bị suy đoán mẫu hơn; Randomized encryption tạo giá trị mã hóa khác nhau mỗi lần (bảo mật cao hơn) nhưng KHÔNG hỗ trợ so sánh bằng hay index seek trực tiếp trên cột đó",
+            "C": "Randomized encryption luôn cho phép range query, Deterministic thì không",
+            "D": "Sự khác biệt này chỉ ảnh hưởng đến TDE, không ảnh hưởng đến Always Encrypted"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C6_Q10",
+          "question": "Khi cần rotate (đổi mới) Column Master Key (CMK) trong Always Encrypted mà không làm gián đoạn khả năng truy cập dữ liệu, quy trình tổng hợp cần thực hiện là gì?",
+          "options": {
+            "A": "Xóa CMK cũ ngay lập tức rồi tạo CMK mới, dữ liệu sẽ tự động được mã hóa lại",
+            "B": "Tạo CMK mới, tạo một CEK mới được bảo vệ bởi CMK mới (trong khi vẫn giữ CEK/CMK cũ cùng tồn tại tạm thời), sau đó mã hóa lại dữ liệu bằng CEK mới (re-encrypt), cuối cùng mới gỡ bỏ CMK/CEK cũ khi đã chắc chắn không còn phụ thuộc",
+            "C": "Không thể rotate CMK sau khi đã tạo, phải tạo lại toàn bộ database",
+            "D": "Chỉ cần đổi tên CMK, không cần thao tác gì thêm với CEK"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "TH_C7",
+      "topicName": "Tổng hợp - C7: SQL Server Metadata",
+      "questions": [
+        {
+          "id": "TH_C7_Q1",
+          "question": "Phân biệt Catalog Views và DMVs trong một tình huống cụ thể: bạn muốn biết (1) cấu trúc cột của một bảng và (2) truy vấn nào đang chạy chậm ngay bây giờ. Bạn nên dùng nguồn metadata nào cho mỗi mục đích?",
+          "options": {
+            "A": "Cả hai đều dùng Catalog Views vì chúng cung cấp mọi loại thông tin",
+            "B": "(1) Catalog view như sys.columns cho cấu trúc tĩnh; (2) DMV như sys.dm_exec_requests kết hợp sys.dm_exec_sql_text cho truy vấn đang chạy (trạng thái động)",
+            "C": "Cả hai đều dùng DMV vì DMV thay thế hoàn toàn catalog views",
+            "D": "(1) dùng sys.dm_exec_requests; (2) dùng sys.columns"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C7_Q2",
+          "question": "Để chẩn đoán một sự cố blocking đang xảy ra, bạn cần kết hợp nhiều DMV/view nào để xác định: (a) phiên nào đang bị chặn, (b) phiên nào đang giữ khóa, (c) đang chờ loại tài nguyên nào?",
+          "options": {
+            "A": "Chỉ cần sys.dm_os_wait_stats là đủ cho cả ba mục đích",
+            "B": "Kết hợp sys.dm_exec_requests (blocking_session_id, wait_type, wait_resource) với sys.dm_exec_sessions để xác định phiên chặn/bị chặn và loại tài nguyên đang chờ; có thể bổ sung sys.fn_PageResCracker nếu cần giải mã page_resource",
+            "C": "Chỉ cần sys.databases là đủ",
+            "D": "Chỉ cần sp_helpdb là đủ để phát hiện blocking"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C7_Q3",
+          "question": "Kết hợp Memory Grants Pending và Buffer Cache Hit Ratio để chẩn đoán hiệu suất: nếu Memory Grants Pending cao VÀ Buffer Cache Hit Ratio thấp, điều này gợi ý vấn đề gì?",
+          "options": {
+            "A": "Hệ thống đang hoạt động hoàn toàn bình thường",
+            "B": "Hệ thống có thể đang thiếu bộ nhớ (RAM) nghiêm trọng: nhiều truy vấn phải chờ cấp phát bộ nhớ (memory grants) và dữ liệu phải đọc từ đĩa thường xuyên hơn thay vì từ buffer cache",
+            "C": "Chỉ số này không liên quan gì đến bộ nhớ",
+            "D": "Đây là dấu hiệu của deadlock, không phải vấn đề bộ nhớ"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C7_Q4",
+          "question": "Để xác định file dữ liệu hoặc log nào đang là điểm nghẽn I/O (I/O bottleneck) trong một instance nhiều database, bạn nên kết hợp những DMV nào?",
+          "options": {
+            "A": "sys.dm_db_file_space_usage kết hợp sys.dm_exec_sessions",
+            "B": "sys.dm_io_virtual_file_stats (thống kê I/O, độ trễ theo từng file) kết hợp sys.master_files hoặc sys.database_files để ánh xạ file_id sang tên file/database cụ thể",
+            "C": "Chỉ cần sys.dm_os_wait_stats là đủ để xác định file cụ thể",
+            "D": "sys.dm_exec_query_stats là đủ để xác định file I/O bottleneck"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C7_Q5",
+          "question": "Khi một truy vấn báo cáo đang chờ trên một page cụ thể (wait_resource dạng PAGE: fileid:pageid), kết hợp công cụ nào để (1) giải mã chuỗi đó và (2) xem thêm thông tin chi tiết về page đó?",
+          "options": {
+            "A": "sys.fn_PageResCracker để giải mã wait_resource; sau đó dùng DBCC PAGE hoặc các DMV liên quan đến page (như sys.dm_db_page_info) để xem chi tiết page",
+            "B": "sys.dm_exec_sessions cho cả hai mục đích",
+            "C": "Không có công cụ nào hỗ trợ việc này trong SQL Server",
+            "D": "sys.databases để giải mã wait_resource"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TH_C7_Q6",
+          "question": "Kết hợp sys.dm_exec_query_stats với sys.dm_exec_sql_text để làm gì trong việc chẩn đoán hiệu suất hệ thống?",
+          "options": {
+            "A": "Chỉ dùng để xem cấu trúc bảng, không liên quan hiệu suất",
+            "B": "sys.dm_exec_query_stats cung cấp số liệu thống kê tích lũy (CPU time, logical reads, execution count...) cho từng câu lệnh đã cache; kết hợp với sys.dm_exec_sql_text để lấy nội dung văn bản của câu lệnh đó, giúp xác định chính xác những truy vấn tốn tài nguyên nhất trong hệ thống",
+            "C": "Hai DMV này chỉ hoạt động khi bật Query Store",
+            "D": "sys.dm_exec_sql_text không thể kết hợp với bất kỳ DMV nào khác"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C7_Q7",
+          "question": "So sánh sys.dm_os_performance_counters (metadata nội bộ SQL Server) với công cụ Performance Monitor (perfmon) của Windows: đâu là điểm khác biệt chính trong cách truy cập dữ liệu hiệu suất?",
+          "options": {
+            "A": "Cả hai hoàn toàn giống nhau, chỉ khác tên gọi",
+            "B": "sys.dm_os_performance_counters cho phép truy vấn các bộ đếm hiệu suất của SQL Server trực tiếp bằng T-SQL (tiện cho việc lưu lịch sử vào bảng, tạo cảnh báo tự động trong SQL Server), trong khi Perfmon là công cụ hệ điều hành, giám sát cả tài nguyên hệ thống (CPU, disk, network) lẫn SQL Server qua giao diện đồ họa/log riêng biệt",
+            "C": "sys.dm_os_performance_counters chỉ hiển thị được qua giao diện đồ họa, không truy vấn được bằng T-SQL",
+            "D": "Perfmon không thể giám sát SQL Server, chỉ giám sát hệ điều hành"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C7_Q8",
+          "question": "sys.dm_tran_locks cung cấp thông tin gì bổ sung cho việc chẩn đoán blocking so với chỉ dùng sys.dm_exec_requests?",
+          "options": {
+            "A": "Không cung cấp thêm thông tin nào khác",
+            "B": "sys.dm_tran_locks liệt kê CHI TIẾT tất cả các khóa (lock) hiện đang được giữ hoặc đang chờ bởi mọi phiên (loại tài nguyên, loại khóa, resource_associated_entity_id...), cho phép phân tích sâu hơn về việc phiên nào đang giữ khóa gì trên tài nguyên nào, bổ sung cho thông tin blocking_session_id ở mức tổng quát của sys.dm_exec_requests",
+            "C": "sys.dm_tran_locks chỉ hoạt động với In-Memory OLTP",
+            "D": "sys.dm_tran_locks đã bị loại bỏ khỏi các phiên bản SQL Server hiện tại"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C7_Q9",
+          "question": "Plan cache (bộ nhớ đệm kế hoạch truy vấn) có thể được kiểm tra qua DMV nào, và việc theo dõi này giúp ích gì cho việc tối ưu hiệu suất tổng thể?",
+          "options": {
+            "A": "Không có DMV nào cho phép xem plan cache",
+            "B": "Có thể dùng sys.dm_exec_cached_plans kết hợp sys.dm_exec_query_plan để xem các execution plan đang được cache, giúp phát hiện các plan không tối ưu, tình trạng 'plan cache bloat' do nhiều ad-hoc query, hoặc parameter sniffing gây ảnh hưởng hiệu suất",
+            "C": "Plan cache chỉ có thể xem được qua Query Store, không có DMV liên quan",
+            "D": "sys.dm_exec_cached_plans chỉ hiển thị plan của stored procedure, không hiển thị ad-hoc query"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C7_Q10",
+          "question": "sys.dm_os_schedulers cung cấp thông tin gì giúp chẩn đoán tình trạng CPU pressure (áp lực CPU) trên SQL Server?",
+          "options": {
+            "A": "Chỉ cho biết số lượng database hiện có",
+            "B": "Cho biết thông tin về các scheduler (ánh xạ với CPU core logic), bao gồm số lượng task đang chờ chạy (runnable_tasks_count) - nếu giá trị này liên tục cao, đó là dấu hiệu của CPU pressure, khi có nhiều task phải xếp hàng chờ CPU xử lý",
+            "C": "sys.dm_os_schedulers chỉ liên quan đến bộ nhớ, không liên quan CPU",
+            "D": "DMV này chỉ hoạt động trên hệ điều hành Linux"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "TH_C8",
+      "topicName": "Tổng hợp - C8: Locking and Blocking",
+      "questions": [
+        {
+          "id": "TH_C8_Q1",
+          "question": "Kết hợp Intent Lock và Lock Escalation: khi SQL Server escalate hàng nghìn row lock thành một table lock (Exclusive), các intent lock ở cấp trung gian (page/table) sẽ thay đổi như thế nào?",
+          "options": {
+            "A": "Không có gì thay đổi ở cấp intent lock",
+            "B": "Các row lock riêng lẻ được giải phóng và thay thế bằng một khóa duy nhất (thường là X) ở cấp bảng; các intent lock trung gian không còn cần thiết vì khóa đã ở cấp cao nhất",
+            "C": "Intent lock sẽ tăng lên gấp đôi so với trước khi escalate",
+            "D": "Lock escalation chỉ ảnh hưởng đến Shared Lock, không ảnh hưởng Exclusive Lock"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C8_Q2",
+          "question": "So sánh chiến lược ngăn deadlock (truy cập đối tượng theo cùng thứ tự, giao dịch ngắn gọn) với chiến lược xử lý sau khi deadlock xảy ra (dùng Extended Events + deadlock graph). Đâu là mối quan hệ đúng giữa hai chiến lược này?",
+          "options": {
+            "A": "Hai chiến lược loại trừ lẫn nhau, chỉ nên chọn một",
+            "B": "Chiến lược phòng ngừa (preventive) giúp giảm tần suất deadlock ngay từ đầu; chiến lược giám sát/phân tích (Extended Events + deadlock graph) giúp phát hiện và hiểu nguyên nhân các deadlock còn sót lại để tiếp tục cải thiện - hai chiến lược bổ sung cho nhau",
+            "C": "Chỉ cần dùng Extended Events là đủ, không cần thay đổi thiết kế ứng dụng",
+            "D": "Deadlock không thể phòng ngừa được bằng bất kỳ cách nào"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C8_Q3",
+          "question": "Tổng hợp bảng so sánh các hiện tượng đọc bất thường (dirty read, nonrepeatable read, phantom read) theo từng isolation level: isolation level nào ngăn được TẤT CẢ ba hiện tượng này mà KHÔNG cần dùng row-versioning?",
+          "options": {
+            "A": "Read Committed",
+            "B": "Repeatable Read",
+            "C": "Serializable (dùng range lock thay vì versioning để ngăn cả phantom read)",
+            "D": "Read Uncommitted"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "TH_C8_Q4",
+          "question": "So sánh Snapshot Isolation với Serializable về cách chúng cùng ngăn được cả 3 hiện tượng đọc bất thường nhưng theo cơ chế khác nhau như thế nào?",
+          "options": {
+            "A": "Cả hai đều dùng lock để ngăn chặn xung đột, không có sự khác biệt",
+            "B": "Serializable dùng khóa (range lock/key-range lock) để chặn các giao dịch khác - đây là cơ chế bi quan (pessimistic); Snapshot Isolation dùng row versioning để mỗi giao dịch đọc một bản snapshot dữ liệu tại thời điểm bắt đầu - đây là cơ chế lạc quan (optimistic), giảm blocking nhưng tốn thêm tempdb",
+            "C": "Snapshot Isolation luôn chậm hơn Serializable trong mọi trường hợp",
+            "D": "Serializable không thể ngăn phantom read"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C8_Q5",
+          "question": "Kết hợp RCSI (Read Committed Snapshot Isolation) với vấn đề blocking khi đọc dữ liệu: bật RCSI thay đổi hành vi mặc định của Read Committed như thế nào để giảm blocking?",
+          "options": {
+            "A": "RCSI vẫn dùng Shared Lock khi đọc như Read Committed mặc định, không thay đổi gì",
+            "B": "RCSI cho phép các giao dịch đọc dữ liệu từ phiên bản đã commit gần nhất (row versioning trong tempdb) thay vì phải chờ Shared Lock, nhờ đó SELECT không bị block bởi giao dịch ghi đang chạy (và ngược lại)",
+            "C": "RCSI chuyển toàn bộ hệ thống sang Read Uncommitted",
+            "D": "RCSI chỉ áp dụng cho các bảng In-Memory OLTP"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C8_Q6",
+          "question": "Sử dụng hint NOLOCK (tương đương Read Uncommitted) trong câu SELECT giúp giảm blocking nhưng đánh đổi với rủi ro gì?",
+          "options": {
+            "A": "Không có rủi ro nào, NOLOCK luôn an toàn để dùng",
+            "B": "NOLOCK cho phép đọc dữ liệu chưa commit (dirty read), có thể trả về dữ liệu không chính xác (dữ liệu sẽ bị rollback sau đó), hoặc thậm chí bỏ sót/đọc trùng dòng dữ liệu khi có page split đang diễn ra đồng thời",
+            "C": "NOLOCK chỉ ảnh hưởng đến tốc độ, không ảnh hưởng đến tính chính xác của dữ liệu",
+            "D": "NOLOCK chỉ dùng được với bảng In-Memory OLTP"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C8_Q7",
+          "question": "Isolation level Serializable dùng Key-Range Lock để ngăn Phantom Read. Cơ chế này hoạt động khác gì so với việc chỉ khóa các dòng dữ liệu đã tồn tại (row lock thông thường)?",
+          "options": {
+            "A": "Key-range lock chỉ khóa đúng những dòng hiện có, giống hệt row lock thông thường",
+            "B": "Key-range lock khóa cả KHOẢNG GIÁ TRỊ giữa các khóa hiện có (không chỉ riêng các dòng đã tồn tại), ngăn các giao dịch khác chèn thêm dòng mới có giá trị nằm trong khoảng đó cho đến khi giao dịch hiện tại kết thúc - đây là điểm khác biệt giúp ngăn được Phantom Read mà row lock thông thường không làm được",
+            "C": "Key-range lock chỉ áp dụng cho Columnstore Index",
+            "D": "Key-range lock không liên quan gì đến Phantom Read"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C8_Q8",
+          "question": "Trong ma trận tương thích khóa (lock compatibility matrix), Update Lock (U) tương thích với những loại khóa nào và không tương thích với loại nào, và ý nghĩa thực tế của việc thiết kế này là gì?",
+          "options": {
+            "A": "Update Lock tương thích với mọi loại khóa khác, kể cả Exclusive Lock",
+            "B": "Update Lock tương thích với Shared Lock (S) nhưng KHÔNG tương thích với Update Lock khác hay Exclusive Lock (X); thiết kế này cho phép một giao dịch giữ U lock trong khi vẫn đọc dữ liệu (không chặn các SELECT khác dùng S lock), nhưng ngăn hai giao dịch cùng lúc chuẩn bị UPDATE trên cùng dòng dữ liệu - đây chính là cách Update Lock giúp tránh deadlock khi chuyển đổi sang Exclusive Lock",
+            "C": "Update Lock không tương thích với bất kỳ loại khóa nào, kể cả chính nó ở mức đọc",
+            "D": "Update Lock chỉ tồn tại trên lý thuyết, không được SQL Server sử dụng thực tế"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C8_Q9",
+          "question": "Khi một giao dịch bị chọn làm 'deadlock victim' và bị rollback tự động bởi SQL Server, phía ứng dụng (application) nên xử lý tình huống này như thế nào để đảm bảo trải nghiệm người dùng?",
+          "options": {
+            "A": "Không cần xử lý gì, để lỗi hiển thị trực tiếp cho người dùng",
+            "B": "Ứng dụng nên bắt lỗi deadlock (error 1205) và triển khai logic retry tự động (thử lại giao dịch sau một khoảng thời gian ngắn), vì bản thân giao dịch bị chọn làm victim không có lỗi logic - nó chỉ đơn giản là 'nạn nhân' được SQL Server chọn để giải quyết deadlock",
+            "C": "Ứng dụng nên tự động chuyển toàn bộ hệ thống sang recovery model SIMPLE khi gặp deadlock",
+            "D": "Deadlock victim không thể retry được, phải khởi động lại toàn bộ ứng dụng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_C8_Q10",
+          "question": "Tính năng 'Blocked Process Report' (kết hợp cấu hình 'blocked process threshold' qua sp_configure) giúp ích gì trong việc giám sát blocking so với việc chỉ chạy sp_who2 hoặc truy vấn DMV theo yêu cầu (on-demand)?",
+          "options": {
+            "A": "Không có sự khác biệt nào, cả hai cách đều cho cùng một loại thông tin",
+            "B": "Blocked Process Report tự động sinh ra sự kiện/cảnh báo (thường qua Extended Events hoặc Trace) mỗi khi một phiên bị block vượt quá ngưỡng thời gian cấu hình, cho phép giám sát blocking LIÊN TỤC theo thời gian thực mà không cần phải chủ động chạy truy vấn kiểm tra thủ công như sp_who2",
+            "C": "sp_who2 cung cấp thông tin chi tiết hơn Blocked Process Report",
+            "D": "Blocked Process Report chỉ hoạt động khi database ở recovery model SIMPLE"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "TH_CROSS",
+      "topicName": "Tổng hợp liên chương",
+      "questions": [
+        {
+          "id": "TH_CROSS_Q1",
+          "question": "Một giao dịch chạy rất lâu (long-running transaction) đang giữ khóa Exclusive trên nhiều dòng dữ liệu. Điều này ảnh hưởng đồng thời đến (1) khả năng truncate transaction log và (2) các giao dịch khác. Hãy giải thích mối liên hệ này (kết hợp C1 + C8)?",
+          "options": {
+            "A": "Không có mối liên hệ nào giữa hai vấn đề này",
+            "B": "Giao dịch chưa commit khiến phần log tương ứng vẫn thuộc 'active log' (C1) nên chưa thể truncate, đồng thời các khóa Exclusive đang giữ (C8) gây blocking cho các giao dịch khác cần truy cập cùng dữ liệu - cả hai vấn đề đều xuất phát từ việc giao dịch chưa hoàn tất (commit/rollback)",
+            "C": "Log chỉ liên quan đến backup, không liên quan gì đến khóa",
+            "D": "Vấn đề chỉ xảy ra nếu dùng recovery model SIMPLE"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_CROSS_Q2",
+          "question": "Kết hợp C3 (Indexes) và C7 (Metadata): làm thế nào để dùng DMV nhằm phát hiện các index không được sử dụng (unused index) hoặc thiếu index (missing index) nhằm tối ưu hiệu suất?",
+          "options": {
+            "A": "Chỉ cần xem sys.indexes là đủ để biết index nào không dùng",
+            "B": "Kết hợp sys.dm_db_index_usage_stats (theo dõi số lần seek/scan/lookup/update để phát hiện index ít dùng) với sys.dm_db_missing_index_details/sys.dm_db_missing_index_group_stats (gợi ý index còn thiếu) để đưa ra quyết định thêm/bớt index phù hợp",
+            "C": "sys.dm_exec_requests là đủ để phát hiện index thiếu",
+            "D": "SQL Server không cung cấp DMV nào cho việc này"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_CROSS_Q3",
+          "question": "Kết hợp C4 (Security) và C6 (Encryption): tại sao một tổ chức có thể vẫn cần triển khai Always Encrypted dù đã kiểm soát chặt chẽ quyền truy cập (permissions) bằng Security Model?",
+          "options": {
+            "A": "Vì Security Model (GRANT/DENY/REVOKE) không đủ để bảo vệ chống lại chính những người có quyền sysadmin/DBA hợp lệ - Always Encrypted đảm bảo dữ liệu vẫn được mã hóa ngay cả với những tài khoản có toàn quyền trên server",
+            "B": "Vì Always Encrypted thay thế hoàn toàn nhu cầu cấp quyền GRANT/DENY",
+            "C": "Vì Security Model chỉ áp dụng cho Windows Authentication, không áp dụng cho SQL Authentication",
+            "D": "Không có mối liên hệ nào giữa hai chương này"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TH_CROSS_Q4",
+          "question": "Kết hợp C2 (Partitioning) và C5 (Backup): với một bảng VLDB đã partition theo tháng nằm trên nhiều filegroup riêng biệt, chiến lược backup/restore nào tận dụng được cấu trúc partition để giảm downtime khi restore từng phần (piecemeal restore)?",
+          "options": {
+            "A": "Luôn phải Full backup/restore toàn bộ database bất kể partition",
+            "B": "Dùng Filegroup backup cho từng filegroup chứa partition, kết hợp Partial restore/piecemeal restore để đưa các filegroup quan trọng (như tháng hiện tại) online trước, các filegroup lịch sử có thể restore sau",
+            "C": "Partitioning không liên quan gì đến chiến lược backup",
+            "D": "Chỉ có thể backup toàn bộ log, không thể backup theo filegroup"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_CROSS_Q5",
+          "question": "Kết hợp C1 (Page/Extent) và C3 (Index): tại sao nói 'leaf level của clustered index chính là các trang dữ liệu (data page) thực tế của bảng', và điều này khác gì so với leaf level của nonclustered index?",
+          "options": {
+            "A": "Cả hai loại index đều có leaf level giống nhau, chứa dữ liệu thực tế",
+            "B": "Vì clustered index sắp xếp vật lý dữ liệu bảng theo khóa chỉ mục nên leaf level = data page chứa toàn bộ các cột; còn leaf level của nonclustered index chỉ chứa giá trị khóa index và con trỏ (RID hoặc clustered key) trỏ đến data page thực tế, không chứa toàn bộ dữ liệu bảng",
+            "C": "Leaf level của clustered index chỉ chứa con trỏ, không chứa dữ liệu",
+            "D": "Nonclustered index luôn có leaf level lớn hơn clustered index vì chứa nhiều dữ liệu hơn"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_CROSS_Q6",
+          "question": "Kết hợp C4 (Security) và C7 (Metadata): hàm/view nào giúp một user tự kiểm tra quyền hiệu lực (effective permissions) của chính mình trên một object cụ thể, hữu ích khi audit bảo mật?",
+          "options": {
+            "A": "sys.dm_exec_requests",
+            "B": "sys.fn_my_permissions, cho phép kiểm tra tập hợp quyền hiệu lực (đã tính cả GRANT/DENY qua role) mà user hiện tại có trên một object hoặc ở một phạm vi (server/database) cụ thể",
+            "C": "sys.dm_os_wait_stats",
+            "D": "sys.master_files"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_CROSS_Q7",
+          "question": "TDE (C6) mã hóa dữ liệu ở cấp page khi ghi/đọc đĩa. Điều này có làm thay đổi hành vi locking/blocking (C8) của các giao dịch truy cập dữ liệu đó không?",
+          "options": {
+            "A": "Có, TDE làm thay đổi hoàn toàn cơ chế lock vì dữ liệu đã mã hóa cần loại khóa đặc biệt",
+            "B": "Không, TDE hoàn toàn trong suốt (transparent) đối với tầng logic của SQL Server bao gồm cả cơ chế khóa (locking); việc mã hóa/giải mã chỉ diễn ra ở tầng I/O vật lý, nên hành vi lock/block của các giao dịch không bị ảnh hưởng bởi việc bật hay tắt TDE",
+            "C": "TDE loại bỏ hoàn toàn nhu cầu dùng khóa vì dữ liệu đã được bảo vệ",
+            "D": "TDE chỉ hoạt động khi tắt hết các cơ chế khóa trong database"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_CROSS_Q8",
+          "question": "Kết hợp C2 (Partitioning) và C3 (Columnstore Index): việc tạo Partitioned Columnstore Index trên một bảng fact lớn trong data warehouse mang lại lợi ích kép nào?",
+          "options": {
+            "A": "Không có lợi ích cộng hưởng nào, hai kỹ thuật hoạt động độc lập",
+            "B": "Partitioning cho phép quản lý dữ liệu theo từng phần (dễ dàng loading/archiving dữ liệu mới/cũ qua SWITCH mà gần như tức thời), trong khi Columnstore Index mang lại khả năng nén cao và tốc độ truy vấn phân tích (aggregate) nhanh nhờ batch mode - kết hợp cả hai cho phép vừa quản lý vòng đời dữ liệu hiệu quả vừa tối ưu hiệu suất truy vấn phân tích trên bảng cực lớn",
+            "C": "Columnstore Index không thể áp dụng được cho bảng đã partition",
+            "D": "Partitioning làm mất khả năng nén của Columnstore Index"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_CROSS_Q9",
+          "question": "Số lượng VLF quá nhiều (C1) ảnh hưởng thế nào đến tốc độ thực hiện log backup và restore log (C5)?",
+          "options": {
+            "A": "Không ảnh hưởng gì vì log backup luôn đọc toàn bộ log với tốc độ như nhau",
+            "B": "Log backup và restore log phải duyệt qua metadata của từng VLF; khi có quá nhiều VLF nhỏ (log fragmentation), quá trình này tốn nhiều thời gian hơn so với khi log có ít VLF kích thước hợp lý, làm chậm cả backup lẫn restore, đặc biệt ảnh hưởng đến RTO trong các kịch bản khôi phục point-in-time nhiều log backup liên tiếp",
+            "C": "VLF chỉ ảnh hưởng đến full backup, không ảnh hưởng đến log backup",
+            "D": "Số lượng VLF luôn cố định, không thể thay đổi được"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TH_CROSS_Q10",
+          "question": "So sánh 'Backup Encryption' (mã hóa ngay trong lệnh BACKUP DATABASE bằng certificate/asymmetric key, dùng thuật toán như AES) với TDE (C5 + C6): hai cơ chế mã hóa này khác nhau ở phạm vi bảo vệ nào?",
+          "options": {
+            "A": "Hai cơ chế hoàn toàn giống nhau, chỉ khác tên gọi",
+            "B": "TDE mã hóa dữ liệu NGAY TRONG database khi lưu trên đĩa (data file, log file) mọi lúc; Backup Encryption chỉ mã hóa RIÊNG file backup được tạo ra bởi lệnh BACKUP - nếu chỉ dùng Backup Encryption mà không bật TDE, file dữ liệu gốc (.mdf) vẫn ở dạng không mã hóa, chỉ có bản backup là được bảo vệ",
+            "C": "Backup Encryption mã hóa toàn bộ database, mạnh hơn TDE",
+            "D": "TDE chỉ áp dụng được cho file backup, không áp dụng được cho data file"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    }
+  ]
+}

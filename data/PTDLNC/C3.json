@@ -1,0 +1,773 @@
+{
+  "chapterId": "C3",
+  "chapterName": "Trực quan hóa Dữ liệu",
+  "topics": [
+    {
+      "topicId": "C3_T1",
+      "topicName": "matplotlib: biểu đồ cơ bản và thành phần phụ trợ",
+      "questions": [
+        {
+          "id": "C3_T1_Q1",
+          "question": "Hàm nào dùng để so sánh các giá trị số lượng giữa các danh mục (categories) khác nhau?",
+          "options": {
+            "A": "<code>plt.pie()</code>",
+            "B": "<code>plt.plot()</code>",
+            "C": "<code>plt.bar()</code>",
+            "D": "<code>plt.scatter()</code>"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T1_Q2",
+          "question": "Hàm nào dùng để khám phá mối quan hệ giữa hai biến số liên tục, nhận diện cụm hoặc ngoại lệ?",
+          "options": {
+            "A": "<code>plt.pie()</code>",
+            "B": "<code>plt.scatter()</code>",
+            "C": "<code>plt.bar()</code>",
+            "D": "<code>plt.hist()</code>"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T1_Q3",
+          "question": "Hàm nào thường dùng để theo dõi xu hướng của dữ liệu theo thời gian (time-series)?",
+          "options": {
+            "A": "<code>plt.bar()</code>",
+            "B": "<code>plt.plot()</code>",
+            "C": "<code>plt.scatter()</code>",
+            "D": "<code>plt.pie()</code>"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T1_Q4",
+          "question": "Hàm nào biểu diễn tỷ trọng phần trăm cấu thành một tổng thể?",
+          "options": {
+            "A": "<code>plt.pie()</code>",
+            "B": "<code>plt.scatter()</code>",
+            "C": "<code>plt.plot()</code>",
+            "D": "<code>plt.bar()</code>"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C3_T1_Q5",
+          "question": "Hàm nào giúp hiển thị nhiều đồ thị trên cùng một khung hình (Figure)?",
+          "options": {
+            "A": "<code>plt.grid(rows, cols)</code>",
+            "B": "<code>plt.figure(rows, cols)</code>",
+            "C": "<code>plt.subplots(rows, cols)</code>",
+            "D": "<code>plt.multiplots(rows, cols)</code>"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T1_Q6",
+          "question": "Hàm nào tự động căn chỉnh khoảng cách, đảm bảo tiêu đề và nhãn không bị chồng chéo?",
+          "options": {
+            "A": "<code>plt.legend()</code>",
+            "B": "<code>plt.grid()</code>",
+            "C": "<code>plt.annotate()</code>",
+            "D": "<code>plt.tight_layout()</code>"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C3_T1_Q7",
+          "question": "Thành phần nào dùng để chèn văn bản hoặc mũi tên giải thích chi tiết một điểm dữ liệu?",
+          "options": {
+            "A": "Figure Size",
+            "B": "Tight layout",
+            "C": "Annotations (<code>plt.annotate()</code>)",
+            "D": "Legends"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T1_Q8",
+          "question": "<code>plt.legend()</code> dùng để làm gì?",
+          "options": {
+            "A": "Tạo hộp chú giải phân biệt các chuỗi dữ liệu trên cùng một đồ thị",
+            "B": "Đặt kích thước khung hình",
+            "C": "Thêm tiêu đề cho đồ thị",
+            "D": "Bật đường lưới"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C3_T1_Q9",
+          "question": "Tham số <code>figsize=(w, h)</code> dùng để làm gì?",
+          "options": {
+            "A": "Đặt số cột của DataFrame",
+            "B": "Đặt số lượng điểm dữ liệu",
+            "C": "Đặt kích thước font chữ",
+            "D": "Định dạng kích thước toàn khung hình"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C3_T1_Q10",
+          "question": "Hàm nào dùng để gắn nhãn trục X và trục Y?",
+          "options": {
+            "A": "<code>plt.title()</code>",
+            "B": "<code>plt.annotate()</code>",
+            "C": "<code>plt.xlabel()</code> và <code>plt.ylabel()</code>",
+            "D": "<code>plt.xticks()</code> và <code>plt.yticks()</code>"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T1_Q11",
+          "question": "Ticks &amp; Grids dùng để làm gì?",
+          "options": {
+            "A": "Định vị rõ các điểm dữ liệu bằng vạch chia và đường lưới để dễ tra cứu",
+            "B": "Chọn màu cho biểu đồ",
+            "C": "Gộp nhiều biểu đồ",
+            "D": "Chèn mũi tên giải thích"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C3_T1_Q12",
+          "question": "Alias chuẩn khi import matplotlib.pyplot là gì?",
+          "options": {
+            "A": "<code>mpl</code>",
+            "B": "<code>mp</code>",
+            "C": "<code>plt</code>",
+            "D": "<code>pyplot</code>"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T1_Q13",
+          "question": "Subplots rất thích hợp cho việc gì?",
+          "options": {
+            "A": "Kết nối cơ sở dữ liệu",
+            "B": "So sánh các khía cạnh dữ liệu để tạo dashboard tĩnh",
+            "C": "Lưu dữ liệu xuống đĩa",
+            "D": "Chạy mô hình dự báo"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T1_Q14",
+          "question": "Mục đích chính của trực quan hóa trong EDA là gì?",
+          "options": {
+            "A": "Chỉ làm đẹp báo cáo",
+            "B": "Thay thế hoàn toàn việc kiểm định thống kê",
+            "C": "Tăng kích thước tập dữ liệu",
+            "D": "Nhận diện nhanh phân phối, xu hướng, mẫu ẩn, ngoại lệ và dữ liệu thiếu"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C3_T2",
+      "topicName": "Trực quan hóa với pandas (df.plot)",
+      "questions": [
+        {
+          "id": "C3_T2_Q1",
+          "question": "<code>df.plot()</code> của pandas thực chất là gì?",
+          "options": {
+            "A": "Hàm của seaborn",
+            "B": "Lớp wrapper bao bọc matplotlib",
+            "C": "Thư viện độc lập không dùng matplotlib",
+            "D": "Hàm của Plotly"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T2_Q2",
+          "question": "Tham số <code>kind</code> trong <code>df.plot()</code> dùng để làm gì?",
+          "options": {
+            "A": "Chọn màu nền",
+            "B": "Chọn loại biểu đồ (line, bar, hist, box, kde, pie, scatter...)",
+            "C": "Chọn tên cột index",
+            "D": "Chọn kích thước biểu đồ"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T2_Q3",
+          "question": "<code>kind='barh'</code> vẽ loại biểu đồ nào?",
+          "options": {
+            "A": "Biểu đồ tròn",
+            "B": "Biểu đồ cột đứng",
+            "C": "Biểu đồ hộp",
+            "D": "Biểu đồ cột ngang"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C3_T2_Q4",
+          "question": "<code>kind='kde'</code> vẽ loại biểu đồ nào?",
+          "options": {
+            "A": "Biểu đồ phân phối mật độ",
+            "B": "Biểu đồ diện tích",
+            "C": "Biểu đồ tròn",
+            "D": "Biểu đồ phân tán"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C3_T2_Q5",
+          "question": "Tham số <code>figsize</code> trong <code>df.plot()</code> nhận giá trị dạng nào?",
+          "options": {
+            "A": "Một số nguyên duy nhất",
+            "B": "Danh sách tên cột",
+            "C": "Chuỗi tên màu",
+            "D": "Tuple (chiều rộng, chiều cao)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C3_T2_Q6",
+          "question": "Tham số <code>grid</code> trong <code>df.plot()</code> nhận kiểu dữ liệu nào?",
+          "options": {
+            "A": "Danh sách cột",
+            "B": "Boolean (True/False) để bật/tắt đường lưới",
+            "C": "Chuỗi tên màu",
+            "D": "Tuple kích thước"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T2_Q7",
+          "question": "Tham số <code>color</code> trong <code>df.plot()</code> có thể nhận gì?",
+          "options": {
+            "A": "Chỉ Boolean",
+            "B": "Chỉ tuple (w, h)",
+            "C": "Một chuỗi (một màu) hoặc danh sách các màu",
+            "D": "Chỉ số nguyên"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T2_Q8",
+          "question": "Tham số <code>style</code> trong <code>df.plot()</code> dùng để làm gì?",
+          "options": {
+            "A": "Đặt tiêu đề",
+            "B": "Đặt số lượng bin",
+            "C": "Chọn loại biểu đồ",
+            "D": "Xác định kiểu đường thẳng và điểm đánh dấu (markers) trong biểu đồ đường"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C3_T2_Q9",
+          "question": "Tham số <code>x</code>, <code>y</code> trong <code>df.plot()</code> dùng để làm gì?",
+          "options": {
+            "A": "Chỉ định kiểu đường",
+            "B": "Chỉ định kích thước biểu đồ",
+            "C": "Chỉ định tên cột cần vẽ",
+            "D": "Chỉ định số hàng/cột subplots"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T2_Q10",
+          "question": "Tham số <code>xticks</code>/<code>yticks</code> xác định điều gì?",
+          "options": {
+            "A": "Tiêu đề biểu đồ",
+            "B": "Màu của đường lưới",
+            "C": "Chuỗi các vạch chia trên trục X/Y",
+            "D": "Nhãn trục"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C3_T3",
+      "topicName": "seaborn: LM, Bar, Histogram, KDE, Box",
+      "questions": [
+        {
+          "id": "C3_T3_Q1",
+          "question": "Chữ \"lm\" trong LM plot viết tắt của gì?",
+          "options": {
+            "A": "Line Marker",
+            "B": "Linear Model (mô hình tuyến tính)",
+            "C": "Layer Matrix",
+            "D": "Log Mean"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T3_Q2",
+          "question": "Ý nghĩa của LM plot (<code>lmplot</code>) là gì?",
+          "options": {
+            "A": "Vẽ phân phối từng biến trên đường chéo",
+            "B": "Vẽ scatter plot và khớp thêm đường hồi quy tuyến tính để thể hiện xu hướng tổng thể",
+            "C": "Vẽ ma trận tương quan",
+            "D": "Đếm tần suất biến phân loại"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T3_Q3",
+          "question": "Yêu cầu dữ liệu cho <code>lmplot</code> là gì?",
+          "options": {
+            "A": "x và y phải là dữ liệu số (ưu tiên liên tục)",
+            "B": "Chỉ cần một cột chuỗi",
+            "C": "Dữ liệu phải là chuỗi thời gian",
+            "D": "x và y phải là biến phân loại"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C3_T3_Q4",
+          "question": "<code>lmplot</code> nhận đầu vào nào?",
+          "options": {
+            "A": "Một danh sách các biểu đồ",
+            "B": "Chỉ một mảng NumPy 1-D",
+            "C": "Chỉ tên file",
+            "D": "Hai tên cột x, y (dạng chuỗi) và một DataFrame"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C3_T3_Q5",
+          "question": "Bar plot trong seaborn thể hiện mối quan hệ giữa các loại biến nào?",
+          "options": {
+            "A": "Hai biến phân loại",
+            "B": "Một biến thời gian duy nhất",
+            "C": "Một biến phân loại và một biến liên tục",
+            "D": "Hai biến liên tục"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T3_Q6",
+          "question": "Mục đích của bar plot là gì?",
+          "options": {
+            "A": "Hiển thị ma trận tương quan",
+            "B": "Ước lượng mật độ xác suất",
+            "C": "Vẽ đường hồi quy",
+            "D": "So sánh giá trị giữa các danh mục, nhận diện danh mục cao nhất/thấp nhất"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C3_T3_Q7",
+          "question": "Histogram plot (<code>histplot</code>) trực quan hóa điều gì?",
+          "options": {
+            "A": "Phân phối của một biến duy nhất (univariate)",
+            "B": "Chuỗi thời gian nhiều biến",
+            "C": "Ma trận tương quan",
+            "D": "Quan hệ giữa hai biến"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C3_T3_Q8",
+          "question": "Theo slide, histogram plot trong seaborn kết hợp những thành phần nào?",
+          "options": {
+            "A": "Heatmap và dendrogram",
+            "B": "Scatter plot và đường hồi quy",
+            "C": "Cột tần suất (bin) và đường cong phân phối mật độ (KDE)",
+            "D": "Box plot và violin plot"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T3_Q9",
+          "question": "KDE plot là gì?",
+          "options": {
+            "A": "Biểu đồ ước lượng mật độ xác suất của biến số liên tục bằng đường cong mượt",
+            "B": "Biểu đồ đếm số lượng của biến phân loại",
+            "C": "Biểu đồ phân tán có đường hồi quy",
+            "D": "Biểu đồ hộp tứ phân vị"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C3_T3_Q10",
+          "question": "KDE là phương pháp ước lượng thuộc loại nào?",
+          "options": {
+            "A": "Phi tham số (non-parametric)",
+            "B": "Tham số (parametric) giả định phân phối chuẩn",
+            "C": "Chỉ cho chuỗi thời gian",
+            "D": "Chỉ cho biến phân loại"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C3_T3_Q11",
+          "question": "KDE plot khác histogram ở điểm nào?",
+          "options": {
+            "A": "Không thể thể hiện phân phối",
+            "B": "Chỉ vẽ được hai biến",
+            "C": "Cho đường cong mượt thay vì các cột rời rạc",
+            "D": "Chỉ vẽ được dữ liệu phân loại"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T3_Q12",
+          "question": "Box plot còn gọi là gì?",
+          "options": {
+            "A": "Biểu đồ Box-whisker",
+            "B": "Biểu đồ nhiệt",
+            "C": "Biểu đồ Gantt",
+            "D": "Biểu đồ cặp"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C3_T3_Q13",
+          "question": "Box plot thể hiện những giá trị nào?",
+          "options": {
+            "A": "Chỉ trung bình và độ lệch chuẩn",
+            "B": "Chỉ hệ số tương quan",
+            "C": "Range, median, tứ phân vị, min–max và các điểm dị biệt (outliers)",
+            "D": "Chỉ số lượng từng danh mục"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T3_Q14",
+          "question": "Box plot thường dùng để làm gì?",
+          "options": {
+            "A": "Quan sát và so sánh mức độ phân tán của một hoặc nhiều biến",
+            "B": "Khớp đường hồi quy",
+            "C": "Biểu diễn tỷ trọng phần trăm",
+            "D": "Đếm số lượng từng danh mục"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "C3_T4",
+      "topicName": "seaborn: Heatmap, Violin, Count, Joint, Pair plot",
+      "questions": [
+        {
+          "id": "C3_T4_Q1",
+          "question": "Hàm <code>corr()</code> thường được dùng cho biểu đồ nào?",
+          "options": {
+            "A": "Violin plot",
+            "B": "Count plot",
+            "C": "Joint plot",
+            "D": "Heatmap"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C3_T4_Q2",
+          "question": "Heatmap thể hiện dữ liệu dưới dạng nào?",
+          "options": {
+            "A": "Lưới hai chiều, mỗi ô đại diện cho một giá trị của ma trận",
+            "B": "Các điểm phân tán",
+            "C": "Đường cong mật độ",
+            "D": "Các cột chồng nhau"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C3_T4_Q3",
+          "question": "Heatmap thường dùng để làm gì?",
+          "options": {
+            "A": "Đếm tần suất biến phân loại",
+            "B": "Trực quan hóa ma trận tương quan giữa các biến",
+            "C": "Biểu diễn lịch trình dự án",
+            "D": "Vẽ đường hồi quy"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T4_Q4",
+          "question": "Tham số nào của <code>heatmap</code> bật hiển thị trực tiếp giá trị số trên từng ô?",
+          "options": {
+            "A": "<code>kind</code>",
+            "B": "<code>hue</code>",
+            "C": "<code>figsize</code>",
+            "D": "<code>annot=True</code>"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C3_T4_Q5",
+          "question": "Violin plot là sự kết hợp trực quan giữa hai biểu đồ nào?",
+          "options": {
+            "A": "Histogram và Count plot",
+            "B": "Box plot và KDE plot",
+            "C": "Scatter plot và Line plot",
+            "D": "Bar plot và Pie plot"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T4_Q6",
+          "question": "Violin plot giúp quan sát điều gì?",
+          "options": {
+            "A": "Mức phân tán, khoảng giá trị và các đỉnh tập trung dữ liệu",
+            "B": "Ma trận tương quan",
+            "C": "Lịch trình dự án",
+            "D": "Số lượng danh mục"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C3_T4_Q7",
+          "question": "Biểu đồ nào được xem như biểu đồ tần suất (histogram) dành riêng cho biến phân loại?",
+          "options": {
+            "A": "Count plot",
+            "B": "Bar plot",
+            "C": "Box plot",
+            "D": "KDE plot"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C3_T4_Q8",
+          "question": "Lợi thế của <code>countplot()</code> so với matplotlib là gì?",
+          "options": {
+            "A": "Vẽ được biểu đồ 3D",
+            "B": "Tự động khớp mô hình hồi quy",
+            "C": "Không cần groupby và đếm thủ công, chỉ cần một dòng mã",
+            "D": "Tự động loại bỏ ngoại lệ"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T4_Q9",
+          "question": "Tham số <code>hue</code> trong <code>countplot()</code> dùng để làm gì?",
+          "options": {
+            "A": "Bật đường lưới",
+            "B": "Phân nhóm để so sánh phân bổ chi tiết giữa các biến con",
+            "C": "Đặt kích thước",
+            "D": "Đặt tên trục"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T4_Q10",
+          "question": "Joint plot (<code>jointplot</code>) thể hiện điều gì?",
+          "options": {
+            "A": "Quan hệ giữa hai biến ở trung tâm và phân phối từng biến ở lề trên và lề phải",
+            "B": "Chỉ tần suất danh mục",
+            "C": "Ma trận tất cả các cặp biến",
+            "D": "Chỉ đường hồi quy"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C3_T4_Q11",
+          "question": "Joint plot thuộc dạng trực quan hóa nào?",
+          "options": {
+            "A": "Biểu đồ tròn",
+            "B": "Biểu đồ 3D",
+            "C": "Biểu đồ đơn một bảng",
+            "D": "Đa bảng (multi-panel) kết hợp nhiều biểu đồ"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C3_T4_Q12",
+          "question": "Pair plot (<code>pairplot</code>) trực quan hóa dữ liệu dưới dạng nào?",
+          "options": {
+            "A": "Một biểu đồ đường",
+            "B": "Một biểu đồ cột duy nhất",
+            "C": "Một biểu đồ tròn",
+            "D": "Ma trận gồm nhiều biểu đồ nhỏ"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C3_T4_Q13",
+          "question": "Với Pair plot, đường chéo (diagonal) hiển thị biểu đồ nào?",
+          "options": {
+            "A": "Scatter plot",
+            "B": "Histogram (phân phối từng đặc trưng)",
+            "C": "Count plot",
+            "D": "Bar LM plot"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T4_Q14",
+          "question": "Với Pair plot, ngoài đường chéo hiển thị biểu đồ nào?",
+          "options": {
+            "A": "Scatter plot (quan hệ theo cặp giữa các đặc trưng)",
+            "B": "Box plot",
+            "C": "Pie chart",
+            "D": "Histogram"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C3_T4_Q15",
+          "question": "Công cụ nào hỗ trợ EDA nhanh để xem đồng thời quan hệ và phân phối của tất cả các biến?",
+          "options": {
+            "A": "Gantt chart",
+            "B": "Pie chart",
+            "C": "Count plot",
+            "D": "Pair plot"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C3_T5",
+      "topicName": "Plotly và Dash",
+      "questions": [
+        {
+          "id": "C3_T5_Q1",
+          "question": "Điểm nổi bật của biểu đồ Plotly là gì?",
+          "options": {
+            "A": "Tính tương tác: thu/phóng, di chuyển, tooltip khi hover",
+            "B": "Không hỗ trợ subplots",
+            "C": "Chỉ tạo ảnh tĩnh",
+            "D": "Chỉ chạy được trên terminal"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C3_T5_Q2",
+          "question": "Biểu đồ Plotly có thể xuất sang những định dạng nào?",
+          "options": {
+            "A": "Chỉ HTML",
+            "B": "Chỉ Parquet",
+            "C": "Chỉ CSV",
+            "D": "HTML, PNG và PDF"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C3_T5_Q3",
+          "question": "WebGL trong Plotly giúp gì?",
+          "options": {
+            "A": "Chạy kiểm định thống kê",
+            "B": "Hiển thị hiệu quả hàng triệu điểm dữ liệu cùng lúc",
+            "C": "Lưu dữ liệu lên cloud",
+            "D": "Tự động làm sạch dữ liệu"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T5_Q4",
+          "question": "Hàm nào tạo biểu đồ Gantt trong Plotly Express?",
+          "options": {
+            "A": "<code>px.bar_gantt()</code>",
+            "B": "<code>px.gantt_plot()</code>",
+            "C": "<code>plotly.express.timeline()</code>",
+            "D": "<code>px.line_time()</code>"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T5_Q5",
+          "question": "Các tham số chính của biểu đồ Gantt trong Plotly gồm gì?",
+          "options": {
+            "A": "<code>hue</code> và <code>annot</code>",
+            "B": "Chỉ <code>x</code> và <code>y</code> dạng số",
+            "C": "<code>kind</code> và <code>figsize</code>",
+            "D": "DataFrame, <code>x_start</code>, <code>x_end</code>, trục y (nhiệm vụ), <code>color</code>, <code>hover_data</code>"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C3_T5_Q6",
+          "question": "Biểu đồ Gantt dùng để làm gì?",
+          "options": {
+            "A": "Biểu diễn ma trận tương quan",
+            "B": "Trực quan hóa nhiệm vụ, lịch trình và phân bổ tài nguyên dọc trục thời gian",
+            "C": "Khớp đường hồi quy",
+            "D": "Đếm tần suất biến phân loại"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T5_Q7",
+          "question": "Biểu đồ Gantt giúp nhận diện điều gì nhanh chóng?",
+          "options": {
+            "A": "Số giá trị thiếu",
+            "B": "Mật độ xác suất",
+            "C": "Hệ số tương quan Pearson",
+            "D": "Xung đột lịch trình, chồng chéo tài nguyên và nút thắt (bottleneck)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C3_T5_Q8",
+          "question": "Thành phần điều khiển nào Plotly hỗ trợ cho biểu đồ tương tác?",
+          "options": {
+            "A": "Chỉ buttons",
+            "B": "Buttons, dropdowns và sliders",
+            "C": "Chỉ command line",
+            "D": "Không có"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T5_Q9",
+          "question": "Dash là gì?",
+          "options": {
+            "A": "Framework mã nguồn mở để tạo ứng dụng web trực quan hóa tương tác, tích hợp Flask, React.js và plotly.js",
+            "B": "Một mô hình chuỗi thời gian",
+            "C": "Một CSDL NoSQL",
+            "D": "Một thư viện làm sạch dữ liệu"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C3_T5_Q10",
+          "question": "Cơ chế callbacks trong Dash làm gì?",
+          "options": {
+            "A": "Mã hóa dữ liệu",
+            "B": "Sao lưu dữ liệu định kỳ",
+            "C": "Tự động cập nhật biểu đồ/bảng khi người dùng thao tác với đầu vào (dropdown, slider)",
+            "D": "Kết nối cơ sở dữ liệu quan hệ"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T5_Q11",
+          "question": "Ứng dụng Dash có thể được triển khai ở đâu?",
+          "options": {
+            "A": "Chỉ trên Jupyter Notebook",
+            "B": "Chỉ trên máy cá nhân",
+            "C": "On-premise hoặc cloud (AWS, Azure, GCP, Heroku)",
+            "D": "Chỉ trên Excel"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T5_Q12",
+          "question": "Dash hỗ trợ xây dựng loại ứng dụng nào?",
+          "options": {
+            "A": "Chỉ một trang cố định",
+            "B": "Chỉ ứng dụng desktop",
+            "C": "Ứng dụng đa trang (multi-page)",
+            "D": "Chỉ ứng dụng di động"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T5_Q13",
+          "question": "Plotly có thể kết hợp với framework nào để thiết kế dashboard?",
+          "options": {
+            "A": "Dash, Streamlit, Flask",
+            "B": "Chỉ Tableau",
+            "C": "Chỉ Excel",
+            "D": "Chỉ SAS"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C3_T5_Q14",
+          "question": "Annotations trong Plotly dùng để làm gì?",
+          "options": {
+            "A": "Mã hóa nhãn",
+            "B": "Đọc dữ liệu từ API",
+            "C": "Chèn chú thích/văn bản để giải thích điểm dữ liệu",
+            "D": "Thay đổi dtype"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    }
+  ]
+}

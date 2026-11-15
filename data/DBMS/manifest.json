@@ -1,0 +1,78 @@
+{
+  "chapters": [
+    {
+      "chapterId": "C1",
+      "chapterName": "Database Configuration",
+      "topicCount": 5,
+      "questionCount": 25
+    },
+    {
+      "chapterId": "C2",
+      "chapterName": "Table Optimizations",
+      "topicCount": 5,
+      "questionCount": 40
+    },
+    {
+      "chapterId": "C3",
+      "chapterName": "Indexes & Statistics",
+      "topicCount": 8,
+      "questionCount": 40
+    },
+    {
+      "chapterId": "C4",
+      "chapterName": "SQL Server Security Model",
+      "topicCount": 1,
+      "questionCount": 44
+    },
+    {
+      "chapterId": "C5",
+      "chapterName": "Backup & Restore",
+      "topicCount": 7,
+      "questionCount": 40
+    },
+    {
+      "chapterId": "C6",
+      "chapterName": "Encryption",
+      "topicCount": 5,
+      "questionCount": 30
+    },
+    {
+      "chapterId": "C7",
+      "chapterName": "SQL Server Metadata",
+      "topicCount": 7,
+      "questionCount": 20
+    },
+    {
+      "chapterId": "C8",
+      "chapterName": "Locking and Blocking",
+      "topicCount": 5,
+      "questionCount": 50
+    },
+    {
+      "chapterId": "C1_C8",
+      "chapterName": "Tổng hợp C1-C8",
+      "topicCount": 43,
+      "questionCount": 289,
+      "dataFile": "C1_C8.json",
+      "progressSources": ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"],
+      "excludeFromSummary": true
+    },
+    {
+      "chapterId": "TO",
+      "chapterName": "Tổng Ôn",
+      "topicCount": 9,
+      "questionCount": 90,
+      "dataFile": "TO.json"
+    },
+    {
+      "chapterId": "TB",
+      "chapterName": "Test Bank DBMS - SQL Server (180 cau)",
+      "topicCount": 13,
+      "questionCount": 180,
+      "dataFile": "Testbank.json"
+    }
+  ],
+  "totalQuestions": 848,
+  "totalTopics": 73,
+  "generatedAt": "2026-07-08T12:42:12.286Z"
+}

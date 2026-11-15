@@ -1,0 +1,765 @@
+{
+  "chapterId": "C4",
+  "chapterName": "Tiền xử lý dữ liệu học thuật",
+  "topics": [
+    {
+      "topicId": "C4_T1",
+      "topicName": "Đa chiều chất lượng dữ liệu",
+      "questions": [
+        {
+          "id": "C4_T1_Q1",
+          "question": "Accuracy (tính chính xác) của dữ liệu là gì?",
+          "options": {
+            "A": "Mức độ dữ liệu mô tả đúng thực thể",
+            "B": "Độ trễ của dữ liệu",
+            "C": "Tỷ lệ dữ liệu không bị khuyết",
+            "D": "Sự đồng bộ về logic giữa các nguồn"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T1_Q2",
+          "question": "Completeness (tính đầy đủ) đo lường điều gì?",
+          "options": {
+            "A": "Tỷ lệ dữ liệu không bị khuyết (Null/Missing)",
+            "B": "Sự đồng bộ định dạng",
+            "C": "Mức độ dữ liệu đúng thực thể",
+            "D": "Độ trễ"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T1_Q3",
+          "question": "Consistency (tính nhất quán) là gì?",
+          "options": {
+            "A": "Dữ liệu chính xác tuyệt đối",
+            "B": "Sự đồng bộ về logic và định dạng giữa các nguồn; tránh xung đột đơn vị",
+            "C": "Dữ liệu không có Null",
+            "D": "Dữ liệu cập nhật kịp thời"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T1_Q4",
+          "question": "Timeliness (tính kịp thời) liên quan đến điều gì?",
+          "options": {
+            "A": "Tỷ lệ Null",
+            "B": "Định dạng ngày",
+            "C": "Độ trễ của dữ liệu; dữ liệu trễ làm mất tính thời sự",
+            "D": "Kiểu dữ liệu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q5",
+          "question": "Cross-field Validation là gì?",
+          "options": {
+            "A": "Áp dụng các quy tắc logic liên thuộc tính",
+            "B": "Xóa cột trùng",
+            "C": "Kiểm tra từng cột riêng lẻ",
+            "D": "Mã hóa cột"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T1_Q6",
+          "question": "Trong ví dụ chấm điểm tín dụng, 'ngày tất toán nợ bị lệch định dạng' vi phạm chiều chất lượng nào?",
+          "options": {
+            "A": "Timeliness",
+            "B": "Completeness",
+            "C": "Consistency",
+            "D": "Accuracy"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C4_T2",
+      "topicName": "Làm sạch dữ liệu: Noise và Outliers",
+      "questions": [
+        {
+          "id": "C4_T2_Q1",
+          "question": "Noise trong dữ liệu là gì?",
+          "options": {
+            "A": "Các sai số ngẫu nhiên làm ẩn tín hiệu thực của dữ liệu",
+            "B": "Dữ liệu bị mã hóa",
+            "C": "Dữ liệu thiếu",
+            "D": "Dữ liệu trùng lặp"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T2_Q2",
+          "question": "Kỹ thuật Binning để làm mượt dữ liệu thực hiện như thế nào?",
+          "options": {
+            "A": "Xóa toàn bộ dữ liệu nhiễu",
+            "B": "Sao chép dữ liệu",
+            "C": "Chia dữ liệu thành các khoảng và thay giá trị bằng trung bình của bin",
+            "D": "Mã hóa dữ liệu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T2_Q3",
+          "question": "Theo phương pháp Z-Score, điểm nào được coi là Outlier tiềm năng?",
+          "options": {
+            "A": "Điểm có Z = 0",
+            "B": "Điểm có |Z| < 1",
+            "C": "Điểm có |Z| > 3",
+            "D": "Điểm có |Z| < 0.5"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T2_Q4",
+          "question": "Theo phương pháp IQR, Outlier nằm ngoài khoảng nào?",
+          "options": {
+            "A": "[Q1, Q3]",
+            "B": "[Q1 − 1.5×IQR, Q3 + 1.5×IQR]",
+            "C": "[Q1 − IQR, Q3 + IQR]",
+            "D": "[0, Q3]"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T2_Q5",
+          "question": "Cho Q1 = 20, Q3 = 60. Giá trị nào dưới đây là Outlier theo quy tắc IQR (1.5×IQR)?",
+          "options": {
+            "A": "130 (vì giới hạn trên = 60 + 1.5×40 = 120)",
+            "B": "-30 (giới hạn dưới = -40)",
+            "C": "100",
+            "D": "110"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T2_Q6",
+          "question": "Trong ví dụ phát hiện gian lận, giao dịch ở nước ngoài gấp 50 lần bình thường (Z-score > 5) được xem là gì?",
+          "options": {
+            "A": "Bản ghi trùng",
+            "B": "Outlier",
+            "C": "Noise nhẹ",
+            "D": "Giá trị Null"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C4_T3",
+      "topicName": "Data Integration: Entity Resolution và Deduplication",
+      "questions": [
+        {
+          "id": "C4_T3_Q1",
+          "question": "Entity Resolution là gì?",
+          "options": {
+            "A": "Xóa thực thể",
+            "B": "Nén thực thể",
+            "C": "Mã hóa thực thể",
+            "D": "Xác định các bản ghi từ nhiều nguồn cùng mô tả một thực thể"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T3_Q2",
+          "question": "Độ đo Jaccard dùng để làm gì?",
+          "options": {
+            "A": "So sánh mức độ trùng lặp giữa hai tập hợp thuộc tính của thực thể",
+            "B": "Đo khoảng cách địa lý",
+            "C": "Đo dung lượng đĩa",
+            "D": "Đo tốc độ mạng"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T3_Q3",
+          "question": "Công thức Jaccard J(A,B) là gì?",
+          "options": {
+            "A": "|A ∪ B| / |A ∩ B|",
+            "B": "|A| − |B|",
+            "C": "|A| + |B|",
+            "D": "|A ∩ B| / |A ∪ B|"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T3_Q4",
+          "question": "Cho A = {Python, SQL, Tableau, Power BI} và B = {Python, SQL, Excel, R}. J(A,B) = ?",
+          "options": {
+            "A": "0.25",
+            "B": "2/3 ≈ 0.67",
+            "C": "0.5",
+            "D": "1/3 ≈ 0.33"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T3_Q5",
+          "question": "Giá trị Jaccard càng gần 1 thì điều gì xảy ra?",
+          "options": {
+            "A": "Hai tập hoàn toàn khác nhau",
+            "B": "Độ tương đồng càng cao",
+            "C": "Không có ý nghĩa",
+            "D": "Độ tương đồng càng thấp"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T3_Q6",
+          "question": "Deduplication nhằm mục đích gì?",
+          "options": {
+            "A": "Loại bỏ bản ghi trùng lặp sau tích hợp để tạo Golden Record duy nhất",
+            "B": "Mã hóa bản ghi",
+            "C": "Chia nhỏ bảng",
+            "D": "Thêm bản ghi trùng"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T3_Q7",
+          "question": "Hai quy tắc ưu tiên khi hai nguồn cho giá trị khác nhau là gì?",
+          "options": {
+            "A": "Source Authority (trọng số tin cậy) hoặc Latest timestamp",
+            "B": "Luôn xóa cả hai",
+            "C": "Chọn ngẫu nhiên",
+            "D": "Giá trị lớn nhất hoặc nhỏ nhất"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T3_Q8",
+          "question": "Thuật toán nào được dùng trong case M&A để xác định tỷ lệ trùng khớp thực thể khi CMND và địa chỉ không đồng nhất?",
+          "options": {
+            "A": "Fuzzy Matching",
+            "B": "Binary Search",
+            "C": "Hash Join",
+            "D": "Quick Sort"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "C4_T4",
+      "topicName": "Transformation: Smoothing và Aggregation",
+      "questions": [
+        {
+          "id": "C4_T4_Q1",
+          "question": "Simple Moving Average (SMA) với cửa sổ k là gì?",
+          "options": {
+            "A": "Giá trị đầu tiên của chuỗi",
+            "B": "Tổng của toàn bộ chuỗi",
+            "C": "Trung bình cộng của k giá trị gần nhất trong chuỗi",
+            "D": "Giá trị lớn nhất trong k phần tử"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T4_Q2",
+          "question": "Giá dầu 6 ngày: 75, 78, 76, 80, 82, 81 (USD), k = 3. SMA Ngày 4 là bao nhiêu?",
+          "options": {
+            "A": "80",
+            "B": "76.3",
+            "C": "78",
+            "D": "79.3"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T4_Q3",
+          "question": "Với dữ liệu giá vàng 80, 86, 82, 84, 88 và k = 3, SMA Ngày 5 bằng bao nhiêu?",
+          "options": {
+            "A": "86.0",
+            "B": "84.0",
+            "C": "82.7",
+            "D": "84.7"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T4_Q4",
+          "question": "Data Cube (OLAP) hỗ trợ các phép toán đa chiều nào?",
+          "options": {
+            "A": "Commit và Rollback",
+            "B": "Backup và Restore",
+            "C": "Roll-up và Drill-down",
+            "D": "Insert và Delete"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T4_Q5",
+          "question": "Đường MA-50 và MA-200 trong ví dụ phân tích kỹ thuật dùng để làm gì?",
+          "options": {
+            "A": "Nén dữ liệu",
+            "B": "Mã hóa dữ liệu",
+            "C": "Làm mượt và xác định điểm Golden Cross",
+            "D": "Phát hiện dữ liệu trùng"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T4_Q6",
+          "question": "Data Aggregation là gì?",
+          "options": {
+            "A": "Mã hóa bản ghi",
+            "B": "Xóa bản ghi trùng",
+            "C": "Kết hợp các bản ghi chi tiết thành bản tóm tắt cấp cao",
+            "D": "Chia nhỏ bản tóm tắt thành chi tiết"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T4_Q7",
+          "question": "Dùng SMA (k = 3) theo dõi giá đóng cửa cổ phiếu X trong 6 ngày: 75, 79, 38, 80, 82, 85 (USD). SMA ngày 4 là bao nhiêu?",
+          "options": {
+            "A": "88 USD",
+            "B": "67 USD",
+            "C": "66 USD (≈ 65.67 = (79 + 38 + 80)/3)",
+            "D": "78 USD"
+          },
+          "correctAnswer": "C",
+          "images": [
+            "assets/img/sma_table.png"
+          ]
+        }
+      ]
+    },
+    {
+      "topicId": "C4_T5",
+      "topicName": "Data Reduction",
+      "questions": [
+        {
+          "id": "C4_T5_Q1",
+          "question": "Phép biến đổi PCA là gì?",
+          "options": {
+            "A": "Phép mã hóa dữ liệu",
+            "B": "Phép biến đổi tuyến tính giúp giữ lại tối đa phương sai của dữ liệu để giảm số chiều",
+            "C": "Phép chia dữ liệu thành bin",
+            "D": "Phép chuẩn hóa về [0,1]"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T5_Q2",
+          "question": "Thành phần chính (Principal Components) trong PCA là gì?",
+          "options": {
+            "A": "Các vector riêng ứng với các trị riêng lớn nhất của Covariance Matrix",
+            "B": "Các cột có nhiều Null nhất",
+            "C": "Các hàng trùng lặp",
+            "D": "Các giá trị trung bình"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T5_Q3",
+          "question": "PCA giúp giải quyết vấn đề nào?",
+          "options": {
+            "A": "Dữ liệu trùng",
+            "B": "Lỗi cú pháp",
+            "C": "Thiếu dữ liệu",
+            "D": "Curse of Dimensionality"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T5_Q4",
+          "question": "Kỹ thuật Numerosity Reduction nào thay thế một nhóm điểm tương đồng bằng điểm Centroid đại diện?",
+          "options": {
+            "A": "Sampling",
+            "B": "Clustering",
+            "C": "Regression",
+            "D": "Histograms"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T5_Q5",
+          "question": "Stratified Sampling dùng để làm gì?",
+          "options": {
+            "A": "Chọn tập con đại diện để khai phá trên Big Data",
+            "B": "Xóa dữ liệu ngoại lai",
+            "C": "Chuẩn hóa dữ liệu",
+            "D": "Nén file"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T5_Q6",
+          "question": "Histograms trong Data Reduction đại diện cho dữ liệu bằng cách nào?",
+          "options": {
+            "A": "Lưu hash của dữ liệu",
+            "B": "Dùng phân phối tần suất thay vì lưu từng giá trị chi tiết",
+            "C": "Xóa dữ liệu",
+            "D": "Lưu từng giá trị gốc"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C4_T6",
+      "topicName": "Discretization và Concept Hierarchy",
+      "questions": [
+        {
+          "id": "C4_T6_Q1",
+          "question": "Phương pháp Discretization (rời rạc hóa) là gì?",
+          "options": {
+            "A": "Xóa thuộc tính liên tục",
+            "B": "Mã hóa thuộc tính",
+            "C": "Chuyển thuộc tính rời rạc thành liên tục",
+            "D": "Chia thuộc tính liên tục thành các khoảng giá trị hoặc nhãn định danh"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T6_Q2",
+          "question": "Công thức độ rộng bin trong Equal-width Binning với N bin là gì?",
+          "options": {
+            "A": "max / N",
+            "B": "(max + min) / N",
+            "C": "N / (max − min)",
+            "D": "(max − min) / N"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T6_Q3",
+          "question": "Ngân hàng X chia khách hàng thành 3 nhóm theo Equal-width Binning, hạn mức thấp nhất 100 triệu, cao nhất 700 triệu. Nhóm thấp nhất có khoảng hạn mức nào?",
+          "options": {
+            "A": "100 – 250 triệu",
+            "B": "100 – 300 triệu",
+            "C": "100 – 200 triệu",
+            "D": "100 – 400 triệu"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T6_Q4",
+          "question": "Với min = 10, max = 70, N = 3 (Equal-width), nhóm 2 có khoảng nào?",
+          "options": {
+            "A": "40 – 60",
+            "B": "30 – 50",
+            "C": "10 – 30",
+            "D": "20 – 40"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T6_Q5",
+          "question": "Phương pháp Equal-frequency Binning có đặc điểm gì?",
+          "options": {
+            "A": "Chỉ dùng cho dữ liệu phân loại",
+            "B": "Bin có kích thước ngẫu nhiên",
+            "C": "Mỗi bin có độ rộng bằng nhau",
+            "D": "Mỗi bin chứa số lượng bản ghi bằng nhau; tốt cho dữ liệu lệch (skewed)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T6_Q6",
+          "question": "Concept Hierarchy là gì?",
+          "options": {
+            "A": "Mã hóa thuộc tính",
+            "B": "Xóa thuộc tính cụ thể",
+            "C": "Tổ chức thuộc tính theo tầng bậc từ cụ thể đến tổng quát",
+            "D": "Sắp xếp thuộc tính theo bảng chữ cái"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T6_Q7",
+          "question": "Multi-level Mining cho phép làm gì?",
+          "options": {
+            "A": "Khai phá các luật kết hợp ở nhiều mức độ trừu tượng khác nhau",
+            "B": "Xóa luật yếu",
+            "C": "Chỉ khai phá một luật",
+            "D": "Chỉ khai phá ở mức chi tiết nhất"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "C4_T7",
+      "topicName": "Normalization: Min-Max, Z-score, Decimal Scaling",
+      "questions": [
+        {
+          "id": "C4_T7_Q1",
+          "question": "Min-Max Normalization ánh xạ dữ liệu về khoảng nào (thường dùng)?",
+          "options": {
+            "A": "[0, 100]",
+            "B": "[0, 1]",
+            "C": "(−∞, +∞)",
+            "D": "[-1, 0]"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T7_Q2",
+          "question": "Một khách hàng có thu nhập thấp nhất 5 triệu, cao nhất 10 triệu. Thu nhập 8 triệu sau Min-Max về [0,1] là?",
+          "options": {
+            "A": "0.6",
+            "B": "0.8",
+            "C": "0.5",
+            "D": "0.3"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T7_Q3",
+          "question": "Min = 10, Max = 110 triệu. Thu nhập 60 triệu sau Min-Max [0,1] là bao nhiêu?",
+          "options": {
+            "A": "0.55",
+            "B": "0.5",
+            "C": "0.6",
+            "D": "0.45"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T7_Q4",
+          "question": "Công thức Min-Max Normalization (về [0,1]) là gì?",
+          "options": {
+            "A": "v' = (v − min) / (max − min)",
+            "B": "v' = (v − μ) / σ",
+            "C": "v' = v × (max − min)",
+            "D": "v' = v / 10^j"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T7_Q5",
+          "question": "Hiểu về Z-Score Normalization: dữ liệu sau chuẩn hóa có đặc điểm nào?",
+          "options": {
+            "A": "Giá trị nằm trong [0,1]",
+            "B": "Giá trị tối đa bằng 1",
+            "C": "Trung bình μ = 0 và độ lệch chuẩn σ = 1",
+            "D": "Không đổi"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T7_Q6",
+          "question": "Công thức Z-Score là gì?",
+          "options": {
+            "A": "z = v × σ",
+            "B": "z = v / 10^j",
+            "C": "z = (v − μ) / σ",
+            "D": "z = (v − min) / (max − min)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T7_Q7",
+          "question": "Ưu điểm của Z-Score Normalization là gì?",
+          "options": {
+            "A": "Luôn ra kết quả trong [0,1]",
+            "B": "Hiệu quả khi có nhiều ngoại lai hoặc không biết trước Min/Max",
+            "C": "Chỉ dùng cho dữ liệu phân loại",
+            "D": "Không cần tính trung bình"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T7_Q8",
+          "question": "Hiểu về Decimal Scaling: phép này làm gì?",
+          "options": {
+            "A": "Trừ trung bình rồi chia độ lệch chuẩn",
+            "B": "Ánh xạ tuyến tính min-max",
+            "C": "Làm tròn về số nguyên",
+            "D": "Di chuyển dấu thập phân dựa trên giá trị tuyệt đối lớn nhất của thuộc tính (v' = v / 10^j)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T7_Q9",
+          "question": "Với Decimal Scaling, nếu giá trị tuyệt đối lớn nhất là 986 thì j bằng bao nhiêu?",
+          "options": {
+            "A": "4",
+            "B": "2",
+            "C": "3",
+            "D": "1"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T7_Q10",
+          "question": "Trong ví dụ dự báo tỷ giá, vì sao dùng Z-Score cho Lãi suất và Dự trữ ngoại hối?",
+          "options": {
+            "A": "Để xóa biến lãi suất",
+            "B": "Để tạo dữ liệu Null",
+            "C": "Để tăng dung lượng dữ liệu",
+            "D": "Đưa cả hai về cùng thang đo thống kê, tránh mô hình bị lệch"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C4_T8",
+      "topicName": "Feature Engineering và Entropy",
+      "questions": [
+        {
+          "id": "C4_T8_Q1",
+          "question": "Feature Construction là gì?",
+          "options": {
+            "A": "Tạo thuộc tính mới từ thuộc tính cũ để làm nổi bật tín hiệu nghiệp vụ (ví dụ BMI, LTV)",
+            "B": "Chuẩn hóa thuộc tính",
+            "C": "Xóa thuộc tính không cần",
+            "D": "Chọn thuộc tính theo Information Gain"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T8_Q2",
+          "question": "Feature Selection dùng độ đo nào để giữ lại thuộc tính phân loại tốt nhất?",
+          "options": {
+            "A": "Moving Average",
+            "B": "Jaccard",
+            "C": "Information Gain",
+            "D": "Z-Score"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T8_Q3",
+          "question": "Cho biết ý nghĩa của công thức Info(D) = −Σ pᵢ·log₂(pᵢ).",
+          "options": {
+            "A": "Entropy của tập D: đo mức độ hỗn loạn (không thuần nhất) của dữ liệu theo m lớp, pᵢ là xác suất lớp i",
+            "B": "Độ lệch chuẩn của D",
+            "C": "Độ tin cậy của luật kết hợp",
+            "D": "Tổng số bản ghi của D"
+          },
+          "correctAnswer": "A",
+          "images": [
+            "assets/img/eq_info.png"
+          ]
+        },
+        {
+          "id": "C4_T8_Q4",
+          "question": "Cho biết ý nghĩa của công thức Info_A(D) = Σ (|Dⱼ|/|D|) × Info(Dⱼ).",
+          "options": {
+            "A": "Entropy của toàn bộ D trước khi chia",
+            "B": "Độ hỗ trợ của luật",
+            "C": "Thông tin kỳ vọng (entropy có trọng số) cần để phân loại D sau khi chia theo thuộc tính A thành v phân vùng",
+            "D": "Khoảng cách giữa hai cụm"
+          },
+          "correctAnswer": "C",
+          "images": [
+            "assets/img/eq_infoA.png"
+          ]
+        },
+        {
+          "id": "C4_T8_Q5",
+          "question": "Trong công thức Info_A(D), |Dⱼ|/|D| thể hiện điều gì?",
+          "options": {
+            "A": "Độ lệch chuẩn",
+            "B": "Tỷ lệ bản ghi nằm trong phân vùng thứ j (trọng số của phân vùng j)",
+            "C": "Số thuộc tính",
+            "D": "Xác suất lớp dương"
+          },
+          "correctAnswer": "B",
+          "images": [
+            "assets/img/eq_infoA.png"
+          ]
+        },
+        {
+          "id": "C4_T8_Q6",
+          "question": "Information Gain của thuộc tính A được tính như thế nào?",
+          "options": {
+            "A": "Gain(A) = Info(D) − Info_A(D)",
+            "B": "Gain(A) = Info(D) × Info_A(D)",
+            "C": "Gain(A) = Info(D) + Info_A(D)",
+            "D": "Gain(A) = Info_A(D) / Info(D)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T8_Q7",
+          "question": "Dataset D có 2 lớp với 6 Good và 4 Bad. Entropy của D xấp xỉ bao nhiêu?",
+          "options": {
+            "A": "≈ 0.6",
+            "B": "≈ 0.5",
+            "C": "= 1",
+            "D": "≈ 0.971"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T8_Q8",
+          "question": "Entropy của tập D có 2 lớp phân bố đều (5 Good, 5 Bad) bằng bao nhiêu?",
+          "options": {
+            "A": "0",
+            "B": "1",
+            "C": "2",
+            "D": "0.5"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T8_Q9",
+          "question": "Entropy của tập D chỉ chứa một lớp duy nhất (thuần nhất) bằng bao nhiêu?",
+          "options": {
+            "A": "0",
+            "B": "0.5",
+            "C": "1",
+            "D": "−1"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T8_Q10",
+          "question": "Embeddings trong trích xuất đặc trưng bằng AI là gì?",
+          "options": {
+            "A": "Mã hóa SHA-256",
+            "B": "Xóa thực thể rời rạc",
+            "C": "Chuyển vector thành văn bản",
+            "D": "Chuyển các thực thể rời rạc thành vector trong không gian đa chiều để tính độ tương đồng"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T8_Q11",
+          "question": "DTI trong ví dụ dự báo nợ xấu là gì?",
+          "options": {
+            "A": "Tỷ lệ dùng hạn mức",
+            "B": "Điểm tín dụng",
+            "C": "Độ trễ giao dịch",
+            "D": "Tỷ lệ Nợ/Thu nhập"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T8_Q12",
+          "question": "Cho công thức Info_A(D) = Σ(j=1→v) (|Dⱼ|/|D|) × Info(Dⱼ). Trong công thức trên, v đại diện cho gì?",
+          "options": {
+            "A": "Các giá trị khác nhau của mỗi Entropy",
+            "B": "Các giá trị khác nhau của mỗi mẫu tin",
+            "C": "Các giá trị khác nhau của mỗi thuộc tính",
+            "D": "Các giá trị khác nhau của mỗi lớp"
+          },
+          "correctAnswer": "C",
+          "images": [
+            "assets/img/eq_infoA.png"
+          ]
+        },
+        {
+          "id": "C4_T8_Q13",
+          "question": "Trong công thức Info(D) = −Σ(i=1→m) pᵢ·log₂(pᵢ), m là gì?",
+          "options": {
+            "A": "Số lượng lớp",
+            "B": "Số lượng giá trị của một thuộc tính",
+            "C": "Số lượng Entropy",
+            "D": "Số lượng thuộc tính"
+          },
+          "correctAnswer": "A",
+          "images": [
+            "assets/img/eq_info.png"
+          ]
+        }
+      ]
+    }
+  ]
+}

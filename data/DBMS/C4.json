@@ -1,0 +1,476 @@
+{
+  "chapterId": "C4",
+  "chapterName": "SQL Server Security Model",
+  "topics": [
+    {
+      "topicId": "C4_T1",
+      "topicName": "General",
+      "questions": [
+        {
+          "id": "C4_T1_Q1",
+          "question": "Server Roles (Câu 1–10)",
+          "options": {},
+          "correctAnswer": null
+        },
+        {
+          "id": "C4_T1_Q2",
+          "question": "Vai trò nào có quyền thực hiện mọi hoạt động trên server?",
+          "options": {
+            "A": "serveradmin",
+            "B": "securityadmin",
+            "C": "db_owner",
+            "D": "sysadmin"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T1_Q3",
+          "question": "Vai trò nào có thể thực hiện lệnh BULK INSERT?",
+          "options": {
+            "A": "db_datawriter",
+            "B": "setupadmin",
+            "C": "diskadmin",
+            "D": "bulkadmin"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T1_Q4",
+          "question": "Vai trò nào có thể sao lưu database?",
+          "options": {
+            "A": "db_backupoperator",
+            "B": "db_owner",
+            "C": "db_datareader",
+            "D": "db_accessadmin"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T1_Q5",
+          "question": "Vai trò nào có thể xóa người dùng khỏi database?",
+          "options": {
+            "A": "db_owner",
+            "B": "db_securityadmin",
+            "C": "db_accessadmin",
+            "D": "db_datareader"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q6",
+          "question": "Vai trò nào có thể thực hiện DML (Data Manipulation Language) trên mọi bảng?",
+          "options": {
+            "A": "db_datareader",
+            "B": "db_ddladmin",
+            "C": "db_datawriter",
+            "D": "db_owner"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q7",
+          "question": "Vai trò nào bị từ chối quyền SELECT trên mọi bảng?",
+          "options": {
+            "A": "db_datareader",
+            "B": "db_owner",
+            "C": "db_securityadmin",
+            "D": "db_denydatareader"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T1_Q8",
+          "question": "Vai trò nào bị từ chối quyền thực hiện DML trên mọi bảng?",
+          "options": {
+            "A": "db_datawriter",
+            "B": "db_owner",
+            "C": "db_securityadmin",
+            "D": "db_denydatawriter"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T1_Q9",
+          "question": "Vai trò nào có thể thực hiện CREATE, ALTER, DROP trong database?",
+          "options": {
+            "A": "db_accessadmin",
+            "B": "db_owner",
+            "C": "db_datareader",
+            "D": "db_ddladmin"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C4_T1_Q10",
+          "question": "Vai trò nào có thể cấp, từ chối và thu hồi quyền trong database?",
+          "options": {
+            "A": "db_securityadmin",
+            "B": "db_owner",
+            "C": "db_datawriter",
+            "D": "db_ddladmin"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T1_Q11",
+          "question": "Vai trò nào không thể thay đổi thành viên?",
+          "options": {
+            "A": "securityadmin",
+            "B": "public",
+            "C": "setupadmin",
+            "D": "db_owner"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T1_Q12",
+          "question": "Logins (Câu 11–20)",
+          "options": {},
+          "correctAnswer": null
+        },
+        {
+          "id": "C4_T1_Q13",
+          "question": "Lệnh nào dùng để từ chối quyền truy cập?",
+          "options": {
+            "A": "ALLOW",
+            "B": "DENY",
+            "C": "GRANT",
+            "D": "REVOKE"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T1_Q14",
+          "question": "Lệnh nào dùng để gỡ bỏ quyền đã cấp hoặc từ chối?",
+          "options": {
+            "A": "GRANT",
+            "B": "DENY",
+            "C": "REVOKE",
+            "D": "REMOVE"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q15",
+          "question": "Khi tạo login, database mặc định (default database) có tác dụng gì?",
+          "options": {
+            "A": "Gán quyền cho người dùng",
+            "B": "Xác định nơi người dùng đăng nhập vào sau khi xác thực",
+            "C": "Tạo user trong database",
+            "D": "Tự động cấp quyền SELECT"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T1_Q16",
+          "question": "Nếu database mặc định bị xóa hoặc không truy cập được, điều gì xảy ra?",
+          "options": {
+            "A": "Người dùng được chuyển sang database khác",
+            "B": "Người dùng không thể đăng nhập vào instance",
+            "C": "Tạo lại database mặc định",
+            "D": "Không ảnh hưởng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T1_Q17",
+          "question": "Lệnh nào dùng để đổi tên tài khoản SA?",
+          "options": {
+            "A": "RENAME LOGIN sa TO ...",
+            "B": "ALTER USER sa RENAME TO ...",
+            "C": "ALTER LOGIN sa WITH NAME = ...",
+            "D": "CHANGE LOGIN sa TO ..."
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q18",
+          "question": "Lệnh nào dùng để thêm login vào một server role?",
+          "options": {
+            "A": "GRANT ROLE",
+            "B": "ALTER SERVER ROLE ... ADD MEMBER",
+            "C": "ADD LOGIN",
+            "D": "CREATE ROLE"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T1_Q19",
+          "question": "Lệnh nào dùng để xóa login khỏi một server role?",
+          "options": {
+            "A": "DROP LOGIN",
+            "B": "REMOVE MEMBER",
+            "C": "ALTER SERVER ROLE ... DROP MEMBER",
+            "D": "DELETE ROLE"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q20",
+          "question": "Khi tạo login bằng Windows Authentication, SQL Server lưu thông tin gì?",
+          "options": {
+            "A": "Username",
+            "B": "Password",
+            "C": "SID của principal",
+            "D": "IP của người dùng"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q21",
+          "question": "Khi tạo login bằng SQL Authentication, thông tin nào được lưu trong database Master?",
+          "options": {
+            "A": "IP người dùng",
+            "B": "Username, password và SID",
+            "C": "Chỉ SID",
+            "D": "Chỉ password"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T1_Q22",
+          "question": "Vai trò nào có thể thêm hoặc xóa các linked servers?",
+          "options": {
+            "A": "db_owner",
+            "B": "setupadmin",
+            "C": "diskadmin",
+            "D": "serveradmin"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T1_Q23",
+          "question": "Database-Level Security (Câu 21–30)",
+          "options": {},
+          "correctAnswer": null
+        },
+        {
+          "id": "C4_T1_Q24",
+          "question": "Lệnh nào dùng để tạo một vai trò database tùy chỉnh (custom database role)?",
+          "options": {
+            "A": "CREATE LOGIN",
+            "B": "CREATE USER",
+            "C": "CREATE ROLE",
+            "D": "CREATE SCHEMA"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q25",
+          "question": "Khi tạo bảng mà không chỉ định schema, bảng đó mặc định sẽ nằm trong schema nào?",
+          "options": {
+            "A": "CH10",
+            "B": "dbo",
+            "C": "sysadmin",
+            "D": "public"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T1_Q26",
+          "question": "Lệnh nào dùng để gán quyền SELECT cho toàn bộ một schema?",
+          "options": {
+            "A": "GRANT SELECT ON TABLE::CH10",
+            "B": "GRANT SELECT ON OBJECT::CH10",
+            "C": "GRANT SELECT ON SCHEMA::CH10",
+            "D": "GRANT SELECT ON DATABASE::CH10"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q27",
+          "question": "Vai trò nào có thể thực hiện lệnh SELECT trên mọi bảng trong database?",
+          "options": {
+            "A": "db_datawriter",
+            "B": "db_owner",
+            "C": "db_datareader",
+            "D": "db_ddladmin"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q28",
+          "question": "Contained database giúp ích gì trong việc quản lý bảo mật?",
+          "options": {
+            "A": "Tăng hiệu suất truy vấn",
+            "B": "Giảm sự phụ thuộc của database vào instance (server)",
+            "C": "Tăng dung lượng lưu trữ",
+            "D": "Tăng số lượng người dùng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T1_Q29",
+          "question": "Lệnh nào dùng để bật chế độ contained database ở cấp instance?",
+          "options": {
+            "A": "ALTER DATABASE",
+            "B": "sp_configure 'contained database authentication",
+            "C": "CREATE USER",
+            "D": "ENABLE DATABASE CONTAINMENT"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T1_Q30",
+          "question": "Lệnh nào dùng để đặt containment level cho một database cụ thể?",
+          "options": {
+            "A": "ALTER LOGIN",
+            "B": "CREATE ROLE",
+            "C": "ALTER DATABASE ... SET CONTAINMENT = PARTIAL",
+            "D": "SET DATABASE CONTAINMENT"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q31",
+          "question": "Để cho phép thực hiện truy vấn giữa các database chứa (contained databases) khác nhau, cần bật thuộc tính nào?",
+          "options": {
+            "A": "CONTAINMENT",
+            "B": "TRUSTWORTHY",
+            "C": "CROSSDB",
+            "D": "LINKEDDB"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T1_Q32",
+          "question": "Lệnh nào dùng để lấy SID của một user trong database hiện tại?",
+          "options": {
+            "A": "SELECT * FROM sys.syslogins",
+            "B": "SELECT sid FROM sys.database_principals WHERE name = 'User'",
+            "C": "EXEC sp_helpuser",
+            "D": "SELECT sid FROM sys.server_principals"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T1_Q33",
+          "question": "Khi chủ động sao chép SID sang database khác, mục đích chính là gì?",
+          "options": {
+            "A": "Tăng tính bảo mật cho dữ liệu",
+            "B": "Cho phép user truy cập nhiều database khác nhau với cùng một danh tính (tránh lỗi cô lập user)",
+            "C": "Tạo ra một login hoàn toàn mới",
+            "D": "Gán quyền sysadmin một cách nhanh chóng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T1_Q34",
+          "question": "Contained Users & Object-Level Security (Câu 31–40)",
+          "options": {},
+          "correctAnswer": null
+        },
+        {
+          "id": "C4_T1_Q35",
+          "question": "Để tạo một contained user sử dụng SQL Authentication, bạn cần bắt buộc chỉ định thông tin gì?",
+          "options": {
+            "A": "SID",
+            "B": "SCHEMA",
+            "C": "PASSWORD",
+            "D": "DATABASE"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q36",
+          "question": "Để tạo một user từ Windows login trong contained database, bạn dùng lệnh nào?",
+          "options": {
+            "A": "CREATE LOGIN",
+            "B": "CREATE USER [domain\\user] WITH DEFAULT_SCHEMA=...",
+            "C": "CREATE ROLE",
+            "D": "GRANT USER"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T1_Q37",
+          "question": "Lệnh nào dùng để tạo một user không liên kết với bất kỳ login nào ở cấp server?",
+          "options": {
+            "A": "CREATE LOGIN",
+            "B": "CREATE ROLE",
+            "C": "CREATE USER ... WITH PASSWORD",
+            "D": "CREATE SCHEMA"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q38",
+          "question": "Lệnh nào dùng để cấp quyền SELECT cho một user trên một bảng cụ thể?",
+          "options": {
+            "A": "GRANT SELECT ON dbo.TableName TO [User]",
+            "B": "GRANT EXECUTE ON dbo.TableName TO [User]",
+            "C": "GRANT ALL ON dbo.TableName TO [User]",
+            "D": "GRANT SELECT ON DATABASE TO [User]"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C4_T1_Q39",
+          "question": "Quyền EXECUTE có thể được gán cho loại đối tượng nào dưới đây?",
+          "options": {
+            "A": "Table (Bảng)",
+            "B": "View (Khung nhìn)",
+            "C": "Stored Procedure (Thủ tục lưu trữ)",
+            "D": "Schema"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q40",
+          "question": "Khi cấp quyền SELECT cho bảng, bạn có thể cấp quyền giới hạn đến mức độ nào?",
+          "options": {
+            "A": "Chỉ áp dụng cho toàn bộ bảng",
+            "B": "Áp dụng cho các cột cụ thể trong bảng",
+            "C": "Chỉ áp dụng cho toàn bộ schema",
+            "D": "Chỉ áp dụng cho toàn bộ database"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T1_Q41",
+          "question": "Có bao nhiêu mức containment (containment levels) trong SQL Server?",
+          "options": {
+            "A": "1",
+            "B": "2 (NONE và PARTIAL)",
+            "C": "3",
+            "D": "4"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C4_T1_Q42",
+          "question": "Khi tạo một contained user, các thông tin xác thực (credentials) của user đó được lưu trữ ở đâu?",
+          "options": {
+            "A": "Master database",
+            "B": "TempDB",
+            "C": "Chính database chứa user đó (Contained database)",
+            "D": "msdb"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q43",
+          "question": "Lệnh nào dùng để tạo trực tiếp một database chứa (contained database)?",
+          "options": {
+            "A": "CREATE DATABASE ... WITH CONTAINMENT",
+            "B": "CREATE DATABASE ... CONTAINED",
+            "C": "CREATE DATABASE ... SET CONTAINMENT = PARTIAL",
+            "D": "CREATE CONTAINED DATABASE"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C4_T1_Q44",
+          "question": "Trong giao diện phần mềm SSMS, để tạo một database role mới, bạn cần truy cập theo đường dẫn nào?",
+          "options": {
+            "A": "Server ➤ Security ➤ Roles",
+            "B": "Database ➤ Security ➤ Roles ➤ New Database Role",
+            "C": "Server ➤ Logins",
+            "D": "Tools ➤ Options ➤ Security"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    }
+  ]
+}

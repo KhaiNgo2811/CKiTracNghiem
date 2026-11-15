@@ -1,0 +1,382 @@
+﻿LOCKING
+Câu 1. SQL Server sử dụng cơ chế nào để kiểm soát quyền truy cập đồng thời vào dữ liệu?
+A. Triggers
+B. Indexes
+C. Locks
+D. Views
+
+
+Câu 2. Loại khóa nào được sử dụng khi một giao dịch đọc dữ liệu?
+A. Exclusive Lock
+B. Shared Lock
+C. Update Lock
+D. Intent Lock
+
+
+Câu 3. Loại khóa nào được sử dụng khi một giao dịch sửa đổi dữ liệu?
+A. Shared Lock
+B. Intent Lock
+C. Exclusive Lock
+D. Schema Lock
+
+
+Câu 4. Khóa Update Lock ngăn chặn điều gì?
+A. Đọc bởi các giao dịch khác
+B. Chèn các hàng mới
+C. Tình trạng Deadlock trong quá trình cập nhật
+D. Phân mảnh chỉ mục (Index fragmentation)
+
+
+Câu 5. Khóa nào được đặt trước khi chuyển đổi sang Khóa Exclusive Lock?
+A. Shared Lock
+B. Update Lock
+C. Intent Lock
+D. Schema Lock
+
+
+Câu 6. Mục đích của Khóa Intent Locks là gì?
+A. Ngăn chặn hiện tượng đọc bóng ma (phantom reads)
+B. Chặn các thay đổi về lược đồ (schema)
+C. Biểu thị ý định khóa các tài nguyên ở cấp thấp hơn
+D. Tối ưu hóa các phép nối (joins)
+
+
+Câu 7. Loại khóa nào được sử dụng trong quá trình sửa đổi lược đồ (schema)?
+A. Shared Lock
+B. Exclusive Lock
+C. Update Lock
+D. Schema Modification Lock (Sch-M)
+
+
+Câu 8. Chế độ khóa nào cho phép nhiều giao dịch đọc cùng một dữ liệu đồng thời?
+A. Exclusive
+B. Update
+C. Shared
+D. Schema
+
+
+Câu 9. Điều gì xảy ra khi một giao dịch giữ một Khóa Exclusive Lock?
+A. Các giao dịch khác có thể đọc
+B. Các giao dịch khác có thể ghi
+C. Các giao dịch khác bị chặn không thể đọc và ghi
+D. Các chỉ mục (indexes) được tạo lại
+
+
+Câu 10. Khóa nào tương thích với Khóa Shared Lock?
+A. Exclusive Lock
+B. Shared Lock
+C. Update Lock
+D. Schema Lock
+
+
+BLOCKING (HÀNH VI CHẶN)
+
+
+Câu 11. Hiện tượng blocking trong SQL Server là gì?
+A. Một dạng của deadlock
+B. Một loại chỉ mục (index)
+C. Sự chậm trễ do một giao dịch đang giữ khóa mà một giao dịch khác cần
+D. Một quá trình sao lưu (backup)
+
+
+Câu 12. Loại khóa nào có khả năng gây ra blocking cao nhất?
+A. Shared Lock
+B. Intent Lock
+C. Exclusive Lock
+D. Schema Lock
+
+
+Câu 13. Hiện tượng Blocking xảy ra khi:
+A. Hai giao dịch cùng đọc một dữ liệu
+B. Một giao dịch được commit
+C. Một giao dịch phải chờ một khóa đang bị giữ bởi một giao dịch khác
+D. Một trigger được kích hoạt
+
+
+Câu 14. Công cụ nào giúp xác định hiện tượng blocking trong SQL Server?
+A. Profiler
+B. SSMS
+C. sys.dm_exec_requests
+D. sp_helptext
+
+
+Câu 15. Mức độ cô lập (isolation level) nào dễ bị blocking nhất?
+A. Read Uncommitted
+B. Snapshot
+C. Serializable
+D. Read Committed Snapshot
+
+
+Câu 16. Triệu chứng phổ biến của hiện tượng blocking là gì?
+A. Truy vấn thực thi nhanh
+B. Phân mảnh chỉ mục (Index fragmentation)
+C. Các truy vấn chạy mất nhiều thời gian (long-running)
+D. Thay đổi lược đồ (schema)
+
+
+Câu 17. Làm thế nào để giảm thiểu hiện tượng blocking?
+A. Sử dụng nhiều chỉ mục (indexes) hơn
+B. Giữ cho các giao dịch ngắn gọn
+C. Vô hiệu hóa các trigger
+D. Tăng bộ nhớ (memory)
+
+
+Câu 18. Lệnh nào hiển thị các phiên (sessions) đang bị blocking hiện tại?
+A. sp_helpdb
+B. sp_who
+C. sp_who2
+D. sp_helptext
+
+
+Câu 19. Kết quả của việc blocking quá mức là gì?
+A. Hiệu suất nhanh hơn
+B. Tạo ra nhiều bản sao lưu hơn
+C. Giảm tính đồng thời và thông lượng (throughput)
+D. Lỗi lược đồ (schema corruption)
+
+
+
+
+
+
+Câu 20. Tính năng nào của SQL Server giúp giảm blocking trong quá trình đọc?
+A. Indexes
+B. Triggers
+C. Read Committed Snapshot Isolation (RCSI)
+D. Stored Procedures
+
+
+DEADLOCKS (BẾ TẮC)
+
+
+Câu 21. Deadlock là gì?
+A. Một lần đăng nhập thất bại
+B. Một chỉ mục (index) bị thiếu
+C. Một vòng lặp các giao dịch chờ đợi các khóa của nhau
+D. Một thay đổi về lược đồ (schema)
+
+
+Câu 22. Công cụ nào phát hiện deadlocks?
+A. sp_helptext
+B. sp_who2
+C. Extended Events
+D. SQL Agent
+
+
+Câu 23. Điều gì xảy ra khi SQL Server phát hiện một deadlock?
+A. Nó sẽ chờ đợi vô thời hạn
+B. Nó sẽ commit tất cả các giao dịch
+C. Nó sẽ hủy (kill) một giao dịch để làm "nạn nhân" (victim)
+D. Nó sẽ khởi động lại cơ sở dữ liệu
+
+
+Câu 24. Trace flag nào bật tính năng ghi nhật ký biểu đồ deadlock (deadlock graph)?
+A. 1118
+B. 1204
+C. 1222
+D. 2528
+
+
+Câu 25. Làm thế nào để giảm thiểu deadlocks?
+A. Sử dụng các trigger
+B. Tăng bộ nhớ (memory)
+C. Truy cập các đối tượng theo cùng một thứ tự
+D. Vô hiệu hóa việc ghi nhật ký (logging)
+
+
+Câu 26. Nạn nhân của deadlock (deadlock victim) là gì?
+A. Giao dịch gây ra deadlock
+B. Giao dịch được chọn để hoàn tác (roll back)
+C. Giao dịch có nhiều khóa nhất
+D. Giao dịch được commit đầu tiên
+
+
+Câu 27. Mức độ cô lập (isolation level) nào làm tăng nguy cơ deadlock?
+A. Read Uncommitted
+B. Snapshot
+C. Serializable
+D. Read Committed Snapshot
+
+
+Câu 28. SQL Server sử dụng công cụ gì để phát hiện deadlocks?
+A. Quét chỉ mục (Index scan)
+B. Leo thang khóa (Lock escalation)
+C. Biểu đồ chờ đợi (Wait-for graph)
+D. Bộ tối ưu hóa truy vấn (Query optimizer)
+
+
+Câu 29. Chiến lược nào sau đây giúp ngăn ngừa deadlock?
+A. Sử dụng nhiều chỉ mục (indexes) hơn
+B. Giữ cho các giao dịch ngắn gọn và có thể dự đoán được
+C. Vô hiệu hóa các trigger
+D. Sử dụng con trỏ (cursors)
+
+
+Câu 30. Cách tốt nhất để phân tích deadlocks là gì?
+A. sp_helptext
+B. SQL Profiler
+C. Extended Events kết hợp với deadlock graph
+D. SSIS
+
+
+LOCK ESCALATION & CONCURRENCY (LEO THANG KHÓA & TÍNH ĐỒNG THỜI)
+
+
+Câu 31. Leo thang khóa (lock escalation) là gì?
+A. Khóa nhiều hàng hơn
+B. Khóa ít hàng hơn
+C. Chuyển đổi nhiều khóa cấp hàng/trang thành một khóa cấp bảng
+D. Giải phóng các khóa sớm hơn
+
+
+Câu 32. Cấp độ khóa nào có tính chi tiết (granular) cao nhất?
+A. Table (Bảng)
+B. Partition (Phân vùng)
+C. Row (Hàng)
+D. Page (Trang)
+
+
+Câu 33. Điều gì kích hoạt việc leo thang khóa?
+A. Thay đổi lược đồ (schema)
+B. Tạo lại chỉ mục (Index rebuild)
+C. Có quá nhiều khóa cấp hàng/trang
+D. Sao lưu (Backup)
+
+
+Câu 34. Mức độ cô lập (isolation level) nào tránh được việc sử dụng khóa trong quá trình đọc?
+A. Serializable
+B. Repeatable Read
+C. Snapshot Isolation
+D. Read Committed
+
+
+Câu 35. Đồng thời lạc quan (optimistic concurrency) là gì?
+A. Sử dụng khóa để ngăn chặn xung đột
+B. Giả định không có xung đột và kiểm tra lúc commit
+C. Chặn người dùng khác
+D. Sử dụng các trigger
+
+
+Câu 36. Đồng thời bi quan (pessimistic concurrency) là gì?
+A. Sử dụng phiên bản hàng (row versioning)
+B. Sử dụng các gợi ý truy vấn (query hints)
+C. Khóa dữ liệu để ngăn chặn xung đột
+D. Sử dụng các bảng tạm (temp tables)
+
+
+Câu 37. Tính năng nào của SQL Server sử dụng phiên bản hàng (row versioning)?
+A. Read Uncommitted
+B. Serializable
+C. Snapshot Isolation
+D. Repeatable Read
+
+
+Câu 38. Mức độ cô lập mặc định trong SQL Server là gì?
+A. Snapshot
+B. Serializable
+C. Read Committed
+D. Repeatable Read
+
+
+Câu 39. Mức độ cô lập nào ngăn chặn hiện tượng đọc dữ liệu rác (dirty reads) nhưng cho phép đọc không lặp lại (nonrepeatable reads)?
+A. Read Uncommitted
+B. Read Committed
+C. Serializable
+D. Snapshot
+
+
+Câu 40. Mức độ cô lập nào ngăn chặn tất cả các hiện tượng bất thường bao gồm cả đọc bóng ma (phantom reads)?
+A. Read Committed
+B. Repeatable Read
+C. Serializable
+D. Read Uncommitted
+
+
+
+
+Bài test lms
+Câu 1: Khi SQL Server khóa một tài nguyên bên trong một bảng, nó sẽ thiết lập một intent lock lên tài nguyên ...
+a. ngay phía phải nó trong cấu trúc phân cấp.
+b. ngay phía trái nó trong cấu trúc phân cấp.
+c. ngay phía trên nó trong cấu trúc phân cấp.
+d. ngay phía dưới nó trong cấu trúc phân cấp.
+
+
+
+
+Câu 2: Snapshot Isolation có chức năng:
+a. Tránh được hoàn toàn Phantom read.
+b. Tránh được hoàn toàn Dirty read, Nonrepeatable read, Phantom read.
+c. Tránh được hoàn toàn Phantom read, Nonrepeatable read
+d. Tránh được hoàn toàn Dirty read, Phantom read.
+
+
+
+
+Câu 3: Dirty Read xảy ra khi nào?
+a. 1 giao dịch đọc dữ liệu chưa được commit của nhiều giao dịch khác
+b. 1 giao dịch đọc dữ liệu chưa được commit của 1 giao dịch khác
+c. 1 giao dịch xóa dữ liệu chưa được commit của một giao dịch khác
+d. 1 giao dịch cập nhật chưa được commit của một giao dịch khác
+
+
+
+
+Câu 4: SQL Server kích hoạt nâng cấp khóa khi:
+a. Số lượng bảng được thiết lập trong cơ sở dữ liệu vượt quá ngưỡng bộ nhớ cho phép.
+b. Số lượng khóa được thiết lập trong instance vượt quá ngưỡng bộ nhớ cho phép.
+c. Số lượng bảng được thiết lập trong instance vượt quá ngưỡng bộ nhớ cho phép.
+d. Số lượng cơ sở dữ liệu được thiết lập trong instance vượt quá ngưỡng bộ nhớ cho phép
+
+
+
+
+Câu 5: HoBT liên quan đến
+a. Cấu trúc dữ liệu dạng Object
+b. Cấu trúc dữ liệu dạng XML
+c. Cấu trúc dữ liệu dạng Tree
+d. Cấu trúc dữ liệu dạng Bảng
+
+
+
+
+Câu 6: Một ví dụ để Lock Granularity thiết lập khóa ở cấp độ mịn thấp nhất có thể:
+a. Row Level
+b. Table Level
+c. Object Level
+d. Query Level
+
+
+
+
+Câu 7: Khóa một RID (định vị dòng) hoặc KEY (khóa) thì tạo một intent lock trên
+a. page chứa dòng đó.
+b. table chứa dòng đó.
+c. extent chứa dòng đó
+d. vùng nhớ chứa dòng đó.
+
+
+
+
+Câu 8: Nonrepeatable Read xảy ra khi nào?
+a. 2 giao dịch đọc cùng một dòng dữ liệu hai lần nhưng nhận được các kết quả khác nhau mỗi lần.
+b. 1 giao dịch đọc cùng một dòng dữ liệu hai lần nhưng nhận được các kết quả khác nhau mỗi lần.
+c. 2 giao dịch đọc một dòng dữ liệu ba lần nhưng nhận được các kết quả khác nhau mỗi lần.
+d. 1 giao dịch cập nhật một dòng dữ liệu ba lần nhưng nhận được các kết quả khác nhau mỗi lần.
+Đáp án: b
+
+
+Câu 9: Cấp độ cô lập nào đảm bảo rằng không có dòng nào được thêm vào trong dải các dòng dữ liệu đang được truy cập ?
+a. Repeatable Read
+b. Snapshot
+c. Serializable
+d. Read Committed
+
+
+
+
+Câu 10: Phantom Read xảy ra khi nào ?
+a. 1 giao dịch đọc một dải các dòng dữ liệu một lần nhưng nhận được số lượng dòng khác nhau ở lần đọc thứ hai.
+b. 1 giao dịch đọc một dải các dòng dữ liệu hai lần nhưng nhận được số lượng dòng khác nhau ở lần đọc thứ hai.
+c. 1 giao dịch đọc cùng một dòng dữ liệu hai lần nhưng nhận được các kết quả khác nhau mỗi lần.
+d. 1 giao dịch đọc dữ liệu chưa được commit của 1 giao dịch khác

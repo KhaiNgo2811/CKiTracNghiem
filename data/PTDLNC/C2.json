@@ -1,0 +1,1170 @@
+{
+  "chapterId": "C2",
+  "chapterName": "Thống kê để hiểu dữ liệu",
+  "topics": [
+    {
+      "topicId": "C2_T1",
+      "topicName": "Thuộc tính dữ liệu và thang đo",
+      "questions": [
+        {
+          "id": "C2_T1_Q1",
+          "question": "Nhiệt độ theo °C thuộc loại thang đo nào?",
+          "options": {
+            "A": "Discrete (rời rạc)",
+            "B": "Interval (thang đo khoảng)",
+            "C": "Ratio (thang đo tỷ lệ)",
+            "D": "Categorical"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T1_Q2",
+          "question": "Thang đo nào có thứ tự, khoảng cách bằng nhau và có 0 tuyệt đối?",
+          "options": {
+            "A": "Ordinal",
+            "B": "Interval (thang đo khoảng)",
+            "C": "Ratio (thang đo tỷ lệ)",
+            "D": "Nominal"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T1_Q3",
+          "question": "Đặc điểm nào đúng với thang đo khoảng (Interval)?",
+          "options": {
+            "A": "Có thứ tự và khoảng cách bằng nhau nhưng không có 0 tuyệt đối",
+            "B": "Có 0 tuyệt đối nên so sánh được tỷ lệ",
+            "C": "Chỉ nhận giá trị đếm được",
+            "D": "Chỉ phân loại, không có thứ tự"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T1_Q4",
+          "question": "Số dư tài khoản và thu nhập thuộc thang đo nào?",
+          "options": {
+            "A": "Interval (thang đo khoảng)",
+            "B": "Ordinal",
+            "C": "Nominal",
+            "D": "Ratio (thang đo tỷ lệ)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T1_Q5",
+          "question": "Năm sinh (hoặc năm giao dịch) thuộc thang đo nào theo slide?",
+          "options": {
+            "A": "Continuous",
+            "B": "Interval (thang đo khoảng)",
+            "C": "Ratio (thang đo tỷ lệ)",
+            "D": "Discrete"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T1_Q6",
+          "question": "Số giao dịch, số khách hàng là loại thuộc tính nào?",
+          "options": {
+            "A": "Continuous (liên tục)",
+            "B": "Discrete (rời rạc)",
+            "C": "Ordinal",
+            "D": "Interval"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T1_Q7",
+          "question": "Thuộc tính Continuous có đặc điểm nào?",
+          "options": {
+            "A": "Chỉ nhận giá trị nguyên đếm được",
+            "B": "Luôn là chuỗi ký tự",
+            "C": "Chỉ nhận giá trị Có/Không",
+            "D": "Nhận mọi giá trị thực trong một khoảng, thường tạo ra từ đo lường"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T1_Q8",
+          "question": "Lãi suất và thời gian xử lý khoản vay thuộc loại thuộc tính nào?",
+          "options": {
+            "A": "Ordinal",
+            "B": "Discrete (rời rạc)",
+            "C": "Continuous (liên tục)",
+            "D": "Nominal"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T1_Q9",
+          "question": "Số hồ sơ bị từ chối thuộc loại thuộc tính nào?",
+          "options": {
+            "A": "Interval",
+            "B": "Discrete (rời rạc)",
+            "C": "Continuous (liên tục)",
+            "D": "Ratio liên tục"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T1_Q10",
+          "question": "Thang đo nào cho phép so sánh được cả chênh lệch lẫn tỷ lệ giữa các giá trị?",
+          "options": {
+            "A": "Ordinal",
+            "B": "Interval (thang đo khoảng)",
+            "C": "Ratio (thang đo tỷ lệ)",
+            "D": "Nominal"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T1_Q11",
+          "question": "Thang điểm hài lòng Likert từ 1 đến 5 được coi là dữ liệu gì theo slide?",
+          "options": {
+            "A": "Tỷ lệ (Ratio)",
+            "B": "Liên tục (Continuous)",
+            "C": "Khoảng (Interval)",
+            "D": "Thứ bậc (Ordinal)"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C2_T2",
+      "topicName": "Mean, Median, Mode và độ phân tán",
+      "questions": [
+        {
+          "id": "C2_T2_Q1",
+          "question": "Mean của 5 giao dịch (triệu đồng) là bao nhiêu?<br><code>import numpy as np; x = np.array([45, 52, 58, 58, 500]); print(x.mean())</code>",
+          "options": {
+            "A": "58.0",
+            "B": "713.0",
+            "C": "52.0",
+            "D": "142.6"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T2_Q2",
+          "question": "Median của 5 giao dịch 45, 52, 58, 58, 500 là bao nhiêu?<br><code>import numpy as np; x = np.array([45, 52, 58, 58, 500]); print(np.median(x))</code>",
+          "options": {
+            "A": "52.0",
+            "B": "58.0",
+            "C": "142.6",
+            "D": "500.0"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T2_Q3",
+          "question": "Với dãy 45, 52, 58, 58, 500 (triệu đồng), Mode là bao nhiêu?",
+          "options": {
+            "A": "500",
+            "B": "45",
+            "C": "142,6",
+            "D": "58"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T2_Q4",
+          "question": "Thước đo nào nhạy cảm nhất với giá trị ngoại lệ?",
+          "options": {
+            "A": "Median (trung vị)",
+            "B": "Mean (trung bình)",
+            "C": "Mode (yếu vị)",
+            "D": "IQR"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T2_Q5",
+          "question": "Thước đo xu hướng trung tâm nào ít bị ảnh hưởng bởi ngoại lệ?",
+          "options": {
+            "A": "Mean (trung bình)",
+            "B": "Median (trung vị)",
+            "C": "Variance",
+            "D": "Range"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T2_Q6",
+          "question": "Phát biểu nào đúng về Mode?",
+          "options": {
+            "A": "Luôn bằng mean",
+            "B": "Luôn bằng median",
+            "C": "Luôn tồn tại duy nhất một mode",
+            "D": "Có thể không có mode hoặc có nhiều mode"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T2_Q7",
+          "question": "Range (khoảng biến thiên) được tính như thế nào?",
+          "options": {
+            "A": "Q3 − Q1",
+            "B": "Mean − Median",
+            "C": "Max − Min",
+            "D": "SD²"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T2_Q8",
+          "question": "IQR (khoảng tứ phân vị) được tính như thế nào?",
+          "options": {
+            "A": "Q3 + Q1",
+            "B": "Median − Q1",
+            "C": "Q3 − Q1",
+            "D": "Max − Min"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T2_Q9",
+          "question": "IQR đo độ rộng của phần dữ liệu nào?",
+          "options": {
+            "A": "50% dữ liệu trung tâm",
+            "B": "25% dữ liệu thấp nhất",
+            "C": "Toàn bộ dữ liệu",
+            "D": "5% dữ liệu cực trị"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T2_Q10",
+          "question": "Số liệu nào ổn định hơn cả khi dữ liệu có ngoại lệ?",
+          "options": {
+            "A": "Phương sai",
+            "B": "Độ lệch chuẩn",
+            "C": "Range",
+            "D": "IQR"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T2_Q11",
+          "question": "Đơn vị của phương sai (variance) là gì?",
+          "options": {
+            "A": "Phần trăm",
+            "B": "Bình phương đơn vị dữ liệu gốc",
+            "C": "Không có đơn vị",
+            "D": "Cùng đơn vị với dữ liệu gốc"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T2_Q12",
+          "question": "Độ lệch chuẩn khác phương sai ở điểm nào?",
+          "options": {
+            "A": "Độ lệch chuẩn không phụ thuộc dữ liệu",
+            "B": "Độ lệch chuẩn trở về cùng đơn vị với dữ liệu gốc",
+            "C": "Độ lệch chuẩn chỉ dùng cho dữ liệu phân loại",
+            "D": "Độ lệch chuẩn luôn lớn hơn phương sai"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T2_Q13",
+          "question": "Median của dãy 3, 7, 1, 9 là bao nhiêu?<br><code>import numpy as np; x = np.array([3, 7, 1, 9]); print(np.median(x))</code>",
+          "options": {
+            "A": "4.0",
+            "B": "7.0",
+            "C": "3.0",
+            "D": "5.0"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T2_Q14",
+          "question": "Mean của dãy 2, 4, 6, 8 là bao nhiêu?<br><code>import numpy as np; x = np.array([2, 4, 6, 8]); print(x.mean())</code>",
+          "options": {
+            "A": "20.0",
+            "B": "6.0",
+            "C": "4.0",
+            "D": "5.0"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T2_Q15",
+          "question": "Cho Q1 = 20 và Q3 = 50. IQR bằng bao nhiêu?",
+          "options": {
+            "A": "15",
+            "B": "30",
+            "C": "35",
+            "D": "70"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T2_Q16",
+          "question": "Cho giá trị nhỏ nhất 12 và lớn nhất 90. Range bằng bao nhiêu?",
+          "options": {
+            "A": "51",
+            "B": "102",
+            "C": "39",
+            "D": "78"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T2_Q17",
+          "question": "Boxplot biểu diễn trực tiếp những giá trị nào?",
+          "options": {
+            "A": "Chỉ Min và Max",
+            "B": "Q1, Median, Q3 cùng các điểm ngoại lệ",
+            "C": "Chỉ Mean và SD",
+            "D": "Chỉ Mode"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C2_T3",
+      "topicName": "Skewness và Kurtosis",
+      "questions": [
+        {
+          "id": "C2_T3_Q1",
+          "question": "Giá trị Skewness = −1,87 cho biết điều gì?",
+          "options": {
+            "A": "Phân phối lệch phải mạnh: đuôi bên phải dài",
+            "B": "Phân phối có đuôi nhẹ hơn chuẩn",
+            "C": "Phân phối đối xứng hoàn hảo",
+            "D": "Phân phối lệch trái mạnh: đuôi bên trái dài/nặng"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T3_Q2",
+          "question": "Skewness = +0,9 cho biết điều gì?",
+          "options": {
+            "A": "Phân phối lệch trái",
+            "B": "Phân phối đều",
+            "C": "Phân phối lệch phải: đuôi bên phải dài/nặng",
+            "D": "Phân phối đối xứng"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T3_Q3",
+          "question": "Skew &lt; 0 được gọi là gì?",
+          "options": {
+            "A": "Lệch trái (đuôi trái dài)",
+            "B": "Lệch phải (đuôi phải dài)",
+            "C": "Đối xứng",
+            "D": "Mesokurtic"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T3_Q4",
+          "question": "Skew &gt; 0 được gọi là gì?",
+          "options": {
+            "A": "Lệch phải (đuôi phải dài)",
+            "B": "Lệch trái (đuôi trái dài)",
+            "C": "Platykurtic",
+            "D": "Đối xứng"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T3_Q5",
+          "question": "Skew ≈ 0 có đồng nghĩa phân phối là chuẩn không?",
+          "options": {
+            "A": "Có, chắc chắn là phân phối chuẩn",
+            "B": "Không, nghĩa là dữ liệu bị lỗi",
+            "C": "Không, chỉ cho thấy hai phía tương đối cân bằng",
+            "D": "Có, đồng nghĩa phân phối đều"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T3_Q6",
+          "question": "Kurtosis đo đặc điểm nào của phân phối?",
+          "options": {
+            "A": "Giá trị trung tâm",
+            "B": "Độ nặng của đuôi (mức xuất hiện giá trị cực trị)",
+            "C": "Độ lệch về một phía",
+            "D": "Độ rộng của IQR"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T3_Q7",
+          "question": "Kurtosis κ &gt; 0 (Leptokurtic) nghĩa là gì?",
+          "options": {
+            "A": "Phân phối lệch trái",
+            "B": "Đuôi nặng hơn chuẩn, cực trị xuất hiện nhiều hơn",
+            "C": "Đuôi giống phân phối chuẩn",
+            "D": "Đuôi nhẹ hơn chuẩn"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T3_Q8",
+          "question": "Kurtosis κ &lt; 0 (Platykurtic) nghĩa là gì?",
+          "options": {
+            "A": "Đuôi giống phân phối chuẩn",
+            "B": "Phân phối lệch phải",
+            "C": "Đuôi nặng hơn chuẩn",
+            "D": "Đuôi nhẹ hơn chuẩn, ít giá trị cực đoan hơn"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T3_Q9",
+          "question": "Kurtosis κ = 0 (K = 3) tương ứng với dạng nào?",
+          "options": {
+            "A": "Mesokurtic (độ nặng đuôi như phân phối chuẩn)",
+            "B": "Lệch trái",
+            "C": "Platykurtic",
+            "D": "Leptokurtic"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T3_Q10",
+          "question": "Lợi suất cổ phiếu/crypto thường có nhiều ngày biến động cực đoan, đặc trưng bởi dạng nào?",
+          "options": {
+            "A": "Mesokurtic",
+            "B": "Phân phối đều",
+            "C": "Platykurtic (đuôi nhẹ)",
+            "D": "Leptokurtic (đuôi nặng)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T3_Q11",
+          "question": "Lợi suất bị chặn biên, ví dụ Uniform(−1%, 1%), thuộc dạng nào?",
+          "options": {
+            "A": "Platykurtic",
+            "B": "Lệch phải mạnh",
+            "C": "Leptokurtic",
+            "D": "Lệch trái mạnh"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T3_Q12",
+          "question": "Nhiều giao dịch nhỏ và vài giao dịch fintech cực lớn thường cho phân phối nào?",
+          "options": {
+            "A": "Lệch trái (skew &lt; 0)",
+            "B": "Đối xứng",
+            "C": "Platykurtic",
+            "D": "Lệch phải (skew &gt; 0)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T3_Q13",
+          "question": "Nhiều phiên lãi nhỏ nhưng đôi lúc có khoản lỗ rất lớn thường cho phân phối nào?",
+          "options": {
+            "A": "Mesokurtic",
+            "B": "Lệch phải (skew &gt; 0)",
+            "C": "Đối xứng",
+            "D": "Lệch trái (skew &lt; 0)"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C2_T4",
+      "topicName": "Quan hệ giữa các biến: Covariance, Pearson, Spearman, Kendall",
+      "questions": [
+        {
+          "id": "C2_T4_Q1",
+          "question": "Độ đo nào dùng để đo mức đồng thuận giữa các cặp thứ hạng?",
+          "options": {
+            "A": "Chi-square",
+            "B": "Pearson r",
+            "C": "Covariance",
+            "D": "Kendall tau"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T4_Q2",
+          "question": "Pearson r đo loại quan hệ nào?",
+          "options": {
+            "A": "Chỉ quan hệ giữa các thứ hạng",
+            "B": "Quan hệ tuyến tính, nhạy với ngoại lệ",
+            "C": "Quan hệ đơn điệu bất kỳ",
+            "D": "Quan hệ nhân quả"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T4_Q3",
+          "question": "Spearman ρ phù hợp với trường hợp nào?",
+          "options": {
+            "A": "Chỉ quan hệ tuyến tính hoàn hảo",
+            "B": "Quan hệ đơn điệu, dữ liệu thứ bậc hoặc bị lệch",
+            "C": "Chỉ dữ liệu có phân phối chuẩn",
+            "D": "Chỉ dữ liệu phân loại danh nghĩa"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T4_Q4",
+          "question": "Kendall tau-b đặc biệt phù hợp khi nào?",
+          "options": {
+            "A": "Mẫu rất lớn và liên tục",
+            "B": "Dữ liệu có phân phối chuẩn đa biến",
+            "C": "Mẫu nhỏ hoặc có nhiều đồng hạng",
+            "D": "Dữ liệu danh nghĩa"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T4_Q5",
+          "question": "Dấu của Covariance cho biết điều gì?",
+          "options": {
+            "A": "Độ mạnh của quan hệ không phụ thuộc đơn vị",
+            "B": "Số lượng ngoại lệ",
+            "C": "Quan hệ nhân quả",
+            "D": "Hướng của quan hệ giữa hai biến"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T4_Q6",
+          "question": "Vì sao khó so sánh độ mạnh quan hệ chỉ bằng Covariance?",
+          "options": {
+            "A": "Độ lớn của Covariance phụ thuộc đơn vị của các biến",
+            "B": "Covariance luôn bằng 0",
+            "C": "Covariance không có dấu",
+            "D": "Covariance chỉ nhận giá trị 0 hoặc 1"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T4_Q7",
+          "question": "Với x = 1…6 và y = x², Spearman ρ bằng bao nhiêu?",
+          "options": {
+            "A": "0,979",
+            "B": "0",
+            "C": "−1",
+            "D": "1,000 (thứ hạng đồng biến hoàn hảo)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T4_Q8",
+          "question": "Với x = 1…6 và y = x², Pearson r khoảng bao nhiêu?",
+          "options": {
+            "A": "1,000",
+            "B": "0",
+            "C": "−0,979",
+            "D": "0,979 (rất mạnh nhưng chưa hoàn toàn tuyến tính)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T4_Q9",
+          "question": "Nguyên tắc nào đúng khi phân tích tương quan?",
+          "options": {
+            "A": "Tương quan luôn bằng hệ số hồi quy",
+            "B": "Tương quan không đồng nghĩa với nhân quả",
+            "C": "Tương quan không cần vẽ biểu đồ",
+            "D": "Tương quan cao chứng minh nhân quả"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T4_Q10",
+          "question": "Nên làm gì trước khi chọn Pearson hay Spearman?",
+          "options": {
+            "A": "Chuyển dữ liệu thành văn bản",
+            "B": "Vẽ scatterplot để quan sát dạng quan hệ",
+            "C": "Chuẩn hóa về thang 0–1",
+            "D": "Xóa toàn bộ ngoại lệ"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T4_Q11",
+          "question": "Trong công thức Kendall tau-b, C là gì?",
+          "options": {
+            "A": "Số cặp đồng hạng chỉ trên X",
+            "B": "Số cặp đồng hạng chỉ trên Y",
+            "C": "Số cặp đồng thuận",
+            "D": "Số cặp nghịch"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T4_Q12",
+          "question": "Trong công thức Kendall tau-b, D là gì?",
+          "options": {
+            "A": "Số cặp đồng thuận",
+            "B": "Tổng số quan sát",
+            "C": "Số cặp đồng hạng chỉ trên X",
+            "D": "Số cặp nghịch"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C2_T5",
+      "topicName": "Lấy mẫu xác suất và phi xác suất",
+      "questions": [
+        {
+          "id": "C2_T5_Q1",
+          "question": "Phương pháp lấy mẫu phi xác suất nào thể hiện tính chất lan truyền?",
+          "options": {
+            "A": "Purposive (chủ đích)",
+            "B": "Snowball (lan truyền)",
+            "C": "Convenience (thuận tiện)",
+            "D": "Quota (hạn ngạch)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T5_Q2",
+          "question": "Snowball sampling phù hợp nhất khi nào?",
+          "options": {
+            "A": "Cần chia tầng đồng nhất",
+            "B": "Cần mỗi đơn vị có xác suất chọn bằng nhau",
+            "C": "Có khung mẫu đầy đủ",
+            "D": "Nhóm đối tượng khó tiếp cận, chưa có danh sách mẫu sẵn"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T5_Q3",
+          "question": "Simple random sampling có đặc điểm nào?",
+          "options": {
+            "A": "Chọn ngẫu nhiên một số cụm tự nhiên",
+            "B": "Chọn theo mỗi phần tử thứ k",
+            "C": "Mỗi đơn vị có cơ hội được chọn như nhau, cần khung mẫu đầy đủ",
+            "D": "Chia thành tầng rồi lấy từ mọi tầng"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T5_Q4",
+          "question": "Stratified sampling (phân tầng) có đặc điểm nào?",
+          "options": {
+            "A": "Người này giới thiệu người kia",
+            "B": "Chỉ chọn một số cụm",
+            "C": "Chia thành các tầng đồng nhất và lấy mẫu từ mọi tầng",
+            "D": "Chọn người dễ tiếp cận nhất"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T5_Q5",
+          "question": "Systematic sampling chọn mẫu bằng cách nào?",
+          "options": {
+            "A": "Chọn tùy ý người dễ tiếp cận",
+            "B": "Chọn chuyên gia theo đánh giá chủ quan",
+            "C": "Chọn điểm đầu ngẫu nhiên, sau đó cứ mỗi phần tử thứ k",
+            "D": "Tuyển đủ hạn ngạch theo nhóm"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T5_Q6",
+          "question": "Cluster sampling chọn mẫu bằng cách nào?",
+          "options": {
+            "A": "Người tham gia giới thiệu nhau",
+            "B": "Chọn ngẫu nhiên một số cụm tự nhiên, rồi điều tra toàn bộ hoặc lấy mẫu trong cụm",
+            "C": "Lấy từ mọi tầng",
+            "D": "Chọn theo hạn ngạch"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T5_Q7",
+          "question": "Địa bàn phân tán thường phù hợp với phương pháp nào?",
+          "options": {
+            "A": "Snowball",
+            "B": "Convenience",
+            "C": "Stratified",
+            "D": "Cluster (theo cụm)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T5_Q8",
+          "question": "Danh sách rất dài, cần chọn nhanh, thường dùng phương pháp nào?",
+          "options": {
+            "A": "Quota",
+            "B": "Systematic (hệ thống)",
+            "C": "Purposive",
+            "D": "Snowball"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T5_Q9",
+          "question": "Khi có mọi nhóm cần đại diện và cần đảm bảo nhóm nhỏ có mặt, nên dùng phương pháp nào?",
+          "options": {
+            "A": "Stratified (phân tầng)",
+            "B": "Cluster",
+            "C": "Simple random",
+            "D": "Convenience"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T5_Q10",
+          "question": "Vì sao nên dùng lấy mẫu phân tầng khi kiểm toán giao dịch VIP rất hiếm nhưng rủi ro lớn?",
+          "options": {
+            "A": "Vì phân tầng nhanh hơn mọi phương pháp",
+            "B": "Để bảo đảm chọn đủ giao dịch ở cả tầng Phổ thông và tầng VIP",
+            "C": "Vì phân tầng không cần khung mẫu",
+            "D": "Vì phân tầng loại bỏ hoàn toàn sai số"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T5_Q11",
+          "question": "Phương pháp nào có nguy cơ thiên lệch lựa chọn (selection bias) rất cao vì chọn đối tượng dễ tiếp cận nhất?",
+          "options": {
+            "A": "Convenience (thuận tiện)",
+            "B": "Stratified",
+            "C": "Simple random",
+            "D": "Systematic"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T5_Q12",
+          "question": "Purposive sampling dựa vào điều gì?",
+          "options": {
+            "A": "Lấy mỗi phần tử thứ k",
+            "B": "Xác suất chọn bằng nhau",
+            "C": "Đánh giá chủ quan của chuyên gia để chọn mẫu tiêu biểu",
+            "D": "Việc người khác giới thiệu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T5_Q13",
+          "question": "Quota sampling có đặc điểm nào?",
+          "options": {
+            "A": "Đặt tỷ lệ theo nhóm và tuyển đến khi đủ hạn ngạch; trong nhóm không bắt buộc ngẫu nhiên",
+            "B": "Chọn điểm đầu ngẫu nhiên rồi nhảy bước k",
+            "C": "Chia cụm tự nhiên",
+            "D": "Mọi đơn vị có xác suất chọn bằng nhau"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T5_Q14",
+          "question": "Đặc trưng chung của lấy mẫu phi xác suất là gì?",
+          "options": {
+            "A": "Luôn cho sai số bằng 0",
+            "B": "Luôn cần khung mẫu đầy đủ",
+            "C": "Mọi phần tử có xác suất chọn biết trước",
+            "D": "Không biết xác suất được chọn, hạn chế suy rộng cho tổng thể"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T5_Q15",
+          "question": "Phỏng vấn các chuyên gia AML, tín dụng và quản trị rủi ro là ví dụ của phương pháp nào?",
+          "options": {
+            "A": "Snowball",
+            "B": "Convenience",
+            "C": "Purposive (chủ đích)",
+            "D": "Systematic"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C2_T6",
+      "topicName": "Kiểm định tham số và phi tham số",
+      "questions": [
+        {
+          "id": "C2_T6_Q1",
+          "question": "So sánh thời gian xử lý trung bình của một mẫu với giá trị chuẩn 24 giờ nên dùng kiểm định nào?",
+          "options": {
+            "A": "Independent two-sample t-test",
+            "B": "Chi-square",
+            "C": "Paired t-test",
+            "D": "One-sample t-test"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T6_Q2",
+          "question": "So sánh thời gian giao dịch giữa hai nhóm độc lập (mobile và tại quầy) nên dùng kiểm định nào?",
+          "options": {
+            "A": "One-sample t-test",
+            "B": "Paired t-test",
+            "C": "Independent two-sample t-test",
+            "D": "Kruskal-Wallis"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T6_Q3",
+          "question": "So sánh điểm hiểu biết tài chính trước và sau tư vấn trên cùng một nhóm nên dùng kiểm định nào?",
+          "options": {
+            "A": "One-way ANOVA",
+            "B": "Independent t-test",
+            "C": "Mann-Whitney U",
+            "D": "Paired t-test"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T6_Q4",
+          "question": "So sánh thời gian duyệt hồ sơ giữa ba miền Bắc – Trung – Nam (dữ liệu định lượng, chuẩn) nên dùng kiểm định nào?",
+          "options": {
+            "A": "Independent t-test",
+            "B": "Paired t-test",
+            "C": "One-way ANOVA",
+            "D": "Chi-square"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T6_Q5",
+          "question": "Đánh giá ảnh hưởng của hai yếu tố (kênh × phân khúc) cùng tương tác lên thời gian xử lý nên dùng gì?",
+          "options": {
+            "A": "Chi-square",
+            "B": "Two-way ANOVA",
+            "C": "Paired t-test",
+            "D": "One-way ANOVA"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T6_Q6",
+          "question": "Kiểm định độc lập giữa hai biến phân loại (giới tính và quyết định mua hàng) là kiểm định nào?",
+          "options": {
+            "A": "Chi-square (χ²)",
+            "B": "Independent t-test",
+            "C": "ANOVA",
+            "D": "Wilcoxon signed-rank"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T6_Q7",
+          "question": "Giả thuyết H₀ của one-way ANOVA là gì?",
+          "options": {
+            "A": "μ₁ = μ₂ = … = μₖ (trung bình các nhóm bằng nhau)",
+            "B": "μ = μ₀",
+            "C": "μ₁ ≠ μ₂ ≠ … ≠ μₖ",
+            "D": "μ_d = 0"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T6_Q8",
+          "question": "Giả thuyết H₀ của paired t-test là gì?",
+          "options": {
+            "A": "μ = μ₀",
+            "B": "μ_d = 0 (trung bình chênh lệch bằng 0)",
+            "C": "μ₁ = μ₂ = μ₃",
+            "D": "μ₁ − μ₂ ≠ 0"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T6_Q9",
+          "question": "Giả thuyết H₀ của independent two-sample t-test là gì?",
+          "options": {
+            "A": "Hai biến độc lập nhau",
+            "B": "μ₁ − μ₂ = 0",
+            "C": "μ_d = 0",
+            "D": "μ₁ = μ₂ = … = μₖ"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T6_Q10",
+          "question": "Giả thuyết H₀ của one-sample t-test là gì?",
+          "options": {
+            "A": "μ = μ₀",
+            "B": "μ₁ = μ₂",
+            "C": "Phân phối là chuẩn",
+            "D": "μ_d = 0"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T6_Q11",
+          "question": "Kiểm định phi tham số nào thay thế Independent t-test?",
+          "options": {
+            "A": "Mann-Whitney U",
+            "B": "Chi-square",
+            "C": "Wilcoxon signed-rank",
+            "D": "Kruskal-Wallis H"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T6_Q12",
+          "question": "Kiểm định phi tham số nào thay thế Paired t-test?",
+          "options": {
+            "A": "Kruskal-Wallis H",
+            "B": "Chi-square",
+            "C": "Mann-Whitney U",
+            "D": "Wilcoxon signed-rank"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T6_Q13",
+          "question": "Kiểm định phi tham số nào thay thế One-way ANOVA?",
+          "options": {
+            "A": "Chi-square",
+            "B": "Wilcoxon signed-rank",
+            "C": "Mann-Whitney U",
+            "D": "Kruskal-Wallis H"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T6_Q14",
+          "question": "Khi nào nên chọn kiểm định phi tham số?",
+          "options": {
+            "A": "Chỉ khi dữ liệu là chuỗi thời gian",
+            "B": "Dữ liệu lệch nặng, không chuẩn hoặc là biến thứ bậc (Ordinal)",
+            "C": "Chỉ khi có đúng hai nhóm",
+            "D": "Chỉ khi mẫu cực lớn và chuẩn"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T6_Q15",
+          "question": "So sánh mức hài lòng thang 1–5 giữa 3 chi nhánh. Cách xử lý chuẩn là gì?",
+          "options": {
+            "A": "Dùng Kruskal-Wallis H vì dữ liệu thứ bậc",
+            "B": "Dùng paired t-test",
+            "C": "Dùng Mean và ANOVA vì có 3 nhóm",
+            "D": "Dùng one-sample t-test"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T6_Q16",
+          "question": "Lỗi nghiêm trọng khi phân tích điểm hài lòng thang Likert 1–5 là gì?",
+          "options": {
+            "A": "Dùng boxplot để mô tả",
+            "B": "Dùng Kruskal-Wallis",
+            "C": "Dùng thứ hạng thay vì giá trị",
+            "D": "Dùng Mean và ANOVA vì chúng yêu cầu dữ liệu liên tục"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T6_Q17",
+          "question": "Mann-Whitney U so sánh điều gì?",
+          "options": {
+            "A": "Tần suất của hai biến phân loại",
+            "B": "Phương sai của một mẫu",
+            "C": "Phân phối của hai nhóm độc lập dựa trên thứ hạng",
+            "D": "Trung bình của hai mẫu bắt cặp"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T6_Q18",
+          "question": "ANOVA n yếu tố (n ≥ 3) dùng khi nào?",
+          "options": {
+            "A": "Chỉ có biến phân loại",
+            "B": "Chỉ so sánh với giá trị chuẩn",
+            "C": "Chỉ có một yếu tố",
+            "D": "Có từ ba yếu tố phân loại trở lên và cần xét cả tương tác"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C2_T7",
+      "topicName": "A/B testing và Định lý Bayes",
+      "questions": [
+        {
+          "id": "C2_T7_Q1",
+          "question": "A/B testing về bản chất là gì?",
+          "options": {
+            "A": "Một phương pháp lấy mẫu phi xác suất",
+            "B": "Thử nghiệm phân tách ngẫu nhiên trên hệ thống thực (Randomized Controlled Trial)",
+            "C": "Một thuật toán phân cụm",
+            "D": "Một kỹ thuật làm sạch dữ liệu thiếu"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T7_Q2",
+          "question": "Trong A/B testing, nhóm Control (A) là nhóm nào?",
+          "options": {
+            "A": "Nhóm chuyên gia",
+            "B": "Nhóm bị loại khỏi thử nghiệm",
+            "C": "Nhóm đối chứng giữ nguyên tính năng cũ (baseline)",
+            "D": "Nhóm thử nghiệm tính năng mới"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T7_Q3",
+          "question": "Trong A/B testing, nhóm Variation (B) là nhóm nào?",
+          "options": {
+            "A": "Nhóm ngoại lệ",
+            "B": "Nhóm dữ liệu thiếu",
+            "C": "Nhóm đối chứng giữ nguyên cũ",
+            "D": "Nhóm thử nghiệm giao diện/tính năng mới"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T7_Q4",
+          "question": "H₀ trong A/B testing nói gì?",
+          "options": {
+            "A": "Nhóm A tốt hơn B có chủ đích",
+            "B": "Dữ liệu có phân phối chuẩn",
+            "C": "Nhóm B chắc chắn tăng trưởng",
+            "D": "Nhóm B không tạo ra khác biệt, mọi biến động chỉ là dao động ngẫu nhiên"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T7_Q5",
+          "question": "Kiểm định nào thường dùng cho KPI dạng tỷ lệ (ví dụ conversion rate) trong A/B testing?",
+          "options": {
+            "A": "ADF",
+            "B": "Z-test hoặc Chi-square",
+            "C": "Kruskal-Wallis",
+            "D": "Chỉ t-test một mẫu"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T7_Q6",
+          "question": "Kiểm định nào thường dùng cho KPI dạng doanh thu trong A/B testing?",
+          "options": {
+            "A": "Ljung-Box",
+            "B": "Chi-square cho tỷ lệ",
+            "C": "t-test",
+            "D": "Pearson"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T7_Q7",
+          "question": "Nút đỏ có tỷ lệ chuyển đổi 5,5% so với nút xanh 4% trên mẫu đủ lớn. Kết luận phù hợp là gì?",
+          "options": {
+            "A": "Bác bỏ H₀: mức tăng không chỉ là ngẫu nhiên",
+            "B": "Không thể kết luận gì với mọi cỡ mẫu",
+            "C": "Nút xanh tốt hơn",
+            "D": "Chấp nhận H₀"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T7_Q8",
+          "question": "Định lý Bayes nói gì?",
+          "options": {
+            "A": "P(A|B) = P(A) / P(B|A)",
+            "B": "P(A|B) = P(A) × P(B)",
+            "C": "P(A|B) = P(B|A) + P(A)",
+            "D": "P(A|B) = P(B|A) × P(A) / P(B)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T7_Q9",
+          "question": "Trong công thức Bayes, P(A) được gọi là gì?",
+          "options": {
+            "A": "Prior (tiên nghiệm)",
+            "B": "Likelihood",
+            "C": "Evidence",
+            "D": "Posterior"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T7_Q10",
+          "question": "Trong công thức Bayes, P(B|A) được gọi là gì?",
+          "options": {
+            "A": "Posterior",
+            "B": "Likelihood (khả năng)",
+            "C": "Prior",
+            "D": "Evidence"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C2_T7_Q11",
+          "question": "Trong công thức Bayes, P(B) được gọi là gì?",
+          "options": {
+            "A": "Evidence (tổng xác suất của bằng chứng)",
+            "B": "Likelihood",
+            "C": "Prior",
+            "D": "Posterior"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T7_Q12",
+          "question": "Trong công thức Bayes, P(A|B) được gọi là gì?",
+          "options": {
+            "A": "Prior",
+            "B": "Likelihood",
+            "C": "Evidence",
+            "D": "Posterior (hậu nghiệm)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T7_Q13",
+          "question": "Định lý Bayes cung cấp nền tảng toán học cho việc gì?",
+          "options": {
+            "A": "Cập nhật độ tin cậy về A khi có thêm bằng chứng B",
+            "B": "Chia dữ liệu thành tập train/test",
+            "C": "Làm sạch giá trị ngoại lai",
+            "D": "Giảm chiều dữ liệu"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C2_T7_Q14",
+          "question": "Cho P(A) = 0,2; P(B|A) = 0,9; P(B) = 0,3. Khi đó P(A|B) bằng bao nhiêu?",
+          "options": {
+            "A": "0,27",
+            "B": "0,54",
+            "C": "0,6",
+            "D": "0,06"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C2_T7_Q15",
+          "question": "Cho P(Spam) = 0,4; P(\"Miễn phí\"|Spam) = 0,5; P(\"Miễn phí\") = 0,25. P(Spam|\"Miễn phí\") bằng bao nhiêu?",
+          "options": {
+            "A": "0,125",
+            "B": "0,2",
+            "C": "0,5",
+            "D": "0,8"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C2_T7_Q16",
+          "question": "Trong ứng dụng Naive Bayes lọc thư rác, P(Spam) là gì?",
+          "options": {
+            "A": "Likelihood của từ \"Miễn phí\"",
+            "B": "Evidence",
+            "C": "Prior: xác suất một email chung là spam",
+            "D": "Posterior"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    }
+  ]
+}

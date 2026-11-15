@@ -1,0 +1,208 @@
+﻿Phần 1: Tổng quan về Indexes và Statistics (Câu 1–5)
+1. Loại index nào lưu dữ liệu theo thứ tự của khóa chỉ mục?
+A. Nonclustered index        
+B. Heap
+C. Clustered index 
+D. Hash index
+2. Bảng không có clustered index được gọi là gì?
+A. Tree
+B. Segment
+C. Heap 
+D. Deltastore
+3. SQL Server sử dụng statistics để làm gì?
+A. Tăng tốc độ ghi dữ liệu
+B. Tạo bảng mới
+C. Tối ưu kế hoạch truy vấn 
+D. Xóa dữ liệu
+4. Columnstore index lưu dữ liệu theo:
+A. Hàng
+B. Cột 
+C. Segment
+D. Page
+5. In-Memory OLTP sử dụng loại index nào?
+A. XML index
+B. Clustered index
+C. In-memory index 
+D. Filtered index
+Phần 2: Clustered Index và Heap (Câu 6–10)
+   6. RID có định dạng như thế nào?
+A. PageID:SlotNumber
+B. FileID:PageID:SlotNumber 
+C. TableID:RowID
+D. SegmentID:PageID
+   7. Khi bảng có nonclustered index nhưng không có clustered index, nó vẫn là:
+A. Tree
+B. Segment
+C. Heap 
+D. Deltastore
+   8. Cấp cao nhất của B-tree gọi là gì?
+A. Leaf level
+B. Intermediate node
+C. Root node 
+D. Top index
+   9. Cấp thấp nhất của clustered index chứa gì?
+A. Con trỏ
+B. Metadata
+C. Trang dữ liệu thực tế 
+D. RID
+   10. SQL Server có thể kết hợp seek và scan để thực hiện:
+A. Full scan
+B. Key lookup
+C. Range scan 
+D. Hash join
+Phần 3: Clustering Primary Key và GUID (Câu 11–15)
+      11. Tạo primary key mặc định sẽ tạo loại index nào?
+A. Nonclustered
+B. Clustered 
+C. Hash
+D. Filtered
+      12. GUID có kích thước bao nhiêu byte?
+A. 8
+B. 16 
+C. 32
+D. 64
+      13. Vấn đề khi dùng GUID làm clustered key là gì?
+A. Không thể tạo index
+B. Phân mảnh và kích thước index lớn 
+C. Không hỗ trợ JOIN
+D. Không thể dùng trong WHERE
+      14. Hàm nào tạo GUID theo thứ tự tăng dần?
+A. NEWGUID()
+B. NEWSEQUENTIALID() 
+C. GUID()
+D. SEQGUID()
+      15. Clustered index key nên có đặc điểm nào?
+A. Ngẫu nhiên
+B. Có thể trùng lặp
+C. Tăng dần và duy nhất 
+D. Là kiểu văn bản
+Phần 4: Nonclustered và Covering Indexes (Câu 16–20)
+         16. Leaf level của nonclustered index chứa gì?
+A. Dữ liệu thực tế
+B. Con trỏ đến dữ liệu 
+C. Metadata
+D. RID
+         17. Khi nonclustered index chứa tất cả cột cần truy vấn, gọi là:
+A. Full index
+B. Indexed query
+C. Covering index 
+D. Key lookup
+         18. Nếu truy vấn cần cột không có trong index, SQL Server thực hiện:
+A. Full scan
+B. Key lookup 
+C. Seek
+D. Join
+         19. Tipping point thường nằm trong khoảng:
+A. 5–10%
+B. 10–20%
+C. 0.5–2% 
+D. 20–50%
+         20. Included columns được lưu ở đâu trong index?
+A. Mọi cấp độ
+B. Chỉ ở leaf level 
+C. Root node
+D. Intermediate node
+Phần 5: Filtered và Columnstore Indexes (Câu 21–25)
+            21. Filtered index được tạo bằng cách nào?
+A. GROUP BY
+B. HAVING
+C. WHERE 
+D. ORDER BY
+            22. Columnstore index lưu dữ liệu theo:
+A. Tree
+B. Heap
+C. Cột 
+D. Hàng
+            23. Công nghệ nén của Columnstore index là:
+A. Zip
+B. Gzip
+C. VertiPaq 
+D. Delta
+            24. Batch execution mode xử lý bao nhiêu dòng mỗi lần?
+A. 100
+B. 500
+C. 1000 
+D. 10,000
+            25. Clustered Columnstore index lưu toàn bộ bảng dưới dạng:
+A. Heap
+B. Rowstore
+C. Columnstore 
+D. Tree
+Phần 6: Deltastore và Tuple Mover (Câu 26–30)
+               26. Dữ liệu mới được chèn vào Clustered Columnstore index sẽ vào đâu trước?
+A. Leaf level
+B. Deltastore 
+C. Root node
+D. TempDB
+               27. Quá trình nén dữ liệu từ deltastore gọi là:
+A. Compressor
+B. Tuple mover 
+C. Page splitter
+D. Index builder
+               28. Khi truy vấn bảng có Columnstore index, SQL Server:
+A. Chỉ đọc columnstore
+B. Kết hợp columnstore và deltastore 
+C. Bỏ qua deltastore
+D. Chỉ đọc deltastore
+               29. Khi xóa dòng trong deltastore, dòng bị xóa như thế nào?
+A. Logic
+B. Tạm thời
+C. Logic và vật lý 
+D. Không xóa
+               30. Khi cập nhật dòng trong Columnstore index, SQL Server:
+A. Ghi đè dòng cũ
+B. Đánh dấu xóa logic và chèn dòng mới vào deltastore 
+C. Xóa vật lý
+D. Không hỗ trợ UPDATE
+Phần 7–8: In-Memory Indexes (Câu 31–35)
+                  31. Mỗi bảng tối ưu hóa bộ nhớ cần ít nhất bao nhiêu index?
+A. 0
+B. 1 
+C. 2
+D. 8
+                  32. Hash index sử dụng cấu trúc gì?
+A. Tree
+B. Bucket array 
+C. Segment
+D. Page map
+                  33. Hash index tối ưu cho truy vấn nào?
+A. LIKE
+B. BETWEEN
+C. = (chính xác) 
+D. IN
+                  34. In-memory nonclustered index có thể trả dữ liệu theo:
+A. RID
+B. Thứ tự của khóa index 
+C. Random
+D. GUID
+                  35. Cấu trúc của in-memory nonclustered index là:
+A. Hash tree
+B. Bw-tree 
+C. AVL tree
+D. Linked list
+Phần 9–10: Fragmentation và Statistics (Câu 36–40)
+                     36. index_level = 0 nghĩa là cấp độ nào?
+A. Root
+B. Intermediate
+C. Leaf level 
+D. Deltastore
+                     37. avg_fragmentation_in_percent phản ánh loại phân mảnh nào?
+A. Internal
+B. External 
+C. Logical
+D. Physical
+                     38. Giá trị lý tưởng của avg_page_space_used_in_percent là:
+A. 0%
+B. 50%
+C. 100% 
+D. 25%
+                     39. Reorganize index là thao tác:
+A. OFFLINE
+B. ONLINE 
+C. TEMPORARY
+D. MANUAL
+                     40. Tùy chọn nào cho phép tạm dừng và tiếp tục thao tác index?
+A. AUTO_UPDATE
+B. INDEX_HINT
+C. RESUMABLE 
+D. REBUILD_FAST

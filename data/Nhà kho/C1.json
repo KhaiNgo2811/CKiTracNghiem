@@ -1,0 +1,835 @@
+{
+  "chapterId": "C1",
+  "chapterName": "Chiến lược & Kiến trúc dữ liệu hiện đại",
+  "topics": [
+    {
+      "topicId": "C1_T1",
+      "topicName": "Từ RDBMS truyền thống đến AI-Native Lakehouse",
+      "questions": [
+        {
+          "id": "C1_T1_Q1",
+          "question": "Kỷ nguyên RDBMS (thập niên 1980) tập trung chủ yếu vào loại xử lý nào?",
+          "options": {
+            "A": "Lưu trữ dữ liệu thô quy mô lớn",
+            "B": "Học máy trên Big Data",
+            "C": "Phân tích đa chiều (OLAP)",
+            "D": "Giao dịch đơn lẻ (OLTP)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T1_Q2",
+          "question": "Data Warehouse xuất hiện vào thập niên 1990 nhằm phục vụ mục đích chính nào?",
+          "options": {
+            "A": "Báo cáo quản trị và phân tích (OLAP)",
+            "B": "Hỗ trợ AI ngay từ tầng lưu trữ",
+            "C": "Lưu trữ dữ liệu thô trên Hadoop/S3",
+            "D": "Xử lý giao dịch đơn lẻ (OLTP)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T1_Q3",
+          "question": "Làn sóng Data Lake (thập niên 2010) gắn liền với việc làm gì?",
+          "options": {
+            "A": "Lưu trữ dữ liệu thô quy mô lớn trên nền tảng Hadoop/S3",
+            "B": "Chấm dứt việc sử dụng SQL",
+            "C": "Chỉ lưu dữ liệu đã chuẩn hóa theo Star Schema",
+            "D": "Chuyển toàn bộ giao dịch lên RDBMS"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T1_Q4",
+          "question": "Lakehouse (thập niên 2020) hợp nhất hai yếu tố nào?",
+          "options": {
+            "A": "Hadoop và RDBMS truyền thống",
+            "B": "Data Mesh và Data Fabric",
+            "C": "Sự tin cậy của SQL và tính linh hoạt của Lake",
+            "D": "Tốc độ OLTP và chi phí của Archive"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T1_Q5",
+          "question": "Hai Open Table Formats tiêu biểu trở thành tiêu chuẩn kết nối trong hệ sinh thái Lakehouse là gì?",
+          "options": {
+            "A": "dbt và Snowpipe",
+            "B": "JSON và CSV",
+            "C": "Kafka và Airflow",
+            "D": "Iceberg và Delta Lake"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T1_Q6",
+          "question": "'Schema-on-write' trong RDBMS có nghĩa là gì?",
+          "options": {
+            "A": "Tự động thêm cột mới khi nguồn thay đổi",
+            "B": "Cấu trúc được định nghĩa tại thời điểm truy vấn",
+            "C": "Yêu cầu cấu trúc dữ liệu nghiêm ngặt trước khi nạp",
+            "D": "Lưu dữ liệu thô không cần cấu trúc"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T1_Q7",
+          "question": "Hạn chế 'Tính toán và lưu trữ ràng buộc' của RDBMS thể hiện ở điểm nào?",
+          "options": {
+            "A": "Không cho phép nhiều người dùng truy cập",
+            "B": "Không thể lưu quá 1 TB dữ liệu",
+            "C": "Không thể nâng cấp CPU mà không tăng dung lượng đĩa",
+            "D": "Không hỗ trợ ngôn ngữ SQL"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T1_Q8",
+          "question": "Đặc điểm 'Hỗ trợ Native Vector' của AI-Native Lakehouse là gì?",
+          "options": {
+            "A": "Lưu trữ và truy vấn Vector Embeddings trực tiếp cho LLMs",
+            "B": "Loại bỏ cơ chế ACID",
+            "C": "Chỉ lưu được dữ liệu có cấu trúc",
+            "D": "Bắt buộc Schema-on-write"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T1_Q9",
+          "question": "Cơ chế ACID trên Object Storage trong Lakehouse nhằm mục đích gì?",
+          "options": {
+            "A": "Giảm chi phí lưu trữ về 0",
+            "B": "Đảm bảo tính toàn vẹn dữ liệu ngay cả trên đám mây",
+            "C": "Che dấu dữ liệu PII",
+            "D": "Tăng tốc truy vấn bằng cache"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T1_Q10",
+          "question": "Feature Store tích hợp trong AI-Native Lakehouse dùng để làm gì?",
+          "options": {
+            "A": "Lưu file video và âm thanh",
+            "B": "Lưu trữ bản sao lưu dữ liệu giao dịch",
+            "C": "Quản lý và tái sử dụng các đặc trưng (features) cho mô hình ML",
+            "D": "Chia sẻ dữ liệu với đối tác"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T1_Q11",
+          "question": "Thay đổi tư duy dữ liệu trong kỷ nguyên AI-Native là chuyển từ gì sang gì?",
+          "options": {
+            "A": "Từ dữ liệu phi cấu trúc sang có cấu trúc",
+            "B": "Từ 'Lưu trữ để báo cáo' sang 'Lưu trữ để dự báo và hành động'",
+            "C": "Từ 'Lưu trữ để dự báo' sang 'Lưu trữ để báo cáo'",
+            "D": "Từ Cloud về On-premise"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C1_T2",
+      "topicName": "Modern Data Warehouse trên Cloud",
+      "questions": [
+        {
+          "id": "C1_T2_Q1",
+          "question": "Firebolt là một nền tảng có đặc điểm gì?",
+          "options": {
+            "A": "Giải pháp dành riêng cho hệ sinh thái AWS",
+            "B": "Lakehouse nhẹ dựa trên DuckDB",
+            "C": "Tập trung vào tốc độ truy vấn cực nhanh cho các ứng dụng phân tích thời gian thực",
+            "D": "Hợp nhất SQL, Spark và tích hợp dữ liệu trong một môi trường"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T2_Q2",
+          "question": "Trong chiến lược quản lý chi phí của Modern Data Warehouse, cơ chế nào được dùng để tránh tính toán lại những kết quả cũ?",
+          "options": {
+            "A": "Caching",
+            "B": "Budget Alerts",
+            "C": "Auto-suspend",
+            "D": "Phân tầng lưu trữ (Archive tier)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T2_Q3",
+          "question": "Auto-suspend trong chiến lược quản lý chi phí có tác dụng gì?",
+          "options": {
+            "A": "Nén dữ liệu bằng Parquet/ORC",
+            "B": "Cảnh báo khi chi phí vượt ngưỡng",
+            "C": "Chuyển dữ liệu cũ sang vùng lưu trữ rẻ",
+            "D": "Tắt cụm tính toán khi không có truy vấn để tiết kiệm phí"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T2_Q4",
+          "question": "Khái niệm Elasticity trong Modern Data Warehouse là gì?",
+          "options": {
+            "A": "Hỗ trợ hàng ngàn người dùng truy vấn đồng thời",
+            "B": "Giảm thiểu cấu hình và bảo trì hạ tầng",
+            "C": "Chỉ trả tiền cho những gì thực sự sử dụng",
+            "D": "Khả năng co giãn tài nguyên tính toán nhanh chóng"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T2_Q5",
+          "question": "Mô hình Pay-as-you-go trong Modern Data Warehouse có nghĩa là gì?",
+          "options": {
+            "A": "Chỉ trả tiền cho những tài nguyên thực sự sử dụng",
+            "B": "Trả trước phí bản quyền trọn đời",
+            "C": "Đầu tư phần cứng ban đầu lớn",
+            "D": "Trả phí cố định theo năm bất kể mức dùng"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T2_Q6",
+          "question": "Lợi thế nào của Modern Data Warehouse so với On-Premise liên quan đến chi phí đầu tư ban đầu?",
+          "options": {
+            "A": "Loại bỏ CAPEX (không cần đầu tư lớn vào phần cứng, phòng máy)",
+            "B": "Tăng CAPEX để mở rộng",
+            "C": "Bắt buộc mua giấy phép vĩnh viễn",
+            "D": "Phải tự bảo trì toàn bộ hạ tầng"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T2_Q7",
+          "question": "Nền tảng nào được xem là tiên phong trong việc tách rời Compute/Storage và chia sẻ dữ liệu an toàn?",
+          "options": {
+            "A": "Firebolt",
+            "B": "Amazon Redshift Serverless",
+            "C": "MotherDuck",
+            "D": "Snowflake"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T2_Q8",
+          "question": "Google BigQuery nổi bật với đặc điểm nào?",
+          "options": {
+            "A": "Tập trung vào hệ sinh thái AWS",
+            "B": "Lakehouse nhẹ dựa trên DuckDB",
+            "C": "Kiến trúc Serverless mạnh mẽ, tích hợp sẵn các mô hình AI/ML của Google",
+            "D": "Hợp nhất SQL, Spark trong một môi trường"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T2_Q9",
+          "question": "Azure Synapse Analytics nổi bật với đặc điểm nào?",
+          "options": {
+            "A": "Lakehouse 'nhẹ' dựa trên DuckDB",
+            "B": "Hợp nhất SQL, Spark và tích hợp dữ liệu trong một môi trường",
+            "C": "Serverless tích hợp AI/ML của Google",
+            "D": "Tốc độ truy vấn cực nhanh cho phân tích thời gian thực"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T2_Q10",
+          "question": "Khả năng 'Khôi phục thảm họa (DR)' của Modern Data Warehouse được thể hiện qua cơ chế nào?",
+          "options": {
+            "A": "Phải dừng hệ thống để cập nhật",
+            "B": "Sao lưu thủ công hàng quý",
+            "C": "Dữ liệu được sao lưu đa vùng tự động (Multi-region)",
+            "D": "Chỉ lưu một bản duy nhất tại phòng máy"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C1_T3",
+      "topicName": "Kiến trúc Data Fabric",
+      "questions": [
+        {
+          "id": "C1_T3_Q1",
+          "question": "Data Fabric có những mục tiêu quan trọng nào?",
+          "options": {
+            "A": "Xóa bỏ hoàn toàn các Data Silos trong doanh nghiệp",
+            "B": "Phân quyền sở hữu dữ liệu cho từng miền nghiệp vụ",
+            "C": "Hợp nhất Data Lake và Data Warehouse trên một hạ tầng",
+            "D": "Loại bỏ hoàn toàn Metadata"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T3_Q2",
+          "question": "Đặc điểm Virtualization (Zero-copy) trong Data Fabric nghĩa là gì?",
+          "options": {
+            "A": "Truy cập dữ liệu tại nguồn mà không cần sao chép",
+            "B": "Sao chép toàn bộ dữ liệu về kho trung tâm",
+            "C": "Nén dữ liệu bằng Parquet",
+            "D": "Mã hóa dữ liệu trước khi lưu"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T3_Q3",
+          "question": "Active Metadata trong Data Fabric được hiểu là gì?",
+          "options": {
+            "A": "Metadata không còn là thông tin tĩnh mà là thực thể có khả năng hành động",
+            "B": "Metadata chỉ dùng để mô tả cột trong bảng",
+            "C": "Metadata lưu trong file Excel",
+            "D": "Metadata được nhập thủ công"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T3_Q4",
+          "question": "Data Catalog là gì?",
+          "options": {
+            "A": "Lớp quản trị bảo mật tập trung",
+            "B": "Thư viện chứa thông tin và vị trí của mọi nguồn dữ liệu trong công ty",
+            "C": "Công cụ chạy truy vấn liên kết (Federated Query)",
+            "D": "Bộ não AI điều khiển việc tự động hóa"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T3_Q5",
+          "question": "Thành phần nào của Data Fabric cho phép chạy truy vấn liên kết (Federated Query)?",
+          "options": {
+            "A": "Security & Compliance",
+            "B": "Data Virtualization Engine",
+            "C": "Data Catalog",
+            "D": "Massive Metadata Lake"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T3_Q6",
+          "question": "Massive Metadata Lake trong Data Fabric là gì?",
+          "options": {
+            "A": "Kho lưu file video",
+            "B": "Nơi lưu trữ dữ liệu giao dịch gốc",
+            "C": "Công cụ sinh mã nguồn tự động",
+            "D": "Nơi lưu trữ và phân tích toàn bộ Metadata của hệ thống"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T3_Q7",
+          "question": "Thách thức nào sau đây đúng với việc triển khai Data Fabric?",
+          "options": {
+            "A": "Không hỗ trợ Hybrid-Cloud",
+            "B": "Truy vấn ảo hóa có thể chậm hơn so với dữ liệu đã nạp sẵn",
+            "C": "Không thể thêm nguồn dữ liệu mới",
+            "D": "Không có khả năng quản trị tập trung"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T3_Q8",
+          "question": "Ưu điểm 'Tốc độ' của Data Fabric thể hiện ở điểm nào?",
+          "options": {
+            "A": "Người dùng có thể mining ngay mà không đợi quy trình ETL",
+            "B": "Truy vấn luôn nhanh hơn dữ liệu nạp sẵn",
+            "C": "Mọi dữ liệu được sao chép về một nơi",
+            "D": "Không cần Metadata"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T3_Q9",
+          "question": "Data Fabric có mục tiêu quan trọng là gì?",
+          "options": {
+            "A": "Tập trung vào Quy trình vận hành",
+            "B": "Tập trung vào Kết nối & Ảo hóa các nguồn dữ liệu rời rạc",
+            "C": "Tập trung vào Con người & Tổ chức",
+            "D": "Tập trung vào Hiệu năng & Hợp nhất ba tầng kỹ thuật"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C1_T4",
+      "topicName": "Data Mesh",
+      "questions": [
+        {
+          "id": "C1_T4_Q1",
+          "question": "Nguyên tắc nào KHÔNG thuộc 4 nguyên tắc cốt lõi của Data Mesh?",
+          "options": {
+            "A": "Centralized Ownership (Sở hữu tập trung)",
+            "B": "Domain Ownership",
+            "C": "Data as a Product",
+            "D": "Federated Governance"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T4_Q2",
+          "question": "Domain Ownership trong Data Mesh nghĩa là gì?",
+          "options": {
+            "A": "Đội IT trung tâm sở hữu mọi dữ liệu",
+            "B": "Các đơn vị nghiệp vụ sở hữu và vận hành dữ liệu của chính mình",
+            "C": "Dữ liệu được sao chép về một kho chung",
+            "D": "Chỉ nhà cung cấp Cloud sở hữu dữ liệu"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T4_Q3",
+          "question": "Federated Governance trong Data Mesh là gì?",
+          "options": {
+            "A": "Quản trị chung thông qua các tiêu chuẩn kết nối và bảo mật thống nhất",
+            "B": "Không có quản trị",
+            "C": "Mỗi domain tự đặt tiêu chuẩn bảo mật riêng",
+            "D": "IT trung tâm kiểm soát mọi truy vấn"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T4_Q4",
+          "question": "Self-serve Platform trong Data Mesh có nghĩa là gì?",
+          "options": {
+            "A": "Nền tảng chỉ dành cho kỹ sư dữ liệu",
+            "B": "Người dùng cuối tự viết ETL cho IT",
+            "C": "Mỗi miền tự xây hạ tầng riêng",
+            "D": "IT xây dựng nền tảng chung để các miền tự chạy"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T4_Q5",
+          "question": "Thuộc tính 'Evolvable' của một sản phẩm dữ liệu là gì?",
+          "options": {
+            "A": "Phân quyền nghiêm ngặt theo vai trò",
+            "B": "Dữ liệu sạch và cập nhật đúng hạn",
+            "C": "Có khả năng thay đổi phiên bản mà không làm hỏng các hệ thống cũ",
+            "D": "Chứa đủ thông tin, không cần tra cứu nguồn khác"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T4_Q6",
+          "question": "Thuộc tính 'Trustworthy' của sản phẩm dữ liệu thể hiện ở điểm nào?",
+          "options": {
+            "A": "Sử dụng định dạng chuẩn để tích hợp",
+            "B": "Tìm thấy dữ liệu qua thanh tìm kiếm",
+            "C": "Dữ liệu sạch, cập nhật đúng hạn và có độ chính xác cao",
+            "D": "Có thể thay đổi phiên bản linh hoạt"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T4_Q7",
+          "question": "Thách thức nào thường gặp khi triển khai Data Mesh?",
+          "options": {
+            "A": "Chỉ hoạt động trên một Cloud",
+            "B": "Xung đột dữ liệu khi hai miền định nghĩa cùng một chỉ số theo cách khác nhau",
+            "C": "Không thể mở rộng thêm đơn vị dữ liệu",
+            "D": "Không cần đội Platform hỗ trợ"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T4_Q8",
+          "question": "Vấn đề chính của mô hình dữ liệu tập trung mà Data Mesh muốn giải quyết là gì?",
+          "options": {
+            "A": "Nút cổ chai khi nhu cầu tăng cao",
+            "B": "Không hỗ trợ SQL",
+            "C": "Thiếu dung lượng đĩa",
+            "D": "Chi phí bản quyền"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "C1_T5",
+      "topicName": "Unified Lakehouse và Medallion",
+      "questions": [
+        {
+          "id": "C1_T5_Q1",
+          "question": "Định dạng bảng nào có tính năng Time Travel và ACID cho dữ liệu trên Lake?",
+          "options": {
+            "A": "CSV",
+            "B": "Delta Lake",
+            "C": "JSON",
+            "D": "Apache Hudi"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T5_Q2",
+          "question": "Apache Hudi được tối ưu cho bài toán nào?",
+          "options": {
+            "A": "Chỉ xử lý dữ liệu batch hàng đêm",
+            "B": "Chỉ lưu trữ dữ liệu lưu trữ dài hạn (Archive)",
+            "C": "Mã hóa dữ liệu",
+            "D": "Nạp dữ liệu Streaming và Upsert liên tục"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T5_Q3",
+          "question": "Time Travel cho phép làm gì?",
+          "options": {
+            "A": "Dự đoán dữ liệu tương lai",
+            "B": "Tự động xóa dữ liệu cũ",
+            "C": "Tăng tốc truy vấn bằng cache",
+            "D": "Truy vấn lại dữ liệu tại bất kỳ thời điểm nào trong quá khứ"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T5_Q4",
+          "question": "Tầng Bronze trong Medallion Architecture lưu trữ loại dữ liệu nào?",
+          "options": {
+            "A": "Kết quả dự báo AI",
+            "B": "Dữ liệu đã làm sạch và chuẩn hóa",
+            "C": "Dữ liệu thô, giữ nguyên định dạng từ nguồn gốc",
+            "D": "Dữ liệu đã tổng hợp cho BI"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T5_Q5",
+          "question": "Tầng Silver trong Medallion Architecture có đặc điểm gì?",
+          "options": {
+            "A": "Dữ liệu đã được làm sạch, hợp nhất và chuẩn hóa cấu trúc",
+            "B": "Dữ liệu thô nguyên bản",
+            "C": "Chỉ chứa metadata",
+            "D": "Dữ liệu tổng hợp sẵn sàng cho báo cáo"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T5_Q6",
+          "question": "Tầng Gold trong Medallion Architecture có đặc điểm gì?",
+          "options": {
+            "A": "Dữ liệu chưa qua kiểm tra chất lượng",
+            "B": "Bản sao lưu của tầng Bronze",
+            "C": "Dữ liệu tổng hợp (Aggregated), sẵn sàng cho báo cáo kinh doanh và AI",
+            "D": "Dữ liệu thô từ nguồn"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T5_Q7",
+          "question": "Lợi ích 'Single Source of Truth' của Lakehouse là gì?",
+          "options": {
+            "A": "Tăng số lượng bản sao dữ liệu",
+            "B": "Loại bỏ các bản sao dữ liệu sai lệch giữa Lake và Warehouse",
+            "C": "Duy trì song song hai hệ thống",
+            "D": "Giảm khả năng truy vết"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C1_T6",
+      "topicName": "So sánh Mesh, Fabric và Lakehouse",
+      "questions": [
+        {
+          "id": "C1_T6_Q1",
+          "question": "Kiến trúc nào tập trung vào Hiệu năng và Hợp nhất hạ tầng kỹ thuật?",
+          "options": {
+            "A": "Data Mesh",
+            "B": "Data Lakehouse",
+            "C": "Data Lake truyền thống",
+            "D": "Data Fabric"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T6_Q2",
+          "question": "Kiến trúc nào tập trung vào Con người và Tổ chức (quy trình vận hành)?",
+          "options": {
+            "A": "RDBMS",
+            "B": "Data Fabric",
+            "C": "Data Mesh",
+            "D": "Data Lakehouse"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T6_Q3",
+          "question": "Kiến trúc nào tập trung vào Kết nối và Ảo hóa các nguồn dữ liệu rời rạc?",
+          "options": {
+            "A": "Data Lakehouse",
+            "B": "Data Mart",
+            "C": "Data Fabric",
+            "D": "Data Mesh"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T6_Q4",
+          "question": "Khi nào nên chọn Data Fabric?",
+          "options": {
+            "A": "Tổ chức nhỏ, IT tập trung",
+            "B": "Dữ liệu phân tán rộng và không thể di chuyển (do pháp lý)",
+            "C": "Dự án Greenfield quy mô nhỏ",
+            "D": "Chỉ cần huấn luyện mô hình ML"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T6_Q5",
+          "question": "Khi nào nên chọn Data Mesh?",
+          "options": {
+            "A": "Dữ liệu không thể di chuyển do pháp lý",
+            "B": "Tổ chức quá lớn, IT không thể hiểu hết nhu cầu các phòng ban",
+            "C": "Muốn tập trung toàn bộ nhân sự vào một đội",
+            "D": "Doanh nghiệp quy mô trung bình muốn đơn giản hóa hệ thống"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T6_Q6",
+          "question": "Theo slide, kiến trúc nào thường có chi phí quản lý thấp nhất?",
+          "options": {
+            "A": "Fabric",
+            "B": "RDBMS on-premise",
+            "C": "Mesh",
+            "D": "Lakehouse"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T6_Q7",
+          "question": "Kiến trúc nào mạnh nhất trong việc gắn kết các hệ thống rời rạc?",
+          "options": {
+            "A": "Data Lake",
+            "B": "Data Lakehouse",
+            "C": "Data Mesh",
+            "D": "Data Fabric"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T6_Q8",
+          "question": "Sự giao thoa giữa các kiến trúc có thể được hiểu như thế nào?",
+          "options": {
+            "A": "Lakehouse không thể kết hợp với Mesh",
+            "B": "Mesh và Fabric loại trừ nhau hoàn toàn",
+            "C": "Fabric thay thế hoàn toàn Lakehouse",
+            "D": "Doanh nghiệp có thể dùng Lakehouse làm nền tảng cho Data Mesh"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C1_T7",
+      "topicName": "Cloud Object Storage",
+      "questions": [
+        {
+          "id": "C1_T7_Q1",
+          "question": "Object Storage quản lý dữ liệu theo cấu trúc nào?",
+          "options": {
+            "A": "Không gian phẳng (Flat namespace), không phân cấp thư mục",
+            "B": "Cây thư mục nhiều tầng bắt buộc",
+            "C": "Đồ thị tri thức",
+            "D": "Bảng quan hệ"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T7_Q2",
+          "question": "Mỗi Object trong Object Storage được định danh bằng gì?",
+          "options": {
+            "A": "Tên thư mục cha",
+            "B": "Một khóa (Key) duy nhất để truy cập qua URL",
+            "C": "Số thứ tự dòng",
+            "D": "Địa chỉ IP của ổ đĩa"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T7_Q3",
+          "question": "S3 Select cho phép làm gì?",
+          "options": {
+            "A": "Mã hóa dữ liệu khi truyền",
+            "B": "Lọc dữ liệu ngay tại tầng lưu trữ để tăng tốc độ",
+            "C": "Nén dữ liệu thành Parquet",
+            "D": "Sao lưu sang vùng khác"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T7_Q4",
+          "question": "ADLS Gen2 có đặc điểm nào?",
+          "options": {
+            "A": "Không tích hợp Azure Active Directory",
+            "B": "Kết hợp tính năng Object Storage với cấu trúc thư mục (phân cấp)",
+            "C": "Chỉ dùng cho dữ liệu phi cấu trúc nhỏ",
+            "D": "Không hỗ trợ Spark"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T7_Q5",
+          "question": "Tầng lưu trữ Archive/Glacier phù hợp với loại dữ liệu nào?",
+          "options": {
+            "A": "Dữ liệu lưu trữ lâu dài (pháp lý), phí rất rẻ nhưng lấy ra lâu",
+            "B": "Dữ liệu truy cập hàng ngày",
+            "C": "Dữ liệu cần độ trễ mili giây",
+            "D": "Dữ liệu streaming"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T7_Q6",
+          "question": "Lifecycle Policies có chức năng gì?",
+          "options": {
+            "A": "Mã hóa dữ liệu khi ghi",
+            "B": "Tự động chuyển dữ liệu sang tầng rẻ hơn sau một khoảng thời gian",
+            "C": "Kiểm soát quyền truy cập theo người dùng",
+            "D": "Ngăn việc xóa dữ liệu"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T7_Q7",
+          "question": "Bucket Policies có chức năng gì?",
+          "options": {
+            "A": "Ghi lại mọi yêu cầu truy cập",
+            "B": "Kiểm soát quyền chi tiết dựa trên danh tính người dùng",
+            "C": "Lưu lại các bản sao để khôi phục",
+            "D": "Quy định quyền truy cập cho toàn bộ Data Container từ bên ngoài"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T7_Q8",
+          "question": "IAM Policies khác Bucket Policies ở điểm nào?",
+          "options": {
+            "A": "IAM quy định quyền cho cả Data Container từ bên ngoài",
+            "B": "IAM dùng để nén dữ liệu",
+            "C": "IAM chuyên ghi log truy cập",
+            "D": "IAM kiểm soát quyền chi tiết dựa trên danh tính người dùng"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T7_Q9",
+          "question": "Object Lock có tác dụng gì?",
+          "options": {
+            "A": "Lưu nhiều phiên bản file",
+            "B": "Tự động chuyển tầng lưu trữ",
+            "C": "Mã hóa dữ liệu At-Rest",
+            "D": "Ngăn chặn việc xóa hoặc sửa đổi dữ liệu trong một khoảng thời gian quy định"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T7_Q10",
+          "question": "Mã hóa In-Transit sử dụng giao thức nào để bảo vệ dữ liệu khi di chuyển qua mạng?",
+          "options": {
+            "A": "FTP",
+            "B": "TLS",
+            "C": "HTTP không mã hóa",
+            "D": "SMTP"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C1_T8",
+      "topicName": "Tách rời Compute và Storage",
+      "questions": [
+        {
+          "id": "C1_T8_Q1",
+          "question": "Mô hình cũ (Coupled) gây ra vấn đề gì?",
+          "options": {
+            "A": "Không thể lưu dữ liệu lớn",
+            "B": "CPU và ổ cứng gắn chặt với nhau, lãng phí tài nguyên khi nâng cấp",
+            "C": "Không hỗ trợ SQL",
+            "D": "Không cho phép bảo mật"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T8_Q2",
+          "question": "Lợi ích 'Khả năng mở rộng độc lập' của kiến trúc Decoupled là gì?",
+          "options": {
+            "A": "Không cần dự báo CPU",
+            "B": "Có thể tăng 1000 CPU mà không cần mua thêm ổ cứng",
+            "C": "Chỉ mở rộng được theo chiều dọc",
+            "D": "Phải tăng ổ cứng khi tăng CPU"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T8_Q3",
+          "question": "Cụm tính toán tạm thời (Ephemeral) trong kiến trúc Decoupled là gì?",
+          "options": {
+            "A": "Bộ nhớ cache dài hạn",
+            "B": "Ổ cứng lưu trữ trung tâm",
+            "C": "Các máy ảo được bật lên chỉ để thực hiện một tác vụ cụ thể",
+            "D": "Cụm chạy 24/7 cố định"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T8_Q4",
+          "question": "Predicate Pushdown có tác dụng gì trong kiến trúc Decoupled?",
+          "options": {
+            "A": "Chỉ đưa các cột và dòng cần thiết từ ổ cứng về CPU để giảm tải mạng",
+            "B": "Mã hóa dữ liệu truyền",
+            "C": "Đẩy toàn bộ bảng về CPU",
+            "D": "Tự động tắt Compute"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T8_Q5",
+          "question": "Snowflake cho phép các phòng ban không tranh chấp tài nguyên nhờ cơ chế nào?",
+          "options": {
+            "A": "Giảm số người dùng truy cập",
+            "B": "Một cụm tính toán dùng chung duy nhất",
+            "C": "Multi-cluster Compute với nhiều Virtual Warehouses độc lập",
+            "D": "Lưu dữ liệu riêng từng phòng ban"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T8_Q6",
+          "question": "Zero-copy Cloning trong Snowflake dùng để làm gì?",
+          "options": {
+            "A": "Mã hóa dữ liệu",
+            "B": "Sao chép dữ liệu sang Cloud khác",
+            "C": "Tạo bản sao dữ liệu cho thử nghiệm mà không tốn thêm dung lượng đĩa",
+            "D": "Nén dữ liệu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T8_Q7",
+          "question": "Global Services Layer trong Snowflake có vai trò gì?",
+          "options": {
+            "A": "Lớp quản trị chung điều phối việc kết nối giữa Compute và Storage",
+            "B": "Chạy các mô hình ML",
+            "C": "Tạo bản sao dữ liệu",
+            "D": "Lưu trữ dữ liệu thô"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T8_Q8",
+          "question": "Lợi ích kinh tế nào của việc tách rời Compute và Storage?",
+          "options": {
+            "A": "Chỉ trả tiền CPU khi thực hiện truy vấn, đĩa cứng trả tiền theo tháng",
+            "B": "Phải mua trước ổ cứng cho 3-5 năm",
+            "C": "Phải trả tiền CPU 24/7",
+            "D": "Không thể tạo môi trường Sandbox"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    }
+  ]
+}

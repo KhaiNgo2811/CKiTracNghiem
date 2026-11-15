@@ -1,0 +1,2064 @@
+{
+  "chapterId": "TB",
+  "chapterName": "Test Bank DBMS - SQL Server (180 cau)",
+  "topics": [
+    {
+      "topicId": "TB_T1",
+      "topicName": "Table Partitioning & Memory-Optimized Tables",
+      "questions": [
+        {
+          "id": "TB_Q1",
+          "question": "Khi các bảng hoặc chỉ mục được truy cập sau đó, SQL Server có thể thực hiện tối ưu hóa nào sau đây?",
+          "options": {
+            "A": "Partition elimination",
+            "B": "Partition reorganization",
+            "C": "Index rebuilding",
+            "D": "Query rewriting"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q2",
+          "question": "Khóa phân vùng có thể bao gồm các kiểu dữ liệu nào?",
+          "options": {
+            "A": "INT, VARCHAR, DATETIME",
+            "B": "XML, TIMESTAMP, NTEXT",
+            "C": "VARCHAR(MAX), NVARCHAR(MAX)",
+            "D": "TEXT, NTEXT, NVARCHAR(MAX)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q3",
+          "question": "Trong quá trình phân vùng, điểm ranh giới (boundary points) được dùng để làm gì?",
+          "options": {
+            "A": "Đặt giới hạn trên và dưới cho mỗi phân vùng",
+            "B": "Xác định kích thước của mỗi phân vùng",
+            "C": "Xác định thứ tự sắp xếp dữ liệu trong bảng",
+            "D": "Gộp các phân vùng nhỏ thành một phân vùng lớn hơn"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q4",
+          "question": "Partition scheme là một đối tượng được tạo ra để làm gì?",
+          "options": {
+            "A": "Chỉ định filegroup mà mỗi phân vùng sẽ được lưu trữ",
+            "B": "Xác định loại dữ liệu của từng phân vùng",
+            "C": "Chỉ định bảng nào sẽ sử dụng phân vùng",
+            "D": "Xác định kích thước của mỗi phân vùng"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q5",
+          "question": "Trong SSMS, chúng ta có thể xem phân phối các hàng trong các phân vùng bằng cách sử dụng:",
+          "options": {
+            "A": "The Disk Usage by Partition report",
+            "B": "The Query Execution Plan",
+            "C": "The Table Properties report",
+            "D": "The Index Fragmentation report"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q6",
+          "question": "Chúng ta có thể xác định số lượng hàng trong mỗi phân vùng của bảng bằng cách sử dụng.",
+          "options": {
+            "A": "$PARTITION",
+            "B": "$ROWS",
+            "C": "$PARTITION_COUNT",
+            "D": "$INDEX"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q7",
+          "question": "Hàm $PARTITION chấp nhận tên cột của khóa phân vùng như một đối số nào?",
+          "options": {
+            "A": "A parameter",
+            "B": "A return value",
+            "C": "A data type",
+            "D": "A sub-function"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q8",
+          "question": "Định dạng nào được sử dụng để lưu trữ phiên bản bảng trên đĩa với công nghệ FILESTREAM?",
+          "options": {
+            "A": "Unstructured",
+            "B": "Relational",
+            "C": "Hierarchical",
+            "D": "Tabular"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q9",
+          "question": "Ngưỡng kích thước nào trong nhật ký giao dịch kích hoạt một điểm kiểm tra tự động (automatic checkpoint)?",
+          "options": {
+            "A": "512MB",
+            "B": "256MB",
+            "C": "768MB",
+            "D": "1GB"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "TB_Q10",
+          "question": "Điều gì sẽ xảy ra khi chọn SCHEMA_AND_DATA trong ngữ cảnh lưu trữ dữ liệu của một bảng?",
+          "options": {
+            "A": "Tất cả dữ liệu của bảng sẽ được lưu trữ trên đĩa và các giao dịch sẽ được ghi lại.",
+            "B": "Chỉ schema của bảng được lưu trữ, và không có ghi lại giao dịch.",
+            "C": "Chỉ dữ liệu của bảng được lưu trữ, không bao gồm schema.",
+            "D": "Schema và dữ liệu của bảng được lưu trữ tạm thời trong bộ nhớ, không được ghi ra đĩa."
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q11",
+          "question": "Trong quá trình phát triển các bảng tối ưu hóa bộ nhớ, chúng được gọi là.",
+          "options": {
+            "A": "Hekaton",
+            "B": "In-Memory OLTP",
+            "C": "DataVault",
+            "D": "TempDB Tables"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q12",
+          "question": "Tham số nào dưới đây được sử dụng để chỉ định tên của bảng?",
+          "options": {
+            "A": "@object_name",
+            "B": "@schema_name",
+            "C": "@partition_number",
+            "D": "@data_compression"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q13",
+          "question": "Các chỉ mục (Indexes) trên các bảng tối ưu bộ nhớ (memory-optimized tables) phải được tạo trong lệnh ...",
+          "options": {
+            "A": "CREATE TABLE",
+            "B": "CREATE INDEX",
+            "C": "CREATE PROCEDURE",
+            "D": "CREATE SEQUENCE"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "TB_T2",
+      "topicName": "Indexes, In-Memory Structures & Transactions",
+      "questions": [
+        {
+          "id": "TB_Q14",
+          "question": "Các chỉ mục không cụm (Nonclustered indexes) hoạt động tốt hơn so với các chỉ mục băm không cụm (Nonclustered hash indexes) trong trường hợp truy vấn sử dụng ...",
+          "options": {
+            "A": "các biểu thức điều kiện bất đẳng thức (inequality predicates)",
+            "B": "các biểu thức điều kiện nằm trong một khoảng (range predicates)",
+            "C": "các điều kiện sử dụng hàm tổng hợp (aggregate functions)",
+            "D": "các biểu thức điều kiện liên quan đến LIKE (LIKE predicates)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TB_Q15",
+          "question": "Các hàng mới được chèn vào bảng có thể tạm thời được đặt trong một bảng gọi là ...",
+          "options": {
+            "A": "deltastore",
+            "B": "rawstore",
+            "C": "datastore",
+            "D": "columnstore"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q16",
+          "question": "Các nút nào chứa các trang dữ liệu thực tế của bảng?",
+          "options": {
+            "A": "Nút lá",
+            "B": "Nút trung gian",
+            "C": "Nút gốc",
+            "D": "Nút con"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q17",
+          "question": "Có khoảng bao nhiêu % dữ liệu được truy cập thông qua khóa chính trong các ứng dụng OLTP?",
+          "options": {
+            "A": "99%",
+            "B": "96%",
+            "C": "69%",
+            "D": "89%"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TB_Q18",
+          "question": "FILLFACTOR dùng để làm gì?",
+          "options": {
+            "A": "chỉ định mức độ không gian trống cần để lại trong mỗi trang ở cấp độ lá của chỉ mục",
+            "B": "chỉ ra tỷ lệ phần trăm fill factor cho các cấp độ trung gian của cây B-tree",
+            "C": "chỉ định số lượng core được sử dụng để xây dựng chỉ mục",
+            "D": "chỉ định liệu có nên tạo thống kê cho mỗi phân vùng hay không"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q19",
+          "question": "GUID (Globally Unique Identifier) có độ dài bao nhiêu?",
+          "options": {
+            "A": "16 bytes",
+            "B": "8 bytes",
+            "C": "64 bytes",
+            "D": "32 bytes"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q20",
+          "question": "Khi nhiều giá trị cùng chia sẻ một bucket, điều này được gọi là ...",
+          "options": {
+            "A": "hash collision",
+            "B": "data collision",
+            "C": "row collision",
+            "D": "delta collision"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q21",
+          "question": "Mỗi memory-optimized table phải có tối thiểu ...",
+          "options": {
+            "A": "1 index",
+            "B": "2 indexes",
+            "C": "3 indexes",
+            "D": "4 indexes"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q22",
+          "question": "Một chỉ mục Columnstore chia các hàng của bảng thành các khối (chunk), mỗi khối chứa ...",
+          "options": {
+            "A": "từ 102.400 đến 1.048.576 dòng",
+            "B": "từ 104.200 đến 1.018.567 dòng",
+            "C": "từ 104.200 đến 1.148.576 dòng",
+            "D": "từ 144.200 đến 1.842.576 dòng"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q23",
+          "question": "Nếu một bảng chứa 4 triệu hàng dữ liệu và khi các trang dữ liệu đầy 100%. thì",
+          "options": {
+            "A": "tất cả các hàng dữ liệu này nằm gọn trong 20000 trang dữ liệu",
+            "B": "tất cả các hàng dữ liệu này nằm gọn trong 10000 trang dữ liệu",
+            "C": "tất cả các hàng dữ liệu này nằm gọn trong 40000 trang dữ liệu",
+            "D": "tất cả các hàng dữ liệu này nằm gọn trong 5000 trang dữ liệu"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q24",
+          "question": "Nếu một bảng dự kiến sẽ tăng lên K triệu hàng thì cần phải tạo ra ...",
+          "options": {
+            "A": "2K hash buckets",
+            "B": "4K hash buckets",
+            "C": "1K hash buckets",
+            "D": "8K hash buckets"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q25",
+          "question": "SQL Server có thể quét tất cả các trang của bảng để truy xuất các hàng cần thiết, điều này được gọi là ...",
+          "options": {
+            "A": "clustered index scan",
+            "B": "clustered data scan",
+            "C": "clustered B-tree scan",
+            "D": "clustered heap scan"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q26",
+          "question": "Nếu bảng được phân vùng, một thao tác yêu cầu bao nhiêu khoá trên một bảng hoặc phân vùng?",
+          "options": {
+            "A": "Hơn 5000 khoá",
+            "B": "Hơn 1500 khoá",
+            "C": "Hơn 5500 khoá",
+            "D": "Hơn 2000 khoá"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q27",
+          "question": "Kiểu khoá nào cho phép nhiều luồng tải dữ liệu song song vào một bảng trong khi blocking các tiến trình khác?",
+          "options": {
+            "A": "Bulk Update",
+            "B": "Schema Modification",
+            "C": "Key-range",
+            "D": "Intent"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q28",
+          "question": "SQL Server phát hiện deadlock thông qua một quy trình nội bộ gọi là?",
+          "options": {
+            "A": "deadlock monitor",
+            "B": "deadlock query",
+            "C": "deadlock track",
+            "D": "deadlock control"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q29",
+          "question": "Kiểu Transaction nào bắt đầu với BEGIN TRANSACTION?",
+          "options": {
+            "A": "Explicit transaction",
+            "B": "Autocommit transaction",
+            "C": "Implicit transaction",
+            "D": "Commit transaction"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q30",
+          "question": "Snapshot isolation sử dụng optimistic concurrency cho các thao tác:",
+          "options": {
+            "A": "Write và Read",
+            "B": "Update và Write",
+            "C": "Write và Delete",
+            "D": "Delete và Read"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "TB_T3",
+      "topicName": "Catalog Views & System Functions",
+      "questions": [
+        {
+          "id": "TB_Q31",
+          "question": "Để lấy danh sách tất cả các ràng buộc trên một bảng, bạn có thể truy vấn chế độ xem catalog nào?",
+          "options": {
+            "A": "INFORMATION_SCHEMA.TABLE_CONSTRAINTS",
+            "B": "sys.tables",
+            "C": "sys.indexes",
+            "D": "sys.objects"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q32",
+          "question": "Hàm hệ thống nào trả về tên của một lược đồ (schema)?",
+          "options": {
+            "A": "SCHEMA_NAME()",
+            "B": "DB_NAME()",
+            "C": "OBJECT_NAME()",
+            "D": "SERVERPROPERTY()"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q33",
+          "question": "Để lấy thông tin về các tham số của một thủ tục lưu trữ (stored procedure), bạn có thể truy vấn chế độ xem catalog nào?",
+          "options": {
+            "A": "sys.parameters",
+            "B": "sys.tables",
+            "C": "sys.indexes",
+            "D": "sys.objects"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q34",
+          "question": "Chế độ xem catalog nào cung cấp thông tin về các chỉ mục trên một bảng?",
+          "options": {
+            "A": "sys.indexes",
+            "B": "INFORMATION_SCHEMA.COLUMNS",
+            "C": "sys.tables",
+            "D": "sys.objects"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q35",
+          "question": "Hàm hệ thống nào trả về ID của một lược đồ (schema)?",
+          "options": {
+            "A": "SCHEMA_ID()",
+            "B": "DB_ID()",
+            "C": "OBJECT_ID()",
+            "D": "SERVERPROPERTY()"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q36",
+          "question": "Để lấy danh sách tất cả các trigger trên một bảng, bạn có thể truy vấn chế độ xem catalog nào?",
+          "options": {
+            "A": "sys.triggers",
+            "B": "INFORMATION_SCHEMA.COLUMNS",
+            "C": "sys.tables",
+            "D": "sys.objects"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q37",
+          "question": "Chế độ xem catalog nào cung cấp thông tin về các ràng buộc khóa chính (primary key)?",
+          "options": {
+            "A": "INFORMATION_SCHEMA.KEY_COLUMN_USAGE",
+            "B": "sys.tables",
+            "C": "sys.indexes",
+            "D": "sys.objects"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q38",
+          "question": "Hàm hệ thống nào trả về tên máy chủ SQL Server?",
+          "options": {
+            "A": "@@SERVERNAME",
+            "B": "DB_NAME()",
+            "C": "OBJECT_NAME()",
+            "D": "SERVERPROPERTY()"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q39",
+          "question": "Để lấy thông tin về kiểu dữ liệu của một cột, bạn có thể truy vấn chế độ xem catalog nào?",
+          "options": {
+            "A": "INFORMATION_SCHEMA.COLUMNS",
+            "B": "sys.tables",
+            "C": "sys.indexes",
+            "D": "sys.objects"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q40",
+          "question": "Chế độ xem catalog nào cung cấp thông tin về các ràng buộc khóa ngoại (foreign key)?",
+          "options": {
+            "A": "INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS",
+            "B": "sys.tables",
+            "C": "sys.indexes",
+            "D": "sys.objects"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "TB_T4",
+      "topicName": "Locking & Blocking - Co ban",
+      "questions": [
+        {
+          "id": "TB_Q41",
+          "question": "Để phát hiện các giao dịch đang bị blocking (blocking), bạn có thể sử dụng chế độ xem quản lý động (DMV) nào?",
+          "options": {
+            "A": "sys.dm_os_waiting_tasks",
+            "B": "sys.dm_exec_requests",
+            "C": "sys.dm_os_wait_stats",
+            "D": "sys.dm_exec_sessions"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q42",
+          "question": "Loại khóa nào được sử dụng để bảo vệ định nghĩa của một đối tượng cơ sở dữ liệu?",
+          "options": {
+            "A": "Khóa lược đồ (Schema lock)",
+            "B": "Khóa chia sẻ (Shared lock)",
+            "C": "Khóa độc quyền (Exclusive lock)",
+            "D": "Khóa ý định (Intent lock)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q43",
+          "question": "Để kết thúc một phiên (session) đang gây ra blocking, bạn có thể sử dụng lệnh nào?",
+          "options": {
+            "A": "KILL session_id",
+            "B": "ALTER DATABASE",
+            "C": "DROP TABLE",
+            "D": "CREATE INDEX"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q44",
+          "question": "Cấp độ cô lập giao dịch nào cho phép đọc dữ liệu đã được cam kết (committed) và ngăn blocking đọc bẩn (dirty reads), đọc không lặp lại (non-repeatable reads) và đọc ảo (phantom reads)?",
+          "options": {
+            "A": "SERIALIZABLE",
+            "B": "READ COMMITTED",
+            "C": "READ UNCOMMITTED",
+            "D": "REPEATABLE READ"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q45",
+          "question": "Để giảm thiểu bế tắc (deadlock), bạn nên thiết kế ứng dụng như thế nào?",
+          "options": {
+            "A": "Truy cập các đối tượng theo cùng một thứ tự trong tất cả các giao dịch",
+            "B": "Truy cập các đối tượng theo thứ tự ngẫu nhiên trong các giao dịch",
+            "C": "Giữ khóa trong thời gian dài",
+            "D": "Thực hiện nhiều thao tác DML trong một giao dịch"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q46",
+          "question": "Để xem danh sách các giao dịch đang giữ khóa, bạn có thể sử dụng chế độ xem quản lý động (DMV) nào?",
+          "options": {
+            "A": "sys.dm_tran_locks",
+            "B": "sys.dm_exec_requests",
+            "C": "sys.dm_os_waiting_tasks",
+            "D": "sys.dm_exec_sessions"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q47",
+          "question": "Loại khóa nào được sử dụng để ngăn blocking các giao dịch khác sửa đổi dữ liệu cho đến khi giao dịch hiện tại hoàn thành?",
+          "options": {
+            "A": "Khóa độc quyền (Exclusive lock)",
+            "B": "Khóa chia sẻ (Shared lock)",
+            "C": "Khóa cập nhật (Update lock)",
+            "D": "Khóa ý định (Intent lock)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q48",
+          "question": "Để giảm thiểu blocking, bạn nên sử dụng chỉ mục như thế nào?",
+          "options": {
+            "A": "Tạo chỉ mục cho các cột thường được sử dụng trong mệnh đề WHERE",
+            "B": "Vô hiệu hóa tất cả các chỉ mục",
+            "C": "Chỉ sử dụng chỉ mục clustered",
+            "D": "Không sử dụng chỉ mục nonclustered"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q49",
+          "question": "Để giám sát hiệu suất truy vấn và phát hiện các vấn đề về khóa và blocking, bạn có thể sử dụng công cụ nào?",
+          "options": {
+            "A": "SQL Server Profiler",
+            "B": "SQL Server Management Studio",
+            "C": "Windows Performance Monitor",
+            "D": "PowerShell"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q50",
+          "question": "Để giảm thiểu tranh chấp khóa, bạn nên thiết kế cơ sở dữ liệu như thế nào?",
+          "options": {
+            "A": "Chia nhỏ các bảng lớn thành nhiều bảng nhỏ hơn",
+            "B": "Gộp nhiều bảng nhỏ thành một bảng lớn",
+            "C": "Tăng số lượng cột trong bảng",
+            "D": "Giảm số lượng chỉ mục trên bảng"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "TB_T5",
+      "topicName": "Security Roles & Principals",
+      "questions": [
+        {
+          "id": "TB_Q51",
+          "question": "PERF_COUNTER_BULK_COUNT là một bộ đếm tốc độ tích lũy ...",
+          "options": {
+            "A": "64-bit",
+            "B": "128-bit",
+            "C": "32-bit",
+            "D": "16-bit"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q52",
+          "question": "Các entities được cấp, từ chối hoặc thu hồi quyền được gọi là ...",
+          "options": {
+            "A": "Principals",
+            "B": "Rights",
+            "C": "Privileges",
+            "D": "Securables"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q53",
+          "question": "Các đối tượng có thể được cấp quyền được gọi là ...",
+          "options": {
+            "A": "Securables",
+            "B": "Principals",
+            "C": "Privileges",
+            "D": "Rights"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q54",
+          "question": "Tập hợp người dùng được cấp quyền được gọi là ...",
+          "options": {
+            "A": "Group",
+            "B": "Principal",
+            "C": "Securable",
+            "D": "Privilege"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q55",
+          "question": "Khi sử dụng mixed-mode authentication, sẽ có một người dùng đặc biệt gọi là ...",
+          "options": {
+            "A": "SA",
+            "B": "TA",
+            "C": "CA",
+            "D": "XA"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q56",
+          "question": "Role nào thường được gán cho các tài khoản dịch vụ chạy các quy trình ETL?",
+          "options": {
+            "A": "bulkadmin",
+            "B": "dbcreator",
+            "C": "processadmin",
+            "D": "serveradmin"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q57",
+          "question": "Role nào có thể thêm và xóa người dùng khỏi cơ sở dữ liệu?",
+          "options": {
+            "A": "db_accessadmin",
+            "B": "db_backupoperator",
+            "C": "db_datareader",
+            "D": "db_datawriter"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q58",
+          "question": "Role nào có thể thực hiện các lệnh DML trên bất kỳ bảng nào trong cơ sở dữ liệu?",
+          "options": {
+            "A": "db_datawriter",
+            "B": "db_datareader",
+            "C": "db_backupoperator",
+            "D": "db_accessadmin"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q59",
+          "question": "CSDL nào cho phép bạn giảm sự phụ thuộc của một CSDL vào instance bằng cách cô lập các khía cạnh như là bảo mật?",
+          "options": {
+            "A": "Contained databases",
+            "B": "Relational databases",
+            "C": "Distributed databases",
+            "D": "NoSQL databases"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q60",
+          "question": "Phải bật thuộc tính nào để cho phép thực hiện các truy vấn cross-database?",
+          "options": {
+            "A": "TRUSTWORTHY",
+            "B": "READ_COMMITTED_SNAPSHOT",
+            "C": "AUTO_CLOSE",
+            "D": "ANSI_NULLS"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q61",
+          "question": "Role nào có thể tạo và quản lý các linked servers?",
+          "options": {
+            "A": "setupadmin",
+            "B": "dbcreator",
+            "C": "securityadmin",
+            "D": "serveradmin"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q62",
+          "question": "Role nào có thể đọc tất cả DMV và DMF ở cấp độ instance và được gán quyền ALTER SERVER STATE?",
+          "options": {
+            "A": "##MS_ServerStateManager##",
+            "B": "##MS_ServerStateReader##",
+            "C": "##MS_ServerSecurityStateReader##",
+            "D": "##MS_ServerPerformanceStateReader##"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TB_Q63",
+          "question": "Microsoft đã định nghĩa ## encapsulation để dễ dàng xác định chúng là ...",
+          "options": {
+            "A": "Fixed server roles",
+            "B": "Dynamic server roles",
+            "C": "User-defined roles",
+            "D": "Database-level roles"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q64",
+          "question": "UAT là viết tắt của:",
+          "options": {
+            "A": "User Acceptance Testing",
+            "B": "Unit Automation Testing",
+            "C": "Universal Application Tool",
+            "D": "User Authentication Token"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q65",
+          "question": "Role nào sau đây kết hợp hai role diskadmin và processadmin?",
+          "options": {
+            "A": "serveradmin",
+            "B": "bulkadmin",
+            "C": "securityadmin",
+            "D": "setupadmin"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "TB_T6",
+      "topicName": "Encryption",
+      "questions": [
+        {
+          "id": "TB_Q66",
+          "question": "Kích thước của dữ liệu sau khi được mã hóa lớn hơn nhiều so với trước khi mã hóa được gọi là ...",
+          "options": {
+            "A": "Bloat",
+            "B": "Compression",
+            "C": "Encryption",
+            "D": "Optimization"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q67",
+          "question": "Nếu mã hóa dữ liệu bằng passphrase, thì thuật toán nào sẽ được sử dụng để mã hóa dữ liệu?",
+          "options": {
+            "A": "TRIPLE DES",
+            "B": "AES",
+            "C": "RSA",
+            "D": "Blowfish"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q68",
+          "question": "Tham số BIT nào cho biết liệu một cột xác thực có nên được thêm vào hay không?",
+          "options": {
+            "A": "Add_authenticator",
+            "B": "Enable_auth",
+            "C": "Use_verification",
+            "D": "Auth_required"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q69",
+          "question": "Tham số xác định cột nào sẽ được sử dụng làm cột xác thực?",
+          "options": {
+            "A": "Authenticator",
+            "B": "Auth_column",
+            "C": "Verify_field",
+            "D": "Security_key"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q70",
+          "question": "Trong các triển khai tiêu chuẩn của Always Encrypted, các thao tác nào không được hỗ trợ đối với dữ liệu đã mã hóa?",
+          "options": {
+            "A": "Equality joins, grouping, and indexing.",
+            "B": "Aggregations, sorting, and filtering.",
+            "C": "Data insertion, updates, and deletions.",
+            "D": "Backup, restore, and replication."
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "TB_T7",
+      "topicName": "Backup Fundamentals & Table Optimization",
+      "questions": [
+        {
+          "id": "TB_Q71",
+          "question": "Các trang ML (minimally logged) xuất hiện một lần trong ...",
+          "options": {
+            "A": "mỗi 64.000 extents",
+            "B": "mỗi 32.000 extents",
+            "C": "mỗi 54.000 extents",
+            "D": "mỗi 62.000 extents"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q72",
+          "question": "Các loại sao lưu trong SQL Server. full, differential và ...",
+          "options": {
+            "A": "log",
+            "B": "incremental",
+            "C": "copy-only",
+            "D": "snapshot"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q73",
+          "question": "Một backup device là một tập tin vật lý trên đĩa hoặc ...",
+          "options": {
+            "A": "cloud storage",
+            "B": "tape",
+            "C": "NAS",
+            "D": "USB"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TB_Q74",
+          "question": "Sao lưu một phần (partial backup) không sao lưu ...",
+          "options": {
+            "A": "read-only filegroups",
+            "B": "filegroups không trực tuyến (offline filegroups)",
+            "C": "các bản sao lưu vi sai (differential backups)",
+            "D": "các trang bị hỏng (corrupted pages)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q75",
+          "question": "Hàm hệ thống nào để hiển thị nội dung của bản sao lưu nhật ký cuối cùng?",
+          "options": {
+            "A": "sys.fn_dump_dblog()",
+            "B": "sys.sp_replmonitorhelppublication()",
+            "C": "sys.fn_db_log()",
+            "D": "sys.sp_who()"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q76",
+          "question": "Phương pháp nào sau đây giúp giảm phân mảnh dữ liệu trong bảng?",
+          "options": {
+            "A": "Tái tổ chức chỉ mục (Rebuilding indexes)",
+            "B": "Thêm nhiều chỉ mục hơn",
+            "C": "Sử dụng nhiều bảng hơn",
+            "D": "Tăng kích thước bảng"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q77",
+          "question": "Loại phân vùng bảng nào giúp chia dữ liệu theo một phạm vi giá trị?",
+          "options": {
+            "A": "Phân vùng phạm vi (Range partitioning)",
+            "B": "Phân vùng danh sách (List partitioning)",
+            "C": "Phân vùng băm (Hash partitioning)",
+            "D": "Phân vùng vòng tròn (Round-robin partitioning)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q78",
+          "question": "Hành động nào sau đây giúp giảm kích thước bảng?",
+          "options": {
+            "A": "Nén dữ liệu (Data compression)",
+            "B": "Thêm nhiều dữ liệu hơn",
+            "C": "Tăng số lượng cột",
+            "D": "Tăng kích thước kiểu dữ liệu"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q79",
+          "question": "Phương pháp nào giúp giảm thiểu việc khóa bảng khi thực hiện các thao tác DML?",
+          "options": {
+            "A": "Phân vùng bảng (Table partitioning)",
+            "B": "Tăng kích thước bảng",
+            "C": "Thêm nhiều chỉ mục hơn",
+            "D": "Tăng số lượng cột"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q80",
+          "question": "Lợi ích chính của việc sử dụng cột sparse là gì?",
+          "options": {
+            "A": "Tiết kiệm không gian lưu trữ cho các giá trị NULL",
+            "B": "Tăng tốc độ truy vấn",
+            "C": "Tăng độ phức tạp của truy vấn",
+            "D": "Giảm số lượng cột trong bảng"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "TB_T8",
+      "topicName": "Indexes, Statistics & Security Objects",
+      "questions": [
+        {
+          "id": "TB_Q81",
+          "question": "Loại chỉ mục nào phù hợp cho các cột được sử dụng trong mệnh đề WHERE với toán tử so sánh phạm vi?",
+          "options": {
+            "A": "Chỉ mục B-tree (B-tree index)",
+            "B": "Chỉ mục hash (Hash index)",
+            "C": "Chỉ mục columnstore (Columnstore index)",
+            "D": "Chỉ mục XML (XML index)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q82",
+          "question": "Thống kê được sử dụng để làm gì trong SQL Server?",
+          "options": {
+            "A": "Tối ưu hóa kế hoạch truy vấn",
+            "B": "Mã hóa dữ liệu",
+            "C": "Quản lý quyền truy cập",
+            "D": "Sao lưu và khôi phục cơ sở dữ liệu"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q83",
+          "question": "Hành động nào sau đây giúp cải thiện hiệu suất truy vấn trên các bảng lớn?",
+          "options": {
+            "A": "Tạo chỉ mục được lọc (Filtered indexes)",
+            "B": "Thêm nhiều cột vào bảng",
+            "C": "Giảm số lượng chỉ mục",
+            "D": "Sử dụng nhiều bảng hơn"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q84",
+          "question": "Loại chỉ mục nào phù hợp cho các truy vấn phân tích trên các bảng lớn?",
+          "options": {
+            "A": "Chỉ mục columnstore (Columnstore index)",
+            "B": "Chỉ mục B-tree (B-tree index)",
+            "C": "Chỉ mục hash (Hash index)",
+            "D": "Chỉ mục XML (XML index)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q85",
+          "question": "Hành động nào sau đây giúp duy trì hiệu suất truy vấn ổn định?",
+          "options": {
+            "A": "Cập nhật thống kê định kỳ (Update statistics)",
+            "B": "Xóa chỉ mục",
+            "C": "Giảm số lượng cột",
+            "D": "Tăng kích thước bảng"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q86",
+          "question": "Đối tượng bảo mật nào được sử dụng để cấp quyền cho người dùng hoặc nhóm?",
+          "options": {
+            "A": "Principal",
+            "B": "Schema",
+            "C": "Object",
+            "D": "Server"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q87",
+          "question": "Quyền nào cho phép người dùng xem dữ liệu trong bảng?",
+          "options": {
+            "A": "SELECT",
+            "B": "INSERT",
+            "C": "UPDATE",
+            "D": "DELETE"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q88",
+          "question": "Hành động nào sau đây giúp tăng cường bảo mật cho SQL Server?",
+          "options": {
+            "A": "Áp dụng nguyên tắc quyền tối thiểu (Principle of least privilege)",
+            "B": "Cấp tất cả quyền cho người dùng",
+            "C": "Sử dụng mật khẩu yếu",
+            "D": "Bỏ qua việc kiểm tra quyền truy cập"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q89",
+          "question": "Loại xác thực nào sử dụng thông tin đăng nhập Windows để kết nối với SQL Server?",
+          "options": {
+            "A": "Xác thực Windows (Windows authentication)",
+            "B": "Xác thực SQL Server (SQL Server authentication)",
+            "C": "Xác thực cơ sở dữ liệu (Database authentication)",
+            "D": "Xác thực ứng dụng (Application authentication)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q90",
+          "question": "Đối tượng bảo mật nào được sử dụng để nhóm các đối tượng cơ sở dữ liệu?",
+          "options": {
+            "A": "Schema",
+            "B": "Principal",
+            "C": "Object",
+            "D": "Server"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "TB_T9",
+      "topicName": "Encryption & Backup/Restore",
+      "questions": [
+        {
+          "id": "TB_Q91",
+          "question": "Loại mã hóa nào mã hóa toàn bộ cơ sở dữ liệu?",
+          "options": {
+            "A": "Mã hóa dữ liệu trong suốt (Transparent Data Encryption - TDE)",
+            "B": "Mã hóa cột (Column encryption)",
+            "C": "Mã hóa mức ô (Cell-level encryption)",
+            "D": "Mã hóa mức ứng dụng (Application-level encryption)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q92",
+          "question": "Hành động nào sau đây giúp bảo vệ dữ liệu nhạy cảm trong SQL Server?",
+          "options": {
+            "A": "Mã hóa dữ liệu (Data encryption)",
+            "B": "Chia sẻ thông tin đăng nhập",
+            "C": "Bỏ qua việc sao lưu dữ liệu",
+            "D": "Sử dụng mật khẩu yếu"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q93",
+          "question": "Loại mã hóa nào mã hóa dữ liệu ở mức cột hoặc ô?",
+          "options": {
+            "A": "Mã hóa cột (Column encryption)",
+            "B": "Mã hóa dữ liệu trong suốt (Transparent Data Encryption - TDE)",
+            "C": "Mã hóa mức ứng dụng (Application-level encryption)",
+            "D": "Mã hóa cơ sở dữ liệu (Database encryption)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q94",
+          "question": "Khóa nào được sử dụng để mã hóa và giải mã dữ liệu trong TDE?",
+          "options": {
+            "A": "Chứng chỉ cơ sở dữ liệu (Database master key)",
+            "B": "Khóa đối xứng (Symmetric key)",
+            "C": "Khóa công khai (Public key)",
+            "D": "Khóa riêng tư (Private key)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TB_Q95",
+          "question": "Hành động nào sau đây giúp đảm bảo an toàn cho khóa mã hóa?",
+          "options": {
+            "A": "Sao lưu khóa mã hóa (Backup encryption keys)",
+            "B": "Chia sẻ khóa mã hóa với người dùng",
+            "C": "Lưu trữ khóa mã hóa ở vị trí không an toàn",
+            "D": "Bỏ qua việc quản lý khóa mã hóa"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q96",
+          "question": "Loại sao lưu nào sao lưu tất cả các thay đổi dữ liệu kể từ lần sao lưu đầy đủ cuối cùng?",
+          "options": {
+            "A": "Sao lưu khác biệt (Differential backup)",
+            "B": "Sao lưu đầy đủ (Full backup)",
+            "C": "Sao lưu nhật ký giao dịch (Transaction log backup)",
+            "D": "Sao lưu tệp (File backup)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q97",
+          "question": "Hành động nào sau đây giúp bảo vệ dữ liệu khỏi mất mát?",
+          "options": {
+            "A": "Thực hiện sao lưu định kỳ (Regular backups)",
+            "B": "Bỏ qua việc sao lưu dữ liệu",
+            "C": "Lưu trữ sao lưu ở vị trí không an toàn",
+            "D": "Không kiểm tra tính toàn vẹn của sao lưu"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q98",
+          "question": "Loại sao lưu nào sao lưu tất cả các thay đổi dữ liệu kể từ lần sao lưu khác biệt cuối cùng?",
+          "options": {
+            "A": "Sao lưu nhật ký giao dịch (Transaction log backup)",
+            "B": "Sao lưu đầy đủ (Full backup)",
+            "C": "Sao lưu khác biệt (Differential backup)",
+            "D": "Sao lưu tệp (File backup)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q99",
+          "question": "Hành động nào sau đây giúp đảm bảo tính toàn vẹn của dữ liệu sau khi khôi phục?",
+          "options": {
+            "A": "Kiểm tra tính toàn vẹn của sao lưu (Verify backups)",
+            "B": "Bỏ qua việc kiểm tra tính toàn vẹn",
+            "C": "Khôi phục dữ liệu vào môi trường không an toàn",
+            "D": "Không kiểm tra nhật ký lỗi sau khi khôi phục"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q100",
+          "question": "Hành động nào sau đây giúp giảm thời gian khôi phục cơ sở dữ liệu?",
+          "options": {
+            "A": "Sử dụng sao lưu nhật ký giao dịch (Transaction log backups)",
+            "B": "Sử dụng sao lưu đầy đủ (Full backups)",
+            "C": "Sử dụng sao lưu khác biệt (Differential backups)",
+            "D": "Không sao lưu dữ liệu"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q101",
+          "question": "Tùy chọn nào trong lệnh RESTORE cho phép ghi đè lên cơ sở dữ liệu hiện có?",
+          "options": {
+            "A": "WITH REPLACE",
+            "B": "WITH NORECOVERY",
+            "C": "WITH STANDBY",
+            "D": "WITH MOVE"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q102",
+          "question": "Loại sao lưu nào sao lưu chỉ những thay đổi đã thực hiện kể từ lần sao lưu đầy đủ cuối cùng?",
+          "options": {
+            "A": "Sao lưu khác biệt (Differential backup)",
+            "B": "Sao lưu đầy đủ (Full backup)",
+            "C": "Sao lưu nhật ký giao dịch (Transaction log backup)",
+            "D": "Sao lưu tệp (File backup)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q103",
+          "question": "Để khôi phục cơ sở dữ liệu về trạng thái trước một thời điểm cụ thể, bạn cần loại sao lưu nào?",
+          "options": {
+            "A": "Sao lưu nhật ký giao dịch (Transaction log backups)",
+            "B": "Sao lưu đầy đủ (Full backups)",
+            "C": "Sao lưu khác biệt (Differential backups)",
+            "D": "Sao lưu tệp (File backups)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q104",
+          "question": "Hành động nào sau đây giúp đảm bảo tính khả dụng cao của cơ sở dữ liệu?",
+          "options": {
+            "A": "Thiết lập sao lưu nhật ký giao dịch thường xuyên (Frequent transaction log backups)",
+            "B": "Chỉ thực hiện sao lưu đầy đủ (Full backups only)",
+            "C": "Bỏ qua việc sao lưu nhật ký giao dịch (Skip transaction log backups)",
+            "D": "Sao lưu vào cùng một thiết bị lưu trữ (Backup to the same storage device)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q105",
+          "question": "Khi nào bạn nên sử dụng tùy chọn WITH NORECOVERY trong quá trình khôi phục?",
+          "options": {
+            "A": "Khi bạn định khôi phục thêm các bản sao lưu nhật ký giao dịch (When you intend to restore additional transaction log backups)",
+            "B": "Khi bạn muốn cơ sở dữ liệu trực tuyến ngay lập tức (When you want the database to come online immediately)",
+            "C": "Khi bạn muốn di chuyển cơ sở dữ liệu đến một vị trí khác (When you want to move the database to a different location)",
+            "D": "Khi bạn muốn ghi đè lên cơ sở dữ liệu hiện có (When you want to overwrite the existing database)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q106",
+          "question": "Để kiểm tra tính toàn vẹn của tệp sao lưu, bạn sử dụng lệnh nào?",
+          "options": {
+            "A": "RESTORE VERIFYONLY",
+            "B": "RESTORE HEADERONLY",
+            "C": "RESTORE FILELISTONLY",
+            "D": "RESTORE LABELONLY"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "TB_T10",
+      "topicName": "Metadata & Locking Fundamentals",
+      "questions": [
+        {
+          "id": "TB_Q107",
+          "question": "Chế độ xem catalog nào cung cấp thông tin về các cột trong một bảng?",
+          "options": {
+            "A": "INFORMATION_SCHEMA.COLUMNS",
+            "B": "sys.tables",
+            "C": "sys.indexes",
+            "D": "sys.objects"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q108",
+          "question": "Hàm hệ thống nào trả về ID đối tượng của một đối tượng cơ sở dữ liệu?",
+          "options": {
+            "A": "OBJECT_ID()",
+            "B": "OBJECT_NAME()",
+            "C": "OBJECTPROPERTY()",
+            "D": "DB_ID()"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q109",
+          "question": "Chế độ xem quản lý động (DMV) nào cung cấp thông tin về việc sử dụng chỉ mục?",
+          "options": {
+            "A": "sys.dm_db_index_usage_stats",
+            "B": "sys.dm_exec_requests",
+            "C": "sys.dm_os_wait_stats",
+            "D": "sys.dm_exec_sessions"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q110",
+          "question": "Để lấy danh sách tất cả các bảng trong cơ sở dữ liệu, bạn có thể truy vấn chế độ xem catalog nào?",
+          "options": {
+            "A": "sys.tables",
+            "B": "INFORMATION_SCHEMA.COLUMNS",
+            "C": "sys.indexes",
+            "D": "sys.objects"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q111",
+          "question": "Hàm hệ thống nào trả về tên của một cơ sở dữ liệu?",
+          "options": {
+            "A": "DB_NAME()",
+            "B": "DB_ID()",
+            "C": "SERVERPROPERTY()",
+            "D": "@@SERVERNAME"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q112",
+          "question": "Chế độ xem catalog nào cung cấp thông tin về các ràng buộc khóa ngoại?",
+          "options": {
+            "A": "INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS",
+            "B": "sys.tables",
+            "C": "sys.indexes",
+            "D": "sys.objects"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q113",
+          "question": "Để lấy thông tin về kiểu dữ liệu của một cột, bạn có thể sử dụng hàm hệ thống nào?",
+          "options": {
+            "A": "TYPEPROPERTY()",
+            "B": "OBJECTPROPERTY()",
+            "C": "COLUMNPROPERTY()",
+            "D": "DB_NAME()"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "TB_Q114",
+          "question": "Loại khóa nào ngăn các giao dịch khác đọc hoặc sửa đổi dữ liệu?",
+          "options": {
+            "A": "Khóa độc quyền (Exclusive lock)",
+            "B": "Khóa chia sẻ (Shared lock)",
+            "C": "Khóa cập nhật (Update lock)",
+            "D": "Khóa ý định (Intent lock)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q115",
+          "question": "Hiện tượng nào xảy ra khi hai hoặc nhiều giao dịch bị blocking lẫn nhau vĩnh viễn?",
+          "options": {
+            "A": "Deadlock",
+            "B": "Blocking",
+            "C": "Starvation",
+            "D": "Livelock"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q116",
+          "question": "Chế độ xem quản lý động (DMV) nào cung cấp thông tin về các yêu cầu đang chờ khóa?",
+          "options": {
+            "A": "sys.dm_os_waiting_tasks",
+            "B": "sys.dm_exec_requests",
+            "C": "sys.dm_os_wait_stats",
+            "D": "sys.dm_exec_sessions"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q117",
+          "question": "Lệnh T-SQL nào được sử dụng để hiển thị thông tin về các tiến trình đang hoạt động và khóa?",
+          "options": {
+            "A": "sp_who2",
+            "B": "sp_helpdb",
+            "C": "sp_help",
+            "D": "sp_lock"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q118",
+          "question": "Cấp độ cô lập giao dịch nào cho phép đọc dữ liệu đã được cam kết (committed) và ngăn blocking đọc bẩn (dirty reads)?",
+          "options": {
+            "A": "READ COMMITTED",
+            "B": "READ UNCOMMITTED",
+            "C": "REPEATABLE READ",
+            "D": "SERIALIZABLE"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q119",
+          "question": "Để giảm thiểu blocking, bạn nên thiết kế giao dịch như thế nào?",
+          "options": {
+            "A": "Ngắn gọn và thực hiện nhanh chóng (Short and fast)",
+            "B": "Dài và phức tạp (Long and complex)",
+            "C": "Giữ khóa trong thời gian dài (Hold locks for a long time)",
+            "D": "Thực hiện nhiều thao tác DML cùng lúc (Perform multiple DML operations at once)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q120",
+          "question": "Loại khóa nào cho phép nhiều giao dịch đọc dữ liệu cùng lúc nhưng ngăn blocking các giao dịch khác sửa đổi dữ liệu?",
+          "options": {
+            "A": "Khóa chia sẻ (Shared lock)",
+            "B": "Khóa độc quyền (Exclusive lock)",
+            "C": "Khóa cập nhật (Update lock)",
+            "D": "Khóa ý định (Intent lock)"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "TB_T11",
+      "topicName": "Backup Strategies & Restore Options",
+      "questions": [
+        {
+          "id": "TB_Q121",
+          "question": "Trong trường hợp xảy ra thảm họa, phương pháp nào sau đây giúp khôi phục cơ sở dữ liệu nhanh chóng và đảm bảo tính liên tục của hoạt động kinh doanh?",
+          "options": {
+            "A": "Khôi phục từ bản sao lưu được lưu trữ ở vị trí địa lý khác (offsite backup)",
+            "B": "Khôi phục từ bản sao lưu đầy đủ gần nhất",
+            "C": "Sử dụng tính năng Always On Availability Groups",
+            "D": "Cài đặt lại SQL Server và khôi phục từ bản sao lưu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "TB_Q122",
+          "question": "Chiến lược sao lưu nào phù hợp cho một cơ sở dữ liệu có dung lượng lớn và tần suất thay đổi dữ liệu cao?",
+          "options": {
+            "A": "Kết hợp sao lưu đầy đủ, sao lưu khác biệt và sao lưu nhật ký giao dịch",
+            "B": "Chỉ thực hiện sao lưu đầy đủ hàng ngày",
+            "C": "Chỉ thực hiện sao lưu khác biệt hàng giờ",
+            "D": "Chỉ thực hiện sao lưu nhật ký giao dịch 5 phút một lần"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q123",
+          "question": "Khi khôi phục cơ sở dữ liệu từ bản sao lưu, tùy chọn nào cho phép bạn đưa cơ sở dữ liệu vào trạng thái \"standby\", cho phép truy cập chỉ đọc?",
+          "options": {
+            "A": "WITH STANDBY",
+            "B": "WITH RECOVERY",
+            "C": "WITH NORECOVERY",
+            "D": "WITH REPLACE"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q124",
+          "question": "Để khôi phục một tệp dữ liệu riêng lẻ từ bản sao lưu đầy đủ, bạn cần sử dụng tùy chọn nào trong lệnh RESTORE DATABASE?",
+          "options": {
+            "A": "WITH PARTIAL",
+            "B": "WITH REPLACE",
+            "C": "WITH MOVE",
+            "D": "WITH RECOVERY"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q125",
+          "question": "Tùy chọn nào trong lệnh BACKUP DATABASE cho phép bạn nén bản sao lưu để giảm dung lượng lưu trữ?",
+          "options": {
+            "A": "WITH COMPRESSION",
+            "B": "WITH ENCRYPTION",
+            "C": "WITH INIT",
+            "D": "WITH DIFFERENTIAL"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q126",
+          "question": "Để tự động hóa quá trình sao lưu cơ sở dữ liệu, bạn nên sử dụng công cụ nào?",
+          "options": {
+            "A": "SQL Server Agent",
+            "B": "SQL Server Management Studio",
+            "C": "Windows Task Scheduler",
+            "D": "PowerShell"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q127",
+          "question": "Khi thực hiện sao lưu nhật ký giao dịch, tùy chọn nào cho phép bạn cắt bỏ (truncate) nhật ký giao dịch sau khi sao lưu?",
+          "options": {
+            "A": "WITH TRUNCATE_ONLY",
+            "B": "WITH NO_TRUNCATE",
+            "C": "WITH NORECOVERY",
+            "D": "WITH STANDBY"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q128",
+          "question": "Để sao lưu cơ sở dữ liệu trên nhiều tệp, bạn có thể sử dụng tùy chọn nào trong lệnh BACKUP DATABASE?",
+          "options": {
+            "A": "TO DISK = ('file1.bak', 'file2.bak')",
+            "B": "WITH COMPRESSION",
+            "C": "WITH INIT",
+            "D": "WITH DIFFERENTIAL"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q129",
+          "question": "Hành động nào sau đây giúp bảo vệ bản sao lưu khỏi bị ghi đè?",
+          "options": {
+            "A": "Sử dụng tùy chọn WITH NOINIT trong lệnh BACKUP DATABASE",
+            "B": "Sử dụng tùy chọn WITH INIT trong lệnh BACKUP DATABASE",
+            "C": "Sử dụng tùy chọn WITH REPLACE trong lệnh RESTORE DATABASE",
+            "D": "Sử dụng tùy chọn WITH NORECOVERY trong lệnh RESTORE DATABASE"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q130",
+          "question": "Để khôi phục cơ sở dữ liệu đến một thời điểm cụ thể, bạn cần sử dụng loại sao lưu nào sau đây?",
+          "options": {
+            "A": "Sao lưu nhật ký giao dịch (Transaction log backup)",
+            "B": "Sao lưu khác biệt (Differential backup)",
+            "C": "Sao lưu đầy đủ (Full backup)",
+            "D": "Sao lưu tệp (File backup)"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "TB_T12",
+      "topicName": "Concurrency Errors & Advanced DMV/Metadata",
+      "questions": [
+        {
+          "id": "TB_Q131",
+          "question": "Nếu hai giao dịch cố gắng cập nhật cùng một hàng cùng lúc,",
+          "options": {
+            "A": "giao dịch thứ hai sẽ gặp lỗi 3960",
+            "B": "giao dịch thứ nhất sẽ gặp lỗi 3960",
+            "C": "giao dịch thứ nhất sẽ gặp lỗi 3690",
+            "D": "giao dịch thứ hai sẽ gặp lỗi 3690"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q132",
+          "question": "Read Committed Snapshot sử dụng pessimistic concurrency cho thao tác:",
+          "options": {
+            "A": "Write",
+            "B": "Read",
+            "C": "Update",
+            "D": "Delete"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q133",
+          "question": "Quy trình nào đẩy bộ đệm nhật ký xuống đĩa tại thời điểm giao dịch được commit?",
+          "options": {
+            "A": "WAL",
+            "B": "RAL",
+            "C": "UAL",
+            "D": "DAL"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q134",
+          "question": "Nếu một giao dịch cố gắng sửa đổi một hàng đã được cập nhật bởi một giao dịch khác thì sẽ phát sinh lỗi:",
+          "options": {
+            "A": "41302",
+            "B": "41203",
+            "C": "43102",
+            "D": "42312"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q135",
+          "question": "Nếu một giao dịch cố gắng sửa đổi dữ liệu trong một bảng đã bị xóa bởi một giao dịch khác, thì sẽ phát sinh lỗi:",
+          "options": {
+            "A": "41305",
+            "B": "41302",
+            "C": "41205",
+            "D": "43205"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q136",
+          "question": "Mức cô lập hạn chế nhất và là mức dễ xảy ra deadlock nhất?",
+          "options": {
+            "A": "Serializable",
+            "B": "Read Uncommitted",
+            "C": "Read Committed",
+            "D": "Optimistic Isolation"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q137",
+          "question": "Intent Locks được thực hiện ở",
+          "options": {
+            "A": "table level",
+            "B": "page level",
+            "C": "row level",
+            "D": "extent level"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q138",
+          "question": "Repeatable Read yêu cầu loại khóa nào trên tất cả các hàng mà nó đọc?",
+          "options": {
+            "A": "Shared Lock",
+            "B": "Exclusive Lock",
+            "C": "Intent Lock",
+            "D": "Update Lock"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q139",
+          "question": "Tham số -E làm tăng số lượng extents được cấp phát cho mỗi tập tin trong thuật toán:",
+          "options": {
+            "A": "round-robin",
+            "B": "bound-robin",
+            "C": "round-random",
+            "D": "bound-robot"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q140",
+          "question": "Danh mục dm_os của DMV hiển thị bao nhiêu đối tượng chứa thông tin về trạng thái hiện tại của SQLOS?",
+          "options": {
+            "A": "41",
+            "B": "30",
+            "C": "36",
+            "D": "45"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TB_Q141",
+          "question": "Dạng bộ đếm đơn giản nhất?",
+          "options": {
+            "A": "PERF_COUNTER_LARGE_RAWCOUNT",
+            "B": "PERF_COUNTER_BULK_COUNT",
+            "C": "PERF_LARGE_RAW_BASE",
+            "D": "PERF_AVERAGE_BULK"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q142",
+          "question": "All wait types được phân thành ba loại. resource waits, queue waits, và ...",
+          "options": {
+            "A": "external waits",
+            "B": "lookup waits",
+            "C": "normal waits",
+            "D": "fixed waits"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q143",
+          "question": "SQL Server cũng cung cấp nhiều hàm hệ thống liên quan đến metadata, chẳng hạn như",
+          "options": {
+            "A": "DB_ID()",
+            "B": "Data_ID()",
+            "C": "OBJ_ID()",
+            "D": "Intent_ID()"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q144",
+          "question": "View sys.dm_io_virtual_file_stats dùng để xem số liệu thống kê I/O và ...",
+          "options": {
+            "A": "log files",
+            "B": "data files",
+            "C": "secondary files",
+            "D": "main files"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TB_Q145",
+          "question": "LSN là viết tắt của",
+          "options": {
+            "A": "Log Sequence Number",
+            "B": "Login Sequence Number",
+            "C": "Long Sequence Number",
+            "D": "Lob Sequence Number"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q146",
+          "question": "In-Memory OLTP sử dụng bộ đếm nào?",
+          "options": {
+            "A": "PERF_COUNTER_COUNTER",
+            "B": "PERF_LARGE_RAW_BASECOUNT",
+            "C": "PERF_LARGE_RAW_FRACTION_COUNT",
+            "D": "PERF_COUNTER_LARGE_COUNT"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "TB_Q147",
+          "question": "Resource waits xảy ra khi một thread cần truy cập vào",
+          "options": {
+            "A": "an object",
+            "B": "an table",
+            "C": "a row",
+            "D": "a page"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "TB_Q148",
+          "question": "Hàm nào sử dụng tham số %%physloc%%?",
+          "options": {
+            "A": "sys.fn_PageResCracker",
+            "B": "sys.fn_db_page_info",
+            "C": "sys.fn_PageLocation",
+            "D": "sys.fn_db_PageCracker"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q149",
+          "question": "DMF là viết tắt của ...",
+          "options": {
+            "A": "Dynamic Management Function",
+            "B": "Database Management Function",
+            "C": "Define Management Function",
+            "D": "Dimension Management Function"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q150",
+          "question": "View nào xem thông tin port mà instance lắng nghe?",
+          "options": {
+            "A": "sys.dm_server_registry",
+            "B": "sys.dm_system_registry",
+            "C": "sys.dm_control_registry",
+            "D": "sys.dm_sys_registry"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "TB_T13",
+      "topicName": "Locking/Blocking Monitoring & Mitigation",
+      "questions": [
+        {
+          "id": "TB_Q151",
+          "question": "Để giám sát các sự kiện liên quan đến khóa và blocking, bạn có thể sử dụng sự kiện mở rộng (Extended Events) nào?",
+          "options": {
+            "A": "lock_acquired, lock_released, deadlock",
+            "B": "query_completed, query_started",
+            "C": "database_file_size_change",
+            "D": "server_memory_change"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q152",
+          "question": "Để giảm thiểu thời gian giữ khóa, bạn nên thiết kế giao dịch như thế nào?",
+          "options": {
+            "A": "Thực hiện các thao tác DML trong các giao dịch nhỏ",
+            "B": "Thực hiện tất cả các thao tác DML trong một giao dịch lớn",
+            "C": "Giữ khóa trong thời gian dài",
+            "D": "Thực hiện nhiều truy vấn phức tạp trong một giao dịch"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q153",
+          "question": "Để phát hiện các phiên (session) đang giữ khóa trong thời gian dài, bạn có thể sử dụng truy vấn nào?",
+          "options": {
+            "A": "Truy vấn sys.dm_exec_requests và sys.dm_tran_locks",
+            "B": "Truy vấn sys.dm_exec_sessions",
+            "C": "Truy vấn sys.dm_os_waiting_tasks",
+            "D": "Truy vấn sys.dm_db_index_usage_stats"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q154",
+          "question": "Để giảm thiểu bế tắc (deadlock), bạn nên sử dụng cấp độ cô lập giao dịch nào?",
+          "options": {
+            "A": "SERIALIZABLE",
+            "B": "READ COMMITTED",
+            "C": "READ UNCOMMITTED",
+            "D": "REPEATABLE READ"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TB_Q155",
+          "question": "Để giảm thiểu thời gian chờ khóa, bạn nên sử dụng tùy chọn nào trong lệnh SELECT?",
+          "options": {
+            "A": "WITH (NOLOCK)",
+            "B": "WITH (ROWLOCK)",
+            "C": "WITH (PAGLOCK)",
+            "D": "WITH (TABLOCK)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q156",
+          "question": "Để giảm thiểu blocking, bạn nên thiết kế truy vấn như thế nào?",
+          "options": {
+            "A": "Viết các truy vấn hiệu quả, chỉ truy xuất dữ liệu cần thiết",
+            "B": "Viết các truy vấn phức tạp, truy xuất nhiều dữ liệu hơn cần thiết",
+            "C": "Sử dụng các truy vấn con (subqueries) lồng nhau",
+            "D": "Sử dụng các truy vấn không có chỉ mục"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q157",
+          "question": "Để phát hiện các phiên (session) đang chờ khóa, bạn có thể sử dụng chế độ xem quản lý động (DMV) nào?",
+          "options": {
+            "A": "sys.dm_os_waiting_tasks",
+            "B": "sys.dm_exec_requests",
+            "C": "sys.dm_tran_locks",
+            "D": "sys.dm_exec_sessions"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q158",
+          "question": "Để giảm thiểu tranh chấp khóa, bạn nên sử dụng kỹ thuật nào?",
+          "options": {
+            "A": "Phân vùng bảng (Table partitioning)",
+            "B": "Sao chép dữ liệu (Data replication)",
+            "C": "Nén dữ liệu (Data compression)",
+            "D": "Mã hóa dữ liệu (Data encryption)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q159",
+          "question": "Để phát hiện các sự kiện bế tắc (deadlock), bạn có thể sử dụng công cụ nào?",
+          "options": {
+            "A": "SQL Server Profiler",
+            "B": "SQL Server Management Studio",
+            "C": "Windows Performance Monitor",
+            "D": "PowerShell"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q160",
+          "question": "Để giảm thiểu thời gian giữ khóa, bạn nên sử dụng kỹ thuật nào?",
+          "options": {
+            "A": "Sử dụng các giao dịch ngầm định (implicit transactions)",
+            "B": "Sử dụng các giao dịch rõ ràng (explicit transactions)",
+            "C": "Sử dụng các giao dịch phân tán (distributed transactions)",
+            "D": "Sử dụng các giao dịch lồng nhau (nested transactions)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "TB_Q161",
+          "question": "Để phát hiện các phiên (session) đang bị blocking (blocking) bởi một phiên khác, bạn có thể sử dụng truy vấn nào?",
+          "options": {
+            "A": "Truy vấn sys.dm_exec_requests và sys.dm_os_waiting_tasks",
+            "B": "Truy vấn sys.dm_exec_sessions",
+            "C": "Truy vấn sys.dm_tran_locks",
+            "D": "Truy vấn sys.dm_db_index_usage_stats"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q162",
+          "question": "Để giảm thiểu tranh chấp khóa, bạn nên sử dụng chiến lược nào?",
+          "options": {
+            "A": "Tối ưu hóa việc sử dụng chỉ mục",
+            "B": "Vô hiệu hóa tất cả các chỉ mục",
+            "C": "Chỉ sử dụng chỉ mục clustered",
+            "D": "Không sử dụng chỉ mục nonclustered"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q163",
+          "question": "Để phát hiện các phiên (session) đang giữ khóa chia sẻ (shared lock), bạn có thể sử dụng truy vấn nào?",
+          "options": {
+            "A": "Truy vấn sys.dm_tran_locks với resource_type và request_mode phù hợp",
+            "B": "Truy vấn sys.dm_exec_requests",
+            "C": "Truy vấn sys.dm_os_waiting_tasks",
+            "D": "Truy vấn sys.dm_exec_sessions"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q164",
+          "question": "Để giảm thiểu thời gian chờ khóa, bạn nên sử dụng kỹ thuật nào?",
+          "options": {
+            "A": "Sử dụng truy vấn WITH (NOWAIT) hoặc WITH (TIMEOUT)",
+            "B": "Sử dụng truy vấn WITH (NOLOCK)",
+            "C": "Sử dụng truy vấn WITH (ROWLOCK)",
+            "D": "Sử dụng truy vấn WITH (PAGLOCK)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q165",
+          "question": "Để phát hiện các phiên (session) đang giữ khóa độc quyền (exclusive lock), bạn có thể sử dụng truy vấn nào?",
+          "options": {
+            "A": "Truy vấn sys.dm_tran_locks với resource_type và request_mode phù hợp",
+            "B": "Truy vấn sys.dm_exec_requests",
+            "C": "Truy vấn sys.dm_os_waiting_tasks",
+            "D": "Truy vấn sys.dm_exec_sessions"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q166",
+          "question": "Để giảm thiểu tranh chấp khóa, bạn nên sử dụng kỹ thuật nào?",
+          "options": {
+            "A": "Sử dụng lược đồ phân vùng (partitioning scheme) và hàm phân vùng (partitioning function)",
+            "B": "Sao chép dữ liệu (data replication)",
+            "C": "Nén dữ liệu (data compression)",
+            "D": "Mã hóa dữ liệu (data encryption)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q167",
+          "question": "Để phát hiện các phiên (session) đang giữ khóa cập nhật (update lock), bạn có thể sử dụng truy vấn nào?",
+          "options": {
+            "A": "Truy vấn sys.dm_tran_locks với resource_type và request_mode phù hợp",
+            "B": "Truy vấn sys.dm_exec_requests",
+            "C": "Truy vấn sys.dm_os_waiting_tasks",
+            "D": "Truy vấn sys.dm_exec_sessions"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q168",
+          "question": "Để giảm thiểu tranh chấp khóa, bạn nên sử dụng kỹ thuật nào?",
+          "options": {
+            "A": "Sử dụng lược đồ phân vùng (partitioning scheme) và hàm phân vùng (partitioning function)",
+            "B": "Sao chép dữ liệu (data replication)",
+            "C": "Nén dữ liệu (data compression)",
+            "D": "Mã hóa dữ liệu (data encryption)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q169",
+          "question": "Để phát hiện các phiên (session) đang giữ khóa ý định (intent lock), bạn có thể sử dụng truy vấn nào?",
+          "options": {
+            "A": "Truy vấn sys.dm_tran_locks với resource_type và request_mode phù hợp",
+            "B": "Truy vấn sys.dm_exec_requests",
+            "C": "Truy vấn sys.dm_os_waiting_tasks",
+            "D": "Truy vấn sys.dm_exec_sessions"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q170",
+          "question": "Để giảm thiểu thời gian chờ khóa, bạn nên sử dụng kỹ thuật nào?",
+          "options": {
+            "A": "Sử dụng các truy vấn được tham số hóa (parameterized queries)",
+            "B": "Sử dụng các truy vấn động (dynamic queries)",
+            "C": "Sử dụng các truy vấn không có chỉ mục",
+            "D": "Sử dụng các truy vấn phức tạp"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q171",
+          "question": "Để phát hiện các phiên (session) đang giữ khóa lược đồ (schema lock), bạn có thể sử dụng truy vấn nào?",
+          "options": {
+            "A": "Truy vấn sys.dm_tran_locks với resource_type và request_mode phù hợp",
+            "B": "Truy vấn sys.dm_exec_requests",
+            "C": "Truy vấn sys.dm_os_waiting_tasks",
+            "D": "Truy vấn sys.dm_exec_sessions"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q172",
+          "question": "Để giảm thiểu tranh chấp khóa, bạn nên sử dụng kỹ thuật nào?",
+          "options": {
+            "A": "Sử dụng tính năng Read Committed Snapshot Isolation (RCSI)",
+            "B": "Sử dụng tính năng Always On Availability Groups",
+            "C": "Sử dụng tính năng Database Mirroring",
+            "D": "Sử dụng tính năng Log Shipping"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q173",
+          "question": "Để phát hiện các phiên (session) đang giữ khóa bảng (table lock), bạn có thể sử dụng truy vấn nào?",
+          "options": {
+            "A": "Truy vấn sys.dm_tran_locks với resource_type và request_mode phù hợp",
+            "B": "Truy vấn sys.dm_exec_requests",
+            "C": "Truy vấn sys.dm_os_waiting_tasks",
+            "D": "Truy vấn sys.dm_exec_sessions"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q174",
+          "question": "Để giảm thiểu thời gian chờ khóa, bạn nên sử dụng kỹ thuật nào?",
+          "options": {
+            "A": "Sử dụng các truy vấn được biên dịch trước (precompiled queries)",
+            "B": "Sử dụng các truy vấn động (dynamic queries)",
+            "C": "Sử dụng các truy vấn không có chỉ mục",
+            "D": "Sử dụng các truy vấn phức tạp"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q175",
+          "question": "Để phát hiện các phiên (session) đang giữ khóa trang (page lock), bạn có thể sử dụng truy vấn nào?",
+          "options": {
+            "A": "Truy vấn sys.dm_tran_locks với resource_type và request_mode phù hợp",
+            "B": "Truy vấn sys.dm_exec_requests",
+            "C": "Truy vấn sys.dm_os_waiting_tasks",
+            "D": "Truy vấn sys.dm_exec_sessions"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q176",
+          "question": "Để giảm thiểu tranh chấp khóa, bạn nên sử dụng kỹ thuật nào?",
+          "options": {
+            "A": "Sử dụng tính năng Online Index Rebuild",
+            "B": "Sử dụng tính năng Database Mirroring",
+            "C": "Sử dụng tính năng Log Shipping",
+            "D": "Sử dụng tính năng Always On Availability Groups"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q177",
+          "question": "Để phát hiện các phiên (session) đang giữ khóa hàng (row lock), bạn có thể sử dụng truy vấn nào?",
+          "options": {
+            "A": "Truy vấn sys.dm_tran_locks với resource_type và request_mode phù hợp",
+            "B": "Truy vấn sys.dm_exec_requests",
+            "C": "Truy vấn sys.dm_os_waiting_tasks",
+            "D": "Truy vấn sys.dm_exec_sessions"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q178",
+          "question": "Để giảm thiểu thời gian chờ khóa, bạn nên sử dụng kỹ thuật nào?",
+          "options": {
+            "A": "Sử dụng các truy vấn được tối ưu hóa (optimized queries)",
+            "B": "Sử dụng các truy vấn động (dynamic queries)",
+            "C": "Sử dụng các truy vấn không có chỉ mục",
+            "D": "Sử dụng các truy vấn phức tạp"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q179",
+          "question": "Để phát hiện các phiên (session) đang giữ khóa khóa (key lock), bạn có thể sử dụng truy vấn nào?",
+          "options": {
+            "A": "Truy vấn sys.dm_tran_locks với resource_type và request_mode phù hợp",
+            "B": "Truy vấn sys.dm_exec_requests",
+            "C": "Truy vấn sys.dm_os_waiting_tasks",
+            "D": "Truy vấn sys.dm_exec_sessions"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "TB_Q180",
+          "question": "Để giảm thiểu tranh chấp khóa, bạn nên sử dụng kỹ thuật nào?",
+          "options": {
+            "A": "Sử dụng tính năng Resource Governor",
+            "B": "Sử dụng tính năng Database Mirroring",
+            "C": "Sử dụng tính năng Log Shipping",
+            "D": "Sử dụng tính năng Always On Availability Groups"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "subjects": [
+    {
+      "id": "DBMS",
+      "name": "DBMS - SQL Server",
+      "biIcon": "database-fill-gear",
+      "folder": "DBMS",
+      "description": "Quản trị CSDL SQL Server"
+    },
+    {
+      "id": "NhaKho",
+      "name": "Nhà kho dữ liệu",
+      "biIcon": "boxes",
+      "folder": "Nhà kho",
+      "description": "Data Warehouse, Pipeline, ML & AI-driven BI"
+    },
+    {
+      "id": "PTDLNC",
+      "name": "Phân tích dữ liệu nâng cao",
+      "biIcon": "graph-up-arrow",
+      "folder": "PTDLNC",
+      "description": "NumPy/pandas, Thống kê, Trực quan hóa, Lưu trữ, Làm sạch, Chuỗi thời gian, ML cơ bản"
+    },
+    {
+      "id": "ATTT",
+      "name": "An toàn thông tin",
+      "biIcon": "shield-lock-fill",
+      "folder": "ATTT",
+      "description": "Mật mã, kiểm soát truy cập, quản lý rủi ro (ALE/SLE), ATBM TMĐT"
+    }
+  ]
+}

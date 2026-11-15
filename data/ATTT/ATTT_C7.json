@@ -1,0 +1,445 @@
+{
+  "chapterId": "ATTT_C7",
+  "chapterName": "Chương 7",
+  "topics": [
+    {
+      "topicId": "ATTT_C7_T1",
+      "topicName": "Phần I – Trắc nghiệm",
+      "questions": [
+        {
+          "id": "ATTT_C7_T1_Q1",
+          "question": "Ricky đang xem xét nhật ký bảo mật để đánh giá độc lập các biện pháp kiểm soát an ninh. Ricky đang thực hiện quy trình rà soát bảo mật nào?",
+          "options": {
+            "A": "Giám sát (Monitor)",
+            "B": "Kiểm toán (Audit)",
+            "C": "Cải thiện (Improve)",
+            "D": "Bảo vệ (Secure)"
+          },
+          "correctAnswer": "B",
+          "explanation": "Trong giai đoạn kiểm toán của một cuộc rà soát bảo mật, các chuyên gia xem xét nhật ký và toàn bộ môi trường để đưa ra phân tích độc lập về mức độ hiệu quả của chính sách và các biện pháp kiểm soát an ninh."
+        },
+        {
+          "id": "ATTT_C7_T1_Q2",
+          "question": "Christopher đang thiết kế một chính sách an ninh cho tổ chức của mình. Anh muốn dùng cách tiếp cận cho phép một danh sách hợp lý các hoạt động nhưng không cho phép các hoạt động khác. Anh đang dự định dùng mức quyền hạn nào?",
+          "options": {
+            "A": "Tùy tiện (Promiscuous)",
+            "B": "Cho phép (Permissive)",
+            "C": "Thận trọng (Prudent)",
+            "D": "Hoang tưởng/khắt khe (Paranoid)"
+          },
+          "correctAnswer": "C",
+          "explanation": "Mức quyền hạn thận trọng cho phép một danh sách hợp lý các hoạt động diễn ra và cấm tất cả các hoạt động khác. Mức quyền hạn này phù hợp với hầu hết các doanh nghiệp."
+        },
+        {
+          "id": "ATTT_C7_T1_Q3",
+          "question": "Jacob đang thực hiện kiểm toán các biện pháp kiểm soát an ninh tại một tổ chức với vai trò người đánh giá độc lập. Câu hỏi nào sẽ KHÔNG nằm trong cuộc kiểm toán của anh?",
+          "options": {
+            "A": "Mức độ kiểm soát an ninh có phù hợp với rủi ro mà nó giải quyết không?",
+            "B": "Biện pháp kiểm soát an ninh có được đặt đúng chỗ và hoạt động tốt không?",
+            "C": "Biện pháp kiểm soát an ninh có hiệu quả trong việc giải quyết rủi ro mà nó được thiết kế để giải quyết không?",
+            "D": "Biện pháp kiểm soát an ninh có khả năng trở nên lỗi thời trong tương lai gần không?"
+          },
+          "correctAnswer": "D",
+          "explanation": "Mục đích của kiểm toán là kiểm tra xem các biện pháp kiểm soát có phù hợp, được cài đặt đúng và đáp ứng mục đích của chúng hay không. Kiểm toán không cố gắng xác định tuổi thọ dự kiến của các biện pháp kiểm soát."
+        },
+        {
+          "id": "ATTT_C7_T1_Q4",
+          "question": "Tiêu chuẩn quy định nào sẽ KHÔNG yêu cầu kiểm toán đối với các công ty tại Hoa Kỳ?",
+          "options": {
+            "A": "Đạo luật Sarbanes-Oxley (SOX)",
+            "B": "Đạo luật Bảo vệ Thông tin Cá nhân và Tài liệu Điện tử (PIPEDA)",
+            "C": "Đạo luật Bảo hiểm Y tế Khả chuyển và Trách nhiệm giải trình (HIPAA)",
+            "D": "Tiêu chuẩn Bảo mật Dữ liệu Ngành Thẻ Thanh toán (PCI DSS)"
+          },
+          "correctAnswer": "B",
+          "explanation": "PIPEDA là luật của Canada và sẽ không ảnh hưởng đến các công ty tại Hoa Kỳ."
+        },
+        {
+          "id": "ATTT_C7_T1_Q5",
+          "question": "Emily là giám đốc an ninh thông tin của một công ty lớn xử lý thông tin cá nhân nhạy cảm. Cô đang thuê một kiểm toán viên để tiến hành đánh giá chứng minh rằng công ty mình đang đáp ứng các yêu cầu về dữ liệu riêng tư của khách hàng. Cô nên yêu cầu loại đánh giá nào?",
+          "options": {
+            "A": "SOC 1",
+            "B": "SOC 2",
+            "C": "SOC 3",
+            "D": "SOC 4"
+          },
+          "correctAnswer": "C",
+          "explanation": "Báo cáo SOC 3 thường được yêu cầu đối với khách hàng của các nhà cung cấp dịch vụ SOC 2 để xác minh và chứng thực rằng tổ chức đang đáp ứng các yêu cầu về dữ liệu riêng tư của khách hàng và luật tuân thủ."
+        },
+        {
+          "id": "ATTT_C7_T1_Q6",
+          "question": "Mục nào là mục mà kiểm toán viên ít có khả năng xem xét nhất trong quá trình kiểm toán kiểm soát hệ thống?",
+          "options": {
+            "A": "Sơ yếu lý lịch của các quản trị viên hệ thống",
+            "B": "Hồ sơ sự cố",
+            "C": "Nhật ký ứng dụng",
+            "D": "Kết quả kiểm thử xâm nhập"
+          },
+          "correctAnswer": "A",
+          "explanation": "Mặc dù kiểm toán viên có quyền xem xét bất kỳ tài liệu hay hồ sơ nào liên quan đến cuộc kiểm toán, họ có khả năng xem nhật ký, hồ sơ sự cố và kết quả kiểm thử xâm nhập cao hơn nhiều so với sơ yếu lý lịch của các quản trị viên hệ thống."
+        },
+        {
+          "id": "ATTT_C7_T1_Q7",
+          "question": "Bộ khái niệm và chính sách nào dùng để quản lý hạ tầng, phát triển và vận hành CNTT?",
+          "options": {
+            "A": "ISO 27002",
+            "B": "Các mục tiêu kiểm soát cho thông tin và công nghệ liên quan (COBIT)",
+            "C": "Thư viện hạ tầng CNTT (ITIL)",
+            "D": "Khung an ninh mạng NIST (CSF)"
+          },
+          "correctAnswer": "C",
+          "explanation": "ITIL là một bộ khái niệm và chính sách để quản lý hạ tầng, phát triển và vận hành CNTT. ITIL được xuất bản thành một loạt sách, mỗi cuốn bao quát một chủ đề quản lý CNTT riêng."
+        },
+        {
+          "id": "ATTT_C7_T1_Q8",
+          "question": "Phương pháp thu thập dữ liệu kiểm toán nào giúp bảo đảm quá trình thu thập thông tin bao quát mọi lĩnh vực liên quan?",
+          "options": {
+            "A": "Danh mục kiểm tra (Checklist)",
+            "B": "Phỏng vấn",
+            "C": "Bảng câu hỏi",
+            "D": "Quan sát"
+          },
+          "correctAnswer": "A",
+          "explanation": "Kiểm toán viên dùng danh mục kiểm tra để bảo đảm họ đã bao quát tất cả các mục thông tin liên quan trong quá trình thu thập dữ liệu."
+        },
+        {
+          "id": "ATTT_C7_T1_Q9",
+          "question": "Curtis đang thực hiện kiểm toán một hệ thống quản lý danh tính. Câu hỏi nào KHÔNG có khả năng nằm trong phạm vi kiểm toán của anh?",
+          "options": {
+            "A": "Tổ chức có chính sách mật khẩu hiệu quả không?",
+            "B": "Tường lửa có chặn đúng các nỗ lực kết nối mạng không được yêu cầu không?",
+            "C": "Ai là người phê duyệt các yêu cầu truy cập?",
+            "D": "Chính sách mật khẩu có được thực thi đồng nhất không?"
+          },
+          "correctAnswer": "B",
+          "explanation": "Khi kiểm toán một hệ thống quản lý danh tính, bạn nên tập trung vào ba câu hỏi chính. Thứ nhất, ai phê duyệt các yêu cầu truy cập? Thứ hai, các cơ chế nào được dùng cho các yêu cầu an ninh cụ thể? Cuối cùng, tổ chức có chính sách mật khẩu hiệu quả không và nó có được thực thi đồng nhất không? Tường lửa nhìn chung không nằm trong phạm vi kiểm toán hệ thống quản lý danh tính."
+        },
+        {
+          "id": "ATTT_C7_T1_Q10",
+          "question": "Kiểm toán viên nên chia sẻ thông tin gì với khách hàng trong buổi phỏng vấn kết thúc (exit interview)?",
+          "options": {
+            "A": "Bản nháp của báo cáo kiểm toán",
+            "B": "Bản cuối cùng của báo cáo kiểm toán",
+            "C": "Chi tiết về các vấn đề lớn",
+            "D": "Kiểm toán viên không nên chia sẻ bất kỳ thông tin nào với khách hàng ở giai đoạn này"
+          },
+          "correctAnswer": "C",
+          "explanation": "Trong buổi phỏng vấn kết thúc, kiểm toán viên nên cảnh báo nhân sự chủ chốt về các vấn đề lớn và các khuyến nghị sẽ có trong báo cáo kiểm toán sau này. Điều này giúp ban quản lý phản ứng nhanh và xử lý các vấn đề nghiêm trọng. Ngoài các cảnh báo sớm này, kiểm toán viên không nên cung cấp chi tiết trước khi có báo cáo cuối cùng."
+        },
+        {
+          "id": "ATTT_C7_T1_Q11",
+          "question": "Mục nào thường KHÔNG phải là một phần trong báo cáo kiểm toán?",
+          "options": {
+            "A": "Các phát hiện (Findings)",
+            "B": "Cấu hình hệ thống",
+            "C": "Các khuyến nghị",
+            "D": "Lộ trình thời gian triển khai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Báo cáo kiểm toán thường gồm các phần chính sau: các phát hiện, các khuyến nghị, lộ trình thời gian triển khai, mức độ rủi ro, phản hồi của ban quản lý và theo dõi tiếp (follow-up)."
+        },
+        {
+          "id": "ATTT_C7_T1_Q12",
+          "question": "Loại công cụ giám sát an ninh nào có nhiều khả năng nhất phát hiện một thay đổi trái phép đối với hệ thống máy tính?",
+          "options": {
+            "A": "IDS mạng",
+            "B": "Giám sát tính toàn vẹn hệ thống",
+            "C": "CCTV",
+            "D": "Ngăn ngừa thất thoát dữ liệu"
+          },
+          "correctAnswer": "B",
+          "explanation": "Các công cụ giám sát tính toàn vẹn hệ thống, như Tripwire, cho phép bạn theo dõi các hệ thống máy tính để phát hiện thay đổi trái phép và báo cáo cho quản trị viên gần như theo thời gian thực."
+        },
+        {
+          "id": "ATTT_C7_T1_Q13",
+          "question": "Gina đang chuẩn bị giám sát hoạt động mạng bằng cách nghe lén gói tin (packet sniffing). Công nghệ nào nhiều khả năng nhất sẽ cản trở nỗ lực này nếu được dùng trên mạng?",
+          "options": {
+            "A": "Giao thức điều khiển truyền/giao thức Internet (TCP/IP)",
+            "B": "Secure Sockets Layer (SSL)",
+            "C": "Hệ thống tên miền (DNS)",
+            "D": "Giao thức cấu hình máy chủ động (DHCP)"
+          },
+          "correctAnswer": "B",
+          "explanation": "SSL là công nghệ mã hóa ở tầng ứng dụng, có thể cản trở việc giám sát mạng bằng cách che giấu nội dung liên lạc."
+        },
+        {
+          "id": "ATTT_C7_T1_Q14",
+          "question": "Anthony chịu trách nhiệm tinh chỉnh hệ thống phát hiện xâm nhập của tổ chức. Anh nhận thấy hệ thống báo động xâm nhập mỗi khi một quản trị viên kết nối vào máy chủ bằng Secure Shell (SSH). Đang xảy ra loại lỗi nào?",
+          "options": {
+            "A": "Lỗi quản trị từ xa",
+            "B": "Lỗi dương tính giả (false positive)",
+            "C": "Lỗi cắt xén (clipping)",
+            "D": "Lỗi âm tính giả (false negative)"
+          },
+          "correctAnswer": "B",
+          "explanation": "Lỗi dương tính giả xảy ra khi hệ thống chỉ ra hoạt động độc hại nhưng đó không phải là sự kiện an ninh thật. Báo động giả gây xao nhãng và lãng phí công sức quản trị."
+        },
+        {
+          "id": "ATTT_C7_T1_Q15",
+          "question": "Isaac chịu trách nhiệm rà soát nhật ký cho tổ chức của mình để cố gắng xác định các vấn đề an ninh. Anh có một lượng dữ liệu khổng lồ để rà soát. Loại công cụ nào hỗ trợ anh tốt nhất trong công việc này?",
+          "options": {
+            "A": "Quản lý thông tin và sự kiện an ninh (SIEM)",
+            "B": "Hệ thống ngăn chặn xâm nhập (IPS)",
+            "C": "Ngăn ngừa thất thoát dữ liệu (DLP)",
+            "D": "Mạng riêng ảo (VPN)"
+          },
+          "correctAnswer": "A",
+          "explanation": "Các hệ thống SIEM giúp tổ chức quản lý sự tăng trưởng bùng nổ của các tệp nhật ký. SIEM cung cấp một nền tảng để thu thập và phân tích nhật ký từ nhiều nguồn khác nhau."
+        },
+        {
+          "id": "ATTT_C7_T1_Q16",
+          "question": "Chiến lược của hệ thống phát hiện xâm nhập nào dựa vào đối sánh mẫu (pattern matching)?",
+          "options": {
+            "A": "Phát hiện hành vi",
+            "B": "Phát hiện dựa trên lưu lượng",
+            "C": "Phát hiện thống kê",
+            "D": "Phát hiện dựa trên chữ ký (Signature detection)"
+          },
+          "correctAnswer": "D",
+          "explanation": "Các hệ thống phát hiện dựa trên chữ ký dùng phát hiện dựa trên quy tắc và dựa vào đối sánh mẫu để so sánh lưu lượng hiện tại với các mẫu hoạt động của những cuộc tấn công mạng đã biết."
+        },
+        {
+          "id": "ATTT_C7_T1_Q17",
+          "question": "Hoạt động kiểm tra bảo mật nào sử dụng các công cụ quét để tìm các dịch vụ đang chạy trên các hệ thống?",
+          "options": {
+            "A": "Trinh sát (Reconnaissance)",
+            "B": "Kiểm thử xâm nhập",
+            "C": "Lập bản đồ mạng (Network mapping)",
+            "D": "Kiểm thử lỗ hổng"
+          },
+          "correctAnswer": "C",
+          "explanation": "Lập bản đồ mạng dùng các công cụ phần mềm quét để tìm các dịch vụ đang chạy trên các hệ thống và mạng của tổ chức."
+        },
+        {
+          "id": "ATTT_C7_T1_Q18",
+          "question": "Fran đang thực hiện kiểm thử bảo mật cho một ứng dụng mới. Cô không có bất kỳ quyền truy cập nào vào mã nguồn hoặc các chi tiết khác của ứng dụng đang kiểm thử. Fran đang thực hiện loại kiểm thử nào?",
+          "options": {
+            "A": "Kiểm thử hộp đen (Black-box test)",
+            "B": "Kiểm thử hộp trắng (White-box test)",
+            "C": "Kiểm thử hộp xám (Grey-box test)",
+            "D": "Kiểm thử hộp xanh (Blue-box test)"
+          },
+          "correctAnswer": "A",
+          "explanation": "Trong kiểm thử hộp đen, người đánh giá dùng các phương pháp kiểm thử không dựa trực tiếp trên kiến thức về kiến trúc hay thiết kế của chương trình. Người kiểm thử không có mã nguồn."
+        },
+        {
+          "id": "ATTT_C7_T1_Q19",
+          "question": "Khi nào ban quản lý của tổ chức nên có cơ hội phản hồi các phát hiện trong một cuộc kiểm toán?",
+          "options": {
+            "A": "Ban quản lý nên viết một báo cáo sau khi nhận được báo cáo kiểm toán cuối cùng.",
+            "B": "Ban quản lý nên đưa phản hồi của mình đối với bản nháp báo cáo kiểm toán vào báo cáo kiểm toán cuối cùng.",
+            "C": "Ban quản lý không nên có cơ hội phản hồi các phát hiện kiểm toán.",
+            "D": "Ban quản lý nên viết thư gửi Hội đồng quản trị sau khi nhận được báo cáo kiểm toán."
+          },
+          "correctAnswer": "B",
+          "explanation": "Ban quản lý nên xem xét bản nháp báo cáo kiểm toán và có cơ hội đưa ra phản hồi của ban quản lý cho từng phát hiện, phản hồi này sẽ được đưa vào bản cuối cùng của báo cáo kiểm toán."
+        },
+        {
+          "id": "ATTT_C7_T1_Q20",
+          "question": "Hoạt động nào là hoạt động mà kiểm toán viên ít có khả năng thực hiện nhất trong giai đoạn thu thập thông tin của một cuộc kiểm toán?",
+          "options": {
+            "A": "Kiểm thử lỗ hổng",
+            "B": "Viết báo cáo",
+            "C": "Kiểm thử xâm nhập",
+            "D": "Rà soát cấu hình"
+          },
+          "correctAnswer": "B",
+          "explanation": "Kiểm toán viên không viết báo cáo trong giai đoạn thu thập thông tin của cuộc kiểm toán. Thay vào đó, họ thu thập thông tin qua phỏng vấn, rà soát cấu hình, kiểm thử xâm nhập, kiểm thử lỗ hổng và các kỹ thuật khác."
+        }
+      ]
+    },
+    {
+      "topicId": "ATTT_C7_T2",
+      "topicName": "Phần II – Đúng/Sai",
+      "questions": [
+        {
+          "id": "ATTT_C7_T2_Q1",
+          "question": "Nhiều khu vực pháp lý yêu cầu kiểm toán theo quy định của pháp luật.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C7_T2_Q2",
+          "question": "Báo cáo SOC 1 chủ yếu tập trung vào an ninh.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Báo cáo SOC 1 chủ yếu tập trung vào các biện pháp kiểm soát nội bộ đối với báo cáo tài chính."
+        },
+        {
+          "id": "ATTT_C7_T2_Q3",
+          "question": "Báo cáo SOC 1 thường được triển khai cho các tổ chức phải tuân thủ Sarbanes-Oxley (SOX) hoặc Đạo luật Gramm-Leach-Bliley (GLBA).",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C7_T2_Q4",
+          "question": "Chuẩn đối chiếu kiểm toán (auditing benchmark) là tiêu chuẩn dùng để so sánh một hệ thống nhằm xác định nó có được cấu hình an toàn hay không.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C7_T2_Q5",
+          "question": "Trong một cuộc kiểm toán, kiểm toán viên so sánh thiết lập hiện tại của một máy tính hoặc thiết bị với một chuẩn đối chiếu để giúp xác định các điểm khác biệt.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C7_T2_Q6",
+          "question": "Sau khi các hoạt động kiểm toán hoàn tất, kiểm toán viên thực hiện phân tích dữ liệu.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C7_T2_Q7",
+          "question": "Trong giai đoạn bảo vệ (secure) của một cuộc rà soát bảo mật, bạn xem xét và đo lường tất cả các biện pháp kiểm soát để ghi nhận các hành động và thay đổi trên hệ thống.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Trong giai đoạn giám sát (monitor), bạn xem xét và đo lường tất cả các biện pháp kiểm soát để ghi nhận các hành động và thay đổi trên hệ thống. Trong giai đoạn bảo vệ, bạn bảo đảm các biện pháp kiểm soát mới và hiện có phối hợp với nhau để bảo vệ ở mức an ninh dự kiến."
+        },
+        {
+          "id": "ATTT_C7_T2_Q8",
+          "question": "Về các biện pháp kiểm soát an ninh, bốn mức quyền hạn phổ biến nhất là kém (poor), cho phép (permissive), thận trọng (prudent) và hoang tưởng/khắt khe (paranoid).",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Bốn mức quyền hạn phổ biến nhất là tùy tiện (promiscuous), cho phép (permissive), thận trọng (prudent) và hoang tưởng/khắt khe (paranoid)."
+        },
+        {
+          "id": "ATTT_C7_T2_Q9",
+          "question": "Các báo cáo SOC 2 được tạo cho các bên liên quan nội bộ và các bên liên quan được ủy quyền khác, và thường được triển khai cho các nhà cung cấp dịch vụ, trung tâm dữ liệu lưu trữ thuê và các nhà cung cấp điện toán đám mây được quản lý.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C7_T2_Q10",
+          "question": "Trong các giai đoạn lập kế hoạch và thực hiện kiểm toán, kiểm toán viên nhiều khả năng sẽ xem xét kết quả phân tích rủi ro.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C7_T2_Q11",
+          "question": "Ủy ban các Tổ chức Bảo trợ (COSO) là một bộ các thực tiễn tốt nhất cho quản lý CNTT.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "COSO là một tổ chức do tình nguyện viên điều hành, đưa ra hướng dẫn cho ban điều hành và các đơn vị quản trị về các khía cạnh quan trọng của quản trị tổ chức, đạo đức kinh doanh, kiểm soát nội bộ, quản lý rủi ro doanh nghiệp, gian lận và báo cáo tài chính. Các mục tiêu kiểm soát cho thông tin và công nghệ liên quan (COBIT) mới là một bộ các thực tiễn tốt nhất cho quản lý CNTT."
+        },
+        {
+          "id": "ATTT_C7_T2_Q12",
+          "question": "Thực hiện kiểm thử bảo mật bao gồm kiểm thử lỗ hổng và kiểm thử xâm nhập.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C7_T2_Q13",
+          "question": "Trong thu thập dữ liệu kiểm thử bảo mật, quan sát là đầu vào dùng để phân biệt giữa các quy trình trên giấy và cách công việc thực sự được thực hiện.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C7_T2_Q14",
+          "question": "Một báo cáo cho biết ổ đĩa của một hệ thống đã đầy 80% là dấu hiệu tốt cho thấy hệ thống đó có vấn đề.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Một báo cáo cho biết ổ đĩa của một hệ thống đã đầy 80% không nhất thiết là dấu hiệu hệ thống đó có vấn đề. Bạn cần biết trạng thái bình thường của hệ thống đó trông như thế nào bằng cách thiết lập một cấu hình cơ sở (baseline), để biết khi nào có điều gì đó không ổn."
+        },
+        {
+          "id": "ATTT_C7_T2_Q15",
+          "question": "Ngăn ngừa thất thoát dữ liệu (DLP) dùng các quy tắc kinh doanh để phân loại thông tin nhạy cảm nhằm ngăn người dùng cuối trái phép chia sẻ nó.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C7_T2_Q16",
+          "question": "Đối với giám sát nhật ký, âm tính giả (false negatives) là các cảnh báo có vẻ độc hại nhưng không phải là sự kiện an ninh thật.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Dương tính giả (false positives) mới là các cảnh báo có vẻ độc hại nhưng không phải là sự kiện an ninh thật. Âm tính giả là việc hệ thống cảnh báo không phát hiện được một sự kiện nghiêm trọng."
+        },
+        {
+          "id": "ATTT_C7_T2_Q17",
+          "question": "Bốn loại nhật ký chính bạn cần lưu giữ để hỗ trợ kiểm toán an ninh gồm sự kiện (event), truy cập (access), người dùng (user) và bảo mật (security).",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Bốn loại nhật ký chính bạn cần lưu giữ để hỗ trợ kiểm toán an ninh gồm sự kiện, truy cập, bảo mật và kiểm toán (audit)."
+        },
+        {
+          "id": "ATTT_C7_T2_Q18",
+          "question": "Các hệ thống phát hiện xâm nhập dựa trên bất thường so sánh hoạt động hiện tại với các hồ sơ đã lưu về hoạt động bình thường (dự kiến).",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C7_T2_Q19",
+          "question": "Trong kiểm thử bảo mật, trinh sát (reconnaissance) là việc xem xét một hệ thống để tìm hiểu càng nhiều càng tốt về tổ chức, các hệ thống và mạng của nó.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C7_T2_Q20",
+          "question": "Đối với hệ thống phát hiện xâm nhập (IDS), đối sánh có trạng thái (stateful matching) tìm các chuỗi cụ thể xuất hiện trên nhiều gói tin trong một luồng lưu lượng thay vì chỉ trong từng gói tin riêng lẻ.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,696 @@
+{
+  "chapterId": "HOT",
+  "chapterName": "Câu hỏi chẩn đoán & Quiz 1 (bám sát đề)",
+  "topics": [
+    {
+      "topicId": "HOT_T1",
+      "topicName": "Chẩn đoán (1–10): code pandas / NumPy",
+      "questions": [
+        {
+          "id": "HOT_T1_Q1",
+          "question": "Dòng code nào sau đây bị lỗi?<br><code>1  import pandas as pd</code><br><code>2  data = [('Long', 23), ('Nam', 21), ('Phong', 21), ('Giang', 24)]</code><br><code>3  df = pd.DataFrame(data1, columns=['Name','Age'])</code><br><code>4  df.head()</code>",
+          "options": {
+            "A": "Dòng 3 (dùng <code>data1</code> chưa khai báo, gây NameError)",
+            "B": "Dòng 1 (import pandas as pd)",
+            "C": "Dòng 4 (gọi <code>df.head()</code>)",
+            "D": "Dòng 2 (khai báo danh sách tuple)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T1_Q2",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.arange(6, 10).reshape(2, 2); print(arr)</code>",
+          "options": {
+            "A": "[[6 7] [8 9]]",
+            "B": "[6 7 8 9]",
+            "C": "[[6 7 8] [9 10 11]]",
+            "D": "[[6 8] [7 9]]"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T1_Q3",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.arange(2, 25, 3); print(arr)</code>",
+          "options": {
+            "A": "[2 5 8 11 14 17 20 23 26]",
+            "B": "[2 5 8 11 14 17 20 23 25]",
+            "C": "[2 5 8 11 14 17 20 23]",
+            "D": "[3 6 9 12 15 18 21 24]"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_T1_Q4",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.array([12, 15, 18, 11, 14, 17]); print(arr[3:5])</code>",
+          "options": {
+            "A": "[14 17]",
+            "B": "[11 14 17]",
+            "C": "[11 14]",
+            "D": "[18 11]"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_T1_Q5",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.array([12, 15, 18, 11, 14, 17]); print(arr[2:20:3])</code>",
+          "options": {
+            "A": "[18 17]",
+            "B": "[18 14]",
+            "C": "[18 11]",
+            "D": "[18 17 14]"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T1_Q6",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.array([12, 1, 5, 1, 8, 11, 14, 17]); print(arr[-2])</code>",
+          "options": {
+            "A": "8",
+            "B": "14",
+            "C": "17",
+            "D": "11"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_T1_Q7",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.arange(20, 40, 2); print(arr[arr &gt; 30])</code>",
+          "options": {
+            "A": "[32 34 36 38 40]",
+            "B": "[32 34 36 38]",
+            "C": "[20 22 24 26 28 30]",
+            "D": "[30 32 34 36 38]"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_T1_Q8",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.arange(20, 40, 2); print(arr[arr &lt;= 28])</code>",
+          "options": {
+            "A": "[20 22 24 26]",
+            "B": "[22 24 26 28 30]",
+            "C": "[28 30 32 34 36 38]",
+            "D": "[20 22 24 26 28]"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_T1_Q9",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.arange(22, 40); item = arr.tolist(); print(item[5])</code>",
+          "options": {
+            "A": "28",
+            "B": "27",
+            "C": "26",
+            "D": "5"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_T1_Q10",
+          "question": "Cho biết kết quả đoạn code sau?<br><code>arr = np.arange(22, 40); item = arr.tolist(); print(item[3] + item[2] + 10)</code>",
+          "options": {
+            "A": "49",
+            "B": "39",
+            "C": "59",
+            "D": "69"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "HOT_T2",
+      "topicName": "Chẩn đoán (11–25): kiểm định, thống kê, lấy mẫu, trực quan hóa",
+      "questions": [
+        {
+          "id": "HOT_T2_Q1",
+          "question": "Kiểm định nào dùng khi so sánh trung bình của một mẫu với một giá trị chuẩn cho trước (ví dụ thời gian xử lý so với 24 giờ)?",
+          "options": {
+            "A": "Paired t-test",
+            "B": "Independent two-sample t-test",
+            "C": "One-sample t-test",
+            "D": "One-way ANOVA"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_T2_Q2",
+          "question": "Kiểm định nào dùng để so sánh trung bình giữa hai nhóm độc lập (ví dụ thời gian giao dịch mobile và tại quầy)?",
+          "options": {
+            "A": "Chi-square",
+            "B": "Paired t-test",
+            "C": "Wilcoxon signed-rank",
+            "D": "Independent two-sample t-test"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_T2_Q3",
+          "question": "Kiểm định nào dùng để so sánh hai lần đo trước–sau trên cùng một nhóm đối tượng?",
+          "options": {
+            "A": "One-way ANOVA",
+            "B": "Paired t-test",
+            "C": "Independent t-test",
+            "D": "Mann-Whitney U"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_T2_Q4",
+          "question": "Kiểm định nào dùng để so sánh trung bình từ ba nhóm độc lập trở lên theo một yếu tố?",
+          "options": {
+            "A": "One-sample t-test",
+            "B": "One-way ANOVA",
+            "C": "Paired t-test",
+            "D": "Chi-square"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_T2_Q5",
+          "question": "Kiểm định nào dùng để kiểm tra mối liên hệ độc lập giữa hai biến phân loại?",
+          "options": {
+            "A": "Chi-square (χ²)",
+            "B": "Paired t-test",
+            "C": "Kruskal-Wallis H",
+            "D": "One-way ANOVA"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T2_Q6",
+          "question": "Khi dữ liệu thứ bậc (thang Likert 1–5) cần so sánh ba nhóm, kiểm định phù hợp là gì?",
+          "options": {
+            "A": "Independent t-test",
+            "B": "One-way ANOVA",
+            "C": "Kruskal-Wallis H",
+            "D": "Paired t-test"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_T2_Q7",
+          "question": "Giá trị Skewness = −1,87 cho biết điều gì?",
+          "options": {
+            "A": "Phân phối có đuôi nhẹ hơn phân phối chuẩn",
+            "B": "Lệch trái mạnh: đuôi bên trái dài/nặng",
+            "C": "Phân phối lệch phải mạnh về đuôi phải",
+            "D": "Phân phối đối xứng quanh giá trị trung bình"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_T2_Q8",
+          "question": "Độ đo nào dùng để đo mức đồng thuận giữa các cặp thứ hạng?",
+          "options": {
+            "A": "Kendall tau",
+            "B": "Covariance",
+            "C": "Spearman ρ",
+            "D": "Pearson r"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T2_Q9",
+          "question": "Phương pháp lấy mẫu phi xác suất nào thể hiện tính chất lan truyền?",
+          "options": {
+            "A": "Convenience (thuận tiện)",
+            "B": "Snowball (lan truyền)",
+            "C": "Quota (hạn ngạch)",
+            "D": "Purposive (chủ đích)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_T2_Q10",
+          "question": "Ý nghĩa của công thức P(A|B) = P(B|A) × P(A) / P(B) là gì?",
+          "options": {
+            "A": "Công thức xác suất của hai biến cố độc lập",
+            "B": "Định lý Bayes: cập nhật xác suất hậu nghiệm của A sau khi quan sát bằng chứng B",
+            "C": "Công thức tính xác suất của biến cố đối",
+            "D": "Công thức tính hệ số tương quan"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_T2_Q11",
+          "question": "KDE plot là gì?",
+          "options": {
+            "A": "Biểu đồ ma trận tương quan dạng lưới",
+            "B": "Biểu đồ đếm tần suất của biến phân loại",
+            "C": "Ước lượng mật độ xác suất bằng đường cong mượt (phi tham số)",
+            "D": "Biểu đồ phân tán có đường hồi quy tuyến tính"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_T2_Q12",
+          "question": "Ý nghĩa của LM plot là gì?",
+          "options": {
+            "A": "Vẽ ma trận tương quan giữa các biến",
+            "B": "Đếm số lượng của từng danh mục",
+            "C": "Hiển thị phân phối của biến phân loại",
+            "D": "Scatter plot kèm đường hồi quy tuyến tính (Linear Model)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_T2_Q13",
+          "question": "Hàm nào giúp hiển thị nhiều đồ thị trên cùng một khung hình?",
+          "options": {
+            "A": "<code>plt.legend()</code>",
+            "B": "<code>plt.subplots(rows, cols)</code>",
+            "C": "<code>plt.tight_layout()</code>",
+            "D": "<code>plt.multiplots(rows, cols)</code>"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_T2_Q14",
+          "question": "Hàm nào giúp tự động căn chỉnh khoảng cách, đảm bảo tiêu đề và nhãn không bị chồng chéo?",
+          "options": {
+            "A": "<code>plt.annotate()</code>",
+            "B": "<code>plt.tight_layout()</code>",
+            "C": "<code>plt.legend()</code>",
+            "D": "<code>plt.subplots()</code>"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_T2_Q15",
+          "question": "Hàm nào dùng để so sánh các giá trị số lượng giữa các danh mục (categories) khác nhau?",
+          "options": {
+            "A": "<code>plt.plot()</code>",
+            "B": "<code>plt.bar()</code>",
+            "C": "<code>plt.pie()</code>",
+            "D": "<code>plt.scatter()</code>"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "HOT_T3",
+      "topicName": "Chẩn đoán (26–35): lưu trữ dữ liệu, thiếu dữ liệu, ngoại lệ",
+      "questions": [
+        {
+          "id": "HOT_T3_Q1",
+          "question": "MongoDB là cơ sở dữ liệu như thế nào?",
+          "options": {
+            "A": "NoSQL dạng Document (JSON/từ điển), dùng <code>pymongo</code>",
+            "B": "Cơ sở dữ liệu đồ thị với nút và cạnh",
+            "C": "Cơ sở dữ liệu Key–Value lưu trên RAM",
+            "D": "Cơ sở dữ liệu quan hệ lưu dạng bảng"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T3_Q2",
+          "question": "Thế nào là định dạng Pickle?",
+          "options": {
+            "A": "Nhị phân đặc thù của Python, giữ nguyên dtype, không dùng chia sẻ đa ngôn ngữ",
+            "B": "Định dạng văn bản chuẩn trao đổi dữ liệu giữa mọi ngôn ngữ",
+            "C": "Định dạng lưu đồ thị với nút và cạnh",
+            "D": "Định dạng lưu theo cột, nén tốt cho Big Data"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T3_Q3",
+          "question": "Công nghệ Neo4j là gì?",
+          "options": {
+            "A": "CSDL Document dùng <code>pymongo</code> và <code>insert_one()</code>",
+            "B": "Dịch vụ lưu trữ file dạng bucket trên cloud",
+            "C": "CSDL Key–Value lưu trên RAM dùng <code>r.set()</code>",
+            "D": "CSDL dạng đồ thị (Graph), truy vấn bằng Cypher"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_T3_Q4",
+          "question": "Amazon AWS (S3) quản lý file như thế nào?",
+          "options": {
+            "A": "Theo Bucket, dùng <code>boto3</code> (<code>upload_file</code>, <code>download_file</code>)",
+            "B": "Theo Keyspace và Table dạng cột",
+            "C": "Theo Collection và Document của MongoDB",
+            "D": "Theo Container và tên Blob của Azure"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T3_Q5",
+          "question": "Cơ sở dữ liệu nào ghi dữ liệu bằng hàm <code>r.set()</code> và đọc dữ liệu bằng hàm <code>r.get()</code>?",
+          "options": {
+            "A": "Neo4j",
+            "B": "MongoDB",
+            "C": "Cassandra",
+            "D": "Redis"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_T3_Q6",
+          "question": "Công thức tứ phân vị trong xử lý ngoại lệ (IQR) là gì?",
+          "options": {
+            "A": "Dưới: Min của cột; Trên: Max của cột",
+            "B": "Dưới: Mean − 3×SD; Trên: Mean + 3×SD",
+            "C": "Dưới: Q1 − IQR; Trên: Q3 + IQR²",
+            "D": "Dưới: Q1 − 1,5×IQR; Trên: Q3 + 1,5×IQR"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_T3_Q7",
+          "question": "MCAR là loại khuyết dữ liệu nào?",
+          "options": {
+            "A": "Do dữ liệu bị trùng lặp",
+            "B": "Liên quan đến biến đã ghi nhận (ví dụ người lớn tuổi bỏ trống lương)",
+            "C": "Liên quan trực tiếp đến chính giá trị bị thiếu (ví dụ không khai nợ)",
+            "D": "Hoàn toàn ngẫu nhiên, không liên quan đến bất kỳ dữ liệu nào (ví dụ lỗi cảm biến)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_T3_Q8",
+          "question": "MAR là loại khuyết dữ liệu nào?",
+          "options": {
+            "A": "Thiếu liên quan đến biến đã ghi nhận khác, không phải giá trị thiếu",
+            "B": "Thiếu hoàn toàn ngẫu nhiên, không gắn với dữ liệu nào",
+            "C": "Thiếu do lỗi định dạng của người nhập",
+            "D": "Thiếu do chính giá trị bị thiếu hoặc yếu tố ẩn"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T3_Q9",
+          "question": "MNAR là loại khuyết dữ liệu nào?",
+          "options": {
+            "A": "Thiếu suy ra được từ biến đã ghi nhận khác",
+            "B": "Thiếu do lỗi cảm biến hoặc lỗi hệ thống",
+            "C": "Thiếu liên quan trực tiếp đến chính giá trị bị thiếu hoặc yếu tố ẩn",
+            "D": "Thiếu hoàn toàn ngẫu nhiên, không liên quan dữ liệu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_T3_Q10",
+          "question": "Các điểm dữ liệu vượt quá bao nhiêu độ lệch chuẩn thì được xem là ngoại lệ (theo Z-score)?",
+          "options": {
+            "A": "2 độ lệch chuẩn",
+            "B": "1 độ lệch chuẩn",
+            "C": "3 độ lệch chuẩn",
+            "D": "0,5 độ lệch chuẩn"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_T3_Q11",
+          "question": "Hàm nào trong pandas ép các giá trị cực đoan về sát một ngưỡng an toàn?",
+          "options": {
+            "A": "<code>.clip()</code>",
+            "B": "<code>.astype()</code>",
+            "C": "<code>.drop_duplicates()</code>",
+            "D": "<code>.fillna()</code>"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T3_Q12",
+          "question": "Nhận diện ngoại lệ bằng Z-score được thực hiện như thế nào?",
+          "options": {
+            "A": "Đếm tần suất xuất hiện của giá trị x",
+            "B": "Z = (x − mean)/SD; |Z| &gt; 3 là ngoại lệ",
+            "C": "Z = (x − Q1)/IQR; so với ngưỡng 1,5",
+            "D": "So sánh x với median của cả cột"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "HOT_T4",
+      "topicName": "Chẩn đoán (36–45): học máy",
+      "questions": [
+        {
+          "id": "HOT_T4_Q1",
+          "question": "Nếu R² = 0,8; số mẫu n = 1000; số biến độc lập p = 30 thì Adjusted R² bằng bao nhiêu?",
+          "options": {
+            "A": "0,7700",
+            "B": "0,8000",
+            "C": "0,7938",
+            "D": "0,8200"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_T4_Q2",
+          "question": "Một nút có 7 khách hàng (5 Rời bỏ, 2 Không rời bỏ). Gini Impurity bằng bao nhiêu?",
+          "options": {
+            "A": "≈ 0,408",
+            "B": "≈ 0,286",
+            "C": "≈ 0,714",
+            "D": "≈ 0,500"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T4_Q3",
+          "question": "Chức năng của nút gốc (root node) trong cây quyết định là gì?",
+          "options": {
+            "A": "Chỉ chứa các điểm nhiễu của dữ liệu",
+            "B": "Đưa ra kết quả dự đoán cuối cùng",
+            "C": "Đại diện toàn bộ dữ liệu, phân tách đầu tiên",
+            "D": "Chỉ dùng để tính chỉ số Gini"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_T4_Q4",
+          "question": "Chức năng của nút trong (decision/internal node) trong cây quyết định là gì?",
+          "options": {
+            "A": "Kiểm tra điều kiện trên đặc trưng và rẽ nhánh",
+            "B": "Đưa ra nhãn dự đoán cuối cùng",
+            "C": "Loại bỏ các đặc trưng ít quan trọng",
+            "D": "Chứa toàn bộ dữ liệu huấn luyện"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T4_Q5",
+          "question": "Chức năng của nút lá (leaf node) trong cây quyết định là gì?",
+          "options": {
+            "A": "Kiểm tra điều kiện để rẽ nhánh",
+            "B": "Bắt đầu phân tách dữ liệu đầu tiên",
+            "C": "Tính chỉ số VIF cho các biến",
+            "D": "Đưa ra kết quả dự đoán, không phân tách thêm"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_T4_Q6",
+          "question": "Chỉ số nào dùng để đo lường và xác định mức độ đa cộng tuyến của các biến?",
+          "options": {
+            "A": "VIF (Variance Inflation Factor)",
+            "B": "MAPE (Mean Absolute Percentage Error)",
+            "C": "Gini Impurity (độ tạp chất)",
+            "D": "AIC (Akaike Information Criterion)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T4_Q7",
+          "question": "β₁ (Slope) trong hồi quy tuyến tính là gì?",
+          "options": {
+            "A": "Hệ số xác định R² của mô hình",
+            "B": "Mức thay đổi trung bình của y khi x tăng 1 đơn vị",
+            "C": "Sai số ngẫu nhiên của mô hình",
+            "D": "Giá trị dự đoán của y khi x bằng 0"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_T4_Q8",
+          "question": "DBSCAN là gì?",
+          "options": {
+            "A": "Thuật toán hồi quy có điều chuẩn L1/L2",
+            "B": "Thuật toán boosting xây cây tuần tự",
+            "C": "Phương pháp mã hóa one-hot cho biến phân loại",
+            "D": "Phân cụm dựa trên mật độ, phát hiện điểm nhiễu"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_T4_Q9",
+          "question": "Thuật toán Random Forest là gì?",
+          "options": {
+            "A": "Ensemble nhiều cây quyết định, kết hợp bằng bình chọn/trung bình",
+            "B": "Một cây quyết định duy nhất rất sâu",
+            "C": "Mô hình hồi quy tuyến tính có điều chuẩn",
+            "D": "Thuật toán phân cụm theo mật độ điểm"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T4_Q10",
+          "question": "Regularization sử dụng kỹ thuật nào để kiểm soát độ phức tạp, ngăn chặn Overfitting?",
+          "options": {
+            "A": "Thêm thành phần phạt (L1/L2) vào hàm mất mát",
+            "B": "Tăng số lượng biến độc lập",
+            "C": "Xóa bớt dữ liệu huấn luyện",
+            "D": "Tăng độ sâu tối đa của cây"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T4_Q11",
+          "question": "Thuật toán nào xử lý tốt trên các tập dữ liệu nhiều nhiễu hoặc dữ liệu có không gian đa chiều?",
+          "options": {
+            "A": "Một cây quyết định đơn lẻ",
+            "B": "Random Forest",
+            "C": "Hồi quy tuyến tính đơn",
+            "D": "K-Means"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_T4_Q12",
+          "question": "One-vs-One (OvO) là gì?",
+          "options": {
+            "A": "Huấn luyện một bộ phân loại nhị phân cho mỗi cặp lớp",
+            "B": "Huấn luyện mỗi lớp đối với phần còn lại",
+            "C": "Bình chọn các cây độc lập nhau",
+            "D": "Dùng một cây quyết định duy nhất"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T4_Q13",
+          "question": "XGBoost là gì?",
+          "options": {
+            "A": "Gradient Boosting: cây xây tuần tự, cây sau sửa sai cây trước",
+            "B": "Phương pháp lấy mẫu phi xác suất",
+            "C": "Phương pháp mã hóa biến phân loại",
+            "D": "Thuật toán phân cụm theo mật độ điểm"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T4_Q14",
+          "question": "Hard Voting là gì?",
+          "options": {
+            "A": "Chọn mô hình tốt nhất duy nhất",
+            "B": "Nhân xác suất các mô hình",
+            "C": "Mỗi mô hình bỏ một phiếu cho nhãn dự đoán, chọn nhãn nhiều phiếu nhất",
+            "D": "Lấy trung bình xác suất dự đoán của các mô hình"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_T4_Q15",
+          "question": "Soft Voting là gì?",
+          "options": {
+            "A": "Mỗi mô hình bỏ một phiếu cho nhãn",
+            "B": "Lấy trung bình xác suất của các mô hình rồi chọn lớp cao nhất",
+            "C": "Chọn nhãn xuất hiện ít nhất trong dự đoán",
+            "D": "Chọn mô hình có ít tham số nhất"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "HOT_T5",
+      "topicName": "Quiz 1: Trực quan hóa dữ liệu",
+      "questions": [
+        {
+          "id": "HOT_T5_Q1",
+          "question": "Biểu đồ nào được xem như biểu đồ tần suất dành riêng cho các biến phân loại?",
+          "options": {
+            "A": "Box plot",
+            "B": "Bar plot",
+            "C": "KDE plot",
+            "D": "Count plot"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_T5_Q2",
+          "question": "Thành phần nào tự động căn chỉnh khoảng cách, đảm bảo tiêu đề và nhãn không bị chồng chéo?",
+          "options": {
+            "A": "Annotations",
+            "B": "Figure Size",
+            "C": "Ticks &amp; Grids",
+            "D": "Tight layout"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "HOT_T5_Q3",
+          "question": "Với Pair plot, đường chéo (Diagonal plots) hiển thị biểu đồ nào?",
+          "options": {
+            "A": "Scatter plot",
+            "B": "Histogram plot",
+            "C": "Bar LM plot",
+            "D": "Count plot"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_T5_Q4",
+          "question": "Thành phần nào dùng để chèn văn bản hoặc mũi tên hướng dẫn nhằm giải thích chi tiết một điểm dữ liệu?",
+          "options": {
+            "A": "Annotations",
+            "B": "Tight layout",
+            "C": "Legends",
+            "D": "Figure Size"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T5_Q5",
+          "question": "Hàm nào giúp hiển thị nhiều đồ thị trên cùng một khung hình?",
+          "options": {
+            "A": "<code>plt.multsubplots(rows, cols, high)</code>",
+            "B": "<code>plt.multiplots(rows, cols)</code>",
+            "C": "<code>plt.subplots(rows, cols)</code>",
+            "D": "<code>plt.subplots(rows, cols, high)</code>"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "HOT_T5_Q6",
+          "question": "Hàm nào dùng để so sánh các giá trị số lượng giữa các danh mục khác nhau?",
+          "options": {
+            "A": "<code>plt.scatter()</code>",
+            "B": "<code>plt.bar()</code>",
+            "C": "<code>plt.plot()</code>",
+            "D": "<code>plt.pie()</code>"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "HOT_T5_Q7",
+          "question": "Hàm <code>corr()</code> được dùng cho biểu đồ nào?",
+          "options": {
+            "A": "Heatmap",
+            "B": "Violin plot",
+            "C": "Joint plot",
+            "D": "Count plot"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "HOT_T5_Q8",
+          "question": "Biểu đồ nào là sự kết hợp trực quan giữa Box plot và KDE plot?",
+          "options": {
+            "A": "Bar LM plot",
+            "B": "Histogram plot",
+            "C": "Count plot",
+            "D": "Violin plot"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    }
+  ]
+}

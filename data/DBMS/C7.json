@@ -1,0 +1,268 @@
+{
+  "chapterId": "C7",
+  "chapterName": "SQL Server Metadata",
+  "topics": [
+    {
+      "topicId": "C7_T1",
+      "topicName": "Tổng quan về Metadata",
+      "questions": [
+        {
+          "id": "C7_T1_Q1",
+          "question": "Metadata trong SQL Server là gì?",
+          "options": {
+            "A": "Dữ liệu người dùng",
+            "B": "Dữ liệu mô tả cấu trúc và trạng thái hệ thống",
+            "C": "Dữ liệu tạm thời",
+            "D": "Dữ liệu backup"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T1_Q2",
+          "question": "Metadata giúp ích gì trong quản trị hệ thống?",
+          "options": {
+            "A": "Tăng tốc độ mạng",
+            "B": "Giám sát, tối ưu và chẩn đoán hệ thống",
+            "C": "Tăng dung lượng lưu trữ",
+            "D": "Tự động hóa backup"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T1_Q3",
+          "question": "Metadata được lưu trữ ở đâu trong SQL Server?",
+          "options": {
+            "A": "Trong bảng người dùng",
+            "B": "Trong các catalog views và DMVs",
+            "C": "Trong file log",
+            "D": "Trong tempdb"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C7_T2",
+      "topicName": "Catalog Views",
+      "questions": [
+        {
+          "id": "C7_T2_Q1",
+          "question": "Catalog views cung cấp loại thông tin nào?",
+          "options": {
+            "A": "Thống kê hiệu suất",
+            "B": "Cấu trúc tĩnh của cơ sở dữ liệu",
+            "C": "Truy vấn đang chạy",
+            "D": "Thông tin mạng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T2_Q2",
+          "question": "View nào chứa thông tin về tất cả các database trong instance?",
+          "options": {
+            "A": "sys.tables",
+            "B": "sys.databases",
+            "C": "sys.columns",
+            "D": "sys.indexes"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T2_Q3",
+          "question": "View nào mô tả các mối quan hệ giữa các đối tượng trong database?",
+          "options": {
+            "A": "sys.dm_exec_requests",
+            "B": "sys.objects",
+            "C": "sys.dm_os_wait_stats",
+            "D": "sys.dm_db_file_space_usage"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C7_T3",
+      "topicName": "Dynamic Management Views (DMVs)",
+      "questions": [
+        {
+          "id": "C7_T3_Q1",
+          "question": "DMVs cung cấp loại thông tin nào?",
+          "options": {
+            "A": "Cấu trúc bảng",
+            "B": "Trạng thái động của hệ thống",
+            "C": "Lịch sử backup",
+            "D": "Cấu hình mạng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T3_Q2",
+          "question": "DMV nào dùng để theo dõi các truy vấn đang thực thi?",
+          "options": {
+            "A": "sys.dm_exec_sessions",
+            "B": "sys.dm_exec_requests",
+            "C": "sys.dm_os_wait_stats",
+            "D": "sys.dm_exec_connections"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T3_Q3",
+          "question": "DMV nào dùng để phân tích các loại chờ trong hệ thống?",
+          "options": {
+            "A": "sys.dm_exec_query_stats",
+            "B": "sys.dm_os_wait_stats",
+            "C": "sys.dm_exec_requests",
+            "D": "sys.dm_os_schedulers"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T3_Q4",
+          "question": "DMV nào cung cấp thông tin về bộ nhớ và hiệu suất?",
+          "options": {
+            "A": "sys.dm_exec_requests",
+            "B": "sys.dm_os_performance_counters",
+            "C": "sys.dm_db_file_space_usage",
+            "D": "sys.dm_server_registry"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C7_T4",
+      "topicName": "Metadata về hiệu suất và bộ nhớ",
+      "questions": [
+        {
+          "id": "C7_T4_Q1",
+          "question": "“Memory Grants Pending” phản ánh điều gì?",
+          "options": {
+            "A": "Số lượng truy vấn đang chạy",
+            "B": "Số truy vấn đang chờ cấp phát bộ nhớ",
+            "C": "Số lượng bảng trong bộ nhớ",
+            "D": "Số lượng index bị lỗi"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T4_Q2",
+          "question": "“Buffer Cache Hit Ratio” càng cao thì:",
+          "options": {
+            "A": "Hệ thống càng chậm",
+            "B": "Cần thêm RAM",
+            "C": "Hiệu suất truy xuất dữ liệu càng tốt",
+            "D": "Tăng số lượng index"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T4_Q3",
+          "question": "“Average Latch Wait Time” phản ánh:",
+          "options": {
+            "A": "Thời gian chờ truy vấn",
+            "B": "Thời gian trung bình chờ latch để truy cập bộ nhớ",
+            "C": "Thời gian backup",
+            "D": "Thời gian khởi động dịch vụ"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C7_T5",
+      "topicName": "Metadata về dung lượng và file",
+      "questions": [
+        {
+          "id": "C7_T5_Q1",
+          "question": "Metadata nào giúp theo dõi dung lượng file dữ liệu?",
+          "options": {
+            "A": "sys.dm_exec_requests",
+            "B": "sys.master_files",
+            "C": "sys.dm_os_wait_stats",
+            "D": "sys.dm_exec_sessions"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T5_Q2",
+          "question": "DMV nào dùng để kiểm tra dung lượng sử dụng của các file trong tempdb?",
+          "options": {
+            "A": "sys.dm_os_buffer_descriptors",
+            "B": "sys.dm_db_file_space_usage",
+            "C": "sys.dm_io_virtual_file_stats",
+            "D": "sys.database_files"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T5_Q3",
+          "question": "DMV nào cung cấp thống kê I/O cho các file dữ liệu và log?",
+          "options": {
+            "A": "sys.dm_exec_requests",
+            "B": "sys.dm_io_virtual_file_stats",
+            "C": "sys.dm_db_file_space_usage",
+            "D": "sys.dm_exec_sessions"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C7_T6",
+      "topicName": "Metadata về blocking và page-level",
+      "questions": [
+        {
+          "id": "C7_T6_Q1",
+          "question": "Hàm nào dùng để giải mã chuỗi page_resource?",
+          "options": {
+            "A": "sys.fn_get_sql",
+            "B": "sys.fn_PageResCracker",
+            "C": "sys.fn_index_usage",
+            "D": "sys.fn_get_waits"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T6_Q2",
+          "question": "DMV nào trả về thông tin header của một trang dữ liệu cụ thể?",
+          "options": {
+            "A": "sys.dm_exec_requests",
+            "B": "sys.dm_db_page_info",
+            "C": "sys.dm_os_buffer_descriptors",
+            "D": "sys.dm_db_index_physical_stats"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T6_Q3",
+          "question": "View nào (dù đã lỗi thời) vẫn được dùng để kiểm tra blocking?",
+          "options": {
+            "A": "sys.dm_exec_sessions",
+            "B": "sys.sysprocesses",
+            "C": "sys.dm_exec_requests",
+            "D": "sys.dm_os_wait_stats"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C7_T7",
+      "topicName": "Metadata về dịch vụ và cấu hình",
+      "questions": [
+        {
+          "id": "C7_T7_Q1",
+          "question": "DMV nào cung cấp thông tin về các dịch vụ SQL Server đang chạy?",
+          "options": {
+            "A": "sys.dm_exec_requests",
+            "B": "sys.dm_server_services",
+            "C": "sys.dm_os_sys_info",
+            "D": "sys.dm_server_registry"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    }
+  ]
+}

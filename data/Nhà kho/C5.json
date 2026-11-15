@@ -1,0 +1,812 @@
+{
+  "chapterId": "C5",
+  "chapterName": "Thuật toán khai thác dữ liệu cốt lõi",
+  "topics": [
+    {
+      "topicId": "C5_T1",
+      "topicName": "Luật kết hợp: Support, Confidence, Lift",
+      "questions": [
+        {
+          "id": "C5_T1_Q1",
+          "question": "Luật kết hợp có dạng X ⇒ Y. X được gọi là gì?",
+          "options": {
+            "A": "Ngưỡng",
+            "B": "Hậu đề (Consequent)",
+            "C": "Độ nâng",
+            "D": "Tiền đề (Antecedent)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T1_Q2",
+          "question": "Công thức Support của luật X ⇒ Y là gì?",
+          "options": {
+            "A": "Sup(X) × Sup(Y)",
+            "B": "Conf(X⇒Y) / P(Y)",
+            "C": "Sup(X ∪ Y) / Sup(X)",
+            "D": "Số giao dịch chứa cả X và Y / Tổng số giao dịch"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T1_Q3",
+          "question": "Công thức Confidence của luật X ⇒ Y là gì?",
+          "options": {
+            "A": "Sup(X ∪ Y) / Tổng giao dịch",
+            "B": "Sup(X ∪ Y) / Sup(X)",
+            "C": "Sup(X) × Sup(Y)",
+            "D": "Sup(Y) / Sup(X)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T1_Q4",
+          "question": "Công thức Lift của luật X ⇒ Y là gì?",
+          "options": {
+            "A": "Conf(X⇒Y) × P(Y)",
+            "B": "Conf(X⇒Y) / P(Y)",
+            "C": "Sup(X ∪ Y) − Sup(X)",
+            "D": "Sup(X) / Sup(Y)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T1_Q5",
+          "question": "Lift > 1 có ý nghĩa gì?",
+          "options": {
+            "A": "Tiền đề làm giảm khả năng xảy ra hậu đề",
+            "B": "X và Y độc lập",
+            "C": "Luật không có ý nghĩa",
+            "D": "Tiền đề làm tăng khả năng xảy ra hậu đề (quan hệ tích cực)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T1_Q6",
+          "question": "Lift = 1 có ý nghĩa gì?",
+          "options": {
+            "A": "Quan hệ tiêu cực",
+            "B": "Quan hệ tích cực mạnh",
+            "C": "Luật tuyệt đối đúng",
+            "D": "Tiền đề và hậu đề độc lập, không tác động lẫn nhau"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T1_Q7",
+          "question": "Lift < 1 có ý nghĩa gì?",
+          "options": {
+            "A": "Quan hệ tích cực",
+            "B": "Hai biến độc lập",
+            "C": "Confidence bằng 1",
+            "D": "Tiền đề làm giảm khả năng xảy ra hậu đề (quan hệ tiêu cực)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T1_Q8",
+          "question": "1000 giao dịch, có 262 giao dịch chứa đủ tiền đề và hậu đề. Support của luật là?",
+          "options": {
+            "A": "0.283",
+            "B": "0.926",
+            "C": "1.52",
+            "D": "0.262"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T1_Q9",
+          "question": "Có 283 giao dịch chứa tiền đề và 262 giao dịch chứa cả tiền đề lẫn hậu đề. Confidence ≈ ?",
+          "options": {
+            "A": "0.926",
+            "B": "1.52",
+            "C": "0.61",
+            "D": "0.262"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T1_Q10",
+          "question": "Conf(L) ≈ 0.926 và P(Y) = 0.61. Lift(L) ≈ ?",
+          "options": {
+            "A": "1.52",
+            "B": "0.926",
+            "C": "0.61",
+            "D": "0.565"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T1_Q11",
+          "question": "Theo slide, Confidence trong khoảng 0.9–1 được đánh giá như thế nào?",
+          "options": {
+            "A": "Luật trung bình",
+            "B": "Luật rất mạnh, đáng tin cậy",
+            "C": "Luật hiếm",
+            "D": "Luật yếu"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T1_Q12",
+          "question": "Công thức Leverage(X → Y) là gì?",
+          "options": {
+            "A": "Sup(X) + Sup(Y)",
+            "B": "Sup(X ∪ Y) − Sup(X) × Sup(Y)",
+            "C": "Sup(X ∪ Y) / (Sup(X) × Sup(Y))",
+            "D": "Sup(X ∪ Y) / Sup(X)"
+          },
+          "correctAnswer": "B",
+          "images": [
+            "assets/img/eq_leverage.png"
+          ]
+        },
+        {
+          "id": "C5_T1_Q13",
+          "question": "Thông thường người ta chọn ngưỡng minsup và minconf là bao nhiêu?",
+          "options": {
+            "A": "minsup = 0.5, minconf = 0.1",
+            "B": "minsup = 0.8, minconf = 0.01",
+            "C": "minsup = 0.01 (1%), minconf = 0.8 (80%)",
+            "D": "minsup = 0.1, minconf = 0.1"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T1_Q14",
+          "question": "Cho cơ sở dữ liệu giao dịch gồm 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với L: {c} → {d,e}, Sup(L) có giá trị là bao nhiêu?",
+          "options": {
+            "A": "0.875 (7/8)",
+            "B": "0.5",
+            "C": "0.375 (3/8)",
+            "D": "0.429 (3/7)"
+          },
+          "correctAnswer": "C",
+          "images": [
+            "assets/img/txn_table.png"
+          ]
+        },
+        {
+          "id": "C5_T1_Q15",
+          "question": "Cho cơ sở dữ liệu giao dịch gồm 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với L: {c} → {d,e}, Conf(L) có giá trị là bao nhiêu?",
+          "options": {
+            "A": "≈ 0.429 (3/7)",
+            "B": "0.375",
+            "C": "0.75",
+            "D": "0.875"
+          },
+          "correctAnswer": "A",
+          "images": [
+            "assets/img/txn_table.png"
+          ]
+        },
+        {
+          "id": "C5_T1_Q16",
+          "question": "Cho cơ sở dữ liệu giao dịch gồm 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với L: {c} → {d,e}, Lift(L) có giá trị là bao nhiêu?",
+          "options": {
+            "A": "1.5",
+            "B": "≈ 1.143 (8/7)",
+            "C": "0.857",
+            "D": "0.429"
+          },
+          "correctAnswer": "B",
+          "images": [
+            "assets/img/txn_table.png"
+          ]
+        },
+        {
+          "id": "C5_T1_Q17",
+          "question": "Cho cơ sở dữ liệu giao dịch gồm 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với L: {c} → {d,e}, Leverage(L) có giá trị là bao nhiêu?",
+          "options": {
+            "A": "0.429",
+            "B": "0.375",
+            "C": "≈ 0.047 (0.375 − 0.875 × 0.375)",
+            "D": "0.143"
+          },
+          "correctAnswer": "C",
+          "images": [
+            "assets/img/txn_table.png"
+          ]
+        },
+        {
+          "id": "C5_T1_Q18",
+          "question": "Cho cơ sở dữ liệu giao dịch gồm 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Độ hỗ trợ của itemset {c, d, b} là bao nhiêu?",
+          "options": {
+            "A": "4/8 = 0.5",
+            "B": "3/8 = 0.375",
+            "C": "1/8 = 0.125",
+            "D": "2/8 = 0.25"
+          },
+          "correctAnswer": "D",
+          "images": [
+            "assets/img/txn_table.png"
+          ]
+        },
+        {
+          "id": "C5_T1_Q19",
+          "question": "Luật cd → e có count({c,d,e}) = 3 và count({c,d}) = 4. Confidence là bao nhiêu?",
+          "options": {
+            "A": "1.5",
+            "B": "0.75",
+            "C": "0.5",
+            "D": "0.375"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C5_T2",
+      "topicName": "Thuật toán Apriori",
+      "questions": [
+        {
+          "id": "C5_T2_Q1",
+          "question": "Tập phổ biến (Frequent Itemset) là gì?",
+          "options": {
+            "A": "Itemset có support ≥ minsup",
+            "B": "Itemset có confidence cao",
+            "C": "Itemset có support < minsup",
+            "D": "Itemset chỉ có 1 phần tử"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T2_Q2",
+          "question": "Tính chất 1 của Apriori: nếu X ⊆ Y thì điều gì đúng về support?",
+          "options": {
+            "A": "Hai support luôn bằng nhau",
+            "B": "Không có quan hệ",
+            "C": "Support của Y lớn hơn support của X",
+            "D": "Support của Y nhỏ hơn hoặc bằng support của X"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T2_Q3",
+          "question": "Tính chất 2 của Apriori nói gì?",
+          "options": {
+            "A": "Mọi itemset đều phổ biến",
+            "B": "Nếu tập con phổ biến thì Y chắc chắn phổ biến",
+            "C": "Y luôn phổ biến",
+            "D": "Nếu một tập con của Y không phổ biến thì Y cũng không phổ biến"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T2_Q4",
+          "question": "Với I có 5 item, số tập con khác rỗng có thể có là bao nhiêu?",
+          "options": {
+            "A": "5² = 25",
+            "B": "2⁵ − 1 = 31",
+            "C": "5! = 120",
+            "D": "2⁵ = 32"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T2_Q5",
+          "question": "Nếu có 6 item đơn lẻ phổ biến thì số itemset 2 phần tử được sinh ra để kiểm tra là bao nhiêu?",
+          "options": {
+            "A": "15 (C(6,2), xấp xỉ n²/2)",
+            "B": "30",
+            "C": "36",
+            "D": "12"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T2_Q6",
+          "question": "Hạn chế chính của Apriori là gì?",
+          "options": {
+            "A": "Không sinh ứng viên",
+            "B": "Chỉ quét CSDL một lần",
+            "C": "Cần cây FP-Tree",
+            "D": "Quét CSDL nhiều lần và sinh số lượng ứng viên khổng lồ"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T2_Q7",
+          "question": "Apriori được đề xuất bởi ai?",
+          "options": {
+            "A": "Han (2000)",
+            "B": "Quinlan (1986)",
+            "C": "Agrawal (1993)",
+            "D": "Google (1998)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T2_Q8",
+          "question": "Trong ví dụ Apriori (minsup = 2) với pasta, lemon, orange, cake, support của {pasta, orange} bằng bao nhiêu?",
+          "options": {
+            "A": "4 (100%)",
+            "B": "1 (25%)",
+            "C": "3 (75% trong 4 giao dịch)",
+            "D": "2 (50%)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T2_Q9",
+          "question": "Bước đầu tiên của Apriori là gì?",
+          "options": {
+            "A": "Duyệt CSDL để tính support của các itemset kích thước 1",
+            "B": "Tính Lift",
+            "C": "Xây dựng FP-Tree",
+            "D": "Tạo itemset kích thước 4"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T2_Q10",
+          "question": "Theo slide Apriori, nếu có n = 6 item đơn lẻ phổ biến thì số itemset gồm 2 phần tử được sinh ra để kiểm tra sơ bộ xấp xỉ bao nhiêu (n²/2)?",
+          "options": {
+            "A": "8",
+            "B": "16",
+            "C": "12",
+            "D": "18"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C5_T3",
+      "topicName": "Thuật toán FP-Growth",
+      "questions": [
+        {
+          "id": "C5_T3_Q1",
+          "question": "FP-Growth khắc phục hạn chế của Apriori bằng cách nào?",
+          "options": {
+            "A": "Bỏ qua minsup",
+            "B": "Quét CSDL nhiều lần hơn",
+            "C": "Xây dựng FP-Tree để nén dữ liệu, chỉ duyệt CSDL 2 lần, không sinh ứng viên",
+            "D": "Sinh thêm ứng viên"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T3_Q2",
+          "question": "FP-Growth cần duyệt CSDL bao nhiêu lần?",
+          "options": {
+            "A": "Không duyệt",
+            "B": "n lần theo kích thước itemset",
+            "C": "2 lần",
+            "D": "1 lần"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T3_Q3",
+          "question": "Condition Pattern Base là gì?",
+          "options": {
+            "A": "Danh sách luật kết hợp",
+            "B": "Bảng support của itemset",
+            "C": "Cây FP-tree hoàn chỉnh",
+            "D": "CSDL phụ gồm các đường dẫn tiền tố (prefix paths) trong FP-tree xuất hiện cùng với nút thấp nhất (suffix)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T3_Q4",
+          "question": "Thứ tự các item trong FP-Growth được sắp xếp thế nào?",
+          "options": {
+            "A": "Giảm dần theo số giao dịch mà item xuất hiện",
+            "B": "Tăng dần theo support",
+            "C": "Ngẫu nhiên",
+            "D": "Theo bảng chữ cái luôn"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T3_Q5",
+          "question": "Cho cơ sở dữ liệu giao dịch gồm 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với FP-Growth, Minsup = 4, chuỗi cố định (thứ tự item phổ biến) có thể là chuỗi nào?",
+          "options": {
+            "A": "c, a, b, d, e",
+            "B": "b, c, d, e",
+            "C": "e, d, b, c",
+            "D": "c, b, d, e"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T3_Q6",
+          "question": "Cho CSDL: giao dịch 1 {F,A,C,D,G,I,M,P}; 2 {A,B,C,F,L,M,O}; 3 {B,F,H,J,O}; 4 {B,C,K,S,P}; 5 {A,F,C,E,L,P,M,N}. Với minsupportcount = 3, các item phổ biến theo thứ tự giảm dần là?",
+          "options": {
+            "A": "A, B, C, F, M, P",
+            "B": "F, C, L, O, A, B",
+            "C": "F, C, A, M, P",
+            "D": "F, C, A, B, M, P"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T3_Q7",
+          "question": "Với CSDL trên, giao dịch 1 sau tiền xử lý (loại item không phổ biến, sắp xếp) là?",
+          "options": {
+            "A": "F, C, A, D, M",
+            "B": "F, C, A, M, P",
+            "C": "A, C, F, M, P",
+            "D": "F, A, C, D, G, I, M, P"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T3_Q8",
+          "question": "Cho Condition Pattern Base: X:{Y:4}; Y:{X:4,T:3}; Z:{X:3,Y:4,T:3}; T:{Y:4,Z:3}. Với Minsup = 4, những tập phổ biến có 2 item KHÔNG chứa X là những tập nào?",
+          "options": {
+            "A": "{X,Y} và {Y,Z}",
+            "B": "{Y,Z}, {Y,T} và {Z,T}",
+            "C": "{Y,Z} và {Y,T}",
+            "D": "{Y,T} và {Z,T}"
+          },
+          "correctAnswer": "C",
+          "images": [
+            "assets/img/cpb_table.png"
+          ]
+        },
+        {
+          "id": "C5_T3_Q9",
+          "question": "FP-Tree là gì?",
+          "options": {
+            "A": "Cây quyết định ID3",
+            "B": "Cấu trúc nén của tập mục trong CSDL, lưu vết mối quan hệ giữa các item",
+            "C": "Đồ thị tri thức",
+            "D": "Cây Dendrogram"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T3_Q10",
+          "question": "Cho CSDL giao dịch gồm 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với FP-Growth, Minsup = 4, chuỗi item có thứ tự để chuẩn bị xây FP-Tree có thể là...",
+          "options": {
+            "A": "b, c, e, d",
+            "B": "c, a, b, d",
+            "C": "c, e, d, b",
+            "D": "d, c, b, e"
+          },
+          "correctAnswer": "C",
+          "images": [
+            "assets/img/txn_table.png"
+          ]
+        },
+        {
+          "id": "C5_T3_Q11",
+          "question": "Cho một phần thông tin của bảng Conditional Pattern Base: X:{Y:4,Z:3}; Y:{X:4,Z:4,T:4}; Z:{X:3,Y:4,T:3}; T:{Y:4,Z:3}. Với Minsup = 4, những tập phổ biến có 2 items chứa X là những tập nào?",
+          "options": {
+            "A": "{X,T}",
+            "B": "{X,Z}",
+            "C": "{X,Y}",
+            "D": "{X,Y}, {X,Z}"
+          },
+          "correctAnswer": "C",
+          "images": [
+            "assets/img/cpb_table.png"
+          ]
+        }
+      ]
+    },
+    {
+      "topicId": "C5_T4",
+      "topicName": "Cây quyết định: ID3 và C4.5",
+      "questions": [
+        {
+          "id": "C5_T4_Q1",
+          "question": "Tiêu chí chọn thuộc tính của ID3 là gì?",
+          "options": {
+            "A": "Gini",
+            "B": "Information Gain",
+            "C": "Gain Ratio",
+            "D": "Jaccard"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T4_Q2",
+          "question": "Tiêu chí chọn thuộc tính của C4.5 là gì?",
+          "options": {
+            "A": "Support",
+            "B": "Gain Ratio",
+            "C": "Z-Score",
+            "D": "Information Gain"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T4_Q3",
+          "question": "ID3 hỗ trợ loại dữ liệu nào?",
+          "options": {
+            "A": "Chỉ dữ liệu liên tục",
+            "B": "Cả rời rạc và liên tục",
+            "C": "Chỉ dữ liệu rời rạc (Categorical)",
+            "D": "Chỉ văn bản"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T4_Q4",
+          "question": "Điểm nào đúng với C4.5 so với ID3?",
+          "options": {
+            "A": "Hỗ trợ dữ liệu liên tục, xử lý Null bằng trọng số xác suất, có Post-pruning",
+            "B": "Báo lỗi khi gặp Null",
+            "C": "Không có cắt tỉa",
+            "D": "Không hỗ trợ dữ liệu liên tục"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T4_Q5",
+          "question": "ID3 xử lý giá trị Null như thế nào?",
+          "options": {
+            "A": "Dùng trọng số xác suất",
+            "B": "Tự điền trung bình",
+            "C": "Không hỗ trợ (báo lỗi)",
+            "D": "Bỏ qua cột"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T4_Q6",
+          "question": "Khả năng kiểm soát Overfitting của ID3 như thế nào?",
+          "options": {
+            "A": "Tốt nhờ Post-pruning",
+            "B": "Tốt, cây gọn",
+            "C": "Không bao giờ overfit",
+            "D": "Kém, cây sâu dễ bị quá khớp"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C5_T5",
+      "topicName": "Phân loại Bayes",
+      "questions": [
+        {
+          "id": "C5_T5_Q1",
+          "question": "Naive Bayes dựa trên định lý nào?",
+          "options": {
+            "A": "Định lý Pythagoras",
+            "B": "Định lý Bayes",
+            "C": "Định lý giới hạn trung tâm",
+            "D": "Định lý Euler"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T5_Q2",
+          "question": "Giả định 'Naive' trong Naive Bayes là gì?",
+          "options": {
+            "A": "Các thuộc tính luôn phụ thuộc nhau",
+            "B": "Các thuộc tính độc lập hoàn toàn với nhau khi biết nhãn lớp",
+            "C": "Chỉ có một thuộc tính",
+            "D": "Nhãn lớp không quan trọng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T5_Q3",
+          "question": "Đối tượng được Naive Bayes xếp vào nhóm nào?",
+          "options": {
+            "A": "Nhóm ngẫu nhiên",
+            "B": "Nhóm đầu tiên",
+            "C": "Nhóm có xác suất cao nhất",
+            "D": "Nhóm có xác suất thấp nhất"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T5_Q4",
+          "question": "Mạng Bayes (Bayesian Network) khắc phục điều gì?",
+          "options": {
+            "A": "Nhược điểm 'Naive': mô hình hóa được các biến phụ thuộc lẫn nhau",
+            "B": "Tốc độ chạy",
+            "C": "Thiếu dữ liệu",
+            "D": "Chi phí lưu trữ"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "C5_T6",
+      "topicName": "Phân cụm: K-Means, K-Medoids, DBSCAN",
+      "questions": [
+        {
+          "id": "C5_T6_Q1",
+          "question": "Tâm cụm của K-Means là gì?",
+          "options": {
+            "A": "Mode",
+            "B": "Mean (trọng tâm ảo)",
+            "C": "Medoid (điểm thật)",
+            "D": "Median"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T6_Q2",
+          "question": "Nhược điểm của K-Means là gì?",
+          "options": {
+            "A": "Chạy rất chậm",
+            "B": "Chống nhiễu tốt",
+            "C": "Nhạy cảm với nhiễu (Outliers)",
+            "D": "Dùng cho mọi loại dữ liệu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T6_Q3",
+          "question": "Ưu điểm của K-Medoids là gì?",
+          "options": {
+            "A": "Chạy rất nhanh với dữ liệu lớn",
+            "B": "Không cần chọn k",
+            "C": "Chống nhiễu tốt, dùng cho mọi loại dữ liệu",
+            "D": "Chỉ dùng dữ liệu số"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T6_Q4",
+          "question": "K-Modes thay phép Mean bằng gì?",
+          "options": {
+            "A": "Medoid",
+            "B": "Mode, dành cho dữ liệu phân loại",
+            "C": "Max",
+            "D": "Median"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T6_Q5",
+          "question": "K-Prototypes dùng cho loại dữ liệu nào?",
+          "options": {
+            "A": "Chỉ văn bản",
+            "B": "Chỉ dữ liệu số",
+            "C": "Dữ liệu hỗn hợp (kết hợp K-Means + K-Modes)",
+            "D": "Chỉ dữ liệu phân loại"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T6_Q6",
+          "question": "CLARA / CLARANS là biến thể của thuật toán nào?",
+          "options": {
+            "A": "K-Means",
+            "B": "DBSCAN",
+            "C": "Apriori",
+            "D": "K-Medoids (phân tách mẫu để chạy trên dữ liệu lớn)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T6_Q7",
+          "question": "DBSCAN có đặc điểm nào sau đây?",
+          "options": {
+            "A": "Chỉ tạo cụm hình cầu",
+            "B": "Bắt buộc biết trước k",
+            "C": "Không cần biết trước số cụm k, cụm có hình dạng bất kỳ",
+            "D": "Không phát hiện nhiễu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T6_Q8",
+          "question": "Hai tham số quyết định của DBSCAN là gì?",
+          "options": {
+            "A": "Eps (bán kính lân cận) và MinPts",
+            "B": "k và Epsilon",
+            "C": "Support và Confidence",
+            "D": "Alpha và Beta"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T6_Q9",
+          "question": "Điểm Core trong DBSCAN là điểm như thế nào?",
+          "options": {
+            "A": "Có < MinPts điểm lân cận nhưng nằm trong vùng Eps của điểm lõi",
+            "B": "Điểm xa nhất",
+            "C": "Có ≥ MinPts điểm trong bán kính Eps",
+            "D": "Không thuộc cụm nào"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T6_Q10",
+          "question": "Điểm Noise trong DBSCAN là gì?",
+          "options": {
+            "A": "Điểm trung tâm",
+            "B": "Điểm lõi",
+            "C": "Không phải Core cũng không phải Border",
+            "D": "Điểm biên"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C5_T7",
+      "topicName": "Phân cụm Hierarchical, Grid-based và Outlier Detection",
+      "questions": [
+        {
+          "id": "C5_T7_Q1",
+          "question": "Hierarchical Clustering xây dựng cấu trúc nào?",
+          "options": {
+            "A": "Cây quyết định",
+            "B": "FP-Tree",
+            "C": "Dendrogram",
+            "D": "Ma trận nhị phân"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T7_Q2",
+          "question": "Thuật toán nào thuộc Hierarchical Clustering?",
+          "options": {
+            "A": "ID3, C4.5",
+            "B": "AGNES, DIANA, BIRCH, CURE",
+            "C": "Apriori",
+            "D": "STING, CLIQUE"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T7_Q3",
+          "question": "Thuật toán nào thuộc Grid-based Clustering?",
+          "options": {
+            "A": "K-Means",
+            "B": "DBSCAN",
+            "C": "AGNES, DIANA",
+            "D": "STING, CLIQUE, WaveCluster"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T7_Q4",
+          "question": "Ưu điểm lớn nhất của Grid-based Clustering là gì?",
+          "options": {
+            "A": "Trực quan cấu trúc đa tầng",
+            "B": "Tốc độ xử lý siêu nhanh, chuyên trị dữ liệu lớn",
+            "C": "Độ chính xác biên tuyệt đối",
+            "D": "Không cần lưới"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T7_Q5",
+          "question": "Nhược điểm của Hierarchical Clustering là gì?",
+          "options": {
+            "A": "Chi phí tính toán cao; bước gộp/chia sai không thể đảo ngược",
+            "B": "Chỉ dùng cho dữ liệu nhỏ hơn 10 điểm",
+            "C": "Quá nhanh",
+            "D": "Không có dendrogram"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T7_Q6",
+          "question": "Outlier Detection dựa trên thống kê (Statistical-based) giả định điều gì?",
+          "options": {
+            "A": "Dữ liệu tuân theo một phân phối xác suất nhất định (thường Gaussian)",
+            "B": "Dữ liệu là đồ thị",
+            "C": "Dữ liệu phân loại",
+            "D": "Dữ liệu không có phân phối"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T7_Q7",
+          "question": "Distance-based Outlier Detection coi đối tượng nào là ngoại lai?",
+          "options": {
+            "A": "Đối tượng gần trung tâm",
+            "B": "Đối tượng có xác suất cao",
+            "C": "Đối tượng trùng lặp",
+            "D": "Đối tượng nằm cách xa hầu hết các điểm dữ liệu khác"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    }
+  ]
+}

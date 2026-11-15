@@ -1,0 +1,488 @@
+{
+  "chapterId": "C5",
+  "chapterName": "Backup & Restore",
+  "topics": [
+    {
+      "topicId": "C5_T1",
+      "topicName": "Recovery Models",
+      "questions": [
+        {
+          "id": "C5_T1_Q1",
+          "question": "Mô hình phục hồi nào không cho phép sao lưu transaction log?",
+          "options": {
+            "A": "FULL",
+            "B": "BULK LOGGED",
+            "C": "SIMPLE",
+            "D": "NONE"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T1_Q2",
+          "question": "Ưu điểm chính của mô hình FULL recovery là gì?",
+          "options": {
+            "A": "Tăng hiệu suất ghi",
+            "B": "Khôi phục đến thời điểm cụ thể",
+            "C": "Không cần sao lưu log",
+            "D": "Tự động xóa log"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T1_Q3",
+          "question": "Khi nào log được truncate trong mô hình FULL recovery?",
+          "options": {
+            "A": "Sau mỗi checkpoint",
+            "B": "Sau khi sao lưu transaction log",
+            "C": "Sau khi sao lưu full",
+            "D": "Sau khi khôi phục"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T1_Q4",
+          "question": "Mô hình BULK LOGGED thường được sử dụng khi nào?",
+          "options": {
+            "A": "Sao lưu hệ thống",
+            "B": "Trước và sau khi thực hiện bulk import",
+            "C": "Khi database bị lỗi",
+            "D": "Khi cần khôi phục nhanh"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T1_Q5",
+          "question": "Mô hình SIMPLE phù hợp với loại ứng dụng nào?",
+          "options": {
+            "A": "OLTP",
+            "B": "Web service",
+            "C": "Data warehouse có ETL ban đêm",
+            "D": "Hệ thống giao dịch tài chính"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C5_T2",
+      "topicName": "Backup Types",
+      "questions": [
+        {
+          "id": "C5_T2_Q1",
+          "question": "Sao lưu nào ghi toàn bộ dữ liệu trong database?",
+          "options": {
+            "A": "Full backup",
+            "B": "Differential backup",
+            "C": "Log backup",
+            "D": "Partial backup"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T2_Q2",
+          "question": "Sao lưu nào ghi các trang đã thay đổi kể từ lần full backup gần nhất?",
+          "options": {
+            "A": "Full backup",
+            "B": "Differential backup",
+            "C": "Log backup",
+            "D": "Filegroup backup"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T2_Q3",
+          "question": "Sao lưu log chỉ thực hiện được trong mô hình nào?",
+          "options": {
+            "A": "SIMPLE",
+            "B": "FULL và BULK LOGGED",
+            "C": "BULK LOGGED và SIMPLE",
+            "D": "FULL và SIMPLE"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T2_Q4",
+          "question": "Sao lưu nào phù hợp với khôi phục đến thời điểm cụ thể?",
+          "options": {
+            "A": "Full backup",
+            "B": "Differential backup",
+            "C": "Log backup",
+            "D": "Partial backup"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T2_Q5",
+          "question": "Sao lưu nào không bao gồm filegroup chỉ đọc?",
+          "options": {
+            "A": "Full backup",
+            "B": "Filegroup backup",
+            "C": "Partial backup",
+            "D": "Log backup"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C5_T3",
+      "topicName": "Backup Media & Devices",
+      "questions": [
+        {
+          "id": "C5_T3_Q1",
+          "question": "Thiết bị backup có thể là gì?",
+          "options": {
+            "A": "Chỉ ổ đĩa",
+            "B": "Chỉ tape",
+            "C": "Ổ đĩa, tape hoặc URL",
+            "D": "Chỉ cloud"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T3_Q2",
+          "question": "Một media set có thể chứa tối đa bao nhiêu thiết bị backup?",
+          "options": {
+            "A": "32",
+            "B": "64",
+            "C": "128",
+            "D": "256"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T3_Q3",
+          "question": "Khi sử dụng mirror trong backup, mỗi thiết bị có thể có bao nhiêu bản sao?",
+          "options": {
+            "A": "2",
+            "B": "3",
+            "C": "4",
+            "D": "5"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T3_Q4",
+          "question": "Logical backup device là gì?",
+          "options": {
+            "A": "File backup",
+            "B": "Đối tượng cấp instance dùng để backup",
+            "C": "Filegroup backup",
+            "D": "Backup set"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T3_Q5",
+          "question": "Striping backup giúp tăng hiệu suất bằng cách nào?",
+          "options": {
+            "A": "Nén dữ liệu",
+            "B": "Phân phối dữ liệu qua nhiều ổ đĩa",
+            "C": "Giảm kích thước file",
+            "D": "Tăng thời gian checkpoint"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C5_T4",
+      "topicName": "Media Sets & Backup Sets",
+      "questions": [
+        {
+          "id": "C5_T4_Q1",
+          "question": "Mỗi bản backup trong media set được gọi là gì?",
+          "options": {
+            "A": "Media file",
+            "B": "Backup set",
+            "C": "Backup family",
+            "D": "Backup unit"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T4_Q2",
+          "question": "Khi tạo media set, thông tin nào được ghi vào media header?",
+          "options": {
+            "A": "Tên database",
+            "B": "GUID, số thứ tự, ngày giờ",
+            "C": "Kích thước file",
+            "D": "Tên người dùng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T4_Q3",
+          "question": "Nếu media set có một media family, backup set sẽ được lưu ở đâu?",
+          "options": {
+            "A": "Phân tán",
+            "B": "Trong media family đó",
+            "C": "Trong tất cả các file",
+            "D": "Trong filegroup"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T4_Q4",
+          "question": "Backup set có thể được xử lý như thế nào?",
+          "options": {
+            "A": "Chỉ ghi đè",
+            "B": "Ghi đè hoặc thêm mới",
+            "C": "Chỉ thêm mới",
+            "D": "Chỉ xóa"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T4_Q5",
+          "question": "Mỗi media family trong media set có số thứ tự gọi là gì?",
+          "options": {
+            "A": "Logical ID",
+            "B": "Family sequence number",
+            "C": "Media ID",
+            "D": "Device number"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C5_T5",
+      "topicName": "Backup Strategies",
+      "questions": [
+        {
+          "id": "C5_T5_Q1",
+          "question": "Chiến lược chỉ dùng full backup phù hợp với tình huống nào?",
+          "options": {
+            "A": "OLTP",
+            "B": "Database ít thay đổi",
+            "C": "Hệ thống tài chính",
+            "D": "Hệ thống phân tán"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T5_Q2",
+          "question": "Chiến lược full + log backup giúp gì?",
+          "options": {
+            "A": "Tăng hiệu suất",
+            "B": "Khôi phục linh hoạt theo thời điểm",
+            "C": "Giảm kích thước database",
+            "D": "Tự động hóa backup"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T5_Q3",
+          "question": "Nếu RPO là 30 phút, nên sao lưu log bao lâu một lần?",
+          "options": {
+            "A": "1 giờ",
+            "B": "30 phút",
+            "C": "2 giờ",
+            "D": "15 phút"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T5_Q4",
+          "question": "Nếu chỉ khôi phục một filegroup, nên dùng loại backup nào?",
+          "options": {
+            "A": "Full backup",
+            "B": "Differential backup",
+            "C": "Filegroup backup",
+            "D": "Log backup"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T5_Q5",
+          "question": "Sao lưu nào giúp giảm số lượng bản backup cần khôi phục?",
+          "options": {
+            "A": "Full backup",
+            "B": "Differential backup",
+            "C": "Log backup",
+            "D": "Partial backup"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C5_T6",
+      "topicName": "Restoring via SSMS",
+      "questions": [
+        {
+          "id": "C5_T6_Q1",
+          "question": "Nút nào trong SSMS hiển thị thời điểm backup?",
+          "options": {
+            "A": "Options",
+            "B": "Files",
+            "C": "Timeline",
+            "D": "General"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T6_Q2",
+          "question": "Nút nào xác minh backup mà không khôi phục?",
+          "options": {
+            "A": "Options",
+            "B": "Verify Backup Media",
+            "C": "Timeline",
+            "D": "Files"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T6_Q3",
+          "question": "Tab nào cho phép chọn vị trí khôi phục file?",
+          "options": {
+            "A": "General",
+            "B": "Files",
+            "C": "Options",
+            "D": "Timeline"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T6_Q4",
+          "question": "Tùy chọn nào cho phép ghi đè database khi restore?",
+          "options": {
+            "A": "NORECOVERY",
+            "B": "Overwrite existing database",
+            "C": "STANDBY",
+            "D": "VERIFYONLY"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T6_Q5",
+          "question": "Tùy chọn nào giữ database ở trạng thái khôi phục?",
+          "options": {
+            "A": "RECOVERY",
+            "B": "NORECOVERY",
+            "C": "STANDBY",
+            "D": "RESTRICTED"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C5_T7",
+      "topicName": "Restoring via T-SQL",
+      "questions": [
+        {
+          "id": "C5_T7_Q1",
+          "question": "Lệnh nào dùng để khôi phục database?",
+          "options": {
+            "A": "BACKUP DATABASE",
+            "B": "RESTORE DATABASE",
+            "C": "REPAIR DATABASE",
+            "D": "LOAD DATABASE"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T7_Q2",
+          "question": "Tùy chọn nào đưa database online sau khi restore?",
+          "options": {
+            "A": "RECOVERY",
+            "B": "NORECOVERY",
+            "C": "STANDBY",
+            "D": "VERIFYONLY"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T7_Q3",
+          "question": "Tùy chọn nào đưa database online ở chế độ chỉ đọc?",
+          "options": {
+            "A": "RECOVERY",
+            "B": "NORECOVERY",
+            "C": "STANDBY",
+            "D": "RESTRICTED"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T7_Q4",
+          "question": "Tùy chọn nào dùng để khôi phục đến thời điểm cụ thể?",
+          "options": {
+            "A": "RESTORE DATABASE WITH TIME",
+            "B": "STOPAT",
+            "C": "POINTIN",
+            "D": "RESTORE LOG WITH TIME"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T7_Q5",
+          "question": "Tùy chọn nào dùng để kiểm tra file backup?",
+          "options": {
+            "A": "CHECKSUM",
+            "B": "VERIFYONLY",
+            "C": "HEADERONLY",
+            "D": "LABELONLY"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T7_Q6",
+          "question": "Tùy chọn nào hiển thị tiến trình khôi phục?",
+          "options": {
+            "A": "SHOW",
+            "B": "STATS",
+            "C": "PROGRESS",
+            "D": "STATUS"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T7_Q7",
+          "question": "Tùy chọn nào cho phép khôi phục từng file?",
+          "options": {
+            "A": "FILEGROUP",
+            "B": "FILE",
+            "C": "PAGE",
+            "D": "PARTIAL"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T7_Q8",
+          "question": "Tùy chọn nào cho phép khôi phục từng filegroup?",
+          "options": {
+            "A": "FILE",
+            "B": "FILEGROUP",
+            "C": "PARTIAL",
+            "D": "PAGE"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T7_Q9",
+          "question": "Tùy chọn nào cho phép khôi phục từng trang?",
+          "options": {
+            "A": "FILE",
+            "B": "FILEGROUP",
+            "C": "PAGE",
+            "D": "PARTIAL"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T7_Q10",
+          "question": "Tùy chọn nào cho phép khôi phục tất cả filegroup ghi/đọc?",
+          "options": {
+            "A": "FILEGROUP",
+            "B": "PAGE",
+            "C": "PARTIAL",
+            "D": "FILE"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    }
+  ]
+}

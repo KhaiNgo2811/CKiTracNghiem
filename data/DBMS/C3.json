@@ -1,0 +1,494 @@
+{
+  "chapterId": "C3",
+  "chapterName": "Indexes & Statistics",
+  "topics": [
+    {
+      "topicId": "C3_T1",
+      "topicName": "Tổng quan về Indexes và Statistics (Câu 1–5)",
+      "questions": [
+        {
+          "id": "C3_T1_Q1",
+          "question": "Loại index nào lưu dữ liệu theo thứ tự của khóa chỉ mục?",
+          "options": {
+            "A": "Nonclustered index",
+            "B": "Heap",
+            "C": "Clustered index",
+            "D": "Hash index"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T1_Q2",
+          "question": "Bảng không có clustered index được gọi là gì?",
+          "options": {
+            "A": "Tree",
+            "B": "Segment",
+            "C": "Heap",
+            "D": "Deltastore"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T1_Q3",
+          "question": "SQL Server sử dụng statistics để làm gì?",
+          "options": {
+            "A": "Tăng tốc độ ghi dữ liệu",
+            "B": "Tạo bảng mới",
+            "C": "Tối ưu kế hoạch truy vấn",
+            "D": "Xóa dữ liệu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T1_Q4",
+          "question": "Columnstore index lưu dữ liệu theo:",
+          "options": {
+            "A": "Hàng",
+            "B": "Cột",
+            "C": "Segment",
+            "D": "Page"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T1_Q5",
+          "question": "In-Memory OLTP sử dụng loại index nào?",
+          "options": {
+            "A": "XML index",
+            "B": "Clustered index",
+            "C": "In-memory index",
+            "D": "Filtered index"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C3_T2",
+      "topicName": "Clustered Index và Heap (Câu 6–10)",
+      "questions": [
+        {
+          "id": "C3_T2_Q1",
+          "question": "RID có định dạng như thế nào?",
+          "options": {
+            "A": "PageID:SlotNumber",
+            "B": "FileID:PageID:SlotNumber",
+            "C": "TableID:RowID",
+            "D": "SegmentID:PageID"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T2_Q2",
+          "question": "Khi bảng có nonclustered index nhưng không có clustered index, nó vẫn là:",
+          "options": {
+            "A": "Tree",
+            "B": "Segment",
+            "C": "Heap",
+            "D": "Deltastore"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T2_Q3",
+          "question": "Cấp cao nhất của B-tree gọi là gì?",
+          "options": {
+            "A": "Leaf level",
+            "B": "Intermediate node",
+            "C": "Root node",
+            "D": "Top index"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T2_Q4",
+          "question": "Cấp thấp nhất của clustered index chứa gì?",
+          "options": {
+            "A": "Con trỏ",
+            "B": "Metadata",
+            "C": "Trang dữ liệu thực tế",
+            "D": "RID"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T2_Q5",
+          "question": "SQL Server có thể kết hợp seek và scan để thực hiện:",
+          "options": {
+            "A": "Full scan",
+            "B": "Key lookup",
+            "C": "Range scan",
+            "D": "Hash join"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C3_T3",
+      "topicName": "Clustering Primary Key và GUID (Câu 11–15)",
+      "questions": [
+        {
+          "id": "C3_T3_Q1",
+          "question": "Tạo primary key mặc định sẽ tạo loại index nào?",
+          "options": {
+            "A": "Nonclustered",
+            "B": "Clustered",
+            "C": "Hash",
+            "D": "Filtered"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T3_Q2",
+          "question": "GUID có kích thước bao nhiêu byte?",
+          "options": {
+            "A": "8",
+            "B": "16",
+            "C": "32",
+            "D": "64"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T3_Q3",
+          "question": "Vấn đề khi dùng GUID làm clustered key là gì?",
+          "options": {
+            "A": "Không thể tạo index",
+            "B": "Phân mảnh và kích thước index lớn",
+            "C": "Không hỗ trợ JOIN",
+            "D": "Không thể dùng trong WHERE"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T3_Q4",
+          "question": "Hàm nào tạo GUID theo thứ tự tăng dần?",
+          "options": {
+            "A": "NEWGUID()",
+            "B": "NEWSEQUENTIALID()",
+            "C": "GUID()",
+            "D": "SEQGUID()"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T3_Q5",
+          "question": "Clustered index key nên có đặc điểm nào?",
+          "options": {
+            "A": "Ngẫu nhiên",
+            "B": "Có thể trùng lặp",
+            "C": "Tăng dần và duy nhất",
+            "D": "Là kiểu văn bản"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C3_T4",
+      "topicName": "Nonclustered và Covering Indexes (Câu 16–20)",
+      "questions": [
+        {
+          "id": "C3_T4_Q1",
+          "question": "Leaf level của nonclustered index chứa gì?",
+          "options": {
+            "A": "Dữ liệu thực tế",
+            "B": "Con trỏ đến dữ liệu",
+            "C": "Metadata",
+            "D": "RID"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T4_Q2",
+          "question": "Khi nonclustered index chứa tất cả cột cần truy vấn, gọi là:",
+          "options": {
+            "A": "Full index",
+            "B": "Indexed query",
+            "C": "Covering index",
+            "D": "Key lookup"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T4_Q3",
+          "question": "Nếu truy vấn cần cột không có trong index, SQL Server thực hiện:",
+          "options": {
+            "A": "Full scan",
+            "B": "Key lookup",
+            "C": "Seek",
+            "D": "Join"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T4_Q4",
+          "question": "Tipping point thường nằm trong khoảng:",
+          "options": {
+            "A": "5–10%",
+            "B": "10–20%",
+            "C": "0.5–2%",
+            "D": "20–50%"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T4_Q5",
+          "question": "Included columns được lưu ở đâu trong index?",
+          "options": {
+            "A": "Mọi cấp độ",
+            "B": "Chỉ ở leaf level",
+            "C": "Root node",
+            "D": "Intermediate node"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C3_T5",
+      "topicName": "Filtered và Columnstore Indexes (Câu 21–25)",
+      "questions": [
+        {
+          "id": "C3_T5_Q1",
+          "question": "Filtered index được tạo bằng cách nào?",
+          "options": {
+            "A": "GROUP BY",
+            "B": "HAVING",
+            "C": "WHERE",
+            "D": "ORDER BY"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T5_Q2",
+          "question": "Columnstore index lưu dữ liệu theo:",
+          "options": {
+            "A": "Tree",
+            "B": "Heap",
+            "C": "Cột",
+            "D": "Hàng"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T5_Q3",
+          "question": "Công nghệ nén của Columnstore index là:",
+          "options": {
+            "A": "Zip",
+            "B": "Gzip",
+            "C": "VertiPaq",
+            "D": "Delta"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T5_Q4",
+          "question": "Batch execution mode xử lý bao nhiêu dòng mỗi lần?",
+          "options": {
+            "A": "100",
+            "B": "500",
+            "C": "1000",
+            "D": "10,000"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T5_Q5",
+          "question": "Clustered Columnstore index lưu toàn bộ bảng dưới dạng:",
+          "options": {
+            "A": "Heap",
+            "B": "Rowstore",
+            "C": "Columnstore",
+            "D": "Tree"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C3_T6",
+      "topicName": "Deltastore và Tuple Mover (Câu 26–30)",
+      "questions": [
+        {
+          "id": "C3_T6_Q1",
+          "question": "Dữ liệu mới được chèn vào Clustered Columnstore index sẽ vào đâu trước?",
+          "options": {
+            "A": "Leaf level",
+            "B": "Deltastore",
+            "C": "Root node",
+            "D": "TempDB"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T6_Q2",
+          "question": "Quá trình nén dữ liệu từ deltastore gọi là:",
+          "options": {
+            "A": "Compressor",
+            "B": "Tuple mover",
+            "C": "Page splitter",
+            "D": "Index builder"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T6_Q3",
+          "question": "Khi truy vấn bảng có Columnstore index, SQL Server:",
+          "options": {
+            "A": "Chỉ đọc columnstore",
+            "B": "Kết hợp columnstore và deltastore",
+            "C": "Bỏ qua deltastore",
+            "D": "Chỉ đọc deltastore"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T6_Q4",
+          "question": "Khi xóa dòng trong deltastore, dòng bị xóa như thế nào?",
+          "options": {
+            "A": "Logic",
+            "B": "Tạm thời",
+            "C": "Logic và vật lý",
+            "D": "Không xóa"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T6_Q5",
+          "question": "Khi cập nhật dòng trong Columnstore index, SQL Server:",
+          "options": {
+            "A": "Ghi đè dòng cũ",
+            "B": "Đánh dấu xóa logic và chèn dòng mới vào deltastore",
+            "C": "Xóa vật lý",
+            "D": "Không hỗ trợ UPDATE"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C3_T7",
+      "topicName": "In-Memory Indexes (Câu 31–35)",
+      "questions": [
+        {
+          "id": "C3_T7_Q1",
+          "question": "Mỗi bảng tối ưu hóa bộ nhớ cần ít nhất bao nhiêu index?",
+          "options": {
+            "A": "0",
+            "B": "1",
+            "C": "2",
+            "D": "8"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T7_Q2",
+          "question": "Hash index sử dụng cấu trúc gì?",
+          "options": {
+            "A": "Tree",
+            "B": "Bucket array",
+            "C": "Segment",
+            "D": "Page map"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T7_Q3",
+          "question": "Hash index tối ưu cho truy vấn nào?",
+          "options": {
+            "A": "LIKE",
+            "B": "BETWEEN",
+            "C": "= (chính xác)",
+            "D": "IN"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T7_Q4",
+          "question": "In-memory nonclustered index có thể trả dữ liệu theo:",
+          "options": {
+            "A": "RID",
+            "B": "Thứ tự của khóa index",
+            "C": "Random",
+            "D": "GUID"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T7_Q5",
+          "question": "Cấu trúc của in-memory nonclustered index là:",
+          "options": {
+            "A": "Hash tree",
+            "B": "Bw-tree",
+            "C": "AVL tree",
+            "D": "Linked list"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C3_T8",
+      "topicName": "Fragmentation và Statistics (Câu 36–40)",
+      "questions": [
+        {
+          "id": "C3_T8_Q1",
+          "question": "index_level = 0 nghĩa là cấp độ nào?",
+          "options": {
+            "A": "Root",
+            "B": "Intermediate",
+            "C": "Leaf level",
+            "D": "Deltastore"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T8_Q2",
+          "question": "avg_fragmentation_in_percent phản ánh loại phân mảnh nào?",
+          "options": {
+            "A": "Internal",
+            "B": "External",
+            "C": "Logical",
+            "D": "Physical"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T8_Q3",
+          "question": "Giá trị lý tưởng của avg_page_space_used_in_percent là:",
+          "options": {
+            "A": "0%",
+            "B": "50%",
+            "C": "100%",
+            "D": "25%"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C3_T8_Q4",
+          "question": "Reorganize index là thao tác:",
+          "options": {
+            "A": "OFFLINE",
+            "B": "ONLINE",
+            "C": "TEMPORARY",
+            "D": "MANUAL"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C3_T8_Q5",
+          "question": "Tùy chọn nào cho phép tạm dừng và tiếp tục thao tác index?",
+          "options": {
+            "A": "AUTO_UPDATE",
+            "B": "INDEX_HINT",
+            "C": "RESUMABLE",
+            "D": "REBUILD_FAST"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    }
+  ]
+}

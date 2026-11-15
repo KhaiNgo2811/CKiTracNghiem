@@ -1,0 +1,447 @@
+{
+  "chapterId": "ATTT_C5",
+  "chapterName": "Chương 5",
+  "topics": [
+    {
+      "topicId": "ATTT_C5_T1",
+      "topicName": "Phần I – Trắc nghiệm",
+      "questions": [
+        {
+          "id": "ATTT_C5_T1_Q1",
+          "question": "Ví dụ nào sau đây là kiểm soát truy cập logic?",
+          "options": {
+            "A": "Chìa khóa của ổ khóa",
+            "B": "Mật khẩu",
+            "C": "Thẻ truy cập",
+            "D": "Hàng rào"
+          },
+          "correctAnswer": "B",
+          "explanation": "Kiểm soát truy cập logic hạn chế quyền truy cập vào hệ thống máy tính hoặc mạng, và mật khẩu là ví dụ phổ biến nhất. Chìa khóa vật lý, thẻ truy cập và hàng rào đều là các ví dụ về kiểm soát truy cập vật lý."
+        },
+        {
+          "id": "ATTT_C5_T1_Q2",
+          "question": "Trong giai đoạn nào của quá trình kiểm soát truy cập, hệ thống trả lời câu hỏi \"Người yêu cầu có thể truy cập những gì?\"",
+          "options": {
+            "A": "Nhận dạng (Identification)",
+            "B": "Xác thực (Authentication)",
+            "C": "Ủy quyền (Authorization)",
+            "D": "Trách nhiệm giải trình (Accountability)"
+          },
+          "correctAnswer": "C",
+          "explanation": "Trong giai đoạn ủy quyền của kiểm soát truy cập, hệ thống trả lời các câu hỏi: \"Chính xác thì người yêu cầu có thể truy cập những gì?\" và \"Họ có thể làm gì?\""
+        },
+        {
+          "id": "ATTT_C5_T1_Q3",
+          "question": "Ed muốn bảo đảm hệ thống của mình được thiết kế theo cách cho phép truy vết các hành động đến từng cá nhân. Ed đang quan tâm đến giai đoạn nào của kiểm soát truy cập?",
+          "options": {
+            "A": "Nhận dạng (Identification)",
+            "B": "Xác thực (Authentication)",
+            "C": "Ủy quyền (Authorization)",
+            "D": "Trách nhiệm giải trình (Accountability)"
+          },
+          "correctAnswer": "D",
+          "explanation": "Quá trình gắn các hành động với người dùng để báo cáo và nghiên cứu về sau được gọi là trách nhiệm giải trình. Nó bảo đảm có thể xác định được người đã truy cập hoặc thay đổi dữ liệu hay hệ thống."
+        },
+        {
+          "id": "ATTT_C5_T1_Q4",
+          "question": "___________ là phần trung tâm của phần cứng, phần mềm và firmware trong một môi trường máy tính, có nhiệm vụ thực thi kiểm soát truy cập.",
+          "options": {
+            "A": "nhân bảo mật (security kernel)",
+            "B": "CPU",
+            "C": "bộ nhớ",
+            "D": "bộ đồng xử lý (co-processor)"
+          },
+          "correctAnswer": "A",
+          "explanation": "Nhân bảo mật cung cấp một điểm kiểm soát truy cập trung tâm và hiện thực khái niệm bộ giám sát tham chiếu (reference monitor). Nó trung gian mọi yêu cầu truy cập và chỉ cho phép truy cập khi các quy tắc hoặc điều kiện phù hợp được đáp ứng."
+        },
+        {
+          "id": "ATTT_C5_T1_Q5",
+          "question": "Loại xác thực nào bao gồm thẻ thông minh?",
+          "options": {
+            "A": "Tri thức (Knowledge)",
+            "B": "Quyền sở hữu (Ownership)",
+            "C": "Vị trí (Location)",
+            "D": "Hành động (Action)"
+          },
+          "correctAnswer": "B",
+          "explanation": "Các phương pháp xác thực dựa trên quyền sở hữu phù hợp với tiêu chí \"thứ bạn có\". Chúng gồm thẻ thông minh, chìa khóa, thẻ huy hiệu và token."
+        },
+        {
+          "id": "ATTT_C5_T1_Q6",
+          "question": "Điều nào sau đây là ví dụ về xác thực hai yếu tố?",
+          "options": {
+            "A": "Thẻ thông minh và mã số định danh cá nhân (PIN)",
+            "B": "Mã PIN và mật khẩu",
+            "C": "Mật khẩu và câu hỏi bảo mật",
+            "D": "Token và thẻ thông minh"
+          },
+          "correctAnswer": "A",
+          "explanation": "Xác thực bằng thẻ thông minh và mã PIN là xác thực hai yếu tố vì nó kết hợp quyền sở hữu và tri thức. Dùng mã PIN, mật khẩu và câu hỏi bảo mật theo bất kỳ tổ hợp nào đều là xác thực một yếu tố vì cả ba đều dựa trên tri thức. Token và thẻ thông minh đều dựa trên quyền sở hữu."
+        },
+        {
+          "id": "ATTT_C5_T1_Q7",
+          "question": "Loại tấn công mật khẩu nào thử tất cả các tổ hợp có thể có của một mật khẩu để đoán ra giá trị đúng?",
+          "options": {
+            "A": "Tấn công từ điển (Dictionary attack)",
+            "B": "Tấn công bảng cầu vồng (Rainbow table attack)",
+            "C": "Tấn công kỹ thuật xã hội",
+            "D": "Tấn công vét cạn (Brute-force attack)"
+          },
+          "correctAnswer": "D",
+          "explanation": "Tấn công vét cạn là thử mọi tổ hợp ký tự có thể có. Chúng thử các từ có entropy thấp trước, sau đó đến các mật khẩu có entropy cao hơn."
+        },
+        {
+          "id": "ATTT_C5_T1_Q8",
+          "question": "Điều nào sau đây KHÔNG phải là thực tiễn tốt nhất được chấp nhận phổ biến để bảo mật mật khẩu?",
+          "options": {
+            "A": "Sử dụng ít nhất sáu ký tự chữ và số.",
+            "B": "Không bao gồm tên người dùng trong mật khẩu.",
+            "C": "Bao gồm một ký tự đặc biệt trong mật khẩu.",
+            "D": "Bao gồm hỗn hợp ký tự viết hoa, viết thường và số trong mật khẩu."
+          },
+          "correctAnswer": "A",
+          "explanation": "Các thực tiễn tốt nhất về mật khẩu quy định dùng mật khẩu có ít nhất tám ký tự chữ và số. Mật khẩu sáu ký tự không đủ để chống lại các cuộc tấn công hiện đại."
+        },
+        {
+          "id": "ATTT_C5_T1_Q9",
+          "question": "Đặc tính nào của hệ thống sinh trắc học đo độ chính xác của hệ thống bằng cách cân bằng các loại lỗi khác nhau?",
+          "options": {
+            "A": "Tỷ lệ chấp nhận sai (FAR)",
+            "B": "Tỷ lệ từ chối sai (FRR)",
+            "C": "Tỷ lệ lỗi giao nhau (CER)",
+            "D": "Thời gian phản ứng"
+          },
+          "correctAnswer": "C",
+          "explanation": "CER là điểm mà tại đó FAR và FRR bằng nhau. Nó cho cái nhìn cân bằng về độ chính xác của một hệ thống sinh trắc học."
+        },
+        {
+          "id": "ATTT_C5_T1_Q10",
+          "question": "Alan đang đánh giá các hệ thống sinh trắc học khác nhau và lo ngại rằng người dùng có thể không muốn quét võng mạc vì lo ngại về quyền riêng tư. Anh đang xem xét đặc tính nào của hệ thống sinh trắc học?",
+          "options": {
+            "A": "Độ chính xác",
+            "B": "Thời gian phản ứng",
+            "C": "Tính động (Dynamism)",
+            "D": "Khả năng chấp nhận (Acceptability)"
+          },
+          "correctAnswer": "D",
+          "explanation": "Thước đo mức độ thoải mái của người dùng là khả năng chấp nhận của hệ thống. Một số phép đo sinh trắc học, như quét võng mạc, gây phản cảm với một số người dùng hơn các phép đo khác như động học chữ ký. Cần lưu ý rằng nếu người dùng không thoải mái khi dùng một hệ thống, họ có thể từ chối sử dụng nó."
+        },
+        {
+          "id": "ATTT_C5_T1_Q11",
+          "question": "Điều nào sau đây KHÔNG phải là ưu điểm của hệ thống sinh trắc học?",
+          "options": {
+            "A": "Sinh trắc học yêu cầu sự hiện diện vật lý.",
+            "B": "Sinh trắc học rất khó làm giả.",
+            "C": "Người dùng không cần nhớ bất cứ điều gì.",
+            "D": "Các đặc điểm vật lý có thể thay đổi."
+          },
+          "correctAnswer": "D",
+          "explanation": "Việc các đặc điểm vật lý của người dùng có thể thay đổi là một nhược điểm của hệ thống sinh trắc học, vì những thay đổi đáng kể ảnh hưởng đến hồ sơ truy cập sẽ gây ra các lần từ chối sai và đòi hỏi đăng ký lại người dùng."
+        },
+        {
+          "id": "ATTT_C5_T1_Q12",
+          "question": "Phương pháp đăng nhập một lần (SSO) nào dựa vào việc sử dụng các trung tâm phân phối khóa (KDC) và máy chủ cấp vé (TGS)?",
+          "options": {
+            "A": "Hệ thống an ninh châu Âu cho ứng dụng trong môi trường đa nhà cung cấp (SESAME)",
+            "B": "Giao thức truy cập thư mục nhẹ (LDAP)",
+            "C": "Ngôn ngữ đánh dấu xác nhận bảo mật (SAML)",
+            "D": "Kerberos"
+          },
+          "correctAnswer": "D",
+          "explanation": "Kerberos dùng cả KDC và TGS trong quá trình xác thực và ủy quyền để cấp cho người dùng hợp pháp quyền truy cập các hệ thống phù hợp với mức ủy quyền của họ."
+        },
+        {
+          "id": "ATTT_C5_T1_Q13",
+          "question": "Điều nào sau đây là ví dụ về biện pháp kiểm soát an ninh phần cứng?",
+          "options": {
+            "A": "Quyền NTFS",
+            "B": "Lọc địa chỉ MAC",
+            "C": "Thẻ nhân viên (ID badge)",
+            "D": "Chính sách an ninh"
+          },
+          "correctAnswer": "B",
+          "explanation": "Các biện pháp kiểm soát phần cứng gồm thiết bị kiểm tra và xác thực danh tính, chẳng hạn lọc địa chỉ MAC trên thiết bị mạng, dùng thẻ thông minh cho xác thực hai bước và các token bảo mật như thẻ nhận dạng tần số vô tuyến (RFID)."
+        },
+        {
+          "id": "ATTT_C5_T1_Q14",
+          "question": "Gary muốn chọn một mô hình kiểm soát truy cập trong đó chủ sở hữu của một tài nguyên quyết định ai được phép sửa đổi quyền trên tài nguyên đó. Mô hình nào phù hợp với kịch bản này?",
+          "options": {
+            "A": "Kiểm soát truy cập tùy quyền (DAC)",
+            "B": "Kiểm soát truy cập bắt buộc (MAC)",
+            "C": "Kiểm soát truy cập dựa trên quy tắc (Rule-based)",
+            "D": "Kiểm soát truy cập dựa trên vai trò (RBAC)"
+          },
+          "correctAnswer": "A",
+          "explanation": "Trong hệ thống DAC, chủ sở hữu tài nguyên quyết định ai được vào và thay đổi quyền khi cần. Chủ sở hữu có thể ủy thác trách nhiệm đó cho người khác."
+        },
+        {
+          "id": "ATTT_C5_T1_Q15",
+          "question": "Tomahawk Industries phát triển các hệ thống điều khiển vũ khí cho quân đội. Công ty thiết kế một hệ thống yêu cầu hai sĩ quan khác nhau nhập mã truy cập của mình trước khi cho phép hệ thống kích hoạt. Điều này tuân theo nguyên tắc an ninh nào?",
+          "options": {
+            "A": "Đặc quyền tối thiểu (Least privilege)",
+            "B": "An ninh bằng sự che giấu (Security through obscurity)",
+            "C": "Cần-để-biết (Need to know)",
+            "D": "Phân tách nhiệm vụ (Separation of duties)"
+          },
+          "correctAnswer": "D",
+          "explanation": "Phân tách nhiệm vụ là quá trình chia một nhiệm vụ thành một chuỗi các hoạt động riêng biệt do những người khác nhau thực hiện, mỗi người chỉ được phép thực hiện một phần của nhiệm vụ tổng thể."
+        },
+        {
+          "id": "ATTT_C5_T1_Q16",
+          "question": "Mô hình an ninh nào KHÔNG bảo vệ tính toàn vẹn của thông tin?",
+          "options": {
+            "A": "Bell-LaPadula",
+            "B": "Clark-Wilson",
+            "C": "Biba",
+            "D": "Brewer và Nash"
+          },
+          "correctAnswer": "A",
+          "explanation": "Mô hình Bell-LaPadula tập trung vào tính bảo mật, không phải tính toàn vẹn của dữ liệu, và giúp điều chỉnh việc truy cập thông tin được phân loại."
+        },
+        {
+          "id": "ATTT_C5_T1_Q17",
+          "question": "Nguyên tắc nào sau đây KHÔNG phải là thành phần của mô hình toàn vẹn Biba?",
+          "options": {
+            "A": "Chủ thể không thể đọc các đối tượng có mức toàn vẹn thấp hơn chủ thể.",
+            "B": "Chủ thể không thể thay đổi các đối tượng có mức toàn vẹn thấp hơn.",
+            "C": "Chủ thể ở một mức toàn vẹn nhất định chỉ có thể gọi các chủ thể ở cùng mức toàn vẹn hoặc thấp hơn.",
+            "D": "Một chủ thể không được yêu cầu dịch vụ từ các chủ thể có mức toàn vẹn cao hơn."
+          },
+          "correctAnswer": "B",
+          "explanation": "Mô hình toàn vẹn Biba không cho phép chủ thể thay đổi các đối tượng có mức toàn vẹn cao hơn chủ thể."
+        },
+        {
+          "id": "ATTT_C5_T1_Q18",
+          "question": "Điều nào sau đây KHÔNG cung cấp dịch vụ xác thực, ủy quyền và kế toán (AAA)?",
+          "options": {
+            "A": "Remote Authentication Dial-In User Service (RADIUS)",
+            "B": "Terminal Access Controller Access Control System Plus (TACACS+)",
+            "C": "Mảng đĩa dự phòng độc lập (RAID)",
+            "D": "DIAMETER"
+          },
+          "correctAnswer": "C",
+          "explanation": "RAID là công nghệ duy trì hoạt động kinh doanh, không phải dịch vụ xác thực, ủy quyền và kế toán. RADIUS, TACACS+ và DIAMETER đều là các dịch vụ AAA."
+        },
+        {
+          "id": "ATTT_C5_T1_Q19",
+          "question": "Chuẩn mở nào dựa trên XML để trao đổi thông tin xác thực và ủy quyền và thường được dùng cho các ứng dụng web?",
+          "options": {
+            "A": "Ngôn ngữ đánh dấu xác nhận bảo mật (SAML)",
+            "B": "Hệ thống an ninh châu Âu cho ứng dụng trong môi trường đa nhà cung cấp (SESAME)",
+            "C": "Giao thức gói dữ liệu người dùng (UDP)",
+            "D": "Giao thức xác thực mật khẩu (PAP)"
+          },
+          "correctAnswer": "A",
+          "explanation": "SAML là chuẩn mở dùng để trao đổi cả dữ liệu xác thực lẫn ủy quyền. SAML dựa trên XML và được thiết kế để hỗ trợ nhu cầu kiểm soát truy cập của các hệ thống phân tán. SAML thường được dùng trong kiểm soát truy cập ứng dụng web."
+        },
+        {
+          "id": "ATTT_C5_T1_Q20",
+          "question": "Điều nào sau đây KHÔNG phải là lợi ích của điện toán đám mây đối với các tổ chức?",
+          "options": {
+            "A": "Cung cấp theo yêu cầu",
+            "B": "Cải thiện khả năng phục hồi sau thảm họa",
+            "C": "Không cần duy trì trung tâm dữ liệu",
+            "D": "Giảm phụ thuộc vào các nhà cung cấp bên ngoài"
+          },
+          "correctAnswer": "D",
+          "explanation": "Điện toán đám mây làm tăng nhu cầu dựa vào các nhà cung cấp bên ngoài. Việc giao dữ liệu riêng tư cho nhà cung cấp dịch vụ đám mây đòi hỏi một mức độ tin tưởng nhất định vào nhà cung cấp đó."
+        }
+      ]
+    },
+    {
+      "topicId": "ATTT_C5_T2",
+      "topicName": "Phần II – Đúng/Sai",
+      "questions": [
+        {
+          "id": "ATTT_C5_T2_Q1",
+          "question": "Hệ điều hành đáng tin cậy (TOS) cung cấp các tính năng đáp ứng những yêu cầu cụ thể của chính phủ về an ninh.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C5_T2_Q2",
+          "question": "Bốn thành phần trung tâm của kiểm soát truy cập là người dùng, tài nguyên, hành động và tính năng.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Bốn thành phần trung tâm của kiểm soát truy cập là người dùng, tài nguyên, hành động và mối quan hệ (relationships), chứ không phải tính năng."
+        },
+        {
+          "id": "ATTT_C5_T2_Q3",
+          "question": "Các phương pháp phổ biến để nhận dạng người dùng với hệ thống gồm tên người dùng, thẻ thông minh và sinh trắc học.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C5_T2_Q4",
+          "question": "Tấn công từ điển hoạt động bằng cách băm tất cả các từ trong một từ điển rồi so sánh giá trị băm với tệp mật khẩu của hệ thống để tìm ra sự trùng khớp.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C5_T2_Q5",
+          "question": "Cụm mật khẩu (passphrase) kém an toàn hơn mật khẩu.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Cụm mật khẩu dài hơn và nhìn chung khó đoán hơn nên được coi là an toàn hơn mật khẩu."
+        },
+        {
+          "id": "ATTT_C5_T2_Q6",
+          "question": "Số lần đăng nhập thất bại kích hoạt một hành động đối với tài khoản được gọi là sự kiện kiểm toán đăng nhập (audit logon event).",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Số lần đăng nhập thất bại kích hoạt một hành động đối với tài khoản được gọi là ngưỡng (threshold). Sự kiện kiểm toán đăng nhập cung cấp bản ghi về thời điểm mỗi người dùng đăng nhập hoặc đăng xuất khỏi máy tính."
+        },
+        {
+          "id": "ATTT_C5_T2_Q7",
+          "question": "Bạn nên dùng các thông tin cá nhân dễ nhớ để tạo mật khẩu an toàn.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Mật khẩu không bao giờ được dùng mã nhân viên, số An sinh xã hội, ngày sinh, số điện thoại hoặc bất kỳ thông tin cá nhân nào dễ đoán."
+        },
+        {
+          "id": "ATTT_C5_T2_Q8",
+          "question": "Thẻ thông minh là một token có hình dạng như thẻ tín dụng, chứa một hoặc nhiều vi mạch vi xử lý để nhận, lưu trữ và gửi thông tin qua đầu đọc.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C5_T2_Q9",
+          "question": "Sinh trắc học mẫu giọng nói chính xác cho việc xác thực vì giọng nói không dễ bị phần mềm máy tính sao chép.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Mẫu giọng nói KHÔNG chính xác cho việc xác thực vì giọng nói có thể bị phần mềm máy tính sao chép quá dễ dàng."
+        },
+        {
+          "id": "ATTT_C5_T2_Q10",
+          "question": "Vân tay, vân lòng bàn tay và quét võng mạc là các loại sinh trắc học.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C5_T2_Q11",
+          "question": "Đăng nhập một lần (SSO) có thể tạo ra mật khẩu mạnh hơn vì chỉ phải nhớ một mật khẩu nên người dùng nhìn chung sẵn sàng dùng mật khẩu mạnh hơn.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C5_T2_Q12",
+          "question": "DIAMETER là một dự án nghiên cứu và phát triển do Ủy ban châu Âu tài trợ.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "SESAME mới là dự án nghiên cứu và phát triển do Ủy ban châu Âu tài trợ. DIAMETER là một loại máy chủ AAA."
+        },
+        {
+          "id": "ATTT_C5_T2_Q13",
+          "question": "Tệp nhật ký là các bản ghi nêu chi tiết ai đã đăng nhập vào hệ thống, họ đăng nhập khi nào và đã sử dụng thông tin hoặc tài nguyên nào.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C5_T2_Q14",
+          "question": "Thiết bị khử từ (degausser) tạo ra một từ trường để xóa dữ liệu khỏi các phương tiện lưu trữ từ tính.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C5_T2_Q15",
+          "question": "Các mức quyền dựa trên người dùng giới hạn một người chỉ được thực hiện một số chức năng nhất định và thường áp dụng tính loại trừ lẫn nhau.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Ở các mức quyền dựa trên người dùng, các quyền được cấp cho người dùng thường dành riêng cho người đó. Trong trường hợp này, các quy tắc được đặt theo ID người dùng hoặc một định danh duy nhất khác. Kiểm soát truy cập dựa trên tác vụ (task-based) mới giới hạn một người chỉ được thực hiện một số chức năng nhất định và thường áp dụng tính loại trừ lẫn nhau."
+        },
+        {
+          "id": "ATTT_C5_T2_Q16",
+          "question": "Cách ly theo thời gian (temporal isolation) thường được dùng kết hợp với kiểm soát truy cập dựa trên quy tắc.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Cách ly theo thời gian hạn chế truy cập vào những thời điểm cụ thể và thường được dùng kết hợp với kiểm soát truy cập dựa trên vai trò, chứ không phải dựa trên quy tắc."
+        },
+        {
+          "id": "ATTT_C5_T2_Q17",
+          "question": "Kiểm soát truy cập phụ thuộc nội dung đòi hỏi cơ chế kiểm soát truy cập phải xem xét dữ liệu để quyết định ai được xem nó.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C5_T2_Q18",
+          "question": "Chính sách an ninh Chinese wall định nghĩa một rào chắn và xây dựng một tập quy tắc bảo đảm không chủ thể nào truy cập được các đối tượng ở phía bên kia.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C5_T2_Q19",
+          "question": "Một ví dụ về mối đe dọa đối với kiểm soát truy cập là trong mô hình ngang hàng (P2P), nơi người dùng vô tình chia sẻ thư mục My Documents của mình cho nhau.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C5_T2_Q20",
+          "question": "Terminal Access Controller Access Control System Plus (TACACS+) là một máy chủ xác thực sử dụng các tệp cấu hình máy khách và người dùng.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Remote Authentication Dial-In User Service (RADIUS) mới là máy chủ xác thực sử dụng các tệp cấu hình máy khách và người dùng. TACACS+ là một chuẩn của Internet Engineering Task Force (IETF) sử dụng một tệp cấu hình duy nhất."
+        }
+      ]
+    }
+  ]
+}

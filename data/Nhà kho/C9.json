@@ -1,0 +1,449 @@
+{
+  "chapterId": "C9",
+  "chapterName": "Tích hợp dữ liệu đa mô hình và CSDL hiện đại",
+  "topics": [
+    {
+      "topicId": "C9_T1",
+      "topicName": "Polyglot Persistence",
+      "questions": [
+        {
+          "id": "C9_T1_Q1",
+          "question": "Polyglot Persistence là gì?",
+          "options": {
+            "A": "Chỉ dùng một CSDL duy nhất",
+            "B": "Chỉ dùng Excel",
+            "C": "Áp dụng đồng thời nhiều công nghệ lưu trữ (SQL, NoSQL) trong cùng kiến trúc cho các dạng dữ liệu khác nhau",
+            "D": "Chỉ dùng NoSQL"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C9_T1_Q2",
+          "question": "Triết lý cốt lõi của Polyglot Persistence là gì?",
+          "options": {
+            "A": "'One database fits all'",
+            "B": "'Store everything in files'",
+            "C": "'One size does not fit all'",
+            "D": "'SQL is enough'"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C9_T1_Q3",
+          "question": "RDBMS trong Polyglot Persistence đảm nhận vai trò gì?",
+          "options": {
+            "A": "Caching và Session",
+            "B": "Hồ sơ schema-less",
+            "C": "Đồ thị quan hệ",
+            "D": "Dữ liệu giao dịch cốt lõi đòi hỏi tính toàn vẹn tuyệt đối (ACID)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C9_T1_Q4",
+          "question": "Document Store (NoSQL) phù hợp với dữ liệu nào?",
+          "options": {
+            "A": "Giao dịch ACID",
+            "B": "Cache tốc độ cao",
+            "C": "Hồ sơ thực thể có cấu trúc thay đổi liên tục (schema-less)",
+            "D": "Dữ liệu thô byte"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C9_T1_Q5",
+          "question": "Key-Value Store phục vụ mục đích gì?",
+          "options": {
+            "A": "Giao dịch ACID",
+            "B": "Truy xuất tốc độ cao cho tầng Caching và Session",
+            "C": "Lưu hồ sơ phức tạp",
+            "D": "Lưu đồ thị"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C9_T1_Q6",
+          "question": "Theo CAP Theorem trong kiến trúc này, tầng NoSQL vệ tinh chấp nhận điều gì?",
+          "options": {
+            "A": "Eventual Consistency để đổi lấy tốc độ và tính sẵn sàng",
+            "B": "Mất dữ liệu",
+            "C": "Strong Consistency tuyệt đối",
+            "D": "Không có tính sẵn sàng"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "C9_T2",
+      "topicName": "Knowledge Graph, BFS và DFS",
+      "questions": [
+        {
+          "id": "C9_T2_Q1",
+          "question": "Knowledge Graph biểu diễn dữ liệu bằng cấu trúc nào?",
+          "options": {
+            "A": "Bảng hàng–cột",
+            "B": "Cặp key–value",
+            "C": "Nodes (thực thể) và Edges (mối quan hệ)",
+            "D": "Cây nhị phân"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C9_T2_Q2",
+          "question": "Tư duy 'Relationship-First' của Knowledge Graph nghĩa là gì?",
+          "options": {
+            "A": "Bỏ qua quan hệ",
+            "B": "Mối quan hệ được lưu trực tiếp như thực thể hạng nhất, không phải tính online qua JOIN",
+            "C": "Luôn dùng JOIN để tính",
+            "D": "Chỉ lưu thực thể"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C9_T2_Q3",
+          "question": "Entity Disambiguation là gì?",
+          "options": {
+            "A": "Xóa thực thể",
+            "B": "Nhận diện và hợp nhất các thực thể bị trùng lặp hoặc viết sai định dạng trên các hệ thống nguồn",
+            "C": "Chia nhỏ đồ thị",
+            "D": "Mã hóa thực thể"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C9_T2_Q4",
+          "question": "Khả năng truy vấn sâu N-cấp (N-degree) trong Knowledge Graph thuộc về kỹ thuật nào, phục vụ khai phá dữ liệu dạng nào?",
+          "options": {
+            "A": "Hash Join — khai phá bảng quan hệ",
+            "B": "Graph Traversal — khai phá dữ liệu dạng đồ thị (tìm liên kết ngầm, phát hiện gian lận)",
+            "C": "Binning — khai phá dữ liệu số",
+            "D": "Sampling — khai phá dữ liệu streaming"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C9_T2_Q5",
+          "question": "BFS (Breadth-First Search) là gì và dùng cấu trúc dữ liệu nào?",
+          "options": {
+            "A": "Duyệt theo bảng chữ cái, dùng Array",
+            "B": "Duyệt ngẫu nhiên, dùng Hash",
+            "C": "Duyệt sâu theo nhánh, dùng Stack – LIFO",
+            "D": "Duyệt theo từng cấp độ (level by level), dùng Queue – FIFO"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C9_T2_Q6",
+          "question": "DFS (Depth-First Search) là gì và dùng cấu trúc dữ liệu nào?",
+          "options": {
+            "A": "Duyệt ngẫu nhiên",
+            "B": "Duyệt sâu theo một nhánh đến khi cụt đường mới quay lui, dùng Stack – LIFO hoặc đệ quy",
+            "C": "Duyệt theo từng cấp độ, dùng Queue",
+            "D": "Duyệt theo khoảng cách"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C9_T2_Q7",
+          "question": "Đồ thị: A–{B,D,G}; B–{E,F}; D–{F}; G–{E}; E–{C}; F–{C}. BFS xuất phát từ A cho thứ tự thăm nào?",
+          "options": {
+            "A": "A, D, G, B, F, E, C",
+            "B": "A, B, E, C, F, D, G",
+            "C": "A, B, E, G, F, C, D",
+            "D": "A, B, D, G, E, F, C"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C9_T2_Q8",
+          "question": "Đồ thị: A–{B,D,G}; B–{E,F}; E–{G}; F–{C,D}. DFS xuất phát từ A (chọn theo thứ tự bảng chữ cái) cho thứ tự thăm theo slide nào?",
+          "options": {
+            "A": "A, B, E, F, C, D, G",
+            "B": "A, B, E, G, F, C, D",
+            "C": "A, D, G, B, E, F, C",
+            "D": "A, B, D, G, E, F, C"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C9_T2_Q9",
+          "question": "Ứng dụng nào sau đây phù hợp với BFS trong Knowledge Graph?",
+          "options": {
+            "A": "Tìm đường đi ngắn nhất giữa hai thực thể và gợi ý sản phẩm gần nhất",
+            "B": "Duyệt ontology để tìm khái niệm con",
+            "C": "Tìm chuỗi liên kết dài giữa các thực thể",
+            "D": "Xây dựng taxonomy"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C9_T2_Q10",
+          "question": "Ứng dụng nào sau đây phù hợp với DFS trong Knowledge Graph?",
+          "options": {
+            "A": "Gợi ý sản phẩm gần nhất",
+            "B": "Đề xuất kết nối mạng xã hội gần",
+            "C": "Duyệt ontology, xây dựng taxonomy, tìm chuỗi liên kết dài giữa các thực thể",
+            "D": "Tìm đường đi ngắn nhất"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C9_T3",
+      "topicName": "Vector Indexing",
+      "questions": [
+        {
+          "id": "C9_T3_Q1",
+          "question": "Vector Embeddings thường có số chiều khoảng bao nhiêu?",
+          "options": {
+            "A": "768 đến 1536 chiều",
+            "B": "Hàng triệu chiều",
+            "C": "10 đến 20 chiều",
+            "D": "2 đến 3 chiều"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C9_T3_Q2",
+          "question": "Vấn đề hiệu năng khi quét khoảng cách trên hàng triệu vector số chiều cao là gì?",
+          "options": {
+            "A": "Thiếu dung lượng đĩa",
+            "B": "Lỗi mạng",
+            "C": "Lỗi SQL",
+            "D": "Curse of Dimensionality gây quá tải CPU"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C9_T3_Q3",
+          "question": "HNSW là gì?",
+          "options": {
+            "A": "Cây quyết định",
+            "B": "Cấu trúc đồ thị phân cấp mạng lưới để nhảy vùng tìm láng giềng gần nhất với tốc độ mili-giây",
+            "C": "Kỹ thuật nén dữ liệu",
+            "D": "Thuật toán phân cụm DBSCAN"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C9_T3_Q4",
+          "question": "IVF (Inverted File Index) làm gì?",
+          "options": {
+            "A": "Xóa vector trùng",
+            "B": "Phân cụm không gian vector thành các phân vùng (Voronoi cells) để thu hẹp phạm vi tìm kiếm",
+            "C": "Nén vector",
+            "D": "Mã hóa vector"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C9_T3_Q5",
+          "question": "Product Quantization (PQ) dùng để làm gì?",
+          "options": {
+            "A": "Mã hóa SHA",
+            "B": "Sao lưu vector",
+            "C": "Tăng số chiều vector",
+            "D": "Nén kích thước lưu trữ của vector để đưa chỉ mục vào RAM"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C9_T4",
+      "topicName": "Blockchain và Immutable Audit Logs",
+      "questions": [
+        {
+          "id": "C9_T4_Q1",
+          "question": "Dữ liệu thô trên Blockchain tồn tại ở dạng nào?",
+          "options": {
+            "A": "Bảng quan hệ có cấu trúc",
+            "B": "Dạng byte/hex phi cấu trúc, phân tán trên hàng ngàn nút",
+            "C": "Đồ thị tri thức",
+            "D": "File CSV"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C9_T4_Q2",
+          "question": "Mục tiêu phân tích On-chain Data là gì?",
+          "options": {
+            "A": "Chuyển dữ liệu phi cấu trúc từ Blockchain về dạng bảng quan hệ để chạy BI/Fintech",
+            "B": "Mã hóa lại blockchain",
+            "C": "Sao chép nút mạng",
+            "D": "Xóa dữ liệu blockchain"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C9_T4_Q3",
+          "question": "Event Decoding trong Blockchain ETL dùng gì để dịch chuỗi Hex trong Logs?",
+          "options": {
+            "A": "JSON Schema",
+            "B": "HTTP header",
+            "C": "SQL",
+            "D": "ABI (Application Binary Interface)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C9_T4_Q4",
+          "question": "Data Normalization trong Blockchain ETL ví dụ nào?",
+          "options": {
+            "A": "Nén dữ liệu",
+            "B": "Mã hóa key",
+            "C": "Xóa log",
+            "D": "Chuyển Wei (18 chữ số thập phân) sang Ether, đồng bộ Timestamp về UTC"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C9_T4_Q5",
+          "question": "Vì sao dùng Blockchain làm sổ cái bất biến cho Audit Logs?",
+          "options": {
+            "A": "Là bên thứ ba độc lập, không thể bị thao túng; DBA không thể sửa/xóa log để xóa dấu vết",
+            "B": "Để tăng tốc truy vấn",
+            "C": "Để giảm dung lượng",
+            "D": "Để thay DBA"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C9_T4_Q6",
+          "question": "Cơ chế Data Anchoring & Merkle Tree hoạt động thế nào?",
+          "options": {
+            "A": "Sao lưu log lên FTP",
+            "B": "Mã hóa log bằng mật khẩu",
+            "C": "Băm (SHA-256) nhật ký, gom thành Merkle Root Hash và ghi Root Hash lên Blockchain qua Smart Contract",
+            "D": "Ghi toàn bộ dữ liệu thô lên Blockchain"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C9_T5",
+      "topicName": "Federated Querying và tối ưu truy vấn đa mô hình",
+      "questions": [
+        {
+          "id": "C9_T5_Q1",
+          "question": "Federated Querying là gì?",
+          "options": {
+            "A": "Một câu SQL lấy và liên kết dữ liệu từ nhiều nền tảng (SQL, Graph, Blockchain) mà không di chuyển dữ liệu thô",
+            "B": "Chỉ truy vấn một CSDL",
+            "C": "Sao chép dữ liệu qua FTP",
+            "D": "Gom toàn bộ dữ liệu về một chỗ trước khi truy vấn"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C9_T5_Q2",
+          "question": "Presto, Trino, BigQuery Omni đóng vai trò gì?",
+          "options": {
+            "A": "Định dạng bảng",
+            "B": "Công cụ mã hóa",
+            "C": "Công cụ nén",
+            "D": "Connector/Wrapper Engines: dịch SQL tổng sang ngôn ngữ của từng nguồn"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C9_T5_Q3",
+          "question": "Predicate Pushdown trong Federated Querying làm gì?",
+          "options": {
+            "A": "Xóa điều kiện lọc",
+            "B": "Đẩy điều kiện WHERE xuống CSDL nguồn để chúng tự lọc, chỉ trả về kết quả nhỏ qua mạng",
+            "C": "Kéo toàn bộ dữ liệu về lọc",
+            "D": "Mã hóa điều kiện"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C9_T5_Q4",
+          "question": "Khó khăn của Optimizer trong truy vấn đa mô hình là gì?",
+          "options": {
+            "A": "Không có SQL",
+            "B": "Không có mạng",
+            "C": "Thiếu số liệu thống kê về kích thước và chỉ mục của hệ thống đối tác nên dễ quyết định sai",
+            "D": "Thừa số liệu thống kê"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C9_T5_Q5",
+          "question": "Cost-Based Optimizer dựa trên hai tham số chi phí nào?",
+          "options": {
+            "A": "Chi phí bản quyền và nhân sự",
+            "B": "Chi phí điện và nước",
+            "C": "Chi phí tính toán tại chỗ (CPU/I-O) và chi phí vận chuyển dữ liệu qua mạng",
+            "D": "Chi phí đào tạo và tuyển dụng"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C9_T5_Q6",
+          "question": "Broadcast Join được dùng khi nào?",
+          "options": {
+            "A": "Băm nhỏ cả hai bảng",
+            "B": "Kéo bảng nhỏ sang máy chủ chứa bảng lớn",
+            "C": "Gộp hai bảng lớn thành một",
+            "D": "Xóa bảng nhỏ"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C9_T6",
+      "topicName": "High Availability & Disaster Recovery",
+      "questions": [
+        {
+          "id": "C9_T6_Q1",
+          "question": "RTO (Recovery Time Objective) là gì?",
+          "options": {
+            "A": "Số nút dự phòng",
+            "B": "Lượng dữ liệu tối đa chấp nhận mất",
+            "C": "Thời gian tối đa chấp nhận để khôi phục hệ thống sau sự cố",
+            "D": "Thời gian sao lưu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C9_T6_Q2",
+          "question": "RPO (Recovery Point Objective) là gì?",
+          "options": {
+            "A": "Thời gian tối đa khôi phục",
+            "B": "Lượng dữ liệu tối đa chấp nhận bị mất (tính bằng phút/giờ) khi sự cố",
+            "C": "Số vùng dự phòng",
+            "D": "Tốc độ sao lưu"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C9_T6_Q3",
+          "question": "Automated Failover hoạt động thế nào?",
+          "options": {
+            "A": "Sao lưu mỗi ngày",
+            "B": "Chờ admin chuyển thủ công",
+            "C": "Health Check phát hiện vùng chính mất tín hiệu quá 30 giây thì tự động chuyển luồng sang vùng dự phòng",
+            "D": "Xóa vùng chính"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C9_T6_Q4",
+          "question": "Vì sao NoSQL/Graph thường dùng nhân bản bất đồng bộ (Asynchronous Sync) xuyên quốc gia?",
+          "options": {
+            "A": "Để tăng độ trễ",
+            "B": "Tránh làm giảm tốc độ ghi dữ liệu của hệ thống",
+            "C": "Để đảm bảo mất dữ liệu",
+            "D": "Vì không có mạng"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    }
+  ]
+}

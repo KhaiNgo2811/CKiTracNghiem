@@ -1,0 +1,61 @@
+{
+  "chapters": [
+    {
+      "chapterId": "ATTT_C1",
+      "chapterName": "Chương 1",
+      "topicCount": 2,
+      "questionCount": 40
+    },
+    {
+      "chapterId": "ATTT_C3",
+      "chapterName": "Chương 3",
+      "topicCount": 2,
+      "questionCount": 40
+    },
+    {
+      "chapterId": "ATTT_C5",
+      "chapterName": "Chương 5",
+      "topicCount": 2,
+      "questionCount": 40
+    },
+    {
+      "chapterId": "ATTT_C6",
+      "chapterName": "Chương 6",
+      "topicCount": 2,
+      "questionCount": 40
+    },
+    {
+      "chapterId": "ATTT_C7",
+      "chapterName": "Chương 7",
+      "topicCount": 2,
+      "questionCount": 40
+    },
+    {
+      "chapterId": "ATTT_357",
+      "chapterName": "Đề ATBM Thương mại điện tử 2022 – Mã 357 (đáp án tự giải)",
+      "topicCount": 1,
+      "questionCount": 50
+    },
+    {
+      "chapterId": "ATTT_D40",
+      "chapterName": "Đề An toàn thông tin – 40 câu (đáp án tự giải)",
+      "topicCount": 1,
+      "questionCount": 40
+    },
+    {
+      "chapterId": "ATTT_D45",
+      "chapterName": "Đề An toàn thông tin – 45 câu",
+      "topicCount": 1,
+      "questionCount": 45
+    },
+    {
+      "chapterId": "ATTT_BO",
+      "chapterName": "Bộ đề ôn tập ATBM HTTT (đáp án tự giải)",
+      "topicCount": 7,
+      "questionCount": 202
+    }
+  ],
+  "totalQuestions": 537,
+  "totalTopics": 20,
+  "generatedAt": "2026-11-15T14:27:12.276757Z"
+}

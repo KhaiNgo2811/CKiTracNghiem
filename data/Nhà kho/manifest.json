@@ -1,0 +1,67 @@
+{
+  "chapters": [
+    {
+      "chapterId": "C1",
+      "chapterName": "Chiến lược & Kiến trúc dữ liệu hiện đại",
+      "topicCount": 8,
+      "questionCount": 71
+    },
+    {
+      "chapterId": "C2",
+      "chapterName": "Mô hình hóa dữ liệu cho Cloud Warehousing",
+      "topicCount": 8,
+      "questionCount": 54
+    },
+    {
+      "chapterId": "C3",
+      "chapterName": "Tích hợp dữ liệu và Pipeline tự động",
+      "topicCount": 8,
+      "questionCount": 70
+    },
+    {
+      "chapterId": "C4",
+      "chapterName": "Tiền xử lý dữ liệu học thuật",
+      "topicCount": 8,
+      "questionCount": 63
+    },
+    {
+      "chapterId": "C5",
+      "chapterName": "Thuật toán khai thác dữ liệu cốt lõi",
+      "topicCount": 7,
+      "questionCount": 67
+    },
+    {
+      "chapterId": "C6",
+      "chapterName": "In-Database Machine Learning và MLOps",
+      "topicCount": 4,
+      "questionCount": 35
+    },
+    {
+      "chapterId": "C7",
+      "chapterName": "Quản trị, Bảo mật và Đạo đức dữ liệu",
+      "topicCount": 8,
+      "questionCount": 41
+    },
+    {
+      "chapterId": "C8",
+      "chapterName": "Generative BI và AI-Driven Insights",
+      "topicCount": 3,
+      "questionCount": 20
+    },
+    {
+      "chapterId": "C9",
+      "chapterName": "Tích hợp dữ liệu đa mô hình và CSDL hiện đại",
+      "topicCount": 6,
+      "questionCount": 37
+    },
+    {
+      "chapterId": "HOT",
+      "chapterName": "Câu hỏi tủ (đề năm ngoái)",
+      "topicCount": 1,
+      "questionCount": 49
+    }
+  ],
+  "totalQuestions": 507,
+  "totalTopics": 61,
+  "generatedAt": "2026-10-07T03:54:03.844Z"
+}

@@ -1,0 +1,729 @@
+{
+  "chapterId": "C7",
+  "chapterName": "Học máy: Hồi quy, Cây quyết định, Ensemble và Phân cụm (theo đề chẩn đoán)",
+  "topics": [
+    {
+      "topicId": "C7_T1",
+      "topicName": "Hồi quy tuyến tính, R² và đa cộng tuyến",
+      "questions": [
+        {
+          "id": "C7_T1_Q1",
+          "question": "Trong hồi quy tuyến tính y = β₀ + β₁x + ε, β₁ (Slope) là gì?",
+          "options": {
+            "A": "Giá trị của y khi x = 0",
+            "B": "Sai số ngẫu nhiên của mô hình",
+            "C": "Mức thay đổi trung bình của y khi x tăng 1 đơn vị",
+            "D": "Hệ số xác định của mô hình"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T1_Q2",
+          "question": "Trong hồi quy tuyến tính y = β₀ + β₁x + ε, β₀ (Intercept) là gì?",
+          "options": {
+            "A": "Phương sai của sai số",
+            "B": "Mức thay đổi của y khi x tăng 1 đơn vị",
+            "C": "Giá trị dự đoán của y khi x = 0",
+            "D": "Hệ số tương quan"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T1_Q3",
+          "question": "Với hồi quy bội, ý nghĩa của hệ số βⱼ là gì?",
+          "options": {
+            "A": "Phần trăm phương sai được giải thích",
+            "B": "Mức thay đổi trung bình của y khi xⱼ tăng 1 đơn vị, giữ các biến khác không đổi",
+            "C": "Sai số chuẩn của mô hình",
+            "D": "Mức thay đổi của y khi mọi biến cùng tăng 1 đơn vị"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T1_Q4",
+          "question": "R² (hệ số xác định) cho biết điều gì?",
+          "options": {
+            "A": "Số biến độc lập trong mô hình",
+            "B": "Độ lệch chuẩn của sai số",
+            "C": "Tỷ lệ phương sai của y được mô hình giải thích",
+            "D": "Mức độ đa cộng tuyến"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T1_Q5",
+          "question": "Công thức Adjusted R² là gì?",
+          "options": {
+            "A": "1 − R²(n − 1)/(n − p)",
+            "B": "(1 − R²)(n − p − 1)/(n − 1)",
+            "C": "1 − (1 − R²)(n − 1)/(n − p − 1)",
+            "D": "R² × (n − p − 1)/(n − 1)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T1_Q6",
+          "question": "Nếu R² = 0,8; số mẫu n = 1000; số biến độc lập p = 30 thì Adjusted R² xấp xỉ bao nhiêu?",
+          "options": {
+            "A": "0,8200",
+            "B": "0,7938",
+            "C": "0,7700",
+            "D": "0,8000"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T1_Q7",
+          "question": "Nếu R² = 0,9; n = 100; p = 4 thì Adjusted R² xấp xỉ bao nhiêu?",
+          "options": {
+            "A": "0,9200",
+            "B": "0,8958",
+            "C": "0,8500",
+            "D": "0,9000"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T1_Q8",
+          "question": "Nếu R² = 0,6; n = 50; p = 5 thì Adjusted R² xấp xỉ bao nhiêu?",
+          "options": {
+            "A": "0,6500",
+            "B": "0,6000",
+            "C": "0,5000",
+            "D": "0,5545"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T1_Q9",
+          "question": "Vì sao dùng Adjusted R² thay vì R² khi so sánh mô hình có số biến khác nhau?",
+          "options": {
+            "A": "Adjusted R² luôn lớn hơn R²",
+            "B": "R² luôn tăng khi thêm biến, còn Adjusted R² phạt các biến không đóng góp",
+            "C": "Adjusted R² không phụ thuộc cỡ mẫu",
+            "D": "R² không thể dùng cho hồi quy bội"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T1_Q10",
+          "question": "Adjusted R² so với R² thường như thế nào?",
+          "options": {
+            "A": "Luôn lớn hơn R²",
+            "B": "Luôn bằng R²",
+            "C": "Nhỏ hơn hoặc bằng R²",
+            "D": "Luôn bằng 1"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T1_Q11",
+          "question": "Đa cộng tuyến (multicollinearity) là gì?",
+          "options": {
+            "A": "Biến phụ thuộc có nhiều giá trị thiếu",
+            "B": "Phần dư có phương sai thay đổi",
+            "C": "Các biến độc lập tương quan mạnh với nhau",
+            "D": "Dữ liệu có nhiều ngoại lệ"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T1_Q12",
+          "question": "Chỉ số nào dùng để đo lường và xác định mức độ đa cộng tuyến của các biến?",
+          "options": {
+            "A": "AIC",
+            "B": "RMSE",
+            "C": "Gini Impurity",
+            "D": "VIF (Variance Inflation Factor)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T1_Q13",
+          "question": "Ngưỡng VIF thường được xem là báo hiệu đa cộng tuyến nghiêm trọng là bao nhiêu?",
+          "options": {
+            "A": "Bằng 0",
+            "B": "Lớn hơn 10 (một số tài liệu dùng 5)",
+            "C": "Nhỏ hơn 0,05",
+            "D": "Nhỏ hơn 1"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T1_Q14",
+          "question": "Hệ quả của đa cộng tuyến cao là gì?",
+          "options": {
+            "A": "Mô hình luôn dự đoán hoàn hảo",
+            "B": "Hệ số hồi quy kém ổn định, sai số chuẩn lớn, khó diễn giải",
+            "C": "R² luôn bằng 0",
+            "D": "Phần dư luôn bằng 0"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T1_Q15",
+          "question": "Phương pháp ước lượng OLS chọn hệ số bằng cách nào?",
+          "options": {
+            "A": "Cực tiểu hóa tổng phần dư",
+            "B": "Cực đại hóa VIF",
+            "C": "Cực tiểu hóa tổng bình phương phần dư",
+            "D": "Cực đại hóa số biến"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C7_T2",
+      "topicName": "Cây quyết định và Gini Impurity",
+      "questions": [
+        {
+          "id": "C7_T2_Q1",
+          "question": "Nút gốc (root node) trong cây quyết định có chức năng gì?",
+          "options": {
+            "A": "Đại diện toàn bộ dữ liệu và là nơi bắt đầu phân tách đầu tiên",
+            "B": "Đưa ra nhãn dự đoán cuối cùng",
+            "C": "Là nút bị cắt tỉa",
+            "D": "Chỉ lưu các ngoại lệ"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T2_Q2",
+          "question": "Nút trong/nút quyết định (internal/decision node) có chức năng gì?",
+          "options": {
+            "A": "Tính VIF",
+            "B": "Đưa ra kết quả dự đoán cuối cùng",
+            "C": "Kiểm tra điều kiện trên một đặc trưng và rẽ nhánh dữ liệu",
+            "D": "Chứa toàn bộ dữ liệu huấn luyện"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T2_Q3",
+          "question": "Nút lá (leaf node) có chức năng gì?",
+          "options": {
+            "A": "Đưa ra kết quả dự đoán (nhãn/giá trị), không phân tách thêm",
+            "B": "Bắt đầu phân tách đầu tiên",
+            "C": "Loại bỏ biến không quan trọng",
+            "D": "Kiểm tra điều kiện rẽ nhánh"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T2_Q4",
+          "question": "Gini Impurity đo điều gì?",
+          "options": {
+            "A": "Mức độ lẫn lộn các lớp trong một nút",
+            "B": "Sai số dự báo trung bình",
+            "C": "Mức độ đa cộng tuyến",
+            "D": "Độ tương quan giữa hai biến"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T2_Q5",
+          "question": "Công thức Gini Impurity cho một nút là gì?",
+          "options": {
+            "A": "Gini = 1 − Σ pᵢ",
+            "B": "Gini = −Σ pᵢ log pᵢ",
+            "C": "Gini = Σ pᵢ²",
+            "D": "Gini = 1 − Σ pᵢ²"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T2_Q6",
+          "question": "Một nút có 7 khách hàng (5 Rời bỏ, 2 Không rời bỏ). Gini Impurity bằng bao nhiêu?",
+          "options": {
+            "A": "≈ 0,500",
+            "B": "≈ 0,286",
+            "C": "≈ 0,408",
+            "D": "≈ 0,714"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T2_Q7",
+          "question": "Một nút có 10 khách hàng (6 Rời bỏ, 4 Không rời bỏ). Gini Impurity bằng bao nhiêu?",
+          "options": {
+            "A": "0,24",
+            "B": "0,40",
+            "C": "0,48",
+            "D": "0,60"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T2_Q8",
+          "question": "Một nút thuần (pure) chỉ chứa một lớp thì Gini bằng bao nhiêu?",
+          "options": {
+            "A": "1",
+            "B": "0,5",
+            "C": "−1",
+            "D": "0"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T2_Q9",
+          "question": "Với bài toán 2 lớp, Gini Impurity lớn nhất bằng bao nhiêu và khi nào?",
+          "options": {
+            "A": "0 khi hai lớp chia đều",
+            "B": "0,5 khi một lớp chiếm 100%",
+            "C": "0,5 khi hai lớp chia đều 50/50",
+            "D": "1 khi hai lớp chia đều"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T2_Q10",
+          "question": "Khi chọn điểm phân tách, cây quyết định ưu tiên điều gì?",
+          "options": {
+            "A": "Phép tách tạo nút lá lớn nhất",
+            "B": "Phép tách làm tăng Gini nhiều nhất",
+            "C": "Phép tách làm giảm Gini (hoặc tăng Information Gain) nhiều nhất",
+            "D": "Phép tách ngẫu nhiên"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T2_Q11",
+          "question": "Vấn đề thường gặp khi cây quyết định quá sâu là gì?",
+          "options": {
+            "A": "Overfitting (quá khớp dữ liệu huấn luyện)",
+            "B": "Mất toàn bộ nút lá",
+            "C": "Underfitting nghiêm trọng",
+            "D": "Đa cộng tuyến"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T2_Q12",
+          "question": "Cách nào giúp hạn chế overfitting của cây quyết định?",
+          "options": {
+            "A": "Tăng độ sâu tối đa",
+            "B": "Thêm nhiều biến thừa",
+            "C": "Xóa nút gốc",
+            "D": "Giới hạn độ sâu (max_depth) hoặc cắt tỉa (pruning)"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C7_T3",
+      "topicName": "Ensemble: Random Forest, XGBoost, Voting",
+      "questions": [
+        {
+          "id": "C7_T3_Q1",
+          "question": "Random Forest là gì?",
+          "options": {
+            "A": "Thuật toán phân cụm dựa trên mật độ",
+            "B": "Mô hình hồi quy tuyến tính có điều chuẩn",
+            "C": "Thuật toán ensemble kết hợp nhiều cây quyết định (bagging + chọn ngẫu nhiên đặc trưng) và bình chọn kết quả",
+            "D": "Một cây quyết định duy nhất rất sâu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T3_Q2",
+          "question": "Random Forest tạo sự đa dạng giữa các cây bằng cách nào?",
+          "options": {
+            "A": "Lấy mẫu bootstrap dữ liệu và chọn ngẫu nhiên tập con đặc trưng ở mỗi lần tách",
+            "B": "Dùng cùng một dữ liệu và cùng đặc trưng cho mọi cây",
+            "C": "Dùng cây có độ sâu bằng 1",
+            "D": "Xóa ngẫu nhiên các nhãn"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T3_Q3",
+          "question": "Với bài toán phân loại, Random Forest tổng hợp kết quả các cây bằng cách nào?",
+          "options": {
+            "A": "Bình chọn theo đa số (majority vote)",
+            "B": "Lấy kết quả của cây đầu tiên",
+            "C": "Lấy kết quả của cây sâu nhất",
+            "D": "Cộng tất cả nhãn lại"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T3_Q4",
+          "question": "Random Forest giúp giảm vấn đề nào của cây quyết định đơn lẻ?",
+          "options": {
+            "A": "Overfitting (giảm phương sai)",
+            "B": "Đa cộng tuyến",
+            "C": "Thiếu nhãn",
+            "D": "Giá trị thiếu"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T3_Q5",
+          "question": "Thuật toán nào thường xử lý tốt tập dữ liệu nhiều nhiễu hoặc không gian nhiều chiều trong nhóm ensemble dựa trên cây?",
+          "options": {
+            "A": "Hồi quy tuyến tính đơn",
+            "B": "Một cây quyết định đơn lẻ",
+            "C": "Random Forest",
+            "D": "K-Means"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T3_Q6",
+          "question": "Bagging là gì?",
+          "options": {
+            "A": "Huấn luyện tuần tự, mô hình sau sửa lỗi mô hình trước",
+            "B": "Xóa ngoại lệ trước khi huấn luyện",
+            "C": "Chuẩn hóa dữ liệu về [0,1]",
+            "D": "Huấn luyện song song nhiều mô hình trên các mẫu bootstrap rồi tổng hợp kết quả"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T3_Q7",
+          "question": "Boosting là gì?",
+          "options": {
+            "A": "Giảm chiều dữ liệu",
+            "B": "Huấn luyện tuần tự, mô hình sau tập trung sửa sai số của mô hình trước",
+            "C": "Phân cụm dữ liệu theo mật độ",
+            "D": "Huấn luyện song song độc lập các cây"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T3_Q8",
+          "question": "XGBoost là gì?",
+          "options": {
+            "A": "Thuật toán Gradient Boosting tối ưu, xây các cây tuần tự và có điều chuẩn tích hợp",
+            "B": "Phương pháp chọn mẫu phi xác suất",
+            "C": "Một loại kiểm định phi tham số",
+            "D": "Thuật toán phân cụm theo mật độ"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T3_Q9",
+          "question": "Khác biệt chính giữa Random Forest và XGBoost là gì?",
+          "options": {
+            "A": "Random Forest dùng boosting, XGBoost dùng bagging",
+            "B": "Cả hai đều chỉ dùng một cây",
+            "C": "Random Forest dùng bagging (cây độc lập), XGBoost dùng boosting (cây tuần tự sửa sai)",
+            "D": "Cả hai đều là thuật toán phân cụm"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T3_Q10",
+          "question": "Hard Voting hoạt động như thế nào?",
+          "options": {
+            "A": "Nhân xác suất của các mô hình",
+            "B": "Chỉ dùng mô hình có độ chính xác cao nhất",
+            "C": "Lấy trung bình xác suất dự đoán của các mô hình",
+            "D": "Mỗi mô hình bỏ một phiếu cho nhãn dự đoán, chọn nhãn nhiều phiếu nhất"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T3_Q11",
+          "question": "Soft Voting hoạt động như thế nào?",
+          "options": {
+            "A": "Chọn nhãn của mô hình đầu tiên",
+            "B": "Mỗi mô hình bỏ một phiếu cho nhãn",
+            "C": "Lấy trung bình (có thể có trọng số) xác suất dự đoán của các mô hình rồi chọn lớp có xác suất cao nhất",
+            "D": "Chọn nhãn có xác suất thấp nhất"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T3_Q12",
+          "question": "Soft Voting yêu cầu điều gì ở các mô hình thành viên?",
+          "options": {
+            "A": "Phải cùng số tham số",
+            "B": "Có khả năng dự đoán xác suất từng lớp",
+            "C": "Chỉ cần dự đoán nhãn",
+            "D": "Phải cùng là cây quyết định"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T3_Q13",
+          "question": "Ba mô hình dự đoán P(lớp A) lần lượt là 0,9; 0,4; 0,3. Soft Voting cho lớp nào?",
+          "options": {
+            "A": "Lớp B (trung bình &lt; 0,5)",
+            "B": "Hòa",
+            "C": "Không xác định",
+            "D": "Lớp A (trung bình ≈ 0,533 &gt; 0,5)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T3_Q14",
+          "question": "Cùng ba mô hình đó dự đoán nhãn lần lượt là A, B, B. Hard Voting cho lớp nào?",
+          "options": {
+            "A": "Không xác định",
+            "B": "Lớp B (2/3 phiếu)",
+            "C": "Lớp A",
+            "D": "Hòa"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C7_T4",
+      "topicName": "Regularization và phân loại đa lớp (One-vs-One, One-vs-Rest)",
+      "questions": [
+        {
+          "id": "C7_T4_Q1",
+          "question": "Overfitting là gì?",
+          "options": {
+            "A": "Mô hình có quá ít biến",
+            "B": "Mô hình có R² bằng 0",
+            "C": "Mô hình khớp kém cả dữ liệu huấn luyện và dữ liệu mới",
+            "D": "Mô hình khớp rất tốt dữ liệu huấn luyện nhưng tổng quát hóa kém trên dữ liệu mới"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T4_Q2",
+          "question": "Regularization kiểm soát độ phức tạp và ngăn chặn Overfitting bằng kỹ thuật nào?",
+          "options": {
+            "A": "Thêm thành phần phạt (penalty) lên độ lớn của hệ số vào hàm mất mát",
+            "B": "Tăng độ sâu cây tối đa",
+            "C": "Xóa nhãn",
+            "D": "Tăng số biến độc lập"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T4_Q3",
+          "question": "L1 Regularization còn gọi là gì?",
+          "options": {
+            "A": "Lasso",
+            "B": "Elastic Net",
+            "C": "Dropout",
+            "D": "Ridge"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T4_Q4",
+          "question": "L2 Regularization còn gọi là gì?",
+          "options": {
+            "A": "Lasso",
+            "B": "Ridge",
+            "C": "Boosting",
+            "D": "Bagging"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T4_Q5",
+          "question": "Đặc điểm nổi bật của Lasso (L1) là gì?",
+          "options": {
+            "A": "Có thể ép một số hệ số về đúng 0, đóng vai trò chọn biến",
+            "B": "Chỉ dùng cho phân cụm",
+            "C": "Tăng độ lớn các hệ số",
+            "D": "Không bao giờ làm hệ số bằng 0"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T4_Q6",
+          "question": "Đặc điểm của Ridge (L2) là gì?",
+          "options": {
+            "A": "Luôn ép hệ số về đúng 0",
+            "B": "Tăng phương sai của mô hình",
+            "C": "Co các hệ số về gần 0 nhưng thường không triệt tiêu hẳn",
+            "D": "Chỉ dùng cho cây quyết định"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T4_Q7",
+          "question": "Tăng hệ số điều chuẩn λ thì điều gì thường xảy ra?",
+          "options": {
+            "A": "Không có thay đổi",
+            "B": "Hệ số tăng không giới hạn",
+            "C": "Mô hình phức tạp hơn",
+            "D": "Mô hình đơn giản hơn, giảm nguy cơ overfitting nhưng có thể tăng underfitting"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T4_Q8",
+          "question": "One-vs-One (OvO) trong phân loại đa lớp làm gì?",
+          "options": {
+            "A": "Huấn luyện một bộ phân loại cho mỗi lớp đối với phần còn lại",
+            "B": "Chỉ dùng cho bài toán hai lớp",
+            "C": "Huấn luyện một bộ phân loại nhị phân cho mỗi cặp lớp",
+            "D": "Huấn luyện một cây duy nhất"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T4_Q9",
+          "question": "Với K lớp, số bộ phân loại OvO cần huấn luyện là bao nhiêu?",
+          "options": {
+            "A": "K(K − 1)/2",
+            "B": "K",
+            "C": "2K",
+            "D": "K²"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T4_Q10",
+          "question": "Với 4 lớp, OvO cần bao nhiêu bộ phân loại nhị phân?",
+          "options": {
+            "A": "4",
+            "B": "12",
+            "C": "8",
+            "D": "6"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T4_Q11",
+          "question": "Với 5 lớp, OvO cần bao nhiêu bộ phân loại nhị phân?",
+          "options": {
+            "A": "5",
+            "B": "10",
+            "C": "25",
+            "D": "20"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T4_Q12",
+          "question": "One-vs-Rest (OvR) với K lớp cần bao nhiêu bộ phân loại?",
+          "options": {
+            "A": "K",
+            "B": "1",
+            "C": "K(K − 1)/2",
+            "D": "K²"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "C7_T5",
+      "topicName": "Phân cụm DBSCAN",
+      "questions": [
+        {
+          "id": "C7_T5_Q1",
+          "question": "DBSCAN là gì?",
+          "options": {
+            "A": "Phương pháp mã hóa biến phân loại",
+            "B": "Thuật toán phân cụm dựa trên mật độ, có khả năng phát hiện nhiễu",
+            "C": "Thuật toán boosting",
+            "D": "Thuật toán hồi quy tuyến tính"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T5_Q2",
+          "question": "DBSCAN là viết tắt của gì?",
+          "options": {
+            "A": "Density-Based Spatial Clustering of Applications with Noise",
+            "B": "Data-Bound Statistical Classification of Anomalies",
+            "C": "Distance-Based Sequential Clustering and Neural Estimation",
+            "D": "Dynamic Binary Search Clustering Algorithm Network"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T5_Q3",
+          "question": "Hai tham số chính của DBSCAN là gì?",
+          "options": {
+            "A": "max_depth và n_estimators",
+            "B": "eps (bán kính lân cận) và minPts (số điểm tối thiểu)",
+            "C": "α và β",
+            "D": "k (số cụm) và số vòng lặp"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T5_Q4",
+          "question": "Điểm lõi (core point) trong DBSCAN là gì?",
+          "options": {
+            "A": "Điểm nằm xa mọi cụm",
+            "B": "Tâm của cụm",
+            "C": "Điểm có nhãn −1",
+            "D": "Điểm có ít nhất minPts điểm (kể cả chính nó) trong bán kính eps"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T5_Q5",
+          "question": "Điểm biên (border point) trong DBSCAN là gì?",
+          "options": {
+            "A": "Điểm có nhiều hơn minPts láng giềng",
+            "B": "Điểm nhiễu",
+            "C": "Tâm cụm",
+            "D": "Điểm nằm trong lân cận của điểm lõi nhưng bản thân không đủ minPts"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T5_Q6",
+          "question": "Điểm nhiễu (noise) trong DBSCAN là gì?",
+          "options": {
+            "A": "Điểm có giá trị thiếu",
+            "B": "Điểm không phải điểm lõi cũng không thuộc lân cận của điểm lõi nào",
+            "C": "Điểm lõi của cụm lớn nhất",
+            "D": "Điểm nằm chính giữa cụm"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T5_Q7",
+          "question": "Ưu điểm của DBSCAN so với K-Means là gì?",
+          "options": {
+            "A": "Luôn nhanh hơn K-Means",
+            "B": "Luôn cho cụm hình cầu",
+            "C": "Không có tham số",
+            "D": "Không cần chỉ định trước số cụm và tìm được cụm hình dạng bất kỳ"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T5_Q8",
+          "question": "K-Means yêu cầu điều gì mà DBSCAN không cần?",
+          "options": {
+            "A": "Dữ liệu dạng số",
+            "B": "Dữ liệu huấn luyện",
+            "C": "Khoảng cách giữa các điểm",
+            "D": "Chỉ định trước số cụm K"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T5_Q9",
+          "question": "Hạn chế thường gặp của DBSCAN là gì?",
+          "options": {
+            "A": "Bắt buộc phải biết số cụm",
+            "B": "Khó chọn eps phù hợp khi mật độ các cụm khác nhau nhiều; kém hiệu quả ở dữ liệu nhiều chiều",
+            "C": "Chỉ dùng cho hai biến",
+            "D": "Không phát hiện được nhiễu"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T5_Q10",
+          "question": "Trong scikit-learn, điểm nhiễu của DBSCAN được gán nhãn nào?",
+          "options": {
+            "A": "NaN",
+            "B": "1",
+            "C": "0",
+            "D": "−1"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    }
+  ]
+}

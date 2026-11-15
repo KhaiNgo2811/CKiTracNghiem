@@ -1,0 +1,446 @@
+{
+  "chapterId": "ATTT_C1",
+  "chapterName": "Chương 1",
+  "topics": [
+    {
+      "topicId": "ATTT_C1_T1",
+      "topicName": "Phần I – Trắc nghiệm",
+      "questions": [
+        {
+          "id": "ATTT_C1_T1_Q1",
+          "question": "Thuật ngữ nào mô tả bất kỳ hành động nào có thể gây thiệt hại cho một tài sản?",
+          "options": {
+            "A": "Rủi ro (Risk)",
+            "B": "Biện pháp đối phó (Countermeasure)",
+            "C": "Lỗ hổng (Vulnerability)",
+            "D": "Mối đe dọa (Threat)"
+          },
+          "correctAnswer": "D",
+          "explanation": "Mối đe dọa là bất kỳ hành động nào có thể gây thiệt hại cho một tài sản. Các hệ thống thông tin phải đối mặt với cả mối đe dọa từ tự nhiên lẫn do con người gây ra."
+        },
+        {
+          "id": "ATTT_C1_T1_Q2",
+          "question": "Bob vừa nhận vị trí giám đốc an ninh thông tin và tuân thủ cho một phòng khám y tế. Quy định nào có khả năng áp dụng trực tiếp nhất cho nơi làm việc của Bob?",
+          "options": {
+            "A": "Đạo luật Quản lý An ninh Thông tin Liên bang (FISMA)",
+            "B": "Đạo luật Bảo hiểm Y tế Khả chuyển và Trách nhiệm giải trình (HIPAA)",
+            "C": "Đạo luật Bảo vệ Trẻ em trên Internet (CIPA)",
+            "D": "Đạo luật Gramm-Leach-Bliley (GLBA)"
+          },
+          "correctAnswer": "B",
+          "explanation": "HIPAA yêu cầu các tổ chức chăm sóc sức khỏe phải triển khai các biện pháp kiểm soát an ninh và quyền riêng tư để bảo đảm quyền riêng tư của bệnh nhân."
+        },
+        {
+          "id": "ATTT_C1_T1_Q3",
+          "question": "Rachel đang điều tra một sự cố an toàn thông tin xảy ra tại trường trung học nơi cô làm việc. Cô nghi ngờ một số học sinh đã đột nhập vào hệ thống hồ sơ học sinh và thay đổi điểm số của mình. Nếu đúng như vậy, cuộc tấn công này đã vi phạm nguyên tắc nào của an toàn thông tin?",
+          "options": {
+            "A": "Tính bảo mật (Confidentiality)",
+            "B": "Tính toàn vẹn (Integrity)",
+            "C": "Tính sẵn sàng (Availability)",
+            "D": "Tính chống chối bỏ (Nonrepudiation)"
+          },
+          "correctAnswer": "B",
+          "explanation": "Kịch bản mô tả trường hợp một người dùng không được ủy quyền đã thay đổi thông tin lưu trong một hệ thống được bảo vệ. Nguyên tắc toàn vẹn yêu cầu chỉ những người dùng được ủy quyền mới có khả năng thay đổi thông tin."
+        },
+        {
+          "id": "ATTT_C1_T1_Q4",
+          "question": "Đại lượng nào sau đây đo thời gian trung bình cần thiết để sửa chữa một hệ thống, ứng dụng hoặc thành phần?",
+          "options": {
+            "A": "Thời gian hoạt động (Uptime)",
+            "B": "Thời gian trung bình giữa các lần hỏng (MTTF)",
+            "C": "Thời gian trung bình để sửa chữa (MTTR)",
+            "D": "Mục tiêu thời gian phục hồi (RTO)"
+          },
+          "correctAnswer": "C",
+          "explanation": "MTTR là khoảng thời gian trung bình cần để sửa chữa một hệ thống, ứng dụng hoặc thành phần. Mục tiêu là đưa hệ thống hoạt động trở lại nhanh chóng."
+        },
+        {
+          "id": "ATTT_C1_T1_Q5",
+          "question": "Máy chủ web của Juan ngừng hoạt động trong cả một ngày vào tháng 9 năm ngoái. Trong tháng đó nó không có thời gian ngừng hoạt động nào khác. Giá trị nào sau đây thể hiện thời gian hoạt động (uptime) của máy chủ web trong tháng đó?",
+          "options": {
+            "A": "96,67%",
+            "B": "3,33%",
+            "C": "99,96%",
+            "D": "0,04%"
+          },
+          "correctAnswer": "A",
+          "explanation": "Để tính tính sẵn sàng của một tháng, chia tổng thời gian hoạt động cho tổng thời gian. Tháng 9 có 30 ngày nên máy chủ web hoạt động 29 ngày: 29/30 = 0,9667 hay 96,67%."
+        },
+        {
+          "id": "ATTT_C1_T1_Q6",
+          "question": "Kế hoạch giảm thiểu nào phù hợp nhất để hạn chế rủi ro truy cập trái phép vào các máy trạm?",
+          "options": {
+            "A": "Bảo vệ bằng mật khẩu",
+            "B": "Phần mềm diệt virus",
+            "C": "Vô hiệu hóa các cổng USB",
+            "D": "Quét lỗ hổng"
+          },
+          "correctAnswer": "A",
+          "explanation": "Để giảm thiểu rủi ro truy cập trái phép vào máy trạm, hãy bật bảo vệ bằng mật khẩu, bật tính năng tự động khóa màn hình và gỡ bỏ quyền quản trị hệ thống của người dùng cuối."
+        },
+        {
+          "id": "ATTT_C1_T1_Q7",
+          "question": "Biện pháp kiểm soát an ninh nào hữu ích nhất để chống nghe lén dữ liệu truyền qua mạng LAN không dây (WLAN), vốn làm ảnh hưởng đến tính bảo mật?",
+          "options": {
+            "A": "Bảo vệ các tủ đấu dây",
+            "B": "Vá lỗi kịp thời",
+            "C": "Triển khai các tiêu chuẩn cấu hình LAN",
+            "D": "Áp dụng mã hóa mạnh"
+          },
+          "correctAnswer": "D",
+          "explanation": "Để giảm rủi ro lộ tính bảo mật của dữ liệu truyền qua WLAN, hãy triển khai mã hóa giữa máy trạm và điểm truy cập không dây (WAP)."
+        },
+        {
+          "id": "ATTT_C1_T1_Q8",
+          "question": "Matthew bắt lưu lượng trên mạng của mình và nhận thấy các kết nối dùng cổng 20, 22, 23 và 80. Cổng nào thường chạy giao thức sử dụng kết nối bảo mật, được mã hóa?",
+          "options": {
+            "A": "20",
+            "B": "22",
+            "C": "23",
+            "D": "80"
+          },
+          "correctAnswer": "B",
+          "explanation": "Giao thức Secure Shell (SSH) dùng cổng 22. SSH là giao thức mạng để truy cập đầu cuối từ xa vào một thiết bị khác và mã hóa dữ liệu để bảo vệ tính bảo mật của liên lạc. Cổng 20 tương ứng với giao thức truyền tệp (FTP), là giao thức văn bản thuần. Cổng 23 tương ứng với giao thức Telnet, cũng là giao thức văn bản thuần. Cổng 80 tương ứng với giao thức truyền siêu văn bản (HTTP), cũng là giao thức văn bản thuần."
+        },
+        {
+          "id": "ATTT_C1_T1_Q9",
+          "question": "Thiết bị mạng nào có khả năng chặn các kết nối mạng được xác định là có khả năng độc hại?",
+          "options": {
+            "A": "Hệ thống phát hiện xâm nhập (IDS)",
+            "B": "Hệ thống ngăn chặn xâm nhập (IPS)",
+            "C": "Vùng phi quân sự (DMZ)",
+            "D": "Máy chủ web"
+          },
+          "correctAnswer": "B",
+          "explanation": "IPS kiểm tra các luồng dữ liệu giao thức Internet (IP) để tìm dấu hiệu hoạt động độc hại và có thể chặn các luồng bị xác định là độc hại. IPS có thể kết thúc phiên liên lạc thực tế, lọc theo địa chỉ IP nguồn và chặn truy cập vào máy chủ đích."
+        },
+        {
+          "id": "ATTT_C1_T1_Q10",
+          "question": "Rủi ro nào được giảm thiểu hiệu quả nhất bởi nhà cung cấp dịch vụ Internet (ISP) ở thượng nguồn?",
+          "options": {
+            "A": "Tấn công từ chối dịch vụ phân tán (DDoS)",
+            "B": "Mất năng suất",
+            "C": "Lỗi cấu hình tường lửa",
+            "D": "Truy cập từ xa trái phép"
+          },
+          "correctAnswer": "A",
+          "explanation": "Các ISP thượng nguồn phải tham gia ngăn chặn tấn công DDoS và loại bỏ các gói IP khi một luồng gói TCP SYN nửa mở bắt đầu làm ngập đường truyền của ISP."
+        },
+        {
+          "id": "ATTT_C1_T1_Q11",
+          "question": "Beth phải mua tường lửa cho một số đường truyền mạng mà tổ chức của cô sử dụng. Đường truyền nào sẽ có thông lượng mạng cao nhất có thể?",
+          "options": {
+            "A": "DS1",
+            "B": "DS3",
+            "C": "OC-3",
+            "D": "OC-12"
+          },
+          "correctAnswer": "D",
+          "explanation": "Đường truyền OC-12 có dung lượng tối đa 622 Mbps, so với 155 Mbps của OC-3, 1,544 Mbps của DS1 và 45 Mbps của DS3."
+        },
+        {
+          "id": "ATTT_C1_T1_Q12",
+          "question": "Điểm nào KHÔNG phải là điểm cuối thường gặp của kết nối mạng riêng ảo (VPN) dùng để truy cập mạng từ xa?",
+          "options": {
+            "A": "Máy tính xách tay",
+            "B": "Tường lửa",
+            "C": "Bộ định tuyến",
+            "D": "Bộ lọc nội dung"
+          },
+          "correctAnswer": "D",
+          "explanation": "Các kết nối VPN dùng để máy khách truy cập mạng từ xa thường có một điểm cuối tại máy trạm, máy tính xách tay hoặc thiết bị di động của người dùng và một điểm cuối khác tại tường lửa hoặc bộ định tuyến."
+        },
+        {
+          "id": "ATTT_C1_T1_Q13",
+          "question": "Yếu tố nào sau đây thường được dùng trong giai đoạn nhận dạng (identification) của một kết nối truy cập từ xa?",
+          "options": {
+            "A": "Tên người dùng (Username)",
+            "B": "Mật khẩu (Password)",
+            "C": "Token",
+            "D": "Vân tay (Fingerprint)"
+          },
+          "correctAnswer": "A",
+          "explanation": "Trong quá trình nhận dạng, người dùng cung cấp thông tin định danh như tên người dùng, ID đăng nhập hoặc số tài khoản."
+        },
+        {
+          "id": "ATTT_C1_T1_Q14",
+          "question": "Trong giai đoạn nào của một kết nối truy cập từ xa thì người dùng cuối chứng minh danh tính mà mình tuyên bố?",
+          "options": {
+            "A": "Nhận dạng (Identification)",
+            "B": "Xác thực (Authentication)",
+            "C": "Ủy quyền (Authorization)",
+            "D": "Token hóa (Tokenization)"
+          },
+          "correctAnswer": "B",
+          "explanation": "Quá trình xác thực chứng minh người dùng từ xa đúng là người mà họ tuyên bố. Phương pháp xác thực phổ biến nhất là cung cấp mật khẩu."
+        },
+        {
+          "id": "ATTT_C1_T1_Q15",
+          "question": "Phương pháp nào sau đây KHÔNG phải là kỹ thuật tốt để xác thực người dùng cuối?",
+          "options": {
+            "A": "Mật khẩu",
+            "B": "Quét sinh trắc học",
+            "C": "Số định danh",
+            "D": "Token"
+          },
+          "correctAnswer": "C",
+          "explanation": "Mật khẩu, quét sinh trắc học và token đều là các kỹ thuật xác thực hợp lệ. Số định danh không bí mật và thường được dùng trong giai đoạn nhận dạng hơn là giai đoạn xác thực."
+        },
+        {
+          "id": "ATTT_C1_T1_Q16",
+          "question": "Thành phần nào của khung chính sách an ninh yêu cầu sự phê duyệt của lãnh đạo cấp cao và áp dụng cho toàn bộ tổ chức?",
+          "options": {
+            "A": "Chính sách (Policy)",
+            "B": "Tiêu chuẩn (Standard)",
+            "C": "Hướng dẫn (Guideline)",
+            "D": "Quy trình (Procedure)"
+          },
+          "correctAnswer": "A",
+          "explanation": "Chính sách là những tuyên bố bằng văn bản ngắn gọn mà những người đứng đầu tổ chức đặt ra như một đường lối hành động hoặc định hướng. Chính sách xuất phát từ lãnh đạo cấp cao và áp dụng cho toàn bộ tổ chức."
+        },
+        {
+          "id": "ATTT_C1_T1_Q17",
+          "question": "Thành phần nào của khung chính sách an ninh chỉ đưa ra các gợi ý thay vì các hành động bắt buộc?",
+          "options": {
+            "A": "Chính sách (Policy)",
+            "B": "Tiêu chuẩn (Standard)",
+            "C": "Hướng dẫn (Guideline)",
+            "D": "Quy trình (Procedure)"
+          },
+          "correctAnswer": "C",
+          "explanation": "Hướng dẫn là các đường lối hành động được đề xuất khi áp dụng chính sách, tiêu chuẩn và/hoặc quy trình. Hướng dẫn có thể cụ thể hoặc linh hoạt trong việc sử dụng."
+        },
+        {
+          "id": "ATTT_C1_T1_Q18",
+          "question": "Chris đang soạn một tài liệu cung cấp các hướng dẫn từng bước cho người dùng cuối muốn cập nhật phần mềm bảo mật trên máy tính của họ. Việc thực hiện các bản cập nhật này là bắt buộc. Chris đang viết loại tài liệu nào?",
+          "options": {
+            "A": "Chính sách (Policy)",
+            "B": "Tiêu chuẩn (Standard)",
+            "C": "Hướng dẫn (Guideline)",
+            "D": "Quy trình (Procedure)"
+          },
+          "correctAnswer": "D",
+          "explanation": "Quy trình là các hướng dẫn bằng văn bản để thực hiện những hành động mà chính sách hoặc tiêu chuẩn yêu cầu. Chúng có thể bao gồm kế hoạch hành động, cài đặt, kiểm thử và kiểm toán các biện pháp kiểm soát an ninh."
+        },
+        {
+          "id": "ATTT_C1_T1_Q19",
+          "question": "Thành phần nào của khung chính sách an ninh CNTT cung cấp các định nghĩa bằng văn bản chi tiết cho phần cứng và phần mềm cũng như cách sử dụng chúng?",
+          "options": {
+            "A": "Chính sách (Policy)",
+            "B": "Tiêu chuẩn (Standard)",
+            "C": "Hướng dẫn (Guideline)",
+            "D": "Quy trình (Procedure)"
+          },
+          "correctAnswer": "B",
+          "explanation": "Tiêu chuẩn là định nghĩa bằng văn bản chi tiết cho phần cứng và phần mềm cũng như cách sử dụng chúng. Tiêu chuẩn bảo đảm các biện pháp kiểm soát an ninh nhất quán được áp dụng trong toàn hệ thống CNTT."
+        },
+        {
+          "id": "ATTT_C1_T1_Q20",
+          "question": "Cấp độ phân loại nào là mức cao nhất được chính phủ liên bang Hoa Kỳ sử dụng?",
+          "options": {
+            "A": "Tuyệt mật (Top Secret)",
+            "B": "Bí mật (Secret)",
+            "C": "Mật (Confidential)",
+            "D": "Riêng tư (Private)"
+          },
+          "correctAnswer": "A",
+          "explanation": "Tuyệt mật là cấp độ phân loại cao nhất được chính phủ Hoa Kỳ sử dụng. Nó áp dụng cho thông tin mà cơ quan phân loại cho rằng nếu bị tiết lộ sẽ gây thiệt hại nghiêm trọng cho an ninh quốc gia."
+        }
+      ]
+    },
+    {
+      "topicId": "ATTT_C1_T2",
+      "topicName": "Phần II – Đúng/Sai",
+      "questions": [
+        {
+          "id": "ATTT_C1_T2_Q1",
+          "question": "Giao thức truyền siêu văn bản (HTTP) là giao thức truyền thông giữa trình duyệt web và các trang web, với dữ liệu ở dạng văn bản thuần.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C1_T2_Q2",
+          "question": "Mắt xích yếu nhất trong an ninh của hạ tầng CNTT là máy chủ.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Mắt xích yếu nhất trong an ninh của hạ tầng CNTT là người dùng."
+        },
+        {
+          "id": "ATTT_C1_T2_Q3",
+          "question": "Các tổ chức nên bắt đầu xây dựng khung chính sách an ninh CNTT bằng cách định nghĩa chính sách phân loại tài sản.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C1_T2_Q4",
+          "question": "Giám đốc an ninh CNTT thường chịu trách nhiệm bảo đảm miền máy trạm (Workstation Domain) tuân thủ chính sách.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C1_T2_Q5",
+          "question": "Đạo luật Sarbanes-Oxley (SOX) yêu cầu tất cả các loại tổ chức tài chính phải bảo vệ thông tin tài chính cá nhân của khách hàng.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Đạo luật Gramm-Leach-Bliley (GLBA) yêu cầu tất cả các loại tổ chức tài chính phải bảo vệ thông tin tài chính cá nhân của khách hàng. SOX yêu cầu các công ty niêm yết công khai nộp báo cáo tài chính chính xác và đáng tin cậy."
+        },
+        {
+          "id": "ATTT_C1_T2_Q6",
+          "question": "Danh sách kiểm soát truy cập (ACL) được dùng để cho phép và từ chối lưu lượng trong một bộ định tuyến IP.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C1_T2_Q7",
+          "question": "Thỏa thuận mức dịch vụ (SLA) là các đường trục quang cho các mạng trục quang riêng.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Các đường trục quang toàn quốc (nationwide optical backbones) mới là các đường trục quang cho các mạng trục quang riêng."
+        },
+        {
+          "id": "ATTT_C1_T2_Q8",
+          "question": "Mạng, bộ định tuyến và thiết bị cần được giám sát và quản lý liên tục để duy trì dịch vụ mạng diện rộng (WAN) luôn sẵn sàng.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C1_T2_Q9",
+          "question": "Bộ định tuyến VPN là một thiết bị an ninh được dùng để lọc các gói IP.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Tường lửa có trạng thái giao thức Internet (IP) mới là thiết bị an ninh được dùng để lọc các gói IP và chặn các loại gói IP, TCP và UDP không mong muốn đi vào hoặc rời khỏi mạng."
+        },
+        {
+          "id": "ATTT_C1_T2_Q10",
+          "question": "Giao thức quản lý mạng đơn giản (SNMP) được dùng để giám sát, cảnh báo và đo hiệu năng thiết bị mạng.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C1_T2_Q11",
+          "question": "Khía cạnh quan trọng nhất của hợp đồng dịch vụ WAN là cách nhà cung cấp dịch vụ cung cấp các dịch vụ khắc phục sự cố, quản lý mạng và quản lý an ninh.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C1_T2_Q12",
+          "question": "Khung chính sách an ninh CNTT giống như một bản phác thảo xác định nơi nên sử dụng các biện pháp kiểm soát an ninh.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C1_T2_Q13",
+          "question": "Giao thức truyền siêu văn bản (HTTP) mã hóa việc truyền dữ liệu giữa trình duyệt bảo mật và các trang web bảo mật.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Giao thức truyền siêu văn bản bảo mật (HTTPS) mới mã hóa việc truyền dữ liệu giữa trình duyệt bảo mật và các trang web bảo mật. HTTP là giao thức truyền thông giữa trình duyệt web và các trang web với dữ liệu ở dạng văn bản thuần."
+        },
+        {
+          "id": "ATTT_C1_T2_Q14",
+          "question": "Mật mã học (cryptography) là quá trình biến đổi dữ liệu từ văn bản thuần (cleartext) thành văn bản mã hóa (ciphertext).",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Mật mã học là thực hành che giấu dữ liệu và giữ nó tránh xa người dùng không được ủy quyền. Mã hóa (encryption) mới là quá trình biến đổi dữ liệu từ văn bản thuần thành văn bản mã hóa."
+        },
+        {
+          "id": "ATTT_C1_T2_Q15",
+          "question": "Ủy quyền là quá trình cấp quyền sử dụng tài sản CNTT, hệ thống, ứng dụng và dữ liệu của tổ chức cho một người dùng cụ thể.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C1_T2_Q16",
+          "question": "Miền hệ thống/ứng dụng (System/Application Domain) chứa tất cả các hệ thống, ứng dụng và dữ liệu trọng yếu của tổ chức.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C1_T2_Q17",
+          "question": "Trong miền truy cập từ xa, nếu dữ liệu riêng tư hoặc dữ liệu mật bị xâm phạm từ xa, bạn nên đặt chế độ tự động chặn các lần thử đăng nhập lại.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Trong miền truy cập từ xa, nếu dữ liệu riêng tư hoặc dữ liệu mật bị xâm phạm từ xa, bạn nên mã hóa toàn bộ dữ liệu riêng tư trong cơ sở dữ liệu hoặc ổ cứng."
+        },
+        {
+          "id": "ATTT_C1_T2_Q18",
+          "question": "Mã hóa dữ liệu trong cơ sở dữ liệu và thiết bị lưu trữ tạo thêm một lớp bảo mật.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_C1_T2_Q19",
+          "question": "Chính sách bảo vệ tài sản định nghĩa tiêu chuẩn phân loại dữ liệu của tổ chức.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "B",
+          "explanation": "Chính sách bảo vệ tài sản giúp các tổ chức xác định mức ưu tiên cho các hệ thống và dữ liệu CNTT trọng yếu. Chính sách phân loại tài sản mới định nghĩa tiêu chuẩn phân loại dữ liệu của tổ chức."
+        },
+        {
+          "id": "ATTT_C1_T2_Q20",
+          "question": "Đối với các doanh nghiệp và tổ chức chịu các luật tuân thủ gần đây, tiêu chuẩn phân loại dữ liệu thường gồm các nhóm: riêng tư, mật, chỉ sử dụng nội bộ và phạm vi công cộng.",
+          "options": {
+            "A": "Đúng",
+            "B": "Sai"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    }
+  ]
+}

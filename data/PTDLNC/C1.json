@@ -1,0 +1,1125 @@
+{
+  "chapterId": "C1",
+  "chapterName": "Giới thiệu về Phân tích Dữ liệu Nâng cao và Các kiến thức cơ bản",
+  "topics": [
+    {
+      "topicId": "C1_T1",
+      "topicName": "Tổng quan phân tích nâng cao và hệ sinh thái Python",
+      "questions": [
+        {
+          "id": "C1_T1_Q1",
+          "question": "Phân tích chẩn đoán (Diagnostic) trả lời câu hỏi nào?",
+          "options": {
+            "A": "Điều gì sẽ xảy ra?",
+            "B": "Vì sao điều đó xảy ra?",
+            "C": "Nên làm gì tiếp theo?",
+            "D": "Điều gì đã xảy ra?"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T1_Q2",
+          "question": "Phân tích mô tả (Descriptive) trả lời câu hỏi nào?",
+          "options": {
+            "A": "Vì sao điều đó xảy ra?",
+            "B": "Điều gì đã xảy ra?",
+            "C": "Nên làm gì tiếp theo?",
+            "D": "Điều gì sẽ xảy ra?"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T1_Q3",
+          "question": "Phân tích dự báo (Predictive) trả lời câu hỏi nào?",
+          "options": {
+            "A": "Điều gì đã xảy ra?",
+            "B": "Tạo giá trị ra sao?",
+            "C": "Điều gì sẽ xảy ra?",
+            "D": "Vì sao điều đó xảy ra?"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T1_Q4",
+          "question": "Phân tích đề xuất (Prescriptive) trả lời câu hỏi nào?",
+          "options": {
+            "A": "Điều gì đã xảy ra?",
+            "B": "Vì sao điều đó xảy ra?",
+            "C": "Điều gì sẽ xảy ra?",
+            "D": "Nên làm gì tiếp theo?"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T1_Q5",
+          "question": "Thứ tự 5 cấp độ phân tích với giá trị tăng dần theo slide là gì?",
+          "options": {
+            "A": "Mô tả → Chẩn đoán → Đề xuất → Dự báo → Vận hành",
+            "B": "Mô tả → Chẩn đoán → Dự báo → Đề xuất → Vận hành",
+            "C": "Mô tả → Dự báo → Chẩn đoán → Đề xuất → Vận hành",
+            "D": "Chẩn đoán → Mô tả → Dự báo → Đề xuất → Vận hành"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T1_Q6",
+          "question": "Phân tích nâng cao khác báo cáo truyền thống ở điểm cốt lõi nào?",
+          "options": {
+            "A": "Chỉ thay Excel bằng một phần mềm khác",
+            "B": "Chỉ tập trung vẽ biểu đồ đẹp hơn",
+            "C": "Vượt khỏi báo cáo quá khứ để dự báo, tối ưu và tạo hành động đo lường được",
+            "D": "Chỉ tổng hợp số liệu quá khứ thành bảng báo cáo"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T1_Q7",
+          "question": "Thư viện nào xử lý mảng số n chiều trong hệ sinh thái Python phân tích dữ liệu?",
+          "options": {
+            "A": "Plotly",
+            "B": "NumPy",
+            "C": "Seaborn",
+            "D": "Dash"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T1_Q8",
+          "question": "Thư viện nào cung cấp Series, DataFrame để quản lý dữ liệu bảng có nhãn?",
+          "options": {
+            "A": "pandas",
+            "B": "NumPy",
+            "C": "Dash",
+            "D": "statsmodels"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T1_Q9",
+          "question": "Jupyter Notebook / Google Colab được dùng để làm gì?",
+          "options": {
+            "A": "Thay thế hoàn toàn thư viện NumPy",
+            "B": "Chỉ để soạn thảo văn bản không chạy mã",
+            "C": "Chạy mã theo từng cell, ghi chú, xem kết quả và chia sẻ bài thực hành",
+            "D": "Lưu trữ dữ liệu quan hệ dung lượng lớn"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T1_Q10",
+          "question": "Cặp thư viện nào dùng để vẽ biểu đồ tĩnh và đồ họa thống kê?",
+          "options": {
+            "A": "Plotly và Dash",
+            "B": "matplotlib và seaborn",
+            "C": "statsmodels và SciPy",
+            "D": "NumPy và pandas"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T1_Q11",
+          "question": "Bộ đôi nào dùng để tạo biểu đồ tương tác và triển khai ứng dụng web phân tích?",
+          "options": {
+            "A": "Jupyter và Colab",
+            "B": "Plotly và Dash",
+            "C": "NumPy và pandas",
+            "D": "matplotlib và seaborn"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T1_Q12",
+          "question": "Nhóm kỹ thuật nào là cốt lõi của phân tích dữ liệu nâng cao?",
+          "options": {
+            "A": "Chỉ thống kê mô tả",
+            "B": "Chỉ quản trị cơ sở dữ liệu",
+            "C": "Chỉ lập trình giao diện web",
+            "D": "Thống kê, học máy/AI, khai phá dữ liệu, mô phỏng, tối ưu hóa"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C1_T2",
+      "topicName": "NumPy: thuộc tính, dtype và shape của ndarray",
+      "questions": [
+        {
+          "id": "C1_T2_Q1",
+          "question": "ndarray trong NumPy có đặc điểm nào sau đây?",
+          "options": {
+            "A": "Mảng chứa được nhiều kiểu dữ liệu khác nhau tùy phần tử",
+            "B": "Chỉ số bắt đầu từ 1",
+            "C": "Chỉ có thể là mảng 1 chiều",
+            "D": "Mảng n chiều, đồng nhất kiểu dữ liệu, chỉ số bắt đầu từ 0"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T2_Q2",
+          "question": "Với <code>a</code> là mảng 2×3, kết quả của đoạn code sau?<br><code>a = np.array([[10, 20, 30], [40, 50, 60]]); print(a.shape)</code>",
+          "options": {
+            "A": "(6,)",
+            "B": "(2, 2)",
+            "C": "(3, 2)",
+            "D": "(2, 3)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T2_Q3",
+          "question": "Với <code>a</code> là mảng 2×3, kết quả của đoạn code sau?<br><code>a = np.array([[10, 20, 30], [40, 50, 60]]); print(a.ndim)</code>",
+          "options": {
+            "A": "6",
+            "B": "1",
+            "C": "2",
+            "D": "3"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T2_Q4",
+          "question": "Với <code>a</code> là mảng 2×3, kết quả của đoạn code sau?<br><code>a = np.array([[10, 20, 30], [40, 50, 60]]); print(a.size)</code>",
+          "options": {
+            "A": "3",
+            "B": "2",
+            "C": "12",
+            "D": "6"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T2_Q5",
+          "question": "Kết quả của đoạn code sau?<br><code>a = np.array([1, 2, 3], dtype=np.int64); print(a.itemsize)</code>",
+          "options": {
+            "A": "8",
+            "B": "64",
+            "C": "1",
+            "D": "4"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T2_Q6",
+          "question": "Kết quả của đoạn code sau?<br><code>a = np.array([1, 2, 3], dtype=np.int32); print(a.dtype.itemsize)</code>",
+          "options": {
+            "A": "8",
+            "B": "2",
+            "C": "4",
+            "D": "32"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T2_Q7",
+          "question": "Kết quả của đoạn code sau?<br><code>x = np.array([1.2, 2.8, 3.5]); y = x.astype(np.int32); print(y)</code>",
+          "options": {
+            "A": "[1 3 4]",
+            "B": "[1 2 3]",
+            "C": "[1.2 2.8 3.5]",
+            "D": "[1 2 4]"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T2_Q8",
+          "question": "<code>astype()</code> trả về gì?",
+          "options": {
+            "A": "Một danh sách Python",
+            "B": "Một view chia sẻ bộ nhớ với mảng gốc",
+            "C": "Chỉ thay đổi dtype tại chỗ, không trả về gì",
+            "D": "Một bản copy mới của mảng với dtype được chuyển đổi"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T2_Q9",
+          "question": "Mã dtype <code>'f4'</code> biểu diễn kiểu dữ liệu nào?",
+          "options": {
+            "A": "Số phức 4 byte",
+            "B": "Chuỗi dài 4 ký tự",
+            "C": "Số nguyên 4 byte có dấu",
+            "D": "Số thực 4 byte (float32)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T2_Q10",
+          "question": "Mã ký tự <code>U</code> trong dtype NumPy thuộc nhóm nào?",
+          "options": {
+            "A": "Datetime",
+            "B": "Chuỗi Unicode",
+            "C": "Số nguyên không dấu",
+            "D": "Số thực"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T2_Q11",
+          "question": "Kết quả của đoạn code sau?<br><code>z = np.zeros((2, 3), dtype='f4'); print(z.dtype)</code>",
+          "options": {
+            "A": "float32",
+            "B": "float64",
+            "C": "int32",
+            "D": "float16"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T2_Q12",
+          "question": "Kết quả của đoạn code sau?<br><code>a = np.arange(12); print(a.reshape(3, -1).shape)</code>",
+          "options": {
+            "A": "(3, 4)",
+            "B": "(3, 3)",
+            "C": "(-1, 3)",
+            "D": "(12, 3)"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T2_Q13",
+          "question": "Điều kiện để <code>reshape</code> hợp lệ là gì?",
+          "options": {
+            "A": "Tổng số phần tử không đổi (tích shape mới bằng <code>a.size</code>)",
+            "B": "Shape mới phải có cùng số chiều với shape cũ",
+            "C": "Shape mới phải chia hết cho 2",
+            "D": "Số hàng phải bằng số cột"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T2_Q14",
+          "question": "Có thể dùng giá trị <code>-1</code> trong <code>reshape</code> tối đa bao nhiêu lần?",
+          "options": {
+            "A": "Không giới hạn",
+            "B": "Hai lần",
+            "C": "Một lần",
+            "D": "Không được dùng"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T2_Q15",
+          "question": "Khác biệt giữa <code>ravel()</code> và <code>flatten()</code> là gì?",
+          "options": {
+            "A": "<code>ravel()</code> luôn trả về copy, <code>flatten()</code> luôn trả về view",
+            "B": "<code>ravel()</code> làm phẳng theo cột, <code>flatten()</code> theo hàng",
+            "C": "Hai hàm hoàn toàn giống nhau",
+            "D": "<code>ravel()</code> ưu tiên trả về view, <code>flatten()</code> luôn trả về copy"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T2_Q16",
+          "question": "Kết quả của đoạn code sau?<br><code>import numpy as np; print(np.arange(0, 10, 2))</code>",
+          "options": {
+            "A": "[0 2 4 6 8 10]",
+            "B": "[0 2 4 6 8]",
+            "C": "[0 1 2 3 4]",
+            "D": "[2 4 6 8 10]"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T2_Q17",
+          "question": "Kết quả của đoạn code sau?<br><code>import numpy as np; print(np.linspace(0, 1, 5))</code>",
+          "options": {
+            "A": "[0. 0.2 0.4 0.6 0.8]",
+            "B": "[0. 0.5 1.]",
+            "C": "[0. 0.25 0.5 0.75 1.]",
+            "D": "[0 1 2 3 4]"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C1_T3",
+      "topicName": "NumPy: Indexing, Slicing, Boolean và Fancy indexing",
+      "questions": [
+        {
+          "id": "C1_T3_Q1",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.arange(10, 16).reshape(3, 2); print(arr)</code>",
+          "options": {
+            "A": "[[10 11] [12 13] [14 15]]",
+            "B": "[[10 12] [11 13] [14 15]]",
+            "C": "[10 11 12 13 14 15]",
+            "D": "[[10 11 12] [13 14 15]]"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T3_Q2",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.arange(1, 7).reshape(2, 3); print(arr)</code>",
+          "options": {
+            "A": "[1 2 3 4 5 6]",
+            "B": "[[1 2] [3 4] [5 6]]",
+            "C": "[[1 3 5] [2 4 6]]",
+            "D": "[[1 2 3] [4 5 6]]"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T3_Q3",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.arange(3, 30, 4); print(arr)</code>",
+          "options": {
+            "A": "[3 7 11 15 19 23 27 31]",
+            "B": "[3 7 11 15 19 23]",
+            "C": "[3 7 11 15 19 23 27]",
+            "D": "[4 8 12 16 20 24 28]"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T3_Q4",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.arange(5, 30, 5); print(arr)</code>",
+          "options": {
+            "A": "[5 10 15 20]",
+            "B": "[5 10 15 20 25 30]",
+            "C": "[10 15 20 25 30]",
+            "D": "[5 10 15 20 25]"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T3_Q5",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.array([12, 15, 18, 11, 14, 17]); print(arr[1:4])</code>",
+          "options": {
+            "A": "[15 18 11]",
+            "B": "[18 11 14]",
+            "C": "[12 15 18]",
+            "D": "[15 18 11 14]"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T3_Q6",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.array([12, 15, 18, 11, 14, 17]); print(arr[0:6:2])</code>",
+          "options": {
+            "A": "[12 18 14]",
+            "B": "[12 18 11]",
+            "C": "[12 15 14]",
+            "D": "[15 11 17]"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T3_Q7",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.array([12, 15, 18, 11, 14, 17]); print(arr[-3:])</code>",
+          "options": {
+            "A": "[14 17]",
+            "B": "[11 14]",
+            "C": "[18 11 14]",
+            "D": "[11 14 17]"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T3_Q8",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.array([12, 15, 18, 11, 14, 17]); print(arr[::-1])</code>",
+          "options": {
+            "A": "[12 15 18 11 14 17]",
+            "B": "[17 14 11 18 15 12]",
+            "C": "[17 14 11 18 15]",
+            "D": "[14 11 18 15 12]"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T3_Q9",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.array([12, 15, 18, 11, 14, 17]); print(arr[1:20:2])</code>",
+          "options": {
+            "A": "[12 18 14]",
+            "B": "[11 17]",
+            "C": "[15 11]",
+            "D": "[15 11 17]"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T3_Q10",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.array([12, 1, 5, 1, 8, 11, 14, 17]); print(arr[-3])</code>",
+          "options": {
+            "A": "14",
+            "B": "17",
+            "C": "11",
+            "D": "8"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T3_Q11",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.arange(10, 30, 3); print(arr[arr &gt; 20])</code>",
+          "options": {
+            "A": "[19 22 25 28]",
+            "B": "[22 25]",
+            "C": "[25 28]",
+            "D": "[22 25 28]"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T3_Q12",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.arange(10, 30, 3); print(arr[arr &lt;= 16])</code>",
+          "options": {
+            "A": "[10 13 16]",
+            "B": "[13 16]",
+            "C": "[10 13]",
+            "D": "[13 16 19]"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T3_Q13",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.arange(10, 30, 3); print(arr[(arr &gt; 12) &amp; (arr &lt; 25)])</code>",
+          "options": {
+            "A": "[13 16 19]",
+            "B": "[13 16 19 22]",
+            "C": "[13 16 19 22 25]",
+            "D": "[16 19 22]"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T3_Q14",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.arange(10, 30); item = arr.tolist(); print(item[7])</code>",
+          "options": {
+            "A": "18",
+            "B": "16",
+            "C": "7",
+            "D": "17"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T3_Q15",
+          "question": "Kết quả của đoạn code sau?<br><code>arr = np.arange(10, 30); item = arr.tolist(); print(item[1] + item[4] + 5)</code>",
+          "options": {
+            "A": "35",
+            "B": "29",
+            "C": "25",
+            "D": "30"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T3_Q16",
+          "question": "Với <code>a</code> là mảng 2×3, kết quả của đoạn code sau?<br><code>a = np.array([[10, 20, 30], [40, 50, 60]]); print(a[0, 1])</code>",
+          "options": {
+            "A": "10",
+            "B": "30",
+            "C": "20",
+            "D": "40"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T3_Q17",
+          "question": "Với <code>a</code> là mảng 2×3, kết quả của đoạn code sau?<br><code>a = np.array([[10, 20, 30], [40, 50, 60]]); print(a[:, 1])</code>",
+          "options": {
+            "A": "[20 50]",
+            "B": "[10 20 30]",
+            "C": "[20 30]",
+            "D": "[40 50 60]"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T3_Q18",
+          "question": "Với <code>a</code> là mảng 2×3, kết quả của đoạn code sau?<br><code>a = np.array([[10, 20, 30], [40, 50, 60]]); print(a[1, 1:])</code>",
+          "options": {
+            "A": "[50 60]",
+            "B": "[10 20]",
+            "C": "[20 30]",
+            "D": "[40 50]"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T3_Q19",
+          "question": "Với <code>a</code> là mảng 2×3, kết quả của đoạn code sau?<br><code>a = np.array([[10, 20, 30], [40, 50, 60]]); print(a[-1, -1])</code>",
+          "options": {
+            "A": "10",
+            "B": "40",
+            "C": "30",
+            "D": "60"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T3_Q20",
+          "question": "Với <code>a</code> là mảng 2×3, kết quả của đoạn code sau?<br><code>a = np.array([[10, 20, 30], [40, 50, 60]]); print(a[[0, 1], [2, 0]])</code>",
+          "options": {
+            "A": "[[30 40]]",
+            "B": "[10 60]",
+            "C": "[30 10]",
+            "D": "[30 40]"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T3_Q21",
+          "question": "Trong slicing <code>x[start:stop]</code>, phần tử tại chỉ số <code>stop</code> có được lấy không?",
+          "options": {
+            "A": "Không, stop không được lấy",
+            "B": "Có, stop luôn được lấy",
+            "C": "Chỉ được lấy khi stop âm",
+            "D": "Chỉ được lấy khi step âm"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T3_Q22",
+          "question": "Kết quả của basic slicing là gì?",
+          "options": {
+            "A": "View của mảng gốc",
+            "B": "Danh sách Python",
+            "C": "Copy độc lập của mảng gốc",
+            "D": "Luôn là mảng 0 chiều"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T3_Q23",
+          "question": "Advanced indexing (Boolean/Fancy) khi đọc dữ liệu trả về gì?",
+          "options": {
+            "A": "Copy",
+            "B": "Tùy hệ điều hành",
+            "C": "View",
+            "D": "Một generator"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T3_Q24",
+          "question": "Cách đúng để kết hợp hai điều kiện trong Boolean mask là gì?",
+          "options": {
+            "A": "<code>(a &gt;= 5) &amp; (a &lt; 10)</code>",
+            "B": "<code>a &gt;= 5 &amp;&amp; a &lt; 10</code>",
+            "C": "<code>(a &gt;= 5) + (a &lt; 10)</code>",
+            "D": "<code>a &gt;= 5 and a &lt; 10</code>"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T3_Q25",
+          "question": "Câu lệnh <code>a[a &lt; 0] = 0</code> làm gì?",
+          "options": {
+            "A": "Xóa các phần tử âm khỏi <code>a</code>",
+            "B": "Tạo mảng mới, giữ nguyên <code>a</code>",
+            "C": "Gây lỗi vì không thể gán qua mask",
+            "D": "Cập nhật trực tiếp mảng <code>a</code>, thay mọi phần tử âm bằng 0"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C1_T4",
+      "topicName": "NumPy: Stacking, Splitting, View/Copy, Broadcasting và hàm thường dùng",
+      "questions": [
+        {
+          "id": "C1_T4_Q1",
+          "question": "Khác biệt chính giữa <code>np.concatenate</code> và <code>np.stack</code> là gì?",
+          "options": {
+            "A": "<code>concatenate</code> chỉ ghép mảng 1-D",
+            "B": "Không có khác biệt",
+            "C": "<code>concatenate</code> giữ nguyên số chiều, <code>stack</code> tạo thêm một trục mới",
+            "D": "<code>concatenate</code> tạo trục mới, <code>stack</code> giữ nguyên số chiều"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T4_Q2",
+          "question": "Hai mảng cùng shape <code>(2, 3)</code>, <code>np.stack((a, b), axis=0)</code> cho shape nào?",
+          "options": {
+            "A": "(2, 6)",
+            "B": "(2, 3, 2)",
+            "C": "(4, 3)",
+            "D": "(2, 2, 3)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T4_Q3",
+          "question": "Hai mảng cùng shape <code>(2, 3)</code>, <code>np.stack((a, b), axis=2)</code> cho shape nào?",
+          "options": {
+            "A": "(4, 3)",
+            "B": "(2, 6)",
+            "C": "(2, 3, 2)",
+            "D": "(2, 2, 3)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T4_Q4",
+          "question": "Hai mảng 2-D cùng shape <code>(2, 3)</code>, <code>np.vstack((a, b))</code> cho shape nào?",
+          "options": {
+            "A": "(3, 4)",
+            "B": "(4, 3)",
+            "C": "(2, 6)",
+            "D": "(2, 2, 3)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T4_Q5",
+          "question": "Hai mảng 2-D cùng shape <code>(2, 3)</code>, <code>np.hstack((a, b))</code> cho shape nào?",
+          "options": {
+            "A": "(2, 2, 3)",
+            "B": "(2, 6)",
+            "C": "(6, 2)",
+            "D": "(4, 3)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T4_Q6",
+          "question": "Kết quả của đoạn code sau?<br><code>x = np.array([1, 2, 3]); y = np.array([4, 5, 6]); print(np.column_stack((x, y)).shape)</code>",
+          "options": {
+            "A": "(6,)",
+            "B": "(1, 6)",
+            "C": "(2, 3)",
+            "D": "(3, 2)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T4_Q7",
+          "question": "Kết quả của đoạn code sau?<br><code>a = np.arange(12).reshape(3, 4); print([p.shape for p in np.split(a, 2, axis=1)])</code>",
+          "options": {
+            "A": "[(3, 4), (3, 4)]",
+            "B": "[(3, 1), (3, 3)]",
+            "C": "[(3, 2), (3, 2)]",
+            "D": "[(2, 4), (1, 4)]"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T4_Q8",
+          "question": "Kết quả của đoạn code sau?<br><code>b = np.arange(10); print([len(p) for p in np.array_split(b, 3)])</code>",
+          "options": {
+            "A": "[3, 3, 4]",
+            "B": "[4, 3, 3]",
+            "C": "[3, 3, 3]",
+            "D": "[2, 4, 4]"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T4_Q9",
+          "question": "Khi nào <code>np.split(a, n)</code> báo lỗi?",
+          "options": {
+            "A": "Khi mảng chứa số thực",
+            "B": "Khi n lớn hơn 1",
+            "C": "Khi kích thước trục không chia hết cho n",
+            "D": "Khi mảng có nhiều hơn 1 chiều"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T4_Q10",
+          "question": "<code>np.array_split</code> khác <code>np.split</code> ở điểm nào?",
+          "options": {
+            "A": "Cho phép chia gần đều, phần lệch tối đa 1 phần tử",
+            "B": "Luôn trả về copy",
+            "C": "Chỉ chia theo hàng",
+            "D": "Chỉ dùng cho mảng 1-D"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T4_Q11",
+          "question": "<code>np.hsplit(a, 2)</code> tương đương với phép chia theo trục nào?",
+          "options": {
+            "A": "<code>axis=-2</code>",
+            "B": "<code>axis=2</code>",
+            "C": "<code>axis=1</code> (theo cột)",
+            "D": "<code>axis=0</code> (theo hàng)"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T4_Q12",
+          "question": "Sửa phần tử của <code>v = a[1:4]</code> thì điều gì xảy ra với <code>a</code>?",
+          "options": {
+            "A": "Chương trình báo lỗi",
+            "B": "<code>a</code> không đổi vì <code>v</code> là copy",
+            "C": "<code>a</code> bị xóa",
+            "D": "<code>a</code> cũng thay đổi vì <code>v</code> là view"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T4_Q13",
+          "question": "Cách tạo bản copy độc lập của mảng <code>a</code> là gì?",
+          "options": {
+            "A": "<code>c = a.copy()</code>",
+            "B": "<code>c = a.view()</code>",
+            "C": "<code>c = a[:]</code>",
+            "D": "<code>c = a</code>"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T4_Q14",
+          "question": "Hàm nào luôn trả về một copy khi làm phẳng mảng?",
+          "options": {
+            "A": "<code>reshape(-1)</code>",
+            "B": "<code>flatten()</code>",
+            "C": "<code>a.T</code>",
+            "D": "<code>ravel()</code>"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T4_Q15",
+          "question": "<code>np.shares_memory(a, v)</code> trả về <code>True</code> có nghĩa là gì?",
+          "options": {
+            "A": "<code>v</code> là bản copy",
+            "B": "<code>a</code> và <code>v</code> có cùng giá trị nhưng bộ nhớ riêng",
+            "C": "<code>a</code> và <code>v</code> cùng shape",
+            "D": "<code>a</code> và <code>v</code> dùng chung vùng dữ liệu (v là view)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T4_Q16",
+          "question": "Quy tắc so sánh shape trong broadcasting là gì?",
+          "options": {
+            "A": "Chỉ cần tổng số phần tử bằng nhau",
+            "B": "So từ phải sang trái; mỗi cặp chiều phải bằng nhau hoặc một chiều bằng 1",
+            "C": "So từ trái sang phải; mọi chiều phải bằng nhau",
+            "D": "Chỉ cần số chiều bằng nhau"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T4_Q17",
+          "question": "Phép cộng mảng shape <code>(3, 1)</code> với mảng shape <code>(4,)</code> cho kết quả có shape nào?",
+          "options": {
+            "A": "Gây lỗi ValueError",
+            "B": "(3, 1)",
+            "C": "(4, 3)",
+            "D": "(3, 4)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T4_Q18",
+          "question": "Phép cộng mảng shape <code>(2, 3)</code> với mảng shape <code>(4,)</code> cho kết quả gì?",
+          "options": {
+            "A": "Shape (2, 4)",
+            "B": "Gây lỗi ValueError do shape không tương thích",
+            "C": "Shape (4, 3)",
+            "D": "Shape (2, 3)"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T4_Q19",
+          "question": "Kết quả của đoạn code sau?<br><code>a = np.array([[1, 2, 3], [4, 5, 6]]); print(a.sum(axis=0))</code>",
+          "options": {
+            "A": "21",
+            "B": "[6 15]",
+            "C": "[[5 7 9]]",
+            "D": "[5 7 9]"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T4_Q20",
+          "question": "Kết quả của đoạn code sau?<br><code>a = np.array([[1, 2, 3], [4, 5, 6]]); print(a.sum(axis=1))</code>",
+          "options": {
+            "A": "21",
+            "B": "[6 15]",
+            "C": "[[6] [15]]",
+            "D": "[5 7 9]"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T4_Q21",
+          "question": "Kết quả của đoạn code sau?<br><code>a = np.array([3, 1, 2]); print(a.cumsum())</code>",
+          "options": {
+            "A": "[3 4 6]",
+            "B": "[6 6 6]",
+            "C": "[4 6]",
+            "D": "[3 3 6]"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T4_Q22",
+          "question": "Kết quả của đoạn code sau?<br><code>a = np.array([3, 9, 2]); print(a.argmax())</code>",
+          "options": {
+            "A": "1",
+            "B": "2",
+            "C": "0",
+            "D": "9"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T4_Q23",
+          "question": "<code>np.sort(a)</code> khác <code>a.sort()</code> ở điểm nào?",
+          "options": {
+            "A": "<code>np.sort(a)</code> trả mảng mới, <code>a.sort()</code> sắp xếp tại chỗ",
+            "B": "Cả hai đều trả mảng mới",
+            "C": "Cả hai đều sắp xếp tại chỗ",
+            "D": "<code>np.sort(a)</code> sắp xếp tại chỗ, <code>a.sort()</code> trả mảng mới"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T4_Q24",
+          "question": "Tham số <code>keepdims=True</code> dùng để làm gì?",
+          "options": {
+            "A": "Bỏ qua giá trị thiếu",
+            "B": "Giữ nguyên dữ liệu gốc không đổi",
+            "C": "Giữ nguyên dtype",
+            "D": "Giữ nguyên số chiều của kết quả để tiếp tục broadcasting"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T4_Q25",
+          "question": "Với các hàm giảm chiều, <code>axis=None</code> nghĩa là gì?",
+          "options": {
+            "A": "Tính trên toàn mảng",
+            "B": "Tính theo cột",
+            "C": "Tính theo hàng",
+            "D": "Không tính gì"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "C1_T5",
+      "topicName": "pandas và các thao tác dữ liệu bảng",
+      "questions": [
+        {
+          "id": "C1_T5_Q1",
+          "question": "Series trong pandas gồm những thành phần nào?",
+          "options": {
+            "A": "Values và index",
+            "B": "Columns và index",
+            "C": "Chỉ index",
+            "D": "Chỉ values"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T5_Q2",
+          "question": "Đặc điểm nào đúng về DataFrame?",
+          "options": {
+            "A": "Toàn bộ DataFrame chỉ có một dtype",
+            "B": "Mỗi cột có thể có dtype riêng",
+            "C": "Chỉ có một chiều",
+            "D": "Không có nhãn cột"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T5_Q3",
+          "question": "Khi cộng hai Series có nhãn index không khớp, pandas xử lý thế nào?",
+          "options": {
+            "A": "Tự căn theo index; nhãn không khớp có thể tạo giá trị thiếu (NaN)",
+            "B": "Báo lỗi ngay lập tức",
+            "C": "Căn theo vị trí, bỏ qua nhãn",
+            "D": "Tự điền 0"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T5_Q4",
+          "question": "Phân biệt <code>.loc</code> và <code>.iloc</code>?",
+          "options": {
+            "A": "<code>.loc</code> truy cập theo nhãn, <code>.iloc</code> truy cập theo vị trí số nguyên",
+            "B": "Cả hai đều theo nhãn",
+            "C": "<code>.loc</code> theo vị trí, <code>.iloc</code> theo nhãn",
+            "D": "Cả hai đều theo vị trí"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T5_Q5",
+          "question": "Trong Nasdaq Data Link, hàm nào dùng cho dữ liệu time-series?",
+          "options": {
+            "A": "<code>ndl.get_table()</code>",
+            "B": "<code>ndl.get()</code>",
+            "C": "<code>ndl.read()</code>",
+            "D": "<code>ndl.fetch_all()</code>"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T5_Q6",
+          "question": "Trong Nasdaq Data Link, hàm nào dùng cho dữ liệu dạng bảng?",
+          "options": {
+            "A": "<code>ndl.get()</code>",
+            "B": "<code>ndl.table_all()</code>",
+            "C": "<code>ndl.timeseries()</code>",
+            "D": "<code>ndl.get_table()</code>"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T5_Q7",
+          "question": "Cách an toàn để cung cấp API key trong notebook là gì?",
+          "options": {
+            "A": "Đọc từ biến môi trường (<code>os.getenv</code>), không ghi cứng trong notebook",
+            "B": "Đặt trong tên file",
+            "C": "Ghi trực tiếp vào cell đầu tiên",
+            "D": "Chia sẻ công khai trên GitHub"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T5_Q8",
+          "question": "Mô hình xử lý của <code>groupby</code> là gì?",
+          "options": {
+            "A": "Read → Write → Close",
+            "B": "Fit → Predict → Score",
+            "C": "Split → Apply → Combine",
+            "D": "Merge → Filter → Sort"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T5_Q9",
+          "question": "Hàm nào ghép hai bảng theo khóa chung?",
+          "options": {
+            "A": "<code>merge()</code>",
+            "B": "<code>groupby()</code>",
+            "C": "<code>concat()</code>",
+            "D": "<code>pivot_table()</code>"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T5_Q10",
+          "question": "Tham số <code>validate=\"one_to_one\"</code> trong <code>merge</code> dùng để làm gì?",
+          "options": {
+            "A": "Sắp xếp kết quả theo khóa",
+            "B": "Tự điền giá trị thiếu",
+            "C": "Loại bỏ trùng lặp trong cả hai bảng",
+            "D": "Phát hiện nối sai (kiểm tra cardinality của khóa)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T5_Q11",
+          "question": "<code>pd.concat([jan, feb], ignore_index=True)</code> thực hiện điều gì?",
+          "options": {
+            "A": "Tính trung bình hai bảng",
+            "B": "Xếp chồng hai bảng theo hàng và đánh lại chỉ mục",
+            "C": "Chia mỗi bảng thành hai phần",
+            "D": "Nối hai bảng theo khóa chung"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T5_Q12",
+          "question": "<code>pd.concat(..., axis=1)</code> ghép các bảng theo hướng nào?",
+          "options": {
+            "A": "Không ghép, chỉ so sánh",
+            "B": "Ghép theo hàng",
+            "C": "Ghép theo khóa",
+            "D": "Ghép theo cột"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T5_Q13",
+          "question": "Tham số <code>margins=True</code> trong <code>pivot_table</code> làm gì?",
+          "options": {
+            "A": "Loại bỏ giá trị thiếu",
+            "B": "Thêm đường viền cho bảng",
+            "C": "Làm tròn kết quả",
+            "D": "Thêm tổng theo hàng và theo cột"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T5_Q14",
+          "question": "Trong <code>pivot_table</code>, tham số <code>fill_value</code> dùng để làm gì?",
+          "options": {
+            "A": "Chọn hàm tổng hợp",
+            "B": "Thay các ô trống sau khi tổng hợp, không sửa dữ liệu gốc",
+            "C": "Sửa dữ liệu gốc trước khi tổng hợp",
+            "D": "Chọn cột làm index"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T5_Q15",
+          "question": "Hàm nào chuẩn hóa chuỗi ngày tháng, gán NaT cho giá trị lỗi khi dùng <code>errors=\"coerce\"</code>?",
+          "options": {
+            "A": "<code>pd.to_numeric()</code>",
+            "B": "<code>pd.to_datetime()</code>",
+            "C": "<code>pd.cut()</code>",
+            "D": "<code>pd.melt()</code>"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T5_Q16",
+          "question": "Đoạn code <code>df.set_index(\"date\").resample(\"MS\")[\"revenue\"].sum()</code> cho kết quả gì?",
+          "options": {
+            "A": "Tổng doanh thu theo từng tháng (mốc đầu tháng)",
+            "B": "Tổng doanh thu toàn bộ",
+            "C": "Trung bình doanh thu theo năm",
+            "D": "Tổng doanh thu theo từng ngày"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T5_Q17",
+          "question": "Cách phát hiện nhanh số giá trị thiếu theo từng cột trong DataFrame?",
+          "options": {
+            "A": "<code>df.shape</code>",
+            "B": "<code>df.describe(missing=True)</code>",
+            "C": "<code>df.sum().isna()</code>",
+            "D": "<code>df.isna().sum()</code>"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C1_T5_Q18",
+          "question": "Quy tắc trước khi tạo đặc trưng thời gian và resample là gì?",
+          "options": {
+            "A": "Xóa cột ngày",
+            "B": "Chuẩn hóa cột ngày sang kiểu datetime",
+            "C": "Chuyển tất cả sang chuỗi",
+            "D": "Sắp xếp ngẫu nhiên các dòng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T5_Q19",
+          "question": "Đoạn code sau: <code>data = [('Long', 23), ('Nam', 21)]</code> rồi <code>df = pd.DataFrame(data1, columns=['Name','Age'])</code> gây ra lỗi gì?",
+          "options": {
+            "A": "ValueError vì thiếu cột",
+            "B": "NameError vì biến <code>data1</code> chưa được định nghĩa",
+            "C": "Không lỗi",
+            "D": "SyntaxError vì thiếu dấu ngoặc"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T5_Q20",
+          "question": "Đoạn code <code>df = pd.DataFrame([('A', 1), ('B', 2)], columns=['Name', 'Score', 'Age'])</code> gây lỗi gì?",
+          "options": {
+            "A": "Không lỗi",
+            "B": "ValueError vì số cột khai báo không khớp dữ liệu",
+            "C": "NameError",
+            "D": "KeyError"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    }
+  ]
+}

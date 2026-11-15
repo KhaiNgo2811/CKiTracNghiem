@@ -1,0 +1,244 @@
+{
+  "chapterId": "C8",
+  "chapterName": "Generative BI và AI-Driven Insights",
+  "topics": [
+    {
+      "topicId": "C8_T1",
+      "topicName": "Từ phân tích mô tả sang phân tích hành động",
+      "questions": [
+        {
+          "id": "C8_T1_Q1",
+          "question": "Phân tích Descriptive truyền thống trả lời câu hỏi nào?",
+          "options": {
+            "A": "'Điều gì đã xảy ra?'",
+            "B": "'Điều gì sẽ xảy ra?'",
+            "C": "'Tại sao dữ liệu lớn?'",
+            "D": "'Nên làm gì?'"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C8_T1_Q2",
+          "question": "Phân tích hiện đại (Actionable) làm thêm điều gì so với Descriptive?",
+          "options": {
+            "A": "Chỉ vẽ biểu đồ",
+            "B": "Chỉ báo cáo quá khứ",
+            "C": "Chỉ lưu dữ liệu",
+            "D": "Dự báo (Predict) và đề xuất hành động (Prescribe) ngay tại kho dữ liệu"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C8_T1_Q3",
+          "question": "BigQuery Object Tables cho phép làm gì?",
+          "options": {
+            "A": "Phân tích trực tiếp hình ảnh, PDF, Audio, Video qua SQL",
+            "B": "Chỉ phân tích bảng số",
+            "C": "Chỉ lưu CSV",
+            "D": "Chỉ chạy streaming"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C8_T1_Q4",
+          "question": "Dữ liệu phi cấu trúc chiếm khoảng bao nhiêu phần dữ liệu tiềm ẩn của doanh nghiệp theo slide?",
+          "options": {
+            "A": "80%",
+            "B": "20%",
+            "C": "50%",
+            "D": "5%"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "C8_T2",
+      "topicName": "Semantic Search, Vector Search và RAG",
+      "questions": [
+        {
+          "id": "C8_T2_Q1",
+          "question": "Embeddings là gì?",
+          "options": {
+            "A": "Mã hóa SHA",
+            "B": "Nén ảnh",
+            "C": "Chuyển số thành văn bản",
+            "D": "Chuyển văn bản, hình ảnh thành chuỗi số (vector) mang ý nghĩa ngữ nghĩa để so sánh"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C8_T2_Q2",
+          "question": "Khái niệm IVFFLAT là gì?",
+          "options": {
+            "A": "Kỹ thuật lập chỉ mục vector (Inverted File) phân cụm không gian vector thành các phân vùng để thu hẹp phạm vi tìm kiếm",
+            "B": "Định dạng bảng",
+            "C": "Công cụ CDC",
+            "D": "Kiểu dữ liệu bán cấu trúc"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C8_T2_Q3",
+          "question": "Semantic Match khác Keyword Matching ở điểm nào?",
+          "options": {
+            "A": "Chỉ tìm theo số",
+            "B": "Tìm theo ý nghĩa thay vì từ khóa chính xác",
+            "C": "Chỉ tìm đúng từ khóa",
+            "D": "Chỉ tìm theo ngày"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C8_T2_Q4",
+          "question": "RAG viết tắt của gì?",
+          "options": {
+            "A": "Retrieval-Augmented Generation",
+            "B": "Relational Aggregation Group",
+            "C": "Rapid Access Gateway",
+            "D": "Real-time Analytics Graph"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C8_T2_Q5",
+          "question": "Mục đích chính của RAG cho dữ liệu doanh nghiệp là gì?",
+          "options": {
+            "A": "Xóa dữ liệu cũ",
+            "B": "AI trả lời dựa trên kho dữ liệu tin cậy của doanh nghiệp thay vì kiến thức chung chung",
+            "C": "Tăng dung lượng lưu trữ",
+            "D": "Mã hóa dữ liệu"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C8_T2_Q6",
+          "question": "Bốn bước vận hành của RAG theo thứ tự là gì?",
+          "options": {
+            "A": "Ingestion → Embedding → Retrieval → Generation",
+            "B": "Retrieval → Ingestion → Generation → Embedding",
+            "C": "Generation → Retrieval → Embedding → Ingestion",
+            "D": "Embedding → Ingestion → Generation → Retrieval"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C8_T2_Q7",
+          "question": "Trong RAG, bước Embedding làm gì?",
+          "options": {
+            "A": "Tổng hợp câu trả lời",
+            "B": "Chuyển tài liệu vào Object Tables",
+            "C": "Tìm ngữ cảnh liên quan",
+            "D": "Băm nhỏ tài liệu (Chunks) và tạo Vector"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C8_T2_Q8",
+          "question": "Hallucination trong AI là gì và RAG giải quyết thế nào?",
+          "options": {
+            "A": "Lỗi mạng; RAG tăng băng thông",
+            "B": "AI tự đưa ra câu trả lời sai; RAG ép mô hình chỉ dùng dữ liệu nội bộ đã kiểm chứng",
+            "C": "Lỗi SQL; RAG sửa cú pháp",
+            "D": "Lỗi phần cứng; RAG thay linh kiện"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C8_T3",
+      "topicName": "Generative BI, Real-time Insights và Agentic BI",
+      "questions": [
+        {
+          "id": "C8_T3_Q1",
+          "question": "Chat-with-your-data cho phép người dùng làm gì?",
+          "options": {
+            "A": "Chỉ xuất Excel",
+            "B": "Chỉ xem dashboard cố định",
+            "C": "Chỉ viết SQL",
+            "D": "Đặt câu hỏi bằng ngôn ngữ tự nhiên mà không cần biết SQL"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C8_T3_Q2",
+          "question": "Trong workflow Conversational BI, bước Auto-SQL làm gì?",
+          "options": {
+            "A": "LLM biên dịch câu hỏi ngữ nghĩa thành câu lệnh SQL chuẩn xác, tối ưu, an toàn",
+            "B": "Xóa bảng",
+            "C": "Vẽ biểu đồ",
+            "D": "Gửi email"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C8_T3_Q3",
+          "question": "Ứng dụng cốt lõi của Real-time Insights là gì?",
+          "options": {
+            "A": "Báo cáo hàng năm",
+            "B": "Kiểm toán quý",
+            "C": "Phát hiện gian lận thẻ, định giá động, quản trị chuỗi cung ứng",
+            "D": "Sao lưu hàng tuần"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T3_Q4",
+          "question": "Cấu trúc Data Storytelling theo slide là gì?",
+          "options": {
+            "A": "Vấn đề → Bối cảnh → Hành động → Giải pháp",
+            "B": "Dữ liệu → Biểu đồ → Bảng → Kết luận",
+            "C": "Bối cảnh → Vấn đề → Giải pháp → Hành động",
+            "D": "Hành động → Giải pháp → Vấn đề → Bối cảnh"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T3_Q5",
+          "question": "Thông điệp quan trọng của Data Storytelling là gì?",
+          "options": {
+            "A": "Chỉ dành cho kế toán",
+            "B": "Chỉ dành cho IT",
+            "C": "Là kỹ năng cầu nối giữa bộ phận kỹ thuật (IT/Data) và bộ phận Chiến lược (Business)",
+            "D": "Thay thế hoàn toàn dashboard"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C8_T3_Q6",
+          "question": "Agentic BI là gì?",
+          "options": {
+            "A": "AI Agents trở thành 'chuyên viên phân tích tự hành': tự theo dõi mục tiêu, lập kế hoạch, truy vấn, phát hiện xu hướng và gửi đề xuất",
+            "B": "Chatbot chỉ hỏi-đáp",
+            "C": "Cơ sở dữ liệu NoSQL",
+            "D": "Công cụ vẽ biểu đồ"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C8_T3_Q7",
+          "question": "'Zero Latency' trong Real-time Insights đạt được nhờ sự kết hợp nào?",
+          "options": {
+            "A": "Batch hàng đêm và ETL",
+            "B": "Backup và Restore",
+            "C": "FTP và Excel",
+            "D": "Pub/Sub và Continuous Queries"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C8_T3_Q8",
+          "question": "Một ví dụ của BI Tools là:",
+          "options": {
+            "A": "ChatGPT",
+            "B": "Looker",
+            "C": "DeepSeek",
+            "D": "Gemini"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    }
+  ]
+}

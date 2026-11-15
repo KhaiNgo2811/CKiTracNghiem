@@ -1,0 +1,806 @@
+{
+  "chapterId": "C5",
+  "chapterName": "Làm sạch Dữ liệu",
+  "topics": [
+    {
+      "topicId": "C5_T1",
+      "topicName": "Xử lý giá trị bị thiếu: khái niệm, tác động, MCAR/MAR/MNAR",
+      "questions": [
+        {
+          "id": "C5_T1_Q1",
+          "question": "Giá trị bị thiếu (missing values) là gì?",
+          "options": {
+            "A": "Dữ liệu bị nhập sai định dạng",
+            "B": "Dữ liệu có giá trị rất lớn",
+            "C": "Dữ liệu bị trùng lặp",
+            "D": "Sự không đầy đủ của dữ liệu ở một biến hoặc quan sát cụ thể (khác với dữ liệu sai định dạng)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T1_Q2",
+          "question": "Nguyên tắc cốt lõi khi xử lý dữ liệu thiếu là gì?",
+          "options": {
+            "A": "Luôn điền bằng 0",
+            "B": "Luôn xóa mọi dòng có giá trị thiếu",
+            "C": "Không phải mọi dữ liệu thiếu đều giống nhau, mỗi trường hợp cần cách xử lý phù hợp",
+            "D": "Luôn điền bằng giá trị trung bình"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T1_Q3",
+          "question": "Tác động nào KHÔNG phải là hệ quả điển hình của dữ liệu thiếu?",
+          "options": {
+            "A": "Làm suy giảm sức mạnh thống kê",
+            "B": "Làm tăng kích thước mẫu",
+            "C": "Gây thiên lệch (bias) cho ước lượng",
+            "D": "Gây lỗi hoặc sai lệch khi huấn luyện mô hình ML"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T1_Q4",
+          "question": "Xóa tùy tiện các giá trị thiếu dẫn tới hậu quả nào?",
+          "options": {
+            "A": "Luôn làm tăng độ chính xác",
+            "B": "Giảm kích thước mẫu, tăng sai số chuẩn và giảm độ tin cậy",
+            "C": "Không ảnh hưởng gì",
+            "D": "Làm dữ liệu chuẩn hóa tự động"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T1_Q5",
+          "question": "MCAR là viết tắt của gì?",
+          "options": {
+            "A": "Missing Completely at Random (khuyết hoàn toàn ngẫu nhiên)",
+            "B": "Multiple Complete Average Replacement",
+            "C": "Missing Conditional at Random",
+            "D": "Missing Categorical at Random"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T1_Q6",
+          "question": "Đặc điểm của MCAR là gì?",
+          "options": {
+            "A": "Liên quan đến các biến đã ghi nhận",
+            "B": "Luôn gây thiên lệch nghiêm trọng",
+            "C": "Liên quan trực tiếp đến chính giá trị bị thiếu",
+            "D": "Sự thiếu hụt hoàn toàn ngẫu nhiên, không liên quan đến bất kỳ dữ liệu nào"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T1_Q7",
+          "question": "Ví dụ điển hình của MCAR là gì?",
+          "options": {
+            "A": "Khách hàng giàu từ chối khai thu nhập",
+            "B": "Người lớn tuổi bỏ trống cột mức lương",
+            "C": "Hộ gia đình nợ nần từ chối khai báo mức nợ",
+            "D": "Lỗi cảm biến/hệ thống làm gián đoạn việc ghi nhận nhiệt độ"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T1_Q8",
+          "question": "MAR là viết tắt của gì và đặc điểm là gì?",
+          "options": {
+            "A": "Missing at Random: thiếu có liên quan đến các biến đã ghi nhận, không liên quan trực tiếp đến phần bị thiếu",
+            "B": "Missing at Random: thiếu hoàn toàn ngẫu nhiên không liên quan gì",
+            "C": "Missing Not at Random: thiếu do chính giá trị thiếu",
+            "D": "Missing and Related: thiếu do lỗi hệ thống"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T1_Q9",
+          "question": "Ví dụ điển hình của MAR là gì?",
+          "options": {
+            "A": "Hộ nợ nần từ chối khai báo mức nợ",
+            "B": "Người lớn tuổi thường bỏ trống cột \"Mức lương\" (nguyên nhân suy ra từ cột Độ tuổi)",
+            "C": "Mất điện làm mất ngẫu nhiên vài dòng",
+            "D": "Lỗi cảm biến nhiệt độ"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T1_Q10",
+          "question": "Tác động của MAR là gì?",
+          "options": {
+            "A": "Không thể khắc phục",
+            "B": "Không gây thiên lệch",
+            "C": "Chỉ làm giảm sức mạnh thống kê",
+            "D": "Gây thiên lệch nhưng có thể khắc phục được, cần giả định và kiến thức chuyên ngành"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T1_Q11",
+          "question": "MNAR là viết tắt của gì và đặc điểm là gì?",
+          "options": {
+            "A": "Missing Not at Random: thiếu liên quan trực tiếp đến chính giá trị bị thiếu hoặc yếu tố ẩn chưa thu thập",
+            "B": "Missing Not at Random: thiếu hoàn toàn ngẫu nhiên",
+            "C": "Missing Numeric and Random",
+            "D": "Missing at Random: thiếu liên quan biến đã ghi nhận"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T1_Q12",
+          "question": "Ví dụ điển hình của MNAR là gì?",
+          "options": {
+            "A": "Người lớn tuổi bỏ trống mức lương",
+            "B": "Mất kết nối mạng ngẫu nhiên",
+            "C": "Lỗi cảm biến",
+            "D": "Hộ gia đình nợ nần quá nhiều từ chối khai báo mức nợ vì e ngại"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T1_Q13",
+          "question": "Loại khuyết dữ liệu nào rất khó đo lường và gây rủi ro thiên lệch nghiêm trọng nhất nếu không xử lý đúng?",
+          "options": {
+            "A": "Không loại nào gây thiên lệch",
+            "B": "MCAR",
+            "C": "MAR",
+            "D": "MNAR"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T1_Q14",
+          "question": "Loại khuyết dữ liệu nào làm giảm sức mạnh thống kê nhưng rất ít gây thiên lệch?",
+          "options": {
+            "A": "Cả MAR và MNAR",
+            "B": "MNAR",
+            "C": "MAR",
+            "D": "MCAR"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T1_Q15",
+          "question": "Vì sao nhiều thuật toán Machine Learning cần xử lý giá trị thiếu trước?",
+          "options": {
+            "A": "Vì giá trị rỗng luôn là ngoại lệ",
+            "B": "Vì chúng không xử lý trực tiếp được giá trị rỗng và sẽ báo lỗi hoặc huấn luyện sai lệch",
+            "C": "Vì giá trị rỗng làm tăng tốc huấn luyện",
+            "D": "Vì giá trị rỗng được tự điền bằng 0"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T1_Q16",
+          "question": "Nếu người lớn tuổi thường bỏ qua câu hỏi về tuổi, kết luận phân tích sẽ lệch về hướng nào?",
+          "options": {
+            "A": "Lệch về nhóm trung niên",
+            "B": "Không lệch",
+            "C": "Lệch về nhóm người lớn tuổi hơn",
+            "D": "Lệch về nhóm người trẻ tuổi hơn"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C5_T2",
+      "topicName": "Nhận diện ngoại lệ: Z-score, IQR, Mahalanobis",
+      "questions": [
+        {
+          "id": "C5_T2_Q1",
+          "question": "Ngoại lệ (outlier) là gì?",
+          "options": {
+            "A": "Giá trị trùng lặp",
+            "B": "Giá trị luôn do lỗi nhập liệu",
+            "C": "Giá trị bị thiếu",
+            "D": "Điểm dữ liệu khác biệt biệt lập, không tuân theo quy luật chung của tập dữ liệu"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T2_Q2",
+          "question": "Nguyên nhân có thể gây ngoại lệ là gì?",
+          "options": {
+            "A": "Chỉ lỗi cảm biến",
+            "B": "Lỗi đo lường, lỗi nhập liệu, lấy mẫu sai hoặc hiện tượng tự nhiên đột biến",
+            "C": "Chỉ lỗi nhập liệu",
+            "D": "Chỉ do xử lý thiếu dữ liệu"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T2_Q3",
+          "question": "Ngoại lệ đơn biến (univariate) là gì?",
+          "options": {
+            "A": "Giá trị thiếu ở nhiều cột",
+            "B": "Lỗi định dạng ngày tháng",
+            "C": "Bất thường chỉ thấy khi kết hợp nhiều biến",
+            "D": "Sự bất thường chỉ tồn tại trên một biến duy nhất"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T2_Q4",
+          "question": "Ngoại lệ đa biến (multivariate) là gì?",
+          "options": {
+            "A": "Điểm bình thường khi xét riêng từng biến nhưng bất thường khi kết hợp các biến",
+            "B": "Bất thường chỉ trên một biến",
+            "C": "Giá trị trùng lặp",
+            "D": "Giá trị âm"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T2_Q5",
+          "question": "Công thức Z-score là gì?",
+          "options": {
+            "A": "Z = (x − median) / IQR",
+            "B": "Z = (x − mean) / độ lệch chuẩn",
+            "C": "Z = (x − Q1) / (Q3 − Q1)",
+            "D": "Z = x / mean"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T2_Q6",
+          "question": "Z-score cho biết điều gì?",
+          "options": {
+            "A": "Hệ số tương quan",
+            "B": "Xác suất bị thiếu của điểm dữ liệu",
+            "C": "Điểm dữ liệu cách trung vị bao nhiêu IQR",
+            "D": "Điểm dữ liệu cách giá trị trung bình bao nhiêu lần độ lệch chuẩn"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T2_Q7",
+          "question": "Các điểm dữ liệu vượt quá bao nhiêu độ lệch chuẩn thì được xem là ngoại lệ theo Z-score?",
+          "options": {
+            "A": "1 độ lệch chuẩn",
+            "B": "3 độ lệch chuẩn",
+            "C": "10 độ lệch chuẩn",
+            "D": "1,5 độ lệch chuẩn"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T2_Q8",
+          "question": "Giả định cốt lõi của phương pháp Z-score là gì?",
+          "options": {
+            "A": "Dữ liệu có đúng hai biến",
+            "B": "Dữ liệu tuân theo phân phối chuẩn",
+            "C": "Dữ liệu là chuỗi thời gian dừng",
+            "D": "Dữ liệu không có giá trị thiếu"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T2_Q9",
+          "question": "Nếu dữ liệu vi phạm giả định chuẩn thì điều gì có thể xảy ra với Z-score?",
+          "options": {
+            "A": "Kết quả luôn bằng 0",
+            "B": "Z-score luôn đúng",
+            "C": "Ngoại lệ có thể bị nhận diện sai thành điểm bình thường",
+            "D": "Z-score tự chuyển sang IQR"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T2_Q10",
+          "question": "Quy tắc 68–95–99,7 nói gì?",
+          "options": {
+            "A": "95% dữ liệu nằm trong 1 SD",
+            "B": "99,7% dữ liệu nằm trong 1 SD",
+            "C": "Trong phân phối chuẩn: 68% / 95% / 99,7% dữ liệu nằm trong 1 / 2 / 3 độ lệch chuẩn",
+            "D": "68% dữ liệu nằm ngoài 1 SD"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T2_Q11",
+          "question": "Một điểm có giá trị 90, mean = 70, độ lệch chuẩn = 10. Z-score bằng bao nhiêu?",
+          "options": {
+            "A": "2",
+            "B": "20",
+            "C": "−2",
+            "D": "0,5"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T2_Q12",
+          "question": "Công thức tứ phân vị (IQR) để xác định ngưỡng ngoại lệ là gì?",
+          "options": {
+            "A": "Dưới: Q1 − 3×SD; Trên: Q3 + 3×SD",
+            "B": "Dưới: Q1 − 1,5×IQR; Trên: Q3 + 1,5×IQR",
+            "C": "Dưới: Min; Trên: Max",
+            "D": "Dưới: Mean − IQR; Trên: Mean + IQR"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T2_Q13",
+          "question": "Q1 và Q3 lần lượt là bách phân vị thứ mấy?",
+          "options": {
+            "A": "10 và 90",
+            "B": "5 và 95",
+            "C": "25 và 75",
+            "D": "50 và 100"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T2_Q14",
+          "question": "IQR được tính như thế nào?",
+          "options": {
+            "A": "IQR = Q3 − Q1",
+            "B": "IQR = Max − Min",
+            "C": "IQR = Q3 / Q1",
+            "D": "IQR = Q3 + Q1"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T2_Q15",
+          "question": "Cho Q1 = 10 và Q3 = 20. Cận trên (Upper bound) theo quy tắc 1,5×IQR là bao nhiêu?",
+          "options": {
+            "A": "50",
+            "B": "35",
+            "C": "30",
+            "D": "25"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T2_Q16",
+          "question": "Cho Q1 = 10 và Q3 = 20. Cận dưới (Lower bound) theo quy tắc 1,5×IQR là bao nhiêu?",
+          "options": {
+            "A": "−15",
+            "B": "−5",
+            "C": "0",
+            "D": "5"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T2_Q17",
+          "question": "Ưu điểm của phương pháp IQR so với Z-score là gì?",
+          "options": {
+            "A": "Không bắt buộc dữ liệu phải tuân theo phân phối chuẩn",
+            "B": "Luôn nhạy hơn Z-score",
+            "C": "Không cần sắp xếp dữ liệu",
+            "D": "Chỉ dùng được cho phân phối chuẩn"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T2_Q18",
+          "question": "Biểu đồ nào trực quan hóa ngoại lệ dựa trên IQR?",
+          "options": {
+            "A": "Gantt chart",
+            "B": "Box plot",
+            "C": "Count plot",
+            "D": "Pie chart"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T2_Q19",
+          "question": "Khoảng cách Mahalanobis đo gì?",
+          "options": {
+            "A": "Khoảng cách Euclid thuần giữa hai điểm",
+            "B": "Khoảng cách từ một điểm dữ liệu đến tâm của phân phối, có tính đến tương quan giữa các biến",
+            "C": "Số lần xuất hiện của một giá trị",
+            "D": "Chênh lệch giữa mean và median"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T2_Q20",
+          "question": "Mahalanobis Distance thường dùng để phát hiện loại ngoại lệ nào?",
+          "options": {
+            "A": "Giá trị thiếu",
+            "B": "Ngoại lệ đơn biến duy nhất",
+            "C": "Dữ liệu trùng lặp",
+            "D": "Ngoại lệ đa biến"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C5_T3",
+      "topicName": "Quản lý ngoại lệ: xóa, giới hạn (clip), biến đổi",
+      "questions": [
+        {
+          "id": "C5_T3_Q1",
+          "question": "Khi nào nên xóa ngoại lệ?",
+          "options": {
+            "A": "Khi dữ liệu có đuôi nặng",
+            "B": "Khi chắc chắn đó là lỗi (bản ghi hỏng, lỗi hệ thống) chứ không phải hiện tượng tự nhiên",
+            "C": "Khi ngoại lệ là hiện tượng tự nhiên quan trọng",
+            "D": "Luôn luôn"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T3_Q2",
+          "question": "Hàm nào trong pandas ép các giá trị cực đoan về sát một ngưỡng an toàn?",
+          "options": {
+            "A": "<code>.drop()</code>",
+            "B": "<code>.replace()</code>",
+            "C": "<code>.clip()</code>",
+            "D": "<code>.fillna()</code>"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T3_Q3",
+          "question": "Kỹ thuật giới hạn mức trần/đáy (capping) thường kết hợp <code>.clip()</code> với gì?",
+          "options": {
+            "A": "Hàm <code>groupby</code>",
+            "B": "Hàm <code>merge</code>",
+            "C": "Các bách phân vị (ví dụ chặn ở P5 và P95)",
+            "D": "Mã hóa One-hot"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T3_Q4",
+          "question": "Khi nào nên dùng capping (giới hạn mức trần/đáy)?",
+          "options": {
+            "A": "Khi cần mã hóa nhãn",
+            "B": "Khi muốn xóa hoàn toàn điểm dữ liệu",
+            "C": "Khi dữ liệu là chuỗi",
+            "D": "Khi muốn giữ lại điểm dữ liệu nhưng hạn chế tác động làm lệch mô hình"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T3_Q5",
+          "question": "Biến đổi dữ liệu (transform) phù hợp nhất khi nào?",
+          "options": {
+            "A": "Khi cần tăng số cột",
+            "B": "Khi cần xóa trùng lặp",
+            "C": "Khi dữ liệu có nhiều giá trị thiếu",
+            "D": "Khi chuẩn hóa dữ liệu có phân phối bị lệch (skewed)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T3_Q6",
+          "question": "Phép biến đổi nào thường dùng để \"nén\" giá trị cực đoan mà không cần xóa?",
+          "options": {
+            "A": "Nghịch đảo dấu",
+            "B": "Bình phương",
+            "C": "Lũy thừa bậc 3",
+            "D": "Logarit (<code>np.log1p</code>)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T3_Q7",
+          "question": "Vì sao dùng <code>np.log1p</code> thay cho <code>np.log</code> đơn thuần?",
+          "options": {
+            "A": "<code>log1p(x) = log(1 + x)</code> xử lý được giá trị 0",
+            "B": "Vì nó nhanh gấp 100 lần",
+            "C": "Vì nó luôn cho kết quả âm",
+            "D": "Vì nó tự xóa ngoại lệ"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T3_Q8",
+          "question": "Ngoại lệ có thể mang ý nghĩa gì ngoài việc là lỗi?",
+          "options": {
+            "A": "Luôn là giá trị thiếu",
+            "B": "Tín hiệu về sự kiện mới, lỗi hệ thống ẩn hoặc phát kiến đáng nghiên cứu",
+            "C": "Luôn là nhiễu vô nghĩa",
+            "D": "Luôn là lỗi định dạng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T3_Q9",
+          "question": "Tác động nào của ngoại lệ đến thống kê mô tả là đúng?",
+          "options": {
+            "A": "Làm méo mó các chỉ số, kết quả tóm tắt không còn chính xác",
+            "B": "Chỉ ảnh hưởng đến median",
+            "C": "Làm mọi chỉ số chính xác hơn",
+            "D": "Không ảnh hưởng đến mean"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T3_Q10",
+          "question": "Ngoại lệ ảnh hưởng thế nào đến mô hình Machine Learning?",
+          "options": {
+            "A": "Luôn cải thiện hiệu suất",
+            "B": "Chỉ ảnh hưởng thời gian chạy",
+            "C": "Khiến mô hình học quy luật sai lệch, hiệu suất dự đoán kém",
+            "D": "Không ảnh hưởng"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T3_Q11",
+          "question": "Cách xóa ngoại lệ bằng Z-score trong pandas là gì?",
+          "options": {
+            "A": "Mã hóa nhãn cột",
+            "B": "Đổi kiểu dữ liệu cột",
+            "C": "Điền giá trị thiếu bằng mean",
+            "D": "Lọc bỏ các dòng có Z-score vượt ngưỡng"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C5_T4",
+      "topicName": "Feature Engineering: Label, One-hot, Frequency Encoding",
+      "questions": [
+        {
+          "id": "C5_T4_Q1",
+          "question": "Vì sao cần Categorical Encoding?",
+          "options": {
+            "A": "Hầu hết thuật toán ML yêu cầu dữ liệu đầu vào dạng số",
+            "B": "Vì pandas không đọc được chuỗi",
+            "C": "Vì biến phân loại luôn chứa ngoại lệ",
+            "D": "Vì biến phân loại luôn thiếu dữ liệu"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T4_Q2",
+          "question": "Label Encoding làm gì?",
+          "options": {
+            "A": "Gán một số nguyên riêng biệt cho mỗi category",
+            "B": "Tạo cột nhị phân cho mỗi category",
+            "C": "Thay category bằng tần suất",
+            "D": "Xóa cột phân loại"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T4_Q3",
+          "question": "Hạn chế cốt lõi của Label Encoding là gì?",
+          "options": {
+            "A": "Không chuyển được sang số",
+            "B": "Tạo quá nhiều cột mới",
+            "C": "Làm mất giá trị thiếu",
+            "D": "Vô tình tạo ra mối quan hệ thứ bậc giả giữa các category"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T4_Q4",
+          "question": "Label Encoding KHÔNG phù hợp với biến nào?",
+          "options": {
+            "A": "Biến số liên tục",
+            "B": "Biến có thứ bậc rõ ràng (cấp độ)",
+            "C": "Biến ngày tháng",
+            "D": "Biến phân loại ngang hàng, không thứ bậc (quốc gia, màu sắc, giới tính)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T4_Q5",
+          "question": "One-hot Encoding dùng cho loại biến nào?",
+          "options": {
+            "A": "Biến liên tục",
+            "B": "Biến thời gian",
+            "C": "Biến có quá nhiều thứ bậc",
+            "D": "Biến phân loại không có tính thứ bậc"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T4_Q6",
+          "question": "Cơ chế của One-hot Encoding là gì?",
+          "options": {
+            "A": "Xóa category hiếm",
+            "B": "Thay category bằng số lần xuất hiện",
+            "C": "Tạo các cột nhị phân (1/0) tương ứng với từng giá trị phân loại",
+            "D": "Gán số nguyên tăng dần"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T4_Q7",
+          "question": "Ưu điểm của One-hot Encoding so với Label Encoding là gì?",
+          "options": {
+            "A": "Không tạo thêm cột nào",
+            "B": "Luôn nhanh hơn",
+            "C": "Giữ nguyên số cột",
+            "D": "Không tạo ra mối quan hệ thứ bậc giả tạo"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T4_Q8",
+          "question": "Nhược điểm của One-hot Encoding khi biến có quá nhiều category là gì?",
+          "options": {
+            "A": "Curse of Dimensionality: tạo không gian nhiều chiều (high-dimensional)",
+            "B": "Không dùng được cho ML",
+            "C": "Tạo quan hệ thứ bậc giả",
+            "D": "Mất toàn bộ thông tin"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T4_Q9",
+          "question": "Frequency Encoding thay category bằng gì?",
+          "options": {
+            "A": "Giá trị trung bình của biến mục tiêu",
+            "B": "Số nguyên ngẫu nhiên",
+            "C": "Cột nhị phân",
+            "D": "Tần suất (số lần xuất hiện hoặc tỷ lệ %) của chính nó trong tập dữ liệu"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T4_Q10",
+          "question": "Frequency Encoding đặc biệt hiệu quả với trường hợp nào?",
+          "options": {
+            "A": "Biến phân loại có quá nhiều giá trị khác biệt (high cardinality)",
+            "B": "Biến số liên tục",
+            "C": "Biến chỉ có hai giá trị",
+            "D": "Biến thứ bậc rõ ràng"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T4_Q11",
+          "question": "Ưu điểm của Frequency Encoding so với One-hot là gì?",
+          "options": {
+            "A": "Không tạo thêm cột mới, tránh Curse of Dimensionality",
+            "B": "Tạo nhiều cột hơn",
+            "C": "Luôn tách biệt hoàn toàn các category",
+            "D": "Không cần tính toán"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T4_Q12",
+          "question": "Hạn chế của Frequency Encoding là gì?",
+          "options": {
+            "A": "Tạo nhiều cột",
+            "B": "Tạo quan hệ thứ bậc theo bảng chữ cái",
+            "C": "Không dùng được cho high cardinality",
+            "D": "Hai category khác nghĩa nhưng cùng tần suất sẽ bị mã hóa thành cùng một số"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T4_Q13",
+          "question": "Biến \"Quốc gia\" có 150 giá trị khác nhau. Phương pháp mã hóa nào hợp lý nhất để tránh bùng nổ số cột?",
+          "options": {
+            "A": "Label Encoding rồi coi là thứ bậc",
+            "B": "Xóa biến",
+            "C": "One-hot Encoding",
+            "D": "Frequency Encoding"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C5_T5",
+      "topicName": "Làm sạch dữ liệu với GenAI",
+      "questions": [
+        {
+          "id": "C5_T5_Q1",
+          "question": "GenAI vượt trội trong việc xử lý loại dữ liệu nào?",
+          "options": {
+            "A": "Dữ liệu phi cấu trúc như email, hóa đơn",
+            "B": "Chỉ dữ liệu số đã chuẩn hóa",
+            "C": "Chỉ dữ liệu chuỗi thời gian",
+            "D": "Chỉ dữ liệu bảng sạch"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T5_Q2",
+          "question": "Contextual Imputation là gì?",
+          "options": {
+            "A": "Xóa các dòng thiếu",
+            "B": "Điền bằng 0",
+            "C": "GenAI đọc hiểu ngữ nghĩa để suy luận và điền giá trị thiếu thay vì dùng mean/median",
+            "D": "Điền giá trị thiếu bằng trung bình"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C5_T5_Q3",
+          "question": "Semantic Anomaly detection của GenAI khác Z-score/Box plot ở điểm nào?",
+          "options": {
+            "A": "Chỉ dùng cho dữ liệu số",
+            "B": "Phát hiện các điểm vô lý về mặt logic đời sống mà thống kê thuần túy không thấy",
+            "C": "Không phát hiện được gì",
+            "D": "Chỉ dùng được với dữ liệu chuẩn"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T5_Q4",
+          "question": "Hạn chế nào của GenAI trong làm sạch dữ liệu được nêu trong slide?",
+          "options": {
+            "A": "Không xử lý được tiếng Việt",
+            "B": "Tốc độ chậm, chi phí cao, rủi ro hallucination và rò rỉ dữ liệu nhạy cảm",
+            "C": "Không đọc được văn bản",
+            "D": "Chỉ chạy được offline"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T5_Q5",
+          "question": "Cần làm gì trước khi gửi dữ liệu nhạy cảm cho GenAI?",
+          "options": {
+            "A": "Nén bằng Parquet",
+            "B": "Mã hóa One-hot",
+            "C": "Chuyển sang chuỗi thời gian",
+            "D": "Ẩn danh hóa dữ liệu"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T5_Q6",
+          "question": "Ví dụ chuẩn hóa định dạng tiền tệ bằng GenAI là gì?",
+          "options": {
+            "A": "Hiểu ngữ cảnh văn hóa để chuẩn hóa nhiều cách nhập thu nhập về một giá trị số nguyên duy nhất",
+            "B": "Chuyển thu nhập thành nhãn phân loại",
+            "C": "Xóa các thu nhập quá lớn",
+            "D": "Tính trung bình thu nhập"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T5_Q7",
+          "question": "Dòng sao kê trống \"Loại chi phí\" nhưng ghi chú \"Thanh toán cước phí AWS Cloud tháng 9\". GenAI làm gì?",
+          "options": {
+            "A": "Điền bằng mode của cột",
+            "B": "Tự gán nhãn danh mục \"Chi phí Công nghệ / IT\"",
+            "C": "Điền bằng 0",
+            "D": "Xóa dòng đó"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C5_T5_Q8",
+          "question": "\"JSC FPT\", \"Công ty Cổ phần FPT\", \"FPT Corp\" được GenAI xử lý là cùng một doanh nghiệp. Đây là ví dụ của gì?",
+          "options": {
+            "A": "Hợp nhất thực thể (Entity Resolution)",
+            "B": "Frequency Encoding",
+            "C": "Resampling",
+            "D": "Phát hiện ngoại lệ"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C5_T5_Q9",
+          "question": "Báo cáo công tác phí ghi \"Tiền taxi sân bay Tân Sơn Nhất về Quận 1: 5.000 USD\" sẽ được GenAI xử lý thế nào?",
+          "options": {
+            "A": "Tự sửa thành 5 USD",
+            "B": "Xóa khỏi dữ liệu",
+            "C": "Chấp nhận vì là số hợp lệ",
+            "D": "Gắn cờ cảnh báo (flag) vì vô lý về mặt ngữ nghĩa"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C5_T5_Q10",
+          "question": "GenAI giúp chuẩn hóa các trường thông tin lộn xộn mà không cần gì?",
+          "options": {
+            "A": "Kết nối Internet",
+            "B": "Lập trình chuỗi Regex phức tạp",
+            "C": "Bất kỳ tài nguyên tính toán nào",
+            "D": "Dữ liệu đầu vào"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    }
+  ]
+}

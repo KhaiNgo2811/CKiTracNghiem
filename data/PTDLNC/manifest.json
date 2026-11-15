@@ -1,0 +1,55 @@
+{
+  "chapters": [
+    {
+      "chapterId": "C1",
+      "chapterName": "Giới thiệu về Phân tích Dữ liệu Nâng cao và Các kiến thức cơ bản",
+      "topicCount": 5,
+      "questionCount": 99
+    },
+    {
+      "chapterId": "C2",
+      "chapterName": "Thống kê để hiểu dữ liệu",
+      "topicCount": 7,
+      "questionCount": 102
+    },
+    {
+      "chapterId": "C3",
+      "chapterName": "Trực quan hóa Dữ liệu",
+      "topicCount": 5,
+      "questionCount": 67
+    },
+    {
+      "chapterId": "C4",
+      "chapterName": "Truy xuất, Xử lý và Lưu trữ Dữ liệu",
+      "topicCount": 5,
+      "questionCount": 66
+    },
+    {
+      "chapterId": "C5",
+      "chapterName": "Làm sạch Dữ liệu",
+      "topicCount": 5,
+      "questionCount": 70
+    },
+    {
+      "chapterId": "C6",
+      "chapterName": "Phân tích Chuỗi thời gian",
+      "topicCount": 6,
+      "questionCount": 80
+    },
+    {
+      "chapterId": "C7",
+      "chapterName": "Học máy: Hồi quy, Cây quyết định, Ensemble và Phân cụm (theo đề chẩn đoán)",
+      "topicCount": 5,
+      "questionCount": 63
+    },
+    {
+      "chapterId": "HOT",
+      "chapterName": "Câu hỏi chẩn đoán & Quiz 1 (bám sát đề)",
+      "topicCount": 5,
+      "questionCount": 60
+    }
+  ],
+  "totalQuestions": 607,
+  "totalTopics": 43,
+  "generatedAt": "2026-10-07T14:07:13.000Z"
+}

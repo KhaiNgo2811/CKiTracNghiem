@@ -1,0 +1,505 @@
+{
+  "chapterId": "C7",
+  "chapterName": "Quản trị, Bảo mật và Đạo đức dữ liệu",
+  "topics": [
+    {
+      "topicId": "C7_T1",
+      "topicName": "Data Governance theo AI Act",
+      "questions": [
+        {
+          "id": "C7_T1_Q1",
+          "question": "Đạo luật AI Act phân cấp các hệ thống AI thành bao nhiêu mức độ rủi ro?",
+          "options": {
+            "A": "4 mức",
+            "B": "5 mức",
+            "C": "3 mức",
+            "D": "2 mức"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T1_Q2",
+          "question": "Hệ thống AI thuộc nhóm 'Unacceptable Risk' bị xử lý như thế nào?",
+          "options": {
+            "A": "Kiểm soát nghiêm ngặt",
+            "B": "Cấm hoàn toàn (ví dụ chấm điểm công dân xã hội)",
+            "C": "Tự do vận hành",
+            "D": "Chỉ cần dán nhãn"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T1_Q3",
+          "question": "AI đánh giá điểm tín dụng trong Fintech thuộc mức rủi ro nào?",
+          "options": {
+            "A": "Unacceptable Risk",
+            "B": "Limited Risk",
+            "C": "Minimal Risk",
+            "D": "High Risk"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T1_Q4",
+          "question": "Chatbots và hệ thống tạo ảnh Deepfake thuộc mức rủi ro nào, yêu cầu gì?",
+          "options": {
+            "A": "Transparent/Limited Risk — yêu cầu dán nhãn rõ ràng",
+            "B": "Minimal Risk — không cần gì",
+            "C": "Unacceptable Risk",
+            "D": "High Risk — bị cấm"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T1_Q5",
+          "question": "Bộ lọc Spam và AI trong trò chơi điện tử thuộc mức rủi ro nào?",
+          "options": {
+            "A": "Limited Risk",
+            "B": "High Risk",
+            "C": "Minimal Risk",
+            "D": "Unacceptable Risk"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T1_Q6",
+          "question": "Ba trụ cột bắt buộc trong quản trị dữ liệu theo AI Act là gì?",
+          "options": {
+            "A": "Bronze, Silver, Gold",
+            "B": "Transparency, Human Oversight, Data Quality",
+            "C": "Backup, Restore, Archive",
+            "D": "Speed, Cost, Scale"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T1_Q7",
+          "question": "Nghĩa vụ 'Traceability' đối với AI rủi ro cao là gì?",
+          "options": {
+            "A": "Chỉ lưu mã nguồn",
+            "B": "Xóa log định kỳ",
+            "C": "Không cần ghi nhận",
+            "D": "Hệ thống tự động ghi nhật ký để theo dõi, kiểm toán toàn bộ vòng đời vận hành"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T1_Q8",
+          "question": "Từ năm nào AI Act chính thức áp dụng toàn diện theo slide?",
+          "options": {
+            "A": "2024",
+            "B": "2026",
+            "C": "2030",
+            "D": "2020"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C7_T2",
+      "topicName": "Automated Data Lineage",
+      "questions": [
+        {
+          "id": "C7_T2_Q1",
+          "question": "Automated Data Lineage là gì?",
+          "options": {
+            "A": "Khả năng quan sát, ghi nhận flow của data từ nguồn gốc qua các bước biến đổi đến mô hình AI cuối cùng",
+            "B": "Công cụ nén dữ liệu",
+            "C": "Kỹ thuật mã hóa",
+            "D": "Thuật toán phân cụm"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T2_Q2",
+          "question": "Impact Analysis trong Lineage cảnh báo điều gì?",
+          "options": {
+            "A": "Khi hết dung lượng",
+            "B": "Khi mạng chậm",
+            "C": "Khi người dùng đăng nhập",
+            "D": "Khi bảng Bronze đổi schema, các model AI ở tầng Gold sẽ bị ảnh hưởng"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T2_Q3",
+          "question": "Giá trị cốt lõi của Lineage đối với kiểm toán viên là gì?",
+          "options": {
+            "A": "Mã hóa dữ liệu",
+            "B": "Hiểu mô hình AI lấy dữ liệu từ đâu và bị biến đổi bởi câu lệnh SQL nào",
+            "C": "Giảm dung lượng lưu trữ",
+            "D": "Tăng tốc truy vấn"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C7_T3",
+      "topicName": "Fine-grained Security: RLS và CLM",
+      "questions": [
+        {
+          "id": "C7_T3_Q1",
+          "question": "Row-level Security (RLS) hoạt động theo cơ chế nào?",
+          "options": {
+            "A": "Mã hóa toàn bộ bảng",
+            "B": "Che dấu một phần giá trị cột",
+            "C": "Xóa dòng nhạy cảm",
+            "D": "Bộ lọc động dựa trên danh tính người truy cập (User Context)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T3_Q2",
+          "question": "Hiểu về CLM: Column-level Masking là gì?",
+          "options": {
+            "A": "Ẩn hoặc mã hóa một phần dữ liệu nhạy cảm (PII) của cột mà không thay đổi cấu trúc bảng",
+            "B": "Xóa cột nhạy cảm",
+            "C": "Chia sẻ dữ liệu không sao chép",
+            "D": "Bộ lọc dòng theo danh tính"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T3_Q3",
+          "question": "Ví dụ nào minh họa Column-level Masking?",
+          "options": {
+            "A": "Nhân viên vùng A chỉ xem khách hàng vùng A",
+            "B": "Mã hóa toàn bộ CSDL",
+            "C": "Xóa bảng khách hàng",
+            "D": "Số điện thoại hiển thị dạng 091xxxx888"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T3_Q4",
+          "question": "Ví dụ nào minh họa Row-level Security?",
+          "options": {
+            "A": "Nhân viên vùng A chỉ được xem dữ liệu khách hàng vùng A; quản lý xem toàn bộ",
+            "B": "Cột email bị xóa",
+            "C": "Số điện thoại bị che",
+            "D": "Số thẻ hiển thị xxxx"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T3_Q5",
+          "question": "Bài học cho MIS về sự đánh đổi bảo mật – hiệu năng là gì?",
+          "options": {
+            "A": "Có thể bỏ bảo mật để nhanh hơn",
+            "B": "Bảo mật không được phép đánh đổi bằng hiệu năng vận hành thời gian thực của hệ thống",
+            "C": "Mã hóa luôn làm hệ thống nhanh hơn",
+            "D": "Hiệu năng không quan trọng"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C7_T4",
+      "topicName": "Secure Data Sharing",
+      "questions": [
+        {
+          "id": "C7_T4_Q1",
+          "question": "Zero-copy Data Sharing hoạt động như thế nào?",
+          "options": {
+            "A": "Gửi file Excel",
+            "B": "Sao chép dữ liệu qua FTP",
+            "C": "Đồng bộ qua email",
+            "D": "Chủ quản cấp quyền truy cập trực tiếp; đối tác xem dữ liệu tại chỗ, không sao chép byte nào"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T4_Q2",
+          "question": "Khi dừng hợp tác trong Zero-copy Data Sharing, chủ quản làm gì?",
+          "options": {
+            "A": "Gửi yêu cầu xóa qua email",
+            "B": "Không thể thu hồi",
+            "C": "Revoke access trên Cloud, đối tác lập tức không còn thấy dữ liệu",
+            "D": "Xóa bản sao ở máy đối tác"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T4_Q3",
+          "question": "So với ETL truyền thống, Secure Data Sharing có ưu điểm nào về chi phí?",
+          "options": {
+            "A": "Cần nhân bản dữ liệu",
+            "B": "Tốn gấp đôi tài nguyên",
+            "C": "Dùng chung không gian lưu trữ gốc, không sinh bản sao",
+            "D": "Chi phí tính toán tăng gấp đôi"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C7_T5",
+      "topicName": "Anonymization và Differential Privacy",
+      "questions": [
+        {
+          "id": "C7_T5_Q1",
+          "question": "Differential Privacy thực hiện cơ chế gì?",
+          "options": {
+            "A": "Chia sẻ dữ liệu thô",
+            "B": "Mã hóa kết quả",
+            "C": "Chủ động bơm 'nhiễu' ngẫu nhiên vào kết quả để hòa lẫn thông tin cá nhân",
+            "D": "Xóa mọi dữ liệu"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T5_Q2",
+          "question": "Epsilon thấp trong Differential Privacy dẫn đến điều gì?",
+          "options": {
+            "A": "Không ảnh hưởng",
+            "B": "Bảo mật tối đa nhưng giảm độ chính xác",
+            "C": "Độ chính xác cao, bảo mật thấp",
+            "D": "Dữ liệu bị mất"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T5_Q3",
+          "question": "Epsilon cao trong Differential Privacy dẫn đến điều gì?",
+          "options": {
+            "A": "Dữ liệu vô dụng",
+            "B": "Báo cáo tốt hơn nhưng rủi ro bảo mật danh tính",
+            "C": "Bảo mật tối đa",
+            "D": "Không có rủi ro"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T5_Q4",
+          "question": "Một tập dữ liệu đạt k-anonymity khi nào?",
+          "options": {
+            "A": "Mọi cá nhân không thể phân biệt với ít nhất k−1 cá nhân khác trong bảng",
+            "B": "Có k cột",
+            "C": "Có đúng k bản ghi",
+            "D": "Mọi cột được mã hóa"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T5_Q5",
+          "question": "Quasi-identifiers là gì?",
+          "options": {
+            "A": "Khóa chính",
+            "B": "Mật khẩu người dùng",
+            "C": "Các cột bị mã hóa",
+            "D": "Các cột đơn lẻ không nhạy cảm (tuổi, giới tính…) nhưng kết hợp lại có thể giúp re-identification"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T5_Q6",
+          "question": "Generalization trong k-anonymity là gì?",
+          "options": {
+            "A": "Thêm nhiễu ngẫu nhiên",
+            "B": "Biến số cụ thể thành khoảng (ví dụ 23 tuổi → nhóm 20–30)",
+            "C": "Mã hóa SHA-256",
+            "D": "Xóa hẳn dòng dị biệt"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T5_Q7",
+          "question": "Suppression trong k-anonymity là gì?",
+          "options": {
+            "A": "Biến số thành khoảng",
+            "B": "Xóa hẳn dòng dữ liệu của những cá nhân quá dị biệt để tránh bị lộ",
+            "C": "Hash dữ liệu",
+            "D": "Bơm nhiễu"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C7_T6",
+      "topicName": "Metadata và Data Cataloging dựa trên AI",
+      "questions": [
+        {
+          "id": "C7_T6_Q1",
+          "question": "Data Swamps là gì?",
+          "options": {
+            "A": "Một công cụ CDC",
+            "B": "Kho dữ liệu sạch",
+            "C": "Dữ liệu mở rộng quá nhanh, khó nhận biết dữ liệu sạch nằm ở đâu",
+            "D": "Một định dạng bảng"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T6_Q2",
+          "question": "Semantic Search trong AI Data Catalog cho phép làm gì?",
+          "options": {
+            "A": "Chỉ tìm theo dung lượng",
+            "B": "Chỉ tìm theo ID",
+            "C": "Dùng ngôn ngữ tự nhiên để tìm bảng dữ liệu",
+            "D": "Chỉ tìm theo từ khóa chính xác"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C7_T6_Q3",
+          "question": "Trust Score đánh giá điều gì?",
+          "options": {
+            "A": "Chất lượng bảng dữ liệu dựa trên tần suất sử dụng và lịch sử kiểm định chất lượng tự động",
+            "B": "Giá thành lưu trữ",
+            "C": "Tốc độ mạng",
+            "D": "Số cột"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T6_Q4",
+          "question": "Business Glossary do lớp nào định nghĩa và dùng để làm gì?",
+          "options": {
+            "A": "Data Engineer — lưu kiểu dữ liệu",
+            "B": "Người dùng cuối — chọn biểu đồ",
+            "C": "Nhà cung cấp Cloud — lưu log",
+            "D": "Governance Layer — thống nhất khái niệm kinh doanh (ví dụ Churn)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T6_Q5",
+          "question": "Technical Metadata gồm những gì?",
+          "options": {
+            "A": "Điểm tin cậy người dùng",
+            "B": "Định nghĩa khái niệm kinh doanh",
+            "C": "Kiểu dữ liệu, schema bảng, tần suất cập nhật, chủ sở hữu kỹ thuật",
+            "D": "Nội dung báo cáo"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C7_T7",
+      "topicName": "Đạo đức dữ liệu: Bias và Human-in-the-loop",
+      "questions": [
+        {
+          "id": "C7_T7_Q1",
+          "question": "Nguồn gốc của Bias trong AI theo slide là gì?",
+          "options": {
+            "A": "Lỗi mạng",
+            "B": "AI tự sinh ra định kiến",
+            "C": "Lỗi phần cứng",
+            "D": "Định kiến nằm trong dữ liệu lịch sử của con người, AI học và khuếch đại nó"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C7_T7_Q2",
+          "question": "Kỹ thuật Pre-processing khử bias làm gì?",
+          "options": {
+            "A": "Tác động vào tập dữ liệu trước khi học: Resampling hoặc gán trọng số cân bằng nhóm",
+            "B": "Xóa mô hình",
+            "C": "Thêm Fairness Constraints vào Loss Function",
+            "D": "Điều chỉnh ngưỡng quyết định"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T7_Q3",
+          "question": "Kỹ thuật In-processing khử bias làm gì?",
+          "options": {
+            "A": "Xóa dữ liệu",
+            "B": "Thêm Fairness Constraints trực tiếp vào Loss Function khi huấn luyện",
+            "C": "Điều chỉnh ngưỡng phân loại",
+            "D": "Resampling dữ liệu"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T7_Q4",
+          "question": "Kỹ thuật Post-processing khử bias làm gì?",
+          "options": {
+            "A": "Thêm ràng buộc vào Loss Function",
+            "B": "Điều chỉnh Classification Threshold tối ưu riêng cho từng nhóm thiểu số",
+            "C": "Resampling dữ liệu",
+            "D": "Mã hóa kết quả"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T7_Q5",
+          "question": "Nguyên tắc Human-in-the-loop yêu cầu gì?",
+          "options": {
+            "A": "Quyết định cuối ảnh hưởng quyền lợi công dân bắt buộc có sự phê duyệt của con người",
+            "B": "AI tự quyết định hoàn toàn",
+            "C": "Chỉ con người xem log",
+            "D": "Không cần con người"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T7_Q6",
+          "question": "Explainable AI yêu cầu điều gì?",
+          "options": {
+            "A": "Mô hình không được là hộp đen; phải giải trình được lý do của kết quả",
+            "B": "Không cần giải trình",
+            "C": "Mô hình ẩn hoàn toàn logic",
+            "D": "Chỉ cần độ chính xác cao"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "C7_T8",
+      "topicName": "Tự động Auditing và báo cáo tuân thủ",
+      "questions": [
+        {
+          "id": "C7_T8_Q1",
+          "question": "Continuous Auditing khác audit truyền thống ở điểm nào?",
+          "options": {
+            "A": "AI theo dõi tự động toàn bộ hạ tầng theo thời gian thực 24/7",
+            "B": "Không kiểm toán",
+            "C": "Kiểm toán thủ công theo quý",
+            "D": "Kiểm toán định kỳ hàng năm"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T8_Q2",
+          "question": "Các bước vận hành của hệ thống Audit tuân thủ tự động theo thứ tự là?",
+          "options": {
+            "A": "Monitor → Detect → Alert → Report",
+            "B": "Detect → Monitor → Report → Alert",
+            "C": "Alert → Monitor → Report → Detect",
+            "D": "Report → Alert → Detect → Monitor"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C7_T8_Q3",
+          "question": "Data Audit Trail là gì?",
+          "options": {
+            "A": "Biểu đồ dashboard",
+            "B": "Sổ cái bất biến (immutable log) ghi nhận ai đã tạo, sửa, xóa, xem dữ liệu",
+            "C": "Bảng tổng hợp doanh thu",
+            "D": "Danh sách bảng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C7_T8_Q4",
+          "question": "Privacy Audit Trail theo dõi điều gì?",
+          "options": {
+            "A": "Dung lượng đĩa",
+            "B": "Số lượng bảng",
+            "C": "Mức hao hụt ngân sách quyền riêng tư (Epsilon privacy budget loss) theo thời gian",
+            "D": "Tốc độ truy vấn"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    }
+  ]
+}

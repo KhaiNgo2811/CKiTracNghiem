@@ -1,0 +1,311 @@
+{
+  "chapterId": "C1",
+  "chapterName": "Database Configuration",
+  "topics": [
+    {
+      "topicId": "C1_T1",
+      "topicName": "File, Filegroup và Cấu trúc vật lý",
+      "questions": [
+        {
+          "id": "C1_T1_Q1",
+          "question": "File dữ liệu chính trong SQL Server có phần mở rộng là gì?",
+          "options": {
+            "A": ".ndf",
+            "B": ".ldf",
+            "C": ".mdf",
+            "D": ".dbf"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T1_Q2",
+          "question": "Filegroup nào chứa các bảng hệ thống trong SQL Server?",
+          "options": {
+            "A": "Filestream filegroup",
+            "B": "User-defined filegroup",
+            "C": "Primary filegroup",
+            "D": "Memory Optimized filegroup"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T1_Q3",
+          "question": "Một filegroup có thể chứa bao nhiêu file dữ liệu?",
+          "options": {
+            "A": "Chỉ một",
+            "B": "Tối đa ba",
+            "C": "Không giới hạn",
+            "D": "Tối đa tám"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T1_Q4",
+          "question": "File dữ liệu phụ trong SQL Server có phần mở rộng là gì?",
+          "options": {
+            "A": ".mdf",
+            "B": ".ldf",
+            "C": ".ndf",
+            "D": ".log"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T1_Q5",
+          "question": "Filegroup giúp quản lý lưu trữ theo cách nào?",
+          "options": {
+            "A": "Vật lý",
+            "B": "Logic",
+            "C": "Tạm thời",
+            "D": "Phân quyền"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C1_T2",
+      "topicName": "Page, Extent và Quản lý không gian",
+      "questions": [
+        {
+          "id": "C1_T2_Q1",
+          "question": "Một page trong SQL Server có kích thước bao nhiêu?",
+          "options": {
+            "A": "4KB",
+            "B": "8KB",
+            "C": "16KB",
+            "D": "64KB"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T2_Q2",
+          "question": "Một extent gồm bao nhiêu page?",
+          "options": {
+            "A": "4",
+            "B": "8",
+            "C": "16",
+            "D": "64"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T2_Q3",
+          "question": "Mixed extent có thể chứa page của bao nhiêu đối tượng?",
+          "options": {
+            "A": "Một",
+            "B": "Hai",
+            "C": "Nhiều",
+            "D": "Không xác định"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T2_Q4",
+          "question": "Uniform extent chứa page của bao nhiêu đối tượng?",
+          "options": {
+            "A": "Một",
+            "B": "Hai",
+            "C": "Nhiều",
+            "D": "Tất cả"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T2_Q5",
+          "question": "Bản đồ nào quản lý extent đã cấp phát?",
+          "options": {
+            "A": "SGAM",
+            "B": "PFS",
+            "C": "DCM",
+            "D": "GAM"
+          },
+          "correctAnswer": "D"
+        }
+      ]
+    },
+    {
+      "topicId": "C1_T3",
+      "topicName": "Allocation Unit và IAM",
+      "questions": [
+        {
+          "id": "C1_T3_Q1",
+          "question": "Allocation unit nào luôn tồn tại trong mỗi phân vùng?",
+          "options": {
+            "A": "IN_ROW_DATA",
+            "B": "ROW_OVERFLOW_DATA",
+            "C": "LOB_DATA",
+            "D": "SYSTEM_DATA"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C1_T3_Q2",
+          "question": "Allocation unit nào chứa dữ liệu vượt quá giới hạn dòng 8,060 byte?",
+          "options": {
+            "A": "IN_ROW_DATA",
+            "B": "ROW_OVERFLOW_DATA",
+            "C": "LOB_DATA",
+            "D": "SYSTEM_DATA"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T3_Q3",
+          "question": "Allocation unit nào chứa dữ liệu kiểu LOB như XML, VARCHAR(MAX)?",
+          "options": {
+            "A": "IN_ROW_DATA",
+            "B": "ROW_OVERFLOW_DATA",
+            "C": "LOB_DATA",
+            "D": "SYSTEM_DATA"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T3_Q4",
+          "question": "IAM dùng để làm gì?",
+          "options": {
+            "A": "Quản lý trạng thái page",
+            "B": "Ánh xạ extent cho allocation unit",
+            "C": "Theo dõi giao dịch",
+            "D": "Quản lý log"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T3_Q5",
+          "question": "Nếu allocation unit trải rộng nhiều file, IAM sẽ được tổ chức như thế nào?",
+          "options": {
+            "A": "IAM block",
+            "B": "IAM chain",
+            "C": "IAM group",
+            "D": "IAM segment"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C1_T4",
+      "topicName": "DCM, BCM và Quản lý thay đổi",
+      "questions": [
+        {
+          "id": "C1_T4_Q1",
+          "question": "DCM dùng để theo dõi điều gì?",
+          "options": {
+            "A": "Giao dịch chưa commit",
+            "B": "Extent đã thay đổi sau backup",
+            "C": "Page bị lỗi",
+            "D": "File bị khóa"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T4_Q2",
+          "question": "BCM dùng để theo dõi điều gì?",
+          "options": {
+            "A": "Giao dịch hệ thống",
+            "B": "Extent bị thay đổi bởi thao tác bulk logged",
+            "C": "Page bị phân mảnh",
+            "D": "Index bị lỗi"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T4_Q3",
+          "question": "BCM có ý nghĩa trong recovery model nào?",
+          "options": {
+            "A": "Simple",
+            "B": "Full",
+            "C": "Bulk-logged",
+            "D": "Snapshot"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T4_Q4",
+          "question": "DCM giúp tăng tốc loại backup nào?",
+          "options": {
+            "A": "Full backup",
+            "B": "Log backup",
+            "C": "Differential backup",
+            "D": "Snapshot backup"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T4_Q5",
+          "question": "DCM và BCM là loại cấu trúc gì?",
+          "options": {
+            "A": "Log chain",
+            "B": "Metadata",
+            "C": "Bitmap",
+            "D": "Segment"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C1_T5",
+      "topicName": "Transaction Log, Checkpoint và Recovery",
+      "questions": [
+        {
+          "id": "C1_T5_Q1",
+          "question": "Transaction log ghi lại điều gì?",
+          "options": {
+            "A": "Chỉ các thao tác SELECT",
+            "B": "Các thay đổi dữ liệu và giao dịch",
+            "C": "Cấu trúc bảng",
+            "D": "Các bản ghi hệ thống"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C1_T5_Q2",
+          "question": "Phần log từ MinLSN đến bản ghi cuối cùng được gọi là gì?",
+          "options": {
+            "A": "Log tail",
+            "B": "Dirty log",
+            "C": "Active log",
+            "D": "Recovery log"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T5_Q3",
+          "question": "Khi checkpoint xảy ra, thông tin nào được ghi vào boot page của database?",
+          "options": {
+            "A": "Tên filegroup",
+            "B": "Số lượng page đã ghi",
+            "C": "LSN bắt đầu của checkpoint",
+            "D": "Danh sách bảng hệ thống"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T5_Q4",
+          "question": "Trong SQL Server, transaction log được chia thành các phần nhỏ gọi là gì?",
+          "options": {
+            "A": "Extent",
+            "B": "Segment",
+            "C": "Virtual Log File (VLF)",
+            "D": "Log block"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C1_T5_Q5",
+          "question": "Dirty page là gì?",
+          "options": {
+            "A": "Trang chứa dữ liệu bị lỗi",
+            "B": "Trang đã bị thay đổi nhưng chưa ghi xuống đĩa",
+            "C": "Trang bị khóa bởi giao dịch",
+            "D": "Trang chứa dữ liệu NULL"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    }
+  ]
+}

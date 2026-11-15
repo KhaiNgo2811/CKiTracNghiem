@@ -1,0 +1,452 @@
+{
+  "chapterId": "ATTT_D40",
+  "chapterName": "Đề An toàn thông tin – 40 câu (đáp án tự giải)",
+  "topics": [
+    {
+      "topicId": "ATTT_D40_T1",
+      "topicName": "Toàn bộ đề",
+      "questions": [
+        {
+          "id": "ATTT_D40_T1_Q1",
+          "question": "10 người dùng mã hóa bất đối xứng để gởi tin cho nhau, cần bao nhiêu mã khóa?",
+          "options": {
+            "A": "10",
+            "B": "50",
+            "C": "90",
+            "D": "100"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_D40_T1_Q2",
+          "question": "10 người dùng mã hóa đối xứng để gởi tin cho nhau, cần bao nhiêu mã khóa?",
+          "options": {
+            "A": "10",
+            "B": "50",
+            "C": "100",
+            "D": "90"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_D40_T1_Q3",
+          "question": "A dùng khóa công khai của B mã hóa văn bản, mục đích để làm gì?",
+          "options": {
+            "A": "Giữ tài liệu cho riêng mình",
+            "B": "Gởi tài liệu cho nhiều người",
+            "C": "Tất cả đều sai",
+            "D": "Gởi tài liệu cho B"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_D40_T1_Q4",
+          "question": "A gởi tin cho B, cần mã hóa bao nhiêu lần để an toàn?",
+          "options": {
+            "A": "1 lần",
+            "B": "4 lần trở lên",
+            "C": "3 lần",
+            "D": "2 lần"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_D40_T1_Q5",
+          "question": "A gởi tin cho B, dùng khóa gì để mã hóa là tốt nhất?",
+          "options": {
+            "A": "Khóa riêng của B",
+            "B": "Khóa riêng của A",
+            "C": "Khóa công khai của A",
+            "D": "Khóa công khai của B"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_D40_T1_Q6",
+          "question": "A gởi tin cho B, mã hóa bằng khóa công khai của B thì B dùng khóa gì giải mã?",
+          "options": {
+            "A": "Khóa riêng của A",
+            "B": "Khóa công khai của A",
+            "C": "Khóa riêng của B",
+            "D": "Khóa công khai của B"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_D40_T1_Q7",
+          "question": "A gởi tin cho B, mã hóa bằng khóa riêng của A thì B dùng khóa gì giải mã?",
+          "options": {
+            "A": "Khóa công khai của B",
+            "B": "Khóa công khai của A",
+            "C": "Khóa riêng của A",
+            "D": "Khóa riêng của B"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_D40_T1_Q8",
+          "question": "A muốn gửi một tin nhắn cho B một cách an toàn và mã hóa nội dung của tin nhắn. A sử dụng khóa nào để mã hóa tin nhắn?",
+          "options": {
+            "A": "Khóa công khai của B",
+            "B": "Khóa riêng của A",
+            "C": "Khóa công khai của A",
+            "D": "Khóa riêng tư của B"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_D40_T1_Q9",
+          "question": "A muốn gửi tin nhắn cho B bằng chữ ký điện tử. A sử dụng khóa mật mã nào để tạo chữ ký điện tử?",
+          "options": {
+            "A": "Khóa công khai của B",
+            "B": "Khóa công khai của A",
+            "C": "Khóa riêng tư của B",
+            "D": "Khóa riêng của A"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_D40_T1_Q10",
+          "question": "ALE là gì?",
+          "options": {
+            "A": "Số sự cố xảy ra trong 1 năm",
+            "B": "Tất cả đều sai",
+            "C": "Số tổn thất xảy ra trong 1 năm",
+            "D": "Số tổn thất từ một sự cố"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_D40_T1_Q11",
+          "question": "ARO là gì?",
+          "options": {
+            "A": "Số tổn thất xảy ra trong 1 năm",
+            "B": "Số tổn thất từ một sự cố",
+            "C": "Tất cả đều sai",
+            "D": "Số sự cố xảy ra trong 1 năm"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_D40_T1_Q12",
+          "question": "B nhận được một tin nhắn từ A có chứa chữ ký điện tử. B sử dụng khóa mật mã nào để xác minh chữ ký điện tử?",
+          "options": {
+            "A": "Khóa riêng tư của B",
+            "B": "Khóa công khai của A",
+            "C": "Khóa công khai của B",
+            "D": "Khóa riêng của A"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_D40_T1_Q13",
+          "question": "Có 1% khả năng hỏa hoạn sẽ xảy ra trong một năm và nếu xảy ra, có thể gây thiệt hại 2 triệu đô la cho cơ sở trị giá 10 triệu đô la. Với tình huống này, EF là bao nhiêu?",
+          "options": {
+            "A": "50%",
+            "B": "1%",
+            "C": "10%",
+            "D": "20%"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_D40_T1_Q14",
+          "question": "Có 1% khả năng hỏa hoạn sẽ xảy ra trong một năm và nếu xảy ra, có thể gây thiệt hại 2 triệu đô la cho cơ sở trị giá 10 triệu đô la. Với tình huống này, SLE là bao nhiêu?",
+          "options": {
+            "A": "2.000.000 đô la",
+            "B": "2.000 đô la",
+            "C": "200.000 đô la",
+            "D": "20.000 đô la"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_D40_T1_Q15",
+          "question": "Có 1% khả năng hỏa hoạn sẽ xảy ra trong một năm và nếu xảy ra, có thể gây thiệt hại 2 triệu đô la cho cơ sở trị giá 10 triệu đô la. Với tình huống này, ALE là bao nhiêu?",
+          "options": {
+            "A": "2.000 đô la",
+            "B": "200.000 đô la",
+            "C": "20.000 đô la",
+            "D": "2.000.000 đô la"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_D40_T1_Q16",
+          "question": "Để nhận mã OTP cho các giao dịch, nên dùng loại điện thoại nào?",
+          "options": {
+            "A": "Điện thoại có phần mềm bảo mật",
+            "B": "Điện thoại cơ bản",
+            "C": "Điện thoại công nghệ mới",
+            "D": "Tất cả đều sai"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_D40_T1_Q17",
+          "question": "Dịch chuyển ký tự văn bản là kiểu mã hóa nào?",
+          "options": {
+            "A": "Kết hợp đối xứng và bất đối xứng",
+            "B": "Đối xứng",
+            "C": "Tất cả đều sai",
+            "D": "Bất đối xứng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_D40_T1_Q18",
+          "question": "Điều nào sau đây KHÔNG phải là lợi ích của điện toán đám mây đối với các tổ chức?",
+          "options": {
+            "A": "Không cần duy trì trung tâm dữ liệu",
+            "B": "Cung cấp theo yêu cầu",
+            "C": "Cải thiện khả năng phục hồi sau thảm họa",
+            "D": "Giảm phụ thuộc vào các nhà cung cấp bên ngoài"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_D40_T1_Q19",
+          "question": "Điều nào sau đây KHÔNG phải là lợi thế của hệ thống sinh trắc học?",
+          "options": {
+            "A": "Người dùng không cần nhớ bất cứ điều gì",
+            "B": "Sinh trắc học rất khó làm giả",
+            "C": "Sinh trắc học yêu cầu sự hiện diện vật lý",
+            "D": "Các đặc điểm vật lý có thể thay đổi"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_D40_T1_Q20",
+          "question": "Điều nào sau đây KHÔNG phải là phương pháp hay nhất để bảo mật mật khẩu?",
+          "options": {
+            "A": "Không bao gồm tên người dùng trong mật khẩu",
+            "B": "Bao gồm hỗn hợp các ký tự viết hoa, ký tự viết thường và số trong mật khẩu",
+            "C": "Bao gồm một ký tự đặc biệt trong mật khẩu",
+            "D": "Sử dụng ít nhất sáu ký tự chữ và số"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_D40_T1_Q21",
+          "question": "Điều nào sau đây là ví dụ về xác thực hai yếu tố?",
+          "options": {
+            "A": "Mã PIN và mật khẩu",
+            "B": "Mật khẩu và câu hỏi bảo mật",
+            "C": "Thẻ thông minh và mã PIN",
+            "D": "Token và thẻ thông minh"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_D40_T1_Q22",
+          "question": "Độ bảo mật cao là tính chất của kiểu mã hóa nào?",
+          "options": {
+            "A": "Mã hóa đối xứng",
+            "B": "Kết hợp 2 kiểu mã hóa",
+            "C": "Tất cả đều đúng",
+            "D": "Mã hóa bất đối xứng"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_D40_T1_Q23",
+          "question": "Khi mua bán hàng online, cách thanh toán nào an toàn nhất cho cả người mua và người bán?",
+          "options": {
+            "A": "Dùng thẻ ghi nợ",
+            "B": "Trả tiền khi nhận hàng",
+            "C": "Dùng thẻ tín dụng",
+            "D": "Dùng dịch vụ thanh toán trung gian"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_D40_T1_Q24",
+          "question": "Loại xác thực nào bao gồm thẻ thông minh?",
+          "options": {
+            "A": "Vị trí",
+            "B": "Kiến thức",
+            "C": "Quyền sở hữu",
+            "D": "Hành động"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_D40_T1_Q25",
+          "question": "Lợi ích của xác thực 2 bước?",
+          "options": {
+            "A": "Có thể sử dụng password đơn giản",
+            "B": "Có thể chia sẻ tài khoản với người khác",
+            "C": "Tất cả đều đúng",
+            "D": "Ngăn chặn truy cập trái phép"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_D40_T1_Q26",
+          "question": "Lý do dùng hàm băm khi mã hóa văn bản?",
+          "options": {
+            "A": "Để đảm bảo tính toàn vẹn",
+            "B": "Để đảm bảo tính bí mật",
+            "C": "Tất cả đều đúng",
+            "D": "Để đảm bảo xuất xứ"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_D40_T1_Q27",
+          "question": "Mã hóa cần đảm bảo mấy yêu cầu?",
+          "options": {
+            "A": "4",
+            "B": "3",
+            "C": "5",
+            "D": "6"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_D40_T1_Q28",
+          "question": "Mất tiền do máy ATM giả là trách nhiệm của ai?",
+          "options": {
+            "A": "Khách hàng",
+            "B": "Kẻ gian lấy tiền",
+            "C": "Ngân hàng và khách hàng",
+            "D": "Ngân hàng"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_D40_T1_Q29",
+          "question": "Muốn chứng minh tin nhắn thực sự đến từ người gởi, là mục tiêu gì của mật mã học?",
+          "options": {
+            "A": "Bí mật",
+            "B": "Không thoái thác",
+            "C": "Toàn vẹn",
+            "D": "Xác thực"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_D40_T1_Q30",
+          "question": "Muốn đảm bảo không ai can thiệp tin nhắn khi đang được chuyển đi, là mục tiêu gì của mật mã học?",
+          "options": {
+            "A": "Không thoái thác",
+            "B": "Toàn vẹn",
+            "C": "Xác thực",
+            "D": "Bí mật"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_D40_T1_Q31",
+          "question": "Muốn đảm bảo theo dõi các hành động đối với một cá nhân, thì quan tâm đến giai đoạn nào của kiểm soát truy cập?",
+          "options": {
+            "A": "Trách nhiệm giải trình",
+            "B": "Ủy quyền",
+            "C": "Xác thực",
+            "D": "Nhận dạng"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "ATTT_D40_T1_Q32",
+          "question": "Người dùng có thể không muốn quét võng mạc do lo ngại về quyền riêng tư, là đang xem xét đặc điểm nào của hệ thống sinh trắc học?",
+          "options": {
+            "A": "Thời gian phản ứng",
+            "B": "Khả năng chấp nhận",
+            "C": "Động lực",
+            "D": "Độ chính xác"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_D40_T1_Q33",
+          "question": "Nhận được văn bản đã mã hóa, cần sử dụng phương pháp nào để đọc văn bản?",
+          "options": {
+            "A": "Hàm băm",
+            "B": "Giải mã",
+            "C": "Xác thực",
+            "D": "Mã hóa"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_D40_T1_Q34",
+          "question": "SLE là gì?",
+          "options": {
+            "A": "Số sự cố xảy ra trong 1 năm",
+            "B": "Số tổn thất xảy ra trong 1 năm",
+            "C": "Tất cả đều sai",
+            "D": "Số tổn thất từ một sự cố"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "ATTT_D40_T1_Q35",
+          "question": "Tốc độ thực hiện chậm là tính chất của kiểu mã hóa nào?",
+          "options": {
+            "A": "Mã hóa đối xứng",
+            "B": "Mã hóa bất đối xứng",
+            "C": "Tất cả đều đúng",
+            "D": "Kết hợp 2 kiểu mã hóa"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_D40_T1_Q36",
+          "question": "Tốc độ thực hiện nhanh là tính chất của kiểu mã hóa nào?",
+          "options": {
+            "A": "Tất cả đều đúng",
+            "B": "Mã hóa đối xứng",
+            "C": "Mã hóa bất đối xứng",
+            "D": "Kết hợp 2 kiểu mã hóa"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_D40_T1_Q37",
+          "question": "Trong công đoạn mã hóa thì kiểu đối xứng được sử dụng mấy lần?",
+          "options": {
+            "A": "3 lần",
+            "B": "Không sử dụng",
+            "C": "1 lần",
+            "D": "2 lần"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "ATTT_D40_T1_Q38",
+          "question": "Trong giai đoạn nào của quá trình kiểm soát truy cập, hệ thống trả lời câu hỏi \"Người yêu cầu có thể truy cập những gì?\"",
+          "options": {
+            "A": "Trách nhiệm giải trình",
+            "B": "Ủy quyền",
+            "C": "Nhận dạng",
+            "D": "Xác thực"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_D40_T1_Q39",
+          "question": "Ví dụ nào sau đây là điều khiển truy cập logic?",
+          "options": {
+            "A": "Hàng rào",
+            "B": "Mật khẩu",
+            "C": "Thẻ ra vào",
+            "D": "Chìa khóa cho một ổ khóa"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "ATTT_D40_T1_Q40",
+          "question": "Xác thực người gởi email bằng cách nào?",
+          "options": {
+            "A": "Địa chỉ trả về",
+            "B": "Địa chỉ email",
+            "C": "Tất cả đều sai",
+            "D": "Họ tên"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    }
+  ]
+}

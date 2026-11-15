@@ -1,0 +1,922 @@
+{
+  "chapterId": "C6",
+  "chapterName": "Phân tích Chuỗi thời gian",
+  "topics": [
+    {
+      "topicId": "C6_T1",
+      "topicName": "Nguyên tắc cơ bản: chuỗi thời gian, tự tương quan, các thành phần",
+      "questions": [
+        {
+          "id": "C6_T1_Q1",
+          "question": "Dữ liệu chuỗi thời gian (time-series) là gì?",
+          "options": {
+            "A": "Chuỗi các điểm dữ liệu phản ánh sự thay đổi của biến số theo thời gian, thu thập theo chu kỳ đều đặn",
+            "B": "Tập dữ liệu chỉ gồm biến phân loại",
+            "C": "Tập dữ liệu không có thứ tự",
+            "D": "Dữ liệu chụp tại một thời điểm duy nhất"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T1_Q2",
+          "question": "Điểm khác biệt của dữ liệu chuỗi thời gian so với dữ liệu thông thường là gì?",
+          "options": {
+            "A": "Được sắp xếp theo đúng trình tự thời gian (tính tuần tự)",
+            "B": "Luôn không có giá trị thiếu",
+            "C": "Các quan sát luôn độc lập nhau",
+            "D": "Luôn có phân phối chuẩn"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T1_Q3",
+          "question": "Tự tương quan (autocorrelation) là gì?",
+          "options": {
+            "A": "Hiện tượng các điểm dữ liệu quá khứ ảnh hưởng trực tiếp đến giá trị tương lai của chính chuỗi đó",
+            "B": "Mối quan hệ nhân quả giữa hai biến",
+            "C": "Tương quan giữa biến phân loại",
+            "D": "Tương quan giữa hai chuỗi khác nhau"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T1_Q4",
+          "question": "Độ trễ (lag) là gì?",
+          "options": {
+            "A": "Số điểm dữ liệu thiếu",
+            "B": "Sai số dự báo",
+            "C": "Khoảng thời gian (số bước) trễ giữa giá trị hiện tại và các giá trị trước đó",
+            "D": "Giá trị trung bình của chuỗi"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T1_Q5",
+          "question": "Trong công thức tự tương quan, ρₖ là gì?",
+          "options": {
+            "A": "Số lượng quan sát",
+            "B": "Phương sai tại thời điểm k",
+            "C": "Giá trị trung bình của k điểm",
+            "D": "Hệ số tự tương quan tại độ trễ k"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T1_Q6",
+          "question": "Xu hướng (Trend) là gì?",
+          "options": {
+            "A": "Biến thiên ngẫu nhiên không dự đoán được",
+            "B": "Chiều biến động dài hạn của dữ liệu (tăng, giảm hoặc đi ngang)",
+            "C": "Sự lặp lại không có chu kỳ cố định do ngoại cảnh",
+            "D": "Sự lặp lại theo chu kỳ cố định"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T1_Q7",
+          "question": "Tính mùa vụ (Seasonality) là gì?",
+          "options": {
+            "A": "Sự lặp lại có quy luật theo các khoảng thời gian cố định, dễ dự báo",
+            "B": "Biến thiên ngẫu nhiên",
+            "C": "Sự lặp lại không có chu kỳ cố định",
+            "D": "Chiều biến động dài hạn"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T1_Q8",
+          "question": "Tính chu kỳ (Cyclical) khác tính mùa vụ ở điểm nào?",
+          "options": {
+            "A": "Chỉ xuất hiện trong dữ liệu phân loại",
+            "B": "Do yếu tố ngoại cảnh, không có chu kỳ thời gian cố định nên khó nhận diện hơn",
+            "C": "Có chu kỳ cố định và dễ dự báo",
+            "D": "Chỉ xuất hiện theo ngày"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T1_Q9",
+          "question": "Nhiễu (Noise/Residuals) là gì?",
+          "options": {
+            "A": "Giá trị trung bình",
+            "B": "Phần lặp lại theo mùa",
+            "C": "Phần biến thiên ngẫu nhiên còn lại sau khi tách bỏ xu hướng và mùa vụ",
+            "D": "Xu hướng dài hạn"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T1_Q10",
+          "question": "Doanh thu tăng mạnh vào mỗi dịp Giáng sinh là ví dụ của thành phần nào?",
+          "options": {
+            "A": "Noise",
+            "B": "Seasonality (mùa vụ)",
+            "C": "Trend",
+            "D": "Cyclical"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T1_Q11",
+          "question": "Giá cổ phiếu tăng trong dài hạn là ví dụ của thành phần nào?",
+          "options": {
+            "A": "Seasonality",
+            "B": "Cyclical",
+            "C": "Trend (xu hướng)",
+            "D": "Noise"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T1_Q12",
+          "question": "Công cụ cốt lõi của pandas để thao tác dữ liệu chuỗi thời gian là gì?",
+          "options": {
+            "A": "<code>MultiIndex</code>",
+            "B": "<code>DatetimeIndex</code>",
+            "C": "<code>RangeIndex</code> thuần",
+            "D": "<code>CategoricalIndex</code>"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T1_Q13",
+          "question": "Tự tương quan giúp ích gì trong phân tích chuỗi thời gian?",
+          "options": {
+            "A": "Làm sạch ngoại lệ",
+            "B": "Nén dữ liệu",
+            "C": "Nhận diện các mẫu ẩn, hỗ trợ chọn mô hình dự báo tối ưu",
+            "D": "Mã hóa biến phân loại"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    },
+    {
+      "topicId": "C6_T2",
+      "topicName": "Resampling và Datetime slicing",
+      "questions": [
+        {
+          "id": "C6_T2_Q1",
+          "question": "Resampling là gì?",
+          "options": {
+            "A": "Thay đổi mức độ chi tiết (granularity) của chuỗi thời gian, ví dụ từ ngày sang tháng",
+            "B": "Xóa giá trị thiếu",
+            "C": "Lấy mẫu ngẫu nhiên các dòng dữ liệu",
+            "D": "Dự báo giá trị tương lai"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T2_Q2",
+          "question": "Hàm nào của pandas thực hiện resampling?",
+          "options": {
+            "A": "<code>.resample()</code>",
+            "B": "<code>.regroup()</code>",
+            "C": "<code>.rolling_cut()</code>",
+            "D": "<code>.resize()</code>"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T2_Q3",
+          "question": "Cơ chế của resampling là gì?",
+          "options": {
+            "A": "Gom các điểm dữ liệu vào các khoảng thời gian cố định (time bins) rồi tổng hợp hoặc mở rộng",
+            "B": "Mã hóa nhãn",
+            "C": "Sắp xếp ngẫu nhiên dữ liệu",
+            "D": "Chia dữ liệu thành train/test"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T2_Q4",
+          "question": "Rule <code>ME</code> trong resample có nghĩa là gì?",
+          "options": {
+            "A": "Median Error",
+            "B": "Mean Estimate",
+            "C": "Month End: gom theo ngày cuối cùng của tháng",
+            "D": "Minute End"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T2_Q5",
+          "question": "Rule <code>QE</code> trong resample có nghĩa là gì?",
+          "options": {
+            "A": "Quick Estimate",
+            "B": "Query Engine",
+            "C": "Quantile Error",
+            "D": "Quarter End: gom theo ngày cuối của quý (mỗi 3 tháng)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T2_Q6",
+          "question": "Rule <code>BA</code> trong resample có nghĩa là gì?",
+          "options": {
+            "A": "Business Year End: gom theo ngày làm việc cuối của năm",
+            "B": "Basic Average",
+            "C": "Beginning of Week",
+            "D": "Bi-Annual Estimate"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T2_Q7",
+          "question": "Mục đích của resampling từ ngày sang tháng/quý/năm là gì?",
+          "options": {
+            "A": "Làm tăng số điểm dữ liệu",
+            "B": "Thống kê và tóm tắt dữ liệu từ mức chi tiết nhỏ sang các chu kỳ dài hơn",
+            "C": "Loại bỏ ngoại lệ",
+            "D": "Chuẩn hóa về thang 0–1"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T2_Q8",
+          "question": "Datetime slicing cho phép làm gì?",
+          "options": {
+            "A": "Xóa cột ngày",
+            "B": "Dự báo xu hướng",
+            "C": "Truy xuất trực tiếp dữ liệu trong một khoảng thời gian cụ thể nhờ DatetimeIndex",
+            "D": "Đổi tên cột thời gian"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T2_Q9",
+          "question": "Điều kiện để dùng datetime slicing theo chuỗi ngày hiệu quả là gì?",
+          "options": {
+            "A": "Dữ liệu phải chuẩn hóa",
+            "B": "Cột ngày phải là chuỗi (object)",
+            "C": "Dữ liệu phải không có xu hướng",
+            "D": "Index của DataFrame phải là DatetimeIndex"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T2_Q10",
+          "question": "Khi resample ngày → tháng bằng <code>.sum()</code>, kết quả là gì?",
+          "options": {
+            "A": "Tổng của các giá trị trong mỗi tháng",
+            "B": "Giá trị lớn nhất toàn chuỗi",
+            "C": "Trung bình toàn bộ",
+            "D": "Số ngày trong tháng"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "C6_T3",
+      "topicName": "Trung bình động và Exponential Smoothing",
+      "questions": [
+        {
+          "id": "C6_T3_Q1",
+          "question": "Simple Moving Average (SMA) gán trọng số như thế nào cho các điểm trong cửa sổ trượt?",
+          "options": {
+            "A": "Tăng dần theo thời gian",
+            "B": "Giảm theo cấp số nhân",
+            "C": "Giảm tuyến tính dần",
+            "D": "Bằng nhau cho mọi điểm"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T3_Q2",
+          "question": "SMA có mục đích chính là gì?",
+          "options": {
+            "A": "Tính tự tương quan",
+            "B": "Làm mượt chuỗi thời gian",
+            "C": "Mã hóa mùa vụ",
+            "D": "Kiểm tra tính dừng"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T3_Q3",
+          "question": "Trong công thức SMA, w là gì?",
+          "options": {
+            "A": "Trọng số của điểm gần nhất",
+            "B": "Số lần sai phân",
+            "C": "Kích thước cửa sổ thời gian (số điểm quá khứ được lấy trung bình)",
+            "D": "Hệ số làm mượt"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T3_Q4",
+          "question": "SMA cửa sổ w = 3 tại điểm cuối của dãy 2, 4, 6, 8 bằng bao nhiêu?<br><code>import numpy as np; x = np.array([2, 4, 6, 8]); print(x[-3:].mean())</code>",
+          "options": {
+            "A": "8.0",
+            "B": "4.0",
+            "C": "5.0",
+            "D": "6.0"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T3_Q5",
+          "question": "Weighted Moving Average (WMA) khác SMA ở điểm nào?",
+          "options": {
+            "A": "Chỉ dùng cho dữ liệu mùa vụ",
+            "B": "Gán trọng số khác nhau cho từng điểm; điểm gần hiện tại có trọng số cao hơn",
+            "C": "Gán trọng số bằng nhau",
+            "D": "Không dùng cửa sổ trượt"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T3_Q6",
+          "question": "Mẫu số Σwᵢ trong công thức WMA có tác dụng gì?",
+          "options": {
+            "A": "Chuẩn hóa kết quả về đúng tỷ lệ",
+            "B": "Tính sai phân bậc 1",
+            "C": "Làm tăng độ nhạy với ngoại lệ",
+            "D": "Tính độ trễ k"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T3_Q7",
+          "question": "Exponential Smoothing (ETS) gán trọng số cho giá trị quá khứ như thế nào?",
+          "options": {
+            "A": "Giảm dần theo cấp số nhân",
+            "B": "Tăng dần",
+            "C": "Bằng nhau",
+            "D": "Giảm tuyến tính"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T3_Q8",
+          "question": "Khi nào ETS là lựa chọn tối ưu?",
+          "options": {
+            "A": "Khi dữ liệu là biến phân loại",
+            "B": "Khi muốn mọi điểm có tầm quan trọng như nhau",
+            "C": "Khi chuỗi đã dừng và không cần làm mượt",
+            "D": "Khi muốn dữ liệu gần đây nhất có ảnh hưởng lớn hơn nhiều so với dữ liệu cũ"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T3_Q9",
+          "question": "Tham số α (smoothing value) của ETS có giá trị trong khoảng nào?",
+          "options": {
+            "A": "Lớn hơn 1",
+            "B": "Từ −1 đến 1",
+            "C": "Từ 0 đến 100",
+            "D": "Từ 0 đến 1"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T3_Q10",
+          "question": "α gần 1 trong ETS có nghĩa là gì?",
+          "options": {
+            "A": "Mô hình gần như bỏ qua dữ liệu mới",
+            "B": "Mô hình phản ứng mạnh với dữ liệu gần nhất, quên dữ liệu cũ nhanh",
+            "C": "Chuỗi chắc chắn dừng",
+            "D": "Trọng số phân bố đều"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C6_T4",
+      "topicName": "Tính dừng: ADF, KPSS và sai phân",
+      "questions": [
+        {
+          "id": "C6_T4_Q1",
+          "question": "Tính dừng (stationarity) nghĩa là gì?",
+          "options": {
+            "A": "Chuỗi không có giá trị thiếu",
+            "B": "Các thuộc tính thống kê (trung bình, phương sai, tự tương quan) không đổi theo thời gian",
+            "C": "Chuỗi luôn có xu hướng tăng",
+            "D": "Chuỗi chỉ có một giá trị"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T4_Q2",
+          "question": "Weak stationarity yêu cầu điều gì?",
+          "options": {
+            "A": "Toàn bộ phân phối xác suất không đổi",
+            "B": "Trung bình, phương sai và tự hiệp phương sai là hằng số",
+            "C": "Chuỗi có phân phối chuẩn",
+            "D": "Chuỗi không có nhiễu"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T4_Q3",
+          "question": "Strict stationarity yêu cầu điều gì?",
+          "options": {
+            "A": "Chỉ phương sai không đổi",
+            "B": "Chỉ trung bình không đổi",
+            "C": "Chuỗi có đúng một mùa vụ",
+            "D": "Toàn bộ phân phối xác suất của chuỗi không đổi (lý tưởng nhưng ít thực tế)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T4_Q4",
+          "question": "Giả định nền tảng của hầu hết các mô hình chuỗi thời gian hiện nay là gì?",
+          "options": {
+            "A": "Weak stationarity (tính dừng yếu)",
+            "B": "Strict stationarity",
+            "C": "Có mùa vụ",
+            "D": "Có xu hướng tăng"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T4_Q5",
+          "question": "Hai kiểm định tiêu chuẩn cho tính dừng là gì?",
+          "options": {
+            "A": "Chi-square và t-test",
+            "B": "Ljung-Box và AIC",
+            "C": "ADF và KPSS",
+            "D": "Mann-Whitney và Kruskal-Wallis"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T4_Q6",
+          "question": "Theo slide, KPSS kết luận chuỗi có tính dừng khi nào?",
+          "options": {
+            "A": "Khi AIC thấp nhất",
+            "B": "Khi không thể bác bỏ giả thuyết không (H₀)",
+            "C": "Khi p-value bằng 0",
+            "D": "Khi bác bỏ giả thuyết không"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T4_Q7",
+          "question": "Kiểm định ADF kết luận chuỗi dừng khi nào?",
+          "options": {
+            "A": "Khi không bác bỏ H₀",
+            "B": "Khi bác bỏ giả thuyết không (H₀: chuỗi có nghiệm đơn vị, không dừng)",
+            "C": "Khi p-value bằng 1",
+            "D": "Khi KPSS cũng bác bỏ H₀"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T4_Q8",
+          "question": "Nếu kết quả ADF và KPSS mâu thuẫn thì nên làm gì?",
+          "options": {
+            "A": "Xóa chuỗi dữ liệu",
+            "B": "Kết luận theo ADF luôn",
+            "C": "Tiếp tục trực quan hóa và phân rã (decomposition) để xem xét ảnh hưởng của xu hướng/mùa vụ",
+            "D": "Bỏ qua cả hai kiểm định"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T4_Q9",
+          "question": "Kỹ thuật phổ biến nhất để khử tính không dừng là gì?",
+          "options": {
+            "A": "Lấy sai phân (differencing)",
+            "B": "One-hot encoding",
+            "C": "Label encoding",
+            "D": "Resampling ngược"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T4_Q10",
+          "question": "Công thức sai phân bậc 1 là gì?",
+          "options": {
+            "A": "Δyₜ = yₜ / yₜ₋₁",
+            "B": "Δyₜ = yₜ + yₜ₋₁",
+            "C": "Δyₜ = yₜ − yₜ₋₁",
+            "D": "Δyₜ = yₜ₋₁ − yₜ₋₂ + yₜ"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T4_Q11",
+          "question": "Kết quả của đoạn code sau?<br><code>import numpy as np; y = np.array([10, 13, 12, 18]); print(np.diff(y))</code>",
+          "options": {
+            "A": "[13 12 18]",
+            "B": "[10 3 -1 6]",
+            "C": "[3 -1 6]",
+            "D": "[-1 6]"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T4_Q12",
+          "question": "Nếu áp dụng mô hình non-stationary mà không xử lý trước thì điều gì xảy ra?",
+          "options": {
+            "A": "Dự báo có thể sai lệch hoàn toàn, ví dụ nhầm xu hướng tăng trưởng với biến động ngẫu nhiên",
+            "B": "Không có ảnh hưởng",
+            "C": "Mô hình tự động xử lý",
+            "D": "Dự báo luôn chính xác hơn"
+          },
+          "correctAnswer": "A"
+        }
+      ]
+    },
+    {
+      "topicId": "C6_T5",
+      "topicName": "Mô hình AR, MA, ARMA, ARIMA, SARIMA",
+      "questions": [
+        {
+          "id": "C6_T5_Q1",
+          "question": "Mô hình AR (Autoregressive) dự báo dựa trên gì?",
+          "options": {
+            "A": "Các biến ngoại sinh",
+            "B": "Các sai số dự báo quá khứ",
+            "C": "Các giá trị trong quá khứ của chính chuỗi (các độ trễ)",
+            "D": "Giá trị trung bình toàn chuỗi"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T5_Q2",
+          "question": "Trong mô hình AR(p), p là gì?",
+          "options": {
+            "A": "Số lượng sai số quá khứ",
+            "B": "Chu kỳ mùa vụ",
+            "C": "Số lần sai phân",
+            "D": "Số lượng độ trễ (giá trị quá khứ) dùng làm biến hồi quy"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T5_Q3",
+          "question": "Mô hình MA (Moving Average) trong thống kê chuỗi thời gian khác MA làm mượt ở điểm nào?",
+          "options": {
+            "A": "Không có tham số",
+            "B": "Dùng để kiểm định tính dừng",
+            "C": "Là trung bình đơn giản của các giá trị gốc",
+            "D": "Tính trung bình có trọng số của các sai số (error terms) trong quá khứ"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T5_Q4",
+          "question": "Trong mô hình MA(q), q là gì?",
+          "options": {
+            "A": "Số lần sai phân",
+            "B": "Số lượng độ trễ của sai số",
+            "C": "Chu kỳ mùa vụ",
+            "D": "Số lượng độ trễ của giá trị gốc"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T5_Q5",
+          "question": "ARMA(p, q) là sự kết hợp của gì?",
+          "options": {
+            "A": "AR và sai phân",
+            "B": "Mô hình AR và mô hình MA",
+            "C": "ETS và SMA",
+            "D": "MA và mùa vụ"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T5_Q6",
+          "question": "Giả định chung bắt buộc của AR và MA là gì?",
+          "options": {
+            "A": "Chuỗi có mùa vụ",
+            "B": "Chuỗi có xu hướng",
+            "C": "Chuỗi dữ liệu phải có tính dừng",
+            "D": "Chuỗi có phân phối đều"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T5_Q7",
+          "question": "Chữ 'I' trong ARIMA là viết tắt của gì và có tác dụng gì?",
+          "options": {
+            "A": "Interval: dự báo khoảng",
+            "B": "Iterative: lặp lại tối ưu",
+            "C": "Independent: các quan sát độc lập",
+            "D": "Integrated: cho phép xử lý chuỗi không dừng bằng sai phân"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T5_Q8",
+          "question": "Trong ARIMA(p, d, q), tham số d là gì?",
+          "options": {
+            "A": "Số độ trễ AR",
+            "B": "Chu kỳ mùa vụ",
+            "C": "Bậc sai phân",
+            "D": "Số độ trễ MA"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T5_Q9",
+          "question": "Khi đặt d = 0, ARIMA trở thành mô hình nào?",
+          "options": {
+            "A": "SARIMA",
+            "B": "ARMA",
+            "C": "ETS",
+            "D": "AR thuần với mùa vụ"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T5_Q10",
+          "question": "SARIMA được ưu tiên khi nào?",
+          "options": {
+            "A": "Khi chuỗi chứa tính mùa vụ hoặc chu kỳ lặp đi lặp lại",
+            "B": "Khi dữ liệu là biến phân loại",
+            "C": "Khi chuỗi đã dừng và không có mùa vụ",
+            "D": "Khi chỉ có một điểm dữ liệu"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T5_Q11",
+          "question": "SARIMA bổ sung thêm những thành phần nào so với ARIMA?",
+          "options": {
+            "A": "Chỉ thêm hằng số",
+            "B": "Loại bỏ phần MA",
+            "C": "Chỉ thêm biến ngoại sinh",
+            "D": "Độ trễ tự hồi quy mùa vụ và độ trễ sai phân mùa vụ"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T5_Q12",
+          "question": "Biểu đồ nào dùng để tìm tham số cho ARIMA/SARIMA?",
+          "options": {
+            "A": "Box plot và violin",
+            "B": "ACF và PACF",
+            "C": "Heatmap và pairplot",
+            "D": "Gantt và count plot"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T5_Q13",
+          "question": "Khi xác định tham số mùa vụ bằng ACF/PACF, ta tìm gì?",
+          "options": {
+            "A": "Điểm cực đại duy nhất",
+            "B": "Giá trị trung bình",
+            "C": "Các điểm đột biến (spikes) xuất hiện theo chu kỳ nhất định (ví dụ mỗi 7 hoặc 30 độ trễ)",
+            "D": "Các điểm bằng 0"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T5_Q14",
+          "question": "Hệ số μ trong mô hình MA là gì?",
+          "options": {
+            "A": "Số độ trễ",
+            "B": "Giá trị trung bình không điều kiện của chuỗi",
+            "C": "Hằng số mùa vụ",
+            "D": "Hệ số tự hồi quy"
+          },
+          "correctAnswer": "B"
+        }
+      ]
+    },
+    {
+      "topicId": "C6_T6",
+      "topicName": "Dự báo và đánh giá mô hình",
+      "questions": [
+        {
+          "id": "C6_T6_Q1",
+          "question": "Dự báo điểm (Point forecast) là gì?",
+          "options": {
+            "A": "Một phân phối đầy đủ",
+            "B": "Một giá trị dự đoán duy nhất cho một thời điểm tương lai",
+            "C": "Một khoảng giá trị kèm độ tin cậy",
+            "D": "Một biểu đồ ACF"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T6_Q2",
+          "question": "Dự báo khoảng (Interval forecast) là gì?",
+          "options": {
+            "A": "Giá trị trung bình lịch sử",
+            "B": "Khoảng giá trị dự kiến đi kèm mức độ tin cậy cụ thể",
+            "C": "Một giá trị duy nhất",
+            "D": "Giá trị lớn nhất lịch sử"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T6_Q3",
+          "question": "Ưu điểm của dự báo khoảng là gì?",
+          "options": {
+            "A": "Không cần dữ liệu lịch sử",
+            "B": "Không cần mô hình",
+            "C": "Luôn chính xác hơn dự báo điểm",
+            "D": "Định lượng rõ ràng mức độ không chắc chắn, giúp đánh giá rủi ro"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T6_Q4",
+          "question": "MAE đo gì?",
+          "options": {
+            "A": "Mức độ khớp của log-likelihood",
+            "B": "Độ lớn trung bình của sai số dự báo, bỏ qua hướng (dương/âm)",
+            "C": "Sai số phần trăm trung bình",
+            "D": "Sai số bình phương trung bình có căn"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T6_Q5",
+          "question": "Ưu điểm của MAE là gì?",
+          "options": {
+            "A": "Không phụ thuộc đơn vị",
+            "B": "Luôn nhỏ hơn 1",
+            "C": "Cùng đơn vị với dữ liệu gốc và ít nhạy với ngoại lệ",
+            "D": "Phạt rất nặng sai số lớn"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T6_Q6",
+          "question": "RMSE khác MAE ở điểm nào?",
+          "options": {
+            "A": "Bỏ qua mọi sai số lớn",
+            "B": "Không nhạy với ngoại lệ",
+            "C": "Luôn tính theo phần trăm",
+            "D": "Bình phương sai số nên phạt nặng sai số lớn hơn"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T6_Q7",
+          "question": "Hạn chế của RMSE là gì?",
+          "options": {
+            "A": "Luôn thiên lệch với giá trị nhỏ",
+            "B": "Không phạt sai số lớn",
+            "C": "Không cùng đơn vị khi lấy căn",
+            "D": "Quá nhạy cảm với ngoại lai"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T6_Q8",
+          "question": "MAPE biểu diễn sai số theo thang nào?",
+          "options": {
+            "A": "Log",
+            "B": "Đơn vị dữ liệu gốc",
+            "C": "Phần trăm (%)",
+            "D": "Đơn vị bình phương"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T6_Q9",
+          "question": "Hạn chế của MAPE là gì?",
+          "options": {
+            "A": "Không trực quan",
+            "B": "Không dùng được so sánh mô hình",
+            "C": "Phạt nặng sai số lớn",
+            "D": "Dễ bị thiên lệch khi giá trị thực tế nhỏ (gần 0)"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T6_Q10",
+          "question": "Giá trị thực y = 10, 20, 30 và dự báo = 12, 17, 31. MAE bằng bao nhiêu?<br><code>import numpy as np; y = np.array([10, 20, 30]); f = np.array([12, 17, 31]); print(np.mean(np.abs(y - f)))</code>",
+          "options": {
+            "A": "2.0",
+            "B": "3.0",
+            "C": "1.0",
+            "D": "6.0"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T6_Q11",
+          "question": "Giá trị thực = 100, 200 và dự báo = 110, 180. MAPE (%) bằng bao nhiêu?<br><code>import numpy as np; y = np.array([100, 200]); f = np.array([110, 180]); print(np.mean(np.abs((y - f) / y)) * 100)</code>",
+          "options": {
+            "A": "15.0",
+            "B": "5.0",
+            "C": "10.0",
+            "D": "20.0"
+          },
+          "correctAnswer": "C"
+        },
+        {
+          "id": "C6_T6_Q12",
+          "question": "Chỉ số AIC thấp hơn nói lên điều gì khi so sánh các mô hình?",
+          "options": {
+            "A": "Mô hình phức tạp hơn luôn tốt hơn",
+            "B": "Mô hình tốt hơn khi đã cân nhắc độ phức tạp",
+            "C": "Không có ý nghĩa",
+            "D": "Mô hình tệ hơn"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T6_Q13",
+          "question": "BIC khác AIC ở điểm nào?",
+          "options": {
+            "A": "Phạt nhẹ hơn AIC",
+            "B": "Phạt nặng hơn độ phức tạp khi cỡ mẫu lớn, thường ưu tiên mô hình đơn giản",
+            "C": "Chỉ dùng cho mô hình hồi quy tuyến tính",
+            "D": "Không phạt độ phức tạp"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T6_Q14",
+          "question": "Log likelihood cao hơn (ít âm hơn) cho biết điều gì?",
+          "options": {
+            "A": "Mô hình khớp dữ liệu quan sát tốt hơn",
+            "B": "Dữ liệu có nhiều ngoại lệ",
+            "C": "Mô hình khớp tệ hơn",
+            "D": "Mô hình đơn giản hơn"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T6_Q15",
+          "question": "Kiểm định Ljung-Box Q dùng để kiểm tra điều gì?",
+          "options": {
+            "A": "Dữ liệu có thiếu hay không",
+            "B": "Phương sai có đổi hay không",
+            "C": "Chuỗi có dừng hay không",
+            "D": "Phần dư của mô hình có bị tự tương quan hay không"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T6_Q16",
+          "question": "Kết quả lý tưởng của kiểm định Ljung-Box là gì?",
+          "options": {
+            "A": "p-value thấp: phần dư tự tương quan",
+            "B": "p-value cao: phần dư không bị tự tương quan",
+            "C": "p-value bằng 0",
+            "D": "Q rất lớn"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T6_Q17",
+          "question": "Kiểm định Heteroskedasticity (H-test) đánh giá điều gì?",
+          "options": {
+            "A": "Số độ trễ cần dùng",
+            "B": "Phương sai của phần dư có ổn định theo thời gian hay không",
+            "C": "Trung bình của phần dư",
+            "D": "Tính mùa vụ của chuỗi"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T6_Q18",
+          "question": "Trong biểu đồ Standardized Residuals, kỳ vọng nào là tốt?",
+          "options": {
+            "A": "Các điểm tạo xu hướng rõ ràng",
+            "B": "Các điểm dao động ngẫu nhiên quanh trục 0, không tạo thành quy luật",
+            "C": "Các điểm tạo chu kỳ",
+            "D": "Các điểm đều lớn hơn 0"
+          },
+          "correctAnswer": "B"
+        },
+        {
+          "id": "C6_T6_Q19",
+          "question": "Trong biểu đồ Q-Q, kỳ vọng nào là tốt?",
+          "options": {
+            "A": "Các điểm bám sát đường chéo 45 độ, phần dư tuân theo phân phối chuẩn",
+            "B": "Các điểm nằm ngang",
+            "C": "Các điểm lệch xa đường chéo",
+            "D": "Các điểm tạo hình chữ U"
+          },
+          "correctAnswer": "A"
+        },
+        {
+          "id": "C6_T6_Q20",
+          "question": "Trong biểu đồ ACF của phần dư (Correlogram), kỳ vọng nào là tốt?",
+          "options": {
+            "A": "Nhiều thanh vượt ra ngoài dải xanh",
+            "B": "Các thanh tăng dần",
+            "C": "Các thanh đều bằng 1",
+            "D": "Mọi thanh nằm gọn trong dải băng xanh, phần dư không tự tương quan"
+          },
+          "correctAnswer": "D"
+        },
+        {
+          "id": "C6_T6_Q21",
+          "question": "Biểu đồ Histogram + KDE của phần dư lý tưởng có dạng nào?",
+          "options": {
+            "A": "Phẳng như phân phối đều",
+            "B": "Hai đỉnh tách biệt",
+            "C": "Hình chuông đối xứng với đỉnh tại 0",
+            "D": "Lệch phải mạnh"
+          },
+          "correctAnswer": "C"
+        }
+      ]
+    }
+  ]
+}
