@@ -227,11 +227,12 @@ function renderQuizNavigator() {
 function renderQuestionCard(q, index) {
   const selected = Quiz.state.userAnswers[q.id];
   const flagged = Quiz.isFlagged(q.id);
+  const checked = !!(Quiz.state.checkedQuestions && Quiz.state.checkedQuestions[String(q.id)]);
   const optionsHtml = Object.entries(q.options)
     .map(
       ([key, val]) => `
-      <div class="form-check option-item">
-        <input class="form-check-input" type="radio" name="q_${q.id}" id="q_${q.id}_${key}" value="${key}" ${selected === key ? 'checked' : ''}>
+      <div class="form-check option-item${checked && key === q.correctAnswer ? ' opt-correct' : ''}${checked && key === selected && key !== q.correctAnswer ? ' opt-wrong' : ''}">
+        <input class="form-check-input" type="radio" name="q_${q.id}" id="q_${q.id}_${key}" value="${key}" ${selected === key ? 'checked' : ''} ${checked ? 'disabled' : ''}>
         <label class="form-check-label" for="q_${q.id}_${key}">${key}. ${val}</label>
       </div>`
     )
@@ -254,20 +255,48 @@ function renderQuestionCard(q, index) {
           </button>
         </div>
         ${optionsHtml}
+        ${q.correctAnswer ? renderCheckArea(q, selected, checked) : ''}
       </div>
     </div>`;
 }
 
-function attachOptionListeners(container) {
+function renderCheckArea(q, selected, checked) {
+  if (!checked) {
+    return `<button type="button" class="btn btn-sm btn-outline-primary mt-2 btn-check-answer" ${selected ? '' : 'disabled'}><i class="bi bi-check2-circle"></i> Kiểm tra đáp án</button>
+      ${selected ? '' : '<span class="small text-muted ms-2">Chọn đáp án để kiểm tra</span>'}`;
+  }
+  const ok = selected === q.correctAnswer;
+  return `<div class="alert ${ok ? 'alert-success' : 'alert-danger'} mt-2 mb-0 py-2">
+    ${ok ? '<i class="bi bi-check-circle-fill"></i> Chính xác!' : `<i class="bi bi-x-circle-fill"></i> Sai rồi. Đáp án đúng: <b>${q.correctAnswer}. ${q.options[q.correctAnswer]}</b>`}
+    ${q.explanation ? `<div class="small mt-1">${q.explanation}</div>` : ''}
+  </div>`;
+}
+
+function attachOptionListeners(container, onlyQid) {
   container.querySelectorAll('.question-card').forEach((card) => {
+    if (onlyQid && card.dataset.qid !== String(onlyQid)) return;
     const qid = card.dataset.qid;
     card.querySelectorAll('input[type="radio"]').forEach((input) => {
       input.addEventListener('change', () => {
         Quiz.selectAnswer(qid, input.value);
+        const cb = card.querySelector('.btn-check-answer');
+        if (cb) { cb.disabled = false; if (cb.nextElementSibling) cb.nextElementSibling.remove(); }
         updateProgressBar();
         renderQuizNavigator();
       });
     });
+
+    const checkBtn = card.querySelector('.btn-check-answer');
+    if (checkBtn) {
+      checkBtn.addEventListener('click', () => {
+        Quiz.state.checkedQuestions = Quiz.state.checkedQuestions || {};
+        Quiz.state.checkedQuestions[String(qid)] = true;
+        const q = Quiz.state.questions.find((x) => String(x.id) === String(qid));
+        const idx = Quiz.state.questions.indexOf(q);
+        card.outerHTML = renderQuestionCard(q, idx);
+        attachOptionListeners(document.getElementById('quizBody'), qid);
+      });
+    }
 
     const flagButton = card.querySelector('.btn-flag-question');
     if (flagButton) {

@@ -254,3 +254,6 @@ section.d-none {
 td .q-image {
   max-height: 160px;
 }
+
+.option-item.opt-correct { border-color: #198754; background: #e8f6ee; }
+.option-item.opt-wrong { border-color: #dc3545; background: #fdecee; }
