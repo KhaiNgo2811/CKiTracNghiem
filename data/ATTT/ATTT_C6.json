@@ -8,15 +8,15 @@
       "questions": [
         {
           "id": "ATTT_C6_T1_Q1",
-          "question": "Janet đang xác định tập hợp các quyền hạn nên được gán cho một nhân viên mới trong tổ chức của cô. Cô đang thực hiện giai đoạn nào của quá trình kiểm soát truy cập?",
+          "question": "Janet đang xác định tập hợp các quyền hạn nên được gán cho một nhân viên mới trong tổ chức của cô. Cô đang thực hiện giai đoạn nào của quá trình access control?",
           "options": {
-            "A": "Nhận dạng (Identification)",
-            "B": "Xác thực (Authentication)",
-            "C": "Trách nhiệm giải trình (Accountability)",
-            "D": "Ủy quyền (Authorization)"
+            "A": "Identification",
+            "B": "Authentication",
+            "C": "Accountability",
+            "D": "Authorization"
           },
           "correctAnswer": "D",
-          "explanation": "Ủy quyền xác định các quyền mà một người dùng hoặc tiến trình có trong một lược đồ kiểm soát truy cập. Trong trường hợp này Janet đang xác định các quyền đó nên cô đang thực hiện chức năng ủy quyền."
+          "explanation": "Ủy quyền xác định các quyền mà một người dùng hoặc tiến trình có trong một lược đồ access control. Trong trường hợp này Janet đang xác định các quyền đó nên cô đang thực hiện chức năng ủy quyền."
         },
         {
           "id": "ATTT_C6_T1_Q2",
@@ -24,11 +24,11 @@
           "options": {
             "A": "Luật pháp",
             "B": "Chính sách công ty",
-            "C": "Kiểm toán nội bộ",
+            "C": "Audit nội bộ",
             "D": "Văn hóa doanh nghiệp"
           },
           "correctAnswer": "A",
-          "explanation": "Các nỗ lực tuân thủ của tổ chức bao gồm việc tuân thủ chính sách, kiểm toán, văn hóa và tiêu chuẩn của chính tổ chức. Tuân thủ pháp luật thuộc phạm vi tuân thủ quy định (regulatory compliance), không phải tuân thủ của tổ chức."
+          "explanation": "Các nỗ lực tuân thủ của tổ chức bao gồm việc tuân thủ chính sách, audit, văn hóa và tiêu chuẩn của chính tổ chức. Tuân thủ pháp luật thuộc phạm vi tuân thủ quy định (regulatory compliance), không phải tuân thủ của tổ chức."
         },
         {
           "id": "ATTT_C6_T1_Q3",
@@ -46,10 +46,10 @@
           "id": "ATTT_C6_T1_Q4",
           "question": "Biyu đang sắp xếp để dùng một nhà cung cấp dịch vụ bên thứ ba cho các dịch vụ an ninh. Cô muốn ghi nhận bằng văn bản yêu cầu thông báo kịp thời về các vụ vi phạm an ninh. Loại thỏa thuận nào nhiều khả năng chứa các yêu cầu chính thức kiểu này nhất?",
           "options": {
-            "A": "Thỏa thuận mức dịch vụ (SLA)",
-            "B": "Thỏa thuận mua hàng tổng thể (BPA)",
-            "C": "Biên bản ghi nhớ (MOU)",
-            "D": "Thỏa thuận an ninh kết nối liên thông (ISA)"
+            "A": "SLA",
+            "B": "BPA",
+            "C": "MOU",
+            "D": "ISA"
           },
           "correctAnswer": "A",
           "explanation": "SLA là các hợp đồng chính thức nêu chi tiết những dịch vụ cụ thể mà nhà cung cấp sẽ cung cấp. Thông báo về các vụ vi phạm an ninh là yêu cầu phổ biến trong các SLA."
@@ -58,10 +58,10 @@
           "id": "ATTT_C6_T1_Q5",
           "question": "Loại thỏa thuận nào thường ít chính thức hơn các thỏa thuận khác và thể hiện những lĩnh vực cùng quan tâm?",
           "options": {
-            "A": "Thỏa thuận mức dịch vụ (SLA)",
-            "B": "Thỏa thuận mua hàng tổng thể (BPA)",
-            "C": "Biên bản ghi nhớ (MOU)",
-            "D": "Thỏa thuận an ninh kết nối liên thông (ISA)"
+            "A": "SLA",
+            "B": "BPA",
+            "C": "MOU",
+            "D": "ISA"
           },
           "correctAnswer": "C",
           "explanation": "MOU, còn gọi là thư bày tỏ ý định, là thỏa thuận giữa hai hoặc nhiều bên thể hiện những lĩnh vực cùng quan tâm dẫn đến các hành động chung. MOU nhìn chung có hiệu lực ràng buộc thấp hơn một thỏa thuận chính thức."
@@ -84,15 +84,15 @@
           "options": {
             "A": "Tìm cách truy cập trái phép vào các tài nguyên",
             "B": "Làm gián đoạn việc sử dụng Internet theo đúng mục đích",
-            "C": "Bảo đảm tính toàn vẹn của thông tin trên máy tính",
-            "D": "Xâm phạm quyền riêng tư của người dùng"
+            "C": "Bảo đảm integrity của thông tin trên máy tính",
+            "D": "Xâm phạm privacy của người dùng"
           },
           "correctAnswer": "C",
-          "explanation": "RFC 1087 nêu sáu nhóm hoạt động phi đạo đức. IAB coi là phi đạo đức và không thể chấp nhận bất kỳ hoạt động nào cố ý: (1) tìm cách truy cập trái phép vào các tài nguyên của Internet, (2) làm gián đoạn việc sử dụng Internet theo đúng mục đích, (3) lãng phí tài nguyên (con người, dung lượng, máy tính) qua các hành động đó, (4) phá hủy tính toàn vẹn của thông tin trên máy tính, (5) xâm phạm quyền riêng tư của người dùng hoặc (6) liên quan đến sự cẩu thả trong việc tiến hành các thí nghiệm trên toàn Internet."
+          "explanation": "RFC 1087 nêu sáu nhóm hoạt động phi đạo đức. IAB coi là phi đạo đức và không thể chấp nhận bất kỳ hoạt động nào cố ý: (1) tìm cách truy cập trái phép vào các tài nguyên của Internet, (2) làm gián đoạn việc sử dụng Internet theo đúng mục đích, (3) lãng phí tài nguyên (con người, dung lượng, máy tính) qua các hành động đó, (4) phá hủy integrity của thông tin trên máy tính, (5) xâm phạm privacy của người dùng hoặc (6) liên quan đến sự cẩu thả trong việc tiến hành các thí nghiệm trên toàn Internet."
         },
         {
           "id": "ATTT_C6_T1_Q8",
-          "question": "Điều nào KHÔNG phải là nguyên tắc về quyền riêng tư do Tổ chức Hợp tác và Phát triển Kinh tế (OECD) đề ra?",
+          "question": "Điều nào KHÔNG phải là nguyên tắc về privacy do Tổ chức Hợp tác và Phát triển Kinh tế (OECD) đề ra?",
           "options": {
             "A": "Một tổ chức chỉ nên thu thập những gì cần thiết.",
             "B": "Một tổ chức nên chia sẻ thông tin của mình.",
@@ -106,20 +106,20 @@
           "id": "ATTT_C6_T1_Q9",
           "question": "Karen đang thiết kế quy trình phát hành séc và quyết định rằng một nhóm người dùng sẽ có thẩm quyền tạo người thụ hưởng mới trong hệ thống, còn một nhóm người dùng khác sẽ có thẩm quyền phát hành séc cho những người thụ hưởng đó. Mục đích của biện pháp kiểm soát này là ngăn chặn gian lận. Karen đang áp dụng nguyên tắc nào?",
           "options": {
-            "A": "Luân chuyển công việc (Job rotation)",
-            "B": "Đặc quyền tối thiểu (Least privilege)",
-            "C": "Cần-để-biết (Need-to-know)",
-            "D": "Phân tách nhiệm vụ (Separation of duties)"
+            "A": "Job rotation",
+            "B": "Least privilege",
+            "C": "Need-to-know",
+            "D": "Separation of duties"
           },
           "correctAnswer": "D",
-          "explanation": "Nguyên tắc phân tách nhiệm vụ chia một nhiệm vụ thành các nhiệm vụ con mà những người dùng khác nhau phải thực hiện. Điều này có nghĩa là một người dùng đơn lẻ không thể thực hiện một nhiệm vụ trọng yếu nếu không có sự giúp đỡ hoặc phê duyệt của người dùng khác."
+          "explanation": "Nguyên tắc separation of duties chia một nhiệm vụ thành các nhiệm vụ con mà những người dùng khác nhau phải thực hiện. Điều này có nghĩa là một người dùng đơn lẻ không thể thực hiện một nhiệm vụ trọng yếu nếu không có sự giúp đỡ hoặc phê duyệt của người dùng khác."
         },
         {
           "id": "ATTT_C6_T1_Q10",
           "question": "Điều nào KHÔNG phải là mục tiêu của các chương trình nâng cao nhận thức về an toàn thông tin?",
           "options": {
             "A": "Dạy người dùng về các mục tiêu bảo mật",
-            "B": "Thông báo cho người dùng về các xu hướng và mối đe dọa về bảo mật",
+            "B": "Thông báo cho người dùng về các xu hướng và threat về bảo mật",
             "C": "Thúc đẩy người dùng tuân thủ chính sách bảo mật",
             "D": "Trừng phạt người dùng vi phạm chính sách"
           },
@@ -130,61 +130,61 @@
           "id": "ATTT_C6_T1_Q11",
           "question": "Ann đang tạo một mẫu cấu hình cho các máy chủ Windows trong tổ chức của cô. Mẫu này gồm các thiết lập bảo mật cơ bản áp dụng cho mọi hệ thống. Cô nên tạo loại tài liệu nào?",
           "options": {
-            "A": "Cấu hình cơ sở (Baseline)",
-            "B": "Chính sách (Policy)",
-            "C": "Hướng dẫn (Guideline)",
-            "D": "Quy trình (Procedure)"
+            "A": "Baseline",
+            "B": "Policy",
+            "C": "Guideline",
+            "D": "Procedure"
           },
           "correctAnswer": "A",
-          "explanation": "Cấu hình cơ sở cung cấp các cấu hình cơ bản cho những loại máy tính hoặc thiết bị cụ thể. Chúng là các chuẩn mực giúp bảo đảm có một mức an ninh tối thiểu trên nhiều hệ thống và nhiều sản phẩm khác nhau."
+          "explanation": "Baseline cung cấp các cấu hình cơ bản cho những loại máy tính hoặc thiết bị cụ thể. Chúng là các chuẩn mực giúp bảo đảm có một mức an ninh tối thiểu trên nhiều hệ thống và nhiều sản phẩm khác nhau."
         },
         {
           "id": "ATTT_C6_T1_Q12",
-          "question": "Tổ chức của Roger nhận được một email hàng loạt cố lừa người dùng tiết lộ mật khẩu bằng cách giả làm đại diện của bộ phận hỗ trợ (help desk). Đây là ví dụ của loại hình kỹ thuật xã hội nào?",
+          "question": "Tổ chức của Roger nhận được một email hàng loạt cố lừa người dùng tiết lộ password bằng cách giả làm đại diện của bộ phận hỗ trợ (help desk). Đây là ví dụ của loại hình social engineering nào?",
           "options": {
-            "A": "Đe dọa (Intimidation)",
-            "B": "Nêu tên người có thế lực (Name dropping)",
-            "C": "Kêu gọi giúp đỡ (Appeal for help)",
-            "D": "Lừa đảo (Phishing)"
+            "A": "Intimidation",
+            "B": "Name dropping",
+            "C": "Appeal for help",
+            "D": "Phishing"
           },
           "correctAnswer": "D",
-          "explanation": "Các cuộc tấn công lừa đảo dùng email và/hoặc trang web giống sản phẩm của một tổ chức uy tín. Chúng cố đánh lừa người dùng để họ tiết lộ thông tin nhạy cảm như mật khẩu."
+          "explanation": "Các cuộc phishing attack dùng email và/hoặc trang web giống sản phẩm của một tổ chức uy tín. Chúng cố đánh lừa người dùng để họ tiết lộ thông tin nhạy cảm như password."
         },
         {
           "id": "ATTT_C6_T1_Q13",
           "question": "Aditya đang cố phân loại thông tin về một dự án mới mà tổ chức của anh sẽ thực hiện bí mật. Đặc tính nào KHÔNG thường được dùng để đưa ra các quyết định phân loại kiểu này?",
           "options": {
-            "A": "Giá trị (Value)",
-            "B": "Độ nhạy cảm (Sensitivity)",
-            "C": "Mức độ trọng yếu (Criticality)",
-            "D": "Mối đe dọa (Threat)"
+            "A": "Value",
+            "B": "Sensitivity",
+            "C": "Criticality",
+            "D": "Threat"
           },
           "correctAnswer": "D",
           "explanation": "Ba đặc tính thường được dùng để đưa ra quyết định phân loại là giá trị, độ nhạy cảm và mức độ trọng yếu."
         },
         {
           "id": "ATTT_C6_T1_Q14",
-          "question": "Hoạt động nào quản lý các thiết lập cơ sở (baseline) cho một hệ thống hoặc thiết bị?",
+          "question": "Hoạt động nào quản lý các baseline cho một hệ thống hoặc thiết bị?",
           "options": {
-            "A": "Kiểm soát cấu hình (Configuration control)",
-            "B": "Quản lý thay đổi phản ứng (Reactive change management)",
-            "C": "Quản lý thay đổi chủ động (Proactive change management)",
-            "D": "Kiểm soát thay đổi (Change control)"
+            "A": "Configuration control",
+            "B": "Reactive change management",
+            "C": "Proactive change management",
+            "D": "Change control"
           },
           "correctAnswer": "A",
-          "explanation": "Kiểm soát cấu hình là việc quản lý các thiết lập cơ sở cho một thiết bị hệ thống. Các thiết lập cơ sở được thiết kế để đáp ứng các yêu cầu về an ninh."
+          "explanation": "Configuration control là việc quản lý các baseline cho một thiết bị hệ thống. Các baseline được thiết kế để đáp ứng các yêu cầu về an ninh."
         },
         {
           "id": "ATTT_C6_T1_Q15",
-          "question": "Thứ tự đúng của các bước trong quy trình kiểm soát thay đổi là gì?",
+          "question": "Thứ tự đúng của các bước trong quy trình change control là gì?",
           "options": {
-            "A": "Yêu cầu, phê duyệt, đánh giá tác động, xây dựng/kiểm thử, giám sát, triển khai",
-            "B": "Yêu cầu, đánh giá tác động, phê duyệt, xây dựng/kiểm thử, triển khai, giám sát",
-            "C": "Yêu cầu, phê duyệt, đánh giá tác động, xây dựng/kiểm thử, triển khai, giám sát",
-            "D": "Yêu cầu, đánh giá tác động, phê duyệt, xây dựng/kiểm thử, giám sát, triển khai"
+            "A": "Yêu cầu, phê duyệt, đánh giá tác động, xây dựng/testing, giám sát, triển khai",
+            "B": "Yêu cầu, đánh giá tác động, phê duyệt, xây dựng/testing, triển khai, giám sát",
+            "C": "Yêu cầu, phê duyệt, đánh giá tác động, xây dựng/testing, triển khai, giám sát",
+            "D": "Yêu cầu, đánh giá tác động, phê duyệt, xây dựng/testing, giám sát, triển khai"
           },
           "correctAnswer": "B",
-          "explanation": "Trình tự các sự kiện trong quy trình kiểm soát thay đổi là: yêu cầu, đánh giá tác động, phê duyệt, xây dựng/kiểm thử, triển khai và giám sát."
+          "explanation": "Trình tự các sự kiện trong quy trình change control là: yêu cầu, đánh giá tác động, phê duyệt, xây dựng/testing, triển khai và giám sát."
         },
         {
           "id": "ATTT_C6_T1_Q16",
@@ -202,10 +202,10 @@
           "id": "ATTT_C6_T1_Q17",
           "question": "Bob đang chuẩn bị hủy bỏ các phương tiện lưu trữ từ tính và muốn hủy dữ liệu lưu trên đó. Phương pháp nào KHÔNG phải là cách tiếp cận tốt để hủy dữ liệu?",
           "options": {
-            "A": "Định dạng (Formatting)",
-            "B": "Khử từ (Degaussing)",
+            "A": "Formatting",
+            "B": "Degaussing",
             "C": "Phá hủy vật lý",
-            "D": "Ghi đè (Overwriting)"
+            "D": "Overwriting"
           },
           "correctAnswer": "A",
           "explanation": "Định dạng một đĩa không xóa dữ liệu lưu trên đó và không phải là kỹ thuật hủy dữ liệu đáng tin cậy. Phá hủy vật lý phương tiện, ghi đè dữ liệu nhiều lần và khử từ bằng từ trường đều là các cách hủy dữ liệu chấp nhận được."
@@ -214,13 +214,13 @@
           "id": "ATTT_C6_T1_Q18",
           "question": "Trong quy trình công nhận (accreditation), ai có thẩm quyền phê duyệt một hệ thống để đưa vào triển khai?",
           "options": {
-            "A": "Người chứng nhận (Certifier)",
-            "B": "Quan chức ủy quyền (AO)",
+            "A": "Certifier",
+            "B": "AO",
             "C": "Chủ sở hữu hệ thống",
             "D": "Quản trị viên hệ thống"
           },
           "correctAnswer": "B",
-          "explanation": "Quan chức ủy quyền (AO) là một nhà quản lý cấp cao xem xét báo cáo chứng nhận và đưa ra quyết định phê duyệt hệ thống để triển khai. AO chính thức ghi nhận và chấp nhận rủi ro mà hệ thống có thể gây ra cho sứ mệnh, tài sản hoặc cá nhân của cơ quan."
+          "explanation": "Quan chức AO là một nhà quản lý cấp cao xem xét báo cáo chứng nhận và đưa ra quyết định phê duyệt hệ thống để triển khai. AO chính thức ghi nhận và chấp nhận risk mà hệ thống có thể gây ra cho sứ mệnh, asset hoặc cá nhân của cơ quan."
         },
         {
           "id": "ATTT_C6_T1_Q19",
@@ -238,10 +238,10 @@
           "id": "ATTT_C6_T1_Q20",
           "question": "Trong mô hình phát triển phần mềm nào, các hoạt động tiến hành theo một quy trình tuần tự cứng nhắc, trong đó không giai đoạn nào bắt đầu cho đến khi giai đoạn trước hoàn tất?",
           "options": {
-            "A": "Xoắn ốc (Spiral)",
-            "B": "Linh hoạt (Agile)",
-            "C": "Tinh gọn (Lean)",
-            "D": "Thác nước (Waterfall)"
+            "A": "Spiral",
+            "B": "Agile",
+            "C": "Lean",
+            "D": "Waterfall"
           },
           "correctAnswer": "D",
           "explanation": "Mô hình thác nước là một quy trình tuần tự để phát triển phần mềm. Cốt lõi của mô hình thác nước là không giai đoạn nào bắt đầu cho đến khi giai đoạn trước hoàn tất."
@@ -250,196 +250,236 @@
     },
     {
       "topicId": "ATTT_C6_T2",
-      "topicName": "Phần II – Đúng/Sai",
+      "topicName": "Phần II – Khái niệm & nhận định",
       "questions": [
         {
           "id": "ATTT_C6_T2_Q1",
-          "question": "Một ưu điểm của việc dùng một công ty quản lý an ninh để giám sát an ninh là họ có trình độ chuyên môn cao.",
+          "question": "Ưu điểm của việc dùng managed security company để giám sát an ninh là gì?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Hiểu biết sâu về nội bộ tổ chức",
+            "B": "Không phải trả phí liên tục",
+            "C": "Phát triển năng lực nội bộ",
+            "D": "Trình độ chuyên môn cao"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "D"
         },
         {
           "id": "ATTT_C6_T2_Q2",
-          "question": "Thường là phần mở rộng của biên bản ghi nhớ (MOU), thỏa thuận mua hàng tổng thể (BPA) là thỏa thuận ghi nhận các yêu cầu kỹ thuật của các tài sản được kết nối liên thông.",
+          "question": "Thỏa thuận nào ghi nhận các technical requirements của interconnected assets?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Blanket Purchase Agreement",
+            "B": "Interconnection Security Agreement",
+            "C": "Memorandum of Understanding",
+            "D": "SLA"
           },
           "correctAnswer": "B",
-          "explanation": "Thỏa thuận dịch vụ kết nối liên thông (ISA) mới là thỏa thuận ghi nhận các yêu cầu kỹ thuật của các tài sản kết nối liên thông và thường là phần mở rộng của MOU. BPA tạo ra các tài khoản được phê duyệt trước với các nhà cung cấp đủ điều kiện để đáp ứng các đơn hàng định kỳ về sản phẩm hoặc dịch vụ."
+          "explanation": "Thỏa thuận dịch vụ kết nối liên thông (ISA) mới là thỏa thuận ghi nhận các yêu cầu kỹ thuật của các asset kết nối liên thông và thường là phần mở rộng của MOU. BPA tạo ra các tài khoản được phê duyệt trước với các nhà cung cấp đủ điều kiện để đáp ứng các đơn hàng định kỳ về sản phẩm hoặc dịch vụ."
         },
         {
           "id": "ATTT_C6_T2_Q3",
-          "question": "Cán bộ liên lạc khắc phục (remediation liaison) bảo đảm mọi nhân sự đều biết và tuân thủ các chính sách của tổ chức.",
+          "question": "Vai trò nào bảo đảm mọi nhân sự đều biết và tuân thủ policies của tổ chức?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Remediation liaison",
+            "B": "Data owner",
+            "C": "System owner",
+            "D": "Compliance liaison"
           },
-          "correctAnswer": "B",
+          "correctAnswer": "D",
           "explanation": "Cán bộ liên lạc tuân thủ (compliance liaison) mới bảo đảm mọi nhân sự đều biết và tuân thủ các chính sách của tổ chức. Khắc phục (remediation) là việc sửa chữa thứ gì đó bị hỏng hoặc có khiếm khuyết."
         },
         {
           "id": "ATTT_C6_T2_Q4",
-          "question": "Ý tưởng rằng người dùng chỉ nên được cấp các mức quyền họ cần để thực hiện nhiệm vụ của mình được gọi là nguyên tắc đặc quyền tối thiểu.",
+          "question": "Nguyên tắc user chỉ nên được cấp mức quyền cần để thực hiện nhiệm vụ gọi là gì?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Least privilege",
+            "B": "Separation of duties",
+            "C": "Job rotation",
+            "D": "Mandatory vacation"
           },
           "correctAnswer": "A"
         },
         {
           "id": "ATTT_C6_T2_Q5",
-          "question": "Kỳ nghỉ bắt buộc giảm thiểu rủi ro bằng cách luân chuyển nhân viên giữa các hệ thống hoặc nhiệm vụ khác nhau.",
+          "question": "Biện pháp nào giảm risk bằng cách luân chuyển nhân viên giữa các hệ thống hoặc nhiệm vụ khác nhau?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Mandatory vacation",
+            "B": "Separation of duties",
+            "C": "Job rotation",
+            "D": "Least privilege"
           },
-          "correctAnswer": "B",
-          "explanation": "Luân chuyển công việc (job rotation) mới giảm thiểu rủi ro bằng cách luân chuyển nhân viên giữa các hệ thống hoặc nhiệm vụ khác nhau. Kỳ nghỉ bắt buộc tạo cơ hội để phát hiện gian lận. Khi người dùng đi nghỉ, bạn nên tạm ngưng quyền truy cập của họ vào môi trường của bạn."
+          "correctAnswer": "C",
+          "explanation": "job rotation mới giảm thiểu risk bằng cách luân chuyển nhân viên giữa các hệ thống hoặc nhiệm vụ khác nhau. Mandatory vacation tạo cơ hội để phát hiện gian lận. Khi người dùng đi nghỉ, bạn nên tạm ngưng quyền truy cập của họ vào môi trường của bạn."
         },
         {
           "id": "ATTT_C6_T2_Q6",
-          "question": "Kỹ thuật xã hội là việc lừa dối hoặc lợi dụng con người để vượt qua các biện pháp kiểm soát an ninh.",
+          "question": "Việc lừa dối hoặc lợi dụng con người để vượt qua security controls gọi là gì?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Social engineering",
+            "B": "Spoofing",
+            "C": "Eavesdropping",
+            "D": "System hardening"
           },
           "correctAnswer": "A"
         },
         {
           "id": "ATTT_C6_T2_Q7",
-          "question": "Các chính sách an ninh bằng văn bản ghi lại các mục tiêu và mục đích của ban quản lý.",
+          "question": "Written security policies ghi lại điều gì?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Cấu hình chi tiết của từng thiết bị",
+            "B": "Danh sách password",
+            "C": "Mục tiêu và mục đích của management",
+            "D": "Giá phần cứng"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "C"
         },
         {
           "id": "ATTT_C6_T2_Q8",
-          "question": "Chính sách chức năng (functional policy) tuyên bố định hướng của ban quản lý tổ chức về an ninh trong các lĩnh vực chức năng cụ thể như email, truy cập từ xa và duyệt Internet.",
+          "question": "Policy nào nêu định hướng của management về security trong các lĩnh vực chức năng như email, remote access, Internet browsing?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Standard",
+            "B": "Procedure",
+            "C": "Baseline",
+            "D": "Functional policy"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "D"
         },
         {
           "id": "ATTT_C6_T2_Q9",
-          "question": "Tiêu chuẩn được dùng khi một tổ chức đã chọn một giải pháp để đạt mục tiêu của chính sách.",
+          "question": "Standard được dùng khi nào?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Trước khi viết policy",
+            "B": "Khi tổ chức đã chọn một giải pháp để đạt mục tiêu của policy",
+            "C": "Khi chưa có giải pháp nào",
+            "D": "Chỉ khi audit"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "B"
         },
         {
           "id": "ATTT_C6_T2_Q10",
-          "question": "Quy trình KHÔNG làm giảm sai sót trong khủng hoảng.",
+          "question": "Procedure giúp gì trong tình huống khủng hoảng?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Làm tăng sai sót",
+            "B": "Không ảnh hưởng gì",
+            "C": "Thay thế hoàn toàn policy",
+            "D": "Giảm sai sót, bảo đảm không bỏ sót bước quan trọng"
           },
-          "correctAnswer": "B",
+          "correctAnswer": "D",
           "explanation": "Quy trình làm giảm sai sót trong khủng hoảng, bảo đảm bạn không bỏ sót các bước quan trọng, tạo ra các điểm trong quy trình để thực hiện kiểm tra đảm bảo và là các yêu cầu bắt buộc."
         },
         {
           "id": "ATTT_C6_T2_Q11",
-          "question": "Thuật ngữ \"chủ sở hữu dữ liệu\" (data owner) chỉ người hoặc nhóm quản lý một hạ tầng CNTT.",
+          "question": "Thuật ngữ nào chỉ người hoặc nhóm quản lý một IT infrastructure?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Data owner",
+            "B": "System owner",
+            "C": "Auditor",
+            "D": "End user"
           },
           "correctAnswer": "B",
           "explanation": "Thuật ngữ \"chủ sở hữu hệ thống\" (system owner) mới chỉ người hoặc nhóm quản lý hạ tầng. Chủ sở hữu dữ liệu là người sở hữu dữ liệu hoặc người do chủ sở hữu chỉ định."
         },
         {
           "id": "ATTT_C6_T2_Q12",
-          "question": "Các cách phân loại liên quan đến công ty không có tính chuẩn hóa, do đó có thể có một số khác biệt giữa các thuật ngữ \"riêng tư\" và \"mật\" ở các công ty khác nhau.",
+          "question": "Vì sao 'private' và 'confidential' có thể khác nhau giữa các công ty?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Do luật quy định khác nhau",
+            "B": "Do dùng OS khác nhau",
+            "C": "Do dung lượng lưu trữ khác nhau",
+            "D": "Các cách phân loại của công ty không được standardized"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "D"
         },
         {
           "id": "ATTT_C6_T2_Q13",
-          "question": "Phạm vi phân loại xác định dữ liệu nào bạn nên phân loại; quy trình phân loại xác định cách bạn xử lý dữ liệu đã được phân loại.",
+          "question": "Classification scope và classification process khác nhau thế nào?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Scope xác định cách xử lý data; process xác định data nào cần phân loại",
+            "B": "Scope xác định data nào cần phân loại; process xác định cách xử lý data đã phân loại",
+            "C": "Hai khái niệm giống hệt nhau",
+            "D": "Hai khái niệm không liên quan"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "B"
         },
         {
           "id": "ATTT_C6_T2_Q14",
-          "question": "Các thay đổi cấu hình có thể được thực hiện bất kỳ lúc nào trong vòng đời hệ thống và không cần quy trình nào.",
+          "question": "Configuration changes nên được thực hiện thế nào?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Bất kỳ lúc nào",
+            "B": "Không cần process nào",
+            "C": "Chỉ trong một controlled process",
+            "D": "Chỉ do end user thực hiện"
           },
-          "correctAnswer": "B",
-          "explanation": "Điều quan trọng là mọi thay đổi cấu hình chỉ nên diễn ra trong một quy trình được kiểm soát. Các thay đổi cấu hình không được kiểm soát thường gây xung đột và thậm chí tạo ra các lỗ hổng bảo mật mới."
+          "correctAnswer": "C",
+          "explanation": "Điều quan trọng là mọi thay đổi cấu hình chỉ nên diễn ra trong một quy trình được kiểm soát. Các thay đổi cấu hình không được kiểm soát thường gây xung đột và thậm chí tạo ra các vulnerability bảo mật mới."
         },
         {
           "id": "ATTT_C6_T2_Q15",
-          "question": "Bảng cấu hình phần cứng KHÔNG nên bao gồm bản sao các cấu hình phần mềm.",
+          "question": "Hardware configuration table nên bao gồm gì về software?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Bản sao tất cả software configurations",
+            "B": "Không bao gồm gì",
+            "C": "Chỉ password",
+            "D": "Chỉ license key"
           },
-          "correctAnswer": "B",
+          "correctAnswer": "A",
           "explanation": "Bảng cấu hình phần cứng nên bao gồm bản sao tất cả các cấu hình phần mềm để bạn có thể xem xét các thay đổi và bản cập nhật dự kiến cho một thiết bị xét về tác động của chúng đối với các thiết bị khác."
         },
         {
           "id": "ATTT_C6_T2_Q16",
-          "question": "Với quản lý thay đổi chủ động, ban quản lý khởi xướng thay đổi để đạt một mục tiêu mong muốn.",
+          "question": "Proactive change management là gì?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Thay đổi do sự cố xảy ra",
+            "B": "Thay đổi do hacker gây ra",
+            "C": "Management khởi xướng thay đổi để đạt một mục tiêu mong muốn",
+            "D": "Không thực hiện thay đổi nào"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "C"
         },
         {
           "id": "ATTT_C6_T2_Q17",
-          "question": "Thay đổi không tạo ra rủi ro cho doanh nghiệp.",
+          "question": "Change có tạo ra risk cho business không?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Có, change có thể bypass security features đã thiết lập và gây downtime",
+            "B": "Không, change luôn an toàn",
+            "C": "Chỉ khi nâng cấp hardware",
+            "D": "Chỉ khi dùng cloud"
           },
-          "correctAnswer": "B",
-          "explanation": "Thay đổi tạo ra rủi ro cho doanh nghiệp. Nó có thể vượt qua các tính năng bảo mật đã thiết lập và có thể dẫn đến ngừng hoạt động hoặc hỏng hệ thống. Nó có thể đòi hỏi đào tạo lại rộng rãi để nhân viên học cách dùng các hệ thống mới."
+          "correctAnswer": "A",
+          "explanation": "Thay đổi tạo ra risk cho doanh nghiệp. Nó có thể vượt qua các tính năng bảo mật đã thiết lập và có thể dẫn đến ngừng hoạt động hoặc hỏng hệ thống. Nó có thể đòi hỏi đào tạo lại rộng rãi để nhân viên học cách dùng các hệ thống mới."
         },
         {
           "id": "ATTT_C6_T2_Q18",
-          "question": "Một chương trình kiểm soát thay đổi thành công nên có các yếu tố sau để bảo đảm chất lượng của quy trình kiểm soát thay đổi: đánh giá chéo (peer review), tài liệu hóa và kế hoạch hoàn tác (back-out plans).",
+          "question": "Yếu tố nào của một change control program thành công?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Chỉ cần approval bằng miệng",
+            "B": "Peer review, documentation và back-out plans",
+            "C": "Không cần documentation",
+            "D": "Chỉ administrator tự quyết định"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "B"
         },
         {
           "id": "ATTT_C6_T2_Q19",
-          "question": "Các chính sách về quản lý dữ liệu nên bao quát các chuyển giao trong suốt vòng đời của dữ liệu.",
+          "question": "Data management policies nên bao quát điều gì?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Chỉ lúc tạo data",
+            "B": "Chỉ lúc xóa data",
+            "C": "Không bao quát gì",
+            "D": "Các chuyển giao trong suốt data life cycle"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "D"
         },
         {
           "id": "ATTT_C6_T2_Q20",
-          "question": "Chứng nhận (certification) là thỏa thuận chính thức của một quan chức ủy quyền để chấp nhận rủi ro khi triển khai một hệ thống.",
+          "question": "Thỏa thuận chính thức của authorizing official để chấp nhận risk khi triển khai một system gọi là gì?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Accreditation",
+            "B": "Certification",
+            "C": "Audit",
+            "D": "Baseline"
           },
-          "correctAnswer": "B",
-          "explanation": "Công nhận (accreditation) mới là thỏa thuận chính thức của một quan chức ủy quyền để chấp nhận rủi ro khi triển khai một hệ thống. Chứng nhận là quá trình xem xét một hệ thống trong suốt vòng đời của nó để bảo đảm nó đáp ứng các yêu cầu an ninh đã chỉ định."
+          "correctAnswer": "A",
+          "explanation": "Công nhận (accreditation) mới là thỏa thuận chính thức của một quan chức ủy quyền để chấp nhận risk khi triển khai một hệ thống. Chứng nhận là quá trình xem xét một hệ thống trong suốt vòng đời của nó để bảo đảm nó đáp ứng các yêu cầu an ninh đã chỉ định."
         }
       ]
     }

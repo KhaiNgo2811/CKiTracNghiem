@@ -8,7 +8,7 @@
       "questions": [
         {
           "id": "ATTT_D40_T1_Q1",
-          "question": "10 người dùng mã hóa bất đối xứng để gởi tin cho nhau, cần bao nhiêu mã khóa?",
+          "question": "10 người dùng asymmetric encryption để gởi tin cho nhau, cần bao nhiêu mã khóa?",
           "options": {
             "A": "10",
             "B": "50",
@@ -19,7 +19,7 @@
         },
         {
           "id": "ATTT_D40_T1_Q2",
-          "question": "10 người dùng mã hóa đối xứng để gởi tin cho nhau, cần bao nhiêu mã khóa?",
+          "question": "10 người dùng symmetric encryption để gởi tin cho nhau, cần bao nhiêu mã khóa?",
           "options": {
             "A": "10",
             "B": "50",
@@ -30,7 +30,7 @@
         },
         {
           "id": "ATTT_D40_T1_Q3",
-          "question": "A dùng khóa công khai của B mã hóa văn bản, mục đích để làm gì?",
+          "question": "A dùng public key của B mã hóa văn bản, mục đích để làm gì?",
           "options": {
             "A": "Giữ tài liệu cho riêng mình",
             "B": "Gởi tài liệu cho nhiều người",
@@ -54,32 +54,32 @@
           "id": "ATTT_D40_T1_Q5",
           "question": "A gởi tin cho B, dùng khóa gì để mã hóa là tốt nhất?",
           "options": {
-            "A": "Khóa riêng của B",
-            "B": "Khóa riêng của A",
-            "C": "Khóa công khai của A",
-            "D": "Khóa công khai của B"
+            "A": "Private key của B",
+            "B": "Private key của A",
+            "C": "Public key của A",
+            "D": "Public key của B"
           },
           "correctAnswer": "D"
         },
         {
           "id": "ATTT_D40_T1_Q6",
-          "question": "A gởi tin cho B, mã hóa bằng khóa công khai của B thì B dùng khóa gì giải mã?",
+          "question": "A gởi tin cho B, mã hóa bằng public key của B thì B dùng khóa gì giải mã?",
           "options": {
-            "A": "Khóa riêng của A",
-            "B": "Khóa công khai của A",
-            "C": "Khóa riêng của B",
-            "D": "Khóa công khai của B"
+            "A": "Private key của A",
+            "B": "Public key của A",
+            "C": "Private key của B",
+            "D": "Public key của B"
           },
           "correctAnswer": "C"
         },
         {
           "id": "ATTT_D40_T1_Q7",
-          "question": "A gởi tin cho B, mã hóa bằng khóa riêng của A thì B dùng khóa gì giải mã?",
+          "question": "A gởi tin cho B, mã hóa bằng private key của A thì B dùng khóa gì giải mã?",
           "options": {
-            "A": "Khóa công khai của B",
-            "B": "Khóa công khai của A",
-            "C": "Khóa riêng của A",
-            "D": "Khóa riêng của B"
+            "A": "Public key của B",
+            "B": "Public key của A",
+            "C": "Private key của A",
+            "D": "Private key của B"
           },
           "correctAnswer": "B"
         },
@@ -87,21 +87,21 @@
           "id": "ATTT_D40_T1_Q8",
           "question": "A muốn gửi một tin nhắn cho B một cách an toàn và mã hóa nội dung của tin nhắn. A sử dụng khóa nào để mã hóa tin nhắn?",
           "options": {
-            "A": "Khóa công khai của B",
-            "B": "Khóa riêng của A",
-            "C": "Khóa công khai của A",
-            "D": "Khóa riêng tư của B"
+            "A": "Public key của B",
+            "B": "Private key của A",
+            "C": "Public key của A",
+            "D": "Private key của B"
           },
           "correctAnswer": "A"
         },
         {
           "id": "ATTT_D40_T1_Q9",
-          "question": "A muốn gửi tin nhắn cho B bằng chữ ký điện tử. A sử dụng khóa mật mã nào để tạo chữ ký điện tử?",
+          "question": "A muốn gửi tin nhắn cho B bằng digital signature. A sử dụng khóa mật mã nào để tạo digital signature?",
           "options": {
-            "A": "Khóa công khai của B",
-            "B": "Khóa công khai của A",
-            "C": "Khóa riêng tư của B",
-            "D": "Khóa riêng của A"
+            "A": "Public key của B",
+            "B": "Public key của A",
+            "C": "Private key của B",
+            "D": "Private key của A"
           },
           "correctAnswer": "D"
         },
@@ -129,12 +129,12 @@
         },
         {
           "id": "ATTT_D40_T1_Q12",
-          "question": "B nhận được một tin nhắn từ A có chứa chữ ký điện tử. B sử dụng khóa mật mã nào để xác minh chữ ký điện tử?",
+          "question": "B nhận được một tin nhắn từ A có chứa digital signature. B sử dụng khóa mật mã nào để xác minh digital signature?",
           "options": {
-            "A": "Khóa riêng tư của B",
-            "B": "Khóa công khai của A",
-            "C": "Khóa công khai của B",
-            "D": "Khóa riêng của A"
+            "A": "Private key của B",
+            "B": "Public key của A",
+            "C": "Public key của B",
+            "D": "Private key của A"
           },
           "correctAnswer": "B"
         },
@@ -195,7 +195,7 @@
         },
         {
           "id": "ATTT_D40_T1_Q18",
-          "question": "Điều nào sau đây KHÔNG phải là lợi ích của điện toán đám mây đối với các tổ chức?",
+          "question": "Điều nào sau đây KHÔNG phải là lợi ích của cloud computing đối với các tổ chức?",
           "options": {
             "A": "Không cần duy trì trung tâm dữ liệu",
             "B": "Cung cấp theo yêu cầu",
@@ -206,34 +206,34 @@
         },
         {
           "id": "ATTT_D40_T1_Q19",
-          "question": "Điều nào sau đây KHÔNG phải là lợi thế của hệ thống sinh trắc học?",
+          "question": "Điều nào sau đây KHÔNG phải là lợi thế của hệ thống biometrics?",
           "options": {
             "A": "Người dùng không cần nhớ bất cứ điều gì",
-            "B": "Sinh trắc học rất khó làm giả",
-            "C": "Sinh trắc học yêu cầu sự hiện diện vật lý",
+            "B": "Biometrics rất khó làm giả",
+            "C": "Biometrics yêu cầu sự hiện diện vật lý",
             "D": "Các đặc điểm vật lý có thể thay đổi"
           },
           "correctAnswer": "D"
         },
         {
           "id": "ATTT_D40_T1_Q20",
-          "question": "Điều nào sau đây KHÔNG phải là phương pháp hay nhất để bảo mật mật khẩu?",
+          "question": "Điều nào sau đây KHÔNG phải là phương pháp hay nhất để bảo mật password?",
           "options": {
-            "A": "Không bao gồm tên người dùng trong mật khẩu",
-            "B": "Bao gồm hỗn hợp các ký tự viết hoa, ký tự viết thường và số trong mật khẩu",
-            "C": "Bao gồm một ký tự đặc biệt trong mật khẩu",
+            "A": "Không bao gồm tên người dùng trong password",
+            "B": "Bao gồm hỗn hợp các ký tự viết hoa, ký tự viết thường và số trong password",
+            "C": "Bao gồm một ký tự đặc biệt trong password",
             "D": "Sử dụng ít nhất sáu ký tự chữ và số"
           },
           "correctAnswer": "D"
         },
         {
           "id": "ATTT_D40_T1_Q21",
-          "question": "Điều nào sau đây là ví dụ về xác thực hai yếu tố?",
+          "question": "Điều nào sau đây là ví dụ về two-factor authentication?",
           "options": {
-            "A": "Mã PIN và mật khẩu",
-            "B": "Mật khẩu và câu hỏi bảo mật",
-            "C": "Thẻ thông minh và mã PIN",
-            "D": "Token và thẻ thông minh"
+            "A": "Mã PIN và password",
+            "B": "Password và câu hỏi bảo mật",
+            "C": "Smart card và mã PIN",
+            "D": "Token và smart card"
           },
           "correctAnswer": "C"
         },
@@ -241,10 +241,10 @@
           "id": "ATTT_D40_T1_Q22",
           "question": "Độ bảo mật cao là tính chất của kiểu mã hóa nào?",
           "options": {
-            "A": "Mã hóa đối xứng",
+            "A": "Symmetric encryption",
             "B": "Kết hợp 2 kiểu mã hóa",
             "C": "Tất cả đều đúng",
-            "D": "Mã hóa bất đối xứng"
+            "D": "Asymmetric encryption"
           },
           "correctAnswer": "D"
         },
@@ -261,12 +261,12 @@
         },
         {
           "id": "ATTT_D40_T1_Q24",
-          "question": "Loại xác thực nào bao gồm thẻ thông minh?",
+          "question": "Loại xác thực nào bao gồm smart card?",
           "options": {
-            "A": "Vị trí",
+            "A": "Somewhere you are",
             "B": "Kiến thức",
-            "C": "Quyền sở hữu",
-            "D": "Hành động"
+            "C": "Something you have",
+            "D": "Something you do"
           },
           "correctAnswer": "C"
         },
@@ -283,9 +283,9 @@
         },
         {
           "id": "ATTT_D40_T1_Q26",
-          "question": "Lý do dùng hàm băm khi mã hóa văn bản?",
+          "question": "Lý do dùng hash function khi mã hóa văn bản?",
           "options": {
-            "A": "Để đảm bảo tính toàn vẹn",
+            "A": "Để đảm bảo integrity",
             "B": "Để đảm bảo tính bí mật",
             "C": "Tất cả đều đúng",
             "D": "Để đảm bảo xuất xứ"
@@ -320,8 +320,8 @@
           "options": {
             "A": "Bí mật",
             "B": "Không thoái thác",
-            "C": "Toàn vẹn",
-            "D": "Xác thực"
+            "C": "Integrity",
+            "D": "Authentication"
           },
           "correctAnswer": "D"
         },
@@ -330,26 +330,26 @@
           "question": "Muốn đảm bảo không ai can thiệp tin nhắn khi đang được chuyển đi, là mục tiêu gì của mật mã học?",
           "options": {
             "A": "Không thoái thác",
-            "B": "Toàn vẹn",
-            "C": "Xác thực",
+            "B": "Integrity",
+            "C": "Authentication",
             "D": "Bí mật"
           },
           "correctAnswer": "B"
         },
         {
           "id": "ATTT_D40_T1_Q31",
-          "question": "Muốn đảm bảo theo dõi các hành động đối với một cá nhân, thì quan tâm đến giai đoạn nào của kiểm soát truy cập?",
+          "question": "Muốn đảm bảo theo dõi các hành động đối với một cá nhân, thì quan tâm đến giai đoạn nào của access control?",
           "options": {
-            "A": "Trách nhiệm giải trình",
-            "B": "Ủy quyền",
-            "C": "Xác thực",
-            "D": "Nhận dạng"
+            "A": "Accountability",
+            "B": "Authorization",
+            "C": "Authentication",
+            "D": "Identification"
           },
           "correctAnswer": "A"
         },
         {
           "id": "ATTT_D40_T1_Q32",
-          "question": "Người dùng có thể không muốn quét võng mạc do lo ngại về quyền riêng tư, là đang xem xét đặc điểm nào của hệ thống sinh trắc học?",
+          "question": "Người dùng có thể không muốn quét võng mạc do lo ngại về privacy, là đang xem xét đặc điểm nào của hệ thống biometrics?",
           "options": {
             "A": "Thời gian phản ứng",
             "B": "Khả năng chấp nhận",
@@ -362,9 +362,9 @@
           "id": "ATTT_D40_T1_Q33",
           "question": "Nhận được văn bản đã mã hóa, cần sử dụng phương pháp nào để đọc văn bản?",
           "options": {
-            "A": "Hàm băm",
+            "A": "Hash function",
             "B": "Giải mã",
-            "C": "Xác thực",
+            "C": "Authentication",
             "D": "Mã hóa"
           },
           "correctAnswer": "B"
@@ -384,8 +384,8 @@
           "id": "ATTT_D40_T1_Q35",
           "question": "Tốc độ thực hiện chậm là tính chất của kiểu mã hóa nào?",
           "options": {
-            "A": "Mã hóa đối xứng",
-            "B": "Mã hóa bất đối xứng",
+            "A": "Symmetric encryption",
+            "B": "Asymmetric encryption",
             "C": "Tất cả đều đúng",
             "D": "Kết hợp 2 kiểu mã hóa"
           },
@@ -396,8 +396,8 @@
           "question": "Tốc độ thực hiện nhanh là tính chất của kiểu mã hóa nào?",
           "options": {
             "A": "Tất cả đều đúng",
-            "B": "Mã hóa đối xứng",
-            "C": "Mã hóa bất đối xứng",
+            "B": "Symmetric encryption",
+            "C": "Asymmetric encryption",
             "D": "Kết hợp 2 kiểu mã hóa"
           },
           "correctAnswer": "B"
@@ -415,12 +415,12 @@
         },
         {
           "id": "ATTT_D40_T1_Q38",
-          "question": "Trong giai đoạn nào của quá trình kiểm soát truy cập, hệ thống trả lời câu hỏi \"Người yêu cầu có thể truy cập những gì?\"",
+          "question": "Trong giai đoạn nào của quá trình access control, hệ thống trả lời câu hỏi \"Người yêu cầu có thể truy cập những gì?\"",
           "options": {
-            "A": "Trách nhiệm giải trình",
-            "B": "Ủy quyền",
-            "C": "Nhận dạng",
-            "D": "Xác thực"
+            "A": "Accountability",
+            "B": "Authorization",
+            "C": "Identification",
+            "D": "Authentication"
           },
           "correctAnswer": "B"
         },
@@ -429,7 +429,7 @@
           "question": "Ví dụ nào sau đây là điều khiển truy cập logic?",
           "options": {
             "A": "Hàng rào",
-            "B": "Mật khẩu",
+            "B": "Password",
             "C": "Thẻ ra vào",
             "D": "Chìa khóa cho một ổ khóa"
           },

@@ -8,12 +8,12 @@
       "questions": [
         {
           "id": "ATTT_D45_T1_Q1",
-          "question": "Thuật ngữ nào mô tả bất kỳ hành động nào có thể gây thiệt hại cho một tài sản?",
+          "question": "Thuật ngữ nào mô tả bất kỳ hành động nào có thể gây thiệt hại cho một asset?",
           "options": {
-            "A": "Rủi ro (Risk)",
-            "B": "Biện pháp đối phó (Countermeasure)",
-            "C": "Điểm yếu (Vulnerability)",
-            "D": "Mối đe dọa (Threat)"
+            "A": "Risk",
+            "B": "Countermeasure",
+            "C": "Vulnerability",
+            "D": "Threat"
           },
           "correctAnswer": "D"
         },
@@ -21,10 +21,10 @@
           "id": "ATTT_D45_T1_Q2",
           "question": "Thành phần nào của khung chính sách an ninh CNTT cung cấp các định nghĩa bằng văn bản chi tiết cho phần cứng và phần mềm cũng như cách sử dụng chúng?",
           "options": {
-            "A": "Chính sách (Policy)",
-            "B": "Tiêu chuẩn (Standard)",
-            "C": "Hướng dẫn (Guideline)",
-            "D": "Quy trình (Procedure)"
+            "A": "Policy",
+            "B": "Standard",
+            "C": "Guideline",
+            "D": "Procedure"
           },
           "correctAnswer": "B"
         },
@@ -32,32 +32,32 @@
           "id": "ATTT_D45_T1_Q3",
           "question": "Rachel đang điều tra một sự cố an toàn thông tin xảy ra tại trường trung học nơi cô làm việc. Cô nghi ngờ một số học sinh đã đột nhập vào hệ thống hồ sơ học sinh và thay đổi điểm số của mình. Nếu đúng như vậy, cuộc tấn công này đã vi phạm nguyên tắc nào của an toàn thông tin?",
           "options": {
-            "A": "Tính bảo mật (Confidentiality)",
-            "B": "Tính toàn vẹn (Integrity)",
-            "C": "Tính sẵn sàng (Availability)",
-            "D": "Tính chống chối bỏ (Nonrepudiation)"
+            "A": "Confidentiality",
+            "B": "Integrity",
+            "C": "Availability",
+            "D": "Nonrepudiation"
           },
           "correctAnswer": "B"
         },
         {
           "id": "ATTT_D45_T1_Q4",
-          "question": "Kế hoạch giảm thiểu nào phù hợp nhất để hạn chế rủi ro truy cập trái phép vào các máy trạm?",
+          "question": "Kế hoạch giảm thiểu nào phù hợp nhất để hạn chế risk truy cập trái phép vào các máy trạm?",
           "options": {
-            "A": "Bảo vệ bằng mật khẩu (Password protection)",
-            "B": "Phần mềm diệt virus (Antivirus software)",
-            "C": "Vô hiệu hóa các cổng USB (Deactivating USB ports)",
-            "D": "Quét lỗ hổng (Vulnerability scanning)"
+            "A": "Password protection",
+            "B": "Antivirus software",
+            "C": "Deactivating USB ports",
+            "D": "Vulnerability scanning"
           },
           "correctAnswer": "A"
         },
         {
           "id": "ATTT_D45_T1_Q5",
-          "question": "Yếu tố nào sau đây thường được dùng trong giai đoạn nhận dạng (identification) của một kết nối truy cập từ xa?",
+          "question": "Yếu tố nào sau đây thường được dùng trong giai đoạn identification của một kết nối truy cập từ xa?",
           "options": {
-            "A": "Tên người dùng (Username)",
-            "B": "Mật khẩu (Password)",
+            "A": "Username",
+            "B": "Password",
             "C": "Token",
-            "D": "Vân tay (Fingerprint)"
+            "D": "Fingerprint"
           },
           "correctAnswer": "A"
         },
@@ -65,9 +65,9 @@
           "id": "ATTT_D45_T1_Q6",
           "question": "Phương pháp nào sau đây KHÔNG phải là kỹ thuật tốt để xác thực người dùng cuối?",
           "options": {
-            "A": "Mật khẩu (Password)",
-            "B": "Quét sinh trắc học (Biometric scan)",
-            "C": "Số định danh (Identification number)",
+            "A": "Password",
+            "B": "Biometric scan",
+            "C": "Identification number",
             "D": "Token"
           },
           "correctAnswer": "C"
@@ -76,20 +76,20 @@
           "id": "ATTT_D45_T1_Q7",
           "question": "Chris đang soạn một tài liệu cung cấp các hướng dẫn từng bước cho người dùng cuối muốn cập nhật phần mềm bảo mật trên máy tính của họ. Việc thực hiện các bản cập nhật này là bắt buộc. Chris đang viết loại tài liệu nào?",
           "options": {
-            "A": "Chính sách (Policy)",
-            "B": "Tiêu chuẩn (Standard)",
-            "C": "Hướng dẫn (Guideline)",
-            "D": "Quy trình (Procedure)"
+            "A": "Policy",
+            "B": "Standard",
+            "C": "Guideline",
+            "D": "Procedure"
           },
           "correctAnswer": "D"
         },
         {
           "id": "ATTT_D45_T1_Q8",
-          "question": "Rủi ro nào được giảm thiểu hiệu quả nhất bởi nhà cung cấp dịch vụ Internet (ISP) ở thượng nguồn?",
+          "question": "Risk nào được giảm thiểu hiệu quả nhất bởi nhà cung cấp dịch vụ Internet (ISP) ở thượng nguồn?",
           "options": {
-            "A": "Tấn công từ chối dịch vụ phân tán (DDoS)",
+            "A": "DDoS",
             "B": "Mất năng suất",
-            "C": "Lỗi cấu hình tường lửa",
+            "C": "Lỗi cấu hình firewall",
             "D": "Truy cập từ xa trái phép"
           },
           "correctAnswer": "A"
@@ -98,21 +98,21 @@
           "id": "ATTT_D45_T1_Q9",
           "question": "Loại tấn công nào liên quan đến việc tạo ra sự lừa dối để đánh lừa những người dùng không nghi ngờ?",
           "options": {
-            "A": "Chặn bắt (Interception)",
-            "B": "Gián đoạn (Interruption)",
-            "C": "Bịa đặt (Fabrication)",
-            "D": "Sửa đổi (Modification)"
+            "A": "Interception",
+            "B": "Interruption",
+            "C": "Fabrication",
+            "D": "Modification"
           },
           "correctAnswer": "C"
         },
         {
           "id": "ATTT_D45_T1_Q10",
-          "question": "Biện pháp kiểm soát nào KHÔNG được thiết kế để chống lại phần mềm độc hại?",
+          "question": "Biện pháp kiểm soát nào KHÔNG được thiết kế để chống lại malware?",
           "options": {
-            "A": "Tường lửa (Firewalls)",
+            "A": "Firewalls",
             "B": "Phần mềm diệt virus",
             "C": "Các nỗ lực nâng cao nhận thức và giáo dục",
-            "D": "Cách ly máy tính (Quarantine)"
+            "D": "Quarantine"
           },
           "correctAnswer": "A"
         },
@@ -129,12 +129,12 @@
         },
         {
           "id": "ATTT_D45_T1_Q12",
-          "question": "Ví dụ nào sau đây là mối đe dọa về tiết lộ thông tin (disclosure threat)?",
+          "question": "Ví dụ nào sau đây là threat về tiết lộ thông tin (disclosure threat)?",
           "options": {
-            "A": "Gián điệp (Espionage)",
-            "B": "Thay đổi (Alteration)",
-            "C": "Từ chối (Denial)",
-            "D": "Phá hủy (Destruction)"
+            "A": "Espionage",
+            "B": "Alteration",
+            "C": "Denial",
+            "D": "Destruction"
           },
           "correctAnswer": "A"
         },
@@ -142,27 +142,27 @@
           "id": "ATTT_D45_T1_Q13",
           "question": "Trong loại tấn công nào kẻ tấn công cố gắng chiếm lấy một kết nối hiện có giữa hai hệ thống?",
           "options": {
-            "A": "Tấn công người đứng giữa (Man-in-the-middle)",
-            "B": "Chiếm quyền điều khiển URL (URL hijacking)",
-            "C": "Chiếm quyền phiên (Session hijacking)",
+            "A": "Man-in-the-middle",
+            "B": "URL hijacking",
+            "C": "Session hijacking",
             "D": "Typosquatting"
           },
           "correctAnswer": "C"
         },
         {
           "id": "ATTT_D45_T1_Q14",
-          "question": "Một kẻ tấn công đang cố đột nhập vào một cơ sở đã kéo chuông báo cháy để đánh lạc hướng nhân viên bảo vệ đang canh giữ một cửa ra vào. Kẻ tấn công đang sử dụng kiểu tấn công kỹ thuật xã hội nào?",
+          "question": "Một kẻ tấn công đang cố đột nhập vào một cơ sở đã kéo chuông báo cháy để đánh lạc hướng nhân viên bảo vệ đang canh giữ một cửa ra vào. Kẻ tấn công đang sử dụng kiểu tấn công social engineering nào?",
           "options": {
             "A": "Vishing",
-            "B": "Tạo sự cấp bách (Urgency)",
+            "B": "Urgency",
             "C": "Whaling",
-            "D": "Dựa vào uy quyền (Authority)"
+            "D": "Authority"
           },
           "correctAnswer": "B"
         },
         {
           "id": "ATTT_D45_T1_Q15",
-          "question": "Loại tấn công nào nhằm vào ứng dụng web sử dụng một lỗ hổng mới được phát hiện mà chưa thể vá được?",
+          "question": "Loại tấn công nào nhằm vào ứng dụng web sử dụng một vulnerability mới được phát hiện mà chưa thể vá được?",
           "options": {
             "A": "SQL injection",
             "B": "Cross-site scripting",
@@ -175,10 +175,10 @@
           "id": "ATTT_D45_T1_Q16",
           "question": "Tony đang phối hợp với một cơ quan thực thi pháp luật để thực hiện nghe lén (wiretap) theo lệnh hợp pháp của tòa án. Việc nghe lén sẽ giám sát các cuộc liên lạc mà không sửa đổi chúng. Tony đang đặt loại nghe lén nào?",
           "options": {
-            "A": "Nghe lén chủ động (Active wiretap)",
-            "B": "Nghe lén giữa các dòng (Between-the-lines wiretap)",
-            "C": "Nghe lén xâm nhập kiểu đi nhờ (Piggyback-entry wiretap)",
-            "D": "Nghe lén thụ động (Passive wiretap)"
+            "A": "Active wiretap",
+            "B": "Between-the-lines wiretap",
+            "C": "Piggyback-entry wiretap",
+            "D": "Passive wiretap"
           },
           "correctAnswer": "D"
         },
@@ -197,8 +197,8 @@
           "id": "ATTT_D45_T1_Q18",
           "question": "Alan đang xây dựng bản đánh giá tác động kinh doanh (business impact assessment) cho tổ chức của mình. Anh đang làm việc với các đơn vị kinh doanh để xác định thời gian tối đa cho phép để khôi phục một chức năng cụ thể. Alan đang xác định giá trị nào?",
           "options": {
-            "A": "Mục tiêu thời gian phục hồi (RTO)",
-            "B": "Mục tiêu điểm phục hồi (RPO)",
+            "A": "RTO",
+            "B": "RPO",
             "C": "Yêu cầu phục hồi kinh doanh",
             "D": "Yêu cầu phục hồi kỹ thuật"
           },
@@ -208,21 +208,21 @@
           "id": "ATTT_D45_T1_Q19",
           "question": "Holly muốn chạy một cuộc kiểm tra khắc phục thảm họa lớn hằng năm sao cho kỹ lưỡng và thực tế nhất có thể. Cô cũng muốn đảm bảo không làm gián đoạn hoạt động tại địa điểm chính. Phương án nào là tốt nhất trong tình huống này?",
           "options": {
-            "A": "Kiểm tra bằng danh mục (Checklist test)",
-            "B": "Kiểm tra gián đoạn toàn phần (Full interruption test)",
-            "C": "Kiểm tra song song (Parallel test)",
-            "D": "Kiểm tra mô phỏng (Simulation test)"
+            "A": "Checklist test",
+            "B": "Full interruption test",
+            "C": "Parallel test",
+            "D": "Simulation test"
           },
           "correctAnswer": "C"
         },
         {
           "id": "ATTT_D45_T1_Q20",
-          "question": "Ví dụ nào sau đây là biện pháp kiểm soát ủy quyền (authorization) tốt nhất?",
+          "question": "Ví dụ nào sau đây là biện pháp kiểm soát authorization tốt nhất?",
           "options": {
-            "A": "Thiết bị sinh trắc học",
-            "B": "Chứng thư số (Digital certificate)",
-            "C": "Danh sách kiểm soát truy cập (Access control lists)",
-            "D": "Mật khẩu dùng một lần"
+            "A": "Thiết bị biometrics",
+            "B": "Digital certificate",
+            "C": "Access control lists",
+            "D": "Password dùng một lần"
           },
           "correctAnswer": "C"
         },
@@ -244,49 +244,49 @@
             "A": "Hot site",
             "B": "Warm site",
             "C": "Cold site",
-            "D": "Địa điểm chính (Primary site)"
+            "D": "Primary site"
           },
           "correctAnswer": "B"
         },
         {
           "id": "ATTT_D45_T1_Q23",
-          "question": "Loại tấn công mật khẩu nào thử tất cả các tổ hợp có thể có của một mật khẩu để đoán ra giá trị đúng?",
+          "question": "Loại tấn công password nào thử tất cả các tổ hợp có thể có của một password để đoán ra giá trị đúng?",
           "options": {
-            "A": "Tấn công từ điển (Dictionary attack)",
-            "B": "Tấn công bảng cầu vồng (Rainbow table attack)",
-            "C": "Tấn công kỹ thuật xã hội",
-            "D": "Tấn công vét cạn (Brute-force attack)"
+            "A": "Dictionary attack",
+            "B": "Rainbow table attack",
+            "C": "Tấn công social engineering",
+            "D": "Brute-force attack"
           },
           "correctAnswer": "D"
         },
         {
           "id": "ATTT_D45_T1_Q24",
-          "question": "Trong giai đoạn nào của quá trình kiểm soát truy cập, hệ thống trả lời câu hỏi \"Người yêu cầu có thể truy cập những gì?\"",
+          "question": "Trong giai đoạn nào của quá trình access control, hệ thống trả lời câu hỏi \"Người yêu cầu có thể truy cập những gì?\"",
           "options": {
-            "A": "Nhận dạng (Identification)",
-            "B": "Xác thực (Authentication)",
-            "C": "Ủy quyền (Authorization)",
-            "D": "Trách nhiệm giải trình (Accountability)"
+            "A": "Identification",
+            "B": "Authentication",
+            "C": "Authorization",
+            "D": "Accountability"
           },
           "correctAnswer": "C"
         },
         {
           "id": "ATTT_D45_T1_Q25",
-          "question": "Điều nào sau đây KHÔNG phải là thực tiễn tốt nhất được chấp nhận phổ biến để bảo mật mật khẩu?",
+          "question": "Điều nào sau đây KHÔNG phải là thực tiễn tốt nhất được chấp nhận phổ biến để bảo mật password?",
           "options": {
             "A": "Sử dụng ít nhất sáu ký tự chữ và số.",
-            "B": "Không bao gồm tên người dùng trong mật khẩu.",
-            "C": "Bao gồm một ký tự đặc biệt trong mật khẩu.",
-            "D": "Bao gồm hỗn hợp ký tự viết hoa, viết thường và số trong mật khẩu."
+            "B": "Không bao gồm tên người dùng trong password.",
+            "C": "Bao gồm một ký tự đặc biệt trong password.",
+            "D": "Bao gồm hỗn hợp ký tự viết hoa, viết thường và số trong password."
           },
           "correctAnswer": "A"
         },
         {
           "id": "ATTT_D45_T1_Q26",
-          "question": "Điều nào sau đây KHÔNG phải là lợi thế của hệ thống sinh trắc học?",
+          "question": "Điều nào sau đây KHÔNG phải là lợi thế của hệ thống biometrics?",
           "options": {
-            "A": "Sinh trắc học yêu cầu sự hiện diện vật lý.",
-            "B": "Sinh trắc học rất khó làm giả.",
+            "A": "Biometrics yêu cầu sự hiện diện vật lý.",
+            "B": "Biometrics rất khó làm giả.",
             "C": "Người dùng không cần nhớ bất cứ điều gì.",
             "D": "Các đặc điểm vật lý có thể thay đổi."
           },
@@ -294,23 +294,23 @@
         },
         {
           "id": "ATTT_D45_T1_Q27",
-          "question": "Điều nào sau đây là ví dụ về xác thực hai yếu tố?",
+          "question": "Điều nào sau đây là ví dụ về two-factor authentication?",
           "options": {
-            "A": "Thẻ thông minh và mã số định danh cá nhân (PIN)",
-            "B": "Mã PIN và mật khẩu",
-            "C": "Mật khẩu và câu hỏi bảo mật",
-            "D": "Token và thẻ thông minh"
+            "A": "PIN",
+            "B": "Mã PIN và password",
+            "C": "Password và câu hỏi bảo mật",
+            "D": "Token và smart card"
           },
           "correctAnswer": "A"
         },
         {
           "id": "ATTT_D45_T1_Q28",
-          "question": "Tổ chức của Roger nhận được một email hàng loạt cố lừa người dùng tiết lộ mật khẩu bằng cách giả làm đại diện của bộ phận hỗ trợ (help desk). Đây là ví dụ của loại hình kỹ thuật xã hội nào?",
+          "question": "Tổ chức của Roger nhận được một email hàng loạt cố lừa người dùng tiết lộ password bằng cách giả làm đại diện của bộ phận hỗ trợ (help desk). Đây là ví dụ của loại hình social engineering nào?",
           "options": {
-            "A": "Đe dọa (Intimidation)",
-            "B": "Nêu tên người có thế lực (Name dropping)",
-            "C": "Kêu gọi giúp đỡ (Appeal for help)",
-            "D": "Lừa đảo (Phishing)"
+            "A": "Intimidation",
+            "B": "Name dropping",
+            "C": "Appeal for help",
+            "D": "Phishing"
           },
           "correctAnswer": "D"
         },
@@ -319,7 +319,7 @@
           "question": "Điều nào KHÔNG phải là mục tiêu của các chương trình nâng cao nhận thức về an toàn thông tin?",
           "options": {
             "A": "Dạy người dùng về các mục tiêu bảo mật",
-            "B": "Thông báo cho người dùng về các xu hướng và mối đe dọa về bảo mật",
+            "B": "Thông báo cho người dùng về các xu hướng và threat về bảo mật",
             "C": "Thúc đẩy người dùng tuân thủ chính sách bảo mật",
             "D": "Trừng phạt người dùng vi phạm chính sách"
           },
@@ -329,40 +329,40 @@
           "id": "ATTT_D45_T1_Q30",
           "question": "Hoạt động nào quản lý các cài đặt cơ sở (baseline) cho một hệ thống hoặc thiết bị?",
           "options": {
-            "A": "Kiểm soát cấu hình (Configuration control)",
-            "B": "Quản lý thay đổi phản ứng (Reactive change management)",
-            "C": "Quản lý thay đổi chủ động (Proactive change management)",
-            "D": "Kiểm soát thay đổi (Change control)"
+            "A": "Configuration control",
+            "B": "Reactive change management",
+            "C": "Proactive change management",
+            "D": "Change control"
           },
           "correctAnswer": "A"
         },
         {
           "id": "ATTT_D45_T1_Q31",
-          "question": "Janet đang xác định tập hợp các quyền nên được gán cho một nhân viên mới trong tổ chức của cô. Cô đang thực hiện giai đoạn nào của quá trình kiểm soát truy cập?",
+          "question": "Janet đang xác định tập hợp các quyền nên được gán cho một nhân viên mới trong tổ chức của cô. Cô đang thực hiện giai đoạn nào của quá trình access control?",
           "options": {
-            "A": "Nhận dạng (Identification)",
-            "B": "Xác thực (Authentication)",
-            "C": "Trách nhiệm giải trình (Accountability)",
-            "D": "Ủy quyền (Authorization)"
+            "A": "Identification",
+            "B": "Authentication",
+            "C": "Accountability",
+            "D": "Authorization"
           },
           "correctAnswer": "D"
         },
         {
           "id": "ATTT_D45_T1_Q32",
-          "question": "Mục nào mà kiểm toán viên ít có khả năng xem xét nhất trong quá trình kiểm toán kiểm soát hệ thống?",
+          "question": "Mục nào mà auditor ít có khả năng xem xét nhất trong quá trình audit kiểm soát hệ thống?",
           "options": {
             "A": "Sơ yếu lý lịch của các quản trị viên hệ thống",
             "B": "Hồ sơ sự cố",
             "C": "Nhật ký ứng dụng",
-            "D": "Kết quả kiểm thử xâm nhập"
+            "D": "Kết quả penetration testing"
           },
           "correctAnswer": "A"
         },
         {
           "id": "ATTT_D45_T1_Q33",
-          "question": "Mục nào thường KHÔNG phải là một phần trong báo cáo kiểm toán?",
+          "question": "Mục nào thường KHÔNG phải là một phần trong báo cáo audit?",
           "options": {
-            "A": "Các phát hiện (Findings)",
+            "A": "Findings",
             "B": "Cấu hình hệ thống",
             "C": "Các khuyến nghị",
             "D": "Lộ trình thời gian triển khai"
@@ -373,71 +373,71 @@
           "id": "ATTT_D45_T1_Q34",
           "question": "Ricky đang xem xét nhật ký bảo mật để đánh giá các biện pháp kiểm soát an ninh. Ricky đang thực hiện quy trình rà soát bảo mật nào?",
           "options": {
-            "A": "Giám sát (Monitor)",
-            "B": "Kiểm toán (Audit)",
-            "C": "Cải thiện (Improve)",
-            "D": "Bảo vệ (Secure)"
+            "A": "Monitor",
+            "B": "Audit",
+            "C": "Improve",
+            "D": "Secure"
           },
           "correctAnswer": "B"
         },
         {
           "id": "ATTT_D45_T1_Q35",
-          "question": "Fran đang thực hiện kiểm thử bảo mật cho một ứng dụng mới. Cô không có bất kỳ quyền truy cập nào vào mã nguồn hoặc các chi tiết khác của ứng dụng đang kiểm thử. Fran đang thực hiện loại kiểm thử nào?",
+          "question": "Fran đang thực hiện testing bảo mật cho một ứng dụng mới. Cô không có bất kỳ quyền truy cập nào vào mã nguồn hoặc các chi tiết khác của ứng dụng đang testing. Fran đang thực hiện loại testing nào?",
           "options": {
-            "A": "Kiểm thử hộp đen (Black-box test)",
-            "B": "Kiểm thử hộp trắng (White-box test)",
-            "C": "Kiểm thử hộp xám (Gray-box test)",
-            "D": "Kiểm thử hộp xanh (Blue-box test)"
+            "A": "Black-box test",
+            "B": "White-box test",
+            "C": "Gray-box test",
+            "D": "Blue-box test"
           },
           "correctAnswer": "A"
         },
         {
           "id": "ATTT_D45_T1_Q36",
-          "question": "Jacob đang thực hiện kiểm toán các biện pháp kiểm soát an ninh tại một tổ chức với vai trò người đánh giá độc lập. Câu hỏi nào sẽ KHÔNG nằm trong cuộc kiểm toán của anh?",
+          "question": "Jacob đang thực hiện audit các biện pháp kiểm soát an ninh tại một tổ chức với vai trò người đánh giá độc lập. Câu hỏi nào sẽ KHÔNG nằm trong cuộc audit của anh?",
           "options": {
-            "A": "Mức độ kiểm soát an ninh có phù hợp với rủi ro mà nó giải quyết không?",
+            "A": "Mức độ kiểm soát an ninh có phù hợp với risk mà nó giải quyết không?",
             "B": "Biện pháp kiểm soát an ninh có được đặt đúng chỗ và hoạt động tốt không?",
-            "C": "Biện pháp kiểm soát an ninh có hiệu quả trong việc giải quyết rủi ro mà nó được thiết kế để giải quyết không?",
+            "C": "Biện pháp kiểm soát an ninh có hiệu quả trong việc giải quyết risk mà nó được thiết kế để giải quyết không?",
             "D": "Biện pháp kiểm soát an ninh có khả năng trở nên lỗi thời trong tương lai gần không?"
           },
           "correctAnswer": "D"
         },
         {
           "id": "ATTT_D45_T1_Q37",
-          "question": "Thuật ngữ nào mô tả rủi ro còn tồn tại sau khi một tổ chức đã thực hiện tất cả các biện pháp đối phó và kiểm soát đã lên kế hoạch?",
+          "question": "Thuật ngữ nào mô tả risk còn tồn tại sau khi một tổ chức đã thực hiện tất cả các countermeasure và kiểm soát đã lên kế hoạch?",
           "options": {
-            "A": "Rủi ro tổng thể (Total risk)",
-            "B": "Rủi ro kinh doanh (Business risk)",
-            "C": "Rủi ro trong suốt (Transparent risk)",
-            "D": "Rủi ro còn lại (Residual risk)"
+            "A": "Total risk",
+            "B": "Business risk",
+            "C": "Transparent risk",
+            "D": "Residual risk"
           },
           "correctAnswer": "D"
         },
         {
           "id": "ATTT_D45_T1_Q38",
-          "question": "________ là một sự kiện ngăn cản một chức năng kinh doanh quan trọng (CBF) hoạt động trong khoảng thời gian lớn hơn thời gian ngừng hoạt động tối đa có thể chấp nhận (MTD).",
+          "question": "________ là một sự kiện ngăn cản một chức năng kinh doanh quan trọng (CBF) hoạt động trong khoảng thời gian lớn hơn thời gian ngừng hoạt động tối đa có thể MTD.",
           "options": {
-            "A": "sự cố (incident)",
-            "B": "sự kiện (event)",
-            "C": "thảm họa (disaster)",
-            "D": "tình huống khẩn cấp (emergency)"
+            "A": "incident",
+            "B": "event",
+            "C": "disaster",
+            "D": "emergency"
           },
           "correctAnswer": "C"
         },
         {
           "id": "ATTT_D45_T1_Q39",
-          "question": "Beth đang tiến hành đánh giá rủi ro. Cô đang cố xác định tác động của một sự cố an ninh đối với danh tiếng của công ty mình. Loại đánh giá rủi ro nào phù hợp nhất với kiểu phân tích này?",
+          "question": "Beth đang tiến hành đánh giá risk. Cô đang cố xác định tác động của một sự cố an ninh đối với danh tiếng của công ty mình. Loại đánh giá risk nào phù hợp nhất với kiểu phân tích này?",
           "options": {
-            "A": "Định lượng (Quantitative)",
-            "B": "Tài chính (Financial)",
-            "C": "Định tính (Qualitative)",
-            "D": "Khách quan (Objective)"
+            "A": "Quantitative",
+            "B": "Financial",
+            "C": "Qualitative",
+            "D": "Objective"
           },
           "correctAnswer": "C"
         },
         {
           "id": "ATTT_D45_T1_Q40",
-          "question": "Kim là giám đốc quản lý rủi ro của một tổ chức lớn. Cô đang đánh giá xem tổ chức có nên mua hệ thống chữa cháy hay không. Cô đã tham vấn nhiều chuyên gia và xác định rằng có 1% khả năng xảy ra hỏa hoạn trong một năm. Nếu hỏa hoạn xảy ra, nó có thể gây thiệt hại 2 triệu USD cho cơ sở, vốn có giá trị 10 triệu USD. Với kịch bản này, mức tổn thất kỳ vọng đơn lẻ (SLE) là bao nhiêu?",
+          "question": "Kim là giám đốc quản lý risk của một tổ chức lớn. Cô đang đánh giá xem tổ chức có nên mua hệ thống chữa cháy hay không. Cô đã tham vấn nhiều chuyên gia và xác định rằng có 1% khả năng xảy ra hỏa hoạn trong một năm. Nếu hỏa hoạn xảy ra, nó có thể gây thiệt hại 2 triệu USD cho cơ sở, vốn có giá trị 10 triệu USD. Với kịch bản này, mức tổn thất kỳ vọng đơn lẻ (SLE) là bao nhiêu?",
           "options": {
             "A": "$2,000",
             "B": "$20,000",
@@ -452,7 +452,7 @@
           "options": {
             "A": "Warm site",
             "B": "Cold site",
-            "C": "Nhiều địa điểm (Multiple sites)",
+            "C": "Multiple sites",
             "D": "Hot site"
           },
           "correctAnswer": "D"
@@ -461,21 +461,21 @@
           "id": "ATTT_D45_T1_Q42",
           "question": "Betty nhận được một thông điệp mã hóa (ciphertext) từ đồng nghiệp Tim. Betty cần dùng loại hàm nào để đọc thông điệp dạng văn bản gốc (plaintext)?",
           "options": {
-            "A": "Mã hóa (Encryption)",
-            "B": "Băm (Hashing)",
-            "C": "Giải mã (Decryption)",
-            "D": "Xác nhận hợp lệ (Validation)"
+            "A": "Encryption",
+            "B": "Hashing",
+            "C": "Decryption",
+            "D": "Validation"
           },
           "correctAnswer": "C"
         },
         {
           "id": "ATTT_D45_T1_Q43",
-          "question": "Alice muốn gửi một thông điệp cho Bob bằng chữ ký số. Alice dùng khóa mật mã nào để tạo chữ ký số?",
+          "question": "Alice muốn gửi một thông điệp cho Bob bằng digital signature. Alice dùng khóa mật mã nào để tạo digital signature?",
           "options": {
-            "A": "Khóa công khai của Alice",
-            "B": "Khóa riêng của Alice",
-            "C": "Khóa công khai của Bob",
-            "D": "Khóa riêng của Bob"
+            "A": "Public key của Alice",
+            "B": "Private key của Alice",
+            "C": "Public key của Bob",
+            "D": "Private key của Bob"
           },
           "correctAnswer": "B"
         },
@@ -483,10 +483,10 @@
           "id": "ATTT_D45_T1_Q44",
           "question": "Alice muốn gửi một thông điệp cho Bob một cách an toàn và muốn mã hóa nội dung thông điệp. Cô dùng khóa nào để mã hóa thông điệp này?",
           "options": {
-            "A": "Khóa công khai của Alice",
-            "B": "Khóa riêng của Alice",
-            "C": "Khóa công khai của Bob",
-            "D": "Khóa riêng của Bob"
+            "A": "Public key của Alice",
+            "B": "Private key của Alice",
+            "C": "Public key của Bob",
+            "D": "Private key của Bob"
           },
           "correctAnswer": "C"
         },
@@ -494,10 +494,10 @@
           "id": "ATTT_D45_T1_Q45",
           "question": "Mục tiêu an toàn thông tin nào cho phép các đối tượng đáng tin cậy xác nhận (chứng thực) thông tin?",
           "options": {
-            "A": "Xác nhận hợp lệ (Validation)",
-            "B": "Ủy quyền (Authorization)",
-            "C": "Chứng nhận (Certification)",
-            "D": "Làm chứng (Witnessing)"
+            "A": "Validation",
+            "B": "Authorization",
+            "C": "Certification",
+            "D": "Witnessing"
           },
           "correctAnswer": "C"
         }

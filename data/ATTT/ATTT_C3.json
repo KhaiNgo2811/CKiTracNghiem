@@ -16,19 +16,19 @@
             "D": "Giá vốn hàng bán"
           },
           "correctAnswer": "B",
-          "explanation": "Chi phí cơ hội là số tiền mà công ty mất đi do thời gian ngừng hoạt động. Thời gian ngừng hoạt động có thể là cố ý hoặc ngoài ý muốn, nhưng cả hai đều ảnh hưởng trực tiếp đến tính sẵn sàng của hệ thống."
+          "explanation": "Chi phí cơ hội là số tiền mà công ty mất đi do thời gian ngừng hoạt động. Thời gian ngừng hoạt động có thể là cố ý hoặc ngoài ý muốn, nhưng cả hai đều ảnh hưởng trực tiếp đến availability của hệ thống."
         },
         {
           "id": "ATTT_C3_T1_Q2",
-          "question": "Yuri là một chuyên gia an ninh máy tính lành nghề, cố gắng đột nhập vào hệ thống của các khách hàng của mình. Anh được khách hàng cho phép thực hiện việc kiểm thử này theo một hợp đồng có trả phí. Yuri là loại người nào?",
+          "question": "Yuri là một chuyên gia an ninh máy tính lành nghề, cố gắng đột nhập vào hệ thống của các khách hàng của mình. Anh được khách hàng cho phép thực hiện việc testing này theo một hợp đồng có trả phí. Yuri là loại người nào?",
           "options": {
             "A": "Cracker",
-            "B": "Hacker mũ trắng (White-hat hacker)",
-            "C": "Hacker mũ đen (Black-hat hacker)",
-            "D": "Hacker mũ xám (Grey-hat hacker)"
+            "B": "White-hat hacker",
+            "C": "Black-hat hacker",
+            "D": "Grey-hat hacker"
           },
           "correctAnswer": "B",
-          "explanation": "Hacker mũ trắng là các chuyên gia an toàn thông tin được ủy quyền để xác định lỗ hổng và thực hiện kiểm thử xâm nhập. Điểm khác biệt giữa hacker mũ trắng và hacker mũ đen là hacker mũ trắng tìm ra điểm yếu để khắc phục, còn hacker mũ đen tìm điểm yếu chỉ để vui hoặc để khai thác."
+          "explanation": "White-hat hacker là các chuyên gia an toàn thông tin được ủy quyền để xác định vulnerability và thực hiện penetration testing. Điểm khác biệt giữa white-hat hacker và black-hat hacker là white-hat hacker tìm ra vulnerability để khắc phục, còn black-hat hacker tìm vulnerability chỉ để vui hoặc để khai thác."
         },
         {
           "id": "ATTT_C3_T1_Q3",
@@ -36,8 +36,8 @@
           "options": {
             "A": "Wardialer",
             "B": "Công cụ nhận dạng dấu vân tay hệ điều hành (OS fingerprinter)",
-            "C": "Công cụ quét cổng (Port scanner)",
-            "D": "Bộ phân tích giao thức (Protocol analyzer)"
+            "C": "Port scanner",
+            "D": "Protocol analyzer"
           },
           "correctAnswer": "D",
           "explanation": "Bộ phân tích giao thức, hay packet sniffer, là một chương trình phần mềm cho phép máy tính giám sát và bắt lưu lượng mạng, dù là trên mạng LAN hay mạng không dây."
@@ -56,12 +56,12 @@
         },
         {
           "id": "ATTT_C3_T1_Q5",
-          "question": "Loại tấn công từ chối dịch vụ nào khai thác sự tồn tại của các lỗi phần mềm để làm gián đoạn một dịch vụ?",
+          "question": "Loại DoS attack nào khai thác sự tồn tại của các lỗi phần mềm để làm gián đoạn một dịch vụ?",
           "options": {
             "A": "Tấn công SYN flood",
             "B": "Tấn công Smurf",
-            "C": "Tấn công logic (Logic attack)",
-            "D": "Tấn công làm ngập (Flooding attack)"
+            "C": "Logic attack",
+            "D": "Flooding attack"
           },
           "correctAnswer": "C",
           "explanation": "Tấn công logic dùng các lỗi phần mềm để làm sập hoặc làm suy giảm nghiêm trọng hiệu năng của máy chủ từ xa. Các tấn công làm ngập như Smurf và SYN flood làm quá tải CPU, bộ nhớ hoặc tài nguyên mạng của máy nạn nhân."
@@ -70,10 +70,10 @@
           "id": "ATTT_C3_T1_Q6",
           "question": "Tony đang phối hợp với một cơ quan thực thi pháp luật để thực hiện nghe lén (wiretap) theo lệnh hợp pháp của tòa án. Việc nghe lén sẽ giám sát các cuộc liên lạc mà không sửa đổi chúng. Tony đang đặt loại nghe lén nào?",
           "options": {
-            "A": "Nghe lén chủ động (Active wiretap)",
-            "B": "Nghe lén giữa các dòng (Between-the-lines wiretap)",
-            "C": "Nghe lén xâm nhập kiểu đi nhờ (Piggyback-entry wiretap)",
-            "D": "Nghe lén thụ động (Passive wiretap)"
+            "A": "Active wiretap",
+            "B": "Between-the-lines wiretap",
+            "C": "Piggyback-entry wiretap",
+            "D": "Passive wiretap"
           },
           "correctAnswer": "D",
           "explanation": "Nghe lén có thể là chủ động, khi kẻ tấn công sửa đổi đường truyền, hoặc thụ động, khi người dùng trái phép chỉ nghe đường truyền mà không thay đổi nội dung. Nghe lén giữa các dòng và nghe lén xâm nhập kiểu đi nhờ là các ví dụ của nghe lén chủ động."
@@ -83,69 +83,69 @@
           "question": "Người dùng trong tổ chức của Alison liên tục nhận được các tin nhắn quảng cáo không mong muốn qua chương trình nhắn tin tức thời của tổ chức. Đang xảy ra loại tấn công nào?",
           "options": {
             "A": "Spam",
-            "B": "Lừa đảo (Phishing)",
-            "C": "Kỹ thuật xã hội",
+            "B": "Phishing",
+            "C": "Social engineering",
             "D": "Spim"
           },
           "correctAnswer": "D",
-          "explanation": "Tấn công spim gửi các tin nhắn quảng cáo không mong muốn qua nhắn tin tức thời. Kịch bản không cho thấy các tin nhắn này cố lừa người dùng, vì nếu có thì chúng thuộc nhóm lừa đảo và/hoặc kỹ thuật xã hội."
+          "explanation": "Tấn công spim gửi các tin nhắn quảng cáo không mong muốn qua nhắn tin tức thời. Kịch bản không cho thấy các tin nhắn này cố lừa người dùng, vì nếu có thì chúng thuộc nhóm phishing và/hoặc social engineering."
         },
         {
           "id": "ATTT_C3_T1_Q8",
-          "question": "Thuật ngữ nào mô tả một hành động có thể gây thiệt hại hoặc làm tổn hại một tài sản?",
+          "question": "Thuật ngữ nào mô tả một hành động có thể gây thiệt hại hoặc làm tổn hại một asset?",
           "options": {
-            "A": "Rủi ro (Risk)",
-            "B": "Lỗ hổng (Vulnerability)",
-            "C": "Biện pháp đối phó (Countermeasure)",
-            "D": "Mối đe dọa (Threat)"
+            "A": "Risk",
+            "B": "Vulnerability",
+            "C": "Countermeasure",
+            "D": "Threat"
           },
           "correctAnswer": "D",
-          "explanation": "Mối đe dọa là bất kỳ hành động nào có thể gây thiệt hại hoặc làm tổn hại một tài sản. Rủi ro là xác suất một điều xấu xảy ra. Lỗ hổng là một điểm yếu, chẳng hạn trong thiết kế hệ thống hoặc mã phần mềm. Biện pháp đối phó là hành động hoặc biện pháp kiểm soát phát hiện lỗ hổng, ngăn chặn tấn công và ứng phó với hậu quả của các cuộc tấn công thành công."
+          "explanation": "Threat là bất kỳ hành động nào có thể gây thiệt hại hoặc làm tổn hại một asset. Risk là xác suất một điều xấu xảy ra. Vulnerability là một vulnerability, chẳng hạn trong thiết kế hệ thống hoặc mã phần mềm. Countermeasure là hành động hoặc biện pháp kiểm soát phát hiện vulnerability, ngăn chặn tấn công và ứng phó với hậu quả của các cuộc tấn công thành công."
         },
         {
           "id": "ATTT_C3_T1_Q9",
-          "question": "Ví dụ nào sau đây là mối đe dọa về tiết lộ thông tin (disclosure threat)?",
+          "question": "Ví dụ nào sau đây là threat về tiết lộ thông tin (disclosure threat)?",
           "options": {
-            "A": "Gián điệp (Espionage)",
-            "B": "Thay đổi (Alteration)",
-            "C": "Từ chối (Denial)",
-            "D": "Phá hủy (Destruction)"
+            "A": "Espionage",
+            "B": "Alteration",
+            "C": "Denial",
+            "D": "Destruction"
           },
           "correctAnswer": "A",
-          "explanation": "Gián điệp là một ví dụ về mối đe dọa tiết lộ thông tin. Đó là hành vi do thám để lấy thông tin bí mật, thường nhằm hỗ trợ một quốc gia khác. Khủng bố và điệp viên của đối phương có thể tham gia các hoạt động thu thập thông tin nhạy cảm của chính phủ để dùng cho các cuộc tấn công trong tương lai."
+          "explanation": "Gián điệp là một ví dụ về threat tiết lộ thông tin. Đó là hành vi do thám để lấy thông tin bí mật, thường nhằm hỗ trợ một quốc gia khác. Khủng bố và điệp viên của đối phương có thể tham gia các hoạt động thu thập thông tin nhạy cảm của chính phủ để dùng cho các cuộc tấn công trong tương lai."
         },
         {
           "id": "ATTT_C3_T1_Q10",
           "question": "Loại tấn công nào liên quan đến việc tạo ra sự lừa dối để đánh lừa những người dùng không nghi ngờ?",
           "options": {
-            "A": "Chặn bắt (Interception)",
-            "B": "Gián đoạn (Interruption)",
-            "C": "Bịa đặt (Fabrication)",
-            "D": "Sửa đổi (Modification)"
+            "A": "Interception",
+            "B": "Interruption",
+            "C": "Fabrication",
+            "D": "Modification"
           },
           "correctAnswer": "C",
           "explanation": "Bốn loại tấn công chung là bịa đặt, chặn bắt, gián đoạn và sửa đổi. Bịa đặt liên quan đến việc tạo ra sự lừa dối để đánh lừa những người dùng không nghi ngờ."
         },
         {
           "id": "ATTT_C3_T1_Q11",
-          "question": "Kiểu tấn công mật khẩu nào thường được dùng riêng nhằm vào các tệp mật khẩu chứa giá trị băm mật mã?",
+          "question": "Kiểu tấn công password nào thường được dùng riêng nhằm vào các tệp password chứa giá trị băm mật mã?",
           "options": {
-            "A": "Tấn công vét cạn (Brute-force)",
-            "B": "Tấn công từ điển (Dictionary)",
-            "C": "Tấn công sinh nhật (Birthday)",
-            "D": "Tấn công kỹ thuật xã hội"
+            "A": "Brute-force",
+            "B": "Dictionary",
+            "C": "Birthday",
+            "D": "Tấn công social engineering"
           },
           "correctAnswer": "C",
-          "explanation": "Mặc dù mọi loại tấn công được nêu đều có thể dùng để tấn công mật khẩu, chỉ tấn công sinh nhật nhắm riêng vào các giá trị băm mật mã được lưu trong tệp mật khẩu của hệ thống."
+          "explanation": "Mặc dù mọi loại tấn công được nêu đều có thể dùng để tấn công password, chỉ tấn công sinh nhật nhắm riêng vào các giá trị băm mật mã được lưu trong tệp password của hệ thống."
         },
         {
           "id": "ATTT_C3_T1_Q12",
           "question": "Brian nhận thấy một cuộc tấn công đang diễn ra trên mạng của mình. Khi tìm hiểu sâu hơn, anh nhận ra kẻ tấn công đang hiện diện vật lý trên mạng cục bộ và đang giả mạo các địa chỉ điều khiển truy cập môi trường (MAC). Nhiều khả năng đang xảy ra loại tấn công nào?",
           "options": {
-            "A": "Đầu độc giao thức phân giải địa chỉ (ARP poisoning)",
-            "B": "Giả mạo địa chỉ giao thức Internet (IP spoofing)",
-            "C": "Chiếm quyền điều khiển URL (URL hijacking)",
-            "D": "Tấn công Giáng sinh (Christmas attack)"
+            "A": "ARP poisoning",
+            "B": "IP spoofing",
+            "C": "URL hijacking",
+            "D": "Christmas attack"
           },
           "correctAnswer": "A",
           "explanation": "Đầu độc ARP là một ví dụ về tấn công giả mạo. Trong cuộc tấn công này, kẻ tấn công giả mạo địa chỉ MAC của thiết bị mục tiêu, như một máy chủ, bằng cách gửi các phản hồi phân giải ARP sai với một địa chỉ MAC khác. Điều này khiến lưu lượng mạng trùng lặp được gửi từ máy chủ."
@@ -154,9 +154,9 @@
           "id": "ATTT_C3_T1_Q13",
           "question": "Trong loại tấn công nào kẻ tấn công cố gắng chiếm lấy một kết nối hiện có giữa hai hệ thống?",
           "options": {
-            "A": "Tấn công người đứng giữa (Man-in-the-middle)",
-            "B": "Chiếm quyền điều khiển URL (URL hijacking)",
-            "C": "Chiếm quyền phiên (Session hijacking)",
+            "A": "Man-in-the-middle",
+            "B": "URL hijacking",
+            "C": "Session hijacking",
             "D": "Typosquatting"
           },
           "correctAnswer": "C",
@@ -164,36 +164,36 @@
         },
         {
           "id": "ATTT_C3_T1_Q14",
-          "question": "Nhóm nào là mục tiêu có khả năng cao nhất của một cuộc tấn công kỹ thuật xã hội?",
+          "question": "Nhóm nào là mục tiêu có khả năng cao nhất của một cuộc tấn công social engineering?",
           "options": {
             "A": "Nhân viên lễ tân và trợ lý hành chính",
             "B": "Đội ứng phó an ninh thông tin",
-            "C": "Kiểm toán viên nội bộ",
+            "C": "Auditor nội bộ",
             "D": "Nhà thầu độc lập"
           },
           "correctAnswer": "A",
-          "explanation": "Mặc dù bất kỳ nhân viên hay nhà thầu nào cũng có thể là mục tiêu của tấn công kỹ thuật xã hội, những cuộc tấn công này thường nhắm vào các đầu mối liên hệ ban đầu trong một tổ chức, chẳng hạn nhân viên lễ tân và trợ lý hành chính."
+          "explanation": "Mặc dù bất kỳ nhân viên hay nhà thầu nào cũng có thể là mục tiêu của tấn công social engineering, những cuộc tấn công này thường nhắm vào các đầu mối liên hệ ban đầu trong một tổ chức, chẳng hạn nhân viên lễ tân và trợ lý hành chính."
         },
         {
           "id": "ATTT_C3_T1_Q15",
-          "question": "Loại phần mềm độc hại nào giả dạng phần mềm hợp pháp để dụ người dùng chạy nó?",
+          "question": "Loại malware nào giả dạng phần mềm hợp pháp để dụ người dùng chạy nó?",
           "options": {
             "A": "Virus",
-            "B": "Sâu máy tính (Worm)",
-            "C": "Ngựa thành Troy (Trojan horse)",
+            "B": "Worm",
+            "C": "Trojan horse",
             "D": "Rootkit"
           },
           "correctAnswer": "C",
-          "explanation": "Ngựa thành Troy, còn gọi là Trojan, là phần mềm độc hại giả dạng một chương trình hữu ích. Các chương trình Trojan dùng vẻ ngoài của mình để lừa người dùng chạy chúng. Chúng trông như các chương trình thực hiện tác vụ hữu ích nhưng thực chất che giấu mã độc."
+          "explanation": "Trojan horse, còn gọi là Trojan, là malware giả dạng một chương trình hữu ích. Các chương trình Trojan dùng vẻ ngoài của mình để lừa người dùng chạy chúng. Chúng trông như các chương trình thực hiện tác vụ hữu ích nhưng thực chất che giấu malware."
         },
         {
           "id": "ATTT_C3_T1_Q16",
-          "question": "Một kẻ tấn công đang cố đột nhập vào một cơ sở đã kéo chuông báo cháy để đánh lạc hướng nhân viên bảo vệ đang canh giữ một cửa ra vào. Kẻ tấn công đang sử dụng kiểu tấn công kỹ thuật xã hội nào?",
+          "question": "Một kẻ tấn công đang cố đột nhập vào một cơ sở đã kéo chuông báo cháy để đánh lạc hướng nhân viên bảo vệ đang canh giữ một cửa ra vào. Kẻ tấn công đang sử dụng kiểu tấn công social engineering nào?",
           "options": {
             "A": "Vishing",
-            "B": "Tạo sự cấp bách (Urgency)",
+            "B": "Urgency",
             "C": "Whaling",
-            "D": "Dựa vào uy quyền (Authority)"
+            "D": "Authority"
           },
           "correctAnswer": "B",
           "explanation": "Trong tấn công tạo sự cấp bách, kẻ tấn công dùng một tình huống khẩn cấp hoặc cấp bách nào đó để khiến ai đó thực hiện một hành động hoặc tiết lộ thông tin."
@@ -202,17 +202,17 @@
           "id": "ATTT_C3_T1_Q17",
           "question": "Barry phát hiện một kẻ tấn công đang chạy một điểm truy cập không dây trong tòa nhà liền kề công ty anh. Điểm truy cập này đang phát tên mạng (SSID) của một mạng mở thuộc về quán cà phê ở sảnh tòa nhà của anh. Nhiều khả năng đang xảy ra loại tấn công nào?",
           "options": {
-            "A": "Evil twin (sinh đôi độc ác)",
+            "A": "Evil twin",
             "B": "Wardriving",
             "C": "Bluesnarfing",
-            "D": "Tấn công phát lại (Replay attack)"
+            "D": "Replay attack"
           },
           "correctAnswer": "A",
           "explanation": "Trong tấn công evil twin, kẻ tấn công dựng một mạng không dây mở hoặc công cộng giả để dùng công cụ nghe lén gói tin (packet sniffer) nhằm vào bất kỳ người dùng nào kết nối vào."
         },
         {
           "id": "ATTT_C3_T1_Q18",
-          "question": "Loại tấn công nào nhằm vào ứng dụng web sử dụng một lỗ hổng mới được phát hiện mà chưa thể vá được?",
+          "question": "Loại tấn công nào nhằm vào ứng dụng web sử dụng một vulnerability mới được phát hiện mà chưa thể vá được?",
           "options": {
             "A": "SQL injection",
             "B": "Cross-site scripting",
@@ -220,26 +220,26 @@
             "D": "Tấn công zero-day"
           },
           "correctAnswer": "D",
-          "explanation": "Tấn công zero-day khai thác các lỗ hổng mới mà nhà cung cấp chưa vá, khiến chúng rất khó chống lại."
+          "explanation": "Tấn công zero-day khai thác các vulnerability mới mà nhà cung cấp chưa vá, khiến chúng rất khó chống lại."
         },
         {
           "id": "ATTT_C3_T1_Q19",
-          "question": "Biện pháp kiểm soát nào KHÔNG được thiết kế để chống lại phần mềm độc hại?",
+          "question": "Biện pháp kiểm soát nào KHÔNG được thiết kế để chống lại malware?",
           "options": {
-            "A": "Tường lửa (Firewalls)",
+            "A": "Firewalls",
             "B": "Phần mềm diệt virus",
             "C": "Các nỗ lực nâng cao nhận thức và giáo dục",
-            "D": "Cách ly máy tính (Quarantine)"
+            "D": "Quarantine"
           },
           "correctAnswer": "A",
-          "explanation": "Tường lửa được thiết kế để kiểm soát các kết nối giữa những mạng có mức tin cậy khác nhau và không nhắm riêng vào phần mềm độc hại. Phần mềm diệt virus, hệ thống cách ly và các nỗ lực nâng cao nhận thức/giáo dục đều là các biện pháp hiệu quả chống phần mềm độc hại."
+          "explanation": "Firewall được thiết kế để kiểm soát các kết nối giữa những mạng có mức tin cậy khác nhau và không nhắm riêng vào malware. Phần mềm diệt virus, hệ thống cách ly và các nỗ lực nâng cao nhận thức/giáo dục đều là các biện pháp hiệu quả chống malware."
         },
         {
           "id": "ATTT_C3_T1_Q20",
-          "question": "Florian gần đây mua một loạt tên miền tương tự tên miền của các trang web hợp pháp và dùng các trang mới mua để lưu trữ phần mềm độc hại. Florian đang sử dụng loại tấn công nào?",
+          "question": "Florian gần đây mua một loạt tên miền tương tự tên miền của các trang web hợp pháp và dùng các trang mới mua để lưu trữ malware. Florian đang sử dụng loại tấn công nào?",
           "options": {
             "A": "Cross-site scripting",
-            "B": "Chiếm quyền phiên (Session hijacking)",
+            "B": "Session hijacking",
             "C": "SQL injection",
             "D": "Typosquatting"
           },
@@ -250,195 +250,235 @@
     },
     {
       "topicId": "ATTT_C3_T2",
-      "topicName": "Phần II – Đúng/Sai",
+      "topicName": "Phần II – Khái niệm & nhận định",
       "questions": [
         {
           "id": "ATTT_C3_T2_Q1",
-          "question": "Khi các máy chủ cần nâng cấp hoặc vá hệ điều hành, quản trị viên chủ động đưa chúng ngoại tuyến để thực hiện công việc cần thiết mà không gặp rủi ro bị tấn công độc hại.",
+          "question": "Khi server cần upgrade hoặc patch OS, admin nên làm gì để tránh risk bị malicious attack?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Chủ động đưa server offline trong lúc thực hiện",
+            "B": "Giữ server online và tắt firewall",
+            "C": "Thực hiện vào giờ cao điểm",
+            "D": "Bỏ qua patch"
           },
           "correctAnswer": "A"
         },
         {
           "id": "ATTT_C3_T2_Q2",
-          "question": "Kẻ tấn công dùng phần mềm khai thác lỗ hổng (exploit software) khi thực hiện wardialing.",
+          "question": "Attacker dùng exploit software khi thực hiện hoạt động nào?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Wardialing",
+            "B": "Social engineering",
+            "C": "Intrusive vulnerability assessment và penetration testing",
+            "D": "Dumpster diving"
           },
-          "correctAnswer": "B",
-          "explanation": "Kẻ tấn công dùng phần mềm khai thác lỗ hổng khi thực hiện đánh giá lỗ hổng và kiểm thử xâm nhập mang tính xâm lấn, chứ không phải khi wardialing."
+          "correctAnswer": "C",
+          "explanation": "Kẻ tấn công dùng phần mềm khai thác vulnerability khi thực hiện đánh giá vulnerability và penetration testing mang tính xâm lấn, chứ không phải khi wardialing."
         },
         {
           "id": "ATTT_C3_T2_Q3",
-          "question": "Wardialer ngày càng được sử dụng thường xuyên hơn do sự gia tăng của thoại qua IP (VoIP).",
+          "question": "Hiện nay wardialer được sử dụng như thế nào?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Ngày càng lỗi thời và ít được sử dụng",
+            "B": "Ngày càng được dùng nhiều do sự gia tăng của VoIP",
+            "C": "Thay thế hoàn toàn firewall",
+            "D": "Chỉ dùng trong chính phủ"
           },
-          "correctAnswer": "B",
+          "correctAnswer": "A",
           "explanation": "Wardialer ngày càng lỗi thời và ít được sử dụng hơn."
         },
         {
           "id": "ATTT_C3_T2_Q4",
-          "question": "Việc không ngăn chặn một cuộc tấn công gần như là mời gọi một cuộc tấn công.",
+          "question": "Việc không ngăn chặn một cuộc tấn công gần như là gì?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Giảm risk cho tổ chức",
+            "B": "Bằng chứng hệ thống đã an toàn",
+            "C": "Tăng availability",
+            "D": "Mời gọi thêm một cuộc tấn công"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "D"
         },
         {
           "id": "ATTT_C3_T2_Q5",
-          "question": "Tấn công DoS là nỗ lực có phối hợp nhằm từ chối dịch vụ bằng cách bắt một máy tính thực hiện một lượng lớn các tác vụ không cần thiết.",
+          "question": "Tấn công nào là nỗ lực phối hợp nhằm deny service bằng cách bắt một máy tính thực hiện lượng lớn tác vụ không cần thiết?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Pharming",
+            "B": "DoS attack",
+            "C": "Rootkit",
+            "D": "Spoofing"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "B"
         },
         {
           "id": "ATTT_C3_T2_Q6",
-          "question": "Rootkit dùng phát quảng bá có định hướng (directed broadcast) để tạo ra một luồng lưu lượng mạng tràn ngập máy tính nạn nhân.",
+          "question": "Tấn công nào dùng directed broadcast để tạo luồng network traffic làm tràn ngập máy tính nạn nhân?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Rootkit",
+            "B": "Phishing",
+            "C": "Birthday attack",
+            "D": "Smurf attack"
           },
-          "correctAnswer": "B",
+          "correctAnswer": "D",
           "explanation": "Tấn công smurf mới dùng phát quảng bá có định hướng để tạo ra một luồng lưu lượng mạng tràn ngập máy tính nạn nhân."
         },
         {
           "id": "ATTT_C3_T2_Q7",
-          "question": "Tấn công từ chối dịch vụ (DoS) có phạm vi lớn hơn tấn công từ chối dịch vụ phân tán (DDoS).",
+          "question": "So sánh scope của DoS và DDoS attack?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "DoS lớn hơn DDoS",
+            "B": "DDoS lớn hơn, vì attacker chiếm quyền hàng trăm hoặc hàng nghìn máy",
+            "C": "Hai loại có scope bằng nhau",
+            "D": "Không thể so sánh"
           },
           "correctAnswer": "B",
           "explanation": "Tấn công DDoS có phạm vi lớn hơn tấn công DoS. Trong một cuộc tấn công DDoS, kẻ tấn công chiếm quyền hàng trăm hoặc thậm chí hàng nghìn máy tính trên Internet, cài các tác nhân tấn công tự động lên các hệ thống đó."
         },
         {
           "id": "ATTT_C3_T2_Q8",
-          "question": "Email lừa đảo (phishing email) là một email giả hoặc không có thật nhằm lừa người nhận nhấp vào một liên kết URL nhúng sẵn hoặc mở tệp đính kèm email.",
+          "question": "Email giả nhằm lừa người nhận click vào URL nhúng sẵn hoặc mở attachment gọi là gì?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Phishing email",
+            "B": "Smurf attack",
+            "C": "Rootkit",
+            "D": "Backdoor"
           },
           "correctAnswer": "A"
         },
         {
           "id": "ATTT_C3_T2_Q9",
-          "question": "Rootkit là các chương trình phần mềm độc hại được thiết kế để ẩn khỏi các phương pháp phát hiện thông thường.",
+          "question": "Malware nào được thiết kế để ẩn khỏi các phương pháp detection thông thường?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Worm",
+            "B": "Spam",
+            "C": "Rootkit",
+            "D": "Cookie"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "C"
         },
         {
           "id": "ATTT_C3_T2_Q10",
-          "question": "Tiện ích chống phần mềm độc hại (anti-malware) là một trong những công cụ cửa hậu phổ biến nhất hiện nay.",
+          "question": "Công cụ backdoor nào phổ biến nhất hiện nay?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Anti-malware utility",
+            "B": "Firewall",
+            "C": "Antivirus scanner",
+            "D": "netcat utility"
           },
-          "correctAnswer": "B",
+          "correctAnswer": "D",
           "explanation": "Tiện ích netcat mới là một trong những công cụ cửa hậu phổ biến nhất hiện nay."
         },
         {
           "id": "ATTT_C3_T2_Q11",
-          "question": "Spam là hành vi nào đó nhằm lừa dối hoặc đánh lừa người nhận, thường qua các thư điện tử.",
+          "question": "Hành vi nhằm lừa dối hoặc đánh lừa người nhận, thường qua email, gọi là gì?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Spam",
+            "B": "Hoax",
+            "C": "Worm",
+            "D": "Rootkit"
           },
           "correctAnswer": "B",
           "explanation": "Hoax (tin giả lừa bịp) mới là hành vi nhằm lừa dối hoặc đánh lừa người nhận. Trong ngữ cảnh này, hoax thường được lan truyền qua thư điện tử."
         },
         {
           "id": "ATTT_C3_T2_Q12",
-          "question": "Mối đe dọa thay đổi thông tin (alteration threat) vi phạm tính toàn vẹn của thông tin.",
+          "question": "Alteration threat vi phạm nguyên tắc nào của thông tin?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Confidentiality",
+            "B": "Availability",
+            "C": "Nonrepudiation",
+            "D": "Integrity"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "D"
         },
         {
           "id": "ATTT_C3_T2_Q13",
-          "question": "Tấn công sinh nhật là một loại tấn công mật mã được dùng để làm cho tấn công vét cạn đối với các giá trị băm một chiều dễ dàng hơn.",
+          "question": "Cryptographic attack nào làm brute-force attack lên one-way hash values dễ dàng hơn?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Smurf attack",
+            "B": "Birthday attack",
+            "C": "Pharming",
+            "D": "Spoofing"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "B"
         },
         {
           "id": "ATTT_C3_T2_Q14",
-          "question": "Tấn công mật khẩu từ điển là một loại tấn công trong đó một người, chương trình hoặc máy tính giả dạng một người, chương trình hoặc máy tính khác để có quyền truy cập vào một tài nguyên nào đó.",
+          "question": "Loại attack mà một người, chương trình hoặc máy tính giả dạng đối tượng khác để có quyền truy cập tài nguyên gọi là gì?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Password dictionary attack",
+            "B": "Birthday attack",
+            "C": "Spoofing",
+            "D": "Smurf attack"
           },
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "explanation": "Giả mạo (spoofing) mới là loại tấn công trong đó một người, chương trình hoặc máy tính giả dạng một người, chương trình hoặc máy tính khác để có quyền truy cập vào một tài nguyên nào đó."
         },
         {
           "id": "ATTT_C3_T2_Q15",
-          "question": "Tấn công người đứng giữa (man-in-the-middle) tận dụng quá trình nhiều chặng (multihop) được nhiều loại mạng sử dụng.",
+          "question": "Man-in-the-middle attack tận dụng điều gì?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Quá trình multihop mà nhiều loại network sử dụng",
+            "B": "Lỗi phần cứng của ổ đĩa",
+            "C": "Việc mất điện",
+            "D": "Bản quyền phần mềm"
           },
           "correctAnswer": "A"
         },
         {
           "id": "ATTT_C3_T2_Q16",
-          "question": "Tấn công lừa đảo (phishing) \"đầu độc\" một tên miền trên máy chủ tên miền.",
+          "question": "Attack nào 'poison' một domain name trên name server?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Phishing",
+            "B": "Vishing",
+            "C": "Pharming",
+            "D": "Smurf attack"
           },
-          "correctAnswer": "B",
+          "correctAnswer": "C",
           "explanation": "Pharming mới \"đầu độc\" một tên miền trên máy chủ tên miền. Phishing cố lừa từng người một bằng email hoặc tin nhắn tức thời."
         },
         {
           "id": "ATTT_C3_T2_Q17",
-          "question": "Điểm khác biệt chính giữa virus và sâu máy tính (worm) là virus không cần chương trình chủ để lây nhiễm.",
+          "question": "Điểm khác biệt chính giữa virus và worm là gì?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Worm không cần host program để lây nhiễm",
+            "B": "Virus không cần host program để lây nhiễm",
+            "C": "Cả hai đều cần host program",
+            "D": "Worm chỉ lây qua USB"
           },
-          "correctAnswer": "B",
-          "explanation": "Điểm khác biệt chính giữa virus và sâu máy tính là sâu máy tính không cần chương trình chủ để lây nhiễm. Sâu là một chương trình độc lập."
+          "correctAnswer": "A",
+          "explanation": "Điểm khác biệt chính giữa virus và worm là worm không cần chương trình chủ để lây nhiễm. Sâu là một chương trình độc lập."
         },
         {
           "id": "ATTT_C3_T2_Q18",
-          "question": "Phần mềm gián điệp (spyware) thu thập thông tin về người dùng qua kết nối Internet mà họ không hay biết.",
+          "question": "Phần mềm nào thu thập thông tin người dùng qua Internet mà họ không hay biết?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Firewall",
+            "B": "Spyware",
+            "C": "Antivirus",
+            "D": "Backup software"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "B"
         },
         {
           "id": "ATTT_C3_T2_Q19",
-          "question": "Vishing là một loại tấn công mạng không dây.",
+          "question": "Vishing là loại tấn công nào?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Tấn công vào wireless network",
+            "B": "Tấn công phần cứng",
+            "C": "Tấn công DoS",
+            "D": "Social engineering qua điện thoại để moi thông tin cá nhân"
           },
-          "correctAnswer": "B",
-          "explanation": "Vishing là một loại tấn công kỹ thuật xã hội trong đó kẻ tấn công thực hiện lừa đảo qua điện thoại để moi thông tin cá nhân."
+          "correctAnswer": "D",
+          "explanation": "Vishing là một loại tấn công social engineering trong đó kẻ tấn công thực hiện phishing qua điện thoại để moi thông tin cá nhân."
         },
         {
           "id": "ATTT_C3_T2_Q20",
-          "question": "Sử dụng quy trình đăng nhập và xác thực an toàn là một trong sáu bước dùng để ngăn chặn phần mềm độc hại.",
+          "question": "Biện pháp nào là một trong sáu bước dùng để ngăn chặn malware?",
           "options": {
-            "A": "Đúng",
-            "B": "Sai"
+            "A": "Dùng quy trình login và authentication an toàn",
+            "B": "Tắt toàn bộ update",
+            "C": "Chia sẻ password",
+            "D": "Gỡ antivirus"
           },
           "correctAnswer": "A"
         }
