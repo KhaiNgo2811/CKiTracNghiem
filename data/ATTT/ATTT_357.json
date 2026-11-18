@@ -15,7 +15,8 @@
             "C": "Vulnerability",
             "D": "Threat"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Threat** là hành động có thể gây thiệt hại cho asset. Risk là khả năng thiệt hại, Vulnerability là điểm yếu, Countermeasure là biện pháp giảm rủi ro."
         },
         {
           "id": "ATTT_357_T1_Q2",
@@ -26,7 +27,8 @@
             "C": "Availability",
             "D": "Nonrepudiation"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Sửa điểm số là **sửa đổi trái phép dữ liệu** → vi phạm **Integrity**."
         },
         {
           "id": "ATTT_357_T1_Q3",
@@ -37,7 +39,8 @@
             "C": "MTTR",
             "D": "RTO"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**MTTR** (Mean Time To Repair) đo thời gian trung bình để sửa chữa. MTTF là thời gian chạy đến lần hỏng đầu, RTO là thời gian khôi phục tối đa chấp nhận được."
         },
         {
           "id": "ATTT_357_T1_Q4",
@@ -48,7 +51,8 @@
             "C": "99,96%",
             "D": "0,04%"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Tháng 9 có 30 ngày, ngừng 1 ngày → uptime = 29/30 = **96,67%**."
         },
         {
           "id": "ATTT_357_T1_Q5",
@@ -59,7 +63,8 @@
             "C": "Token",
             "D": "Fingerprint"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Giai đoạn **identification** là khai báo danh tính, thường bằng **Username**. Password/token/fingerprint dùng để authentication."
         },
         {
           "id": "ATTT_357_T1_Q6",
@@ -70,7 +75,8 @@
             "C": "Authorization",
             "D": "Tokenization"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Giai đoạn người dùng **chứng minh** danh tính đã khai báo là **Authentication**."
         },
         {
           "id": "ATTT_357_T1_Q7",
@@ -81,7 +87,8 @@
             "C": "Identification number",
             "D": "Token"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Identification number** chỉ để nhận dạng, không chứng minh danh tính nên không phải kỹ thuật authentication tốt."
         },
         {
           "id": "ATTT_357_T1_Q8",
@@ -92,7 +99,8 @@
             "C": "Guideline",
             "D": "Procedure"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Policy** cần lãnh đạo cấp cao phê duyệt và áp dụng cho toàn tổ chức."
         },
         {
           "id": "ATTT_357_T1_Q9",
@@ -103,7 +111,8 @@
             "C": "Guideline",
             "D": "Procedure"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Guideline** chỉ đưa ra gợi ý, không bắt buộc; Policy, Standard, Procedure đều bắt buộc."
         },
         {
           "id": "ATTT_357_T1_Q10",
@@ -114,7 +123,8 @@
             "C": "Guideline",
             "D": "Procedure"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Hướng dẫn **từng bước** và bắt buộc thực hiện → **Procedure**."
         },
         {
           "id": "ATTT_357_T1_Q11",
@@ -125,7 +135,8 @@
             "C": "Guideline",
             "D": "Procedure"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Định nghĩa chi tiết về phần cứng/phần mềm và cách sử dụng → **Standard**."
         },
         {
           "id": "ATTT_357_T1_Q12",
@@ -136,7 +147,8 @@
             "C": "Áp dụng các biện pháp kiểm soát theo thứ tự tăng dần của mức độ risk.",
             "D": "Tránh risk ưu việt hơn giảm thiểu risk."
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Nguyên tắc then chốt: **không chi cho bảo vệ một asset nhiều hơn giá trị của nó** — chi phí countermeasure phải hợp lý so với risk."
         },
         {
           "id": "ATTT_357_T1_Q13",
@@ -147,7 +159,8 @@
             "C": "Risk",
             "D": "Impact"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Lỗi trong mã cho phép SQL injection là một **điểm yếu (Vulnerability)** của hệ thống, không phải Threat hay Risk."
         },
         {
           "id": "ATTT_357_T1_Q14",
@@ -158,7 +171,8 @@
             "C": "Qualitative",
             "D": "Objective"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Tác động lên **danh tiếng** khó định giá bằng tiền → phân tích **Qualitative** (định tính)."
         },
         {
           "id": "ATTT_357_T1_Q15",
@@ -169,7 +183,8 @@
             "C": "20 phần trăm",
             "D": "50 phần trăm"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**EF = thiệt hại / giá trị tài sản** = 2 triệu / 10 triệu = **20%**."
         },
         {
           "id": "ATTT_357_T1_Q16",
@@ -180,7 +195,8 @@
             "C": "$200,000",
             "D": "$2,000,000"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**SLE = AV × EF** = 10 triệu × 20% = **$2.000.000** (thiệt hại cho một lần sự cố)."
         },
         {
           "id": "ATTT_357_T1_Q17",
@@ -191,7 +207,8 @@
             "C": "$200,000",
             "D": "$2,000,000"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**ALE = SLE × ARO** = 2.000.000 × 0,01 = **$20.000**."
         },
         {
           "id": "ATTT_357_T1_Q18",
@@ -202,7 +219,8 @@
             "C": "accept",
             "D": "avoid"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Mua bảo hiểm chuyển hậu quả tài chính sang bên khác → **transfer**."
         },
         {
           "id": "ATTT_357_T1_Q19",
@@ -213,7 +231,8 @@
             "C": "Accept",
             "D": "Avoid"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Mã hóa toàn bộ ổ đĩa làm giảm thiệt hại khi thiết bị bị đánh cắp → chiến lược **reduce** (giảm thiểu)."
         },
         {
           "id": "ATTT_357_T1_Q20",
@@ -224,7 +243,8 @@
             "C": "Transparent risk",
             "D": "Residual risk"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Residual risk** là rủi ro còn lại sau khi đã áp dụng mọi countermeasure đã lên kế hoạch."
         },
         {
           "id": "ATTT_357_T1_Q21",
@@ -235,7 +255,8 @@
             "C": "RPO",
             "D": "EOC"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**MTD** (Maximum Tolerable Downtime) là thời gian dài nhất doanh nghiệp chịu đựng được khi thiếu một hệ thống quan trọng. RTO là thời gian khôi phục mục tiêu (ngắn hơn MTD)."
         },
         {
           "id": "ATTT_357_T1_Q22",
@@ -246,7 +267,8 @@
             "C": "3",
             "D": "4"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Hỏng sáng Thứ Tư: cần **full backup Chủ nhật + differential gần nhất (Thứ Ba)** = 2 bản. Differential chứa mọi thay đổi từ full nên không cần các bản differential trước đó."
         },
         {
           "id": "ATTT_357_T1_Q23",
@@ -257,7 +279,8 @@
             "C": "Multiple sites",
             "D": "Hot site"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Hot site** sẵn sàng trong vài phút đến vài giờ vì có đủ phần cứng, dữ liệu và nhân sự trực."
         },
         {
           "id": "ATTT_357_T1_Q24",
@@ -268,7 +291,8 @@
             "C": "Decryption",
             "D": "Validation"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Muốn đọc ciphertext phải thực hiện **decryption** (giải mã)."
         },
         {
           "id": "ATTT_357_T1_Q25",
@@ -279,7 +303,8 @@
             "C": "Authentication",
             "D": "Nonrepudiation"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Đảm bảo thông điệp không bị thay đổi khi truyền là **Integrity**."
         },
         {
           "id": "ATTT_357_T1_Q26",
@@ -290,7 +315,8 @@
             "C": "Authentication",
             "D": "Nonrepudiation"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Chứng minh với **bên thứ ba** rằng thông điệp thực sự do Gary gửi (Gary không thể chối) là **Nonrepudiation**."
         },
         {
           "id": "ATTT_357_T1_Q27",
@@ -301,7 +327,8 @@
             "C": "Public key của Bob",
             "D": "Private key của Bob"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Digital signature được tạo bằng **private key của người gửi (Alice)**."
         },
         {
           "id": "ATTT_357_T1_Q28",
@@ -312,7 +339,8 @@
             "C": "Public key của Bob",
             "D": "Private key của Bob"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Để xác minh chữ ký, Bob dùng **public key của Alice**."
         },
         {
           "id": "ATTT_357_T1_Q29",
@@ -323,7 +351,8 @@
             "C": "Public key của Bob",
             "D": "Private key của Bob"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Để chỉ Bob đọc được, Alice mã hóa bằng **public key của Bob**."
         },
         {
           "id": "ATTT_357_T1_Q30",
@@ -334,7 +363,8 @@
             "C": "Spamming",
             "D": "Phishing"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Computer security** là bảo vệ tài sản máy tính khỏi truy cập, sử dụng, thay đổi hoặc phá hủy trái phép."
         },
         {
           "id": "ATTT_357_T1_Q31",
@@ -345,7 +375,8 @@
             "C": "threat",
             "D": "code"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Hành vi hay đối tượng gây nguy hiểm cho tài sản máy tính là **threat**. Countermeasure là biện pháp chống lại threat."
         },
         {
           "id": "ATTT_357_T1_Q32",
@@ -356,7 +387,8 @@
             "C": "tangible security",
             "D": "phishing"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Bảo vệ bằng phương tiện **phi vật lý** (password, ACL, firewall…) là **logical security**, đối lập với tangible/physical security."
         },
         {
           "id": "ATTT_357_T1_Q33",
@@ -367,7 +399,8 @@
             "C": "black hat hacker",
             "D": "cracker"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Eavesdropper** là người/thiết bị nghe trộm và sao chép các đường truyền Internet."
         },
         {
           "id": "ATTT_357_T1_Q34",
@@ -378,7 +411,8 @@
             "C": "Integrity",
             "D": "Encryption"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Secrecy** là bảo vệ chống tiết lộ dữ liệu trái phép và đảm bảo tính xác thực của nguồn dữ liệu (theo cách dùng trong đề e-commerce)."
         },
         {
           "id": "ATTT_357_T1_Q35",
@@ -389,7 +423,8 @@
             "C": "Necessity",
             "D": "Completeness"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Ngăn chặn sửa đổi dữ liệu trái phép là **Integrity**."
         },
         {
           "id": "ATTT_357_T1_Q36",
@@ -400,7 +435,8 @@
             "C": "security policy",
             "D": "digital signature"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Văn bản mô tả asset cần bảo vệ, ai chịu trách nhiệm và hành vi chấp nhận được là **security policy**."
         },
         {
           "id": "ATTT_357_T1_Q37",
@@ -411,7 +447,8 @@
             "C": "third-party cookies",
             "D": "session cookies"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Session cookies** tồn tại cho đến khi trình duyệt kết thúc kết nối. Persistent cookies được lưu lâu dài trên máy."
         },
         {
           "id": "ATTT_357_T1_Q38",
@@ -422,7 +459,8 @@
             "C": "Web bug",
             "D": "session cookies"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "JavaScript và VBScript là **scripting languages** thực thi lệnh ở phía client."
         },
         {
           "id": "ATTT_357_T1_Q39",
@@ -433,7 +471,8 @@
             "C": "ActiveX control",
             "D": "session cookie"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**ActiveX control** là đối tượng chứa chương trình và thuộc tính do web designer đặt trên trang để thực hiện tác vụ cụ thể."
         },
         {
           "id": "ATTT_357_T1_Q40",
@@ -444,7 +483,8 @@
             "C": "digital certificate",
             "D": "wardriver"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Trojan horse** là chương trình giấu bên trong chương trình/trang web khác, che giấu mục đích thật."
         },
         {
           "id": "ATTT_357_T1_Q41",
@@ -455,7 +495,8 @@
             "C": "Necessity",
             "D": "Sensitivity"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Privacy** là bảo vệ quyền của cá nhân không bị tiết lộ thông tin."
         },
         {
           "id": "ATTT_357_T1_Q42",
@@ -466,7 +507,8 @@
             "C": "sniffer programs",
             "D": "plug-in"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Sniffer programs** ghi lại thông tin đi qua máy tính hoặc router đang xử lý lưu lượng Internet."
         },
         {
           "id": "ATTT_357_T1_Q43",
@@ -477,7 +519,8 @@
             "C": "buffer",
             "D": "worm"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Buffer** là vùng bộ nhớ dành riêng để chứa dữ liệu đọc từ file hoặc database (lỗ hổng buffer overflow liên quan đến nó)."
         },
         {
           "id": "ATTT_357_T1_Q44",
@@ -488,7 +531,8 @@
             "C": "server",
             "D": "smartphone"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Smartphone** có thể làm ví điện tử dựa trên phần cứng (hardware-based digital wallet)."
         },
         {
           "id": "ATTT_357_T1_Q45",
@@ -499,7 +543,8 @@
             "C": "phishing attack",
             "D": "chargeback scheme"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Phishing attack** gửi email hàng loạt tới nhiều người nhận, những người có thể có tài khoản tại website mục tiêu. Due diligence, money laundering, chargeback scheme là các khái niệm khác."
         },
         {
           "id": "ATTT_357_T1_Q46",
@@ -510,7 +555,8 @@
             "C": "3 năm",
             "D": "Không có đáp án nào ở trên"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Chi phí: A = 750 + 50L, D = 250 + 150L (triệu VNĐ). Theo đáp án đề, không có mốc 1–3 năm nào khiến phương án A không nên dùng (dưới 4 năm chỉ có A khả dụng). Đáp án dựa trên các giả định tính toán — nên đối chiếu lời giải giảng viên."
         },
         {
           "id": "ATTT_357_T1_Q47",
@@ -521,7 +567,8 @@
             "C": "3 năm",
             "D": "Không có đáp án nào ở trên"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Theo đáp án đề, từ **1 năm** trở lên là nên dùng phương án A (A là phương án duy nhất khả dụng khi vòng đời dưới 4 năm). Nên đối chiếu lời giải giảng viên."
         },
         {
           "id": "ATTT_357_T1_Q48",
@@ -532,7 +579,8 @@
             "C": "Phương án C",
             "D": "Phương án D"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Vòng đời 4 năm: A = 950, B = 890, C = 925, D = **850** (triệu VNĐ) → chọn **D** (rẻ nhất)."
         },
         {
           "id": "ATTT_357_T1_Q49",
@@ -543,7 +591,8 @@
             "C": "Phương án C",
             "D": "Phương án D"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Vòng đời 5 năm: A = 1.000, B = **950**, C = 1.000, D = 1.000 → chọn **B**."
         },
         {
           "id": "ATTT_357_T1_Q50",
@@ -554,7 +603,8 @@
             "C": "Phương án C",
             "D": "Phương án D"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Vòng đời 6 năm: A = 1.050, B = **1.010**, C = 1.075, D = 1.150 → chọn **B**."
         }
       ]
     }

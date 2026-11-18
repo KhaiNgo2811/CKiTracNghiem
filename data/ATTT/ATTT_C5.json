@@ -70,7 +70,7 @@
           "id": "ATTT_C5_T1_Q6",
           "question": "Điều nào sau đây là ví dụ về two-factor authentication?",
           "options": {
-            "A": "PIN",
+            "A": "Smart card và PIN",
             "B": "Mã PIN và password",
             "C": "Password và câu hỏi bảo mật",
             "D": "Token và smart card"
@@ -261,7 +261,8 @@
             "C": "TOS",
             "D": "Guest OS"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**TOS** (Trusted Operating System) cung cấp tính năng đáp ứng yêu cầu an ninh cụ thể của chính phủ."
         },
         {
           "id": "ATTT_C5_T2_Q2",
@@ -284,7 +285,8 @@
             "C": "Username, smart card, biometrics",
             "D": "Full, incremental, differential backup"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Các phương pháp phổ biến để identify user: **username, smart card, biometrics**. Digital signature, hashing, firewall… không dùng để nhận dạng người dùng."
         },
         {
           "id": "ATTT_C5_T2_Q4",
@@ -295,7 +297,8 @@
             "C": "Cài rootkit lên máy nạn nhân",
             "D": "Đoán SQL query"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Dictionary attack** hash tất cả từ trong từ điển rồi so sánh với hash trong password file để tìm trùng khớp."
         },
         {
           "id": "ATTT_C5_T2_Q5",
@@ -342,7 +345,8 @@
             "C": "Token hình dạng như credit card, chứa microprocessor chip để nhận, lưu trữ và gửi thông tin qua reader",
             "D": "Một network protocol"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Smart card** là token hình dạng như credit card, chứa microprocessor chip để nhận, lưu và gửi thông tin qua reader."
         },
         {
           "id": "ATTT_C5_T2_Q9",
@@ -365,7 +369,8 @@
             "C": "Passphrases",
             "D": "Smart cards"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Vân tay, vân lòng bàn tay, quét võng mạc đều là các loại **biometrics**."
         },
         {
           "id": "ATTT_C5_T2_Q11",
@@ -376,7 +381,8 @@
             "C": "Chỉ phải nhớ một password nên user sẵn sàng dùng password mạnh hơn",
             "D": "Vì password được mã hóa bằng RADIUS"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Với **SSO** người dùng chỉ phải nhớ **một password**, nên sẵn sàng chọn password mạnh hơn."
         },
         {
           "id": "ATTT_C5_T2_Q12",
@@ -399,7 +405,8 @@
             "C": "Bản ghi chi tiết ai đã logon, khi nào và đã dùng thông tin hoặc tài nguyên nào",
             "D": "Tài liệu policy"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Log files** ghi chi tiết ai đăng nhập, khi nào và dùng tài nguyên nào — nền tảng cho accountability."
         },
         {
           "id": "ATTT_C5_T2_Q14",
@@ -410,7 +417,8 @@
             "C": "Tăng tốc ổ đĩa",
             "D": "Quét malware"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Degausser** tạo từ trường để xóa dữ liệu trên phương tiện lưu trữ từ tính."
         },
         {
           "id": "ATTT_C5_T2_Q15",
@@ -445,7 +453,8 @@
             "C": "Không cần xem gì",
             "D": "Cơ chế access control phải xem xét data để quyết định ai được xem"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Content-dependent access control** buộc cơ chế phải xem xét **nội dung dữ liệu** để quyết định ai được xem."
         },
         {
           "id": "ATTT_C5_T2_Q18",
@@ -456,7 +465,8 @@
             "C": "Định nghĩa một barrier và tập quy tắc bảo đảm không subject nào truy cập được objects phía bên kia",
             "D": "Chỉ ghi log"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Chinese wall** tạo một barrier và tập quy tắc để không subject nào truy cập được objects ở phía bên kia (tránh xung đột lợi ích)."
         },
         {
           "id": "ATTT_C5_T2_Q19",
@@ -467,7 +477,8 @@
             "C": "Dùng multifactor authentication",
             "D": "Backup định kỳ"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Mô hình **P2P** có thể làm người dùng vô tình share thư mục My Documents → là mối đe dọa đối với access control."
         },
         {
           "id": "ATTT_C5_T2_Q20",

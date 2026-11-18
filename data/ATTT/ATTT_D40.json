@@ -15,7 +15,8 @@
             "C": "90",
             "D": "100"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Mỗi người dùng asymmetric encryption sở hữu **một cặp khóa** (public + private), nên 10 người có 10 cặp. Theo cách đếm của đề, đáp án là 10 (nếu đếm từng khóa riêng lẻ sẽ là 20 – không có trong đáp án). Chưa có đáp án chính thức, nên đối chiếu slide."
         },
         {
           "id": "ATTT_D40_T1_Q2",
@@ -26,7 +27,8 @@
             "C": "100",
             "D": "90"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Với symmetric encryption, mỗi cặp người dùng cần một khóa chung: công thức chuẩn n(n−1)/2 = 45. Đáp án trong đề (90 = n(n−1)) tính mỗi chiều một khóa. Chưa có đáp án chính thức, nên đối chiếu slide."
         },
         {
           "id": "ATTT_D40_T1_Q3",
@@ -37,7 +39,8 @@
             "C": "Tất cả đều sai",
             "D": "Gởi tài liệu cho B"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Mã hóa bằng **public key của B** thì chỉ B (người giữ private key) giải mã được → mục đích là **gởi tài liệu riêng cho B**, không phải giữ cho mình hay gửi nhiều người."
         },
         {
           "id": "ATTT_D40_T1_Q4",
@@ -48,7 +51,8 @@
             "C": "3 lần",
             "D": "2 lần"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Theo kiểu hybrid: mã hóa nội dung bằng symmetric rồi mã hóa khóa bằng asymmetric → **2 lần** mã hóa để vừa nhanh vừa an toàn."
         },
         {
           "id": "ATTT_D40_T1_Q5",
@@ -59,7 +63,8 @@
             "C": "Public key của A",
             "D": "Public key của B"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Cách an toàn nhất để gửi cho B là dùng **public key của B**, vì chỉ private key của B (không ai khác có) mới giải mã được."
         },
         {
           "id": "ATTT_D40_T1_Q6",
@@ -70,7 +75,8 @@
             "C": "Private key của B",
             "D": "Public key của B"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Thông điệp mã hóa bằng public key của B chỉ giải mã được bằng **private key của B** — cặp khóa này đi với nhau."
         },
         {
           "id": "ATTT_D40_T1_Q7",
@@ -81,7 +87,8 @@
             "C": "Private key của A",
             "D": "Private key của B"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Mã hóa bằng private key của A thì bất kỳ ai cũng giải được bằng **public key của A**; cách này chứng minh nguồn gốc (authentication), không bảo mật nội dung."
         },
         {
           "id": "ATTT_D40_T1_Q8",
@@ -92,7 +99,8 @@
             "C": "Public key của A",
             "D": "Private key của B"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Để giữ bí mật nội dung gửi cho B, A mã hóa bằng **public key của B**. Private key của A dùng để ký, không dùng để giữ bí mật."
         },
         {
           "id": "ATTT_D40_T1_Q9",
@@ -103,7 +111,8 @@
             "C": "Private key của B",
             "D": "Private key của A"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Digital signature được tạo bằng **private key của người gửi (A)**, và người nhận dùng public key của A để kiểm tra."
         },
         {
           "id": "ATTT_D40_T1_Q10",
@@ -114,7 +123,8 @@
             "C": "Số tổn thất xảy ra trong 1 năm",
             "D": "Số tổn thất từ một sự cố"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**ALE** (Annualized Loss Expectancy) là tổn thất kỳ vọng **trong một năm** = SLE × ARO. SLE là tổn thất mỗi lần sự cố, ARO là số lần sự cố mỗi năm."
         },
         {
           "id": "ATTT_D40_T1_Q11",
@@ -125,7 +135,8 @@
             "C": "Tất cả đều sai",
             "D": "Số sự cố xảy ra trong 1 năm"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**ARO** (Annualized Rate of Occurrence) là **số sự cố xảy ra trong một năm** (ví dụ 10 năm một lần → ARO = 0,1)."
         },
         {
           "id": "ATTT_D40_T1_Q12",
@@ -136,7 +147,8 @@
             "C": "Public key của B",
             "D": "Private key của A"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Để xác minh chữ ký, B dùng **public key của A** (người ký). Chỉ A có private key tương ứng nên chữ ký chứng minh được nguồn gốc."
         },
         {
           "id": "ATTT_D40_T1_Q13",
@@ -147,7 +159,8 @@
             "C": "10%",
             "D": "20%"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**EF = thiệt hại / giá trị tài sản** = 2 triệu / 10 triệu = **20%**."
         },
         {
           "id": "ATTT_D40_T1_Q14",
@@ -158,7 +171,8 @@
             "C": "200.000 đô la",
             "D": "20.000 đô la"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "SLE là thiệt hại cho **một lần** sự cố = 2.000.000 đô la (= AV × EF = 10.000.000 × 20%)."
         },
         {
           "id": "ATTT_D40_T1_Q15",
@@ -169,7 +183,8 @@
             "C": "20.000 đô la",
             "D": "2.000.000 đô la"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "ALE = SLE × ARO = 2.000.000 × 0,01 = **20.000 đô la**."
         },
         {
           "id": "ATTT_D40_T1_Q16",
@@ -180,7 +195,8 @@
             "C": "Điện thoại công nghệ mới",
             "D": "Tất cả đều sai"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Theo đề, nhận OTP nên dùng **điện thoại cơ bản** vì không cài ứng dụng lạ nên ít nguy cơ malware đánh cắp OTP hơn smartphone."
         },
         {
           "id": "ATTT_D40_T1_Q17",
@@ -191,7 +207,8 @@
             "C": "Tất cả đều sai",
             "D": "Bất đối xứng"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Dịch chuyển ký tự (shift/Caesar cipher) dùng **cùng một khóa** (độ dịch) để mã hóa và giải mã → **symmetric**."
         },
         {
           "id": "ATTT_D40_T1_Q18",
@@ -202,7 +219,8 @@
             "C": "Cải thiện khả năng phục hồi sau thảm họa",
             "D": "Giảm phụ thuộc vào các nhà cung cấp bên ngoài"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Cloud thường **làm tăng** phụ thuộc vào nhà cung cấp bên ngoài, nên “giảm phụ thuộc” không phải lợi ích. Các lợi ích thật: không cần data center, cấp phát theo yêu cầu, cải thiện DR."
         },
         {
           "id": "ATTT_D40_T1_Q19",
@@ -213,7 +231,8 @@
             "C": "Biometrics yêu cầu sự hiện diện vật lý",
             "D": "Các đặc điểm vật lý có thể thay đổi"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Đặc điểm vật lý **có thể thay đổi** (chấn thương, tuổi tác) là **nhược điểm** của biometrics, không phải lợi thế."
         },
         {
           "id": "ATTT_D40_T1_Q20",
@@ -224,7 +243,8 @@
             "C": "Bao gồm một ký tự đặc biệt trong password",
             "D": "Sử dụng ít nhất sáu ký tự chữ và số"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "“Ít nhất sáu ký tự” là **quá ngắn** theo thực tiễn tốt hiện nay. Các phương án còn lại (không có username, trộn ký tự, có ký tự đặc biệt) là thực hành tốt."
         },
         {
           "id": "ATTT_D40_T1_Q21",
@@ -235,7 +255,8 @@
             "C": "Smart card và mã PIN",
             "D": "Token và smart card"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Smart card (have) + PIN (know)** là hai yếu tố khác loại → two-factor. Các cặp còn lại đều cùng loại (know + know hoặc have + have)."
         },
         {
           "id": "ATTT_D40_T1_Q22",
@@ -246,7 +267,8 @@
             "C": "Tất cả đều đúng",
             "D": "Asymmetric encryption"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Asymmetric encryption** có độ bảo mật cao hơn (cặp khóa, không cần chia sẻ khóa bí mật) nhưng chậm hơn symmetric."
         },
         {
           "id": "ATTT_D40_T1_Q23",
@@ -257,7 +279,8 @@
             "C": "Dùng thẻ tín dụng",
             "D": "Dùng dịch vụ thanh toán trung gian"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Dùng **dịch vụ thanh toán trung gian (escrow)**: tiền chỉ được trả cho người bán sau khi người mua nhận hàng → an toàn cho cả hai bên."
         },
         {
           "id": "ATTT_D40_T1_Q24",
@@ -268,7 +291,8 @@
             "C": "Something you have",
             "D": "Something you do"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Smart card là vật mà người dùng **sở hữu** → **something you have**."
         },
         {
           "id": "ATTT_D40_T1_Q25",
@@ -279,7 +303,8 @@
             "C": "Tất cả đều đúng",
             "D": "Ngăn chặn truy cập trái phép"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Xác thực hai bước thêm một lớp bảo vệ nên **ngăn chặn truy cập trái phép** ngay cả khi lộ password. Nó không cho phép dùng password yếu hay chia sẻ tài khoản."
         },
         {
           "id": "ATTT_D40_T1_Q26",
@@ -290,7 +315,8 @@
             "C": "Tất cả đều đúng",
             "D": "Để đảm bảo xuất xứ"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Hash function** tạo giá trị băm để phát hiện văn bản bị thay đổi → đảm bảo **integrity**, không đảm bảo bí mật."
         },
         {
           "id": "ATTT_D40_T1_Q27",
@@ -301,7 +327,8 @@
             "C": "5",
             "D": "6"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Mật mã cần đảm bảo **4 mục tiêu**: Confidentiality, Integrity, Authentication, Nonrepudiation."
         },
         {
           "id": "ATTT_D40_T1_Q28",
@@ -312,7 +339,8 @@
             "C": "Ngân hàng và khách hàng",
             "D": "Ngân hàng"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Theo đề, tổn thất do **ATM giả** thuộc trách nhiệm của **ngân hàng** vì ngân hàng chịu trách nhiệm về thiết bị và hệ thống giao dịch."
         },
         {
           "id": "ATTT_D40_T1_Q29",
@@ -323,7 +351,8 @@
             "C": "Integrity",
             "D": "Authentication"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Chứng minh tin nhắn thực sự đến từ người gửi là mục tiêu **Authentication** (xác thực nguồn gốc)."
         },
         {
           "id": "ATTT_D40_T1_Q30",
@@ -334,7 +363,8 @@
             "C": "Authentication",
             "D": "Bí mật"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Đảm bảo không ai can thiệp, thay đổi tin nhắn khi đang truyền là **Integrity**."
         },
         {
           "id": "ATTT_D40_T1_Q31",
@@ -345,7 +375,8 @@
             "C": "Authentication",
             "D": "Identification"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Theo dõi hành động đến từng cá nhân là **Accountability** (giai đoạn cuối của access control)."
         },
         {
           "id": "ATTT_D40_T1_Q32",
@@ -356,7 +387,8 @@
             "C": "Động lực",
             "D": "Độ chính xác"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Người dùng ngại quét võng mạc vì lo ngại riêng tư → đang xét **acceptability** (khả năng chấp nhận) của hệ thống biometrics."
         },
         {
           "id": "ATTT_D40_T1_Q33",
@@ -367,7 +399,8 @@
             "C": "Authentication",
             "D": "Mã hóa"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Nhận được ciphertext, muốn đọc phải **giải mã (decryption)**."
         },
         {
           "id": "ATTT_D40_T1_Q34",
@@ -378,7 +411,8 @@
             "C": "Tất cả đều sai",
             "D": "Số tổn thất từ một sự cố"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**SLE** là tổn thất kỳ vọng cho **một lần** sự cố (SLE = AV × EF), khác ALE (hằng năm) và ARO (số sự cố mỗi năm)."
         },
         {
           "id": "ATTT_D40_T1_Q35",
@@ -389,7 +423,8 @@
             "C": "Tất cả đều đúng",
             "D": "Kết hợp 2 kiểu mã hóa"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Asymmetric encryption** chậm hơn vì phép toán trên cặp khóa phức tạp; symmetric nhanh hơn nhiều."
         },
         {
           "id": "ATTT_D40_T1_Q36",
@@ -400,7 +435,8 @@
             "C": "Asymmetric encryption",
             "D": "Kết hợp 2 kiểu mã hóa"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Symmetric encryption** dùng một khóa và phép toán đơn giản nên tốc độ nhanh."
         },
         {
           "id": "ATTT_D40_T1_Q37",
@@ -411,7 +447,8 @@
             "C": "1 lần",
             "D": "2 lần"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Trong kiểu hybrid, symmetric được dùng **1 lần** để mã hóa nội dung; asymmetric dùng 1 lần để mã hóa khóa symmetric."
         },
         {
           "id": "ATTT_D40_T1_Q38",
@@ -422,7 +459,8 @@
             "C": "Identification",
             "D": "Authentication"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "“Người yêu cầu có thể truy cập những gì?” là câu hỏi của giai đoạn **Authorization**."
         },
         {
           "id": "ATTT_D40_T1_Q39",
@@ -433,7 +471,8 @@
             "C": "Thẻ ra vào",
             "D": "Chìa khóa cho một ổ khóa"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Password** là kiểm soát truy cập **logic** (bảo vệ hệ thống máy tính). Hàng rào, thẻ ra vào, ổ khóa là kiểm soát vật lý."
         },
         {
           "id": "ATTT_D40_T1_Q40",
@@ -444,7 +483,8 @@
             "C": "Tất cả đều sai",
             "D": "Họ tên"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Theo đáp án của đề, người gửi email được xác thực dựa vào **địa chỉ trả về**. Lưu ý: cách xác thực chắc chắn hơn là chữ ký số; đáp án này chưa có đáp án chính thức."
         }
       ]
     }

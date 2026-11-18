@@ -15,7 +15,8 @@
             "C": "'Tại sao dữ liệu lớn?'",
             "D": "'Nên làm gì?'"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Descriptive analytics** trả lời “**Điều gì đã xảy ra?**” (báo cáo quá khứ)."
         },
         {
           "id": "C8_T1_Q2",
@@ -26,7 +27,8 @@
             "C": "Chỉ lưu dữ liệu",
             "D": "Dự báo (Predict) và đề xuất hành động (Prescribe) ngay tại kho dữ liệu"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Actionable analytics** thêm **Predict** (dự báo) và **Prescribe** (đề xuất hành động) ngay tại kho dữ liệu."
         },
         {
           "id": "C8_T1_Q3",
@@ -37,7 +39,8 @@
             "C": "Chỉ lưu CSV",
             "D": "Chỉ chạy streaming"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**BigQuery Object Tables** phân tích trực tiếp ảnh, PDF, audio, video bằng SQL."
         },
         {
           "id": "C8_T1_Q4",
@@ -48,7 +51,8 @@
             "C": "50%",
             "D": "5%"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Dữ liệu phi cấu trúc chiếm khoảng **80%** dữ liệu tiềm ẩn của doanh nghiệp (theo slide)."
         }
       ]
     },
@@ -65,7 +69,8 @@
             "C": "Chuyển số thành văn bản",
             "D": "Chuyển văn bản, hình ảnh thành chuỗi số (vector) mang ý nghĩa ngữ nghĩa để so sánh"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Embeddings** chuyển văn bản/hình ảnh thành vector mang ý nghĩa ngữ nghĩa để so sánh."
         },
         {
           "id": "C8_T2_Q2",
@@ -76,7 +81,8 @@
             "C": "Công cụ CDC",
             "D": "Kiểu dữ liệu bán cấu trúc"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**IVFFLAT** là kiểu vector index (Inverted File) chia không gian vector thành các phân vùng để thu hẹp phạm vi tìm."
         },
         {
           "id": "C8_T2_Q3",
@@ -87,7 +93,8 @@
             "C": "Chỉ tìm đúng từ khóa",
             "D": "Chỉ tìm theo ngày"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Semantic Match** tìm theo **ý nghĩa**, còn keyword matching chỉ khớp từ khóa chính xác."
         },
         {
           "id": "C8_T2_Q4",
@@ -98,7 +105,8 @@
             "C": "Rapid Access Gateway",
             "D": "Real-time Analytics Graph"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**RAG** = **Retrieval-Augmented Generation**."
         },
         {
           "id": "C8_T2_Q5",
@@ -109,7 +117,8 @@
             "C": "Tăng dung lượng lưu trữ",
             "D": "Mã hóa dữ liệu"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "RAG giúp AI trả lời dựa trên **kho dữ liệu tin cậy của doanh nghiệp** thay vì kiến thức chung."
         },
         {
           "id": "C8_T2_Q6",
@@ -120,7 +129,8 @@
             "C": "Generation → Retrieval → Embedding → Ingestion",
             "D": "Embedding → Ingestion → Generation → Retrieval"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Thứ tự: **Ingestion → Embedding → Retrieval → Generation**."
         },
         {
           "id": "C8_T2_Q7",
@@ -131,7 +141,8 @@
             "C": "Tìm ngữ cảnh liên quan",
             "D": "Băm nhỏ tài liệu (Chunks) và tạo Vector"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Embedding**: băm nhỏ tài liệu thành chunks và tạo vector."
         },
         {
           "id": "C8_T2_Q8",
@@ -142,7 +153,8 @@
             "C": "Lỗi SQL; RAG sửa cú pháp",
             "D": "Lỗi phần cứng; RAG thay linh kiện"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Hallucination** là AI tự đưa ra câu trả lời sai; RAG ép mô hình chỉ dùng dữ liệu nội bộ đã kiểm chứng."
         }
       ]
     },
@@ -159,7 +171,8 @@
             "C": "Chỉ viết SQL",
             "D": "Đặt câu hỏi bằng ngôn ngữ tự nhiên mà không cần biết SQL"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Chat-with-your-data**: hỏi bằng ngôn ngữ tự nhiên mà không cần biết SQL."
         },
         {
           "id": "C8_T3_Q2",
@@ -170,7 +183,8 @@
             "C": "Vẽ biểu đồ",
             "D": "Gửi email"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Auto-SQL**: LLM biên dịch câu hỏi thành câu SQL chuẩn xác, tối ưu và an toàn."
         },
         {
           "id": "C8_T3_Q3",
@@ -181,7 +195,8 @@
             "C": "Phát hiện gian lận thẻ, định giá động, quản trị chuỗi cung ứng",
             "D": "Sao lưu hàng tuần"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Real-time Insights ứng dụng cho **phát hiện gian lận thẻ, định giá động, quản trị chuỗi cung ứng**."
         },
         {
           "id": "C8_T3_Q4",
@@ -192,7 +207,8 @@
             "C": "Bối cảnh → Vấn đề → Giải pháp → Hành động",
             "D": "Hành động → Giải pháp → Vấn đề → Bối cảnh"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Cấu trúc Data Storytelling: **Bối cảnh → Vấn đề → Giải pháp → Hành động**."
         },
         {
           "id": "C8_T3_Q5",
@@ -203,7 +219,8 @@
             "C": "Là kỹ năng cầu nối giữa bộ phận kỹ thuật (IT/Data) và bộ phận Chiến lược (Business)",
             "D": "Thay thế hoàn toàn dashboard"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Data Storytelling là kỹ năng **cầu nối** giữa bộ phận kỹ thuật (IT/Data) và chiến lược (Business)."
         },
         {
           "id": "C8_T3_Q6",
@@ -214,7 +231,8 @@
             "C": "Cơ sở dữ liệu NoSQL",
             "D": "Công cụ vẽ biểu đồ"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Agentic BI**: AI Agents là “chuyên viên phân tích tự hành”, tự theo dõi mục tiêu, lập kế hoạch, truy vấn và đề xuất."
         },
         {
           "id": "C8_T3_Q7",
@@ -225,7 +243,8 @@
             "C": "FTP và Excel",
             "D": "Pub/Sub và Continuous Queries"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Zero Latency** nhờ **Pub/Sub** kết hợp **Continuous Queries**."
         },
         {
           "id": "C8_T3_Q8",
@@ -236,7 +255,8 @@
             "C": "DeepSeek",
             "D": "Gemini"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Looker** là BI Tool. ChatGPT, DeepSeek, Gemini là mô hình LLM, không phải BI Tool."
         }
       ]
     }

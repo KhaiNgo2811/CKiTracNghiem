@@ -224,6 +224,11 @@ function renderQuizNavigator() {
   });
 }
 
+/** Giải thích dùng **đậm** kiểu markdown -> <b> */
+function fmtExplain(t) {
+  return String(t || '').replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+}
+
 function renderQuestionCard(q, index) {
   const selected = Quiz.state.userAnswers[q.id];
   const flagged = Quiz.isFlagged(q.id);
@@ -268,7 +273,7 @@ function renderCheckArea(q, selected, checked) {
   const ok = selected === q.correctAnswer;
   return `<div class="alert ${ok ? 'alert-success' : 'alert-danger'} mt-2 mb-0 py-2">
     ${ok ? '<i class="bi bi-check-circle-fill"></i> Chính xác!' : `<i class="bi bi-x-circle-fill"></i> Sai rồi. Đáp án đúng: <b>${q.correctAnswer}. ${q.options[q.correctAnswer]}</b>`}
-    ${q.explanation ? `<div class="small mt-1">${q.explanation}</div>` : ''}
+    ${q.explanation ? `<div class="small mt-2 pt-2 border-top"><b><i class="bi bi-lightbulb-fill"></i> Giải thích:</b> ${fmtExplain(q.explanation)}</div>` : ''}
   </div>`;
 }
 
@@ -465,7 +470,7 @@ function renderResult(attempt) {
       return `
         <tr class="${rowClass}">
           <td>${i + 1}</td>
-          <td>${a.question}${renderQuestionImages(a.images)}</td>
+          <td>${a.question}${renderQuestionImages(a.images)}${a.explanation ? `<div class="small text-muted mt-2"><b><i class="bi bi-lightbulb-fill"></i> Giải thích:</b> ${fmtExplain(a.explanation)}</div>` : ''}</td>
           <td>${selectedText}${flagText}</td>
           <td>${correctText}</td>
           <td class="text-center">${a.isCorrect ? '<i class="bi bi-check-circle-fill text-success fs-5"></i>' : '<i class="bi bi-x-circle-fill text-danger fs-5"></i>'}</td>

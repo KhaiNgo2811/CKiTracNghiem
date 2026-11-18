@@ -15,7 +15,8 @@
             "C": "Phân tích đa chiều (OLAP)",
             "D": "Giao dịch đơn lẻ (OLTP)"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Thập niên 1980 là kỷ nguyên **RDBMS**, tập trung vào **giao dịch đơn lẻ (OLTP)**. OLAP là đặc trưng của Data Warehouse (1990s)."
         },
         {
           "id": "C1_T1_Q2",
@@ -26,7 +27,8 @@
             "C": "Lưu trữ dữ liệu thô trên Hadoop/S3",
             "D": "Xử lý giao dịch đơn lẻ (OLTP)"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Data Warehouse** (1990s) phục vụ **báo cáo quản trị và phân tích (OLAP)**, khác OLTP của RDBMS."
         },
         {
           "id": "C1_T1_Q3",
@@ -37,7 +39,8 @@
             "C": "Chỉ lưu dữ liệu đã chuẩn hóa theo Star Schema",
             "D": "Chuyển toàn bộ giao dịch lên RDBMS"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Data Lake** (2010s) gắn với lưu trữ dữ liệu **thô quy mô lớn** trên Hadoop/S3."
         },
         {
           "id": "C1_T1_Q4",
@@ -48,7 +51,8 @@
             "C": "Sự tin cậy của SQL và tính linh hoạt của Lake",
             "D": "Tốc độ OLTP và chi phí của Archive"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Lakehouse** hợp nhất **độ tin cậy của SQL** (Warehouse) và **tính linh hoạt của Lake**."
         },
         {
           "id": "C1_T1_Q5",
@@ -59,7 +63,8 @@
             "C": "Kafka và Airflow",
             "D": "Iceberg và Delta Lake"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Apache Iceberg và Delta Lake** là các Open Table Formats trở thành chuẩn kết nối. dbt, Snowpipe, Kafka, Airflow là công cụ pipeline, không phải định dạng bảng."
         },
         {
           "id": "C1_T1_Q6",
@@ -70,7 +75,8 @@
             "C": "Yêu cầu cấu trúc dữ liệu nghiêm ngặt trước khi nạp",
             "D": "Lưu dữ liệu thô không cần cấu trúc"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Schema-on-write** nghĩa là phải định nghĩa cấu trúc dữ liệu chặt chẽ **trước khi nạp**; Schema-on-read mới định nghĩa lúc truy vấn."
         },
         {
           "id": "C1_T1_Q7",
@@ -81,7 +87,8 @@
             "C": "Không thể nâng cấp CPU mà không tăng dung lượng đĩa",
             "D": "Không hỗ trợ ngôn ngữ SQL"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "RDBMS gắn chặt tính toán với lưu trữ nên **không nâng CPU mà không tăng dung lượng đĩa** được."
         },
         {
           "id": "C1_T1_Q8",
@@ -92,7 +99,8 @@
             "C": "Chỉ lưu được dữ liệu có cấu trúc",
             "D": "Bắt buộc Schema-on-write"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Native Vector**: lưu và truy vấn **Vector Embeddings** trực tiếp cho LLM, ngay trong tầng lưu trữ."
         },
         {
           "id": "C1_T1_Q9",
@@ -103,7 +111,8 @@
             "C": "Che dấu dữ liệu PII",
             "D": "Tăng tốc truy vấn bằng cache"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**ACID** trên Object Storage bảo đảm **tính toàn vẹn** giao dịch dù dữ liệu nằm trên đám mây."
         },
         {
           "id": "C1_T1_Q10",
@@ -114,7 +123,8 @@
             "C": "Quản lý và tái sử dụng các đặc trưng (features) cho mô hình ML",
             "D": "Chia sẻ dữ liệu với đối tác"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Feature Store** quản lý và **tái sử dụng đặc trưng (features)** cho nhiều mô hình ML."
         },
         {
           "id": "C1_T1_Q11",
@@ -125,7 +135,8 @@
             "C": "Từ 'Lưu trữ để dự báo' sang 'Lưu trữ để báo cáo'",
             "D": "Từ Cloud về On-premise"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Tư duy chuyển từ “lưu trữ để **báo cáo**” sang “lưu trữ để **dự báo và hành động**”."
         }
       ]
     },
@@ -142,7 +153,8 @@
             "C": "Tập trung vào tốc độ truy vấn cực nhanh cho các ứng dụng phân tích thời gian thực",
             "D": "Hợp nhất SQL, Spark và tích hợp dữ liệu trong một môi trường"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Firebolt** tập trung vào **tốc độ truy vấn cực nhanh** cho ứng dụng phân tích thời gian thực. Redshift là AWS, MotherDuck dựa trên DuckDB, Synapse hợp nhất SQL + Spark."
         },
         {
           "id": "C1_T2_Q2",
@@ -153,7 +165,8 @@
             "C": "Auto-suspend",
             "D": "Phân tầng lưu trữ (Archive tier)"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Caching** lưu kết quả đã tính để tránh tính toán lại, giảm chi phí."
         },
         {
           "id": "C1_T2_Q3",
@@ -164,7 +177,8 @@
             "C": "Chuyển dữ liệu cũ sang vùng lưu trữ rẻ",
             "D": "Tắt cụm tính toán khi không có truy vấn để tiết kiệm phí"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Auto-suspend** tự tắt cụm tính toán khi không có truy vấn để tiết kiệm chi phí."
         },
         {
           "id": "C1_T2_Q4",
@@ -175,7 +189,8 @@
             "C": "Chỉ trả tiền cho những gì thực sự sử dụng",
             "D": "Khả năng co giãn tài nguyên tính toán nhanh chóng"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Elasticity** là khả năng **co giãn** tài nguyên tính toán nhanh chóng theo nhu cầu."
         },
         {
           "id": "C1_T2_Q5",
@@ -186,7 +201,8 @@
             "C": "Đầu tư phần cứng ban đầu lớn",
             "D": "Trả phí cố định theo năm bất kể mức dùng"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Pay-as-you-go**: chỉ trả tiền cho phần tài nguyên thực sự sử dụng."
         },
         {
           "id": "C1_T2_Q6",
@@ -197,7 +213,8 @@
             "C": "Bắt buộc mua giấy phép vĩnh viễn",
             "D": "Phải tự bảo trì toàn bộ hạ tầng"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Cloud DW **loại bỏ CAPEX** vì không cần đầu tư lớn vào phần cứng và phòng máy ban đầu."
         },
         {
           "id": "C1_T2_Q7",
@@ -208,7 +225,8 @@
             "C": "MotherDuck",
             "D": "Snowflake"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Snowflake** là nền tảng tiên phong tách rời Compute/Storage và chia sẻ dữ liệu an toàn."
         },
         {
           "id": "C1_T2_Q8",
@@ -219,7 +237,8 @@
             "C": "Kiến trúc Serverless mạnh mẽ, tích hợp sẵn các mô hình AI/ML của Google",
             "D": "Hợp nhất SQL, Spark trong một môi trường"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**BigQuery** có kiến trúc **Serverless** mạnh, tích hợp sẵn mô hình AI/ML của Google."
         },
         {
           "id": "C1_T2_Q9",
@@ -230,7 +249,8 @@
             "C": "Serverless tích hợp AI/ML của Google",
             "D": "Tốc độ truy vấn cực nhanh cho phân tích thời gian thực"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Azure Synapse Analytics** hợp nhất SQL, Spark và tích hợp dữ liệu trong một môi trường."
         },
         {
           "id": "C1_T2_Q10",
@@ -241,7 +261,8 @@
             "C": "Dữ liệu được sao lưu đa vùng tự động (Multi-region)",
             "D": "Chỉ lưu một bản duy nhất tại phòng máy"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "DR của Modern DW dựa trên **sao lưu đa vùng (Multi-region) tự động**."
         }
       ]
     },
@@ -258,7 +279,8 @@
             "C": "Hợp nhất Data Lake và Data Warehouse trên một hạ tầng",
             "D": "Loại bỏ hoàn toàn Metadata"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Mục tiêu của **Data Fabric** là xóa bỏ **Data Silos** bằng cách kết nối các nguồn rời rạc."
         },
         {
           "id": "C1_T3_Q2",
@@ -269,7 +291,8 @@
             "C": "Nén dữ liệu bằng Parquet",
             "D": "Mã hóa dữ liệu trước khi lưu"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Virtualization (Zero-copy)**: truy cập dữ liệu **tại nguồn**, không cần sao chép."
         },
         {
           "id": "C1_T3_Q3",
@@ -280,7 +303,8 @@
             "C": "Metadata lưu trong file Excel",
             "D": "Metadata được nhập thủ công"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Active Metadata** không còn tĩnh mà là thực thể có khả năng hành động (tự khám phá, gắn nhãn, áp chính sách)."
         },
         {
           "id": "C1_T3_Q4",
@@ -291,7 +315,8 @@
             "C": "Công cụ chạy truy vấn liên kết (Federated Query)",
             "D": "Bộ não AI điều khiển việc tự động hóa"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Data Catalog** là thư viện chứa thông tin và vị trí của mọi nguồn dữ liệu trong công ty."
         },
         {
           "id": "C1_T3_Q5",
@@ -302,7 +327,8 @@
             "C": "Data Catalog",
             "D": "Massive Metadata Lake"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Data Virtualization Engine** cho phép chạy truy vấn liên kết (Federated Query)."
         },
         {
           "id": "C1_T3_Q6",
@@ -313,7 +339,8 @@
             "C": "Công cụ sinh mã nguồn tự động",
             "D": "Nơi lưu trữ và phân tích toàn bộ Metadata của hệ thống"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Massive Metadata Lake** là nơi lưu trữ và phân tích toàn bộ Metadata của hệ thống."
         },
         {
           "id": "C1_T3_Q7",
@@ -324,7 +351,8 @@
             "C": "Không thể thêm nguồn dữ liệu mới",
             "D": "Không có khả năng quản trị tập trung"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Một thách thức của Data Fabric là truy vấn **ảo hóa có thể chậm hơn** dữ liệu đã nạp sẵn."
         },
         {
           "id": "C1_T3_Q8",
@@ -335,7 +363,8 @@
             "C": "Mọi dữ liệu được sao chép về một nơi",
             "D": "Không cần Metadata"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Ưu điểm tốc độ: người dùng có thể **mining ngay** mà không đợi quy trình ETL."
         },
         {
           "id": "C1_T3_Q9",
@@ -346,7 +375,8 @@
             "C": "Tập trung vào Con người & Tổ chức",
             "D": "Tập trung vào Hiệu năng & Hợp nhất ba tầng kỹ thuật"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Data Fabric tập trung vào **kết nối & ảo hóa** nguồn rời rạc; Mesh tập trung con người/tổ chức; Lakehouse tập trung hiệu năng hạ tầng."
         }
       ]
     },
@@ -363,7 +393,8 @@
             "C": "Data as a Product",
             "D": "Federated Governance"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Centralized Ownership** đi ngược Data Mesh. Bốn nguyên tắc: Domain Ownership, Data as a Product, Self-serve Platform, Federated Governance."
         },
         {
           "id": "C1_T4_Q2",
@@ -374,7 +405,8 @@
             "C": "Dữ liệu được sao chép về một kho chung",
             "D": "Chỉ nhà cung cấp Cloud sở hữu dữ liệu"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Domain Ownership**: các đơn vị nghiệp vụ sở hữu và vận hành dữ liệu của chính mình."
         },
         {
           "id": "C1_T4_Q3",
@@ -385,7 +417,8 @@
             "C": "Mỗi domain tự đặt tiêu chuẩn bảo mật riêng",
             "D": "IT trung tâm kiểm soát mọi truy vấn"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Federated Governance**: quản trị chung qua các tiêu chuẩn kết nối và bảo mật thống nhất."
         },
         {
           "id": "C1_T4_Q4",
@@ -396,7 +429,8 @@
             "C": "Mỗi miền tự xây hạ tầng riêng",
             "D": "IT xây dựng nền tảng chung để các miền tự chạy"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Self-serve Platform**: IT xây dựng nền tảng chung để các miền tự chạy."
         },
         {
           "id": "C1_T4_Q5",
@@ -407,7 +441,8 @@
             "C": "Có khả năng thay đổi phiên bản mà không làm hỏng các hệ thống cũ",
             "D": "Chứa đủ thông tin, không cần tra cứu nguồn khác"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Evolvable**: sản phẩm dữ liệu có thể đổi phiên bản mà không làm hỏng các hệ thống cũ."
         },
         {
           "id": "C1_T4_Q6",
@@ -418,7 +453,8 @@
             "C": "Dữ liệu sạch, cập nhật đúng hạn và có độ chính xác cao",
             "D": "Có thể thay đổi phiên bản linh hoạt"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Trustworthy**: dữ liệu sạch, cập nhật đúng hạn và chính xác cao (có cam kết SLA)."
         },
         {
           "id": "C1_T4_Q7",
@@ -429,7 +465,8 @@
             "C": "Không thể mở rộng thêm đơn vị dữ liệu",
             "D": "Không cần đội Platform hỗ trợ"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Thách thức: hai miền định nghĩa cùng một chỉ số theo cách khác nhau gây **xung đột dữ liệu**."
         },
         {
           "id": "C1_T4_Q8",
@@ -440,7 +477,8 @@
             "C": "Thiếu dung lượng đĩa",
             "D": "Chi phí bản quyền"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Data Mesh giải quyết **nút cổ chai** của dữ liệu tập trung khi nhu cầu tăng cao."
         }
       ]
     },
@@ -457,7 +495,8 @@
             "C": "JSON",
             "D": "Apache Hudi"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Delta Lake** có Time Travel và ACID cho dữ liệu trên Lake. Hudi tối ưu streaming/upsert."
         },
         {
           "id": "C1_T5_Q2",
@@ -468,7 +507,8 @@
             "C": "Mã hóa dữ liệu",
             "D": "Nạp dữ liệu Streaming và Upsert liên tục"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Apache Hudi** tối ưu cho nạp dữ liệu **Streaming và Upsert** liên tục."
         },
         {
           "id": "C1_T5_Q3",
@@ -479,7 +519,8 @@
             "C": "Tăng tốc truy vấn bằng cache",
             "D": "Truy vấn lại dữ liệu tại bất kỳ thời điểm nào trong quá khứ"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Time Travel** cho phép truy vấn lại dữ liệu tại bất kỳ thời điểm nào trong quá khứ."
         },
         {
           "id": "C1_T5_Q4",
@@ -490,7 +531,8 @@
             "C": "Dữ liệu thô, giữ nguyên định dạng từ nguồn gốc",
             "D": "Dữ liệu đã tổng hợp cho BI"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Bronze** lưu dữ liệu **thô**, giữ nguyên định dạng nguồn."
         },
         {
           "id": "C1_T5_Q5",
@@ -501,7 +543,8 @@
             "C": "Chỉ chứa metadata",
             "D": "Dữ liệu tổng hợp sẵn sàng cho báo cáo"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Silver** là dữ liệu đã làm sạch, hợp nhất và chuẩn hóa cấu trúc."
         },
         {
           "id": "C1_T5_Q6",
@@ -512,7 +555,8 @@
             "C": "Dữ liệu tổng hợp (Aggregated), sẵn sàng cho báo cáo kinh doanh và AI",
             "D": "Dữ liệu thô từ nguồn"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Gold** là dữ liệu tổng hợp, sẵn sàng cho báo cáo kinh doanh và AI."
         },
         {
           "id": "C1_T5_Q7",
@@ -523,7 +567,8 @@
             "C": "Duy trì song song hai hệ thống",
             "D": "Giảm khả năng truy vết"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Single Source of Truth**: loại bỏ các bản sao dữ liệu sai lệch giữa Lake và Warehouse."
         }
       ]
     },
@@ -540,7 +585,8 @@
             "C": "Data Lake truyền thống",
             "D": "Data Fabric"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Data Lakehouse** tập trung vào hiệu năng và hợp nhất hạ tầng kỹ thuật."
         },
         {
           "id": "C1_T6_Q2",
@@ -551,7 +597,8 @@
             "C": "Data Mesh",
             "D": "Data Lakehouse"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Data Mesh** tập trung vào con người và tổ chức (quy trình vận hành)."
         },
         {
           "id": "C1_T6_Q3",
@@ -562,7 +609,8 @@
             "C": "Data Fabric",
             "D": "Data Mesh"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Data Fabric** tập trung vào kết nối và ảo hóa các nguồn rời rạc."
         },
         {
           "id": "C1_T6_Q4",
@@ -573,7 +621,8 @@
             "C": "Dự án Greenfield quy mô nhỏ",
             "D": "Chỉ cần huấn luyện mô hình ML"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Chọn **Data Fabric** khi dữ liệu phân tán rộng và **không thể di chuyển** (do pháp lý), cần tích hợp nhanh hệ thống legacy và cloud."
         },
         {
           "id": "C1_T6_Q5",
@@ -584,7 +633,8 @@
             "C": "Muốn tập trung toàn bộ nhân sự vào một đội",
             "D": "Doanh nghiệp quy mô trung bình muốn đơn giản hóa hệ thống"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Chọn **Data Mesh** khi tổ chức quá lớn, IT không hiểu hết nhu cầu các phòng ban."
         },
         {
           "id": "C1_T6_Q6",
@@ -595,7 +645,8 @@
             "C": "Mesh",
             "D": "Lakehouse"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Theo slide, **Lakehouse** thường có chi phí quản lý thấp nhất."
         },
         {
           "id": "C1_T6_Q7",
@@ -606,7 +657,8 @@
             "C": "Data Mesh",
             "D": "Data Fabric"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Data Fabric** mạnh nhất trong việc gắn kết các hệ thống rời rạc."
         },
         {
           "id": "C1_T6_Q8",
@@ -617,7 +669,8 @@
             "C": "Fabric thay thế hoàn toàn Lakehouse",
             "D": "Doanh nghiệp có thể dùng Lakehouse làm nền tảng cho Data Mesh"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Các kiến trúc có thể giao thoa: doanh nghiệp có thể dùng **Lakehouse làm nền tảng cho Data Mesh**."
         }
       ]
     },
@@ -634,7 +687,8 @@
             "C": "Đồ thị tri thức",
             "D": "Bảng quan hệ"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Object Storage dùng **flat namespace** (không gian phẳng), không có cây thư mục thật."
         },
         {
           "id": "C1_T7_Q2",
@@ -645,7 +699,8 @@
             "C": "Số thứ tự dòng",
             "D": "Địa chỉ IP của ổ đĩa"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Mỗi Object được định danh bằng **Key duy nhất**, truy cập qua URL/API."
         },
         {
           "id": "C1_T7_Q3",
@@ -656,7 +711,8 @@
             "C": "Nén dữ liệu thành Parquet",
             "D": "Sao lưu sang vùng khác"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**S3 Select** lọc dữ liệu ngay tại tầng lưu trữ để tăng tốc."
         },
         {
           "id": "C1_T7_Q4",
@@ -667,7 +723,8 @@
             "C": "Chỉ dùng cho dữ liệu phi cấu trúc nhỏ",
             "D": "Không hỗ trợ Spark"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**ADLS Gen2** kết hợp tính năng Object Storage với cấu trúc thư mục phân cấp."
         },
         {
           "id": "C1_T7_Q5",
@@ -678,7 +735,8 @@
             "C": "Dữ liệu cần độ trễ mili giây",
             "D": "Dữ liệu streaming"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Archive/Glacier** dành cho dữ liệu lưu lâu dài (pháp lý), phí rất rẻ nhưng lấy ra lâu."
         },
         {
           "id": "C1_T7_Q6",
@@ -689,7 +747,8 @@
             "C": "Kiểm soát quyền truy cập theo người dùng",
             "D": "Ngăn việc xóa dữ liệu"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Lifecycle Policies** tự động chuyển dữ liệu sang tầng rẻ hơn sau một khoảng thời gian."
         },
         {
           "id": "C1_T7_Q7",
@@ -700,7 +759,8 @@
             "C": "Lưu lại các bản sao để khôi phục",
             "D": "Quy định quyền truy cập cho toàn bộ Data Container từ bên ngoài"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Bucket Policies** quy định quyền truy cập cho toàn bộ Data Container (bucket) từ bên ngoài."
         },
         {
           "id": "C1_T7_Q8",
@@ -711,7 +771,8 @@
             "C": "IAM chuyên ghi log truy cập",
             "D": "IAM kiểm soát quyền chi tiết dựa trên danh tính người dùng"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**IAM Policies** kiểm soát quyền chi tiết dựa trên **danh tính người dùng**; Bucket Policies áp cho cả bucket."
         },
         {
           "id": "C1_T7_Q9",
@@ -722,7 +783,8 @@
             "C": "Mã hóa dữ liệu At-Rest",
             "D": "Ngăn chặn việc xóa hoặc sửa đổi dữ liệu trong một khoảng thời gian quy định"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Object Lock** ngăn xóa hoặc sửa dữ liệu trong khoảng thời gian quy định."
         },
         {
           "id": "C1_T7_Q10",
@@ -733,7 +795,8 @@
             "C": "HTTP không mã hóa",
             "D": "SMTP"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Mã hóa **In-Transit** dùng giao thức **TLS** khi dữ liệu di chuyển qua mạng."
         }
       ]
     },
@@ -750,7 +813,8 @@
             "C": "Không hỗ trợ SQL",
             "D": "Không cho phép bảo mật"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Mô hình **Coupled**: CPU và ổ cứng gắn chặt nên lãng phí tài nguyên khi nâng cấp."
         },
         {
           "id": "C1_T8_Q2",
@@ -761,7 +825,8 @@
             "C": "Chỉ mở rộng được theo chiều dọc",
             "D": "Phải tăng ổ cứng khi tăng CPU"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Decoupled cho phép **mở rộng độc lập**: tăng 1000 CPU mà không phải mua thêm ổ cứng."
         },
         {
           "id": "C1_T8_Q3",
@@ -772,7 +837,8 @@
             "C": "Các máy ảo được bật lên chỉ để thực hiện một tác vụ cụ thể",
             "D": "Cụm chạy 24/7 cố định"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Ephemeral compute**: máy ảo bật lên chỉ để chạy một tác vụ cụ thể rồi tắt."
         },
         {
           "id": "C1_T8_Q4",
@@ -783,7 +849,8 @@
             "C": "Đẩy toàn bộ bảng về CPU",
             "D": "Tự động tắt Compute"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Predicate Pushdown** chỉ đưa các cột/dòng cần thiết từ kho lưu trữ về CPU, giảm tải mạng."
         },
         {
           "id": "C1_T8_Q5",
@@ -794,7 +861,8 @@
             "C": "Multi-cluster Compute với nhiều Virtual Warehouses độc lập",
             "D": "Lưu dữ liệu riêng từng phòng ban"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Snowflake dùng **Multi-cluster Compute** với nhiều **Virtual Warehouses độc lập** nên các phòng ban không tranh chấp tài nguyên."
         },
         {
           "id": "C1_T8_Q6",
@@ -805,7 +873,8 @@
             "C": "Tạo bản sao dữ liệu cho thử nghiệm mà không tốn thêm dung lượng đĩa",
             "D": "Nén dữ liệu"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Zero-copy Cloning** tạo bản sao dữ liệu cho thử nghiệm mà không tốn thêm dung lượng."
         },
         {
           "id": "C1_T8_Q7",
@@ -816,7 +885,8 @@
             "C": "Tạo bản sao dữ liệu",
             "D": "Lưu trữ dữ liệu thô"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Global Services Layer** là lớp quản trị chung điều phối việc kết nối giữa Compute và Storage."
         },
         {
           "id": "C1_T8_Q8",
@@ -827,7 +897,8 @@
             "C": "Phải trả tiền CPU 24/7",
             "D": "Không thể tạo môi trường Sandbox"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Lợi ích kinh tế: **chỉ trả tiền CPU khi truy vấn**, đĩa trả theo tháng."
         }
       ]
     }

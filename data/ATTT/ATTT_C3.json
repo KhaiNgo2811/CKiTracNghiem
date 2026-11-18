@@ -261,7 +261,8 @@
             "C": "Thực hiện vào giờ cao điểm",
             "D": "Bỏ qua patch"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Đưa server **offline** khi upgrade/patch giúp làm việc mà không gặp rủi ro bị tấn công trong lúc hệ thống đang ở trạng thái dễ tổn thương."
         },
         {
           "id": "ATTT_C3_T2_Q2",
@@ -296,7 +297,8 @@
             "C": "Tăng availability",
             "D": "Mời gọi thêm một cuộc tấn công"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Không ngăn chặn một cuộc tấn công gần như là **mời gọi thêm** tấn công vì kẻ tấn công thấy hệ thống dễ bị khai thác."
         },
         {
           "id": "ATTT_C3_T2_Q5",
@@ -307,7 +309,8 @@
             "C": "Rootkit",
             "D": "Spoofing"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**DoS attack** là nỗ lực phối hợp làm một máy tính thực hiện lượng lớn tác vụ không cần thiết để deny service."
         },
         {
           "id": "ATTT_C3_T2_Q6",
@@ -342,7 +345,8 @@
             "C": "Rootkit",
             "D": "Backdoor"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Phishing email** là email giả lừa người nhận click URL nhúng sẵn hoặc mở attachment độc hại."
         },
         {
           "id": "ATTT_C3_T2_Q9",
@@ -353,7 +357,8 @@
             "C": "Rootkit",
             "D": "Cookie"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Rootkit** là malware được thiết kế để **ẩn** khỏi các phương pháp detection thông thường."
         },
         {
           "id": "ATTT_C3_T2_Q10",
@@ -388,7 +393,8 @@
             "C": "Nonrepudiation",
             "D": "Integrity"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Alteration threat** là việc thay đổi thông tin trái phép → vi phạm **Integrity**."
         },
         {
           "id": "ATTT_C3_T2_Q13",
@@ -399,7 +405,8 @@
             "C": "Pharming",
             "D": "Spoofing"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Birthday attack** là tấn công mật mã khai thác xác suất trùng lặp, làm brute-force lên hash một chiều dễ hơn."
         },
         {
           "id": "ATTT_C3_T2_Q14",
@@ -422,7 +429,8 @@
             "C": "Việc mất điện",
             "D": "Bản quyền phần mềm"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Man-in-the-middle** tận dụng quá trình **multihop** (dữ liệu đi qua nhiều chặng) để chen vào giữa hai bên giao tiếp."
         },
         {
           "id": "ATTT_C3_T2_Q16",
@@ -457,7 +465,8 @@
             "C": "Antivirus",
             "D": "Backup software"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Spyware** thu thập thông tin người dùng qua Internet mà họ không hay biết."
         },
         {
           "id": "ATTT_C3_T2_Q19",
@@ -480,7 +489,8 @@
             "C": "Chia sẻ password",
             "D": "Gỡ antivirus"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Dùng quy trình **login và authentication an toàn** là một trong các bước ngăn chặn malware (cùng với antivirus, patching…)."
         }
       ]
     }

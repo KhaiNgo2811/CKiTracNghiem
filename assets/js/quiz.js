@@ -153,6 +153,7 @@ const Quiz = {
         images: q.images || [],
         options: q.options,
         correctAnswer: q.correctAnswer || null,
+        explanation: q.explanation || '',
         selectedAnswer: selected,
         flagged: this.isFlagged(q.id),
         isCorrect,

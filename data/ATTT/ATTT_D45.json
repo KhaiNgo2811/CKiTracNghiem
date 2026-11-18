@@ -15,7 +15,8 @@
             "C": "Vulnerability",
             "D": "Threat"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Threat** là bất kỳ hành động nào có thể gây thiệt hại cho một asset. **Risk** là khả năng xảy ra thiệt hại, **Vulnerability** là điểm yếu, **Countermeasure** là biện pháp giảm rủi ro."
         },
         {
           "id": "ATTT_D45_T1_Q2",
@@ -26,7 +27,8 @@
             "C": "Guideline",
             "D": "Procedure"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Standard** là văn bản chi tiết mô tả phần cứng, phần mềm và cách sử dụng chúng (bắt buộc). **Policy** là đường lối chung; **Procedure** là các bước thực hiện; **Guideline** chỉ là gợi ý."
         },
         {
           "id": "ATTT_D45_T1_Q3",
@@ -37,7 +39,8 @@
             "C": "Availability",
             "D": "Nonrepudiation"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Học sinh thay đổi điểm số nghĩa là dữ liệu bị **sửa đổi trái phép** → vi phạm **Integrity**. Confidentiality là việc lộ thông tin, Availability là khả năng truy cập hệ thống."
         },
         {
           "id": "ATTT_D45_T1_Q4",
@@ -48,7 +51,8 @@
             "C": "Deactivating USB ports",
             "D": "Vulnerability scanning"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Theo đáp án đề, biện pháp hạn chế truy cập trái phép vào máy trạm phù hợp nhất là **Password protection**. Antivirus chống malware, Vulnerability scanning chỉ phát hiện lỗ hổng, còn vô hiệu hóa USB chỉ chặn một đường vào."
         },
         {
           "id": "ATTT_D45_T1_Q5",
@@ -59,7 +63,8 @@
             "C": "Token",
             "D": "Fingerprint"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Giai đoạn **identification** chỉ là khai báo “tôi là ai”, thường bằng **Username**. Password, token, fingerprint là các yếu tố dùng ở giai đoạn authentication để chứng minh."
         },
         {
           "id": "ATTT_D45_T1_Q6",
@@ -70,7 +75,8 @@
             "C": "Identification number",
             "D": "Token"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Identification number** chỉ dùng để nhận dạng, không chứng minh được danh tính nên không phải kỹ thuật authentication tốt. Password, biometrics và token đều là các yếu tố authentication."
         },
         {
           "id": "ATTT_D45_T1_Q7",
@@ -81,7 +87,8 @@
             "C": "Guideline",
             "D": "Procedure"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Tài liệu hướng dẫn **từng bước** và bắt buộc thực hiện là **Procedure**. Policy là đường lối cấp cao, Standard là định nghĩa chi tiết HW/SW, Guideline chỉ là gợi ý không bắt buộc."
         },
         {
           "id": "ATTT_D45_T1_Q8",
@@ -92,7 +99,8 @@
             "C": "Lỗi cấu hình firewall",
             "D": "Truy cập từ xa trái phép"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**DDoS** làm nghẽn đường truyền từ phía ngoài nên ISP ở thượng nguồn lọc hiệu quả nhất. Mất năng suất, lỗi cấu hình firewall và truy cập từ xa trái phép là vấn đề nội bộ mà ISP không giải quyết được."
         },
         {
           "id": "ATTT_D45_T1_Q9",
@@ -103,7 +111,8 @@
             "C": "Fabrication",
             "D": "Modification"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Fabrication** là tạo ra thông tin/đối tượng giả để đánh lừa. Interception là đọc lén, Interruption là làm gián đoạn dịch vụ, Modification là sửa đổi nội dung có sẵn."
         },
         {
           "id": "ATTT_D45_T1_Q10",
@@ -114,7 +123,8 @@
             "C": "Các nỗ lực nâng cao nhận thức và giáo dục",
             "D": "Quarantine"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Firewall** kiểm soát lưu lượng mạng, không được thiết kế riêng để chống malware. Antivirus, nâng cao nhận thức người dùng và quarantine (cách ly) đều nhắm trực tiếp vào malware."
         },
         {
           "id": "ATTT_D45_T1_Q11",
@@ -125,7 +135,8 @@
             "C": "80",
             "D": "443"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Web server dùng **HTTP** thì lắng nghe ở cổng **80** (HTTPS là 443, FTP là 21, Telnet là 23)."
         },
         {
           "id": "ATTT_D45_T1_Q12",
@@ -136,7 +147,8 @@
             "C": "Denial",
             "D": "Destruction"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Espionage** (gián điệp) là lấy trộm thông tin → **disclosure threat**. Alteration là sửa đổi, Denial là từ chối dịch vụ, Destruction là phá hủy."
         },
         {
           "id": "ATTT_D45_T1_Q13",
@@ -147,7 +159,8 @@
             "C": "Session hijacking",
             "D": "Typosquatting"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Session hijacking** là chiếm lấy một phiên/kết nối đã được thiết lập giữa hai hệ thống. Man-in-the-middle chen vào giữa từ đầu, URL hijacking/typosquatting là giả mạo địa chỉ web."
         },
         {
           "id": "ATTT_D45_T1_Q14",
@@ -158,7 +171,8 @@
             "C": "Whaling",
             "D": "Authority"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Kéo chuông báo cháy để bảo vệ rời vị trí là tạo **tình huống khẩn cấp (Urgency)** nhằm đánh lạc hướng. Vishing là lừa qua điện thoại, whaling nhắm vào lãnh đạo, authority là giả danh người có thẩm quyền."
         },
         {
           "id": "ATTT_D45_T1_Q15",
@@ -169,7 +183,8 @@
             "C": "Cross-site request forgery",
             "D": "Tấn công zero-day"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Tấn công vào lỗ hổng mới phát hiện mà **chưa có bản vá** gọi là **zero-day attack**. SQL injection, XSS, CSRF là các kiểu tấn công web nhưng đã có cách phòng thủ phổ biến."
         },
         {
           "id": "ATTT_D45_T1_Q16",
@@ -180,7 +195,8 @@
             "C": "Piggyback-entry wiretap",
             "D": "Passive wiretap"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Nghe lén chỉ **giám sát mà không sửa đổi** liên lạc là **passive wiretap**. Active wiretap can thiệp/sửa nội dung; between-the-lines và piggyback-entry là kiểu nghe lén chủ động."
         },
         {
           "id": "ATTT_D45_T1_Q17",
@@ -191,7 +207,8 @@
             "C": "Liên lạc với tất cả các bên bị ảnh hưởng.",
             "D": "Đảm bảo mọi người đều an toàn."
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Bước đầu tiên khi ứng phó thảm họa luôn là **bảo đảm an toàn cho con người**, sau đó mới tới ứng phó, thực hiện DRP và liên lạc các bên liên quan."
         },
         {
           "id": "ATTT_D45_T1_Q18",
@@ -202,7 +219,8 @@
             "C": "Yêu cầu phục hồi kinh doanh",
             "D": "Yêu cầu phục hồi kỹ thuật"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Thời gian tối đa cho phép để khôi phục một hệ thống là **RTO** (Recovery Time Objective). **RPO** là lượng dữ liệu tối đa chấp nhận mất."
         },
         {
           "id": "ATTT_D45_T1_Q19",
@@ -213,7 +231,8 @@
             "C": "Parallel test",
             "D": "Simulation test"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Parallel test** chạy hệ thống dự phòng song song mà **không làm gián đoạn** địa điểm chính, vừa thực tế vừa an toàn. Full interruption test làm ngừng hệ thống chính, checklist/simulation ít thực tế hơn."
         },
         {
           "id": "ATTT_D45_T1_Q20",
@@ -224,7 +243,8 @@
             "C": "Access control lists",
             "D": "Password dùng một lần"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**ACL** quy định ai được làm gì với tài nguyên → biện pháp **authorization**. Biometrics, digital certificate và password một lần thuộc authentication."
         },
         {
           "id": "ATTT_D45_T1_Q21",
@@ -235,7 +255,8 @@
             "C": "Phần cứng máy tính cơ bản",
             "D": "Không có hạ tầng công nghệ"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Cold site** chỉ có tiện ích môi trường cơ bản, **không có hạ tầng công nghệ**. Hot site mới có phần cứng và dữ liệu phản chiếu; warm site có phần cứng nhưng chưa có dữ liệu."
         },
         {
           "id": "ATTT_D45_T1_Q22",
@@ -246,7 +267,8 @@
             "C": "Cold site",
             "D": "Primary site"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Warm site** cân bằng giữa chi phí và thời gian chuyển đổi (vài giờ đến vài ngày). Hot site nhanh nhưng đắt; cold site rẻ nhưng mất nhiều ngày đến vài tuần."
         },
         {
           "id": "ATTT_D45_T1_Q23",
@@ -257,7 +279,8 @@
             "C": "Tấn công social engineering",
             "D": "Brute-force attack"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Brute-force attack** thử mọi tổ hợp có thể của password. Dictionary attack chỉ thử các từ trong từ điển, rainbow table dùng bảng băm tính sẵn, social engineering lừa người dùng."
         },
         {
           "id": "ATTT_D45_T1_Q24",
@@ -268,7 +291,8 @@
             "C": "Authorization",
             "D": "Accountability"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Câu hỏi “Người yêu cầu có thể truy cập những gì?” thuộc giai đoạn **Authorization**. Identification hỏi “ai?”, Authentication hỏi “có đúng là họ không?”, Accountability truy vết hành động."
         },
         {
           "id": "ATTT_D45_T1_Q25",
@@ -279,7 +303,8 @@
             "C": "Bao gồm một ký tự đặc biệt trong password.",
             "D": "Bao gồm hỗn hợp ký tự viết hoa, viết thường và số trong password."
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Chỉ “ít nhất sáu ký tự” là **chưa đủ** theo thực tiễn hiện nay (nên dài hơn). Không chứa username, trộn chữ hoa/thường/số và có ký tự đặc biệt đều là thực hành tốt."
         },
         {
           "id": "ATTT_D45_T1_Q26",
@@ -290,18 +315,20 @@
             "C": "Người dùng không cần nhớ bất cứ điều gì.",
             "D": "Các đặc điểm vật lý có thể thay đổi."
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Đặc điểm vật lý **có thể thay đổi** (chấn thương, tuổi tác) là **nhược điểm** của biometrics. Cần hiện diện vật lý, khó làm giả và không cần nhớ gì đều là ưu điểm."
         },
         {
           "id": "ATTT_D45_T1_Q27",
           "question": "Điều nào sau đây là ví dụ về two-factor authentication?",
           "options": {
-            "A": "PIN",
+            "A": "Smart card và PIN",
             "B": "Mã PIN và password",
             "C": "Password và câu hỏi bảo mật",
             "D": "Token và smart card"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Smart card (something you have) + PIN (something you know)** là hai yếu tố khác loại → two-factor. PIN + password hay password + câu hỏi bảo mật đều là “biết”; token + smart card đều là “có”."
         },
         {
           "id": "ATTT_D45_T1_Q28",
@@ -312,7 +339,8 @@
             "C": "Appeal for help",
             "D": "Phishing"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Email hàng loạt giả danh bộ phận hỗ trợ để lấy password là **phishing**. Intimidation là đe dọa, name dropping là nêu tên người có thế lực, appeal for help là kêu gọi giúp đỡ."
         },
         {
           "id": "ATTT_D45_T1_Q29",
@@ -323,7 +351,8 @@
             "C": "Thúc đẩy người dùng tuân thủ chính sách bảo mật",
             "D": "Trừng phạt người dùng vi phạm chính sách"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Mục tiêu của chương trình awareness là **giáo dục và thúc đẩy tuân thủ**, không phải trừng phạt người vi phạm."
         },
         {
           "id": "ATTT_D45_T1_Q30",
@@ -334,7 +363,8 @@
             "C": "Proactive change management",
             "D": "Change control"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Configuration control** quản lý các cài đặt baseline của thiết bị; **change control** quản lý các thay đổi đối với cấu hình đó."
         },
         {
           "id": "ATTT_D45_T1_Q31",
@@ -345,7 +375,8 @@
             "C": "Accountability",
             "D": "Authorization"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Xác định tập quyền gán cho nhân viên là **Authorization**. Identification là khai báo danh tính, Authentication là chứng minh, Accountability là truy vết."
         },
         {
           "id": "ATTT_D45_T1_Q32",
@@ -356,7 +387,8 @@
             "C": "Nhật ký ứng dụng",
             "D": "Kết quả penetration testing"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Sơ yếu lý lịch của quản trị viên không phải đối tượng audit kiểm soát hệ thống; auditor sẽ xem **hồ sơ sự cố, nhật ký ứng dụng và kết quả penetration testing**."
         },
         {
           "id": "ATTT_D45_T1_Q33",
@@ -367,7 +399,8 @@
             "C": "Các khuyến nghị",
             "D": "Lộ trình thời gian triển khai"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Báo cáo audit gồm **findings, khuyến nghị và lộ trình triển khai**; cấu hình hệ thống chi tiết không phải nội dung chính của báo cáo."
         },
         {
           "id": "ATTT_D45_T1_Q34",
@@ -378,7 +411,8 @@
             "C": "Improve",
             "D": "Secure"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Xem nhật ký để **đánh giá độc lập** hiệu quả controls là giai đoạn **Audit**. Monitor là theo dõi liên tục, Secure là triển khai bảo vệ, Improve là cải thiện sau audit."
         },
         {
           "id": "ATTT_D45_T1_Q35",
@@ -389,7 +423,8 @@
             "C": "Gray-box test",
             "D": "Blue-box test"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Tester không có quyền truy cập mã nguồn hay chi tiết ứng dụng → **black-box test**. White-box biết toàn bộ mã nguồn, gray-box biết một phần."
         },
         {
           "id": "ATTT_D45_T1_Q36",
@@ -400,7 +435,8 @@
             "C": "Biện pháp kiểm soát an ninh có hiệu quả trong việc giải quyết risk mà nó được thiết kế để giải quyết không?",
             "D": "Biện pháp kiểm soát an ninh có khả năng trở nên lỗi thời trong tương lai gần không?"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Audit đánh giá hiện trạng: mức phù hợp với risk, vị trí triển khai và hiệu quả. Việc dự đoán control **có lỗi thời trong tương lai** không thuộc phạm vi audit."
         },
         {
           "id": "ATTT_D45_T1_Q37",
@@ -411,7 +447,8 @@
             "C": "Transparent risk",
             "D": "Residual risk"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Residual risk** là rủi ro còn tồn tại sau khi đã áp dụng mọi countermeasure đã lên kế hoạch."
         },
         {
           "id": "ATTT_D45_T1_Q38",
@@ -422,7 +459,8 @@
             "C": "disaster",
             "D": "emergency"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Sự kiện làm một chức năng trọng yếu ngừng quá **MTD** gọi là **disaster**. Event và incident nhẹ hơn, chưa vượt ngưỡng thời gian chịu đựng tối đa."
         },
         {
           "id": "ATTT_D45_T1_Q39",
@@ -433,7 +471,8 @@
             "C": "Qualitative",
             "D": "Objective"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Tác động lên **danh tiếng** khó quy ra tiền nên dùng đánh giá **Qualitative** (định tính). Quantitative dùng số tiền (SLE, ALE)."
         },
         {
           "id": "ATTT_D45_T1_Q40",
@@ -444,7 +483,8 @@
             "C": "$200,000",
             "D": "$2,000,000"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "SLE = AV × EF. Thiệt hại 2 triệu USD là **mức thiệt hại cho một lần sự cố**, nên SLE = $2.000.000 (EF = 2/10 = 20%, ALE = 2M × 0,01 = $20.000)."
         },
         {
           "id": "ATTT_D45_T1_Q41",
@@ -455,7 +495,8 @@
             "C": "Multiple sites",
             "D": "Hot site"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Hot site** sẵn sàng trong vài phút đến vài giờ vì có đủ phần cứng, phần mềm, dữ liệu và nhân sự trực."
         },
         {
           "id": "ATTT_D45_T1_Q42",
@@ -466,7 +507,8 @@
             "C": "Decryption",
             "D": "Validation"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Muốn đọc ciphertext phải **giải mã (decryption)**. Encryption là chiều ngược lại, hashing là một chiều, validation là xác nhận hợp lệ."
         },
         {
           "id": "ATTT_D45_T1_Q43",
@@ -477,7 +519,8 @@
             "C": "Public key của Bob",
             "D": "Private key của Bob"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Digital signature được tạo bằng **private key của người gửi (Alice)**; người nhận dùng public key của Alice để xác minh."
         },
         {
           "id": "ATTT_D45_T1_Q44",
@@ -488,7 +531,8 @@
             "C": "Public key của Bob",
             "D": "Private key của Bob"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Để chỉ Bob đọc được, Alice mã hóa bằng **public key của Bob**; Bob giải mã bằng private key của mình."
         },
         {
           "id": "ATTT_D45_T1_Q45",
@@ -499,7 +543,8 @@
             "C": "Certification",
             "D": "Witnessing"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Certification** cho phép bên đáng tin cậy xác nhận (chứng thực) thông tin. Validation, authorization và witnessing không có nghĩa đó."
         }
       ]
     }

@@ -15,7 +15,8 @@
             "C": "Phụ thuộc vào máy chủ trung gian, dễ tạo nút thắt cổ chai khi dữ liệu lớn",
             "D": "Tách biệt hoàn toàn Storage và Compute"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "ETL truyền thống **phụ thuộc máy chủ trung gian** nên dễ tạo nút thắt cổ chai, trễ cao khi dữ liệu lớn. Auto-scaling, nạp thô trước và tách Storage/Compute là đặc trưng của ELT."
         },
         {
           "id": "C3_T1_Q2",
@@ -26,7 +27,8 @@
             "C": "Biến đổi dữ liệu trên máy chủ trung gian rồi mới nạp",
             "D": "Chỉ hỗ trợ Schema-on-write"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**ELT**: nạp dữ liệu thô vào Lake/Warehouse **trước**, rồi biến đổi tại chỗ (**in-place transform**) bằng sức mạnh của Cloud."
         },
         {
           "id": "C3_T1_Q3",
@@ -37,7 +39,8 @@
             "C": "Không cần schema",
             "D": "Schema cố định vĩnh viễn"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "ELT hỗ trợ **Schema-on-read**: định nghĩa cấu trúc tại thời điểm truy vấn."
         },
         {
           "id": "C3_T1_Q4",
@@ -48,7 +51,8 @@
             "C": "Dữ liệu không phải di chuyển qua các máy chủ ETL trung gian",
             "D": "Dữ liệu được xóa sau khi nạp"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Với ELT dữ liệu **không phải di chuyển qua máy chủ ETL trung gian** nên giảm điểm rò rỉ → bảo mật tốt hơn."
         },
         {
           "id": "C3_T1_Q5",
@@ -59,7 +63,8 @@
             "C": "Archive",
             "D": "Gold"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Bronze** giữ dữ liệu thô gốc nên có thể **re-run pipeline** từ đó khi phát hiện lỗi ở các lớp trên."
         },
         {
           "id": "C3_T1_Q6",
@@ -70,7 +75,8 @@
             "C": "Giảm khả năng mở rộng",
             "D": "Chi phí cố định không đổi"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "ELT tối ưu chi phí nhờ **Pay-as-you-go** và xử lý song song trên Cloud."
         }
       ]
     },
@@ -87,7 +93,8 @@
             "C": "Công cụ trực quan hóa",
             "D": "Nhóm kỹ thuật nhận diện và nắm bắt các thay đổi (INSERT, UPDATE, DELETE) từ CSDL nguồn"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**CDC** (Change Data Capture) nhận diện và nắm bắt các thay đổi **INSERT/UPDATE/DELETE** từ CSDL nguồn."
         },
         {
           "id": "C3_T2_Q2",
@@ -98,7 +105,8 @@
             "C": "Quét toàn bộ bảng theo chu kỳ",
             "D": "Đọc trực tiếp từ Redo logs thay vì quét truy vấn"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Log-based CDC** đọc trực tiếp **Redo logs** thay vì quét bảng bằng truy vấn."
         },
         {
           "id": "C3_T2_Q3",
@@ -109,7 +117,8 @@
             "C": "Dễ thiết lập ban đầu (chỉ cần viết SQL)",
             "D": "Đạt chuẩn Real-time"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Query-based CDC** dễ thiết lập ban đầu (chỉ cần viết SQL) nhưng kém ổn định dài hạn, trễ theo chu kỳ quét."
         },
         {
           "id": "C3_T2_Q4",
@@ -120,7 +129,8 @@
             "C": "Không bao giờ bỏ sót bản ghi xóa",
             "D": "Rất khó phát hiện các bản ghi đã bị Hard Delete"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Query-based khó phát hiện **Hard Delete** vì bản ghi đã bị xóa khỏi bảng nên không còn để quét."
         },
         {
           "id": "C3_T2_Q5",
@@ -131,7 +141,8 @@
             "C": "Không xác định",
             "D": "Luôn trễ hàng ngày"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Log-based CDC đạt **real-time**, độ trễ tính bằng **mili giây**."
         },
         {
           "id": "C3_T2_Q6",
@@ -142,7 +153,8 @@
             "C": "Gây nặng hệ thống do quét bảng liên tục",
             "D": "Tăng gấp đôi dung lượng nguồn"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Log-based CDC đọc log nên **gần như không ảnh hưởng** hiệu suất CSDL nguồn."
         },
         {
           "id": "C3_T2_Q7",
@@ -153,7 +165,8 @@
             "C": "Microservices",
             "D": "Audit Trails"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Audit Trails**: lưu chi tiết lịch sử mọi thao tác thay đổi phục vụ kiểm toán nội bộ."
         },
         {
           "id": "C3_T2_Q8",
@@ -164,7 +177,8 @@
             "C": "Audit Trails",
             "D": "Fraud Detection"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Cloud Migration** dùng CDC để chuyển dữ liệu lên Cloud mà không gián đoạn (**zero-downtime**)."
         },
         {
           "id": "C3_T2_Q9",
@@ -175,7 +189,8 @@
             "C": "Apache Kafka Connect (mã nguồn mở)",
             "D": "Snowflake Streams"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Debezium** là nền tảng CDC mã nguồn mở chạy trên **Apache Kafka Connect**."
         },
         {
           "id": "C3_T2_Q10",
@@ -186,7 +201,8 @@
             "C": "Tính năng theo dõi thay đổi bên trong kho dữ liệu",
             "D": "Công cụ mã nguồn mở dựa trên Kafka"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Fivetran** là giải pháp **SaaS thương mại** tự động hóa luồng CDC."
         }
       ]
     },
@@ -203,7 +219,8 @@
             "C": "Phương pháp không cần lưu dữ liệu",
             "D": "ETL chạy 0 lần mỗi ngày"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Zero-ETL** tích hợp dữ liệu trực tiếp **không cần code pipeline trung gian**."
         },
         {
           "id": "C3_T3_Q2",
@@ -214,7 +231,8 @@
             "C": "Kỹ thuật nhân bản dữ liệu tự động và liên tục ở tầng hệ thống vật lý",
             "D": "Giám sát luồng tích hợp trên một bảng điều khiển"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Storage Mirroring** nhân bản dữ liệu tự động và liên tục ở tầng hệ thống vật lý."
         },
         {
           "id": "C3_T3_Q3",
@@ -225,7 +243,8 @@
             "C": "Nhân bản dữ liệu vật lý liên tục",
             "D": "Bảng điều khiển hợp nhất"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Metadata Sharing** chia sẻ trực tiếp siêu dữ liệu cấu trúc ở cấp độ lưu trữ."
         },
         {
           "id": "C3_T3_Q4",
@@ -236,7 +255,8 @@
             "C": "Nhân bản dữ liệu ở tầng vật lý",
             "D": "Giám sát luồng tích hợp"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Serverless Scaling**: hạ tầng tự mở rộng năng lực đồng bộ khi khối lượng dữ liệu tăng."
         },
         {
           "id": "C3_T3_Q5",
@@ -247,7 +267,8 @@
             "C": "Chia sẻ metadata",
             "D": "Liên kết tối ưu giữa các Cloud"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Unified Control Plane**: giám sát và quản lý toàn bộ luồng tích hợp trên một bảng điều khiển duy nhất."
         },
         {
           "id": "C3_T3_Q6",
@@ -258,7 +279,8 @@
             "C": "Không phù hợp với dữ liệu nguồn bẩn cần làm sạch và biến đổi phức tạp",
             "D": "Tốc độ hiển thị dữ liệu chậm"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Zero-ETL **không phù hợp** khi dữ liệu nguồn bẩn cần làm sạch và biến đổi phức tạp."
         },
         {
           "id": "C3_T3_Q7",
@@ -269,7 +291,8 @@
             "C": "Không thể dùng Cloud",
             "D": "Bị phụ thuộc vào hệ sinh thái của một nhà cung cấp Cloud duy nhất"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Vendor Lock-in**: bị phụ thuộc vào hệ sinh thái của một nhà cung cấp Cloud duy nhất."
         },
         {
           "id": "C3_T3_Q8",
@@ -280,7 +303,8 @@
             "C": "Kéo dài thời gian phân tích",
             "D": "Tăng thời gian chờ ETL"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Time-to-Insight**: rút ngắn thời gian từ lúc dữ liệu phát sinh đến khi phân tích."
         }
       ]
     },
@@ -297,7 +321,8 @@
             "C": "Người viết SQL",
             "D": "Thủ kho lưu dữ liệu"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Orchestration** như “nhạc trưởng” điều khiển các tác vụ theo đúng thứ tự và điều kiện."
         },
         {
           "id": "C3_T4_Q2",
@@ -308,7 +333,8 @@
             "C": "Directed Acyclic Graph (Đồ thị có hướng không chu trình)",
             "D": "Data Analysis Group"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**DAG** = **Directed Acyclic Graph** (đồ thị có hướng không chu trình)."
         },
         {
           "id": "C3_T4_Q3",
@@ -319,7 +345,8 @@
             "C": "Loại bỏ vòng lặp vô hạn có thể gây treo hệ thống",
             "D": "Xử lý song song"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Acyclic** nghĩa là không có chu trình, loại bỏ vòng lặp vô hạn gây treo hệ thống."
         },
         {
           "id": "C3_T4_Q4",
@@ -330,7 +357,8 @@
             "C": "Lớp Gold chạy trước Bronze",
             "D": "Không có thứ tự"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Quản lý phụ thuộc: **Gold chỉ chạy sau khi Silver hoàn tất**."
         },
         {
           "id": "C3_T4_Q5",
@@ -341,7 +369,8 @@
             "C": "Tư duy Asset-centric đặc trưng",
             "D": "Tiêu chuẩn công nghiệp phổ biến với hàng nghìn thư viện kết nối, tư duy Task-centric"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Apache Airflow** là tiêu chuẩn công nghiệp với hàng nghìn thư viện kết nối, tư duy **Task-centric**."
         },
         {
           "id": "C3_T4_Q6",
@@ -352,7 +381,8 @@
             "C": "Prefect",
             "D": "Mage.ai"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Prefect** (cùng Dagster) là thế hệ công cụ giúp tối ưu lập trình Python."
         },
         {
           "id": "C3_T4_Q7",
@@ -363,7 +393,8 @@
             "C": "Chỉ quan tâm thời gian chạy",
             "D": "Chỉ quan tâm kết quả câu lệnh"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Asset-centric** (Dagster) tập trung quản lý **tài sản dữ liệu** nào được tạo ra, ưu tiên lineage."
         },
         {
           "id": "C3_T4_Q8",
@@ -374,7 +405,8 @@
             "C": "Điều phối tích hợp sâu AI để hỗ trợ sinh mã nguồn và dự đoán lỗi",
             "D": "Không hỗ trợ Python"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Mage.ai** tích hợp sâu AI để hỗ trợ sinh mã nguồn và dự đoán lỗi."
         },
         {
           "id": "C3_T4_Q9",
@@ -385,7 +417,8 @@
             "C": "Stack",
             "D": "Azure Event Grid"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Azure Event Grid** (cùng AWS SQS) là hàng đợi/sự kiện tích hợp với Snowpipe."
         },
         {
           "id": "C3_T4_Q10",
@@ -396,7 +429,8 @@
             "C": "Công cụ Data Catalog",
             "D": "Định dạng bảng mở"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**AWS Step Functions và Google Workflows** là Cloud Native Services cho hệ thống Serverless."
         },
         {
           "id": "C3_T4_Q11",
@@ -407,7 +441,8 @@
             "C": "Quản lý các tài sản dữ liệu được tạo ra (Asset-centric)",
             "D": "Theo dõi nguồn gốc (lineage) và trạng thái dữ liệu"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Airflow** theo tư duy Task-centric: **giám sát tác vụ đang chạy**."
         }
       ]
     },
@@ -424,7 +459,8 @@
             "C": "Luôn tốn kém hơn",
             "D": "Độ trễ cực thấp"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Batch** có độ phức tạp thấp hơn, dễ triển khai và khắc phục sự cố; Streaming phức tạp, tốn kém hơn."
         },
         {
           "id": "C3_T5_Q2",
@@ -435,7 +471,8 @@
             "C": "Báo cáo cuối ngày",
             "D": "Tính lương cuối tháng"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Hệ thống SLA độ trễ cực thấp như **chống gian lận thẻ, gợi ý sản phẩm real-time** bắt buộc dùng Streaming."
         },
         {
           "id": "C3_T5_Q3",
@@ -446,7 +483,8 @@
             "C": "Chỉ chạy theo lịch hàng đêm",
             "D": "Khi có người dùng đăng nhập"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Snowpipe** tự động nạp khi **file vừa xuất hiện** trên Cloud Storage."
         },
         {
           "id": "C3_T5_Q4",
@@ -457,7 +495,8 @@
             "C": "Một công cụ CDC",
             "D": "Một lô dữ liệu rất lớn mỗi tuần"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Micro-batch** chia dữ liệu thành các lô nhỏ liên tục để nạp."
         },
         {
           "id": "C3_T5_Q5",
@@ -468,7 +507,8 @@
             "C": "Mirroring",
             "D": "Watermarks"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Windowing** tính các phép tập hợp theo từng khung thời gian (ví dụ mỗi 5 phút)."
         },
         {
           "id": "C3_T5_Q6",
@@ -479,7 +519,8 @@
             "C": "Xử lý thông minh các bản ghi đến trễ mà không làm nghẽn luồng chính",
             "D": "Phục hồi bằng checkpoint"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Watermarks** xử lý thông minh bản ghi **đến trễ** mà không làm nghẽn luồng chính."
         },
         {
           "id": "C3_T5_Q7",
@@ -490,7 +531,8 @@
             "C": "Dữ liệu được xử lý hai lần",
             "D": "Dữ liệu chỉ xử lý theo batch"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Exactly-once** đảm bảo dữ liệu không bị xử lý lặp hay thất thoát."
         },
         {
           "id": "C3_T5_Q8",
@@ -501,7 +543,8 @@
             "C": "Watermarking",
             "D": "Caching"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Fault Tolerance** dùng **Checkpointing** để phục hồi tại điểm xảy ra sự cố."
         },
         {
           "id": "C3_T5_Q9",
@@ -512,7 +555,8 @@
             "C": "Chỉ một luồng Streaming",
             "D": "Hai luồng song song: Batch (chính xác) và Speed/Streaming (nhanh)"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Lambda** duy trì **hai luồng song song**: Batch (chính xác) và Speed/Streaming (nhanh)."
         },
         {
           "id": "C3_T5_Q10",
@@ -523,7 +567,8 @@
             "C": "Phải viết hai bộ mã nguồn",
             "D": "Phức tạp hơn Lambda"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Kappa** chỉ **một luồng, một codebase** nên dễ bảo trì hơn Lambda."
         }
       ]
     },
@@ -540,7 +585,8 @@
             "C": "Templating Engine bổ sung cấu trúc điều khiển vào câu lệnh SQL tĩnh",
             "D": "Một công cụ CDC"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Jinja** là Templating Engine thêm cấu trúc điều khiển (if/for) vào SQL tĩnh."
         },
         {
           "id": "C3_T6_Q2",
@@ -551,7 +597,8 @@
             "C": "Xóa bảng",
             "D": "Mã hóa dữ liệu"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Macros** đóng gói đoạn SQL lặp lại thành hàm để gọi tự động."
         },
         {
           "id": "C3_T6_Q3",
@@ -562,7 +609,8 @@
             "C": "Python-only",
             "D": "Chỉ kéo thả"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**dbt** theo triết lý **SQL-first**: logic nghiệp vụ bằng SQL thuần."
         },
         {
           "id": "C3_T6_Q4",
@@ -573,7 +621,8 @@
             "C": "Viết SQL riêng kiểm tra quy tắc nghiệp vụ đặc thù",
             "D": "Vẽ lineage"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Schema Tests** là kiểm thử khai báo sẵn (not null, unique…). Singular Tests mới là SQL tự viết."
         },
         {
           "id": "C3_T6_Q5",
@@ -584,7 +633,8 @@
             "C": "Kiểm tra phần cứng",
             "D": "Kiểm tra hiệu năng"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Singular Tests** là câu SQL riêng biệt kiểm tra quy tắc nghiệp vụ đặc thù."
         },
         {
           "id": "C3_T6_Q6",
@@ -595,7 +645,8 @@
             "C": "Tự động trích xuất comment trong mã nguồn để tạo webpage tài liệu hoàn chỉnh",
             "D": "Tự mã hóa dữ liệu"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Auto-Docs** tự trích comment trong mã nguồn để tạo trang tài liệu."
         },
         {
           "id": "C3_T6_Q7",
@@ -606,7 +657,8 @@
             "C": "Sao lưu",
             "D": "Nén dữ liệu"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Visual Lineage** vẽ bản đồ quan hệ đầu vào/đầu ra của từng bảng."
         },
         {
           "id": "C3_T6_Q8",
@@ -617,7 +669,8 @@
             "C": "Git",
             "D": "Excel"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "dbt tích hợp **Git** để quản lý phiên bản mã nguồn và làm việc nhóm."
         },
         {
           "id": "C3_T6_Q9",
@@ -628,7 +681,8 @@
             "C": "Giúp giảm thiểu hơn 30% số dòng code dư thừa so với cách viết truyền thống",
             "D": "Giúp giảm thiểu hơn 20% số dòng code dư thừa so với cách viết truyền thống"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Jinja + Dynamic SQL giúp giảm hơn **50%** số dòng code dư thừa."
         }
       ]
     },
@@ -645,7 +699,8 @@
             "C": "Delta Lake",
             "D": "Data Warehouse"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Delta Lake** (cùng Iceberg) hỗ trợ đổi cấu trúc bảng mà không cần ghi lại bảng."
         },
         {
           "id": "C3_T7_Q2",
@@ -656,7 +711,8 @@
             "C": "Schema Versioning",
             "D": "Schema Evolution"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Schema Versioning** lưu lịch sử các phiên bản cấu trúc để rollback khi cần."
         },
         {
           "id": "C3_T7_Q3",
@@ -667,7 +723,8 @@
             "C": "Tự động phát hiện trường mới ở nguồn và đồng bộ vào đích",
             "D": "Quản lý tập trung các thay đổi cấu trúc Kafka Streaming"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Snowflake Evolution**: kho dữ liệu tự điều chỉnh cấu trúc bảng ngay trong lúc chạy lệnh **COPY**."
         },
         {
           "id": "C3_T7_Q4",
@@ -678,7 +735,8 @@
             "C": "Silent Loss",
             "D": "Auto-column Addition"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Silent Loss**: dữ liệu mới xuất hiện nhưng bị loại bỏ ngầm vì kho không nhận diện cột mới."
         },
         {
           "id": "C3_T7_Q5",
@@ -689,7 +747,8 @@
             "C": "Lỗi mạng",
             "D": "Dữ liệu bị nén"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Schema Drift** là sự thay đổi cấu trúc đột ngột ở nguồn (thêm/xóa cột, đổi kiểu)."
         },
         {
           "id": "C3_T7_Q6",
@@ -700,7 +759,8 @@
             "C": "Cấu trúc cũ chạy được với code mới",
             "D": "Kết hợp cả hai chiều"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Backward Compatibility**: code xử lý cũ vẫn đọc được cấu trúc dữ liệu **mới**."
         },
         {
           "id": "C3_T7_Q7",
@@ -711,7 +771,8 @@
             "C": "Chỉ dùng cho streaming",
             "D": "Code cũ đọc được dữ liệu mới"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Forward Compatibility**: cấu trúc dữ liệu **cũ** hoạt động trơn tru với code **mới**."
         },
         {
           "id": "C3_T7_Q8",
@@ -722,7 +783,8 @@
             "C": "Fivetran Auto-sync",
             "D": "AWS Glue Crawler"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Fivetran Auto-sync** tự phát hiện trường mới ở nguồn và đồng bộ vào đích."
         },
         {
           "id": "C3_T7_Q9",
@@ -733,7 +795,8 @@
             "C": "Điều chỉnh bảng khi COPY",
             "D": "Nền tảng quản lý tập trung và kiểm soát các thay đổi cấu trúc Kafka Streaming"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Schema Registry** quản lý tập trung và kiểm soát thay đổi cấu trúc cho Kafka Streaming."
         },
         {
           "id": "C3_T7_Q10",
@@ -744,7 +807,8 @@
             "C": "Data Catalog Crawlers: tự động scan và cập nhật thay đổi lên danh mục",
             "D": "Định dạng bảng hiện đại"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**AWS Glue Crawler** thuộc nhóm Data Catalog Crawlers: tự scan và cập nhật thay đổi lên danh mục."
         }
       ]
     },
@@ -761,7 +825,8 @@
             "C": "Observability chỉ báo lỗi, không giải thích",
             "D": "Hai khái niệm hoàn toàn giống nhau"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Monitoring** báo hệ thống lỗi; **Observability** còn giải thích **vì sao** lỗi và lỗi **ở đâu**."
         },
         {
           "id": "C3_T8_Q2",
@@ -772,7 +837,8 @@
             "C": "Freshness, Volume, Distribution, Schema, Lineage",
             "D": "Bronze, Silver, Gold, Archive, Hot"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Năm trụ cột: **Freshness, Volume, Distribution, Schema, Lineage**."
         },
         {
           "id": "C3_T8_Q3",
@@ -783,7 +849,8 @@
             "C": "Dữ liệu có được cập nhật đúng hạn theo SLA không",
             "D": "Số lượng bản ghi bất thường"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Freshness** kiểm tra dữ liệu có được cập nhật đúng hạn theo SLA không."
         },
         {
           "id": "C3_T8_Q4",
@@ -794,7 +861,8 @@
             "C": "Thời gian cập nhật",
             "D": "Thay đổi cấu trúc"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Volume** kiểm tra số bản ghi nạp có tăng/giảm đột ngột so với mức trung bình lịch sử."
         },
         {
           "id": "C3_T8_Q5",
@@ -805,7 +873,8 @@
             "C": "Thời gian tải trang",
             "D": "Thời gian bảo trì phần cứng"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Data Downtime** là thời gian dữ liệu không khả dụng hoặc sai."
         },
         {
           "id": "C3_T8_Q6",
@@ -816,7 +885,8 @@
             "C": "Thời gian nạp dữ liệu",
             "D": "Số lượng cảnh báo"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**MTTR** là thời gian trung bình để khôi phục sự cố; Observability giúp rút ngắn từ vài ngày còn vài phút."
         }
       ]
     }

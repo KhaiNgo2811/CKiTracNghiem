@@ -15,7 +15,8 @@
             "C": "Vulnerability",
             "D": "Countermeasure"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Risk** là khả năng một điều xấu xảy ra đối với asset. Threat là hành động gây hại, Vulnerability là điểm yếu, Countermeasure là biện pháp giảm rủi ro."
         },
         {
           "id": "ATTT_BO_T1_Q2",
@@ -26,7 +27,8 @@
             "C": "Asset",
             "D": "Threat"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Threat** là bất kỳ hành động nào có thể gây thiệt hại cho asset."
         },
         {
           "id": "ATTT_BO_T1_Q3",
@@ -37,7 +39,8 @@
             "C": "Vulnerability",
             "D": "Control"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Vulnerability** là điểm yếu cho phép threat được hiện thực hóa hoặc tác động đến asset."
         },
         {
           "id": "ATTT_BO_T1_Q4",
@@ -48,7 +51,8 @@
             "C": "Asset",
             "D": "Countermeasure"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Password mặc định chưa đổi là một **điểm yếu (Vulnerability)** của router, không phải threat."
         },
         {
           "id": "ATTT_BO_T1_Q5",
@@ -59,7 +63,8 @@
             "C": "Asset",
             "D": "Policy"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Cơn bão là tác nhân bên ngoài có thể gây thiệt hại → **Threat**."
         },
         {
           "id": "ATTT_BO_T1_Q6",
@@ -70,7 +75,8 @@
             "C": "Accountability",
             "D": "Confidentiality"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Confidentiality** ngăn tiết lộ thông tin cho người không được phép."
         },
         {
           "id": "ATTT_BO_T1_Q7",
@@ -81,7 +87,8 @@
             "C": "Integrity",
             "D": "Authentication"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Integrity** bảo đảm dữ liệu không bị sửa đổi trái phép."
         },
         {
           "id": "ATTT_BO_T1_Q8",
@@ -92,7 +99,8 @@
             "C": "Integrity",
             "D": "Authorization"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Availability** bảo đảm hệ thống và dữ liệu truy cập được khi cần."
         },
         {
           "id": "ATTT_BO_T1_Q9",
@@ -103,7 +111,8 @@
             "C": "Availability",
             "D": "Chống chối bỏ"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Mã hóa để người ngoài không đọc được bảo vệ **Confidentiality**."
         },
         {
           "id": "ATTT_BO_T1_Q10",
@@ -114,7 +123,8 @@
             "C": "Privacy",
             "D": "Availability"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "DDoS làm hệ thống không truy cập được → ảnh hưởng chính **Availability**."
         },
         {
           "id": "ATTT_BO_T1_Q11",
@@ -125,7 +135,8 @@
             "C": "Integrity",
             "D": "Authentication"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Sửa số tiền giao dịch là thay đổi dữ liệu trái phép → vi phạm **Integrity**."
         },
         {
           "id": "ATTT_BO_T1_Q12",
@@ -136,7 +147,8 @@
             "C": "99,0%",
             "D": "96,0%"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Availability = uptime / tổng thời gian = 700 / 720 ≈ **97,2%**."
         },
         {
           "id": "ATTT_BO_T1_Q13",
@@ -147,7 +159,8 @@
             "C": "90%",
             "D": "99,9%"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Availability = (720 − 7,2) / 720 = **99%**."
         },
         {
           "id": "ATTT_BO_T1_Q14",
@@ -158,7 +171,8 @@
             "C": "31 ngày",
             "D": "29 ngày"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Tháng 30 ngày, ngừng 1 ngày → uptime = **29 ngày**."
         },
         {
           "id": "ATTT_BO_T1_Q15",
@@ -169,7 +183,8 @@
             "C": "Tổng uptime / (Tổng uptime + Tổng downtime)",
             "D": "Tổng downtime / (Tổng uptime + Tổng downtime)"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Availability = Uptime / (Uptime + Downtime)** — tỷ lệ thời gian hệ thống hoạt động trên tổng thời gian."
         },
         {
           "id": "ATTT_BO_T1_Q16",
@@ -180,7 +195,8 @@
             "C": "MTBF",
             "D": "RTO"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**MTTR** (Mean Time To Repair) là thời gian trung bình để sửa chữa thành phần hỏng."
         },
         {
           "id": "ATTT_BO_T1_Q17",
@@ -191,7 +207,8 @@
             "C": "RTO",
             "D": "Downtime"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**MTTF** (Mean Time To Failure) là thời gian trung bình chạy đến lần hỏng đầu tiên."
         },
         {
           "id": "ATTT_BO_T1_Q18",
@@ -202,7 +219,8 @@
             "C": "RTO",
             "D": "MTBF"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**MTBF** (Mean Time Between Failures) = MTTF + MTTR, là thời gian trung bình giữa hai lần hỏng liên tiếp."
         },
         {
           "id": "ATTT_BO_T1_Q19",
@@ -213,7 +231,8 @@
             "C": "408 giờ",
             "D": "3.200 giờ"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "MTBF = MTTF + MTTR = 400 + 8 = **408 giờ**."
         },
         {
           "id": "ATTT_BO_T1_Q20",
@@ -224,7 +243,8 @@
             "C": "MTBF",
             "D": "Uptime"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**RTO** (Recovery Time Objective) là thời gian tối đa chấp nhận được để khôi phục hệ thống sau sự cố."
         },
         {
           "id": "ATTT_BO_T1_Q21",
@@ -235,7 +255,8 @@
             "C": "Miền WAN",
             "D": "Miền ứng dụng hệ thống"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**User Domain** gồm những người truy cập hệ thống, ứng dụng và dữ liệu."
         },
         {
           "id": "ATTT_BO_T1_Q22",
@@ -246,7 +267,8 @@
             "C": "Miền truy cập từ xa",
             "D": "Miền LAN-to-WAN"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Firewall và DMZ nằm ở điểm nối mạng nội bộ ra ngoài → miền **LAN-to-WAN**."
         },
         {
           "id": "ATTT_BO_T1_Q23",
@@ -257,7 +279,8 @@
             "C": "Remote Access Domain",
             "D": "Miền máy trạm"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "VPN từ nhà vào mạng công ty thuộc **Remote Access Domain**."
         },
         {
           "id": "ATTT_BO_T1_Q24",
@@ -268,7 +291,8 @@
             "C": "Firewall",
             "D": "Đường truyền WAN"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Người dùng** là mắt xích yếu nhất vì dễ bị lừa, mắc lỗi hoặc cố ý vi phạm."
         },
         {
           "id": "ATTT_BO_T1_Q25",
@@ -279,7 +303,8 @@
             "C": "Bộ phận bảo vệ",
             "D": "Nhà cung cấp dịch vụ Internet"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Việc kiểm tra lý lịch nhân viên thuộc trách nhiệm của bộ phận **nhân sự (HR)**."
         },
         {
           "id": "ATTT_BO_T1_Q26",
@@ -290,7 +315,8 @@
             "C": "Audit các biện pháp kiểm soát an ninh hằng năm",
             "D": "Cho nhân viên giữ vĩnh viễn quyền truy cập vào mọi hệ thống nhạy cảm"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Cho phép giữ vĩnh viễn quyền vào mọi hệ thống nhạy cảm vi phạm **least privilege**, làm tăng rủi ro. Kiểm tra lý lịch, luân chuyển quyền và audit hằng năm đều giảm rủi ro."
         },
         {
           "id": "ATTT_BO_T1_Q27",
@@ -301,7 +327,8 @@
             "C": "Policy",
             "D": "Guideline"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Policy** là văn bản ngắn gọn nêu đường lối, áp dụng toàn tổ chức."
         },
         {
           "id": "ATTT_BO_T1_Q28",
@@ -312,7 +339,8 @@
             "C": "Guideline",
             "D": "Procedure"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Standard** định nghĩa chi tiết phần cứng/phần mềm và cách dùng."
         },
         {
           "id": "ATTT_BO_T1_Q29",
@@ -323,7 +351,8 @@
             "C": "Standard",
             "D": "Guideline"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Procedure** là chỉ dẫn từng bước thực hiện policy và standard."
         },
         {
           "id": "ATTT_BO_T1_Q30",
@@ -334,7 +363,8 @@
             "C": "Procedure",
             "D": "Guideline"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Guideline** chỉ gợi ý, không bắt buộc."
         },
         {
           "id": "ATTT_BO_T1_Q31",
@@ -345,7 +375,8 @@
             "C": "Private data",
             "D": "Dữ liệu phạm vi công cộng"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Private data** là dữ liệu về con người cần giữ riêng tư."
         },
         {
           "id": "ATTT_BO_T1_Q32",
@@ -356,7 +387,8 @@
             "C": "Dữ liệu phạm vi công cộng",
             "D": "Dữ liệu chỉ dùng nội bộ"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Confidential data** là thông tin thuộc sở hữu của tổ chức (proprietary)."
         },
         {
           "id": "ATTT_BO_T1_Q33",
@@ -367,7 +399,8 @@
             "C": "Dữ liệu riêng tư",
             "D": "Dữ liệu mật"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Internal use only** là dữ liệu chia sẻ nội bộ trong tổ chức."
         },
         {
           "id": "ATTT_BO_T1_Q34",
@@ -378,7 +411,8 @@
             "C": "Chỉ dùng nội bộ",
             "D": "Public domain"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Thông cáo báo chí đã công bố thuộc **Public domain**."
         },
         {
           "id": "ATTT_BO_T1_Q35",
@@ -389,7 +423,8 @@
             "C": "User",
             "D": "WAN link"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**User** là mắt xích yếu nhất trong an ninh hạ tầng CNTT."
         },
         {
           "id": "ATTT_BO_T1_Q36",
@@ -400,7 +435,8 @@
             "C": "Mô tả chi tiết cấu hình hardware",
             "D": "Báo cáo audit"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Guideline** chỉ là gợi ý, không phải quy định bắt buộc như policy/standard/procedure."
         },
         {
           "id": "ATTT_BO_T1_Q37",
@@ -411,7 +447,8 @@
             "C": "Thời gian trung bình để sửa chữa một thành phần",
             "D": "Thời gian tối đa chấp nhận được để khôi phục"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**MTTR** đo thời gian trung bình để sửa chữa. Thời gian giữa hai lần hỏng là MTBF; đến lần hỏng đầu là MTTF; thời gian khôi phục tối đa là RTO."
         },
         {
           "id": "ATTT_BO_T1_Q38",
@@ -422,7 +459,8 @@
             "C": "Threat chỉ do thiên tai; vulnerability chỉ do con người",
             "D": "Threat là hành động có thể gây hại; vulnerability là vulnerability cho phép threat được hiện thực hóa"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Threat** là hành động có thể gây hại; **vulnerability** là điểm yếu cho phép threat thành hiện thực. Hai khái niệm khác nhau, cùng tạo nên risk."
         },
         {
           "id": "ATTT_BO_T1_Q39",
@@ -433,7 +471,8 @@
             "C": "Khi uptime càng nhỏ",
             "D": "Khi MTTR càng lớn"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Availability = uptime / (uptime + downtime), nên downtime càng nhỏ thì availability càng cao."
         },
         {
           "id": "ATTT_BO_T1_Q40",
@@ -444,7 +483,8 @@
             "C": "Confidential data",
             "D": "Dữ liệu đã đăng công khai trên website"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Confidential data** cần bảo vệ cao nhất; dữ liệu public domain đã công bố rộng rãi nên không cần mức bảo mật cao."
         },
         {
           "id": "ATTT_BO_T1_Q41",
@@ -455,7 +495,8 @@
             "C": "Chỉ bộ phận IT",
             "D": "Chỉ administrator"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Policy** áp dụng cho **toàn bộ tổ chức** và cần lãnh đạo cấp cao phê duyệt."
         },
         {
           "id": "ATTT_BO_T1_Q42",
@@ -466,7 +507,8 @@
             "C": "Vulnerability",
             "D": "Countermeasure"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Vulnerability** là điểm yếu cho phép threat phát huy tác dụng. Risk là kết quả khi threat gặp vulnerability."
         }
       ]
     },
@@ -483,7 +525,8 @@
             "C": "white-hat",
             "D": "Cracker"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**White-hat hacker** được ủy quyền tìm lỗ hổng để giúp tổ chức khắc phục."
         },
         {
           "id": "ATTT_BO_T2_Q44",
@@ -494,7 +537,8 @@
             "C": "Chuyên gia penetration testing được thuê",
             "D": "Auditor nội bộ"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Black-hat hacker** xâm nhập trái phép để gây hại hoặc trục lợi."
         },
         {
           "id": "ATTT_BO_T2_Q45",
@@ -505,7 +549,8 @@
             "C": "Luôn gây hại cho tổ chức",
             "D": "Chỉ tấn công hệ thống chính phủ"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Gray-hat hacker** nằm giữa white-hat và black-hat."
         },
         {
           "id": "ATTT_BO_T2_Q46",
@@ -516,7 +561,8 @@
             "C": "Sử dụng cửa hậu (backdoor) để truy cập tài nguyên",
             "D": "Backup dữ liệu theo lịch"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Backup theo lịch là hoạt động quản trị bình thường, **không phải** vi phạm an ninh. DoS, wiretapping và backdoor đều là hành vi vi phạm."
         },
         {
           "id": "ATTT_BO_T2_Q47",
@@ -527,7 +573,8 @@
             "C": "DoS",
             "D": "Giả mạo danh tính"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**DoS** làm quá tải tài nguyên để người dùng hợp lệ không dùng được dịch vụ."
         },
         {
           "id": "ATTT_BO_T2_Q48",
@@ -538,7 +585,8 @@
             "C": "DoS luôn dùng nhiều máy hơn DDoS",
             "D": "DoS chỉ nhằm đánh cắp password"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**DDoS** dùng **nhiều máy phối hợp** cùng tấn công, DoS chỉ từ một nguồn."
         },
         {
           "id": "ATTT_BO_T2_Q49",
@@ -549,7 +597,8 @@
             "C": "Sửa đổi dữ liệu",
             "D": "Bịa đặt thông tin"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Cài thiết bị nghe trộm vào đường cáp để đọc dữ liệu là **wiretapping**."
         },
         {
           "id": "ATTT_BO_T2_Q50",
@@ -560,7 +609,8 @@
             "C": "Bản vá bảo mật",
             "D": "backdoor"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Lối vào bí mật để truy cập không cần xác thực là **backdoor** (cửa hậu)."
         },
         {
           "id": "ATTT_BO_T2_Q51",
@@ -571,7 +621,8 @@
             "C": "accidental data modification",
             "D": "Tấn công cửa hậu"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Nhân viên vô tình sửa dữ liệu là **accidental data modification** — vẫn là một vi phạm an ninh."
         },
         {
           "id": "ATTT_BO_T2_Q52",
@@ -582,7 +633,8 @@
             "C": "Nhận dạng, xác thực, ủy quyền, giải trình",
             "D": "Giảm thiểu, chuyển giao, chấp nhận, tránh"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Bốn loại tấn công cơ bản: **Fabrication, Interception, Interruption, Modification**. Các phương án khác là CIA, 4 bước access control, 4 chiến lược xử lý risk."
         },
         {
           "id": "ATTT_BO_T2_Q53",
@@ -593,7 +645,8 @@
             "C": "Interruption",
             "D": "Modification"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Tạo bản ghi giao dịch giả để đánh lừa hệ thống là **Fabrication**."
         },
         {
           "id": "ATTT_BO_T2_Q54",
@@ -604,7 +657,8 @@
             "C": "Interruption",
             "D": "Interception"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Đọc lén mà không thay đổi nội dung là **Interception**."
         },
         {
           "id": "ATTT_BO_T2_Q55",
@@ -615,7 +669,8 @@
             "C": "Interruption",
             "D": "Modification"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Cắt đường truyền làm máy chủ không truy cập được là **Interruption**."
         },
         {
           "id": "ATTT_BO_T2_Q56",
@@ -626,7 +681,8 @@
             "C": "Interruption",
             "D": "Fabrication"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Thay đổi nội dung tệp trái phép là **Modification**."
         },
         {
           "id": "ATTT_BO_T2_Q57",
@@ -637,7 +693,8 @@
             "C": "Modification",
             "D": "Fabrication"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Interruption** làm tài sản không sẵn sàng → đe dọa availability."
         },
         {
           "id": "ATTT_BO_T2_Q58",
@@ -648,7 +705,8 @@
             "C": "Từ chối dịch vụ",
             "D": "Interception"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Interception** (đọc lén) đe dọa confidentiality của dữ liệu đang truyền."
         },
         {
           "id": "ATTT_BO_T2_Q59",
@@ -659,7 +717,8 @@
             "C": "Modification",
             "D": "Nghe lén thụ động"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Modification** thay đổi nội dung → đe dọa integrity."
         },
         {
           "id": "ATTT_BO_T2_Q60",
@@ -670,7 +729,8 @@
             "C": "Tấn công vào asset CNTT bằng phần cứng",
             "D": "Tấn công vật lý vào cửa ra vào"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Email giả mạo ngân hàng lừa nhân viên là tấn công **vào con người** (social engineering/phishing)."
         },
         {
           "id": "ATTT_BO_T2_Q61",
@@ -681,7 +741,8 @@
             "C": "Tấn công social engineering",
             "D": "Tấn công vào privacy"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Làm cạn tài nguyên máy chủ khiến dịch vụ ngừng là tấn công **vào availability**."
         },
         {
           "id": "ATTT_BO_T2_Q62",
@@ -692,7 +753,8 @@
             "C": "Tấn công bằng thiên tai",
             "D": "Tấn công vào asset CNTT"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Malware đánh cắp dữ liệu trên máy chủ là tấn công **vào tài sản CNTT**."
         },
         {
           "id": "ATTT_BO_T2_Q63",
@@ -703,7 +765,8 @@
             "C": "Vi phạm an ninh như nhiễm malware",
             "D": "Củng cố chính sách bảo mật"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Duyệt web không phù hợp có thể dẫn tới **vi phạm an ninh** như nhiễm malware."
         },
         {
           "id": "ATTT_BO_T2_Q64",
@@ -714,7 +777,8 @@
             "C": "Đọc lén dữ liệu",
             "D": "Cài backdoor"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**DDoS** dùng nhiều thiết bị cùng lúc để gây denial of service."
         },
         {
           "id": "ATTT_BO_T2_Q65",
@@ -725,7 +789,8 @@
             "C": "Fabrication",
             "D": "Interception"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Wiretapping** là đọc lén đường truyền → nhóm **Interception**."
         },
         {
           "id": "ATTT_BO_T2_Q66",
@@ -736,7 +801,8 @@
             "C": "Gray-hat hacker",
             "D": "Cracker"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**White-hat hacker** được authorized để tìm vulnerabilities."
         },
         {
           "id": "ATTT_BO_T2_Q67",
@@ -747,7 +813,8 @@
             "C": "Một cuộc tấn công DDoS",
             "D": "security breach"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Nhân viên vô tình sửa nhầm dữ liệu vẫn là **vi phạm an ninh (security breach)** dù không có ý đồ xấu."
         },
         {
           "id": "ATTT_BO_T2_Q68",
@@ -758,7 +825,8 @@
             "C": "Tạo ra thông tin hoặc đối tượng giả",
             "D": "Làm gián đoạn dịch vụ"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Fabrication** là tạo ra thông tin hoặc đối tượng giả."
         },
         {
           "id": "ATTT_BO_T2_Q69",
@@ -769,7 +837,8 @@
             "C": "Tạo ra thông tin giả",
             "D": "Đọc lén thông tin"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Interruption** làm tài sản không còn sẵn sàng hoặc không dùng được."
         }
       ]
     },
@@ -786,7 +855,8 @@
             "C": "SLE, ALE và ARO",
             "D": "MTTF, MTTR và MTBF"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**BIA, BCP, DRP** cùng giúp bảo vệ tài nguyên CNTT và duy trì hoạt động kinh doanh bình thường."
         },
         {
           "id": "ATTT_BO_T3_Q71",
@@ -797,7 +867,8 @@
             "C": "Kế hoạch mua sắm",
             "D": "Kế hoạch tiếp thị"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**BIA** (Business Impact Analysis) xác định chức năng trọng yếu và tác động khi gián đoạn."
         },
         {
           "id": "ATTT_BO_T3_Q72",
@@ -808,7 +879,8 @@
             "C": "Phân tích risk định lượng",
             "D": "BCP"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**BCP** duy trì hoạt động các chức năng trọng yếu trong và sau sự cố."
         },
         {
           "id": "ATTT_BO_T3_Q73",
@@ -819,7 +891,8 @@
             "C": "DRP",
             "D": "Kế hoạch đào tạo nhân viên"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**DRP** tập trung khôi phục hạ tầng CNTT sau thảm họa."
         },
         {
           "id": "ATTT_BO_T3_Q74",
@@ -830,7 +903,8 @@
             "C": "Cold site",
             "D": "Mobile site"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Hot site** có đủ môi trường, phần cứng, phần mềm và dữ liệu như trung tâm gốc."
         },
         {
           "id": "ATTT_BO_T3_Q75",
@@ -841,7 +915,8 @@
             "C": "Cold site",
             "D": "Multiple sites"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Warm site** có môi trường và phần cứng cơ bản nhưng chưa có dữ liệu."
         },
         {
           "id": "ATTT_BO_T3_Q76",
@@ -852,7 +927,8 @@
             "C": "Multiple sites",
             "D": "Cold site"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Cold site** chỉ có tiện ích môi trường cơ bản, không có hạ tầng CNTT."
         },
         {
           "id": "ATTT_BO_T3_Q77",
@@ -863,7 +939,8 @@
             "C": "Một xe kéo có tiện ích cần thiết, có thể hoạt động như warm site hoặc cold site",
             "D": "Một bản backup trên thiết bị di động"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Mobile site** là một xe kéo (trailer) có tiện ích cần thiết, có thể hoạt động như warm hoặc cold site."
         },
         {
           "id": "ATTT_BO_T3_Q78",
@@ -874,7 +951,8 @@
             "C": "Warm site",
             "D": "Không cần địa điểm khôi phục"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Cần khôi phục trong vài phút đến vài giờ → **hot site**."
         },
         {
           "id": "ATTT_BO_T3_Q79",
@@ -885,7 +963,8 @@
             "C": "Warm site",
             "D": "Multiple sites"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Ngân sách thấp, chấp nhận mất vài tuần → **cold site** (rẻ nhất, mất nhiều thời gian nhất)."
         },
         {
           "id": "ATTT_BO_T3_Q80",
@@ -896,7 +975,8 @@
             "C": "Tức thời",
             "D": "Vài giờ đến vài ngày"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Warm site** sẵn sàng sau khoảng **vài giờ đến vài ngày**."
         },
         {
           "id": "ATTT_BO_T3_Q81",
@@ -907,7 +987,8 @@
             "C": "Vài ngày đến vài tuần",
             "D": "Tức thời"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Cold site** cần **vài ngày đến vài tuần** để hoạt động."
         },
         {
           "id": "ATTT_BO_T3_Q82",
@@ -918,7 +999,8 @@
             "C": "Vài tuần đến vài tháng",
             "D": "Hơn một tháng"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Hot site** sẵn sàng trong **vài phút đến vài giờ**."
         },
         {
           "id": "ATTT_BO_T3_Q83",
@@ -929,7 +1011,8 @@
             "C": "Cold site",
             "D": "Cả ba có chi phí như nhau"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Hot site** chi phí cao nhất vì phải duy trì đủ phần cứng, dữ liệu và nhân sự."
         },
         {
           "id": "ATTT_BO_T3_Q84",
@@ -940,7 +1023,8 @@
             "C": "Không phương án nào",
             "D": "Hot site"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Hot site** có đủ máy tính, kết nối, dữ liệu và nhân sự trực."
         },
         {
           "id": "ATTT_BO_T3_Q85",
@@ -951,7 +1035,8 @@
             "C": "Có máy tính và kết nối nhưng không có dữ liệu và nhân sự",
             "D": "Chỉ có xe kéo và không có tiện ích"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Warm site** có máy tính và kết nối nhưng chưa có dữ liệu và nhân sự."
         },
         {
           "id": "ATTT_BO_T3_Q86",
@@ -962,7 +1047,8 @@
             "C": "Phân loại dữ liệu",
             "D": "Quản lý bản vá"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Mobility** là khả năng làm việc từ xa và kết nối vào hạ tầng CNTT gần như theo thời gian thực."
         },
         {
           "id": "ATTT_BO_T3_Q87",
@@ -973,7 +1059,8 @@
             "C": "Cấm hoàn toàn thiết bị di động",
             "D": "Thuê ngoài việc quản lý thiết bị"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**BYOD** = nhân viên dùng thiết bị cá nhân cho công việc."
         },
         {
           "id": "ATTT_BO_T3_Q88",
@@ -984,7 +1071,8 @@
             "C": "Không có risk nào",
             "D": "Dữ liệu công ty lẫn với dữ liệu cá nhân trên thiết bị khó kiểm soát"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Rủi ro nổi bật của BYOD là dữ liệu công ty **lẫn với dữ liệu cá nhân**, khó kiểm soát."
         },
         {
           "id": "ATTT_BO_T3_Q89",
@@ -995,7 +1083,8 @@
             "C": "Con người, hệ thống, dữ liệu, asset",
             "D": "Nhận dạng, xác thực, ủy quyền, giải trình"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Khi đánh giá tác động của downtime, bộ đề nêu bốn khía cạnh: **con người, hệ thống, dữ liệu, tài sản**. Nên đối chiếu slide."
         },
         {
           "id": "ATTT_BO_T3_Q90",
@@ -1006,7 +1095,8 @@
             "C": "Thuê thêm nhân viên bảo vệ",
             "D": "Xóa nhật ký hệ thống"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Bước đầu tiên hợp lý là thực hiện **BIA** để biết chức năng nào trọng yếu, từ đó xây BCP/DRP."
         },
         {
           "id": "ATTT_BO_T3_Q91",
@@ -1017,7 +1107,8 @@
             "C": "Cold site",
             "D": "Mobile site"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Hot site** có sẵn máy tính, kết nối, dữ liệu và nhân sự trực."
         },
         {
           "id": "ATTT_BO_T3_Q92",
@@ -1028,7 +1119,8 @@
             "C": "Ba loại có chi phí bằng nhau",
             "D": "Hot site có chi phí cao nhất"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Hot site** có chi phí cao nhất vì phải duy trì đầy đủ thiết bị, dữ liệu và nhân sự; cold site rẻ nhất."
         },
         {
           "id": "ATTT_BO_T3_Q93",
@@ -1039,7 +1131,8 @@
             "C": "Cấm hoàn toàn thiết bị di động",
             "D": "Thuê ngoài việc quản lý thiết bị"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**BYOD** = nhân viên dùng thiết bị cá nhân cho công việc."
         },
         {
           "id": "ATTT_BO_T3_Q94",
@@ -1050,7 +1143,8 @@
             "C": "Giúp sự kiện không làm gián đoạn hoạt động kinh doanh bình thường",
             "D": "Phục vụ marketing"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "BIA, BCP, DRP đều nhằm để sự kiện **không làm gián đoạn hoạt động kinh doanh bình thường**."
         },
         {
           "id": "ATTT_BO_T3_Q95",
@@ -1061,7 +1155,8 @@
             "C": "Một văn phòng ảo",
             "D": "Một bản backup trên điện thoại"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Mobile site** là một trailer (xe kéo) có sẵn các tiện ích môi trường cần thiết."
         },
         {
           "id": "ATTT_BO_T3_Q96",
@@ -1072,7 +1167,8 @@
             "C": "Vài ngày đến vài tuần",
             "D": "Vài giờ"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Cold site** cần **vài ngày đến vài tuần** để đưa vào hoạt động."
         }
       ]
     },
@@ -1089,7 +1185,8 @@
             "C": "Authorization",
             "D": "Accountability"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Identification** trả lời “ai đang yêu cầu truy cập?”."
         },
         {
           "id": "ATTT_BO_T4_Q98",
@@ -1100,7 +1197,8 @@
             "C": "Accountability",
             "D": "Authentication"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Authentication** xác minh danh tính đã khai báo có đúng không."
         },
         {
           "id": "ATTT_BO_T4_Q99",
@@ -1111,7 +1209,8 @@
             "C": "Authorization",
             "D": "Accountability"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Authorization** xác định được truy cập vào đâu và được làm gì."
         },
         {
           "id": "ATTT_BO_T4_Q100",
@@ -1122,7 +1221,8 @@
             "C": "Authentication",
             "D": "Authorization"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Accountability** truy vết hành động về từng cá nhân."
         },
         {
           "id": "ATTT_BO_T4_Q101",
@@ -1133,7 +1233,8 @@
             "C": "Authentication",
             "D": "Accountability"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Gán tập quyền cho nhân viên là **Authorization**."
         },
         {
           "id": "ATTT_BO_T4_Q102",
@@ -1144,7 +1245,8 @@
             "C": "Accountability",
             "D": "Identification"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Nhập tên đăng nhập là khai báo danh tính → **Identification**."
         },
         {
           "id": "ATTT_BO_T4_Q103",
@@ -1155,7 +1257,8 @@
             "C": "Authentication",
             "D": "Accountability"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Nhập password để chứng minh danh tính là **Authentication**."
         },
         {
           "id": "ATTT_BO_T4_Q104",
@@ -1166,7 +1269,8 @@
             "C": "Authentication",
             "D": "Authorization"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Xem log để biết ai xóa tệp là **Accountability**."
         },
         {
           "id": "ATTT_BO_T4_Q105",
@@ -1177,7 +1281,8 @@
             "C": "Kiểm soát dựa trên vai trò",
             "D": "Access control tùy ý"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Kiểm soát ra vào tòa nhà, bãi đỗ xe, khu vực bảo vệ là **physical access control**."
         },
         {
           "id": "ATTT_BO_T4_Q106",
@@ -1188,7 +1293,8 @@
             "C": "Camera giám sát",
             "D": "Logical access control"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Kiểm soát truy cập vào hệ thống máy tính/mạng là **logical access control**."
         },
         {
           "id": "ATTT_BO_T4_Q107",
@@ -1199,7 +1305,8 @@
             "C": "Password đăng nhập",
             "D": "Thẻ từ mở cửa tòa nhà"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Password** là logical access control. Hàng rào, ổ khóa, thẻ từ là kiểm soát vật lý."
         },
         {
           "id": "ATTT_BO_T4_Q108",
@@ -1210,7 +1317,8 @@
             "C": "ACL",
             "D": "Firewall mạng"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Thẻ từ** mở cửa phòng máy là kiểm soát truy cập vật lý. Password, ACL, firewall là logic."
         },
         {
           "id": "ATTT_BO_T4_Q109",
@@ -1221,7 +1329,8 @@
             "C": "Chính sách, tiêu chuẩn, quy trình, hướng dẫn",
             "D": "Private, community, public, hybrid"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Bốn thành phần: **Users, Resources, Actions, Relationships**. Các nhóm còn lại là 4 giai đoạn access control, khung policy và các loại cloud."
         },
         {
           "id": "ATTT_BO_T4_Q110",
@@ -1232,7 +1341,8 @@
             "C": "Relationships",
             "D": "Users"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Users** là người hoặc tiến trình sử dụng hệ thống (subject)."
         },
         {
           "id": "ATTT_BO_T4_Q111",
@@ -1243,7 +1353,8 @@
             "C": "Resources",
             "D": "Relationships"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Resources** là các đối tượng được bảo vệ."
         },
         {
           "id": "ATTT_BO_T4_Q112",
@@ -1254,7 +1365,8 @@
             "C": "Resources",
             "D": "Relationships"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Actions** là hoạt động user được ủy quyền thực hiện trên resource."
         },
         {
           "id": "ATTT_BO_T4_Q113",
@@ -1265,7 +1377,8 @@
             "C": "Resources",
             "D": "Actions"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Relationships** là các điều kiện tùy chọn giữa user và resource."
         },
         {
           "id": "ATTT_BO_T4_Q114",
@@ -1276,7 +1389,8 @@
             "C": "Biometrics",
             "D": "Mã hóa public key"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Mã hóa public key là kỹ thuật mật mã, **không phải** phương pháp nhận dạng. Username, smart card, biometrics dùng để identification."
         },
         {
           "id": "ATTT_BO_T4_Q115",
@@ -1287,7 +1401,8 @@
             "C": "Something you know",
             "D": "Somewhere you are"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Password** là thứ bạn **biết** → something you know."
         },
         {
           "id": "ATTT_BO_T4_Q116",
@@ -1298,7 +1413,8 @@
             "C": "Something you are",
             "D": "Something you do"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Smart card** là vật bạn **có** → something you have."
         },
         {
           "id": "ATTT_BO_T4_Q117",
@@ -1309,7 +1425,8 @@
             "C": "Something you have",
             "D": "Somewhere you are"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Vân tay là đặc điểm sinh học của bạn → something you **are**."
         },
         {
           "id": "ATTT_BO_T4_Q118",
@@ -1320,7 +1437,8 @@
             "C": "Something you are",
             "D": "Somewhere you are"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Giới hạn theo nơi đang ở → **somewhere you are** (vị trí)."
         },
         {
           "id": "ATTT_BO_T4_Q119",
@@ -1331,7 +1449,8 @@
             "C": "Something you do",
             "D": "Somewhere you are"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Cách gõ phím hoặc ký tên là hành động/thói quen → **something you do**."
         },
         {
           "id": "ATTT_BO_T4_Q120",
@@ -1342,7 +1461,8 @@
             "C": "Chỉ là nhận dạng",
             "D": "Physical access control"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Password (know) + OTP gửi về điện thoại (have) là **xác thực đa yếu tố**."
         },
         {
           "id": "ATTT_BO_T4_Q121",
@@ -1353,7 +1473,8 @@
             "C": "Đặc điểm và hành động",
             "D": "Quyền sở hữu và vị trí"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Password là **tri thức**, smart card là **quyền sở hữu** → hai loại khác nhau."
         },
         {
           "id": "ATTT_BO_T4_Q122",
@@ -1364,7 +1485,8 @@
             "C": "Create, Delete, Rename, Move",
             "D": "Full, Change, Read, Deny"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Share permissions của Windows: **Full, Change, Read, Deny**. Nhóm Full/Modify/Read-execute/Special là security (NTFS) permissions."
         },
         {
           "id": "ATTT_BO_T4_Q123",
@@ -1375,7 +1497,8 @@
             "C": "Change",
             "D": "List folder contents"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Change** là mức của share permissions, không có trong security permissions (Full control, Modify, Read & execute, List folder contents, Read, Write)."
         },
         {
           "id": "ATTT_BO_T4_Q124",
@@ -1386,7 +1509,8 @@
             "C": "Public",
             "D": "Hybrid"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Private cloud** dành cho một tổ chức, do tổ chức hoặc bên thứ ba quản lý."
         },
         {
           "id": "ATTT_BO_T4_Q125",
@@ -1397,7 +1521,8 @@
             "C": "Public cloud",
             "D": "Hybrid cloud"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Community cloud** chia sẻ giữa vài tổ chức có mối quan tâm chung."
         },
         {
           "id": "ATTT_BO_T4_Q126",
@@ -1408,7 +1533,8 @@
             "C": "Hybrid cloud",
             "D": "Public"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Public cloud** mở cho công chúng, do bên thứ ba quản lý."
         },
         {
           "id": "ATTT_BO_T4_Q127",
@@ -1419,7 +1545,8 @@
             "C": "Hybrid",
             "D": "Community cloud"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Hybrid cloud** kết hợp thành phần của nhiều loại cloud."
         },
         {
           "id": "ATTT_BO_T4_Q128",
@@ -1430,7 +1557,8 @@
             "C": "Public",
             "D": "Hybrid"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Nhiều tổ chức cùng dùng chung hạ tầng → **community cloud**."
         },
         {
           "id": "ATTT_BO_T4_Q129",
@@ -1441,7 +1569,8 @@
             "C": "Community",
             "D": "Public"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Kết hợp private cloud và public cloud → **hybrid cloud**."
         },
         {
           "id": "ATTT_BO_T4_Q130",
@@ -1452,7 +1581,8 @@
             "C": "Không cần tin tưởng nhà cung cấp",
             "D": "Không cần duy trì trung tâm dữ liệu và địa điểm khôi phục thảm họa"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Ưu điểm của cloud: **không cần duy trì data center và disaster recovery site riêng**. Dữ liệu không mặc định an toàn hơn; vẫn cần mạng và phải tin cậy nhà cung cấp."
         },
         {
           "id": "ATTT_BO_T4_Q131",
@@ -1463,7 +1593,8 @@
             "C": "Nhu cầu truy cập mạng liên tục",
             "D": "Giao trách nhiệm về hiệu năng và kết nối cho bên ngoài"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Nhược điểm: **cần kết nối mạng liên tục**. Cấp phát theo yêu cầu và không cần data center là ưu điểm."
         },
         {
           "id": "ATTT_BO_T4_Q132",
@@ -1474,7 +1605,8 @@
             "C": "Identification là khai báo danh tính; authentication là chứng minh danh tính đó",
             "D": "Identification là cấp quyền; authentication là ghi log"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Identification** là khai báo “tôi là ai”; **authentication** là chứng minh khai báo đó đúng."
         },
         {
           "id": "ATTT_BO_T4_Q133",
@@ -1485,7 +1617,8 @@
             "C": "Environmental control",
             "D": "Perimeter fence"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Password** là logical access control."
         },
         {
           "id": "ATTT_BO_T4_Q134",
@@ -1496,7 +1629,8 @@
             "C": "Somewhere you are",
             "D": "Something you have"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Smart card là **something you have**."
         },
         {
           "id": "ATTT_BO_T4_Q135",
@@ -1507,7 +1641,8 @@
             "C": "Community cloud",
             "D": "Hybrid cloud"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Private cloud** do một tổ chức duy nhất sử dụng riêng cho mình."
         },
         {
           "id": "ATTT_BO_T4_Q136",
@@ -1518,7 +1653,8 @@
             "C": "Create, Delete, Rename, Move",
             "D": "Full, Change, Read, Deny"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Share permissions của Windows gồm **Full, Change, Read, Deny**."
         },
         {
           "id": "ATTT_BO_T4_Q137",
@@ -1529,7 +1665,8 @@
             "C": "Phải có disaster recovery site riêng",
             "D": "Tốn nhiều hardware"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Nhược điểm của cloud: khách hàng phải **tin tưởng nhà cung cấp bên ngoài**; không còn phải tự duy trì data center hay DR site."
         },
         {
           "id": "ATTT_BO_T4_Q138",
@@ -1540,7 +1677,8 @@
             "C": "Cấp quyền truy cập",
             "D": "Mã hóa dữ liệu"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Accountability** giúp truy vết hành động đến từng cá nhân."
         },
         {
           "id": "ATTT_BO_T4_Q139",
@@ -1551,7 +1689,8 @@
             "C": "Logical access control",
             "D": "Badge reader"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Logical access control** bảo vệ quyền truy cập vào hệ thống và network."
         }
       ]
     },
@@ -1568,7 +1707,8 @@
             "C": "Xác thực, giải trình, nhận dạng, ủy quyền",
             "D": "Giải trình, ủy quyền, nhận dạng, xác thực"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Thứ tự đúng: **Identification → Authentication → Authorization → Accountability**."
         },
         {
           "id": "ATTT_BO_T5_Q141",
@@ -1579,7 +1719,8 @@
             "C": "Danh sách thực đơn căng tin",
             "D": "Lịch nghỉ lễ"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Yêu cầu tài liệu phổ biến gồm **danh sách tài sản nhạy cảm** và thẩm quyền của người chịu trách nhiệm an ninh."
         },
         {
           "id": "ATTT_BO_T5_Q142",
@@ -1590,7 +1731,8 @@
             "C": "Báo cáo doanh thu",
             "D": "Thẩm quyền của những người chịu trách nhiệm về an ninh"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Tài liệu mô tả ai có quyền hạn đối với an ninh là **thẩm quyền của những người chịu trách nhiệm về an ninh**."
         },
         {
           "id": "ATTT_BO_T5_Q143",
@@ -1601,7 +1743,8 @@
             "C": "Tuân thủ quy định pháp luật và tuân thủ nội bộ của tổ chức",
             "D": "Tuân thủ công khai và bí mật"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Tổ chức phải tuân thủ **cả quy định pháp luật (regulatory) lẫn quy tắc nội bộ (organizational)**."
         },
         {
           "id": "ATTT_BO_T5_Q144",
@@ -1612,7 +1755,8 @@
             "C": "Tuân thủ tùy chọn",
             "D": "Tuân thủ kỹ thuật"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Luật do cơ quan nhà nước ban hành là **regulatory compliance**."
         },
         {
           "id": "ATTT_BO_T5_Q145",
@@ -1623,7 +1767,8 @@
             "C": "Tuân thủ quốc tế",
             "D": "Không phải tuân thủ"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Chính sách do công ty đặt ra là **organizational compliance**."
         },
         {
           "id": "ATTT_BO_T5_Q146",
@@ -1634,7 +1779,8 @@
             "C": "Không phải trả phí liên tục",
             "D": "Trình độ chuyên môn cao"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Ưu điểm chính của outsourcing là **trình độ chuyên môn cao**."
         },
         {
           "id": "ATTT_BO_T5_Q147",
@@ -1645,7 +1791,8 @@
             "C": "Bên thuê ngoài có thể không có kiến thức nội bộ và phải trả phí liên tục",
             "D": "Không liên quan đến dữ liệu"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Nhược điểm: bên thuê ngoài **không có kiến thức nội bộ** và tổ chức **phải trả phí liên tục**."
         },
         {
           "id": "ATTT_BO_T5_Q148",
@@ -1656,7 +1803,8 @@
             "C": "Risk",
             "D": "Tuân thủ chính sách"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Mối quan ngại thật: privacy, ownership, risk, tuân thủ policy. **Màu logo nhà cung cấp** không liên quan."
         },
         {
           "id": "ATTT_BO_T5_Q149",
@@ -1667,7 +1815,8 @@
             "C": "Risk",
             "D": "Tuân thủ chính sách"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Ownership** liên quan đến ai sở hữu dữ liệu và kết quả công việc."
         },
         {
           "id": "ATTT_BO_T5_Q150",
@@ -1678,7 +1827,8 @@
             "C": "Full, incremental, differential, mirror, clone",
             "D": "Chính sách, tiêu chuẩn, quy trình, baseline, hướng dẫn"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Năm thành phần: **policy, standards, procedures, baselines, guidelines**."
         },
         {
           "id": "ATTT_BO_T5_Q151",
@@ -1689,7 +1839,8 @@
             "C": "Baseline",
             "D": "Procedure"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Baseline** là mức cấu hình an ninh tối thiểu cho hệ thống."
         },
         {
           "id": "ATTT_BO_T5_Q152",
@@ -1700,7 +1851,8 @@
             "C": "Audit bên ngoài",
             "D": "Phân loại dữ liệu"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Configuration control** quản lý các baseline (thiết lập cơ sở) của thiết bị."
         },
         {
           "id": "ATTT_BO_T5_Q153",
@@ -1711,7 +1863,8 @@
             "C": "Phân tích risk",
             "D": "Backup dữ liệu"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Change control** quản lý các thay đổi đối với cấu hình."
         },
         {
           "id": "ATTT_BO_T5_Q154",
@@ -1722,7 +1875,8 @@
             "C": "Audit bên ngoài",
             "D": "Peer review"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Đồng nghiệp kiểm tra lại thay đổi trước khi triển khai là **peer review**."
         },
         {
           "id": "ATTT_BO_T5_Q155",
@@ -1733,7 +1887,8 @@
             "C": "Back-out plan",
             "D": "Phân loại dữ liệu"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Back-out plan** cho phép quay về known good state nếu thay đổi thất bại."
         },
         {
           "id": "ATTT_BO_T5_Q156",
@@ -1744,7 +1899,8 @@
             "C": "Back-out plan",
             "D": "Black-box testing"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Cập nhật tài liệu khớp thực tế là **documentation**."
         },
         {
           "id": "ATTT_BO_T5_Q157",
@@ -1755,7 +1911,8 @@
             "C": "Thiếu phân loại dữ liệu",
             "D": "Thiếu địa điểm khôi phục"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Không có cách quay về bản cũ khi update lỗi → thiếu **back-out plan**."
         },
         {
           "id": "ATTT_BO_T5_Q158",
@@ -1766,7 +1923,8 @@
             "C": "Kiểm soát vật lý",
             "D": "Separation of duties"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Chia quy trình cho hai nhóm (tạo người thụ hưởng / phát hành séc) là **separation of duties**."
         },
         {
           "id": "ATTT_BO_T5_Q159",
@@ -1777,7 +1935,8 @@
             "C": "Gian lận hoặc hành vi sai trái bị che giấu lâu dài",
             "D": "Mất kết nối Internet"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Job rotation và mandatory vacation giúp phát hiện **gian lận/hành vi sai trái bị che giấu lâu dài** vì người khác thay vị trí và nhìn thấy bất thường."
         },
         {
           "id": "ATTT_BO_T5_Q160",
@@ -1788,7 +1947,8 @@
             "C": "Cấp quyền theo thâm niên",
             "D": "Không cấp quyền cho ai"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Least privilege**: chỉ cấp quyền đủ để hoàn thành công việc."
         },
         {
           "id": "ATTT_BO_T5_Q161",
@@ -1799,7 +1959,8 @@
             "C": "Chỉ giám đốc mới được xem thông tin",
             "D": "Thông tin phải được công khai"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Need to know**: chỉ được truy cập thông tin cần cho công việc của mình."
         },
         {
           "id": "ATTT_BO_T5_Q162",
@@ -1810,7 +1971,8 @@
             "C": "Báo cáo audit",
             "D": "SLA"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**SLA** là thỏa thuận mức dịch vụ nhà cung cấp cam kết."
         },
         {
           "id": "ATTT_BO_T5_Q163",
@@ -1821,7 +1983,8 @@
             "C": "AUP",
             "D": "SLA"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**AUP** (Acceptable Use Policy) quy định nhân viên được/không được làm gì với tài nguyên CNTT."
         },
         {
           "id": "ATTT_BO_T5_Q164",
@@ -1832,7 +1995,8 @@
             "C": "Giá văn phòng phẩm",
             "D": "Chiến lược quảng cáo"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Lo ngại bên thuê ngoài xem dữ liệu khách hàng là mối quan ngại về **privacy và an ninh dữ liệu**."
         },
         {
           "id": "ATTT_BO_T5_Q165",
@@ -1843,7 +2007,8 @@
             "C": "Auditing",
             "D": "Data classification"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Change control** quản lý thay đổi đối với configuration; configuration control quản lý baseline."
         },
         {
           "id": "ATTT_BO_T5_Q166",
@@ -1854,7 +2019,8 @@
             "C": "Audit bên ngoài",
             "D": "Đồng nghiệp hoặc chuyên gia khác kiểm tra lại change trước khi đưa vào hoạt động"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Peer review**: đồng nghiệp/chuyên gia khác kiểm tra change trước khi đưa vào hoạt động."
         },
         {
           "id": "ATTT_BO_T5_Q167",
@@ -1865,7 +2031,8 @@
             "C": "Không phải trả phí liên tục",
             "D": "Phát triển năng lực nội bộ"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Ưu điểm của outsourcing security là **trình độ chuyên môn cao**."
         },
         {
           "id": "ATTT_BO_T5_Q168",
@@ -1876,7 +2043,8 @@
             "C": "Chỉ organizational compliance",
             "D": "Không cần tuân thủ loại nào"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Tổ chức phải tuân thủ **cả regulatory và organizational compliance**."
         },
         {
           "id": "ATTT_BO_T5_Q169",
@@ -1887,7 +2055,8 @@
             "C": "Change tạo ra risk cho business",
             "D": "Change chỉ tạo risk khi dùng cloud"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Change **luôn tạo ra risk** vì có thể vượt qua tính năng bảo mật và gây downtime."
         },
         {
           "id": "ATTT_BO_T5_Q170",
@@ -1898,7 +2067,8 @@
             "C": "Xóa log hệ thống",
             "D": "Đưa hệ thống về known good state khi change thất bại"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Back-out plan** đưa hệ thống về trạng thái tốt đã biết khi change thất bại."
         },
         {
           "id": "ATTT_BO_T5_Q171",
@@ -1909,7 +2079,8 @@
             "C": "Chỉ guideline thuộc",
             "D": "Chỉ baseline thuộc"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Cả **guideline và baseline** đều thuộc năm thành phần của hạ tầng policy."
         },
         {
           "id": "ATTT_BO_T5_Q172",
@@ -1920,7 +2091,8 @@
             "C": "Bắt buộc nhân viên nghỉ phép",
             "D": "Bảo đảm không một người nào có thể hoàn tất một quy trình nhạy cảm từ đầu đến cuối"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Separation of duties** bảo đảm không một người nào có thể hoàn tất một quy trình nhạy cảm từ đầu đến cuối."
         }
       ]
     },
@@ -1937,7 +2109,8 @@
             "C": "Improve",
             "D": "Secure"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Xem log để **đánh giá độc lập** hiệu quả controls là **Audit** (khác Monitor là theo dõi liên tục)."
         },
         {
           "id": "ATTT_BO_T6_Q174",
@@ -1948,7 +2121,8 @@
             "C": "Backup, khôi phục, testing",
             "D": "Xác định mục tiêu, các lĩnh vực cần bảo đảm, nhân sự tham gia"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Ba bước đầu: **xác định mục tiêu, các lĩnh vực cần bảo đảm (scope), nhân sự tham gia**."
         },
         {
           "id": "ATTT_BO_T6_Q175",
@@ -1959,7 +2133,8 @@
             "C": "Xác định mục tiêu",
             "D": "Tiêu hủy dữ liệu"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Xác định hệ thống/quy trình cần rà soát thuộc bước **xác định mục tiêu** của kế hoạch audit."
         },
         {
           "id": "ATTT_BO_T6_Q176",
@@ -1970,7 +2145,8 @@
             "C": "Xem xét tài liệu",
             "D": "Xem xét nhật ký máy chủ và ứng dụng"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Phát hành báo cáo cuối cùng** là kết quả của audit, không thuộc việc xác định phạm vi."
         },
         {
           "id": "ATTT_BO_T6_Q177",
@@ -1981,7 +2157,8 @@
             "C": "Thu thập chữ ký",
             "D": "Đóng dự án"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Xem xét kết quả penetration testing thuộc **xác định phạm vi (scope)**."
         },
         {
           "id": "ATTT_BO_T6_Q178",
@@ -1992,7 +2169,8 @@
             "C": "Chỉ cập nhật hệ điều hành",
             "D": "Phỏng vấn, bảng câu hỏi và quan sát"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Thu thập dữ liệu audit bằng **phỏng vấn, bảng câu hỏi, quan sát, checklist**."
         },
         {
           "id": "ATTT_BO_T6_Q179",
@@ -2003,7 +2181,8 @@
             "C": "Quy trình trên giấy và cách công việc thực sự được thực hiện",
             "D": "Màu sắc giao diện"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Quan sát** giúp phân biệt quy trình trên giấy với cách công việc thực sự được thực hiện."
         },
         {
           "id": "ATTT_BO_T6_Q180",
@@ -2014,7 +2193,8 @@
             "C": "Chỉ cập nhật mỗi năm một lần",
             "D": "Chỉ cài trên máy của quản trị viên"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Mục tiêu audit với antivirus: **luôn cập nhật và áp dụng trên toàn bộ hệ thống**."
         },
         {
           "id": "ATTT_BO_T6_Q181",
@@ -2025,7 +2205,8 @@
             "C": "Kiểm tra pin dự phòng",
             "D": "Dán nhãn phương tiện"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Với IDS và giám sát sự kiện: **xem xét nhật ký**."
         },
         {
           "id": "ATTT_BO_T6_Q182",
@@ -2036,7 +2217,8 @@
             "C": "Nguồn điện dự phòng",
             "D": "Cổng và dịch vụ"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Với system hardening: kiểm tra **cổng (ports) và dịch vụ (services)** đang chạy."
         },
         {
           "id": "ATTT_BO_T6_Q183",
@@ -2047,7 +2229,8 @@
             "C": "Quản lý khóa và việc sử dụng",
             "D": "Cửa đã khóa"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Với mật mã: **quản lý khóa và việc sử dụng** khóa."
         },
         {
           "id": "ATTT_BO_T6_Q184",
@@ -2058,7 +2241,8 @@
             "C": "Policy, standard và guideline",
             "D": "Hot, warm và cold"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Contingency planning audit xem xét **BCP, DRP và COOP**."
         },
         {
           "id": "ATTT_BO_T6_Q185",
@@ -2069,7 +2253,8 @@
             "C": "Chỉ giám đốc mới có quyền",
             "D": "Không cần ghi chép"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Access control audit kiểm tra **need to know và least privilege**."
         },
         {
           "id": "ATTT_BO_T6_Q186",
@@ -2080,7 +2265,8 @@
             "C": "Cập nhật phần mềm diệt virus",
             "D": "Cửa được khóa và nguồn điện được giám sát"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "An ninh vật lý: **cửa được khóa và nguồn điện được giám sát**."
         },
         {
           "id": "ATTT_BO_T6_Q187",
@@ -2091,7 +2277,8 @@
             "C": "Có tài liệu và không có thay đổi trái phép",
             "D": "Chỉ kiểm tra hằng năm"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Change control: **có tài liệu và không có thay đổi trái phép**."
         },
         {
           "id": "ATTT_BO_T6_Q188",
@@ -2102,7 +2289,8 @@
             "C": "Quản lý khóa",
             "D": "Xem xét nhật ký"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Media protection: **tuổi thọ, dán nhãn, lưu trữ và vận chuyển** phương tiện."
         },
         {
           "id": "ATTT_BO_T6_Q189",
@@ -2113,7 +2301,8 @@
             "C": "Chỉ dán nhãn phương tiện",
             "D": "Chỉ kiểm tra cổng"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Hardware/software maintenance: **thỏa thuận bảo trì, bảo dưỡng và dự báo nhu cầu tương lai**."
         },
         {
           "id": "ATTT_BO_T6_Q190",
@@ -2124,7 +2313,8 @@
             "C": "Đánh giá mã nguồn",
             "D": "Black-box"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Black-box testing** không dùng kiến thức về kiến trúc/thiết kế/mã nguồn; white-box dựa trên mã nguồn, gray-box dựa một phần."
         },
         {
           "id": "ATTT_BO_T6_Q191",
@@ -2135,7 +2325,8 @@
             "C": "White-box",
             "D": "Phỏng vấn người dùng"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**White-box testing** dựa trên kiến thức về thiết kế và mã nguồn của ứng dụng."
         },
         {
           "id": "ATTT_BO_T6_Q192",
@@ -2146,7 +2337,8 @@
             "C": "White-box testing",
             "D": "Testing hiệu năng"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Gray-box testing** nằm giữa black-box (không biết gì) và white-box (biết toàn bộ)."
         },
         {
           "id": "ATTT_BO_T6_Q193",
@@ -2157,7 +2349,8 @@
             "C": "Gray-box",
             "D": "Audit nội bộ"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Chỉ biết địa chỉ mục tiêu, không có thông tin nội bộ → **black-box testing**."
         },
         {
           "id": "ATTT_BO_T6_Q194",
@@ -2168,7 +2361,8 @@
             "C": "Audit tuân thủ",
             "D": "White-box"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Được cung cấp mã nguồn và tài liệu thiết kế → **white-box testing**."
         },
         {
           "id": "ATTT_BO_T6_Q195",
@@ -2179,7 +2373,8 @@
             "C": "Công cụ cũng có thể mắc lỗi nên cần kiểm chứng kết quả",
             "D": "Testing càng giả tạo càng tốt"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Công cụ testing **cũng có thể sai** (false positive/negative), nên cần kiểm chứng kết quả."
         },
         {
           "id": "ATTT_BO_T6_Q196",
@@ -2190,7 +2385,8 @@
             "C": "Không cần lập kế hoạch",
             "D": "Chỉ làm một lần duy nhất"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Testing bảo mật nên **càng giống thực tế càng tốt** để phản ánh đúng mức độ rủi ro."
         },
         {
           "id": "ATTT_BO_T6_Q197",
@@ -2201,7 +2397,8 @@
             "C": "Quyền truy cập có được rà soát định kỳ không?",
             "D": "Hoạt động đăng nhập có được ghi nhật ký không?"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Audit identity management xem xét vô hiệu hóa tài khoản người nghỉ việc, rà soát quyền, ghi log đăng nhập. **Hợp đồng quảng cáo** nằm ngoài phạm vi."
         },
         {
           "id": "ATTT_BO_T6_Q198",
@@ -2212,7 +2409,8 @@
             "C": "Xem xét chính sách",
             "D": "port/service scanning"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Port/service scanning** dùng công cụ quét để tìm cổng và dịch vụ đang chạy."
         },
         {
           "id": "ATTT_BO_T6_Q199",
@@ -2223,7 +2421,8 @@
             "C": "Phát hiện các điểm khác biệt so với cấu hình chuẩn",
             "D": "Thay đổi chính sách"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "So sánh cấu hình hiện tại với cấu hình chuẩn giúp auditor **phát hiện điểm khác biệt**."
         },
         {
           "id": "ATTT_BO_T6_Q200",
@@ -2234,7 +2433,8 @@
             "C": "Audit chỉ dành cho phần cứng",
             "D": "Audit là cài đặt bản vá"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Audit** là đánh giá **độc lập** mức hiệu quả của controls; theo dõi liên tục thời gian thực là monitor."
         },
         {
           "id": "ATTT_BO_T6_Q201",
@@ -2245,7 +2445,8 @@
             "C": "Sau white-box testing",
             "D": "Không liên quan đến hai loại kia"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Gray-box testing** nằm giữa black-box và white-box."
         },
         {
           "id": "ATTT_BO_T6_Q202",
@@ -2256,7 +2457,8 @@
             "C": "Performance testing",
             "D": "White-box testing"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**White-box testing** dựa trên source code và thiết kế chi tiết."
         },
         {
           "id": "ATTT_BO_T6_Q203",
@@ -2267,7 +2469,8 @@
             "C": "Collecting signatures",
             "D": "Closing project"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Xem xét kết quả pen test thuộc bước **defining scope** của audit plan."
         },
         {
           "id": "ATTT_BO_T6_Q204",
@@ -2278,7 +2481,8 @@
             "C": "Tool cũng có thể mắc lỗi nên cần kiểm chứng kết quả",
             "D": "Tool không bao giờ có false positive"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Tool cũng có thể sai (false positive/negative) nên phải **kiểm chứng** kết quả."
         },
         {
           "id": "ATTT_BO_T6_Q205",
@@ -2289,7 +2493,8 @@
             "C": "Chỉ giám đốc mới có quyền",
             "D": "Không cần ghi chép"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Audit goal với access control: **need to know và least privilege**."
         },
         {
           "id": "ATTT_BO_T6_Q206",
@@ -2300,7 +2505,8 @@
             "C": "Nhiều jurisdictions yêu cầu audit theo quy định của pháp luật",
             "D": "Audit không bao giờ bắt buộc"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Nhiều **jurisdictions** yêu cầu audit theo quy định pháp luật nên nhiều tổ chức bắt buộc phải audit."
         },
         {
           "id": "ATTT_BO_T6_Q207",
@@ -2311,7 +2517,8 @@
             "C": "Tắt backup trước khi test",
             "D": "Xóa log sau khi test"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Khi security testing vẫn phải **bảo vệ chính hệ thống đang được test** (không làm gián đoạn hay mất dữ liệu)."
         },
         {
           "id": "ATTT_BO_T6_Q208",
@@ -2322,7 +2529,8 @@
             "C": "Chỉ xóa log cũ",
             "D": "Chỉ update OS"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Thu thập dữ liệu audit bằng **interviews, questionnaires, observation, checklists**."
         }
       ]
     },
@@ -2339,7 +2547,8 @@
             "C": "Chỉ bảo vệ asset có giá trị thấp",
             "D": "Bỏ qua chi phí"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Nguyên tắc cân bằng: **không chi cho bảo vệ asset nhiều hơn giá trị của nó**."
         },
         {
           "id": "ATTT_BO_T7_Q210",
@@ -2350,7 +2559,8 @@
             "C": "Một chuẩn quốc tế",
             "D": "Một giải pháp đi tìm vấn đề"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Countermeasure không gắn với risk tương ứng là “**giải pháp đi tìm vấn đề**”, khó biện minh chi phí."
         },
         {
           "id": "ATTT_BO_T7_Q211",
@@ -2361,7 +2571,8 @@
             "C": "Asset, threat, vulnerability",
             "D": "Full, incremental, differential"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Ba yếu tố của risk: **asset, threat, vulnerability**."
         },
         {
           "id": "ATTT_BO_T7_Q212",
@@ -2372,7 +2583,8 @@
             "C": "SLE = AV / EF",
             "D": "SLE = ARO + EF"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**SLE = AV × EF** (giá trị tài sản × hệ số phơi nhiễm)."
         },
         {
           "id": "ATTT_BO_T7_Q213",
@@ -2383,7 +2595,8 @@
             "C": "ALE = AV + SLE",
             "D": "ALE = ARO / SLE"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**ALE = SLE × ARO**."
         },
         {
           "id": "ATTT_BO_T7_Q214",
@@ -2394,7 +2607,8 @@
             "C": "Tổng chi phí của countermeasure",
             "D": "Số sự cố xảy ra trong một năm"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**ARO** là số sự cố xảy ra trong một năm (tỷ lệ phần trăm tài sản mất mỗi lần là EF)."
         },
         {
           "id": "ATTT_BO_T7_Q215",
@@ -2405,7 +2619,8 @@
             "C": "Tỷ lệ phần trăm giá trị asset bị mất khi sự cố xảy ra",
             "D": "Chi phí mua countermeasure"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**EF** là tỷ lệ phần trăm giá trị tài sản bị mất khi sự cố xảy ra."
         },
         {
           "id": "ATTT_BO_T7_Q216",
@@ -2416,7 +2631,8 @@
             "C": "3.200.000 USD",
             "D": "1.000.000 USD"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "SLE = AV × EF = 800.000 × 25% = **200.000 USD**."
         },
         {
           "id": "ATTT_BO_T7_Q217",
@@ -2427,7 +2643,8 @@
             "C": "203.000 USD",
             "D": "1.200.000 USD"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "ALE = SLE × ARO = 200.000 × 3 = **600.000 USD**."
         },
         {
           "id": "ATTT_BO_T7_Q218",
@@ -2438,7 +2655,8 @@
             "C": "2.400.000 USD",
             "D": "150.000 USD"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "SLE = 1,2 triệu × 50% = 600.000; ALE = 600.000 × 0,25 = **150.000 USD**."
         },
         {
           "id": "ATTT_BO_T7_Q219",
@@ -2449,7 +2667,8 @@
             "C": "3",
             "D": "6"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "ARO = 6 sự cố / 2 năm = **3** sự cố mỗi năm."
         },
         {
           "id": "ATTT_BO_T7_Q220",
@@ -2460,7 +2679,8 @@
             "C": "1",
             "D": "0,01"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "10 năm một lần → ARO = 1/10 = **0,1**."
         },
         {
           "id": "ATTT_BO_T7_Q221",
@@ -2471,7 +2691,8 @@
             "C": "3.000.000 USD",
             "D": "3.000 USD"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "SLE = 300.000 × 100% = 300.000; ARO = 0,1 → ALE = **30.000 USD**."
         },
         {
           "id": "ATTT_BO_T7_Q222",
@@ -2482,7 +2703,8 @@
             "C": "250.000 USD",
             "D": "1.000.000 USD"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "SLE = 2 triệu × 25% = 500.000; ALE = 500.000 × 2 = **1.000.000 USD**."
         },
         {
           "id": "ATTT_BO_T7_Q223",
@@ -2493,7 +2715,8 @@
             "C": "Không nên triển khai vì chi phí vượt tổn thất kỳ vọng",
             "D": "Không thể kết luận gì"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Biện pháp tốn 200.000/năm mà tổn thất kỳ vọng chỉ 150.000/năm → **không đáng triển khai**."
         },
         {
           "id": "ATTT_BO_T7_Q224",
@@ -2504,7 +2727,8 @@
             "C": "120.000 USD",
             "D": "280.000 USD"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Lợi ích ròng = (400.000 − 100.000) − 120.000 = **180.000 USD**/năm."
         },
         {
           "id": "ATTT_BO_T7_Q225",
@@ -2515,7 +2739,8 @@
             "C": "Luôn phải chọn biện pháp đắt nhất",
             "D": "Cần tăng giá trị asset cho khớp"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Chi phí biện pháp (80.000) vượt giá trị tài sản (50.000) nên **khó biện minh**."
         },
         {
           "id": "ATTT_BO_T7_Q226",
@@ -2526,7 +2751,8 @@
             "C": "Chỉ tránh",
             "D": "Giảm thiểu, chuyển giao, chấp nhận, tránh"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Chiến lược với risk tiêu cực: **giảm thiểu, chuyển giao, chấp nhận, tránh** (reduce, transfer, accept, avoid)."
         },
         {
           "id": "ATTT_BO_T7_Q227",
@@ -2537,7 +2763,8 @@
             "C": "Khai thác, chia sẻ, tăng cường, chấp nhận",
             "D": "Chỉ chuyển giao"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Chiến lược với risk tích cực (cơ hội): **khai thác, chia sẻ, tăng cường, chấp nhận** (exploit, share, enhance, accept)."
         },
         {
           "id": "ATTT_BO_T7_Q228",
@@ -2548,7 +2775,8 @@
             "C": "Accept",
             "D": "Avoid"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Mua bảo hiểm chuyển hậu quả tài chính cho bên bảo hiểm → **Transfer**."
         },
         {
           "id": "ATTT_BO_T7_Q229",
@@ -2559,7 +2787,8 @@
             "C": "Reduce",
             "D": "Accept"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Không bán ở thị trường rủi ro cao là loại bỏ hoạt động gây ra rủi ro → **Avoid**."
         },
         {
           "id": "ATTT_BO_T7_Q230",
@@ -2570,7 +2799,8 @@
             "C": "Accept",
             "D": "Reduce"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Thêm firewall và đào tạo để giảm xác suất bị tấn công → **Reduce**."
         },
         {
           "id": "ATTT_BO_T7_Q231",
@@ -2581,7 +2811,8 @@
             "C": "Accept",
             "D": "Reduce"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Chi phí xử lý lớn hơn thiệt hại nên không làm gì → **Accept**."
         },
         {
           "id": "ATTT_BO_T7_Q232",
@@ -2592,7 +2823,8 @@
             "C": "Reduce",
             "D": "Avoid"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Exploit** chỉ áp dụng cho rủi ro tích cực (cơ hội). Transfer, Reduce, Avoid dành cho rủi ro tiêu cực."
         },
         {
           "id": "ATTT_BO_T7_Q233",
@@ -2603,7 +2835,8 @@
             "C": "Avoid",
             "D": "Reduce"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Chủ động tạo điều kiện để cơ hội chắc chắn xảy ra → **Exploit**."
         },
         {
           "id": "ATTT_BO_T7_Q234",
@@ -2614,7 +2847,8 @@
             "C": "Không áp dụng cho risk nào",
             "D": "Cả risk tiêu cực và tích cực"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Accept** áp dụng cho **cả** rủi ro tiêu cực và tích cực."
         },
         {
           "id": "ATTT_BO_T7_Q235",
@@ -2625,18 +2859,20 @@
             "C": "Toàn bộ, tăng dần, khác biệt",
             "D": "Tri thức, sở hữu, đặc điểm"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Ba loại backup: **full, incremental, differential**."
         },
         {
           "id": "ATTT_BO_T7_Q236",
           "question": "Loại backup nào sao chép tất cả dữ liệu được chọn?",
           "options": {
             "A": "Incremental",
-            "B": "Full",
+            "B": "Full backup",
             "C": "Differential",
             "D": "Backup logic"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Full backup** sao chép tất cả dữ liệu được chọn."
         },
         {
           "id": "ATTT_BO_T7_Q237",
@@ -2647,7 +2883,8 @@
             "C": "Differential",
             "D": "Backup gương"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Incremental** chỉ sao chép dữ liệu thay đổi từ lần backup gần nhất (bất kể loại)."
         },
         {
           "id": "ATTT_BO_T7_Q238",
@@ -2658,7 +2895,8 @@
             "C": "Backup theo ngày",
             "D": "Differential"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Differential** sao chép dữ liệu thay đổi từ lần full backup gần nhất."
         },
         {
           "id": "ATTT_BO_T7_Q239",
@@ -2669,7 +2907,8 @@
             "C": "2",
             "D": "4"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Hỏng sáng Thứ Tư: cần full (Chủ nhật) + differential gần nhất (Thứ Ba) = **2** bản."
         },
         {
           "id": "ATTT_BO_T7_Q240",
@@ -2680,7 +2919,8 @@
             "C": "1",
             "D": "5"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Hỏng sáng Thứ Năm: full + incremental Thứ Hai, Ba, Tư = **4** bản."
         },
         {
           "id": "ATTT_BO_T7_Q241",
@@ -2691,7 +2931,8 @@
             "C": "1",
             "D": "6"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Hỏng sáng Thứ Sáu: full + incremental Thứ Hai, Ba, Tư, Năm = **5** bản."
         },
         {
           "id": "ATTT_BO_T7_Q242",
@@ -2702,7 +2943,8 @@
             "C": "Không tốn thời gian backup",
             "D": "Chỉ cần bản full và bản differential gần nhất"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Khi restore, differential chỉ cần **full + differential gần nhất**; incremental phải áp dụng cả chuỗi bản incremental."
         },
         {
           "id": "ATTT_BO_T7_Q243",
@@ -2713,7 +2955,8 @@
             "C": "Multiple sites",
             "D": "Mobile site"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Theo bảng so sánh của đề, **multiple sites** hoạt động song song nhiều địa điểm nên sẵn sàng tức thời đến vài phút với đủ máy tính, kết nối, dữ liệu, nhân sự."
         },
         {
           "id": "ATTT_BO_T7_Q244",
@@ -2724,7 +2967,8 @@
             "C": "Warm site",
             "D": "Multiple sites"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Cold site** không được trang bị sẵn máy tính, chỉ có tiện ích môi trường cơ bản."
         },
         {
           "id": "ATTT_BO_T7_Q245",
@@ -2735,7 +2979,8 @@
             "C": "Cold site",
             "D": "Multiple sites"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Warm site** có máy tính và kết nối nhưng chưa có dữ liệu và nhân sự."
         },
         {
           "id": "ATTT_BO_T7_Q246",
@@ -2746,7 +2991,8 @@
             "C": "Giá vốn hàng bán",
             "D": "Chi phí cơ hội"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Doanh số mất do hệ thống ngừng là **opportunity cost** (chi phí cơ hội), không phải chi phí thay thế hay nhân công."
         },
         {
           "id": "ATTT_BO_T7_Q247",
@@ -2757,7 +3003,8 @@
             "C": "SLE = ALE × ARO",
             "D": "SLE = ARO + EF"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**SLE = AV × EF**."
         },
         {
           "id": "ATTT_BO_T7_Q248",
@@ -2768,7 +3015,8 @@
             "C": "ALE = AV + SLE",
             "D": "ALE = AV − SLE"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**ALE = SLE × ARO**."
         },
         {
           "id": "ATTT_BO_T7_Q249",
@@ -2779,7 +3027,8 @@
             "C": "Transfer",
             "D": "Accept"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Mua insurance là chiến lược **Transfer**."
         },
         {
           "id": "ATTT_BO_T7_Q250",
@@ -2790,7 +3039,8 @@
             "C": "Chỉ các file mới tạo",
             "D": "Dữ liệu đã thay đổi kể từ lần backup gần nhất (bất kể loại nào)"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Incremental** sao chép dữ liệu thay đổi từ lần backup gần nhất (bất kể loại)."
         },
         {
           "id": "ATTT_BO_T7_Q251",
@@ -2801,7 +3051,8 @@
             "C": "Reduce và Transfer",
             "D": "Avoid và Reduce"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Chiến lược với positive risk gồm **Exploit và Enhance** (cùng Share, Accept)."
         },
         {
           "id": "ATTT_BO_T7_Q252",
@@ -2812,7 +3063,8 @@
             "C": "Không thể xác định",
             "D": "Hot site ngắn hơn cold site"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Hot site sẵn sàng trong vài phút–vài giờ, cold site cần vài ngày–vài tuần → hot site **ngắn hơn**."
         },
         {
           "id": "ATTT_BO_T7_Q253",
@@ -2823,7 +3075,8 @@
             "C": "Là yêu cầu bắt buộc",
             "D": "Luôn miễn phí"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Countermeasure không gắn với risk tương ứng là “giải pháp đi tìm vấn đề” nên **khó biện minh chi phí**."
         },
         {
           "id": "ATTT_BO_T7_Q254",
@@ -2834,7 +3087,8 @@
             "C": "Cân bằng giữa chi phí và mức risk chấp nhận được",
             "D": "Bỏ qua mọi risk"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Mục tiêu risk management là **cân bằng chi phí với mức risk chấp nhận được**, không phải loại bỏ mọi risk."
         }
       ]
     }

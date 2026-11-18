@@ -15,7 +15,8 @@
             "C": "Tiên phong trong tách rời Compute/Storage và chia sẻ dữ liệu an toàn",
             "D": "Mang trải nghiệm Warehouse vào nền tảng Lakehouse cho hiệu năng cao"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Firebolt** tập trung vào **tốc độ truy vấn cực nhanh** cho ứng dụng phân tích thời gian thực. BigQuery là Serverless + AI/ML; Snowflake tiên phong tách Compute/Storage; Databricks SQL mang Warehouse vào Lakehouse."
         },
         {
           "id": "HOT_Q2",
@@ -26,7 +27,8 @@
             "C": "Filtering",
             "D": "Cleaning"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Caching** lưu kết quả đã tính để tránh tính toán lại, giảm chi phí."
         },
         {
           "id": "HOT_Q3",
@@ -37,7 +39,8 @@
             "C": "Sử dụng AI để hỗ trợ việc ánh xạ và tích hợp dữ liệu",
             "D": "Thư viện chứa thông tin và vị trí của mọi nguồn dữ liệu trong công ty"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Data Catalog** là thư viện chứa thông tin và vị trí của mọi nguồn dữ liệu. Metadata Lake là nơi lưu trữ/phân tích metadata; Security & Compliance là lớp quản trị bảo mật."
         },
         {
           "id": "HOT_Q4",
@@ -48,7 +51,8 @@
             "C": "Tập trung vào Kết nối & Ảo hóa các nguồn dữ liệu rời rạc",
             "D": "Tập trung vào Quy trình vận hành"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Data Fabric** tập trung vào **kết nối & ảo hóa** các nguồn dữ liệu rời rạc."
         },
         {
           "id": "HOT_Q5",
@@ -59,7 +63,8 @@
             "C": "Sử dụng giao thức TLS để bảo vệ dữ liệu khi di chuyển qua mạng",
             "D": "Lưu lại các bản sao của file để khôi phục"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Bucket Policies** quy định quyền truy cập cho toàn bộ Data Container (bucket) từ bên ngoài; IAM Policies kiểm soát chi tiết theo danh tính người dùng."
         },
         {
           "id": "HOT_Q6",
@@ -70,7 +75,8 @@
             "C": "50MB đến 500MB dữ liệu nén",
             "D": "100MB đến 200MB dữ liệu nén"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Mỗi micro-partition thường **50MB – 500MB** dữ liệu nén."
         },
         {
           "id": "HOT_Q7",
@@ -81,7 +87,8 @@
             "C": "Cell",
             "D": "Table"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Clustering Key** được chọn dựa trên **cột (column)** có độ chọn lọc cao."
         },
         {
           "id": "HOT_Q8",
@@ -92,7 +99,8 @@
             "C": "Phân tích xu hướng",
             "D": "Tối ưu hóa chuỗi cung ứng và vận hành"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Accumulating Snapshot** theo dõi quy trình nhiều giai đoạn → phù hợp **tối ưu chuỗi cung ứng và vận hành**."
         },
         {
           "id": "HOT_Q9",
@@ -103,7 +111,8 @@
             "C": "Giải quyết mối quan hệ nhiều-nhiều (M-M)",
             "D": "Tính toán real time giữa các bước"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Bridge Table** giải quyết quan hệ **nhiều-nhiều (M-M)**."
         },
         {
           "id": "HOT_Q10",
@@ -114,7 +123,8 @@
             "C": "Select",
             "D": "Except"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Fact table kết hợp với Dimension table bằng phép **Join**."
         },
         {
           "id": "HOT_Q11",
@@ -125,7 +135,8 @@
             "C": "Tự động phát hiện thay đổi ở nguồn và đồng bộ thay đổi vào đích",
             "D": "Giúp kho dữ liệu tự động điều chỉnh cấu trúc bảng khi nguồn thay đổi"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Schema Evolution** của Snowflake: kho dữ liệu **tự động điều chỉnh cấu trúc bảng** khi nguồn thay đổi (ngay trong quá trình COPY)."
         },
         {
           "id": "HOT_Q12",
@@ -136,7 +147,8 @@
             "C": "Tự động sinh thêm các điều kiện lọc cho model",
             "D": "Đưa code vào trình duyệt để kiểm thử"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Singular Test** (dbt) là câu SQL riêng biệt kiểm tra các tình huống nghiệp vụ đặc thù; kiểm tra unique/not null khai báo sẵn là Schema Test."
         },
         {
           "id": "HOT_Q13",
@@ -147,7 +159,8 @@
             "C": "Giúp giảm thiểu hơn 70% số dòng code dư thừa so với cách viết truyền thống",
             "D": "Giúp giảm thiểu hơn 50% số dòng code dư thừa so với cách viết truyền thống"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Jinja + Dynamic SQL giúp giảm hơn **50%** số dòng code dư thừa."
         },
         {
           "id": "HOT_Q14",
@@ -158,7 +171,8 @@
             "C": "Giám sát tác vụ đang chạy",
             "D": "Quản lý vòng đời và chất lượng code"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Apache Airflow** theo tư duy **Task-centric**: giám sát tác vụ đang chạy. Dagster mới là Asset-centric."
         },
         {
           "id": "HOT_Q15",
@@ -169,7 +183,8 @@
             "C": "Nhận bản sao dữ liệu từ hệ thống nguồn và liên tục cập nhật theo sự thay đổi",
             "D": "Truy vấn trực tiếp dữ liệu nguồn mà không cần sao chép/di chuyển"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Storage Mirroring** nhận bản sao dữ liệu từ hệ thống nguồn và liên tục cập nhật theo thay đổi (nhân bản tầng lưu trữ)."
         },
         {
           "id": "HOT_Q16",
@@ -180,7 +195,8 @@
             "C": "0.794 bit",
             "D": "0.719 bit"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Entropy = −(0,6·log2 0,6 + 0,4·log2 0,4) ≈ **0,971 bit**."
         },
         {
           "id": "HOT_Q17",
@@ -191,7 +207,8 @@
             "C": "0.60",
             "D": "0.83"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Min-Max: (8 − 5)/(10 − 5) = 3/5 = **0,60**."
         },
         {
           "id": "HOT_Q18",
@@ -202,7 +219,8 @@
             "C": "Từ 210 triệu đến 250 triệu",
             "D": "Từ 250 triệu đến 280 triệu"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Width = (700 − 100)/3 = 200 → nhóm thấp nhất **100–300 triệu**."
         },
         {
           "id": "HOT_Q19",
@@ -216,7 +234,8 @@
           "correctAnswer": "C",
           "images": [
             "assets/img/eq_infoA.png"
-          ]
+          ],
+          "explanation": "Trong Info_A(D), **v** là số giá trị khác nhau của **thuộc tính A** (số phân vùng)."
         },
         {
           "id": "HOT_Q20",
@@ -230,7 +249,8 @@
           "correctAnswer": "A",
           "images": [
             "assets/img/eq_info.png"
-          ]
+          ],
+          "explanation": "Trong Info(D), **m** là **số lượng lớp**."
         },
         {
           "id": "HOT_Q21",
@@ -241,7 +261,8 @@
             "C": "Khi dữ liệu có nhiều ngoại lai hoặc khi không biết trước Min-Max",
             "D": "Khi dữ liệu có nhiều ngoại lai và khi không biết trước Min-Max"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Z-Score hữu ích khi dữ liệu **có nhiều ngoại lai hoặc khi không biết trước Min-Max**."
         },
         {
           "id": "HOT_Q22",
@@ -252,7 +273,8 @@
             "C": "Giá trị tuyệt đối nhỏ nhất của thuộc tính",
             "D": "Giá trị nhỏ nhất của thuộc tính"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Decimal Scaling** dựa trên **giá trị tuyệt đối lớn nhất** của thuộc tính (v′ = v/10^j)."
         },
         {
           "id": "HOT_Q23",
@@ -263,7 +285,8 @@
             "C": "Dữ liệu phân phối chuẩn",
             "D": "Dữ liệu có ít thuộc tính"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Equal-frequency Binning** hiệu quả cho **dữ liệu bị lệch**."
         },
         {
           "id": "HOT_Q24",
@@ -274,7 +297,8 @@
             "C": "Giảm số lượng giá trị và hỗ trợ các thuật toán",
             "D": "Tăng số lượng giá trị chuyển hóa"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Discretization** giúp **giảm số lượng giá trị** và hỗ trợ các thuật toán."
         },
         {
           "id": "HOT_Q25",
@@ -285,7 +309,8 @@
             "C": "Tính nhất quán của dữ liệu",
             "D": "Phương sai của dữ liệu"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**PCA** giữ lại tối đa **phương sai** của dữ liệu khi giảm chiều."
         },
         {
           "id": "HOT_Q26",
@@ -299,7 +324,8 @@
           "correctAnswer": "A",
           "images": [
             "assets/img/sma_table.png"
-          ]
+          ],
+          "explanation": "SMA ngày 4 (k = 3) = (79 + 38 + 80)/3 = 65,67 ≈ **66 USD**."
         },
         {
           "id": "HOT_Q27",
@@ -310,7 +336,8 @@
             "C": "8",
             "D": "12"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Theo slide Apriori, số itemset 2 phần tử xấp xỉ **n²/2 = 6²/2 = 18**."
         },
         {
           "id": "HOT_Q28",
@@ -325,7 +352,8 @@
           "images": [
             "assets/img/txn_table.png",
             "assets/img/eq_leverage.png"
-          ]
+          ],
+          "explanation": "Leverage = Sup({c,d,e}) − Sup({c})×Sup({d,e}) = 0,375 − (7/8)(3/8) ≈ **0,047**."
         },
         {
           "id": "HOT_Q29",
@@ -339,7 +367,8 @@
           "correctAnswer": "D",
           "images": [
             "assets/img/txn_table.png"
-          ]
+          ],
+          "explanation": "{c,d,e} xuất hiện ở T2, T4, T7 → Sup = 3/8 = **0,375**."
         },
         {
           "id": "HOT_Q30",
@@ -353,7 +382,8 @@
           "correctAnswer": "C",
           "images": [
             "assets/img/txn_table.png"
-          ]
+          ],
+          "explanation": "Confidence = Sup({c,d,e}) / Sup({c}) = (3/8)/(7/8) = 3/7 ≈ **0,429**."
         },
         {
           "id": "HOT_Q31",
@@ -367,7 +397,8 @@
           "correctAnswer": "C",
           "images": [
             "assets/img/txn_table.png"
-          ]
+          ],
+          "explanation": "Với minsup = 4: c = 7, e = 4, d = 4, b = 4 (a bị loại). Thứ tự giảm dần theo số đếm: c đầu, còn e, d, b có thể sắp theo thứ tự đó → **c, e, d, b**."
         },
         {
           "id": "HOT_Q32",
@@ -381,7 +412,8 @@
           "correctAnswer": "A",
           "images": [
             "assets/img/cpb_table.png"
-          ]
+          ],
+          "explanation": "Chỉ cặp X–Y có đếm 4 (X:{Y:4,…}); X–Z chỉ 3 < 4 → tập 2 item chứa X là **{X,Y}**."
         },
         {
           "id": "HOT_Q33",
@@ -395,7 +427,8 @@
           "correctAnswer": "B",
           "images": [
             "assets/img/cpb_table.png"
-          ]
+          ],
+          "explanation": "Cặp không chứa X đạt minsup 4: Y–Z (4) và Y–T (4) → **{Y,Z}, {T,Y}**; Z–T chỉ 3 nên bị loại."
         },
         {
           "id": "HOT_Q34",
@@ -406,7 +439,8 @@
             "C": "2%",
             "D": "1%"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Ngưỡng minsup thông thường là **1%** (minconf thường 80%)."
         },
         {
           "id": "HOT_Q36",
@@ -421,7 +455,8 @@
           "images": [
             "assets/img/pagerank_graph.png",
             "assets/img/eq_pagerank.png"
-          ]
+          ],
+          "explanation": "Page 2 nhận từ Page 1 (C=1) và Page 3 (C=4): PR = 0,15 + 0,85×(1 + 1/4) = **1,2125**."
         },
         {
           "id": "HOT_Q37",
@@ -436,7 +471,8 @@
           "images": [
             "assets/img/pagerank_graph.png",
             "assets/img/eq_pagerank.png"
-          ]
+          ],
+          "explanation": "Page 1 chỉ nhận từ Page 3 (C=4): PR = 0,15 + 0,85×(1/4) = **0,3625**."
         },
         {
           "id": "HOT_Q38",
@@ -450,7 +486,8 @@
           "correctAnswer": "B",
           "images": [
             "assets/img/cpt_tree.png"
-          ]
+          ],
+          "explanation": "Với truy vấn ⟨D, C⟩, phần tử có điểm cao nhất là **B** (xuất hiện nhiều nhất trong phần đuôi của các chuỗi liên quan)."
         },
         {
           "id": "HOT_Q39",
@@ -464,7 +501,8 @@
           "correctAnswer": "B",
           "images": [
             "assets/img/cpt_plus_fsc.png"
-          ]
+          ],
+          "explanation": "Việc thay chuỗi con AB bằng ký hiệu x là chiến lược **FSC (Frequent Subsequence Compression)**."
         },
         {
           "id": "HOT_Q40",
@@ -475,7 +513,8 @@
             "C": "Xây dựng cây phân cấp (taxonomy) từ dữ liệu đồ thị",
             "D": "Tìm đường đi ngắn nhất giữa hai thực thể trong đồ thị tri thức"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**BFS** (duyệt theo cấp) dùng để **tìm đường đi ngắn nhất** giữa hai thực thể, gợi ý theo lân cận gần."
         },
         {
           "id": "HOT_Q41",
@@ -486,7 +525,8 @@
             "C": "Tìm đường đi ngắn nhất giữa hai thực thể trong đồ thị tri thức",
             "D": "Đề xuất kết nối mới trong mạng xã hội thông qua các mối quan hệ gần"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**DFS** (duyệt sâu) dùng để **duyệt ontology** tìm khái niệm con, xây taxonomy."
         },
         {
           "id": "HOT_Q42",
@@ -497,7 +537,8 @@
             "C": "byte/hex (phi cấu trúc)",
             "D": "bit/decimal"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Dữ liệu thô trên Blockchain là **byte/hex phi cấu trúc**."
         },
         {
           "id": "HOT_Q43",
@@ -508,7 +549,8 @@
             "C": "Gemini",
             "D": "DeepSeek"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Looker** là BI Tool; ChatGPT, Gemini, DeepSeek là mô hình LLM."
         },
         {
           "id": "HOT_Q44",
@@ -519,7 +561,8 @@
             "C": "Semantic Match",
             "D": "Fuzzy Search"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**IVFFLAT** là một kiểu **Vector Index** (Inverted File) cho tìm kiếm vector."
         },
         {
           "id": "HOT_Q45",
@@ -530,7 +573,8 @@
             "C": "Bảo mật cột dữ liệu",
             "D": "Bảo mật toàn bộ bảng dữ liệu"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**CLM** (Column-level Masking) là bảo mật **cột** dữ liệu; RLS là bảo mật dòng."
         },
         {
           "id": "HOT_Q46",
@@ -541,7 +585,8 @@
             "C": "4 mức độ rủi ro",
             "D": "8 mức độ rủi ro"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**AI Act** phân loại hệ thống AI thành **4 mức** rủi ro."
         },
         {
           "id": "HOT_Q47",
@@ -552,7 +597,8 @@
             "C": "Table",
             "D": "Image"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Dạng dữ liệu cần truy vấn theo quan hệ giữa các thực thể (**GraphRAG**) là **Graph**."
         },
         {
           "id": "HOT_Q48",
@@ -563,7 +609,8 @@
             "C": "0.01",
             "D": "0.00001"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Ngưỡng dừng **ε** của PageRank thường chọn **0,0001**."
         },
         {
           "id": "HOT_Q49",
@@ -574,7 +621,8 @@
             "C": "80%",
             "D": "85%"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Damping factor** thường dùng **85% (0,85)**."
         },
         {
           "id": "HOT_Q50",
@@ -585,7 +633,8 @@
             "C": "PR(p)",
             "D": "L(p)"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Số trang mà trang p liên kết đến (out-degree) ký hiệu **C(p)**."
         }
       ]
     }

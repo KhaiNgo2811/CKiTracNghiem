@@ -15,7 +15,8 @@
             "C": "Áp dụng đồng thời nhiều công nghệ lưu trữ (SQL, NoSQL) trong cùng kiến trúc cho các dạng dữ liệu khác nhau",
             "D": "Chỉ dùng NoSQL"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Polyglot Persistence**: dùng đồng thời nhiều công nghệ lưu trữ (SQL, NoSQL) trong một kiến trúc."
         },
         {
           "id": "C9_T1_Q2",
@@ -26,7 +27,8 @@
             "C": "'One size does not fit all'",
             "D": "'SQL is enough'"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Triết lý: **“One size does not fit all”** — không có CSDL duy nhất tối ưu cho mọi tác vụ."
         },
         {
           "id": "C9_T1_Q3",
@@ -37,7 +39,8 @@
             "C": "Đồ thị quan hệ",
             "D": "Dữ liệu giao dịch cốt lõi đòi hỏi tính toàn vẹn tuyệt đối (ACID)"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**RDBMS** đảm nhận dữ liệu giao dịch cốt lõi cần tính toàn vẹn tuyệt đối (**ACID**)."
         },
         {
           "id": "C9_T1_Q4",
@@ -48,7 +51,8 @@
             "C": "Hồ sơ thực thể có cấu trúc thay đổi liên tục (schema-less)",
             "D": "Dữ liệu thô byte"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Document Store** phù hợp hồ sơ có cấu trúc thay đổi liên tục (**schema-less**)."
         },
         {
           "id": "C9_T1_Q5",
@@ -59,7 +63,8 @@
             "C": "Lưu hồ sơ phức tạp",
             "D": "Lưu đồ thị"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Key-Value Store** phục vụ truy xuất tốc độ cao cho **Caching và Session**."
         },
         {
           "id": "C9_T1_Q6",
@@ -70,7 +75,8 @@
             "C": "Strong Consistency tuyệt đối",
             "D": "Không có tính sẵn sàng"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Theo CAP, tầng NoSQL chấp nhận **Eventual Consistency** để đổi lấy tốc độ và tính sẵn sàng."
         }
       ]
     },
@@ -87,7 +93,8 @@
             "C": "Nodes (thực thể) và Edges (mối quan hệ)",
             "D": "Cây nhị phân"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Knowledge Graph** dùng **Nodes (thực thể)** và **Edges (quan hệ)**."
         },
         {
           "id": "C9_T2_Q2",
@@ -98,7 +105,8 @@
             "C": "Luôn dùng JOIN để tính",
             "D": "Chỉ lưu thực thể"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Relationship-First**: quan hệ được lưu trực tiếp như thực thể hạng nhất, không tính online bằng JOIN."
         },
         {
           "id": "C9_T2_Q3",
@@ -109,7 +117,8 @@
             "C": "Chia nhỏ đồ thị",
             "D": "Mã hóa thực thể"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Entity Disambiguation**: nhận diện và hợp nhất thực thể bị trùng lặp hoặc viết sai định dạng giữa các hệ thống."
         },
         {
           "id": "C9_T2_Q4",
@@ -120,7 +129,8 @@
             "C": "Binning — khai phá dữ liệu số",
             "D": "Sampling — khai phá dữ liệu streaming"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Graph Traversal** truy vấn sâu N-degree để tìm liên kết ngầm (phát hiện gian lận)."
         },
         {
           "id": "C9_T2_Q5",
@@ -131,7 +141,8 @@
             "C": "Duyệt sâu theo nhánh, dùng Stack – LIFO",
             "D": "Duyệt theo từng cấp độ (level by level), dùng Queue – FIFO"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**BFS** duyệt theo từng cấp độ, dùng **Queue (FIFO)**."
         },
         {
           "id": "C9_T2_Q6",
@@ -142,7 +153,8 @@
             "C": "Duyệt theo từng cấp độ, dùng Queue",
             "D": "Duyệt theo khoảng cách"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**DFS** duyệt sâu một nhánh rồi quay lui, dùng **Stack (LIFO)** hoặc đệ quy."
         },
         {
           "id": "C9_T2_Q7",
@@ -153,7 +165,8 @@
             "C": "A, B, E, G, F, C, D",
             "D": "A, B, D, G, E, F, C"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "BFS từ A: thăm các nút kề A (B, D, G) rồi mức tiếp theo (E, F) và cuối cùng C → **A, B, D, G, E, F, C**."
         },
         {
           "id": "C9_T2_Q8",
@@ -164,7 +177,8 @@
             "C": "A, D, G, B, E, F, C",
             "D": "A, B, D, G, E, F, C"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "DFS từ A chọn theo bảng chữ cái: A → B → E → G, quay lui → F → C, quay lui → D → **A, B, E, G, F, C, D**."
         },
         {
           "id": "C9_T2_Q9",
@@ -175,7 +189,8 @@
             "C": "Tìm chuỗi liên kết dài giữa các thực thể",
             "D": "Xây dựng taxonomy"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**BFS** dùng để tìm **đường đi ngắn nhất** và gợi ý thực thể lân cận gần nhất."
         },
         {
           "id": "C9_T2_Q10",
@@ -186,7 +201,8 @@
             "C": "Duyệt ontology, xây dựng taxonomy, tìm chuỗi liên kết dài giữa các thực thể",
             "D": "Tìm đường đi ngắn nhất"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**DFS** dùng để duyệt ontology, xây taxonomy, tìm chuỗi liên kết dài."
         }
       ]
     },
@@ -203,7 +219,8 @@
             "C": "10 đến 20 chiều",
             "D": "2 đến 3 chiều"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Vector Embeddings thường có **768 đến 1536 chiều**."
         },
         {
           "id": "C9_T3_Q2",
@@ -214,7 +231,8 @@
             "C": "Lỗi SQL",
             "D": "Curse of Dimensionality gây quá tải CPU"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Quét khoảng cách trên nhiều vector nhiều chiều gây **Curse of Dimensionality** làm quá tải CPU."
         },
         {
           "id": "C9_T3_Q3",
@@ -225,7 +243,8 @@
             "C": "Kỹ thuật nén dữ liệu",
             "D": "Thuật toán phân cụm DBSCAN"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**HNSW** là đồ thị phân cấp (small world) để tìm láng giềng gần nhất nhanh (mili-giây)."
         },
         {
           "id": "C9_T3_Q4",
@@ -236,7 +255,8 @@
             "C": "Nén vector",
             "D": "Mã hóa vector"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**IVF** phân cụm không gian vector thành các phân vùng **Voronoi cells** để thu hẹp phạm vi tìm."
         },
         {
           "id": "C9_T3_Q5",
@@ -247,7 +267,8 @@
             "C": "Tăng số chiều vector",
             "D": "Nén kích thước lưu trữ của vector để đưa chỉ mục vào RAM"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Product Quantization** nén kích thước lưu trữ vector để đưa chỉ mục vào RAM."
         }
       ]
     },
@@ -264,7 +285,8 @@
             "C": "Đồ thị tri thức",
             "D": "File CSV"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Dữ liệu thô Blockchain là **byte/hex phi cấu trúc**, phân tán trên hàng nghìn nodes."
         },
         {
           "id": "C9_T4_Q2",
@@ -275,7 +297,8 @@
             "C": "Sao chép nút mạng",
             "D": "Xóa dữ liệu blockchain"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Mục tiêu: chuyển dữ liệu on-chain về **bảng quan hệ** để chạy BI/Fintech."
         },
         {
           "id": "C9_T4_Q3",
@@ -286,7 +309,8 @@
             "C": "SQL",
             "D": "ABI (Application Binary Interface)"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**ABI** (Application Binary Interface) giúp dịch chuỗi Hex trong Logs thành hàm và tham số."
         },
         {
           "id": "C9_T4_Q4",
@@ -297,7 +321,8 @@
             "C": "Xóa log",
             "D": "Chuyển Wei (18 chữ số thập phân) sang Ether, đồng bộ Timestamp về UTC"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Data Normalization**: chuyển Wei sang Ether và đồng bộ Timestamp về UTC."
         },
         {
           "id": "C9_T4_Q5",
@@ -308,7 +333,8 @@
             "C": "Để giảm dung lượng",
             "D": "Để thay DBA"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Blockchain là bên thứ ba độc lập, không thể thao túng nên **DBA không thể sửa/xóa audit log**."
         },
         {
           "id": "C9_T4_Q6",
@@ -319,7 +345,8 @@
             "C": "Băm (SHA-256) nhật ký, gom thành Merkle Root Hash và ghi Root Hash lên Blockchain qua Smart Contract",
             "D": "Ghi toàn bộ dữ liệu thô lên Blockchain"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Anchoring**: băm nhật ký (SHA-256), gom thành **Merkle Root Hash** rồi ghi Root Hash lên Blockchain qua Smart Contract (không ghi toàn bộ dữ liệu thô)."
         }
       ]
     },
@@ -336,7 +363,8 @@
             "C": "Sao chép dữ liệu qua FTP",
             "D": "Gom toàn bộ dữ liệu về một chỗ trước khi truy vấn"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Federated Querying**: một câu SQL lấy dữ liệu từ nhiều nền tảng mà không di chuyển dữ liệu thô."
         },
         {
           "id": "C9_T5_Q2",
@@ -347,7 +375,8 @@
             "C": "Công cụ nén",
             "D": "Connector/Wrapper Engines: dịch SQL tổng sang ngôn ngữ của từng nguồn"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Presto, Trino, BigQuery Omni** là Connector/Wrapper Engines dịch SQL sang ngôn ngữ của từng nguồn."
         },
         {
           "id": "C9_T5_Q3",
@@ -358,7 +387,8 @@
             "C": "Kéo toàn bộ dữ liệu về lọc",
             "D": "Mã hóa điều kiện"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Predicate Pushdown** đẩy điều kiện WHERE xuống CSDL nguồn để chỉ trả về kết quả nhỏ qua mạng."
         },
         {
           "id": "C9_T5_Q4",
@@ -369,7 +399,8 @@
             "C": "Thiếu số liệu thống kê về kích thước và chỉ mục của hệ thống đối tác nên dễ quyết định sai",
             "D": "Thừa số liệu thống kê"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Optimizer thiếu **số liệu thống kê** về hệ thống đối tác nên dễ chọn kế hoạch sai."
         },
         {
           "id": "C9_T5_Q5",
@@ -380,7 +411,8 @@
             "C": "Chi phí tính toán tại chỗ (CPU/I-O) và chi phí vận chuyển dữ liệu qua mạng",
             "D": "Chi phí đào tạo và tuyển dụng"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Cost-Based Optimizer** xét **chi phí tính toán tại chỗ (CPU/I-O)** và **chi phí vận chuyển qua mạng**."
         },
         {
           "id": "C9_T5_Q6",
@@ -391,7 +423,8 @@
             "C": "Gộp hai bảng lớn thành một",
             "D": "Xóa bảng nhỏ"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Broadcast Join**: kéo bảng nhỏ sang máy chủ chứa bảng lớn (thay vì băm cả hai bảng)."
         }
       ]
     },
@@ -408,7 +441,8 @@
             "C": "Thời gian tối đa chấp nhận để khôi phục hệ thống sau sự cố",
             "D": "Thời gian sao lưu"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**RTO**: thời gian tối đa chấp nhận để khôi phục hệ thống."
         },
         {
           "id": "C9_T6_Q2",
@@ -419,7 +453,8 @@
             "C": "Số vùng dự phòng",
             "D": "Tốc độ sao lưu"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**RPO**: lượng dữ liệu tối đa chấp nhận bị mất (tính bằng phút/giờ)."
         },
         {
           "id": "C9_T6_Q3",
@@ -430,7 +465,8 @@
             "C": "Health Check phát hiện vùng chính mất tín hiệu quá 30 giây thì tự động chuyển luồng sang vùng dự phòng",
             "D": "Xóa vùng chính"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Automated Failover**: Health Check phát hiện vùng chính mất tín hiệu quá **30 giây** thì tự chuyển sang vùng dự phòng."
         },
         {
           "id": "C9_T6_Q4",
@@ -441,7 +477,8 @@
             "C": "Để đảm bảo mất dữ liệu",
             "D": "Vì không có mạng"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Nhân bản **bất đồng bộ** tránh làm giảm tốc độ ghi của hệ thống khi sao chép xuyên quốc gia."
         }
       ]
     }

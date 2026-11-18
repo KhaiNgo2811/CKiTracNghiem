@@ -15,7 +15,8 @@
             "C": "Độ nâng",
             "D": "Tiền đề (Antecedent)"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Trong luật X ⇒ Y: **X là Antecedent (tiền đề)**, Y là Consequent (hậu đề)."
         },
         {
           "id": "C5_T1_Q2",
@@ -26,7 +27,8 @@
             "C": "Sup(X ∪ Y) / Sup(X)",
             "D": "Số giao dịch chứa cả X và Y / Tổng số giao dịch"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Support** = số giao dịch chứa cả X và Y / tổng số giao dịch — đo mức phổ biến của luật."
         },
         {
           "id": "C5_T1_Q3",
@@ -37,7 +39,8 @@
             "C": "Sup(X) × Sup(Y)",
             "D": "Sup(Y) / Sup(X)"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Confidence = Sup(X∪Y) / Sup(X)** — xác suất hậu đề xảy ra khi tiền đề đã xảy ra."
         },
         {
           "id": "C5_T1_Q4",
@@ -48,7 +51,8 @@
             "C": "Sup(X ∪ Y) − Sup(X)",
             "D": "Sup(X) / Sup(Y)"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Lift = Conf(X⇒Y) / P(Y)** — so sánh xác suất có điều kiện với xác suất nền của hậu đề."
         },
         {
           "id": "C5_T1_Q5",
@@ -59,7 +63,8 @@
             "C": "Luật không có ý nghĩa",
             "D": "Tiền đề làm tăng khả năng xảy ra hậu đề (quan hệ tích cực)"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Lift > 1**: tiền đề làm **tăng** khả năng xảy ra hậu đề (quan hệ tích cực)."
         },
         {
           "id": "C5_T1_Q6",
@@ -70,7 +75,8 @@
             "C": "Luật tuyệt đối đúng",
             "D": "Tiền đề và hậu đề độc lập, không tác động lẫn nhau"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Lift = 1**: tiền đề và hậu đề **độc lập**, không tác động lẫn nhau."
         },
         {
           "id": "C5_T1_Q7",
@@ -81,7 +87,8 @@
             "C": "Confidence bằng 1",
             "D": "Tiền đề làm giảm khả năng xảy ra hậu đề (quan hệ tiêu cực)"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Lift < 1**: tiền đề làm **giảm** khả năng xảy ra hậu đề (quan hệ tiêu cực)."
         },
         {
           "id": "C5_T1_Q8",
@@ -92,7 +99,8 @@
             "C": "1.52",
             "D": "0.262"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Support = 262/1000 = **0,262**."
         },
         {
           "id": "C5_T1_Q9",
@@ -103,7 +111,8 @@
             "C": "0.61",
             "D": "0.262"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Confidence = 262/283 ≈ **0,926**."
         },
         {
           "id": "C5_T1_Q10",
@@ -114,7 +123,8 @@
             "C": "0.61",
             "D": "0.565"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Lift = 0,926 / 0,61 ≈ **1,52** (khách hàng nhóm này có khả năng sở hữu thẻ cao hơn 1,52 lần trung bình)."
         },
         {
           "id": "C5_T1_Q11",
@@ -125,7 +135,8 @@
             "C": "Luật hiếm",
             "D": "Luật yếu"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Confidence **0,9–1** là luật **rất mạnh, đáng tin cậy**; 0,5–0,9 trung bình; dưới 0,5 yếu."
         },
         {
           "id": "C5_T1_Q12",
@@ -139,7 +150,8 @@
           "correctAnswer": "B",
           "images": [
             "assets/img/eq_leverage.png"
-          ]
+          ],
+          "explanation": "**Leverage = Sup(X∪Y) − Sup(X)×Sup(Y)** (chênh lệch giữa tần suất thực và kỳ vọng nếu độc lập)."
         },
         {
           "id": "C5_T1_Q13",
@@ -150,7 +162,8 @@
             "C": "minsup = 0.01 (1%), minconf = 0.8 (80%)",
             "D": "minsup = 0.1, minconf = 0.1"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Ngưỡng thường dùng: **minsup = 1%**, **minconf = 80%**."
         },
         {
           "id": "C5_T1_Q14",
@@ -164,7 +177,8 @@
           "correctAnswer": "C",
           "images": [
             "assets/img/txn_table.png"
-          ]
+          ],
+          "explanation": "Sup({c,d,e}) = 3/8 (xuất hiện ở T2, T4, T7) = **0,375**."
         },
         {
           "id": "C5_T1_Q15",
@@ -178,7 +192,8 @@
           "correctAnswer": "A",
           "images": [
             "assets/img/txn_table.png"
-          ]
+          ],
+          "explanation": "count({c}) = 7 (T1, T2, T4, T5, T6, T7, T8) → Conf = 3/7 ≈ **0,429**."
         },
         {
           "id": "C5_T1_Q16",
@@ -192,7 +207,8 @@
           "correctAnswer": "B",
           "images": [
             "assets/img/txn_table.png"
-          ]
+          ],
+          "explanation": "P({d,e}) = 3/8 = 0,375 → Lift = 0,429 / 0,375 ≈ **1,143**."
         },
         {
           "id": "C5_T1_Q17",
@@ -206,7 +222,8 @@
           "correctAnswer": "C",
           "images": [
             "assets/img/txn_table.png"
-          ]
+          ],
+          "explanation": "Leverage = 0,375 − (7/8)(3/8) = 0,375 − 0,328 ≈ **0,047**."
         },
         {
           "id": "C5_T1_Q18",
@@ -220,7 +237,8 @@
           "correctAnswer": "D",
           "images": [
             "assets/img/txn_table.png"
-          ]
+          ],
+          "explanation": "{c,d,b} xuất hiện ở T2 và T6 → 2/8 = **0,25**."
         },
         {
           "id": "C5_T1_Q19",
@@ -231,7 +249,8 @@
             "C": "0.5",
             "D": "0.375"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Confidence = count({c,d,e}) / count({c,d}) = 3/4 = **0,75**."
         }
       ]
     },
@@ -248,7 +267,8 @@
             "C": "Itemset có support < minsup",
             "D": "Itemset chỉ có 1 phần tử"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Frequent itemset** là itemset có support **≥ minsup**."
         },
         {
           "id": "C5_T2_Q2",
@@ -259,7 +279,8 @@
             "C": "Support của Y lớn hơn support của X",
             "D": "Support của Y nhỏ hơn hoặc bằng support của X"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Tính chất 1: nếu X ⊆ Y thì **Sup(Y) ≤ Sup(X)** (thêm phần tử thì support không tăng)."
         },
         {
           "id": "C5_T2_Q3",
@@ -270,7 +291,8 @@
             "C": "Y luôn phổ biến",
             "D": "Nếu một tập con của Y không phổ biến thì Y cũng không phổ biến"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Tính chất 2 (anti-monotone): nếu một **tập con** của Y không phổ biến thì Y cũng **không phổ biến** → dùng để cắt tỉa ứng viên."
         },
         {
           "id": "C5_T2_Q4",
@@ -281,7 +303,8 @@
             "C": "5! = 120",
             "D": "2⁵ = 32"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Số tập con khác rỗng của 5 phần tử = 2⁵ − 1 = **31**."
         },
         {
           "id": "C5_T2_Q5",
@@ -292,7 +315,8 @@
             "C": "36",
             "D": "12"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Số itemset 2 phần tử từ 6 item = C(6,2) = **15** (xấp xỉ n²/2). Câu tương tự của slide lấy xấp xỉ n²/2 = 18."
         },
         {
           "id": "C5_T2_Q6",
@@ -303,7 +327,8 @@
             "C": "Cần cây FP-Tree",
             "D": "Quét CSDL nhiều lần và sinh số lượng ứng viên khổng lồ"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Hạn chế của Apriori: **quét CSDL nhiều lần** và **sinh số lượng ứng viên khổng lồ**."
         },
         {
           "id": "C5_T2_Q7",
@@ -314,7 +339,8 @@
             "C": "Agrawal (1993)",
             "D": "Google (1998)"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Apriori do **Agrawal (1993)** đề xuất."
         },
         {
           "id": "C5_T2_Q8",
@@ -325,7 +351,8 @@
             "C": "3 (75% trong 4 giao dịch)",
             "D": "2 (50%)"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "{pasta, orange} xuất hiện trong 3/4 giao dịch → support = **3** (75%)."
         },
         {
           "id": "C5_T2_Q9",
@@ -336,7 +363,8 @@
             "C": "Xây dựng FP-Tree",
             "D": "Tạo itemset kích thước 4"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Bước đầu: **duyệt CSDL tính support itemset kích thước 1**."
         },
         {
           "id": "C5_T2_Q10",
@@ -347,7 +375,8 @@
             "C": "12",
             "D": "18"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Theo slide, số itemset 2 phần tử xấp xỉ **n²/2 = 6²/2 = 18**."
         }
       ]
     },
@@ -364,7 +393,8 @@
             "C": "Xây dựng FP-Tree để nén dữ liệu, chỉ duyệt CSDL 2 lần, không sinh ứng viên",
             "D": "Sinh thêm ứng viên"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "FP-Growth xây **FP-Tree** nén dữ liệu, **chỉ duyệt CSDL 2 lần** và **không sinh ứng viên**."
         },
         {
           "id": "C5_T3_Q2",
@@ -375,7 +405,8 @@
             "C": "2 lần",
             "D": "1 lần"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "FP-Growth duyệt CSDL **2 lần** (lần 1 đếm item, lần 2 xây cây)."
         },
         {
           "id": "C5_T3_Q3",
@@ -386,7 +417,8 @@
             "C": "Cây FP-tree hoàn chỉnh",
             "D": "CSDL phụ gồm các đường dẫn tiền tố (prefix paths) trong FP-tree xuất hiện cùng với nút thấp nhất (suffix)"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Condition Pattern Base**: CSDL phụ gồm các **đường dẫn tiền tố** trong FP-tree đi cùng nút suffix."
         },
         {
           "id": "C5_T3_Q4",
@@ -397,7 +429,8 @@
             "C": "Ngẫu nhiên",
             "D": "Theo bảng chữ cái luôn"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Item được sắp xếp **giảm dần theo số giao dịch** mà chúng xuất hiện."
         },
         {
           "id": "C5_T3_Q5",
@@ -408,7 +441,8 @@
             "C": "e, d, b, c",
             "D": "c, b, d, e"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Đếm: c = 7, b = 4, d = 4, e = 4 (a = 2 < 4 bị loại). Với minsup = 4 thứ tự giảm dần có thể là **c, b, d, e** (b, d, e cùng số đếm nên hoán đổi được)."
         },
         {
           "id": "C5_T3_Q6",
@@ -419,7 +453,8 @@
             "C": "F, C, A, M, P",
             "D": "F, C, A, B, M, P"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Đếm: F, C = 4; A, M, P, B = 3 → thứ tự giảm dần **F, C, A, B, M, P** (minsupportcount = 3)."
         },
         {
           "id": "C5_T3_Q7",
@@ -430,7 +465,8 @@
             "C": "A, C, F, M, P",
             "D": "F, A, C, D, G, I, M, P"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Giao dịch 1 {F,A,C,D,G,I,M,P}: bỏ item không phổ biến (D, G, I) và sắp theo thứ tự F, C, A, B, M, P → **F, C, A, M, P**."
         },
         {
           "id": "C5_T3_Q8",
@@ -444,7 +480,8 @@
           "correctAnswer": "C",
           "images": [
             "assets/img/cpb_table.png"
-          ]
+          ],
+          "explanation": "Với Minsup = 4: Y–Z có 4 và Y–T có 4 (trong Z:{Y:4} và T:{Y:4}) → các tập 2 item không chứa X là **{Y,Z} và {Y,T}**."
         },
         {
           "id": "C5_T3_Q9",
@@ -455,7 +492,8 @@
             "C": "Đồ thị tri thức",
             "D": "Cây Dendrogram"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**FP-Tree** là cấu trúc nén các tập mục trong CSDL, lưu vết quan hệ giữa các item."
         },
         {
           "id": "C5_T3_Q10",
@@ -469,7 +507,8 @@
           "correctAnswer": "C",
           "images": [
             "assets/img/txn_table.png"
-          ]
+          ],
+          "explanation": "Đếm: c = 7, e = 4, d = 4, b = 4 → thứ tự có thể là **c, e, d, b** (e, d, b cùng 4 nên hoán đổi được)."
         },
         {
           "id": "C5_T3_Q11",
@@ -483,7 +522,8 @@
           "correctAnswer": "C",
           "images": [
             "assets/img/cpb_table.png"
-          ]
+          ],
+          "explanation": "Với Minsup = 4: chỉ X–Y có đếm 4 (X:{Y:4,…}) còn X–Z chỉ 3 → tập 2 item chứa X là **{X,Y}**."
         }
       ]
     },
@@ -500,7 +540,8 @@
             "C": "Gain Ratio",
             "D": "Jaccard"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**ID3** chọn thuộc tính theo **Information Gain**."
         },
         {
           "id": "C5_T4_Q2",
@@ -511,7 +552,8 @@
             "C": "Z-Score",
             "D": "Information Gain"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**C4.5** chọn theo **Gain Ratio** (chuẩn hóa Information Gain)."
         },
         {
           "id": "C5_T4_Q3",
@@ -522,7 +564,8 @@
             "C": "Chỉ dữ liệu rời rạc (Categorical)",
             "D": "Chỉ văn bản"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**ID3** chỉ hỗ trợ dữ liệu **rời rạc (categorical)**."
         },
         {
           "id": "C5_T4_Q4",
@@ -533,7 +576,8 @@
             "C": "Không có cắt tỉa",
             "D": "Không hỗ trợ dữ liệu liên tục"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "C4.5 so với ID3: hỗ trợ dữ liệu liên tục, xử lý Null bằng trọng số xác suất, có **post-pruning**."
         },
         {
           "id": "C5_T4_Q5",
@@ -544,7 +588,8 @@
             "C": "Không hỗ trợ (báo lỗi)",
             "D": "Bỏ qua cột"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "ID3 **không hỗ trợ** giá trị Null (báo lỗi)."
         },
         {
           "id": "C5_T4_Q6",
@@ -555,7 +600,8 @@
             "C": "Không bao giờ overfit",
             "D": "Kém, cây sâu dễ bị quá khớp"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "ID3 không cắt tỉa nên cây sâu, dễ **overfitting**."
         }
       ]
     },
@@ -572,7 +618,8 @@
             "C": "Định lý giới hạn trung tâm",
             "D": "Định lý Euler"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Naive Bayes** dựa trên **định lý Bayes**."
         },
         {
           "id": "C5_T5_Q2",
@@ -583,7 +630,8 @@
             "C": "Chỉ có một thuộc tính",
             "D": "Nhãn lớp không quan trọng"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Giả định “Naive”: các thuộc tính **độc lập** với nhau khi biết nhãn lớp."
         },
         {
           "id": "C5_T5_Q3",
@@ -594,7 +642,8 @@
             "C": "Nhóm có xác suất cao nhất",
             "D": "Nhóm có xác suất thấp nhất"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Naive Bayes xếp đối tượng vào nhóm có **xác suất cao nhất**."
         },
         {
           "id": "C5_T5_Q4",
@@ -605,7 +654,8 @@
             "C": "Thiếu dữ liệu",
             "D": "Chi phí lưu trữ"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Bayesian Network** mô hình hóa được các biến **phụ thuộc lẫn nhau**, khắc phục nhược điểm “Naive”."
         }
       ]
     },
@@ -622,7 +672,8 @@
             "C": "Medoid (điểm thật)",
             "D": "Median"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Tâm cụm của **K-Means** là **Mean** (trọng tâm ảo); K-Medoids dùng điểm thật (medoid)."
         },
         {
           "id": "C5_T6_Q2",
@@ -633,7 +684,8 @@
             "C": "Nhạy cảm với nhiễu (Outliers)",
             "D": "Dùng cho mọi loại dữ liệu"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "K-Means **nhạy cảm với nhiễu (outliers)** vì mean bị kéo lệch."
         },
         {
           "id": "C5_T6_Q3",
@@ -644,7 +696,8 @@
             "C": "Chống nhiễu tốt, dùng cho mọi loại dữ liệu",
             "D": "Chỉ dùng dữ liệu số"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**K-Medoids** chống nhiễu tốt và dùng được cho mọi loại dữ liệu (nhưng chạy chậm)."
         },
         {
           "id": "C5_T6_Q4",
@@ -655,7 +708,8 @@
             "C": "Max",
             "D": "Median"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**K-Modes** thay Mean bằng **Mode**, dành cho dữ liệu phân loại."
         },
         {
           "id": "C5_T6_Q5",
@@ -666,7 +720,8 @@
             "C": "Dữ liệu hỗn hợp (kết hợp K-Means + K-Modes)",
             "D": "Chỉ dữ liệu phân loại"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**K-Prototypes** kết hợp K-Means + K-Modes cho dữ liệu **hỗn hợp**."
         },
         {
           "id": "C5_T6_Q6",
@@ -677,7 +732,8 @@
             "C": "Apriori",
             "D": "K-Medoids (phân tách mẫu để chạy trên dữ liệu lớn)"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**CLARA/CLARANS** là biến thể của **K-Medoids**, phân tích mẫu để chạy trên dữ liệu lớn."
         },
         {
           "id": "C5_T6_Q7",
@@ -688,7 +744,8 @@
             "C": "Không cần biết trước số cụm k, cụm có hình dạng bất kỳ",
             "D": "Không phát hiện nhiễu"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**DBSCAN** không cần biết trước số cụm k, cụm có **hình dạng bất kỳ**, và phát hiện được nhiễu."
         },
         {
           "id": "C5_T6_Q8",
@@ -699,7 +756,8 @@
             "C": "Support và Confidence",
             "D": "Alpha và Beta"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Hai tham số DBSCAN: **Eps** (bán kính lân cận) và **MinPts**."
         },
         {
           "id": "C5_T6_Q9",
@@ -710,7 +768,8 @@
             "C": "Có ≥ MinPts điểm trong bán kính Eps",
             "D": "Không thuộc cụm nào"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Core**: có **≥ MinPts** điểm trong bán kính Eps."
         },
         {
           "id": "C5_T6_Q10",
@@ -721,7 +780,8 @@
             "C": "Không phải Core cũng không phải Border",
             "D": "Điểm biên"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Noise** là điểm không phải Core cũng không phải Border → bị loại bỏ."
         }
       ]
     },
@@ -738,7 +798,8 @@
             "C": "Dendrogram",
             "D": "Ma trận nhị phân"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Hierarchical Clustering** xây **Dendrogram** (cây phân cấp các cụm)."
         },
         {
           "id": "C5_T7_Q2",
@@ -749,7 +810,8 @@
             "C": "Apriori",
             "D": "STING, CLIQUE"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Hierarchical gồm **AGNES, DIANA, BIRCH, CURE**. STING, CLIQUE thuộc grid-based."
         },
         {
           "id": "C5_T7_Q3",
@@ -760,7 +822,8 @@
             "C": "AGNES, DIANA",
             "D": "STING, CLIQUE, WaveCluster"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Grid-based gồm **STING, CLIQUE, WaveCluster**."
         },
         {
           "id": "C5_T7_Q4",
@@ -771,7 +834,8 @@
             "C": "Độ chính xác biên tuyệt đối",
             "D": "Không cần lưới"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Ưu điểm lớn nhất của Grid-based: **tốc độ siêu nhanh**, chuyên trị dữ liệu lớn."
         },
         {
           "id": "C5_T7_Q5",
@@ -782,7 +846,8 @@
             "C": "Quá nhanh",
             "D": "Không có dendrogram"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Nhược điểm của Hierarchical: chi phí cao, bước gộp/chia sai **không thể đảo ngược**."
         },
         {
           "id": "C5_T7_Q6",
@@ -793,7 +858,8 @@
             "C": "Dữ liệu phân loại",
             "D": "Dữ liệu không có phân phối"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Statistical-based** giả định dữ liệu theo một phân phối xác suất (thường Gaussian); điểm có xác suất cực thấp là outlier."
         },
         {
           "id": "C5_T7_Q7",
@@ -804,7 +870,8 @@
             "C": "Đối tượng trùng lặp",
             "D": "Đối tượng nằm cách xa hầu hết các điểm dữ liệu khác"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Distance-based**: outlier là đối tượng nằm **cách xa hầu hết** các điểm khác."
         }
       ]
     }

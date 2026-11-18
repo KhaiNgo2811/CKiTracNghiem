@@ -48,6 +48,7 @@ PAREN_ONLY = [('xác thực', 'authentication'), ('nhận dạng', 'identificati
               ('tiêu chuẩn', 'standard'), ('hướng dẫn', 'guideline'), ('quy trình', 'procedure')]
 # Đáp án nguyên là một thuật ngữ đơn (viết hoa chữ đầu) -> EN
 EXACT = {
+ 'thẻ thông minh và mã số định danh cá nhân (pin)': 'Smart card và PIN', 'sao lưu toàn bộ (full)': 'Full backup',
  'đạo luật bảo hiểm y tế khả chuyển và hipaa': 'HIPAA',
  'knowledge': 'Something you know', 'possession': 'Something you have', 'inherence': 'Something you are',
  'location': 'Somewhere you are', 'action': 'Something you do',

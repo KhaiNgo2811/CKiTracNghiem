@@ -15,7 +15,8 @@
             "C": "Tỷ lệ dữ liệu không bị khuyết",
             "D": "Sự đồng bộ về logic giữa các nguồn"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Accuracy**: mức độ dữ liệu mô tả đúng thực thể thật. Sai lệch thường do lỗi hệ thống hoặc con người."
         },
         {
           "id": "C4_T1_Q2",
@@ -26,7 +27,8 @@
             "C": "Mức độ dữ liệu đúng thực thể",
             "D": "Độ trễ"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Completeness**: tỷ lệ dữ liệu không bị khuyết (Null/Missing)."
         },
         {
           "id": "C4_T1_Q3",
@@ -37,7 +39,8 @@
             "C": "Dữ liệu không có Null",
             "D": "Dữ liệu cập nhật kịp thời"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Consistency**: đồng bộ về logic và định dạng giữa các nguồn, tránh xung đột (ví dụ đơn vị tiền tệ)."
         },
         {
           "id": "C4_T1_Q4",
@@ -48,7 +51,8 @@
             "C": "Độ trễ của dữ liệu; dữ liệu trễ làm mất tính thời sự",
             "D": "Kiểu dữ liệu"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Timeliness**: độ trễ của dữ liệu; dữ liệu trễ làm mất tính thời sự."
         },
         {
           "id": "C4_T1_Q5",
@@ -59,7 +63,8 @@
             "C": "Kiểm tra từng cột riêng lẻ",
             "D": "Mã hóa cột"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Cross-field Validation**: áp dụng quy tắc logic liên quan nhiều thuộc tính (ví dụ ngày bắt đầu < ngày kết thúc)."
         },
         {
           "id": "C4_T1_Q6",
@@ -70,7 +75,8 @@
             "C": "Consistency",
             "D": "Accuracy"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Ngày tất toán lệch định dạng giữa các nguồn là vấn đề **Consistency** (nhất quán)."
         }
       ]
     },
@@ -87,7 +93,8 @@
             "C": "Dữ liệu thiếu",
             "D": "Dữ liệu trùng lặp"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Noise** là sai số ngẫu nhiên làm lu mờ tín hiệu thực của dữ liệu."
         },
         {
           "id": "C4_T2_Q2",
@@ -98,7 +105,8 @@
             "C": "Chia dữ liệu thành các khoảng và thay giá trị bằng trung bình của bin",
             "D": "Mã hóa dữ liệu"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Binning**: chia dữ liệu thành các khoảng (bin) và thay giá trị bằng **trung bình của bin** để làm mượt."
         },
         {
           "id": "C4_T2_Q3",
@@ -109,7 +117,8 @@
             "C": "Điểm có |Z| > 3",
             "D": "Điểm có |Z| < 0.5"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Theo Z-Score, điểm có **|Z| > 3** là outlier tiềm năng (cách xa trung bình hơn 3 độ lệch chuẩn)."
         },
         {
           "id": "C4_T2_Q4",
@@ -120,7 +129,8 @@
             "C": "[Q1 − IQR, Q3 + IQR]",
             "D": "[0, Q3]"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Theo IQR, outlier nằm ngoài **[Q1 − 1,5×IQR ; Q3 + 1,5×IQR]**."
         },
         {
           "id": "C4_T2_Q5",
@@ -131,7 +141,8 @@
             "C": "100",
             "D": "110"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "IQR = 60 − 20 = 40 → giới hạn trên = 60 + 1,5×40 = 120, giới hạn dưới = 20 − 60 = −40. Giá trị **130 > 120** nên là outlier."
         },
         {
           "id": "C4_T2_Q6",
@@ -142,7 +153,8 @@
             "C": "Noise nhẹ",
             "D": "Giá trị Null"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Z-score > 5 là rất xa mức bình thường → **Outlier** (nghi gian lận)."
         }
       ]
     },
@@ -159,7 +171,8 @@
             "C": "Mã hóa thực thể",
             "D": "Xác định các bản ghi từ nhiều nguồn cùng mô tả một thực thể"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Entity Resolution** xác định các bản ghi từ nhiều nguồn cùng mô tả một thực thể."
         },
         {
           "id": "C4_T3_Q2",
@@ -170,7 +183,8 @@
             "C": "Đo dung lượng đĩa",
             "D": "Đo tốc độ mạng"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Jaccard** so sánh mức trùng lặp giữa hai tập hợp thuộc tính của thực thể."
         },
         {
           "id": "C4_T3_Q3",
@@ -181,7 +195,8 @@
             "C": "|A| + |B|",
             "D": "|A ∩ B| / |A ∪ B|"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**J(A,B) = |A ∩ B| / |A ∪ B|**."
         },
         {
           "id": "C4_T3_Q4",
@@ -192,7 +207,8 @@
             "C": "0.5",
             "D": "1/3 ≈ 0.33"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Giao = {Python, SQL} → 2; Hợp có 6 phần tử → J = 2/6 = **1/3 ≈ 0,33**."
         },
         {
           "id": "C4_T3_Q5",
@@ -203,7 +219,8 @@
             "C": "Không có ý nghĩa",
             "D": "Độ tương đồng càng thấp"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Jaccard càng gần 1 thì hai tập **càng giống nhau** (độ tương đồng cao)."
         },
         {
           "id": "C4_T3_Q6",
@@ -214,7 +231,8 @@
             "C": "Chia nhỏ bảng",
             "D": "Thêm bản ghi trùng"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Deduplication** loại bản ghi trùng sau tích hợp để tạo **Golden Record** duy nhất."
         },
         {
           "id": "C4_T3_Q7",
@@ -225,7 +243,8 @@
             "C": "Chọn ngẫu nhiên",
             "D": "Giá trị lớn nhất hoặc nhỏ nhất"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Khi hai nguồn mâu thuẫn: ưu tiên theo **Source Authority** (độ tin cậy) hoặc lấy **Latest timestamp**."
         },
         {
           "id": "C4_T3_Q8",
@@ -236,7 +255,8 @@
             "C": "Hash Join",
             "D": "Quick Sort"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Fuzzy Matching** xác định tỷ lệ trùng khớp khi dữ liệu không đồng nhất hoàn toàn (CMND, địa chỉ viết khác nhau)."
         }
       ]
     },
@@ -253,7 +273,8 @@
             "C": "Trung bình cộng của k giá trị gần nhất trong chuỗi",
             "D": "Giá trị lớn nhất trong k phần tử"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**SMA** là trung bình cộng của **k giá trị gần nhất** trong chuỗi (cửa sổ trượt)."
         },
         {
           "id": "C4_T4_Q2",
@@ -264,7 +285,8 @@
             "C": "78",
             "D": "79.3"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "SMA ngày 4 (k = 3) = (78 + 76 + 80)/3 = **78**."
         },
         {
           "id": "C4_T4_Q3",
@@ -275,7 +297,8 @@
             "C": "82.7",
             "D": "84.7"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "SMA ngày 5 = (82 + 84 + 88)/3 = 84,67 ≈ **84,7**."
         },
         {
           "id": "C4_T4_Q4",
@@ -286,7 +309,8 @@
             "C": "Roll-up và Drill-down",
             "D": "Insert và Delete"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Data Cube (OLAP) hỗ trợ **Roll-up** (tổng hợp lên) và **Drill-down** (khoan sâu)."
         },
         {
           "id": "C4_T4_Q5",
@@ -297,7 +321,8 @@
             "C": "Làm mượt và xác định điểm Golden Cross",
             "D": "Phát hiện dữ liệu trùng"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**MA-50 và MA-200** làm mượt giá và xác định điểm **Golden Cross** (MA ngắn cắt lên MA dài)."
         },
         {
           "id": "C4_T4_Q6",
@@ -308,7 +333,8 @@
             "C": "Kết hợp các bản ghi chi tiết thành bản tóm tắt cấp cao",
             "D": "Chia nhỏ bản tóm tắt thành chi tiết"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Data Aggregation** kết hợp bản ghi chi tiết thành bản tóm tắt cấp cao (ví dụ doanh thu ngày → tháng)."
         },
         {
           "id": "C4_T4_Q7",
@@ -322,7 +348,8 @@
           "correctAnswer": "C",
           "images": [
             "assets/img/sma_table.png"
-          ]
+          ],
+          "explanation": "SMA ngày 4 = (79 + 38 + 80)/3 = 65,67 ≈ **66 USD**."
         }
       ]
     },
@@ -339,7 +366,8 @@
             "C": "Phép chia dữ liệu thành bin",
             "D": "Phép chuẩn hóa về [0,1]"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**PCA** là phép biến đổi tuyến tính giữ lại tối đa **phương sai** để giảm số chiều."
         },
         {
           "id": "C4_T5_Q2",
@@ -350,7 +378,8 @@
             "C": "Các hàng trùng lặp",
             "D": "Các giá trị trung bình"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Principal Components** là các vector riêng ứng với các trị riêng lớn nhất của **Covariance Matrix**."
         },
         {
           "id": "C4_T5_Q3",
@@ -361,7 +390,8 @@
             "C": "Thiếu dữ liệu",
             "D": "Curse of Dimensionality"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "PCA giải quyết **Curse of Dimensionality** (quá nhiều chiều)."
         },
         {
           "id": "C4_T5_Q4",
@@ -372,7 +402,8 @@
             "C": "Regression",
             "D": "Histograms"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Clustering** thay một nhóm điểm tương đồng bằng **Centroid** đại diện."
         },
         {
           "id": "C4_T5_Q5",
@@ -383,7 +414,8 @@
             "C": "Chuẩn hóa dữ liệu",
             "D": "Nén file"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Stratified Sampling**: chọn tập con đại diện (theo từng tầng) để khai phá trên Big Data."
         },
         {
           "id": "C4_T5_Q6",
@@ -394,7 +426,8 @@
             "C": "Xóa dữ liệu",
             "D": "Lưu từng giá trị gốc"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Histograms** dùng phân phối tần suất thay vì lưu từng giá trị chi tiết."
         }
       ]
     },
@@ -411,7 +444,8 @@
             "C": "Chuyển thuộc tính rời rạc thành liên tục",
             "D": "Chia thuộc tính liên tục thành các khoảng giá trị hoặc nhãn định danh"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Discretization** chia thuộc tính liên tục thành các khoảng giá trị hoặc nhãn."
         },
         {
           "id": "C4_T6_Q2",
@@ -422,7 +456,8 @@
             "C": "N / (max − min)",
             "D": "(max − min) / N"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Width = (max − min) / N**."
         },
         {
           "id": "C4_T6_Q3",
@@ -433,7 +468,8 @@
             "C": "100 – 200 triệu",
             "D": "100 – 400 triệu"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Width = (700 − 100)/3 = 200 → nhóm thấp nhất **100 – 300** triệu."
         },
         {
           "id": "C4_T6_Q4",
@@ -444,7 +480,8 @@
             "C": "10 – 30",
             "D": "20 – 40"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Width = (70 − 10)/3 = 20 → nhóm 1: 10–30, nhóm 2: **30–50**, nhóm 3: 50–70."
         },
         {
           "id": "C4_T6_Q5",
@@ -455,7 +492,8 @@
             "C": "Mỗi bin có độ rộng bằng nhau",
             "D": "Mỗi bin chứa số lượng bản ghi bằng nhau; tốt cho dữ liệu lệch (skewed)"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Equal-frequency**: mỗi bin chứa số bản ghi bằng nhau; tốt cho dữ liệu lệch (skewed)."
         },
         {
           "id": "C4_T6_Q6",
@@ -466,7 +504,8 @@
             "C": "Tổ chức thuộc tính theo tầng bậc từ cụ thể đến tổng quát",
             "D": "Sắp xếp thuộc tính theo bảng chữ cái"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Concept Hierarchy** tổ chức thuộc tính theo tầng bậc từ cụ thể đến tổng quát (chi nhánh → khu vực)."
         },
         {
           "id": "C4_T6_Q7",
@@ -477,7 +516,8 @@
             "C": "Chỉ khai phá một luật",
             "D": "Chỉ khai phá ở mức chi tiết nhất"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Multi-level Mining** khai phá luật kết hợp ở nhiều mức trừu tượng khác nhau."
         }
       ]
     },
@@ -494,7 +534,8 @@
             "C": "(−∞, +∞)",
             "D": "[-1, 0]"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Min-Max thường ánh xạ về **[0, 1]**."
         },
         {
           "id": "C4_T7_Q2",
@@ -505,7 +546,8 @@
             "C": "0.5",
             "D": "0.3"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "(8 − 5)/(10 − 5) = 3/5 = **0,6**."
         },
         {
           "id": "C4_T7_Q3",
@@ -516,7 +558,8 @@
             "C": "0.6",
             "D": "0.45"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "(60 − 10)/(110 − 10) = 50/100 = **0,5**."
         },
         {
           "id": "C4_T7_Q4",
@@ -527,7 +570,8 @@
             "C": "v' = v × (max − min)",
             "D": "v' = v / 10^j"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**v′ = (v − min)/(max − min)**. Phương án (v − μ)/σ là Z-score; v/10^j là Decimal Scaling."
         },
         {
           "id": "C4_T7_Q5",
@@ -538,7 +582,8 @@
             "C": "Trung bình μ = 0 và độ lệch chuẩn σ = 1",
             "D": "Không đổi"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Z-Score cho dữ liệu có **trung bình μ = 0 và độ lệch chuẩn σ = 1**."
         },
         {
           "id": "C4_T7_Q6",
@@ -549,7 +594,8 @@
             "C": "z = (v − μ) / σ",
             "D": "z = (v − min) / (max − min)"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**z = (v − μ)/σ**."
         },
         {
           "id": "C4_T7_Q7",
@@ -560,7 +606,8 @@
             "C": "Chỉ dùng cho dữ liệu phân loại",
             "D": "Không cần tính trung bình"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Z-Score hiệu quả khi **nhiều ngoại lai** hoặc **không biết trước Min/Max**."
         },
         {
           "id": "C4_T7_Q8",
@@ -571,7 +618,8 @@
             "C": "Làm tròn về số nguyên",
             "D": "Di chuyển dấu thập phân dựa trên giá trị tuyệt đối lớn nhất của thuộc tính (v' = v / 10^j)"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Decimal Scaling** dời dấu thập phân dựa trên **giá trị tuyệt đối lớn nhất**: v′ = v/10^j."
         },
         {
           "id": "C4_T7_Q9",
@@ -582,7 +630,8 @@
             "C": "3",
             "D": "1"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Giá trị tuyệt đối lớn nhất 986 cần j sao cho 986/10^j < 1 → **j = 3** (986/1000 = 0,986)."
         },
         {
           "id": "C4_T7_Q10",
@@ -593,7 +642,8 @@
             "C": "Để tăng dung lượng dữ liệu",
             "D": "Đưa cả hai về cùng thang đo thống kê, tránh mô hình bị lệch"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Dự trữ ngoại hối lớn hơn lãi suất hàng triệu lần; Z-Score đưa cả hai về **cùng thang đo thống kê** để mô hình không bị lệch."
         }
       ]
     },
@@ -610,7 +660,8 @@
             "C": "Xóa thuộc tính không cần",
             "D": "Chọn thuộc tính theo Information Gain"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Feature Construction** tạo thuộc tính mới từ thuộc tính cũ (ví dụ BMI, LTV)."
         },
         {
           "id": "C4_T8_Q2",
@@ -621,7 +672,8 @@
             "C": "Information Gain",
             "D": "Z-Score"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Information Gain** dùng để chọn thuộc tính phân loại tốt nhất (Feature Selection)."
         },
         {
           "id": "C4_T8_Q3",
@@ -635,7 +687,8 @@
           "correctAnswer": "A",
           "images": [
             "assets/img/eq_info.png"
-          ]
+          ],
+          "explanation": "**Info(D) = −Σ p_i·log2(p_i)** là **Entropy**: đo độ hỗn loạn của dữ liệu theo m lớp."
         },
         {
           "id": "C4_T8_Q4",
@@ -649,7 +702,8 @@
           "correctAnswer": "C",
           "images": [
             "assets/img/eq_infoA.png"
-          ]
+          ],
+          "explanation": "**Info_A(D)** là entropy **có trọng số** sau khi chia D theo thuộc tính A thành v phân vùng."
         },
         {
           "id": "C4_T8_Q5",
@@ -663,7 +717,8 @@
           "correctAnswer": "B",
           "images": [
             "assets/img/eq_infoA.png"
-          ]
+          ],
+          "explanation": "|D_j|/|D| là **tỷ lệ bản ghi** nằm trong phân vùng j (trọng số của phân vùng)."
         },
         {
           "id": "C4_T8_Q6",
@@ -674,7 +729,8 @@
             "C": "Gain(A) = Info(D) + Info_A(D)",
             "D": "Gain(A) = Info_A(D) / Info(D)"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Gain(A) = Info(D) − Info_A(D)**: lượng entropy giảm được nhờ chia theo A."
         },
         {
           "id": "C4_T8_Q7",
@@ -685,7 +741,8 @@
             "C": "= 1",
             "D": "≈ 0.971"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Info(D) = −(0,6·log2 0,6 + 0,4·log2 0,4) ≈ **0,971**."
         },
         {
           "id": "C4_T8_Q8",
@@ -696,7 +753,8 @@
             "C": "2",
             "D": "0.5"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Hai lớp phân bố đều (5/5): p = 0,5 mỗi lớp → Entropy = **1** (cực đại với 2 lớp)."
         },
         {
           "id": "C4_T8_Q9",
@@ -707,7 +765,8 @@
             "C": "1",
             "D": "−1"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Tập thuần nhất một lớp: p = 1 → log2(1) = 0 → Entropy = **0**."
         },
         {
           "id": "C4_T8_Q10",
@@ -718,7 +777,8 @@
             "C": "Chuyển vector thành văn bản",
             "D": "Chuyển các thực thể rời rạc thành vector trong không gian đa chiều để tính độ tương đồng"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Embeddings** chuyển các thực thể rời rạc thành vector trong không gian đa chiều để tính độ tương đồng."
         },
         {
           "id": "C4_T8_Q11",
@@ -729,7 +789,8 @@
             "C": "Độ trễ giao dịch",
             "D": "Tỷ lệ Nợ/Thu nhập"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**DTI** (Debt-to-Income) = tỷ lệ **nợ/thu nhập**."
         },
         {
           "id": "C4_T8_Q12",
@@ -743,7 +804,8 @@
           "correctAnswer": "C",
           "images": [
             "assets/img/eq_infoA.png"
-          ]
+          ],
+          "explanation": "Trong Info_A(D), **v** là số giá trị khác nhau của **thuộc tính A** (số phân vùng)."
         },
         {
           "id": "C4_T8_Q13",
@@ -757,7 +819,8 @@
           "correctAnswer": "A",
           "images": [
             "assets/img/eq_info.png"
-          ]
+          ],
+          "explanation": "Trong Info(D), **m** là số **lớp** (class)."
         }
       ]
     }

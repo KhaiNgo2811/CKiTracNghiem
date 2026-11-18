@@ -15,7 +15,8 @@
             "C": "3 mức",
             "D": "2 mức"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**AI Act** phân cấp hệ thống AI thành **4 mức rủi ro**: Unacceptable, High, Transparent/Limited, Minimal."
         },
         {
           "id": "C7_T1_Q2",
@@ -26,7 +27,8 @@
             "C": "Tự do vận hành",
             "D": "Chỉ cần dán nhãn"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Unacceptable Risk** bị **cấm hoàn toàn** (ví dụ chấm điểm công dân xã hội)."
         },
         {
           "id": "C7_T1_Q3",
@@ -37,7 +39,8 @@
             "C": "Minimal Risk",
             "D": "High Risk"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "AI chấm điểm tín dụng trong Fintech là **High Risk** (kiểm soát nghiêm ngặt)."
         },
         {
           "id": "C7_T1_Q4",
@@ -48,7 +51,8 @@
             "C": "Unacceptable Risk",
             "D": "High Risk — bị cấm"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Chatbots và Deepfake thuộc **Transparent/Limited Risk**: yêu cầu **dán nhãn rõ ràng**."
         },
         {
           "id": "C7_T1_Q5",
@@ -59,7 +63,8 @@
             "C": "Minimal Risk",
             "D": "Unacceptable Risk"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Bộ lọc Spam, AI trong game là **Minimal Risk** (tự do vận hành)."
         },
         {
           "id": "C7_T1_Q6",
@@ -70,7 +75,8 @@
             "C": "Backup, Restore, Archive",
             "D": "Speed, Cost, Scale"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Ba trụ cột: **Transparency, Human Oversight, Data Quality**."
         },
         {
           "id": "C7_T1_Q7",
@@ -81,7 +87,8 @@
             "C": "Không cần ghi nhận",
             "D": "Hệ thống tự động ghi nhật ký để theo dõi, kiểm toán toàn bộ vòng đời vận hành"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Traceability**: hệ thống tự động ghi nhật ký để theo dõi và kiểm toán toàn bộ vòng đời vận hành."
         },
         {
           "id": "C7_T1_Q8",
@@ -92,7 +99,8 @@
             "C": "2030",
             "D": "2020"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Theo slide, AI Act áp dụng toàn diện từ năm **2026**."
         }
       ]
     },
@@ -109,7 +117,8 @@
             "C": "Kỹ thuật mã hóa",
             "D": "Thuật toán phân cụm"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Automated Data Lineage** quan sát và ghi nhận dòng chảy dữ liệu từ nguồn, qua các bước biến đổi, đến mô hình AI cuối cùng."
         },
         {
           "id": "C7_T2_Q2",
@@ -120,7 +129,8 @@
             "C": "Khi người dùng đăng nhập",
             "D": "Khi bảng Bronze đổi schema, các model AI ở tầng Gold sẽ bị ảnh hưởng"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Impact Analysis** cảnh báo: khi bảng Bronze đổi schema, các model AI ở tầng Gold sẽ bị ảnh hưởng."
         },
         {
           "id": "C7_T2_Q3",
@@ -131,7 +141,8 @@
             "C": "Giảm dung lượng lưu trữ",
             "D": "Tăng tốc truy vấn"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Với kiểm toán viên, lineage giúp biết mô hình AI lấy dữ liệu từ đâu và bị biến đổi bởi câu SQL nào."
         }
       ]
     },
@@ -148,7 +159,8 @@
             "C": "Xóa dòng nhạy cảm",
             "D": "Bộ lọc động dựa trên danh tính người truy cập (User Context)"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**RLS** dùng **bộ lọc động** dựa trên danh tính người truy cập (User Context) để giới hạn các dòng được thấy."
         },
         {
           "id": "C7_T3_Q2",
@@ -159,7 +171,8 @@
             "C": "Chia sẻ dữ liệu không sao chép",
             "D": "Bộ lọc dòng theo danh tính"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**CLM** ẩn hoặc mã hóa một phần dữ liệu nhạy cảm (PII) trong cột mà không đổi cấu trúc bảng."
         },
         {
           "id": "C7_T3_Q3",
@@ -170,7 +183,8 @@
             "C": "Xóa bảng khách hàng",
             "D": "Số điện thoại hiển thị dạng 091xxxx888"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Số điện thoại hiển thị **091xxxx888** là ví dụ Column-level Masking."
         },
         {
           "id": "C7_T3_Q4",
@@ -181,7 +195,8 @@
             "C": "Số điện thoại bị che",
             "D": "Số thẻ hiển thị xxxx"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Nhân viên vùng A chỉ thấy khách hàng vùng A là ví dụ **Row-level Security**."
         },
         {
           "id": "C7_T3_Q5",
@@ -192,7 +207,8 @@
             "C": "Mã hóa luôn làm hệ thống nhanh hơn",
             "D": "Hiệu năng không quan trọng"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Bảo mật **không được đánh đổi bằng hiệu năng** vận hành thời gian thực của hệ thống."
         }
       ]
     },
@@ -209,7 +225,8 @@
             "C": "Đồng bộ qua email",
             "D": "Chủ quản cấp quyền truy cập trực tiếp; đối tác xem dữ liệu tại chỗ, không sao chép byte nào"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Zero-copy Data Sharing**: chủ quản cấp quyền truy cập trực tiếp, đối tác xem dữ liệu tại chỗ, **không sao chép byte nào**."
         },
         {
           "id": "C7_T4_Q2",
@@ -220,7 +237,8 @@
             "C": "Revoke access trên Cloud, đối tác lập tức không còn thấy dữ liệu",
             "D": "Xóa bản sao ở máy đối tác"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Dừng hợp tác chỉ cần **Revoke access** trên Cloud — đối tác lập tức không còn thấy dữ liệu."
         },
         {
           "id": "C7_T4_Q3",
@@ -231,7 +249,8 @@
             "C": "Dùng chung không gian lưu trữ gốc, không sinh bản sao",
             "D": "Chi phí tính toán tăng gấp đôi"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Zero-copy **dùng chung không gian lưu trữ gốc, không sinh bản sao** nên tiết kiệm chi phí so với ETL nhân bản."
         }
       ]
     },
@@ -248,7 +267,8 @@
             "C": "Chủ động bơm 'nhiễu' ngẫu nhiên vào kết quả để hòa lẫn thông tin cá nhân",
             "D": "Xóa mọi dữ liệu"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Differential Privacy** chủ động **bơm nhiễu ngẫu nhiên** vào kết quả để hòa lẫn thông tin cá nhân."
         },
         {
           "id": "C7_T5_Q2",
@@ -259,7 +279,8 @@
             "C": "Độ chính xác cao, bảo mật thấp",
             "D": "Dữ liệu bị mất"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Epsilon thấp** → bảo mật tối đa nhưng **giảm độ chính xác**."
         },
         {
           "id": "C7_T5_Q3",
@@ -270,7 +291,8 @@
             "C": "Bảo mật tối đa",
             "D": "Không có rủi ro"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Epsilon cao** → báo cáo chính xác hơn nhưng **rủi ro lộ danh tính**."
         },
         {
           "id": "C7_T5_Q4",
@@ -281,7 +303,8 @@
             "C": "Có đúng k bản ghi",
             "D": "Mọi cột được mã hóa"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**k-anonymity**: mỗi cá nhân không thể phân biệt với ít nhất **k − 1** cá nhân khác trong bảng."
         },
         {
           "id": "C7_T5_Q5",
@@ -292,7 +315,8 @@
             "C": "Các cột bị mã hóa",
             "D": "Các cột đơn lẻ không nhạy cảm (tuổi, giới tính…) nhưng kết hợp lại có thể giúp re-identification"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Quasi-identifiers** là các cột không nhạy cảm đơn lẻ (tuổi, giới tính…) nhưng kết hợp lại có thể dẫn đến re-identification."
         },
         {
           "id": "C7_T5_Q6",
@@ -303,7 +327,8 @@
             "C": "Mã hóa SHA-256",
             "D": "Xóa hẳn dòng dị biệt"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Generalization**: biến giá trị cụ thể thành khoảng (23 tuổi → 20–30)."
         },
         {
           "id": "C7_T5_Q7",
@@ -314,7 +339,8 @@
             "C": "Hash dữ liệu",
             "D": "Bơm nhiễu"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Suppression**: xóa hẳn dòng của cá nhân quá dị biệt để tránh bị lộ."
         }
       ]
     },
@@ -331,7 +357,8 @@
             "C": "Dữ liệu mở rộng quá nhanh, khó nhận biết dữ liệu sạch nằm ở đâu",
             "D": "Một định dạng bảng"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Data Swamps**: dữ liệu mở rộng quá nhanh, không quản lý được nên khó biết dữ liệu sạch ở đâu."
         },
         {
           "id": "C7_T6_Q2",
@@ -342,7 +369,8 @@
             "C": "Dùng ngôn ngữ tự nhiên để tìm bảng dữ liệu",
             "D": "Chỉ tìm theo từ khóa chính xác"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Semantic Search** cho phép dùng ngôn ngữ tự nhiên để tìm bảng dữ liệu."
         },
         {
           "id": "C7_T6_Q3",
@@ -353,7 +381,8 @@
             "C": "Tốc độ mạng",
             "D": "Số cột"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Trust Score** đánh giá chất lượng bảng dựa trên tần suất sử dụng và lịch sử kiểm định tự động."
         },
         {
           "id": "C7_T6_Q4",
@@ -364,7 +393,8 @@
             "C": "Nhà cung cấp Cloud — lưu log",
             "D": "Governance Layer — thống nhất khái niệm kinh doanh (ví dụ Churn)"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Business Glossary** do **Governance Layer** định nghĩa, thống nhất khái niệm kinh doanh (ví dụ Churn)."
         },
         {
           "id": "C7_T6_Q5",
@@ -375,7 +405,8 @@
             "C": "Kiểu dữ liệu, schema bảng, tần suất cập nhật, chủ sở hữu kỹ thuật",
             "D": "Nội dung báo cáo"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Technical Metadata**: kiểu dữ liệu, schema, tần suất cập nhật (Freshness), chủ sở hữu kỹ thuật."
         }
       ]
     },
@@ -392,7 +423,8 @@
             "C": "Lỗi phần cứng",
             "D": "Định kiến nằm trong dữ liệu lịch sử của con người, AI học và khuếch đại nó"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Bias nằm trong **dữ liệu lịch sử của con người**; AI học và **khuếch đại** nó."
         },
         {
           "id": "C7_T7_Q2",
@@ -403,7 +435,8 @@
             "C": "Thêm Fairness Constraints vào Loss Function",
             "D": "Điều chỉnh ngưỡng quyết định"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Pre-processing**: tác động vào dữ liệu trước khi học (resampling, gán trọng số cân bằng)."
         },
         {
           "id": "C7_T7_Q3",
@@ -414,7 +447,8 @@
             "C": "Điều chỉnh ngưỡng phân loại",
             "D": "Resampling dữ liệu"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**In-processing**: thêm **Fairness Constraints** vào Loss Function khi huấn luyện."
         },
         {
           "id": "C7_T7_Q4",
@@ -425,7 +459,8 @@
             "C": "Resampling dữ liệu",
             "D": "Mã hóa kết quả"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Post-processing**: điều chỉnh **Classification Threshold** riêng cho từng nhóm thiểu số."
         },
         {
           "id": "C7_T7_Q5",
@@ -436,7 +471,8 @@
             "C": "Chỉ con người xem log",
             "D": "Không cần con người"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Human-in-the-loop**: quyết định cuối ảnh hưởng quyền lợi công dân bắt buộc có con người phê duyệt."
         },
         {
           "id": "C7_T7_Q6",
@@ -447,7 +483,8 @@
             "C": "Mô hình ẩn hoàn toàn logic",
             "D": "Chỉ cần độ chính xác cao"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Explainable AI**: mô hình không được là hộp đen, phải giải trình được lý do."
         }
       ]
     },
@@ -464,7 +501,8 @@
             "C": "Kiểm toán thủ công theo quý",
             "D": "Kiểm toán định kỳ hàng năm"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Continuous Auditing**: AI theo dõi tự động toàn bộ hạ tầng **24/7 theo thời gian thực**, khác audit định kỳ của con người."
         },
         {
           "id": "C7_T8_Q2",
@@ -475,7 +513,8 @@
             "C": "Alert → Monitor → Report → Detect",
             "D": "Report → Alert → Detect → Monitor"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Thứ tự: **Monitor → Detect → Alert → Report**."
         },
         {
           "id": "C7_T8_Q3",
@@ -486,7 +525,8 @@
             "C": "Bảng tổng hợp doanh thu",
             "D": "Danh sách bảng"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Data Audit Trail** là sổ cái **bất biến (immutable log)** ghi ai đã tạo, sửa, xóa, xem dữ liệu."
         },
         {
           "id": "C7_T8_Q4",
@@ -497,7 +537,8 @@
             "C": "Mức hao hụt ngân sách quyền riêng tư (Epsilon privacy budget loss) theo thời gian",
             "D": "Tốc độ truy vấn"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Privacy Audit Trail** theo dõi mức hao hụt **Epsilon privacy budget** theo thời gian."
         }
       ]
     }

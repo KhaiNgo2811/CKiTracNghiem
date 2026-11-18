@@ -261,7 +261,8 @@
             "C": "SNMP",
             "D": "SSH"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**HTTP** truyền dữ liệu giữa browser và web site ở dạng **plaintext** (không mã hóa). HTTPS mới mã hóa; SNMP dùng quản lý mạng; SSH dùng truy cập từ xa an toàn."
         },
         {
           "id": "ATTT_C1_T2_Q2",
@@ -284,7 +285,8 @@
             "C": "Password policy",
             "D": "Incident response policy"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Nên bắt đầu bằng **Asset classification policy** vì cần biết tài sản nào quan trọng, thuộc loại nào trước khi xây các policy bảo vệ khác."
         },
         {
           "id": "ATTT_C1_T2_Q4",
@@ -295,7 +297,8 @@
             "C": "IT security director",
             "D": "End user"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**IT security director** (giám đốc an ninh CNTT) thường chịu trách nhiệm bảo đảm Workstation Domain tuân thủ policy."
         },
         {
           "id": "ATTT_C1_T2_Q5",
@@ -318,7 +321,8 @@
             "C": "Access Control List",
             "D": "SNMP"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**ACL** (Access Control List) dùng để cho phép (allow) hoặc từ chối (deny) lưu lượng trong IP router."
         },
         {
           "id": "ATTT_C1_T2_Q7",
@@ -341,7 +345,8 @@
             "C": "Chỉ thay thế khi hỏng",
             "D": "Tắt vào ban đêm"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Mạng, router và thiết bị cần được **monitor và manage liên tục** để dịch vụ WAN luôn sẵn sàng."
         },
         {
           "id": "ATTT_C1_T2_Q9",
@@ -364,7 +369,8 @@
             "C": "SNMP",
             "D": "FTP"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**SNMP** (Simple Network Management Protocol) dùng để giám sát, cảnh báo và đo hiệu năng thiết bị mạng."
         },
         {
           "id": "ATTT_C1_T2_Q11",
@@ -375,7 +381,8 @@
             "C": "Số lượng nhân viên sales",
             "D": "Logo của nhà cung cấp"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Khía cạnh quan trọng nhất của WAN service contract là cách nhà cung cấp xử lý **troubleshooting, network management và security management**."
         },
         {
           "id": "ATTT_C1_T2_Q12",
@@ -386,7 +393,8 @@
             "C": "Một blueprint xác định nơi nên dùng security controls",
             "D": "Một bản backup"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Framework giống một **blueprint** xác định nơi nên đặt các security controls."
         },
         {
           "id": "ATTT_C1_T2_Q13",
@@ -421,7 +429,8 @@
             "C": "Authentication",
             "D": "Accountability"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Authorization** là cấp quyền sử dụng tài sản, hệ thống, ứng dụng và dữ liệu cho một người dùng cụ thể."
         },
         {
           "id": "ATTT_C1_T2_Q16",
@@ -432,7 +441,8 @@
             "C": "LAN Domain",
             "D": "System/Application Domain"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**System/Application Domain** chứa mọi hệ thống, ứng dụng và dữ liệu trọng yếu (mission-critical) của tổ chức."
         },
         {
           "id": "ATTT_C1_T2_Q17",
@@ -455,7 +465,8 @@
             "C": "Thay thế hoàn toàn firewall",
             "D": "Không có tác dụng gì"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Mã hóa dữ liệu trong database và storage tạo **thêm một lớp bảo mật** (defense in depth), không thay thế firewall."
         },
         {
           "id": "ATTT_C1_T2_Q19",
@@ -478,7 +489,8 @@
             "C": "Full, Incremental, Differential, Mirror",
             "D": "Users, Resources, Actions, Relationships"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Data classification standard thường gồm **Private, Confidential, Internal use only, Public domain**."
         }
       ]
     }

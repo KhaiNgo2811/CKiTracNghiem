@@ -261,7 +261,8 @@
             "C": "Audit không bao giờ bắt buộc",
             "D": "Nhiều jurisdictions yêu cầu audit theo quy định của pháp luật"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Nhiều **jurisdictions** yêu cầu audit theo quy định pháp luật, nên audit thường là bắt buộc chứ không chỉ tự nguyện."
         },
         {
           "id": "ATTT_C7_T2_Q2",
@@ -284,7 +285,8 @@
             "C": "Chỉ phòng khám",
             "D": "Tổ chức phải tuân thủ SOX hoặc GLBA"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**SOC 1** tập trung vào internal controls đối với báo cáo tài chính → thường cho tổ chức phải tuân thủ **SOX hoặc GLBA**."
         },
         {
           "id": "ATTT_C7_T2_Q4",
@@ -295,7 +297,8 @@
             "C": "Một loại malware",
             "D": "Bảng giá phần cứng"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Auditing benchmark** là standard dùng để so sánh hệ thống nhằm biết nó được cấu hình an toàn hay chưa."
         },
         {
           "id": "ATTT_C7_T2_Q5",
@@ -306,7 +309,8 @@
             "C": "So sánh current settings của máy hoặc thiết bị với benchmark để xác định các điểm khác biệt",
             "D": "Bỏ qua benchmark"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Auditor **so sánh current settings** với benchmark để xác định các điểm khác biệt."
         },
         {
           "id": "ATTT_C7_T2_Q6",
@@ -317,7 +321,8 @@
             "C": "Bắt đầu audit lại từ đầu",
             "D": "Không làm gì thêm"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "Sau khi audit activities hoàn tất, auditor thực hiện **data analysis** rồi mới viết báo cáo."
         },
         {
           "id": "ATTT_C7_T2_Q7",
@@ -352,7 +357,8 @@
             "C": "Chỉ cá nhân",
             "D": "Chỉ cơ quan nhà nước"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**SOC 2** thường dùng cho **service providers, colocated data centers, managed cloud providers** (tập trung vào security, availability…)."
         },
         {
           "id": "ATTT_C7_T2_Q10",
@@ -363,7 +369,8 @@
             "C": "Thực đơn căng tin",
             "D": "Lịch nghỉ lễ"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Trong giai đoạn lập kế hoạch và thực hiện audit, auditor thường xem xét **kết quả risk analysis** để xác định trọng tâm."
         },
         {
           "id": "ATTT_C7_T2_Q11",
@@ -386,7 +393,8 @@
             "C": "Chỉ patching",
             "D": "Chỉ training"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Security testing gồm **vulnerability testing và penetration testing**."
         },
         {
           "id": "ATTT_C7_T2_Q13",
@@ -397,7 +405,8 @@
             "C": "Chọn màu giao diện",
             "D": "Phân biệt processes trên giấy và cách công việc thực sự được thực hiện"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Observation** giúp phân biệt quy trình trên giấy với **cách công việc thực sự được thực hiện**."
         },
         {
           "id": "ATTT_C7_T2_Q14",
@@ -420,7 +429,8 @@
             "C": "Dùng business rules phân loại thông tin nhạy cảm để ngăn end user chia sẻ trái phép",
             "D": "Patch hệ thống"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**DLP** dùng business rules để phân loại thông tin nhạy cảm và ngăn end user chia sẻ trái phép."
         },
         {
           "id": "ATTT_C7_T2_Q16",
@@ -455,7 +465,8 @@
             "C": "Chỉ ghi log",
             "D": "So sánh hoạt động hiện tại với profile lưu trữ của hoạt động bình thường"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Anomaly-based IDS** so sánh hoạt động hiện tại với profile đã lưu của hoạt động bình thường để phát hiện bất thường."
         },
         {
           "id": "ATTT_C7_T2_Q19",
@@ -466,7 +477,8 @@
             "C": "Viết báo cáo",
             "D": "Vá lỗi hệ thống"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Reconnaissance** (trinh sát): xem xét hệ thống để biết càng nhiều càng tốt về tổ chức, hệ thống và mạng trước khi kiểm thử."
         },
         {
           "id": "ATTT_C7_T2_Q20",
@@ -477,7 +489,8 @@
             "C": "Tìm chuỗi cụ thể xuất hiện trên nhiều packets trong một traffic stream",
             "D": "Encrypt traffic"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Stateful matching** tìm chuỗi cụ thể trải rộng trên **nhiều packet** trong cùng traffic stream, thay vì chỉ từng packet riêng lẻ."
         }
       ]
     }

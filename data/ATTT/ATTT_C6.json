@@ -261,7 +261,8 @@
             "C": "Phát triển năng lực nội bộ",
             "D": "Trình độ chuyên môn cao"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Ưu điểm chính của managed security company là **trình độ chuyên môn cao**; nhược điểm là thiếu kiến thức nội bộ và phải trả phí liên tục."
         },
         {
           "id": "ATTT_C6_T2_Q2",
@@ -296,7 +297,8 @@
             "C": "Job rotation",
             "D": "Mandatory vacation"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Least privilege**: chỉ cấp mức quyền cần thiết để thực hiện nhiệm vụ."
         },
         {
           "id": "ATTT_C6_T2_Q5",
@@ -319,7 +321,8 @@
             "C": "Eavesdropping",
             "D": "System hardening"
           },
-          "correctAnswer": "A"
+          "correctAnswer": "A",
+          "explanation": "**Social engineering** là lừa dối/lợi dụng con người để vượt qua security controls."
         },
         {
           "id": "ATTT_C6_T2_Q7",
@@ -330,7 +333,8 @@
             "C": "Mục tiêu và mục đích của management",
             "D": "Giá phần cứng"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "Written security policies ghi lại **mục tiêu và mục đích** của ban quản lý về an ninh."
         },
         {
           "id": "ATTT_C6_T2_Q8",
@@ -341,7 +345,8 @@
             "C": "Baseline",
             "D": "Functional policy"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "**Functional policy** nêu định hướng về an ninh trong các lĩnh vực chức năng cụ thể như email, remote access, Internet browsing."
         },
         {
           "id": "ATTT_C6_T2_Q9",
@@ -352,7 +357,8 @@
             "C": "Khi chưa có giải pháp nào",
             "D": "Chỉ khi audit"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Standard** được dùng khi tổ chức đã chọn giải pháp cụ thể để đạt mục tiêu của policy."
         },
         {
           "id": "ATTT_C6_T2_Q10",
@@ -387,7 +393,8 @@
             "C": "Do dung lượng lưu trữ khác nhau",
             "D": "Các cách phân loại của công ty không được standardized"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Cách phân loại của từng công ty **không được chuẩn hóa**, nên “private” và “confidential” có thể khác nhau giữa các tổ chức."
         },
         {
           "id": "ATTT_C6_T2_Q13",
@@ -398,7 +405,8 @@
             "C": "Hai khái niệm giống hệt nhau",
             "D": "Hai khái niệm không liên quan"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "**Scope** xác định dữ liệu nào cần phân loại; **process** xác định cách xử lý dữ liệu đã được phân loại."
         },
         {
           "id": "ATTT_C6_T2_Q14",
@@ -433,7 +441,8 @@
             "C": "Management khởi xướng thay đổi để đạt một mục tiêu mong muốn",
             "D": "Không thực hiện thay đổi nào"
           },
-          "correctAnswer": "C"
+          "correctAnswer": "C",
+          "explanation": "**Proactive** change management: ban quản lý chủ động khởi xướng thay đổi để đạt mục tiêu; reactive là thay đổi để đối phó sự cố."
         },
         {
           "id": "ATTT_C6_T2_Q17",
@@ -456,7 +465,8 @@
             "C": "Không cần documentation",
             "D": "Chỉ administrator tự quyết định"
           },
-          "correctAnswer": "B"
+          "correctAnswer": "B",
+          "explanation": "Change control thành công cần **peer review, documentation và back-out plan**."
         },
         {
           "id": "ATTT_C6_T2_Q19",
@@ -467,7 +477,8 @@
             "C": "Không bao quát gì",
             "D": "Các chuyển giao trong suốt data life cycle"
           },
-          "correctAnswer": "D"
+          "correctAnswer": "D",
+          "explanation": "Data management policies nên bao quát các chuyển giao trong **suốt vòng đời (life cycle)** của dữ liệu."
         },
         {
           "id": "ATTT_C6_T2_Q20",
