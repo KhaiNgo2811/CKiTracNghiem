@@ -1,0 +1,4 @@
+# Tài liệu nguồn/lý thuyết (docx, pdf, file khóa Word) chỉ để trên máy, không đưa lên repo công khai
+data/**/*.docx
+data/**/*.pdf
+~$*
