@@ -1,0 +1,504 @@
+{
+ "title": "Thi thử theo cấu trúc đề năm ngoái",
+ "description": "Đề 50 câu, làm trong 60 phút, theo cấu trúc đề năm ngoái (khoảng 35 lý thuyết + 15 bài tập) và bám 40 mục gợi ý của thầy. Câu 1–15: kiến trúc & pipeline; câu 16–35: tiền xử lý & khai phá dữ liệu; câu 36–50: PageRank, CPT, Graph, Blockchain, Vector, AI Act & BI. Mỗi vị trí được rút ngẫu nhiên từ các câu cùng dạng. Không có nút kiểm tra đáp án; hết giờ bài tự nộp.",
+ "durationMin": 60,
+ "slots": [
+  {
+   "no": 1,
+   "type": "theory",
+   "pool": [
+    "HOT_Q1",
+    "CDV8_4",
+    "CDV10_1",
+    "CDV10_3"
+   ]
+  },
+  {
+   "no": 2,
+   "type": "theory",
+   "pool": [
+    "HOT_Q2",
+    "CDV8_5",
+    "CDV10_2",
+    "CDV10_3"
+   ]
+  },
+  {
+   "no": 3,
+   "type": "theory",
+   "pool": [
+    "HOT_Q3",
+    "CDV8_6",
+    "CDV10_6",
+    "CDV10_31"
+   ]
+  },
+  {
+   "no": 4,
+   "type": "theory",
+   "pool": [
+    "HOT_Q4",
+    "CDV8_7",
+    "CDV10_4",
+    "CDV10_5",
+    "CDV10_30"
+   ]
+  },
+  {
+   "no": 5,
+   "type": "theory",
+   "pool": [
+    "HOT_Q5",
+    "CDV8_8",
+    "CDV10_10",
+    "CDV10_9"
+   ]
+  },
+  {
+   "no": 6,
+   "type": "theory",
+   "pool": [
+    "HOT_Q6",
+    "CDV8_9",
+    "CDV10_11"
+   ]
+  },
+  {
+   "no": 7,
+   "type": "theory",
+   "pool": [
+    "HOT_Q7",
+    "CDV8_10",
+    "CDV10_12"
+   ]
+  },
+  {
+   "no": 8,
+   "type": "theory",
+   "pool": [
+    "HOT_Q8",
+    "CDV8_11",
+    "CDV10_14"
+   ]
+  },
+  {
+   "no": 9,
+   "type": "theory",
+   "pool": [
+    "HOT_Q9",
+    "CDV8_13",
+    "CDV10_15",
+    "CDV10_16"
+   ]
+  },
+  {
+   "no": 10,
+   "type": "theory",
+   "pool": [
+    "HOT_Q10",
+    "CDV8_14",
+    "CDV10_17",
+    "CDV8_13"
+   ]
+  },
+  {
+   "no": 11,
+   "type": "theory",
+   "pool": [
+    "HOT_Q11",
+    "CDV8_15",
+    "CDV10_20"
+   ]
+  },
+  {
+   "no": 12,
+   "type": "theory",
+   "pool": [
+    "HOT_Q12",
+    "CDV8_16",
+    "CDV10_25",
+    "CDV10_21",
+    "CDV8_17"
+   ]
+  },
+  {
+   "no": 13,
+   "type": "theory",
+   "pool": [
+    "HOT_Q13",
+    "CDV8_18",
+    "CDV10_27"
+   ]
+  },
+  {
+   "no": 14,
+   "type": "theory",
+   "pool": [
+    "HOT_Q14",
+    "CDV8_19",
+    "CDV10_29",
+    "CDV8_20",
+    "CDV10_28"
+   ]
+  },
+  {
+   "no": 15,
+   "type": "theory",
+   "pool": [
+    "HOT_Q15",
+    "CDV8_21",
+    "CDV10_31",
+    "CDV10_2"
+   ]
+  },
+  {
+   "no": 16,
+   "type": "exercise",
+   "pool": [
+    "HOT_Q16",
+    "CDV1_4",
+    "CDV1_3",
+    "CDV1_2",
+    "CDV1_1"
+   ]
+  },
+  {
+   "no": 17,
+   "type": "exercise",
+   "pool": [
+    "HOT_Q17",
+    "CDV2_2",
+    "CDV2_1",
+    "CDV2_4",
+    "CDV2_5"
+   ]
+  },
+  {
+   "no": 18,
+   "type": "exercise",
+   "pool": [
+    "HOT_Q18",
+    "CDV2_14",
+    "CDV2_16",
+    "CDV2_15",
+    "CDV2_17"
+   ]
+  },
+  {
+   "no": 19,
+   "type": "theory",
+   "pool": [
+    "HOT_Q19",
+    "CDV1_13",
+    "CDV1_10"
+   ]
+  },
+  {
+   "no": 20,
+   "type": "theory",
+   "pool": [
+    "HOT_Q20",
+    "CDV1_14",
+    "CDV1_13"
+   ]
+  },
+  {
+   "no": 21,
+   "type": "theory",
+   "pool": [
+    "HOT_Q21",
+    "CDV2_12",
+    "CDV2_21"
+   ]
+  },
+  {
+   "no": 22,
+   "type": "theory",
+   "pool": [
+    "HOT_Q22",
+    "CDV2_13",
+    "CDV2_9",
+    "CDV2_11",
+    "CDV2_10"
+   ]
+  },
+  {
+   "no": 23,
+   "type": "theory",
+   "pool": [
+    "HOT_Q23",
+    "CDV2_19",
+    "CDV2_21"
+   ]
+  },
+  {
+   "no": 24,
+   "type": "theory",
+   "pool": [
+    "HOT_Q24",
+    "CDV2_20",
+    "CDV11_5"
+   ]
+  },
+  {
+   "no": 25,
+   "type": "theory",
+   "pool": [
+    "HOT_Q25",
+    "CDV2_21",
+    "CDV11_7"
+   ]
+  },
+  {
+   "no": 26,
+   "type": "exercise",
+   "pool": [
+    "HOT_Q26",
+    "CDV3_2",
+    "CDV3_1",
+    "CDV3_3",
+    "CDV3_5"
+   ]
+  },
+  {
+   "no": 27,
+   "type": "exercise",
+   "pool": [
+    "HOT_Q27",
+    "CDV11_16",
+    "CDV4_21"
+   ]
+  },
+  {
+   "no": 28,
+   "type": "exercise",
+   "pool": [
+    "HOT_Q28",
+    "CDV11_12",
+    "CDV4_8",
+    "CDV4_9",
+    "CDV4_1"
+   ]
+  },
+  {
+   "no": 29,
+   "type": "exercise",
+   "pool": [
+    "HOT_Q29",
+    "CDV4_9",
+    "CDV4_1",
+    "CDV11_9",
+    "CDV4_8"
+   ]
+  },
+  {
+   "no": 30,
+   "type": "exercise",
+   "pool": [
+    "HOT_Q30",
+    "CDV11_10",
+    "CDV11_11",
+    "CDV4_9",
+    "CDV4_6"
+   ]
+  },
+  {
+   "no": 31,
+   "type": "exercise",
+   "pool": [
+    "HOT_Q31",
+    "CDV5_8",
+    "CDV5_7"
+   ]
+  },
+  {
+   "no": 32,
+   "type": "exercise",
+   "pool": [
+    "HOT_Q32",
+    "CDV5_6",
+    "CDV5_4",
+    "CDV5_3",
+    "CDV5_1"
+   ]
+  },
+  {
+   "no": 33,
+   "type": "exercise",
+   "pool": [
+    "HOT_Q33",
+    "CDV5_6",
+    "CDV5_1",
+    "CDV5_3",
+    "CDV5_4"
+   ]
+  },
+  {
+   "no": 34,
+   "type": "theory",
+   "pool": [
+    "HOT_Q34",
+    "CDV11_15"
+   ]
+  },
+  {
+   "no": 35,
+   "type": "exercise",
+   "pool": [
+    "C5_T1_Q16",
+    "C5_T1_Q18",
+    "CDV4_10",
+    "CDV11_11"
+   ]
+  },
+  {
+   "no": 36,
+   "type": "exercise",
+   "pool": [
+    "HOT_Q36",
+    "CDV6_2",
+    "CDV6_15",
+    "CDV6_11",
+    "CDV6_3"
+   ]
+  },
+  {
+   "no": 37,
+   "type": "exercise",
+   "pool": [
+    "HOT_Q37",
+    "CDV6_15",
+    "CDV6_11",
+    "CDV6_3",
+    "CDV6_2"
+   ]
+  },
+  {
+   "no": 38,
+   "type": "exercise",
+   "pool": [
+    "HOT_Q38",
+    "CDV7_93",
+    "CDV7_35",
+    "CDV7_23",
+    "CDV7_36"
+   ]
+  },
+  {
+   "no": 39,
+   "type": "theory",
+   "pool": [
+    "HOT_Q39",
+    "CDV7_38",
+    "CDV7_39",
+    "CDV7_83",
+    "CDV7_5"
+   ]
+  },
+  {
+   "no": 40,
+   "type": "theory",
+   "pool": [
+    "HOT_Q40",
+    "CDV9_1",
+    "CDV12_1",
+    "CDV12_8",
+    "CDV9_20"
+   ]
+  },
+  {
+   "no": 41,
+   "type": "theory",
+   "pool": [
+    "HOT_Q41",
+    "CDV9_2",
+    "CDV12_2"
+   ]
+  },
+  {
+   "no": 42,
+   "type": "theory",
+   "pool": [
+    "HOT_Q42",
+    "CDV9_6",
+    "CDV9_8"
+   ]
+  },
+  {
+   "no": 43,
+   "type": "theory",
+   "pool": [
+    "HOT_Q43",
+    "CDV9_21",
+    "CDV9_22",
+    "CDV12_9"
+   ]
+  },
+  {
+   "no": 44,
+   "type": "theory",
+   "pool": [
+    "HOT_Q44",
+    "CDV9_9",
+    "CDV9_2"
+   ]
+  },
+  {
+   "no": 45,
+   "type": "theory",
+   "pool": [
+    "HOT_Q45",
+    "CDV9_12",
+    "CDV9_13"
+   ]
+  },
+  {
+   "no": 46,
+   "type": "theory",
+   "pool": [
+    "HOT_Q46",
+    "CDV9_19",
+    "CDV9_15",
+    "CDV9_18"
+   ]
+  },
+  {
+   "no": 47,
+   "type": "theory",
+   "pool": [
+    "HOT_Q47",
+    "CDV9_20",
+    "CDV12_8"
+   ]
+  },
+  {
+   "no": 48,
+   "type": "theory",
+   "pool": [
+    "HOT_Q48",
+    "CDV6_9",
+    "CDV12_10",
+    "CDV6_8"
+   ]
+  },
+  {
+   "no": 49,
+   "type": "theory",
+   "pool": [
+    "HOT_Q49",
+    "CDV6_8",
+    "CDV6_9"
+   ]
+  },
+  {
+   "no": 50,
+   "type": "theory",
+   "pool": [
+    "HOT_Q50",
+    "CDV6_7",
+    "CDV12_13",
+    "CDV12_12"
+   ]
+  }
+ ]
+}

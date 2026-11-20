@@ -276,11 +276,11 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title"><i class="bi bi-stopwatch-fill text-danger"></i> Thi thử có giờ</h5>
+        <h5 class="modal-title"><i class="bi bi-stopwatch-fill text-danger"></i> <span id="examTitle">Thi thử có giờ</span></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <p class="text-muted small mb-3">Lấy ngẫu nhiên từ toàn bộ câu hỏi của môn (<span id="examPoolCount">...</span> câu). Trong lúc thi <b>không có nút kiểm tra đáp án</b>; hết giờ bài tự nộp.</p>
+        <p class="text-muted small mb-3" id="examDesc"></p>
         <div class="row g-3">
           <div class="col-6">
             <label class="form-label fw-semibold">Số câu</label>

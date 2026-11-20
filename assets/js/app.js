@@ -878,26 +878,85 @@ async function collectPool() {
 }
 
 /** ====== THI THỬ CÓ GIỜ ====== */
+/** Cấu trúc đề thi thử của môn (data/<môn>/exam.json) - nếu môn chưa có thì thi ngẫu nhiên toàn môn */
+let examBlueprint = null;
+async function loadExamBlueprint() {
+  try {
+    const res = await fetch(`data/${encodeURIComponent(currentSubject.folder)}/exam.json`, { cache: 'no-cache' });
+    if (!res.ok) return null;
+    const data = JSON.parse((await res.text()).replace(/^\uFEFF/, ''));
+    return data && Array.isArray(data.slots) && data.slots.length ? data : null;
+  } catch (e) {
+    return null;
+  }
+}
+
 document.getElementById('btnExam').addEventListener('click', async () => {
-  const pool = await collectPool();
-  document.getElementById('examPoolCount').textContent = pool.length;
+  examBlueprint = await loadExamBlueprint();
   const cnt = document.getElementById('examCount');
-  cnt.max = pool.length;
-  if (parseInt(cnt.value, 10) > pool.length) cnt.value = pool.length;
+  const mins = document.getElementById('examMinutes');
+  if (examBlueprint) {
+    document.getElementById('examTitle').textContent = examBlueprint.title || 'Thi thử có giờ';
+    document.getElementById('examDesc').textContent = examBlueprint.description || '';
+    cnt.value = examBlueprint.slots.length;
+    cnt.disabled = true;
+    mins.value = examBlueprint.durationMin || 60;
+  } else {
+    const pool = await collectPool();
+    document.getElementById('examTitle').textContent = 'Thi thử có giờ';
+    document.getElementById('examDesc').textContent =
+      `Rút ngẫu nhiên từ toàn bộ ${pool.length} câu của môn. Không có nút kiểm tra đáp án; hết giờ bài tự nộp.`;
+    cnt.disabled = false;
+    cnt.max = pool.length;
+    if (parseInt(cnt.value, 10) > pool.length || !(parseInt(cnt.value, 10) > 0)) cnt.value = Math.min(40, pool.length);
+  }
   bootstrap.Modal.getOrCreateInstance(document.getElementById('examModal')).show();
 });
 
+/** Dựng đề theo cấu trúc: mỗi vị trí rút ngẫu nhiên 1 câu trong danh sách câu cùng dạng (không trùng câu) */
+async function buildBlueprintExam(blueprint) {
+  const all = await loadAllChapters();
+  const byId = new Map();
+  manifest.chapters.forEach((ch) => {
+    const data = all[ch.chapterId];
+    if (!data) return;
+    data.topics.forEach((topic) => {
+      topic.questions.forEach((q) => {
+        const id = String(q.id);
+        if (!byId.has(id) && q.correctAnswer && Quiz.isValidQuestion(q)) {
+          byId.set(id, { ...q, _topicName: topic.topicName, _chapterId: ch.chapterId, _chapterName: ch.chapterName || data.chapterName });
+        }
+      });
+    });
+  });
+  const used = new Set();
+  const questions = [];
+  blueprint.slots.forEach((slot) => {
+    const candidates = slot.pool.filter((id) => byId.has(String(id)) && !used.has(String(id)));
+    if (candidates.length === 0) return;
+    const pick = String(candidates[Math.floor(Math.random() * candidates.length)]);
+    used.add(pick);
+    questions.push(byId.get(pick));
+  });
+  return questions;
+}
+
 document.getElementById('btnStartExam').addEventListener('click', async () => {
-  const pool = await collectPool();
-  const count = Math.min(Math.max(1, parseInt(document.getElementById('examCount').value, 10) || 40), pool.length);
   const minutes = Math.max(1, parseInt(document.getElementById('examMinutes').value, 10) || 60);
+  let source;
+  let config;
+  if (examBlueprint) {
+    const questions = await buildBlueprintExam(examBlueprint);
+    source = { type: 'exam', chapterId: 'EXAM', chapterName: examBlueprint.title || 'Thi thử có giờ', topicId: null, topicName: null, questions };
+    config = { count: 'all', shuffleQuestions: false, shuffleOptions: true };
+  } else {
+    const pool = await collectPool();
+    const count = Math.min(Math.max(1, parseInt(document.getElementById('examCount').value, 10) || 40), pool.length);
+    source = { type: 'exam', chapterId: 'EXAM', chapterName: 'Thi thử có giờ', topicId: null, topicName: null, questions: pool };
+    config = { count, shuffleQuestions: true, shuffleOptions: true };
+  }
   bootstrap.Modal.getInstance(document.getElementById('examModal')).hide();
-  runQuiz(
-    { type: 'exam', chapterId: 'EXAM', chapterName: 'Thi thử có giờ', topicId: null, topicName: null, questions: pool },
-    { count, shuffleQuestions: true, shuffleOptions: true },
-    'single',
-    { exam: true, timeLimitMin: minutes }
-  );
+  runQuiz(source, config, 'single', { exam: true, timeLimitMin: minutes });
 });
 
 /** ====== ÔN TRỌNG TÂM YẾU ====== */
