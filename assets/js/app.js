@@ -98,7 +98,16 @@ async function openChapter(chapterId) {
   });
 
   document.getElementById('btnStartFullChapter').onclick = () => {
-    const allQuestions = data.topics.flatMap((t) => t.questions.map((q) => ({ ...q, _topicName: t.topicName })));
+    // Một câu có thể xuất hiện ở nhiều chủ đề (chương tổng hợp) -> chỉ lấy mỗi câu một lần
+    const seenIds = new Set();
+    const allQuestions = data.topics
+      .flatMap((t) => t.questions.map((q) => ({ ...q, _topicName: t.topicName })))
+      .filter((q) => {
+        const id = String(q.id);
+        if (seenIds.has(id)) return false;
+        seenIds.add(id);
+        return true;
+      });
     startQuizConfig({
       type: 'chapter',
       chapterId: chapterMeta.chapterId,
