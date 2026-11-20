@@ -269,6 +269,33 @@
   </div>
 </div>
 
+<!-- ============ MODAL: Chatbot giải thích câu hỏi ============ -->
+<div class="modal fade" id="chatModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-chat-dots text-info"></i> Hỏi AI về câu này</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="small text-muted border rounded p-2 mb-3" id="chatQuestionPreview"></div>
+        <div id="chatMessages"></div>
+        <div class="d-flex flex-wrap gap-2 mt-2" id="chatSuggestions">
+          <button type="button" class="btn btn-sm btn-outline-secondary chat-suggest">Giải thích chi tiết hơn</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary chat-suggest">Vì sao các đáp án còn lại sai?</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary chat-suggest">Cho ví dụ dễ hiểu</button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <form class="d-flex w-100 gap-2" id="chatForm">
+          <input type="text" class="form-control" id="chatInput" maxlength="600" placeholder="Bạn chưa hiểu chỗ nào trong câu này?" autocomplete="off">
+          <button type="submit" class="btn btn-info" id="chatSend"><i class="bi bi-send"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ============ MODAL: Luyện câu tương tự ============ -->
 <div class="modal fade" id="similarModal" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
