@@ -59,6 +59,13 @@
       "chapterName": "Câu hỏi tủ (đề năm ngoái)",
       "topicCount": 1,
       "questionCount": 49
+    },
+    {
+      "chapterId": "CD",
+      "chapterName": "Tổng hợp theo câu hỏi chẩn đoán",
+      "topicCount": 40,
+      "questionCount": 467,
+      "excludeFromSummary": true
     }
   ],
   "totalQuestions": 507,
