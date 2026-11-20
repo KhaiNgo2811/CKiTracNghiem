@@ -142,12 +142,17 @@ document.getElementById('btnConfirmConfig').addEventListener('click', () => {
 let quizViewMode = 'single';
 let timerInterval = null;
 
-function runQuiz(source, config, viewMode) {
+function runQuiz(source, config, viewMode, opts = {}) {
   quizViewMode = viewMode;
   const state = Quiz.start(source, config);
   if (!state || !state.questions || state.questions.length === 0) {
     alert('Không có câu hỏi hợp lệ để làm bài trong lựa chọn này.');
     return;
+  }
+
+  if (opts.exam) {
+    state.examMode = true;
+    state.timeLimitMs = Math.max(1, opts.timeLimitMin || 60) * 60 * 1000;
   }
 
   showView('view-quiz');
@@ -161,9 +166,26 @@ function runQuiz(source, config, viewMode) {
 function startTimer() {
   if (timerInterval) clearInterval(timerInterval);
   const el = document.getElementById('quizTimer');
-  timerInterval = setInterval(() => {
-    el.textContent = Quiz.formatTime(Date.now() - Quiz.state.startTime);
-  }, 1000);
+  const tick = () => {
+    const st = Quiz.state;
+    if (!st) return;
+    const elapsed = Date.now() - st.startTime;
+    if (st.timeLimitMs) {
+      const remain = st.timeLimitMs - elapsed;
+      el.textContent = 'Còn ' + Quiz.formatTime(Math.max(0, remain));
+      el.classList.toggle('text-danger', remain <= 5 * 60 * 1000);
+      if (remain <= 0) {
+        clearInterval(timerInterval);
+        document.querySelectorAll('.modal.show').forEach((m) => bootstrap.Modal.getInstance(m)?.hide());
+        renderResult(Quiz.submit({ timedOut: true }));
+      }
+    } else {
+      el.textContent = Quiz.formatTime(elapsed);
+      el.classList.remove('text-danger');
+    }
+  };
+  tick();
+  timerInterval = setInterval(tick, 1000);
 }
 
 function updateProgressBar() {
@@ -243,7 +265,13 @@ function isExerciseQuestion(q) {
   return (hasDigit && calc && !/thường/i.test(text)) || /thứ tự (thăm|duyệt)/i.test(text);
 }
 
+function escAttr(t) {
+  return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
 function renderQuestionCard(q, index) {
+  const exam = !!(Quiz.state && Quiz.state.examMode);
+  const note = Storage.getNote(q.id);
   const selected = Quiz.state.userAnswers[q.id];
   const flagged = Quiz.isFlagged(q.id);
   const checked = !!(Quiz.state.checkedQuestions && Quiz.state.checkedQuestions[String(q.id)]);
@@ -274,8 +302,14 @@ function renderQuestionCard(q, index) {
           </button>
         </div>
         ${optionsHtml}
-        ${q.correctAnswer ? renderCheckArea(q, selected, checked) : ''}
-        ${q.correctAnswer && isExerciseQuestion(q) ? '<div class="mt-2"><button type="button" class="btn btn-sm btn-outline-success btn-similar"><i class="bi bi-stars"></i> Làm câu tương tự</button></div>' : ''}
+        ${q.correctAnswer && !exam ? renderCheckArea(q, selected, checked) : ''}
+        <div class="mt-2 d-flex flex-wrap gap-2">
+          ${q.correctAnswer && !exam && isExerciseQuestion(q) ? '<button type="button" class="btn btn-sm btn-outline-success btn-similar"><i class="bi bi-stars"></i> Làm câu tương tự</button>' : ''}
+          <button type="button" class="btn btn-sm ${note ? 'btn-secondary' : 'btn-outline-secondary'} btn-note"><i class="bi bi-journal-text"></i> ${note ? 'Ghi chú của bạn' : 'Ghi chú'}</button>
+        </div>
+        <div class="note-box mt-2 ${note ? '' : 'd-none'}">
+          <textarea class="form-control form-control-sm note-input" rows="2" maxlength="2000" placeholder="Mẹo nhớ / ghi chú riêng của bạn (tự động lưu)...">${escAttr(note)}</textarea>
+        </div>
       </div>
     </div>`;
 }
@@ -315,6 +349,22 @@ function attachOptionListeners(container, onlyQid) {
         const idx = Quiz.state.questions.indexOf(q);
         card.outerHTML = renderQuestionCard(q, idx);
         attachOptionListeners(document.getElementById('quizBody'), qid);
+      });
+    }
+
+    const noteBtn = card.querySelector('.btn-note');
+    if (noteBtn) {
+      noteBtn.addEventListener('click', () => {
+        const box = card.querySelector('.note-box');
+        box.classList.toggle('d-none');
+        if (!box.classList.contains('d-none')) box.querySelector('textarea').focus();
+      });
+      card.querySelector('.note-input').addEventListener('input', (ev) => {
+        Storage.setNote(qid, ev.target.value);
+        const has = ev.target.value.trim().length > 0;
+        noteBtn.classList.toggle('btn-secondary', has);
+        noteBtn.classList.toggle('btn-outline-secondary', !has);
+        noteBtn.innerHTML = `<i class="bi bi-journal-text"></i> ${has ? 'Ghi chú của bạn' : 'Ghi chú'}`;
       });
     }
 
@@ -476,7 +526,9 @@ function renderResult(attempt) {
   document.getElementById('resultScoreText').textContent =
     `${attempt.correctCount}/${attempt.total} câu đúng (${percent}%)`;
   document.getElementById('resultTimeText').textContent =
-    `Thời gian làm bài: ${Quiz.formatTime(attempt.elapsedMs)}`;
+    `Thời gian làm bài: ${Quiz.formatTime(attempt.elapsedMs)}` +
+    (attempt.timeLimitMs ? ` / ${Quiz.formatTime(attempt.timeLimitMs)}` : '') +
+    (attempt.timedOut ? ' — hết giờ, bài đã tự nộp' : '');
   document.getElementById('resultChapterText').textContent =
     `${attempt.chapterName}${attempt.topicName ? ' — ' + attempt.topicName : ''}`;
 
@@ -490,7 +542,7 @@ function renderResult(attempt) {
       return `
         <tr class="${rowClass}">
           <td>${i + 1}</td>
-          <td>${a.question}${renderQuestionImages(a.images)}${a.explanation ? `<div class="small text-muted mt-2"><b><i class="bi bi-lightbulb-fill"></i> Giải thích:</b> ${fmtExplain(a.explanation)}</div>` : ''}</td>
+          <td>${a.question}${renderQuestionImages(a.images)}${a.explanation ? `<div class="small text-muted mt-2"><b><i class="bi bi-lightbulb-fill"></i> Giải thích:</b> ${fmtExplain(a.explanation)}</div>` : ''}${Storage.getNote(a.questionId) ? `<div class="small mt-2"><b><i class="bi bi-journal-text"></i> Ghi chú của bạn:</b> ${escAttr(Storage.getNote(a.questionId))}</div>` : ''}</td>
           <td>${selectedText}${flagText}</td>
           <td>${correctText}</td>
           <td class="text-center">${a.isCorrect ? '<i class="bi bi-check-circle-fill text-success fs-5"></i>' : '<i class="bi bi-x-circle-fill text-danger fs-5"></i>'}</td>
@@ -499,7 +551,7 @@ function renderResult(attempt) {
     .join('');
 
   document.getElementById('btnRetryChapter').onclick = () =>
-    (attempt.chapterId === 'FLAGGED' || attempt.chapterId === 'WRONG')
+    ['FLAGGED', 'WRONG', 'WEAK', 'EXAM'].includes(attempt.chapterId)
       ? renderHome()
       : openChapter(attempt.chapterId);
   document.getElementById('btnBackHomeFromResult').onclick = renderHome;
@@ -520,7 +572,7 @@ document.getElementById('btnPracticeWrong').addEventListener('click', async () =
       if (!chapter) return null;
       for (const topic of chapter.topics) {
         const found = topic.questions.find((q) => q.id === w.questionId);
-        if (found) return { ...found, _topicName: topic.topicName };
+        if (found) return { ...found, _topicName: topic.topicName, _chapterId: w.chapterId, _chapterName: chapter.chapterName };
       }
       return null;
     })
@@ -553,7 +605,7 @@ document.getElementById('btnPracticeFlagged').addEventListener('click', async ()
         const key = String(q.id);
         if (ids.has(key) && !seen.has(key)) {
           seen.add(key);
-          questions.push({ ...q, _topicName: topic.topicName });
+          questions.push({ ...q, _topicName: topic.topicName, _chapterId: chapter.chapterId, _chapterName: chapter.chapterName });
         }
       }
     }
@@ -793,4 +845,93 @@ function renderSimilarQuestion() {
 document.getElementById('btnSimilarNext').addEventListener('click', () => {
   similarState.idx += 1;
   renderSimilarQuestion();
+});
+
+
+/** ====== POOL CÂU HỎI TOÀN MÔN (không tính chương tổng hợp trùng lặp) ====== */
+async function collectPool() {
+  const all = await loadAllChapters();
+  const pool = [];
+  const seen = new Set();
+  manifest.chapters.filter((ch) => !ch.excludeFromSummary).forEach((ch) => {
+    const data = all[ch.chapterId];
+    if (!data) return;
+    data.topics.forEach((topic) => {
+      topic.questions.forEach((q) => {
+        const id = String(q.id);
+        if (seen.has(id) || !q.correctAnswer || !Quiz.isValidQuestion(q)) return;
+        seen.add(id);
+        pool.push({ ...q, _topicName: topic.topicName, _chapterId: ch.chapterId, _chapterName: ch.chapterName || data.chapterName });
+      });
+    });
+  });
+  return pool;
+}
+
+/** ====== THI THỬ CÓ GIỜ ====== */
+document.getElementById('btnExam').addEventListener('click', async () => {
+  const pool = await collectPool();
+  document.getElementById('examPoolCount').textContent = pool.length;
+  const cnt = document.getElementById('examCount');
+  cnt.max = pool.length;
+  if (parseInt(cnt.value, 10) > pool.length) cnt.value = pool.length;
+  bootstrap.Modal.getOrCreateInstance(document.getElementById('examModal')).show();
+});
+
+document.getElementById('btnStartExam').addEventListener('click', async () => {
+  const pool = await collectPool();
+  const count = Math.min(Math.max(1, parseInt(document.getElementById('examCount').value, 10) || 40), pool.length);
+  const minutes = Math.max(1, parseInt(document.getElementById('examMinutes').value, 10) || 60);
+  bootstrap.Modal.getInstance(document.getElementById('examModal')).hide();
+  runQuiz(
+    { type: 'exam', chapterId: 'EXAM', chapterName: 'Thi thử có giờ', topicId: null, topicName: null, questions: pool },
+    { count, shuffleQuestions: true, shuffleOptions: true },
+    'single',
+    { exam: true, timeLimitMin: minutes }
+  );
+});
+
+/** ====== ÔN TRỌNG TÂM YẾU ====== */
+document.getElementById('btnWeak').addEventListener('click', async () => {
+  const history = Storage.getHistory();
+  if (history.length === 0) {
+    alert('Chưa có dữ liệu để xác định phần yếu. Hãy làm vài bài trước, rồi quay lại nhé!');
+    return;
+  }
+  const pool = await collectPool();
+  const wrongStats = Storage.getWrongStats();
+
+  // Tỉ lệ đúng theo từng chủ đề (chương + chủ đề) từ lịch sử
+  const topicStat = {};
+  const everCorrect = new Set();
+  history.forEach((h) => {
+    h.answers.forEach((a) => {
+      const key = `${a.chapterId || h.chapterId}|${a.topicName || ''}`;
+      const t = (topicStat[key] = topicStat[key] || { right: 0, total: 0 });
+      t.total += 1;
+      if (a.isCorrect) { t.right += 1; everCorrect.add(String(a.questionId)); }
+    });
+  });
+
+  // Trọng số: câu hay sai + chủ đề có tỉ lệ đúng thấp được ưu tiên; câu đã làm đúng và chưa từng sai ít khi xuất hiện
+  const scored = pool.map((q) => {
+    const ts = topicStat[`${q._chapterId}|${q._topicName}`];
+    const acc = ts && ts.total >= 2 ? ts.right / ts.total : null;
+    const ws = wrongStats[q.id];
+    let w = 1;
+    if (acc !== null) w += (1 - acc) * 6;
+    if (ws) w += 2 + ws.wrongCount * 3;
+    else if (everCorrect.has(String(q.id))) w = Math.min(w, 0.3);
+    return { q, key: Math.pow(Math.random(), 1 / w) };
+  });
+  const picked = scored.sort((a, b) => b.key - a.key).slice(0, 20).map((x) => x.q);
+
+  startQuizConfig({
+    type: 'weak',
+    chapterId: 'WEAK',
+    chapterName: 'Ôn trọng tâm yếu',
+    topicId: null,
+    topicName: null,
+    questions: picked
+  });
 });

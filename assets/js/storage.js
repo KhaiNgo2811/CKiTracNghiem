@@ -7,7 +7,8 @@ const BASE_KEYS = {
   HISTORY: 'dbms_quiz_history',       // Lịch sử tất cả các lần làm bài
   WRONG_STATS: 'dbms_quiz_wrong_stats', // Thống kê số lần sai theo từng câu hỏi
   BEST_SCORES: 'dbms_quiz_best_scores', // Điểm cao nhất từng chương/chủ đề
-  FLAGGED: 'dbms_quiz_flagged'          // Các câu đã gắn cờ: { questionId: chapterId }
+  FLAGGED: 'dbms_quiz_flagged',         // Các câu đã gắn cờ: { questionId: chapterId }
+  NOTES: 'dbms_quiz_notes'              // Ghi chú riêng: { questionId: text }
 };
 
 // Môn mặc định (DBMS) giữ nguyên key cũ để không mất tiến độ; môn khác thêm hậu tố
@@ -22,7 +23,8 @@ const STORAGE_KEYS = {
   get HISTORY() { return keyFor(BASE_KEYS.HISTORY); },
   get WRONG_STATS() { return keyFor(BASE_KEYS.WRONG_STATS); },
   get BEST_SCORES() { return keyFor(BASE_KEYS.BEST_SCORES); },
-  get FLAGGED() { return keyFor(BASE_KEYS.FLAGGED); }
+  get FLAGGED() { return keyFor(BASE_KEYS.FLAGGED); },
+  get NOTES() { return keyFor(BASE_KEYS.NOTES); }
 };
 
 const Storage = {
@@ -82,8 +84,8 @@ const Storage = {
             images: ans.images || [],
             options: ans.options,
             correctAnswer: ans.correctAnswer,
-            chapterId: attempt.chapterId,
-            chapterName: attempt.chapterName,
+            chapterId: ans.chapterId || attempt.chapterId,
+            chapterName: ans.chapterName || attempt.chapterName,
             topicName: ans.topicName || '',
             wrongCount: 0,
             lastSelected: null
@@ -139,6 +141,23 @@ const Storage = {
     this._set(STORAGE_KEYS.FLAGGED, f);
   },
 
+  /** Ghi chú riêng cho từng câu: { questionId: text } */
+  getNotes() {
+    return this._get(STORAGE_KEYS.NOTES, {});
+  },
+
+  getNote(questionId) {
+    return this.getNotes()[String(questionId)] || '';
+  },
+
+  setNote(questionId, text) {
+    const n = this.getNotes();
+    const t = String(text || '').trim();
+    if (t) n[String(questionId)] = String(text).slice(0, 2000);
+    else delete n[String(questionId)];
+    this._set(STORAGE_KEYS.NOTES, n);
+  },
+
   getBestScoreForChapter(chapterId) {
     const scores = this.getBestScores();
     return scores[chapterId] || null;
@@ -161,6 +180,7 @@ const Storage = {
       localStorage.removeItem(STORAGE_KEYS.WRONG_STATS);
       localStorage.removeItem(STORAGE_KEYS.BEST_SCORES);
       localStorage.removeItem(STORAGE_KEYS.FLAGGED);
+      localStorage.removeItem(STORAGE_KEYS.NOTES);
       return true;
     } catch (err) {
       console.error('Lỗi reset dữ liệu:', err);
@@ -175,7 +195,8 @@ const Storage = {
       history: this.getHistory(),
       wrongStats: this.getWrongStats(),
       bestScores: this.getBestScores(),
-      flagged: this.getFlagged()
+      flagged: this.getFlagged(),
+      notes: this.getNotes()
     };
   },
 
@@ -186,6 +207,7 @@ const Storage = {
       if (data.wrongStats) this._set(STORAGE_KEYS.WRONG_STATS, data.wrongStats);
       if (data.bestScores) this._set(STORAGE_KEYS.BEST_SCORES, data.bestScores);
       if (data.flagged) this._set(STORAGE_KEYS.FLAGGED, data.flagged);
+      if (data.notes) this._set(STORAGE_KEYS.NOTES, data.notes);
       return true;
     } catch (err) {
       console.error('Lỗi import dữ liệu:', err);

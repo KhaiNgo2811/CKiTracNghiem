@@ -139,7 +139,7 @@ const Quiz = {
   },
 
   /** Chấm điểm và lưu kết quả vào localStorage, trả về object attempt đầy đủ */
-  submit() {
+  submit(extra) {
     if (!this.state) return null;
     const elapsedMs = Date.now() - this.state.startTime;
     let correctCount = 0;
@@ -167,7 +167,9 @@ const Quiz = {
         selectedAnswer: selected,
         flagged: this.isFlagged(q.id),
         isCorrect,
-        topicName: q._topicName
+        topicName: q._topicName,
+        chapterId: q._chapterId || null,
+        chapterName: q._chapterName || null
       };
     });
 
@@ -185,6 +187,9 @@ const Quiz = {
       correctCount,
       answers
     };
+    if (this.state.examMode) attempt.isExam = true;
+    if (this.state.timeLimitMs) attempt.timeLimitMs = this.state.timeLimitMs;
+    if (extra && extra.timedOut) attempt.timedOut = true;
 
     return Storage.saveAttempt(attempt);
   },

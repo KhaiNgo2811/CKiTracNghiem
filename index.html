@@ -46,6 +46,8 @@
       <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
         <h5 class="mb-0"><i class="bi bi-bar-chart-line-fill text-primary"></i> Tổng hợp tất cả chương</h5>
         <div class="d-flex gap-2 flex-wrap">
+          <button class="btn btn-danger btn-sm" id="btnExam"><i class="bi bi-stopwatch-fill"></i> Thi thử có giờ</button>
+          <button class="btn btn-primary btn-sm" id="btnWeak"><i class="bi bi-crosshair"></i> Ôn trọng tâm yếu</button>
           <button class="btn btn-warning btn-sm" id="btnPracticeFlagged"><i class="bi bi-flag-fill"></i> Làm lại câu đã gắn cờ <span class="badge bg-dark" id="flaggedTotalBadge">0</span></button>
           <button class="btn btn-success btn-sm" id="btnPracticeWrong"><i class="bi bi-bullseye"></i> Luyện tập riêng các câu hay sai</button>
         </div>
@@ -265,6 +267,35 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body" id="wrongDetailModalBody"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL: Thi thử có giờ ============ -->
+<div class="modal fade" id="examModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-stopwatch-fill text-danger"></i> Thi thử có giờ</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted small mb-3">Lấy ngẫu nhiên từ toàn bộ câu hỏi của môn (<span id="examPoolCount">...</span> câu). Trong lúc thi <b>không có nút kiểm tra đáp án</b>; hết giờ bài tự nộp.</p>
+        <div class="row g-3">
+          <div class="col-6">
+            <label class="form-label fw-semibold">Số câu</label>
+            <input type="number" class="form-control" id="examCount" min="1" value="40">
+          </div>
+          <div class="col-6">
+            <label class="form-label fw-semibold">Thời gian (phút)</label>
+            <input type="number" class="form-control" id="examMinutes" min="1" value="60">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Huỷ</button>
+        <button class="btn btn-danger" id="btnStartExam"><i class="bi bi-play-fill"></i> Bắt đầu thi</button>
+      </div>
     </div>
   </div>
 </div>
