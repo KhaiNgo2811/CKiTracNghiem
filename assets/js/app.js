@@ -267,6 +267,7 @@ function renderQuestionCard(q, index) {
         </div>
         ${optionsHtml}
         ${q.correctAnswer ? renderCheckArea(q, selected, checked) : ''}
+        ${q.correctAnswer ? '<div class="mt-2"><button type="button" class="btn btn-sm btn-outline-success btn-similar"><i class="bi bi-stars"></i> Làm câu tương tự</button></div>' : ''}
       </div>
     </div>`;
 }
@@ -307,6 +308,11 @@ function attachOptionListeners(container, onlyQid) {
         card.outerHTML = renderQuestionCard(q, idx);
         attachOptionListeners(document.getElementById('quizBody'), qid);
       });
+    }
+
+    const similarBtn = card.querySelector('.btn-similar');
+    if (similarBtn) {
+      similarBtn.addEventListener('click', () => openSimilarPractice(qid));
     }
 
     const flagButton = card.querySelector('.btn-flag-question');
@@ -651,4 +657,132 @@ document.addEventListener('click', (e) => {
   if (!img) return;
   document.getElementById('imageZoomTarget').src = img.dataset.zoom || img.src;
   new bootstrap.Modal(document.getElementById('imageZoomModal')).show();
+});
+
+/** ====== LÀM CÂU TƯƠNG TỰ (luyện thêm khi đang làm bài) ====== */
+const SIM_STOP = new Set(['la', 'va', 'cua', 'cho', 'cac', 'mot', 'nhung', 'nao', 'gi', 'khi', 'nay', 'the', 'co', 'duoc', 'trong', 'voi', 'de',
+  'khong', 'bao', 'nhieu', 'sau', 'day', 'dung', 'sai', 'thi', 'tu', 'den', 'ra', 'vao', 'is', 'of', 'an', 'to', 'in', 'and', 'or']);
+function simTokens(text) {
+  const t = String(text || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd');
+  return new Set((t.match(/[a-z0-9_]{2,}/g) || []).filter((w) => !SIM_STOP.has(w)));
+}
+function simKey(q) {
+  return String(q.question || '').toLowerCase().replace(/\s+/g, ' ').trim();
+}
+function simText(q) {
+  return `${q.question} ${q.options ? q.options[q.correctAnswer] || '' : ''} ${q.explanation || ''}`;
+}
+
+async function findSimilarQuestions(base, limit = 8) {
+  const all = await loadAllChapters();
+  const baseTokens = simTokens(simText(base));
+  const seenKeys = new Set([simKey(base)]);
+  const seenIds = new Set([String(base.id)]);
+  const scored = [];
+  Object.values(all).forEach((chapter) => {
+    chapter.topics.forEach((topic) => {
+      topic.questions.forEach((q) => {
+        if (!q.correctAnswer || !Quiz.isValidQuestion(q)) return;
+        const id = String(q.id);
+        const key = simKey(q);
+        if (seenIds.has(id) || seenKeys.has(key)) return;
+        seenIds.add(id);
+        seenKeys.add(key);
+        const tokens = simTokens(simText(q));
+        let inter = 0;
+        baseTokens.forEach((w) => { if (tokens.has(w)) inter += 1; });
+        const union = baseTokens.size + tokens.size - inter;
+        let score = union > 0 ? inter / union : 0;
+        if (base._topicName && topic.topicName === base._topicName) score += 0.15;
+        scored.push({ q: { ...q, _topicName: topic.topicName }, score });
+      });
+    });
+  });
+  return scored.filter((s) => s.score >= 0.08).sort((a, b) => b.score - a.score).slice(0, limit).map((s) => s.q);
+}
+
+const similarState = { list: [], idx: 0, correct: 0, answered: false };
+
+async function openSimilarPractice(qid) {
+  const base = Quiz.state && Quiz.state.questions.find((x) => String(x.id) === String(qid));
+  if (!base) return;
+  const body = document.getElementById('similarModalBody');
+  body.innerHTML = '<div class="text-center text-muted py-4"><div class="spinner-border spinner-border-sm"></div> Đang tìm câu tương tự...</div>';
+  document.getElementById('btnSimilarNext').classList.add('d-none');
+  document.getElementById('similarCounter').textContent = '';
+  bootstrap.Modal.getOrCreateInstance(document.getElementById('similarModal')).show();
+  try {
+    similarState.list = await findSimilarQuestions(base);
+  } catch (e) {
+    similarState.list = [];
+  }
+  similarState.idx = 0;
+  similarState.correct = 0;
+  renderSimilarQuestion();
+}
+
+function renderSimilarQuestion() {
+  const body = document.getElementById('similarModalBody');
+  const nextBtn = document.getElementById('btnSimilarNext');
+  const { list, idx } = similarState;
+  similarState.answered = false;
+
+  if (list.length === 0) {
+    body.innerHTML = '<div class="alert alert-info mb-0">Chưa tìm thấy câu tương tự cho câu này.</div>';
+    nextBtn.classList.add('d-none');
+    return;
+  }
+  if (idx >= list.length) {
+    body.innerHTML = `<div class="text-center py-4">
+      <h4 class="text-primary">${similarState.correct}/${list.length} câu đúng</h4>
+      <p class="text-muted">Bạn đã luyện xong các câu tương tự.</p>
+      <button type="button" class="btn btn-outline-success me-2" id="btnSimilarRedo"><i class="bi bi-arrow-repeat"></i> Làm lại</button>
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+    </div>`;
+    document.getElementById('similarCounter').textContent = `${list.length}/${list.length}`;
+    nextBtn.classList.add('d-none');
+    document.getElementById('btnSimilarRedo').onclick = () => {
+      similarState.idx = 0;
+      similarState.correct = 0;
+      renderSimilarQuestion();
+    };
+    return;
+  }
+
+  const q = list[idx];
+  document.getElementById('similarCounter').textContent = `${idx + 1}/${list.length}`;
+  nextBtn.classList.add('d-none');
+  nextBtn.innerHTML = idx === list.length - 1 ? 'Xem kết quả <i class="bi bi-flag-fill"></i>' : 'Câu tiếp <i class="bi bi-arrow-right"></i>';
+  body.innerHTML = `
+    <p class="fw-semibold">${q.question}</p>
+    ${renderQuestionImages(q.images)}
+    <div id="similarOptions">
+      ${Object.entries(q.options).map(([k, v]) => `
+        <div class="option-item sim-option" data-key="${k}" role="button" style="cursor:pointer"><label class="form-check-label" style="cursor:pointer">${k}. ${v}</label></div>`).join('')}
+    </div>
+    <div id="similarFeedback" class="mt-2"></div>`;
+
+  body.querySelectorAll('.sim-option').forEach((el) => {
+    el.addEventListener('click', () => {
+      if (similarState.answered) return;
+      similarState.answered = true;
+      const chosen = el.dataset.key;
+      const ok = chosen === q.correctAnswer;
+      if (ok) similarState.correct += 1;
+      body.querySelectorAll('.sim-option').forEach((o) => {
+        if (o.dataset.key === q.correctAnswer) o.classList.add('opt-correct');
+        else if (o.dataset.key === chosen) o.classList.add('opt-wrong');
+      });
+      document.getElementById('similarFeedback').innerHTML = `<div class="alert ${ok ? 'alert-success' : 'alert-danger'} py-2 mb-0">
+        ${ok ? '<i class="bi bi-check-circle-fill"></i> Chính xác!' : `<i class="bi bi-x-circle-fill"></i> Sai rồi. Đáp án đúng: <b>${q.correctAnswer}. ${q.options[q.correctAnswer]}</b>`}
+        ${q.explanation ? `<div class="small mt-2 pt-2 border-top"><b><i class="bi bi-lightbulb-fill"></i> Giải thích:</b> ${fmtExplain(q.explanation)}</div>` : ''}
+      </div>`;
+      nextBtn.classList.remove('d-none');
+    });
+  });
+}
+
+document.getElementById('btnSimilarNext').addEventListener('click', () => {
+  similarState.idx += 1;
+  renderSimilarQuestion();
 });
