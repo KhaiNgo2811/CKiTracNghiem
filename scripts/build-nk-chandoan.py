@@ -146,13 +146,25 @@ import re as _re
 sys.path.insert(0, 'scripts')
 import zlib as _z
 import nk_variants as _nv
+IMG_BY_PREFIX = [
+    ('Đồ thị liên kết 2:', ['assets/img/pagerank_graph2.png', 'assets/img/eq_pagerank.png']),
+    ('Đồ thị liên kết 3:', ['assets/img/pagerank_graph3.png', 'assets/img/eq_pagerank.png']),
+    ('Đồ thị liên kết:', ['assets/img/pagerank_graph.png', 'assets/img/eq_pagerank.png']),
+    ('Tập huấn luyện: s1 = ⟨A,B,C⟩', ['assets/img/cpt_plus_fsc.png']),
+    ('Tập huấn luyện: s1 = ⟨A,B,C,D,F⟩', ['assets/img/cpt_tree.png']),
+]
 for _i, (_name, _items) in enumerate(_nv.T, 1):
     _qs = []
     for _k, (_q, _c, _w, _e) in enumerate(_items, 1):
         _id = f'CDV{_i}_{_k}'
         _pos = _z.crc32(_id.encode()) % 4
         _o = list(_w); _o.insert(_pos, _c)
-        _qs.append({'id': _id, 'question': _q, 'options': {'ABCD'[j]: _o[j] for j in range(4)}, 'correctAnswer': 'ABCD'[_pos], 'explanation': _e})
+        _d = {'id': _id, 'question': _q, 'options': {'ABCD'[j]: _o[j] for j in range(4)}, 'correctAnswer': 'ABCD'[_pos], 'explanation': _e}
+        for _pre, _imgs in IMG_BY_PREFIX:
+            if _q.startswith(_pre):
+                _d['images'] = _imgs
+                break
+        _qs.append(_d)
     topics.append({'topicId': f'CD_V{_i}', 'topicName': _name, 'questions': _qs})
     total += len(_qs)
 for n, t in enumerate(topics, 1):

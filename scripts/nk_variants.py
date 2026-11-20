@@ -326,6 +326,69 @@ it.append(('Thuật toán PageRank dừng lặp khi độ chênh lệch PR giữ
            ['0,85', '0,15', '0,5'], 'ε thường = 0,0001.'))
 it.append(('Một trang không có liên kết nào trỏ đến nó (in-degree = 0) thì PageRank sau vòng lặp đầu (d = 0,85) bằng:', '0,15',
            ['0', '0,85', '1'], 'PR = (1 − d) + d×0 = **0,15**.'))
+
+# ---- Bổ sung: các đồ thị PageRank mới (có hình minh họa) ----
+def prx(edges, d=0.85, iters=1):
+    nodes = sorted({n for e in edges.items() for n in ([e[0]] + e[1])})
+    r = {p: 1.0 for p in nodes}
+    for _ in range(iters):
+        r = {p: (1 - d) + d * sum(r[q] / len(edges[q]) for q in edges if p in edges[q]) for p in nodes}
+    return r
+
+
+def edges_txt(edges):
+    return '; '.join(f'{a}→' + ', '.join(f'{a}→{b}' if False else str(b) for b in bs) for a, bs in sorted(edges.items()))
+
+
+def dtxt(d):
+    return str(d).replace('.', ',')
+
+
+def pr_item(prefix, edges, d, page, iters):
+    r = prx(edges, d, iters)
+    val = r[page]
+    c, w = nums(val, 4, extra=[1 - d, 1.0, val + d, val * d])
+
+    def tz(x):
+        x = x.rstrip('0')
+        return x + '0' if x.endswith(',') else x
+    c, w = tz(c), [tz(x) for x in w]
+    inl = [q for q in sorted(edges) if page in edges[q]]
+    it_txt = 'đầu tiên' if iters == 1 else f'thứ {iters}'
+    if iters == 1:
+        if inl:
+            expr = ' + '.join(f'1/{len(edges[q])}' for q in inl)
+            ex = f'Page {page} nhận từ ' + ', '.join(f'Page {q}' for q in inl) + f' → PR = {dtxt(round(1 - d, 2))} + {dtxt(d)}×({expr}) = **{c}**.'
+        else:
+            ex = f'Page {page} không có liên kết đến → PR = 1 − d = **{c}**.'
+    else:
+        ex = f'Tính lặp {iters} vòng theo PR(p) = (1 − d) + d·Σ PR(q)/C(q) → PR(Page {page}) = **{c}**.'
+    it.append((f'{prefix} Giá trị PageRank của Page {page} ở vòng lặp {it_txt} là bao nhiêu?', c, w, ex))
+
+
+G2 = {1: [2, 3], 2: [3], 3: [1], 4: [3]}
+G3 = {1: [2, 3], 2: [3], 3: [1]}
+P2 = 'Đồ thị liên kết 2: 1→2, 1→3; 2→3; 3→1; 4→3. PageRank khởi tạo bằng 1, d = 0,85.'
+P3 = 'Đồ thị liên kết 3: 1→2, 1→3; 2→3; 3→1. PageRank khởi tạo bằng 1, d = 0,85.'
+P3b = 'Đồ thị liên kết 3: 1→2, 1→3; 2→3; 3→1. PageRank khởi tạo bằng 1, d = 0,5.'
+for pg in (1, 2, 3, 4):
+    pr_item(P2, G2, 0.85, pg, 1)
+for pg in (1, 2, 3):
+    pr_item(P3, G3, 0.85, pg, 1)
+pr_item(P3b, G3, 0.5, 3, 1)
+pr_item(P3b, G3, 0.5, 2, 1)
+it.append((P2 + ' Sau vòng lặp đầu tiên, trang nào có PageRank CAO NHẤT?', 'Page 3 (≈ 2,275)', ['Page 1 (≈ 1,000)', 'Page 2 (≈ 0,575)', 'Page 4 (≈ 0,150)'],
+           'Page 3 nhận từ 3 trang (1, 2, 4): PR = 0,15 + 0,85×(1/2 + 1/1 + 1/1) = 2,275.'))
+it.append((P2 + ' Vì sao Page 4 luôn có PageRank thấp nhất (0,15) ở mọi vòng lặp?', 'Không có trang nào liên kết đến Page 4 nên chỉ nhận phần (1 − d) = 0,15',
+           ['Vì Page 4 có nhiều liên kết đi ra nhất', 'Vì Page 4 nằm ở cuối đồ thị', 'Vì d = 0,85 làm PageRank của mọi trang giảm đi'],
+           'Page 4 không có in-link → PR = (1 − d) + d×0 = **0,15** mãi mãi.'))
+it.append((P2 + ' Tổng PageRank của 4 trang sau vòng lặp đầu tiên bằng bao nhiêu?', '4', ['1', '3,4', '2,275'],
+           '1 + 0,575 + 2,275 + 0,15 = **4** (bằng số trang N khi khởi tạo mỗi trang = 1).'))
+it.append((P2 + ' Số liên kết đi ra của Page 1, ký hiệu C(1), bằng bao nhiêu?', '2', ['1', '3', '0'],
+           'Page 1 liên kết đến Page 2 và Page 3 → **C(1) = 2**.'))
+it.append((P3 + ' Page 3 nhận liên kết từ những trang nào?', 'Page 1 và Page 2', ['Chỉ Page 1', 'Chỉ Page 2', 'Page 2 và Page 3'],
+           'Cạnh 1→3 và 2→3 → Page 3 có 2 in-link (từ 1 và 2).'))
+
 T.append(('Biến thể: PageRank (câu 36, 37, 48–50)', it))
 
 # ---------- 7. CPT / CPT+ ----------

@@ -7069,7 +7069,11 @@
             "D": "1,4250"
           },
           "correctAnswer": "B",
-          "explanation": "Page 3 nhận từ Page 4 → PR = 0,15 + 0,85×(1/2) = **0,5750**."
+          "explanation": "Page 3 nhận từ Page 4 → PR = 0,15 + 0,85×(1/2) = **0,5750**.",
+          "images": [
+            "assets/img/pagerank_graph.png",
+            "assets/img/eq_pagerank.png"
+          ]
         },
         {
           "id": "CDV6_2",
@@ -7081,7 +7085,11 @@
             "D": "1,2125"
           },
           "correctAnswer": "D",
-          "explanation": "Page 4 nhận từ Page 3, Page 5 → PR = 0,15 + 0,85×(1/4 + 1/1) = **1,2125**."
+          "explanation": "Page 4 nhận từ Page 3, Page 5 → PR = 0,15 + 0,85×(1/4 + 1/1) = **1,2125**.",
+          "images": [
+            "assets/img/pagerank_graph.png",
+            "assets/img/eq_pagerank.png"
+          ]
         },
         {
           "id": "CDV6_3",
@@ -7093,7 +7101,11 @@
             "D": "2,4875"
           },
           "correctAnswer": "B",
-          "explanation": "Page 5 nhận từ Page 2, Page 3, Page 4 → PR = 0,15 + 0,85×(1/1 + 1/4 + 1/2) = **1,6375**."
+          "explanation": "Page 5 nhận từ Page 2, Page 3, Page 4 → PR = 0,15 + 0,85×(1/1 + 1/4 + 1/2) = **1,6375**.",
+          "images": [
+            "assets/img/pagerank_graph.png",
+            "assets/img/eq_pagerank.png"
+          ]
         },
         {
           "id": "CDV6_4",
@@ -7105,7 +7117,11 @@
             "D": "1,250"
           },
           "correctAnswer": "C",
-          "explanation": "PR(2) = (1 − 0,5) + 0,5×(1/1 + 1/4) = 0,5 + 0,625 = **1,125**."
+          "explanation": "PR(2) = (1 − 0,5) + 0,5×(1/1 + 1/4) = 0,5 + 0,625 = **1,125**.",
+          "images": [
+            "assets/img/pagerank_graph.png",
+            "assets/img/eq_pagerank.png"
+          ]
         },
         {
           "id": "CDV6_5",
@@ -7117,7 +7133,11 @@
             "D": "Page 1 (≈ 0,3625)"
           },
           "correctAnswer": "A",
-          "explanation": "PR(5) = 0,15 + 0,85×(1 + 1/4 + 1/2) = 1,6375 là lớn nhất (Page 5 nhận từ 3 trang)."
+          "explanation": "PR(5) = 0,15 + 0,85×(1 + 1/4 + 1/2) = 1,6375 là lớn nhất (Page 5 nhận từ 3 trang).",
+          "images": [
+            "assets/img/pagerank_graph.png",
+            "assets/img/eq_pagerank.png"
+          ]
         },
         {
           "id": "CDV6_6",
@@ -7129,7 +7149,11 @@
             "D": "4,25"
           },
           "correctAnswer": "C",
-          "explanation": "Tổng PR bảo toàn bằng số trang (N = 5): 0,3625 + 1,2125 + 0,575 + 1,2125 + 1,6375 = 5."
+          "explanation": "Tổng PR bảo toàn bằng số trang (N = 5): 0,3625 + 1,2125 + 0,575 + 1,2125 + 1,6375 = 5.",
+          "images": [
+            "assets/img/pagerank_graph.png",
+            "assets/img/eq_pagerank.png"
+          ]
         },
         {
           "id": "CDV6_7",
@@ -7178,6 +7202,230 @@
           },
           "correctAnswer": "B",
           "explanation": "PR = (1 − d) + d×0 = **0,15**."
+        },
+        {
+          "id": "CDV6_11",
+          "question": "Đồ thị liên kết 2: 1→2, 1→3; 2→3; 3→1; 4→3. PageRank khởi tạo bằng 1, d = 0,85. Giá trị PageRank của Page 1 ở vòng lặp đầu tiên là bao nhiêu?",
+          "options": {
+            "A": "0,15",
+            "B": "1,85",
+            "C": "0,85",
+            "D": "1,0"
+          },
+          "correctAnswer": "D",
+          "explanation": "Page 1 nhận từ Page 3 → PR = 0,15 + 0,85×(1/1) = **1,0**.",
+          "images": [
+            "assets/img/pagerank_graph2.png",
+            "assets/img/eq_pagerank.png"
+          ]
+        },
+        {
+          "id": "CDV6_12",
+          "question": "Đồ thị liên kết 2: 1→2, 1→3; 2→3; 3→1; 4→3. PageRank khởi tạo bằng 1, d = 0,85. Giá trị PageRank của Page 2 ở vòng lặp đầu tiên là bao nhiêu?",
+          "options": {
+            "A": "0,15",
+            "B": "0,575",
+            "C": "1,0",
+            "D": "1,425"
+          },
+          "correctAnswer": "B",
+          "explanation": "Page 2 nhận từ Page 1 → PR = 0,15 + 0,85×(1/2) = **0,575**.",
+          "images": [
+            "assets/img/pagerank_graph2.png",
+            "assets/img/eq_pagerank.png"
+          ]
+        },
+        {
+          "id": "CDV6_13",
+          "question": "Đồ thị liên kết 2: 1→2, 1→3; 2→3; 3→1; 4→3. PageRank khởi tạo bằng 1, d = 0,85. Giá trị PageRank của Page 3 ở vòng lặp đầu tiên là bao nhiêu?",
+          "options": {
+            "A": "0,15",
+            "B": "1,0",
+            "C": "3,125",
+            "D": "2,275"
+          },
+          "correctAnswer": "D",
+          "explanation": "Page 3 nhận từ Page 1, Page 2, Page 4 → PR = 0,15 + 0,85×(1/2 + 1/1 + 1/1) = **2,275**.",
+          "images": [
+            "assets/img/pagerank_graph2.png",
+            "assets/img/eq_pagerank.png"
+          ]
+        },
+        {
+          "id": "CDV6_14",
+          "question": "Đồ thị liên kết 2: 1→2, 1→3; 2→3; 3→1; 4→3. PageRank khởi tạo bằng 1, d = 0,85. Giá trị PageRank của Page 4 ở vòng lặp đầu tiên là bao nhiêu?",
+          "options": {
+            "A": "0,15",
+            "B": "1,0",
+            "C": "0,1275",
+            "D": "0,3"
+          },
+          "correctAnswer": "A",
+          "explanation": "Page 4 không có liên kết đến → PR = 1 − d = **0,15**.",
+          "images": [
+            "assets/img/pagerank_graph2.png",
+            "assets/img/eq_pagerank.png"
+          ]
+        },
+        {
+          "id": "CDV6_15",
+          "question": "Đồ thị liên kết 3: 1→2, 1→3; 2→3; 3→1. PageRank khởi tạo bằng 1, d = 0,85. Giá trị PageRank của Page 1 ở vòng lặp đầu tiên là bao nhiêu?",
+          "options": {
+            "A": "0,15",
+            "B": "1,85",
+            "C": "1,0",
+            "D": "0,85"
+          },
+          "correctAnswer": "C",
+          "explanation": "Page 1 nhận từ Page 3 → PR = 0,15 + 0,85×(1/1) = **1,0**.",
+          "images": [
+            "assets/img/pagerank_graph3.png",
+            "assets/img/eq_pagerank.png"
+          ]
+        },
+        {
+          "id": "CDV6_16",
+          "question": "Đồ thị liên kết 3: 1→2, 1→3; 2→3; 3→1. PageRank khởi tạo bằng 1, d = 0,85. Giá trị PageRank của Page 2 ở vòng lặp đầu tiên là bao nhiêu?",
+          "options": {
+            "A": "0,575",
+            "B": "0,15",
+            "C": "1,0",
+            "D": "1,425"
+          },
+          "correctAnswer": "A",
+          "explanation": "Page 2 nhận từ Page 1 → PR = 0,15 + 0,85×(1/2) = **0,575**.",
+          "images": [
+            "assets/img/pagerank_graph3.png",
+            "assets/img/eq_pagerank.png"
+          ]
+        },
+        {
+          "id": "CDV6_17",
+          "question": "Đồ thị liên kết 3: 1→2, 1→3; 2→3; 3→1. PageRank khởi tạo bằng 1, d = 0,85. Giá trị PageRank của Page 3 ở vòng lặp đầu tiên là bao nhiêu?",
+          "options": {
+            "A": "0,15",
+            "B": "1,0",
+            "C": "1,425",
+            "D": "2,275"
+          },
+          "correctAnswer": "C",
+          "explanation": "Page 3 nhận từ Page 1, Page 2 → PR = 0,15 + 0,85×(1/2 + 1/1) = **1,425**.",
+          "images": [
+            "assets/img/pagerank_graph3.png",
+            "assets/img/eq_pagerank.png"
+          ]
+        },
+        {
+          "id": "CDV6_18",
+          "question": "Đồ thị liên kết 3: 1→2, 1→3; 2→3; 3→1. PageRank khởi tạo bằng 1, d = 0,5. Giá trị PageRank của Page 3 ở vòng lặp đầu tiên là bao nhiêu?",
+          "options": {
+            "A": "0,5",
+            "B": "1,0",
+            "C": "1,75",
+            "D": "1,25"
+          },
+          "correctAnswer": "D",
+          "explanation": "Page 3 nhận từ Page 1, Page 2 → PR = 0,5 + 0,5×(1/2 + 1/1) = **1,25**.",
+          "images": [
+            "assets/img/pagerank_graph3.png",
+            "assets/img/eq_pagerank.png"
+          ]
+        },
+        {
+          "id": "CDV6_19",
+          "question": "Đồ thị liên kết 3: 1→2, 1→3; 2→3; 3→1. PageRank khởi tạo bằng 1, d = 0,5. Giá trị PageRank của Page 2 ở vòng lặp đầu tiên là bao nhiêu?",
+          "options": {
+            "A": "0,5",
+            "B": "0,75",
+            "C": "1,0",
+            "D": "1,25"
+          },
+          "correctAnswer": "B",
+          "explanation": "Page 2 nhận từ Page 1 → PR = 0,5 + 0,5×(1/2) = **0,75**.",
+          "images": [
+            "assets/img/pagerank_graph3.png",
+            "assets/img/eq_pagerank.png"
+          ]
+        },
+        {
+          "id": "CDV6_20",
+          "question": "Đồ thị liên kết 2: 1→2, 1→3; 2→3; 3→1; 4→3. PageRank khởi tạo bằng 1, d = 0,85. Sau vòng lặp đầu tiên, trang nào có PageRank CAO NHẤT?",
+          "options": {
+            "A": "Page 1 (≈ 1,000)",
+            "B": "Page 2 (≈ 0,575)",
+            "C": "Page 3 (≈ 2,275)",
+            "D": "Page 4 (≈ 0,150)"
+          },
+          "correctAnswer": "C",
+          "explanation": "Page 3 nhận từ 3 trang (1, 2, 4): PR = 0,15 + 0,85×(1/2 + 1/1 + 1/1) = 2,275.",
+          "images": [
+            "assets/img/pagerank_graph2.png",
+            "assets/img/eq_pagerank.png"
+          ]
+        },
+        {
+          "id": "CDV6_21",
+          "question": "Đồ thị liên kết 2: 1→2, 1→3; 2→3; 3→1; 4→3. PageRank khởi tạo bằng 1, d = 0,85. Vì sao Page 4 luôn có PageRank thấp nhất (0,15) ở mọi vòng lặp?",
+          "options": {
+            "A": "Không có trang nào liên kết đến Page 4 nên chỉ nhận phần (1 − d) = 0,15",
+            "B": "Vì Page 4 có nhiều liên kết đi ra nhất",
+            "C": "Vì Page 4 nằm ở cuối đồ thị",
+            "D": "Vì d = 0,85 làm PageRank của mọi trang giảm đi"
+          },
+          "correctAnswer": "A",
+          "explanation": "Page 4 không có in-link → PR = (1 − d) + d×0 = **0,15** mãi mãi.",
+          "images": [
+            "assets/img/pagerank_graph2.png",
+            "assets/img/eq_pagerank.png"
+          ]
+        },
+        {
+          "id": "CDV6_22",
+          "question": "Đồ thị liên kết 2: 1→2, 1→3; 2→3; 3→1; 4→3. PageRank khởi tạo bằng 1, d = 0,85. Tổng PageRank của 4 trang sau vòng lặp đầu tiên bằng bao nhiêu?",
+          "options": {
+            "A": "1",
+            "B": "3,4",
+            "C": "4",
+            "D": "2,275"
+          },
+          "correctAnswer": "C",
+          "explanation": "1 + 0,575 + 2,275 + 0,15 = **4** (bằng số trang N khi khởi tạo mỗi trang = 1).",
+          "images": [
+            "assets/img/pagerank_graph2.png",
+            "assets/img/eq_pagerank.png"
+          ]
+        },
+        {
+          "id": "CDV6_23",
+          "question": "Đồ thị liên kết 2: 1→2, 1→3; 2→3; 3→1; 4→3. PageRank khởi tạo bằng 1, d = 0,85. Số liên kết đi ra của Page 1, ký hiệu C(1), bằng bao nhiêu?",
+          "options": {
+            "A": "2",
+            "B": "1",
+            "C": "3",
+            "D": "0"
+          },
+          "correctAnswer": "A",
+          "explanation": "Page 1 liên kết đến Page 2 và Page 3 → **C(1) = 2**.",
+          "images": [
+            "assets/img/pagerank_graph2.png",
+            "assets/img/eq_pagerank.png"
+          ]
+        },
+        {
+          "id": "CDV6_24",
+          "question": "Đồ thị liên kết 3: 1→2, 1→3; 2→3; 3→1. PageRank khởi tạo bằng 1, d = 0,85. Page 3 nhận liên kết từ những trang nào?",
+          "options": {
+            "A": "Chỉ Page 1",
+            "B": "Chỉ Page 2",
+            "C": "Page 2 và Page 3",
+            "D": "Page 1 và Page 2"
+          },
+          "correctAnswer": "D",
+          "explanation": "Cạnh 1→3 và 2→3 → Page 3 có 2 in-link (từ 1 và 2).",
+          "images": [
+            "assets/img/pagerank_graph3.png",
+            "assets/img/eq_pagerank.png"
+          ]
         }
       ]
     },
@@ -7339,7 +7587,10 @@
             "D": "2 chuỗi (s3, s5)"
           },
           "correctAnswer": "C",
-          "explanation": "AB có trong s1, s2, s3, s5. s4 = ⟨B,C⟩ không có A nên không chứa AB."
+          "explanation": "AB có trong s1, s2, s3, s5. s4 = ⟨B,C⟩ không có A nên không chứa AB.",
+          "images": [
+            "assets/img/cpt_plus_fsc.png"
+          ]
         },
         {
           "id": "CDV7_14",
@@ -7351,7 +7602,10 @@
             "D": "9 nút"
           },
           "correctAnswer": "B",
-          "explanation": "Nhánh trái: A, B, C, D, E (5 nút) + nhánh phải: B, C (2 nút) = **7**."
+          "explanation": "Nhánh trái: A, B, C, D, E (5 nút) + nhánh phải: B, C (2 nút) = **7**.",
+          "images": [
+            "assets/img/cpt_plus_fsc.png"
+          ]
         },
         {
           "id": "CDV7_15",
@@ -7363,7 +7617,10 @@
             "D": "6 nút"
           },
           "correctAnswer": "D",
-          "explanation": "x, C, D, E (nhánh trái) + B, C (nhánh phải, không chứa AB nên giữ nguyên) = **6**."
+          "explanation": "x, C, D, E (nhánh trái) + B, C (nhánh phải, không chứa AB nên giữ nguyên) = **6**.",
+          "images": [
+            "assets/img/cpt_plus_fsc.png"
+          ]
         },
         {
           "id": "CDV7_16",
@@ -7375,7 +7632,10 @@
             "D": "3 nút"
           },
           "correctAnswer": "B",
-          "explanation": "x, C, D, E và BC = **5**. Nhánh x → C → D không gộp được vì x rẽ thành 2 nhánh (C và E)."
+          "explanation": "x, C, D, E và BC = **5**. Nhánh x → C → D không gộp được vì x rẽ thành 2 nhánh (C và E).",
+          "images": [
+            "assets/img/cpt_plus_fsc.png"
+          ]
         },
         {
           "id": "CDV7_17",
@@ -7387,7 +7647,10 @@
             "D": "Nhánh root → B → C (mỗi nút chỉ có một con, không rẽ nhánh)"
           },
           "correctAnswer": "D",
-          "explanation": "**SBC** gộp chuỗi các nút chỉ có một con thành một nút. x có 2 con nên không gộp."
+          "explanation": "**SBC** gộp chuỗi các nút chỉ có một con thành một nút. x có 2 con nên không gộp.",
+          "images": [
+            "assets/img/cpt_plus_fsc.png"
+          ]
         },
         {
           "id": "CDV7_18",
@@ -7399,7 +7662,10 @@
             "D": "Nút root"
           },
           "correctAnswer": "C",
-          "explanation": "Lookup Table trỏ mỗi chuỗi tới **nút cuối** của nó. s3 = ⟨A,B,C,D⟩ ↔ x → C → D."
+          "explanation": "Lookup Table trỏ mỗi chuỗi tới **nút cuối** của nó. s3 = ⟨A,B,C,D⟩ ↔ x → C → D.",
+          "images": [
+            "assets/img/cpt_plus_fsc.png"
+          ]
         },
         {
           "id": "CDV7_19",
@@ -7411,7 +7677,10 @@
             "D": "Nút E"
           },
           "correctAnswer": "A",
-          "explanation": "s2 = ⟨A,B⟩ chính là x nên nút cuối là **x**. (Trước khi nén là nút B dưới A.)"
+          "explanation": "s2 = ⟨A,B⟩ chính là x nên nút cuối là **x**. (Trước khi nén là nút B dưới A.)",
+          "images": [
+            "assets/img/cpt_plus_fsc.png"
+          ]
         },
         {
           "id": "CDV7_20",
@@ -7423,7 +7692,10 @@
             "D": "s1 và s3"
           },
           "correctAnswer": "D",
-          "explanation": "A: {s1,s2,s3,s5} ∩ C: {s1,s3,s4} = **{s1, s3}**."
+          "explanation": "A: {s1,s2,s3,s5} ∩ C: {s1,s3,s4} = **{s1, s3}**.",
+          "images": [
+            "assets/img/cpt_plus_fsc.png"
+          ]
         },
         {
           "id": "CDV7_21",
@@ -7435,7 +7707,10 @@
             "D": "s1, s2 và s3"
           },
           "correctAnswer": "B",
-          "explanation": "B có trong mọi chuỗi; C: {s1,s3,s4} → giao = **{s1, s3, s4}**."
+          "explanation": "B có trong mọi chuỗi; C: {s1,s3,s4} → giao = **{s1, s3, s4}**.",
+          "images": [
+            "assets/img/cpt_plus_fsc.png"
+          ]
         },
         {
           "id": "CDV7_22",
@@ -7447,7 +7722,10 @@
             "D": "C"
           },
           "correctAnswer": "D",
-          "explanation": "Chuỗi chứa A và B: s1 (đuôi: C), s2 (đuôi rỗng), s3 (đuôi: C, D), s5 (đuôi: E). C:2, D:1, E:1 → **C**."
+          "explanation": "Chuỗi chứa A và B: s1 (đuôi: C), s2 (đuôi rỗng), s3 (đuôi: C, D), s5 (đuôi: E). C:2, D:1, E:1 → **C**.",
+          "images": [
+            "assets/img/cpt_plus_fsc.png"
+          ]
         },
         {
           "id": "CDV7_23",
@@ -7459,7 +7737,10 @@
             "D": "E"
           },
           "correctAnswer": "B",
-          "explanation": "Đuôi sau A: s1: B,C; s2: B; s3: B,C,D; s5: B,E. B xuất hiện 4 lần → **B** cao nhất."
+          "explanation": "Đuôi sau A: s1: B,C; s2: B; s3: B,C,D; s5: B,E. B xuất hiện 4 lần → **B** cao nhất.",
+          "images": [
+            "assets/img/cpt_plus_fsc.png"
+          ]
         },
         {
           "id": "CDV7_24",
@@ -7471,7 +7752,10 @@
             "D": "A"
           },
           "correctAnswer": "C",
-          "explanation": "Đuôi sau B: s1: C; s2: rỗng; s3: C,D; s4: C; s5: E. C xuất hiện 3 lần → **C**."
+          "explanation": "Đuôi sau B: s1: C; s2: rỗng; s3: C,D; s4: C; s5: E. C xuất hiện 3 lần → **C**.",
+          "images": [
+            "assets/img/cpt_plus_fsc.png"
+          ]
         },
         {
           "id": "CDV7_25",
@@ -7483,7 +7767,10 @@
             "D": "Không có item nào"
           },
           "correctAnswer": "A",
-          "explanation": "Chuỗi chứa B và C: s1, s3, s4. Đuôi: s1 rỗng, s3: D, s4 rỗng → chỉ **D**."
+          "explanation": "Chuỗi chứa B và C: s1, s3, s4. Đuôi: s1 rỗng, s3: D, s4 rỗng → chỉ **D**.",
+          "images": [
+            "assets/img/cpt_plus_fsc.png"
+          ]
         },
         {
           "id": "CDV7_26",
@@ -7495,7 +7782,10 @@
             "D": "s1 = ⟨A,B,C⟩"
           },
           "correctAnswer": "C",
-          "explanation": "Hàng A của Inverted Index có 0 ở cột s4."
+          "explanation": "Hàng A của Inverted Index có 0 ở cột s4.",
+          "images": [
+            "assets/img/cpt_plus_fsc.png"
+          ]
         },
         {
           "id": "CDV7_27",
@@ -7567,7 +7857,10 @@
             "D": "⟨D, C⟩"
           },
           "correctAnswer": "C",
-          "explanation": "s2 = ⟨D,C,B,E⟩: D, C đã xuất hiện ở vị trí 1, 2 → phần sau là **⟨B, E⟩**."
+          "explanation": "s2 = ⟨D,C,B,E⟩: D, C đã xuất hiện ở vị trí 1, 2 → phần sau là **⟨B, E⟩**.",
+          "images": [
+            "assets/img/cpt_tree.png"
+          ]
         },
         {
           "id": "CDV7_33",
@@ -7579,7 +7872,10 @@
             "D": "Rỗng"
           },
           "correctAnswer": "A",
-          "explanation": "s3 = ⟨E,A,D,C,B⟩: sau C (vị trí 4) chỉ còn **B**."
+          "explanation": "s3 = ⟨E,A,D,C,B⟩: sau C (vị trí 4) chỉ còn **B**.",
+          "images": [
+            "assets/img/cpt_tree.png"
+          ]
         },
         {
           "id": "CDV7_34",
@@ -7591,7 +7887,10 @@
             "D": "Cả s1, s2, s3 và s4"
           },
           "correctAnswer": "D",
-          "explanation": "Cả bốn chuỗi đều chứa D và C (thứ tự không quan trọng)."
+          "explanation": "Cả bốn chuỗi đều chứa D và C (thứ tự không quan trọng).",
+          "images": [
+            "assets/img/cpt_tree.png"
+          ]
         },
         {
           "id": "CDV7_35",
@@ -7603,7 +7902,10 @@
             "D": "4 chuỗi"
           },
           "correctAnswer": "B",
-          "explanation": "Đuôi: s1 = ⟨F⟩; s2 = ⟨B,E⟩; s3 = ⟨B⟩; s4 = rỗng → B có trong **2** chuỗi, nhiều nhất."
+          "explanation": "Đuôi: s1 = ⟨F⟩; s2 = ⟨B,E⟩; s3 = ⟨B⟩; s4 = rỗng → B có trong **2** chuỗi, nhiều nhất.",
+          "images": [
+            "assets/img/cpt_tree.png"
+          ]
         },
         {
           "id": "CDV7_36",
@@ -7615,7 +7917,10 @@
             "D": "G"
           },
           "correctAnswer": "D",
-          "explanation": "Đuôi: ⟨F⟩, ⟨B,E⟩, ⟨B⟩, rỗng → B, E, F có điểm; **G** thì không."
+          "explanation": "Đuôi: ⟨F⟩, ⟨B,E⟩, ⟨B⟩, rỗng → B, E, F có điểm; **G** thì không.",
+          "images": [
+            "assets/img/cpt_tree.png"
+          ]
         },
         {
           "id": "CDV7_37",
@@ -7627,7 +7932,10 @@
             "D": "s1, s3 và s4"
           },
           "correctAnswer": "B",
-          "explanation": "Chứa cả E và A: s3 và s4. (s1 không có E; s2 không có A.)"
+          "explanation": "Chứa cả E và A: s3 và s4. (s1 không có E; s2 không có A.)",
+          "images": [
+            "assets/img/cpt_tree.png"
+          ]
         }
       ]
     },
