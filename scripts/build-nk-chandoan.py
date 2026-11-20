@@ -52,6 +52,72 @@ TOPICS = [
  ('39. Data Audit Trail & Continuous Auditing', r'audit|immutable'),
  ('40. Data Lake, Lakehouse, Medallion', r'lakehouse|data lake|medallion|delta lake|iceberg|hudi'),
 ]
+
+import zlib
+FORMULA = [
+ ("Trong công thức Info_A(D) = Σ_{j=1..v} (|Dj|/|D|) × Info(Dj), ký hiệu v là gì?",
+  "Số giá trị khác nhau của thuộc tính A (số phân vùng D1…Dv sau khi chia theo A)",
+  ["Số lớp (class) của biến mục tiêu", "Tổng số bản ghi trong tập dữ liệu D", "Số thuộc tính của tập dữ liệu"],
+  "**v** = số giá trị khác nhau của thuộc tính **A** → D được chia thành **v phân vùng** D1…Dv. Số lớp mới là **m** trong Info(D)."),
+ ("Trong Info_A(D), thành phần |Dj|/|D| có ý nghĩa gì?",
+  "Trọng số: tỉ lệ số mẫu của phân vùng Dj trên tổng số mẫu của D",
+  ["Xác suất một mẫu thuộc lớp Ci", "Độ lợi thông tin (Information Gain) của thuộc tính A", "Entropy của phân vùng Dj"],
+  "|Dj|/|D| là **trọng số** của phân vùng Dj; Info_A(D) là **trung bình có trọng số** entropy của các phân vùng."),
+ ("Info_A(D) cho biết điều gì?",
+  "Lượng thông tin (entropy) còn cần để phân lớp D sau khi đã chia D theo thuộc tính A",
+  ["Lượng thông tin của D trước khi chia", "Số phân vùng tạo ra bởi thuộc tính A", "Xác suất xuất hiện của thuộc tính A"],
+  "**Info_A(D)** = entropy kỳ vọng sau khi chia theo A. Càng nhỏ → A chia càng tốt (Gain(A) = Info(D) − Info_A(D))."),
+ ("Trong công thức Info(Dj) nằm trong Info_A(D), Info(Dj) là gì?",
+  "Entropy của phân vùng Dj, tính theo công thức Info với các lớp bên trong Dj",
+  ["Entropy của toàn bộ tập D", "Số mẫu của phân vùng Dj", "Gain Ratio của thuộc tính A"],
+  "**Info(Dj)** là entropy của riêng phân vùng Dj (cùng dạng −Σ pi·log2 pi nhưng tính trên Dj)."),
+ ("Trong công thức Info(D) = −Σ_{i=1..m} pi·log2(pi), ký hiệu m là gì?",
+  "Số lượng lớp (class) của biến mục tiêu",
+  ["Số giá trị khác nhau của thuộc tính A", "Số bản ghi trong tập D", "Số phân vùng sau khi chia"],
+  "**m** = **số lượng lớp**. Đừng nhầm với **v** (số giá trị của thuộc tính A) trong Info_A(D)."),
+ ("Trong Info(D), pi là gì?",
+  "Xác suất một mẫu bất kỳ trong D thuộc lớp Ci, pi = |Ci,D| / |D|",
+  ["Số mẫu thuộc lớp Ci", "Entropy của lớp Ci", "Tỉ lệ số thuộc tính được chọn"],
+  "**pi** = xác suất một mẫu thuộc lớp Ci = số mẫu lớp Ci chia tổng số mẫu."),
+ ("Info(D) = −Σ pi·log2(pi) đo đại lượng nào của tập dữ liệu D?",
+  "Entropy – mức độ hỗn loạn/không chắc chắn về nhãn lớp của D",
+  ["Độ lợi thông tin (Information Gain)", "Độ tin cậy (Confidence) của luật", "Phương sai của dữ liệu"],
+  "**Info(D)** chính là **Entropy** của D (đơn vị **bit** do dùng log2)."),
+ ("Vì sao công thức Info(D) có dấu trừ phía trước tổng?",
+  "Vì log2(pi) ≤ 0 (pi ≤ 1) nên dấu trừ làm entropy luôn ≥ 0",
+  ["Để entropy luôn nhỏ hơn 0", "Để đổi đơn vị từ bit sang byte", "Để chuẩn hóa pi về đoạn [0, 1]"],
+  "pi ≤ 1 ⇒ log2(pi) ≤ 0, nên thêm dấu trừ để Info(D) ≥ 0."),
+ ("Information Gain của thuộc tính A được tính theo công thức nào?",
+  "Gain(A) = Info(D) − Info_A(D)",
+  ["Gain(A) = Info(D) + Info_A(D)", "Gain(A) = Info_A(D) − Info(D)", "Gain(A) = Info(D) × Info_A(D)"],
+  "**Gain(A) = Info(D) − Info_A(D)**: entropy trước khi chia trừ entropy sau khi chia theo A."),
+ ("Khi nào Info(D) = 0?",
+  "Khi mọi mẫu trong D đều thuộc cùng một lớp (tập thuần nhất)",
+  ["Khi các lớp phân bố đều nhau", "Khi D có đúng 2 lớp", "Khi thuộc tính A có nhiều giá trị nhất"],
+  "Nếu một lớp có p = 1 thì Info(D) = −1·log2(1) = **0** (không còn bất định)."),
+ ("Với tập D có 2 lớp, Info(D) đạt giá trị lớn nhất khi nào?",
+  "Khi hai lớp cân bằng (p1 = p2 = 0,5), Info(D) = 1 bit",
+  ["Khi một lớp chiếm 100% số mẫu", "Khi p1 = 0,9 và p2 = 0,1", "Khi số mẫu của D bằng 0"],
+  "Entropy cực đại với 2 lớp khi p = 0,5 → **1 bit**."),
+ ("Thuộc tính nào được chọn để chia nút trong thuật toán ID3 dựa trên Info(D) và Info_A(D)?",
+  "Thuộc tính có Information Gain lớn nhất (tương đương Info_A(D) nhỏ nhất)",
+  ["Thuộc tính có Info_A(D) lớn nhất", "Thuộc tính có nhiều giá trị nhất", "Thuộc tính đầu tiên trong bảng"],
+  "ID3 chọn thuộc tính có **Gain lớn nhất** = Info_A(D) nhỏ nhất."),
+ ("Tập D có 14 mẫu: 9 mẫu lớp Yes và 5 mẫu lớp No. Info(D) xấp xỉ bao nhiêu?",
+  "0,940 bit",
+  ["0,500 bit", "1,000 bit", "0,647 bit"],
+  "Info(D) = −(9/14·log2 9/14 + 5/14·log2 5/14) ≈ **0,940**."),
+]
+def mk(i, item):
+    qid = f'CD_F{i}'
+    text, correct, wrongs, expl = item
+    pos = zlib.crc32(qid.encode()) % 4
+    opts = wrongs[:]
+    opts.insert(pos, correct)
+    letters = 'ABCD'
+    return {'id': qid, 'question': text, 'options': {letters[k]: opts[k] for k in range(4)},
+            'correctAnswer': letters[pos], 'explanation': expl}
+
 topics = []
 used_ids = set()
 total = 0
@@ -69,7 +135,16 @@ for i, (name, rx) in enumerate(TOPICS, 1):
     used_ids |= seen
     total += len(qs)
     print(i, len(qs), name, file=sys.stderr)
+    if name.startswith('16.'):
+        fq = [mk(k, it) for k, it in enumerate(FORMULA, 1)]
+        by = {q['id']: q for _, q in src}
+        fq += [by[x] for x in ('HOT_Q19', 'HOT_Q20') if x in by]
+        topics.append({'topicId': 'CD_F', 'topicName': 'Công thức Info(D) & Info_A(D): v, m, pi là gì? (câu 19–20)', 'questions': fq})
+        total += len(fq)
 allq = sum(len(c) for c in [[1]])  # noop
+import re as _re
+for n, t in enumerate(topics, 1):
+    t['topicName'] = f"{n}. " + _re.sub(r'^\d+\.\s*', '', t['topicName'])
 data = {'chapterId': 'CD', 'chapterName': 'Tổng hợp theo câu hỏi chẩn đoán', 'topics': topics}
 with io.open(D + 'CD.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)

@@ -2121,8 +2121,200 @@
       ]
     },
     {
+      "topicId": "CD_F",
+      "topicName": "17. Công thức Info(D) & Info_A(D): v, m, pi là gì? (câu 19–20)",
+      "questions": [
+        {
+          "id": "CD_F1",
+          "question": "Trong công thức Info_A(D) = Σ_{j=1..v} (|Dj|/|D|) × Info(Dj), ký hiệu v là gì?",
+          "options": {
+            "A": "Số lớp (class) của biến mục tiêu",
+            "B": "Tổng số bản ghi trong tập dữ liệu D",
+            "C": "Số giá trị khác nhau của thuộc tính A (số phân vùng D1…Dv sau khi chia theo A)",
+            "D": "Số thuộc tính của tập dữ liệu"
+          },
+          "correctAnswer": "C",
+          "explanation": "**v** = số giá trị khác nhau của thuộc tính **A** → D được chia thành **v phân vùng** D1…Dv. Số lớp mới là **m** trong Info(D)."
+        },
+        {
+          "id": "CD_F2",
+          "question": "Trong Info_A(D), thành phần |Dj|/|D| có ý nghĩa gì?",
+          "options": {
+            "A": "Trọng số: tỉ lệ số mẫu của phân vùng Dj trên tổng số mẫu của D",
+            "B": "Xác suất một mẫu thuộc lớp Ci",
+            "C": "Độ lợi thông tin (Information Gain) của thuộc tính A",
+            "D": "Entropy của phân vùng Dj"
+          },
+          "correctAnswer": "A",
+          "explanation": "|Dj|/|D| là **trọng số** của phân vùng Dj; Info_A(D) là **trung bình có trọng số** entropy của các phân vùng."
+        },
+        {
+          "id": "CD_F3",
+          "question": "Info_A(D) cho biết điều gì?",
+          "options": {
+            "A": "Lượng thông tin của D trước khi chia",
+            "B": "Số phân vùng tạo ra bởi thuộc tính A",
+            "C": "Lượng thông tin (entropy) còn cần để phân lớp D sau khi đã chia D theo thuộc tính A",
+            "D": "Xác suất xuất hiện của thuộc tính A"
+          },
+          "correctAnswer": "C",
+          "explanation": "**Info_A(D)** = entropy kỳ vọng sau khi chia theo A. Càng nhỏ → A chia càng tốt (Gain(A) = Info(D) − Info_A(D))."
+        },
+        {
+          "id": "CD_F4",
+          "question": "Trong công thức Info(Dj) nằm trong Info_A(D), Info(Dj) là gì?",
+          "options": {
+            "A": "Entropy của toàn bộ tập D",
+            "B": "Entropy của phân vùng Dj, tính theo công thức Info với các lớp bên trong Dj",
+            "C": "Số mẫu của phân vùng Dj",
+            "D": "Gain Ratio của thuộc tính A"
+          },
+          "correctAnswer": "B",
+          "explanation": "**Info(Dj)** là entropy của riêng phân vùng Dj (cùng dạng −Σ pi·log2 pi nhưng tính trên Dj)."
+        },
+        {
+          "id": "CD_F5",
+          "question": "Trong công thức Info(D) = −Σ_{i=1..m} pi·log2(pi), ký hiệu m là gì?",
+          "options": {
+            "A": "Số giá trị khác nhau của thuộc tính A",
+            "B": "Số bản ghi trong tập D",
+            "C": "Số phân vùng sau khi chia",
+            "D": "Số lượng lớp (class) của biến mục tiêu"
+          },
+          "correctAnswer": "D",
+          "explanation": "**m** = **số lượng lớp**. Đừng nhầm với **v** (số giá trị của thuộc tính A) trong Info_A(D)."
+        },
+        {
+          "id": "CD_F6",
+          "question": "Trong Info(D), pi là gì?",
+          "options": {
+            "A": "Số mẫu thuộc lớp Ci",
+            "B": "Xác suất một mẫu bất kỳ trong D thuộc lớp Ci, pi = |Ci,D| / |D|",
+            "C": "Entropy của lớp Ci",
+            "D": "Tỉ lệ số thuộc tính được chọn"
+          },
+          "correctAnswer": "B",
+          "explanation": "**pi** = xác suất một mẫu thuộc lớp Ci = số mẫu lớp Ci chia tổng số mẫu."
+        },
+        {
+          "id": "CD_F7",
+          "question": "Info(D) = −Σ pi·log2(pi) đo đại lượng nào của tập dữ liệu D?",
+          "options": {
+            "A": "Độ lợi thông tin (Information Gain)",
+            "B": "Độ tin cậy (Confidence) của luật",
+            "C": "Phương sai của dữ liệu",
+            "D": "Entropy – mức độ hỗn loạn/không chắc chắn về nhãn lớp của D"
+          },
+          "correctAnswer": "D",
+          "explanation": "**Info(D)** chính là **Entropy** của D (đơn vị **bit** do dùng log2)."
+        },
+        {
+          "id": "CD_F8",
+          "question": "Vì sao công thức Info(D) có dấu trừ phía trước tổng?",
+          "options": {
+            "A": "Để entropy luôn nhỏ hơn 0",
+            "B": "Để đổi đơn vị từ bit sang byte",
+            "C": "Vì log2(pi) ≤ 0 (pi ≤ 1) nên dấu trừ làm entropy luôn ≥ 0",
+            "D": "Để chuẩn hóa pi về đoạn [0, 1]"
+          },
+          "correctAnswer": "C",
+          "explanation": "pi ≤ 1 ⇒ log2(pi) ≤ 0, nên thêm dấu trừ để Info(D) ≥ 0."
+        },
+        {
+          "id": "CD_F9",
+          "question": "Information Gain của thuộc tính A được tính theo công thức nào?",
+          "options": {
+            "A": "Gain(A) = Info(D) − Info_A(D)",
+            "B": "Gain(A) = Info(D) + Info_A(D)",
+            "C": "Gain(A) = Info_A(D) − Info(D)",
+            "D": "Gain(A) = Info(D) × Info_A(D)"
+          },
+          "correctAnswer": "A",
+          "explanation": "**Gain(A) = Info(D) − Info_A(D)**: entropy trước khi chia trừ entropy sau khi chia theo A."
+        },
+        {
+          "id": "CD_F10",
+          "question": "Khi nào Info(D) = 0?",
+          "options": {
+            "A": "Khi mọi mẫu trong D đều thuộc cùng một lớp (tập thuần nhất)",
+            "B": "Khi các lớp phân bố đều nhau",
+            "C": "Khi D có đúng 2 lớp",
+            "D": "Khi thuộc tính A có nhiều giá trị nhất"
+          },
+          "correctAnswer": "A",
+          "explanation": "Nếu một lớp có p = 1 thì Info(D) = −1·log2(1) = **0** (không còn bất định)."
+        },
+        {
+          "id": "CD_F11",
+          "question": "Với tập D có 2 lớp, Info(D) đạt giá trị lớn nhất khi nào?",
+          "options": {
+            "A": "Khi một lớp chiếm 100% số mẫu",
+            "B": "Khi p1 = 0,9 và p2 = 0,1",
+            "C": "Khi hai lớp cân bằng (p1 = p2 = 0,5), Info(D) = 1 bit",
+            "D": "Khi số mẫu của D bằng 0"
+          },
+          "correctAnswer": "C",
+          "explanation": "Entropy cực đại với 2 lớp khi p = 0,5 → **1 bit**."
+        },
+        {
+          "id": "CD_F12",
+          "question": "Thuộc tính nào được chọn để chia nút trong thuật toán ID3 dựa trên Info(D) và Info_A(D)?",
+          "options": {
+            "A": "Thuộc tính có Information Gain lớn nhất (tương đương Info_A(D) nhỏ nhất)",
+            "B": "Thuộc tính có Info_A(D) lớn nhất",
+            "C": "Thuộc tính có nhiều giá trị nhất",
+            "D": "Thuộc tính đầu tiên trong bảng"
+          },
+          "correctAnswer": "A",
+          "explanation": "ID3 chọn thuộc tính có **Gain lớn nhất** = Info_A(D) nhỏ nhất."
+        },
+        {
+          "id": "CD_F13",
+          "question": "Tập D có 14 mẫu: 9 mẫu lớp Yes và 5 mẫu lớp No. Info(D) xấp xỉ bao nhiêu?",
+          "options": {
+            "A": "0,500 bit",
+            "B": "1,000 bit",
+            "C": "0,940 bit",
+            "D": "0,647 bit"
+          },
+          "correctAnswer": "C",
+          "explanation": "Info(D) = −(9/14·log2 9/14 + 5/14·log2 5/14) ≈ **0,940**."
+        },
+        {
+          "id": "HOT_Q19",
+          "question": "Cho công thức Info_A(D) = Σ(j=1→v) (|Dⱼ|/|D|) × Info(Dⱼ). Trong công thức trên, v đại diện cho gì?",
+          "options": {
+            "A": "Các giá trị khác nhau của mỗi lớp",
+            "B": "Các giá trị khác nhau của mỗi Entropy",
+            "C": "Các giá trị khác nhau của mỗi thuộc tính",
+            "D": "Các giá trị khác nhau của mỗi mẫu tin"
+          },
+          "correctAnswer": "C",
+          "images": [
+            "assets/img/eq_infoA.png"
+          ],
+          "explanation": "Trong Info_A(D), **v** là số giá trị khác nhau của **thuộc tính A** (số phân vùng)."
+        },
+        {
+          "id": "HOT_Q20",
+          "question": "Trong công thức Info(D) = −Σ(i=1→m) pᵢ·log₂(pᵢ), m là gì?",
+          "options": {
+            "A": "Số lượng lớp",
+            "B": "Số lượng thuộc tính",
+            "C": "Số lượng giá trị của một thuộc tính",
+            "D": "Số lượng Entropy"
+          },
+          "correctAnswer": "A",
+          "images": [
+            "assets/img/eq_info.png"
+          ],
+          "explanation": "Trong Info(D), **m** là **số lượng lớp**."
+        }
+      ]
+    },
+    {
       "topicId": "CD_T17",
-      "topicName": "17. Chuẩn hóa: Min-Max, Z-Score, Decimal Scaling",
+      "topicName": "18. Chuẩn hóa: Min-Max, Z-Score, Decimal Scaling",
       "questions": [
         {
           "id": "HOT_Q17",
@@ -2380,7 +2572,7 @@
     },
     {
       "topicId": "CD_T18",
-      "topicName": "18. Binning: Equal-width, Equal-frequency, Discretization",
+      "topicName": "19. Binning: Equal-width, Equal-frequency, Discretization",
       "questions": [
         {
           "id": "HOT_Q18",
@@ -2494,7 +2686,7 @@
     },
     {
       "topicId": "CD_T19",
-      "topicName": "19. Giảm chiều & PCA",
+      "topicName": "20. Giảm chiều & PCA",
       "questions": [
         {
           "id": "HOT_Q25",
@@ -2572,7 +2764,7 @@
     },
     {
       "topicId": "CD_T20",
-      "topicName": "20. Dữ liệu chuỗi thời gian: SMA, EMA",
+      "topicName": "21. Dữ liệu chuỗi thời gian: SMA, EMA",
       "questions": [
         {
           "id": "HOT_Q26",
@@ -2644,7 +2836,7 @@
     },
     {
       "topicId": "CD_T21",
-      "topicName": "21. Association Rules: Support, Confidence, Lift, Leverage",
+      "topicName": "22. Association Rules: Support, Confidence, Lift, Leverage",
       "questions": [
         {
           "id": "HOT_Q28",
@@ -3056,7 +3248,7 @@
     },
     {
       "topicId": "CD_T22",
-      "topicName": "22. Apriori & Frequent Itemset",
+      "topicName": "23. Apriori & Frequent Itemset",
       "questions": [
         {
           "id": "HOT_Q27",
@@ -3209,7 +3401,7 @@
     },
     {
       "topicId": "CD_T23",
-      "topicName": "23. FP-Growth, FP-Tree & Condition Pattern Base",
+      "topicName": "24. FP-Growth, FP-Tree & Condition Pattern Base",
       "questions": [
         {
           "id": "HOT_Q31",
@@ -3359,7 +3551,7 @@
     },
     {
       "topicId": "CD_T24",
-      "topicName": "24. PageRank & Damping factor",
+      "topicName": "25. PageRank & Damping factor",
       "questions": [
         {
           "id": "HOT_Q36",
@@ -3499,7 +3691,7 @@
     },
     {
       "topicId": "CD_T25",
-      "topicName": "25. CPT, Prediction Tree & nén cây (FSC, SBC, PNR)",
+      "topicName": "26. CPT, Prediction Tree & nén cây (FSC, SBC, PNR)",
       "questions": [
         {
           "id": "HOT_Q38",
@@ -3637,7 +3829,7 @@
     },
     {
       "topicId": "CD_T26",
-      "topicName": "26. Clustering: K-Means, K-Medoids, DBSCAN, Hierarchical",
+      "topicName": "27. Clustering: K-Means, K-Medoids, DBSCAN, Hierarchical",
       "questions": [
         {
           "id": "C4_T2_Q3",
@@ -3895,7 +4087,7 @@
     },
     {
       "topicId": "CD_T27",
-      "topicName": "27. Naive Bayes & Bayesian Network",
+      "topicName": "28. Naive Bayes & Bayesian Network",
       "questions": [
         {
           "id": "C5_T5_Q1",
@@ -3949,7 +4141,7 @@
     },
     {
       "topicId": "CD_T28",
-      "topicName": "28. Graph: BFS, DFS, Knowledge Graph, GraphRAG",
+      "topicName": "29. Graph: BFS, DFS, Knowledge Graph, GraphRAG",
       "questions": [
         {
           "id": "HOT_Q40",
@@ -4135,7 +4327,7 @@
     },
     {
       "topicId": "CD_T29",
-      "topicName": "29. Blockchain, Anchoring & ABI",
+      "topicName": "30. Blockchain, Anchoring & ABI",
       "questions": [
         {
           "id": "HOT_Q42",
@@ -4225,7 +4417,7 @@
     },
     {
       "topicId": "CD_T30",
-      "topicName": "30. Vector, Embeddings, IVFFLAT, HNSW, RAG",
+      "topicName": "31. Vector, Embeddings, IVFFLAT, HNSW, RAG",
       "questions": [
         {
           "id": "HOT_Q44",
@@ -4423,7 +4615,7 @@
     },
     {
       "topicId": "CD_T31",
-      "topicName": "31. Bảo mật dữ liệu: CLM, RLS, Masking, Zero-copy",
+      "topicName": "32. Bảo mật dữ liệu: CLM, RLS, Masking, Zero-copy",
       "questions": [
         {
           "id": "HOT_Q45",
@@ -4549,7 +4741,7 @@
     },
     {
       "topicId": "CD_T32",
-      "topicName": "32. Privacy: Differential Privacy, k-anonymity",
+      "topicName": "33. Privacy: Differential Privacy, k-anonymity",
       "questions": [
         {
           "id": "C7_T5_Q1",
@@ -4651,7 +4843,7 @@
     },
     {
       "topicId": "CD_T33",
-      "topicName": "33. AI Act & AI Governance",
+      "topicName": "34. AI Act & AI Governance",
       "questions": [
         {
           "id": "HOT_Q46",
@@ -4909,7 +5101,7 @@
     },
     {
       "topicId": "CD_T34",
-      "topicName": "34. In-Database ML & Feature Store",
+      "topicName": "35. In-Database ML & Feature Store",
       "questions": [
         {
           "id": "C1_T1_Q10",
@@ -5143,7 +5335,7 @@
     },
     {
       "topicId": "CD_T35",
-      "topicName": "35. Analytics & BI hiện đại: Looker, Agentic BI, Data Storytelling",
+      "topicName": "36. Analytics & BI hiện đại: Looker, Agentic BI, Data Storytelling",
       "questions": [
         {
           "id": "HOT_Q43",
@@ -5293,7 +5485,7 @@
     },
     {
       "topicId": "CD_T36",
-      "topicName": "36. Polyglot Persistence, NoSQL & CAP",
+      "topicName": "37. Polyglot Persistence, NoSQL & CAP",
       "questions": [
         {
           "id": "C1_T1_Q9",
@@ -5407,7 +5599,7 @@
     },
     {
       "topicId": "CD_T37",
-      "topicName": "37. Federated Query, Optimizer & Predicate Pushdown",
+      "topicName": "38. Federated Query, Optimizer & Predicate Pushdown",
       "questions": [
         {
           "id": "C1_T3_Q5",
@@ -5533,7 +5725,7 @@
     },
     {
       "topicId": "CD_T38",
-      "topicName": "38. DR: RTO, RPO, Failover",
+      "topicName": "39. DR: RTO, RPO, Failover",
       "questions": [
         {
           "id": "C9_T6_Q1",
@@ -5587,7 +5779,7 @@
     },
     {
       "topicId": "CD_T39",
-      "topicName": "39. Data Audit Trail & Continuous Auditing",
+      "topicName": "40. Data Audit Trail & Continuous Auditing",
       "questions": [
         {
           "id": "C3_T2_Q7",
@@ -5665,7 +5857,7 @@
     },
     {
       "topicId": "CD_T40",
-      "topicName": "40. Data Lake, Lakehouse, Medallion",
+      "topicName": "41. Data Lake, Lakehouse, Medallion",
       "questions": [
         {
           "id": "HOT_Q1",
