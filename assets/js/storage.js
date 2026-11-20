@@ -6,7 +6,8 @@
 const BASE_KEYS = {
   HISTORY: 'dbms_quiz_history',       // Lịch sử tất cả các lần làm bài
   WRONG_STATS: 'dbms_quiz_wrong_stats', // Thống kê số lần sai theo từng câu hỏi
-  BEST_SCORES: 'dbms_quiz_best_scores'  // Điểm cao nhất từng chương/chủ đề
+  BEST_SCORES: 'dbms_quiz_best_scores', // Điểm cao nhất từng chương/chủ đề
+  FLAGGED: 'dbms_quiz_flagged'          // Các câu đã gắn cờ: { questionId: chapterId }
 };
 
 // Môn mặc định (DBMS) giữ nguyên key cũ để không mất tiến độ; môn khác thêm hậu tố
@@ -20,7 +21,8 @@ function keyFor(base) {
 const STORAGE_KEYS = {
   get HISTORY() { return keyFor(BASE_KEYS.HISTORY); },
   get WRONG_STATS() { return keyFor(BASE_KEYS.WRONG_STATS); },
-  get BEST_SCORES() { return keyFor(BASE_KEYS.BEST_SCORES); }
+  get BEST_SCORES() { return keyFor(BASE_KEYS.BEST_SCORES); },
+  get FLAGGED() { return keyFor(BASE_KEYS.FLAGGED); }
 };
 
 const Storage = {
@@ -125,6 +127,18 @@ const Storage = {
     return this._get(STORAGE_KEYS.BEST_SCORES, {});
   },
 
+  /** Câu đã gắn cờ (lưu bền): { questionId: chapterId } */
+  getFlagged() {
+    return this._get(STORAGE_KEYS.FLAGGED, {});
+  },
+
+  setFlagged(questionId, flagged, chapterId) {
+    const f = this.getFlagged();
+    if (flagged) f[String(questionId)] = chapterId || '';
+    else delete f[String(questionId)];
+    this._set(STORAGE_KEYS.FLAGGED, f);
+  },
+
   getBestScoreForChapter(chapterId) {
     const scores = this.getBestScores();
     return scores[chapterId] || null;
@@ -146,6 +160,7 @@ const Storage = {
       localStorage.removeItem(STORAGE_KEYS.HISTORY);
       localStorage.removeItem(STORAGE_KEYS.WRONG_STATS);
       localStorage.removeItem(STORAGE_KEYS.BEST_SCORES);
+      localStorage.removeItem(STORAGE_KEYS.FLAGGED);
       return true;
     } catch (err) {
       console.error('Lỗi reset dữ liệu:', err);
@@ -159,7 +174,8 @@ const Storage = {
       exportedAt: new Date().toISOString(),
       history: this.getHistory(),
       wrongStats: this.getWrongStats(),
-      bestScores: this.getBestScores()
+      bestScores: this.getBestScores(),
+      flagged: this.getFlagged()
     };
   },
 
@@ -169,6 +185,7 @@ const Storage = {
       if (data.history) this._set(STORAGE_KEYS.HISTORY, data.history);
       if (data.wrongStats) this._set(STORAGE_KEYS.WRONG_STATS, data.wrongStats);
       if (data.bestScores) this._set(STORAGE_KEYS.BEST_SCORES, data.bestScores);
+      if (data.flagged) this._set(STORAGE_KEYS.FLAGGED, data.flagged);
       return true;
     } catch (err) {
       console.error('Lỗi import dữ liệu:', err);

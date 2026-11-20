@@ -58,6 +58,13 @@ const Quiz = {
       });
     }
 
+    // Khôi phục cờ đã lưu từ các lần làm trước
+    const savedFlags = Storage.getFlagged();
+    const initialFlags = {};
+    questions.forEach((q) => {
+      if (savedFlags[String(q.id)] !== undefined) initialFlags[String(q.id)] = true;
+    });
+
     this.state = {
       chapterId: source.chapterId,
       chapterName: source.chapterName,
@@ -67,7 +74,7 @@ const Quiz = {
       questions,
       currentIndex: 0,
       userAnswers: {}, // questionId -> selectedKey
-      flaggedQuestions: {}, // questionId -> true nếu câu được gắn cờ chưa chắc chắn
+      flaggedQuestions: initialFlags, // questionId -> true nếu câu được gắn cờ chưa chắc chắn
       startTime: Date.now()
     };
     return this.state;
@@ -88,9 +95,12 @@ const Quiz = {
     const key = String(questionId);
     if (this.state.flaggedQuestions[key]) {
       delete this.state.flaggedQuestions[key];
+      Storage.setFlagged(key, false);
       return false;
     }
     this.state.flaggedQuestions[key] = true;
+    const q = this.state.questions.find((x) => String(x.id) === key);
+    Storage.setFlagged(key, true, (q && q._chapterId) || this.state.chapterId);
     return true;
   },
 

@@ -45,7 +45,10 @@
     <div class="summary-section shadow-sm">
       <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
         <h5 class="mb-0"><i class="bi bi-bar-chart-line-fill text-primary"></i> Tổng hợp tất cả chương</h5>
-        <button class="btn btn-success btn-sm" id="btnPracticeWrong"><i class="bi bi-bullseye"></i> Luyện tập riêng các câu hay sai</button>
+        <div class="d-flex gap-2 flex-wrap">
+          <button class="btn btn-warning btn-sm" id="btnPracticeFlagged"><i class="bi bi-flag-fill"></i> Làm lại câu đã gắn cờ <span class="badge bg-dark" id="flaggedTotalBadge">0</span></button>
+          <button class="btn btn-success btn-sm" id="btnPracticeWrong"><i class="bi bi-bullseye"></i> Luyện tập riêng các câu hay sai</button>
+        </div>
       </div>
       <p id="summaryStatsText" class="text-muted"></p>
       <div class="row g-4 mb-4">

@@ -51,6 +51,12 @@ async function renderHome() {
   renderChapterCards(manifest, openChapter);
   const all = await loadAllChapters();
   renderSummary(manifest, all);
+  updateFlaggedBadge();
+}
+
+function updateFlaggedBadge() {
+  const el = document.getElementById('flaggedTotalBadge');
+  if (el) el.textContent = Object.keys(Storage.getFlagged()).length;
 }
 
 /** ====== TRANG CHƯƠNG: chọn chủ đề + cấu hình ====== */
@@ -478,7 +484,10 @@ function renderResult(attempt) {
     })
     .join('');
 
-  document.getElementById('btnRetryChapter').onclick = () => openChapter(attempt.chapterId);
+  document.getElementById('btnRetryChapter').onclick = () =>
+    (attempt.chapterId === 'FLAGGED' || attempt.chapterId === 'WRONG')
+      ? renderHome()
+      : openChapter(attempt.chapterId);
   document.getElementById('btnBackHomeFromResult').onclick = renderHome;
 }
 
@@ -507,6 +516,38 @@ document.getElementById('btnPracticeWrong').addEventListener('click', async () =
     type: 'wrong',
     chapterId: 'WRONG',
     chapterName: 'Luyện tập câu hay sai',
+    topicId: null,
+    topicName: null,
+    questions
+  });
+});
+
+/** ====== LÀM LẠI CÂU ĐÃ GẮN CỜ ====== */
+document.getElementById('btnPracticeFlagged').addEventListener('click', async () => {
+  const flagged = Storage.getFlagged();
+  const ids = new Set(Object.keys(flagged));
+  if (ids.size === 0) {
+    alert('Chưa có câu nào được gắn cờ! Bấm "Gắn cờ" khi làm bài để đánh dấu câu cần làm lại.');
+    return;
+  }
+  const all = await loadAllChapters();
+  const questions = [];
+  const seen = new Set();
+  for (const chapter of Object.values(all)) {
+    for (const topic of chapter.topics) {
+      for (const q of topic.questions) {
+        const key = String(q.id);
+        if (ids.has(key) && !seen.has(key)) {
+          seen.add(key);
+          questions.push({ ...q, _topicName: topic.topicName });
+        }
+      }
+    }
+  }
+  startQuizConfig({
+    type: 'flagged',
+    chapterId: 'FLAGGED',
+    chapterName: 'Làm lại câu đã gắn cờ',
     topicId: null,
     topicName: null,
     questions
