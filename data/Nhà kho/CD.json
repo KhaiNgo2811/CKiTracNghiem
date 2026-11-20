@@ -7328,6 +7328,306 @@
           },
           "correctAnswer": "A",
           "explanation": "Sau đó lấy phần đuôi (consequent) của các chuỗi đó và cộng điểm từng item."
+        },
+        {
+          "id": "CDV7_13",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C⟩; s2 = ⟨A,B⟩; s3 = ⟨A,B,C,D⟩; s4 = ⟨B,C⟩; s5 = ⟨A,B,E⟩. Prediction Tree (đã áp dụng x = AB): root → x → C → D; x → E; root → B → C. Inverted Index: A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3; E: s5. Chuỗi con AB xuất hiện trong bao nhiêu chuỗi huấn luyện (nên được thay bằng ký hiệu x)?",
+          "options": {
+            "A": "5 chuỗi (s1 đến s5)",
+            "B": "3 chuỗi (s1, s3, s5)",
+            "C": "4 chuỗi (s1, s2, s3, s5)",
+            "D": "2 chuỗi (s3, s5)"
+          },
+          "correctAnswer": "C",
+          "explanation": "AB có trong s1, s2, s3, s5. s4 = ⟨B,C⟩ không có A nên không chứa AB."
+        },
+        {
+          "id": "CDV7_14",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C⟩; s2 = ⟨A,B⟩; s3 = ⟨A,B,C,D⟩; s4 = ⟨B,C⟩; s5 = ⟨A,B,E⟩. Prediction Tree (đã áp dụng x = AB): root → x → C → D; x → E; root → B → C. Inverted Index: A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3; E: s5. Chưa nén, Prediction Tree có bao nhiêu nút (không tính root)?",
+          "options": {
+            "A": "5 nút",
+            "B": "7 nút",
+            "C": "6 nút",
+            "D": "9 nút"
+          },
+          "correctAnswer": "B",
+          "explanation": "Nhánh trái: A, B, C, D, E (5 nút) + nhánh phải: B, C (2 nút) = **7**."
+        },
+        {
+          "id": "CDV7_15",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C⟩; s2 = ⟨A,B⟩; s3 = ⟨A,B,C,D⟩; s4 = ⟨B,C⟩; s5 = ⟨A,B,E⟩. Prediction Tree (đã áp dụng x = AB): root → x → C → D; x → E; root → B → C. Inverted Index: A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3; E: s5. Sau khi áp dụng FSC với x = AB, Prediction Tree có bao nhiêu nút (không tính root)?",
+          "options": {
+            "A": "7 nút",
+            "B": "5 nút",
+            "C": "4 nút",
+            "D": "6 nút"
+          },
+          "correctAnswer": "D",
+          "explanation": "x, C, D, E (nhánh trái) + B, C (nhánh phải, không chứa AB nên giữ nguyên) = **6**."
+        },
+        {
+          "id": "CDV7_16",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C⟩; s2 = ⟨A,B⟩; s3 = ⟨A,B,C,D⟩; s4 = ⟨B,C⟩; s5 = ⟨A,B,E⟩. Prediction Tree (đã áp dụng x = AB): root → x → C → D; x → E; root → B → C. Inverted Index: A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3; E: s5. Nếu áp dụng thêm SBC để gộp nhánh đơn root → B → C thành một nút \"BC\", cây còn bao nhiêu nút (không tính root)?",
+          "options": {
+            "A": "6 nút",
+            "B": "5 nút",
+            "C": "4 nút",
+            "D": "3 nút"
+          },
+          "correctAnswer": "B",
+          "explanation": "x, C, D, E và BC = **5**. Nhánh x → C → D không gộp được vì x rẽ thành 2 nhánh (C và E)."
+        },
+        {
+          "id": "CDV7_17",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C⟩; s2 = ⟨A,B⟩; s3 = ⟨A,B,C,D⟩; s4 = ⟨B,C⟩; s5 = ⟨A,B,E⟩. Prediction Tree (đã áp dụng x = AB): root → x → C → D; x → E; root → B → C. Inverted Index: A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3; E: s5. Nhánh nào trong cây có thể gộp bằng SBC (Simple Branches Compression)?",
+          "options": {
+            "A": "Nút x vì x có hai nhánh con C và E",
+            "B": "Nhánh x → E vì E là lá",
+            "C": "Không có nhánh nào gộp được",
+            "D": "Nhánh root → B → C (mỗi nút chỉ có một con, không rẽ nhánh)"
+          },
+          "correctAnswer": "D",
+          "explanation": "**SBC** gộp chuỗi các nút chỉ có một con thành một nút. x có 2 con nên không gộp."
+        },
+        {
+          "id": "CDV7_18",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C⟩; s2 = ⟨A,B⟩; s3 = ⟨A,B,C,D⟩; s4 = ⟨B,C⟩; s5 = ⟨A,B,E⟩. Prediction Tree (đã áp dụng x = AB): root → x → C → D; x → E; root → B → C. Inverted Index: A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3; E: s5. Lookup Table trỏ chuỗi s3 tới nút nào của Prediction Tree?",
+          "options": {
+            "A": "Nút x",
+            "B": "Nút C dưới nhánh B",
+            "C": "Nút D (nút cuối của đường x → C → D)",
+            "D": "Nút root"
+          },
+          "correctAnswer": "C",
+          "explanation": "Lookup Table trỏ mỗi chuỗi tới **nút cuối** của nó. s3 = ⟨A,B,C,D⟩ ↔ x → C → D."
+        },
+        {
+          "id": "CDV7_19",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C⟩; s2 = ⟨A,B⟩; s3 = ⟨A,B,C,D⟩; s4 = ⟨B,C⟩; s5 = ⟨A,B,E⟩. Prediction Tree (đã áp dụng x = AB): root → x → C → D; x → E; root → B → C. Inverted Index: A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3; E: s5. Lookup Table trỏ chuỗi s2 = ⟨A,B⟩ tới nút nào (sau khi nén x = AB)?",
+          "options": {
+            "A": "Nút x",
+            "B": "Nút B bên nhánh phải",
+            "C": "Nút C",
+            "D": "Nút E"
+          },
+          "correctAnswer": "A",
+          "explanation": "s2 = ⟨A,B⟩ chính là x nên nút cuối là **x**. (Trước khi nén là nút B dưới A.)"
+        },
+        {
+          "id": "CDV7_20",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C⟩; s2 = ⟨A,B⟩; s3 = ⟨A,B,C,D⟩; s4 = ⟨B,C⟩; s5 = ⟨A,B,E⟩. Prediction Tree (đã áp dụng x = AB): root → x → C → D; x → E; root → B → C. Inverted Index: A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3; E: s5. Các chuỗi nào chứa CẢ A và C?",
+          "options": {
+            "A": "s1, s2 và s3",
+            "B": "s3 và s4",
+            "C": "s1, s3 và s4",
+            "D": "s1 và s3"
+          },
+          "correctAnswer": "D",
+          "explanation": "A: {s1,s2,s3,s5} ∩ C: {s1,s3,s4} = **{s1, s3}**."
+        },
+        {
+          "id": "CDV7_21",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C⟩; s2 = ⟨A,B⟩; s3 = ⟨A,B,C,D⟩; s4 = ⟨B,C⟩; s5 = ⟨A,B,E⟩. Prediction Tree (đã áp dụng x = AB): root → x → C → D; x → E; root → B → C. Inverted Index: A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3; E: s5. Các chuỗi nào chứa CẢ B và C?",
+          "options": {
+            "A": "s1 và s3",
+            "B": "s1, s3 và s4",
+            "C": "s3 và s4",
+            "D": "s1, s2 và s3"
+          },
+          "correctAnswer": "B",
+          "explanation": "B có trong mọi chuỗi; C: {s1,s3,s4} → giao = **{s1, s3, s4}**."
+        },
+        {
+          "id": "CDV7_22",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C⟩; s2 = ⟨A,B⟩; s3 = ⟨A,B,C,D⟩; s4 = ⟨B,C⟩; s5 = ⟨A,B,E⟩. Prediction Tree (đã áp dụng x = AB): root → x → C → D; x → E; root → B → C. Inverted Index: A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3; E: s5. Dự đoán với truy vấn ⟨A,B⟩ (đếm số chuỗi có item đó trong phần đuôi). Item nào có điểm cao nhất?",
+          "options": {
+            "A": "D",
+            "B": "E",
+            "C": "A",
+            "D": "C"
+          },
+          "correctAnswer": "D",
+          "explanation": "Chuỗi chứa A và B: s1 (đuôi: C), s2 (đuôi rỗng), s3 (đuôi: C, D), s5 (đuôi: E). C:2, D:1, E:1 → **C**."
+        },
+        {
+          "id": "CDV7_23",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C⟩; s2 = ⟨A,B⟩; s3 = ⟨A,B,C,D⟩; s4 = ⟨B,C⟩; s5 = ⟨A,B,E⟩. Prediction Tree (đã áp dụng x = AB): root → x → C → D; x → E; root → B → C. Inverted Index: A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3; E: s5. Dự đoán với truy vấn ⟨A⟩. Item nào có điểm cao nhất?",
+          "options": {
+            "A": "C",
+            "B": "B",
+            "C": "D",
+            "D": "E"
+          },
+          "correctAnswer": "B",
+          "explanation": "Đuôi sau A: s1: B,C; s2: B; s3: B,C,D; s5: B,E. B xuất hiện 4 lần → **B** cao nhất."
+        },
+        {
+          "id": "CDV7_24",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C⟩; s2 = ⟨A,B⟩; s3 = ⟨A,B,C,D⟩; s4 = ⟨B,C⟩; s5 = ⟨A,B,E⟩. Prediction Tree (đã áp dụng x = AB): root → x → C → D; x → E; root → B → C. Inverted Index: A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3; E: s5. Dự đoán với truy vấn ⟨B⟩. Item nào có điểm cao nhất?",
+          "options": {
+            "A": "D",
+            "B": "E",
+            "C": "C",
+            "D": "A"
+          },
+          "correctAnswer": "C",
+          "explanation": "Đuôi sau B: s1: C; s2: rỗng; s3: C,D; s4: C; s5: E. C xuất hiện 3 lần → **C**."
+        },
+        {
+          "id": "CDV7_25",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C⟩; s2 = ⟨A,B⟩; s3 = ⟨A,B,C,D⟩; s4 = ⟨B,C⟩; s5 = ⟨A,B,E⟩. Prediction Tree (đã áp dụng x = AB): root → x → C → D; x → E; root → B → C. Inverted Index: A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3; E: s5. Dự đoán với truy vấn ⟨B,C⟩. Item nào xuất hiện trong phần đuôi của các chuỗi khớp?",
+          "options": {
+            "A": "Chỉ D (từ s3)",
+            "B": "E (từ s5)",
+            "C": "C và D",
+            "D": "Không có item nào"
+          },
+          "correctAnswer": "A",
+          "explanation": "Chuỗi chứa B và C: s1, s3, s4. Đuôi: s1 rỗng, s3: D, s4 rỗng → chỉ **D**."
+        },
+        {
+          "id": "CDV7_26",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C⟩; s2 = ⟨A,B⟩; s3 = ⟨A,B,C,D⟩; s4 = ⟨B,C⟩; s5 = ⟨A,B,E⟩. Prediction Tree (đã áp dụng x = AB): root → x → C → D; x → E; root → B → C. Inverted Index: A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3; E: s5. Chuỗi huấn luyện nào KHÔNG chứa item A?",
+          "options": {
+            "A": "s2 = ⟨A,B⟩",
+            "B": "s5 = ⟨A,B,E⟩",
+            "C": "s4 = ⟨B,C⟩",
+            "D": "s1 = ⟨A,B,C⟩"
+          },
+          "correctAnswer": "C",
+          "explanation": "Hàng A của Inverted Index có 0 ở cột s4."
+        },
+        {
+          "id": "CDV7_27",
+          "question": "Khi dự đoán với CPT, khi nút x = AB xuất hiện trong cây thì nó được hiểu thế nào?",
+          "options": {
+            "A": "Nút x đại diện cho chuỗi con A rồi B (được giải nén lại thành A, B khi dùng)",
+            "B": "x là một item mới hoàn toàn trong dữ liệu gốc",
+            "C": "x có nghĩa là A hoặc B",
+            "D": "x bị bỏ qua khi dự đoán"
+          },
+          "correctAnswer": "A",
+          "explanation": "FSC chỉ là nén **biểu diễn** cây; ý nghĩa vẫn là chuỗi con AB."
+        },
+        {
+          "id": "CDV7_28",
+          "question": "Chuỗi con thường xuyên là CD, ta đặt y = CD rồi thay vào Prediction Tree. Đây là chiến lược nào?",
+          "options": {
+            "A": "SBC (Simple Branches Compression)",
+            "B": "FSC (Frequent Subsequence Compression)",
+            "C": "PNR (Prediction with improved Noise Reduction)",
+            "D": "Inverted Index"
+          },
+          "correctAnswer": "B",
+          "explanation": "Thay chuỗi con xuất hiện thường xuyên bằng ký hiệu mới → **FSC** (giống x = AB)."
+        },
+        {
+          "id": "CDV7_29",
+          "question": "Mục đích chung của FSC và SBC trong CPT+ là gì?",
+          "options": {
+            "A": "Tăng số chiều của dữ liệu đầu vào",
+            "B": "Tạo thêm chuỗi huấn luyện mới",
+            "C": "Thay thế hoàn toàn Inverted Index",
+            "D": "Giảm kích thước (số nút) của Prediction Tree để tiết kiệm bộ nhớ và dự đoán nhanh hơn"
+          },
+          "correctAnswer": "D",
+          "explanation": "Hai chiến lược **nén cây**; PNR mới cải thiện chất lượng dự đoán."
+        },
+        {
+          "id": "CDV7_30",
+          "question": "PNR (Prediction with improved Noise Reduction) giúp gì cho dự đoán?",
+          "options": {
+            "A": "Nén các nhánh đơn của Prediction Tree",
+            "B": "Thay chuỗi con thường xuyên bằng ký hiệu mới",
+            "C": "Bỏ qua các item nhiễu/hiếm trong chuỗi truy vấn để vẫn tìm được chuỗi khớp và dự đoán chính xác hơn",
+            "D": "Tăng thêm số lượng nút của cây"
+          },
+          "correctAnswer": "C",
+          "explanation": "**PNR** thuộc giai đoạn dự đoán, giảm ảnh hưởng nhiễu; FSC/SBC thuộc giai đoạn xây cây."
+        },
+        {
+          "id": "CDV7_31",
+          "question": "Khi dùng CPT, thứ tự các item trong truy vấn ⟨D, C⟩ có bắt buộc phải khớp đúng thứ tự trong chuỗi huấn luyện không?",
+          "options": {
+            "A": "Không, chỉ cần chuỗi huấn luyện chứa đủ các item D và C (dùng Inverted Index)",
+            "B": "Có, phải đúng thứ tự D rồi C",
+            "C": "Có, phải liền kề nhau",
+            "D": "Không cần chứa cả hai item"
+          },
+          "correctAnswer": "A",
+          "explanation": "CPT lấy giao các tập chuỗi từ Inverted Index nên **không quan tâm thứ tự** trong truy vấn."
+        },
+        {
+          "id": "CDV7_32",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C,D,F⟩; s2 = ⟨D,C,B,E⟩; s3 = ⟨E,A,D,C,B⟩; s4 = ⟨E,G,A,D,B,C⟩. Với truy vấn ⟨D, C⟩, phần đuôi (consequent) của s2 là gì?",
+          "options": {
+            "A": "⟨E⟩",
+            "B": "⟨C, B, E⟩",
+            "C": "⟨B, E⟩",
+            "D": "⟨D, C⟩"
+          },
+          "correctAnswer": "C",
+          "explanation": "s2 = ⟨D,C,B,E⟩: D, C đã xuất hiện ở vị trí 1, 2 → phần sau là **⟨B, E⟩**."
+        },
+        {
+          "id": "CDV7_33",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C,D,F⟩; s2 = ⟨D,C,B,E⟩; s3 = ⟨E,A,D,C,B⟩; s4 = ⟨E,G,A,D,B,C⟩. Với truy vấn ⟨D, C⟩, phần đuôi của s3 là gì?",
+          "options": {
+            "A": "⟨B⟩",
+            "B": "⟨B, E⟩",
+            "C": "⟨A, D⟩",
+            "D": "Rỗng"
+          },
+          "correctAnswer": "A",
+          "explanation": "s3 = ⟨E,A,D,C,B⟩: sau C (vị trí 4) chỉ còn **B**."
+        },
+        {
+          "id": "CDV7_34",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C,D,F⟩; s2 = ⟨D,C,B,E⟩; s3 = ⟨E,A,D,C,B⟩; s4 = ⟨E,G,A,D,B,C⟩. Với truy vấn ⟨D, C⟩, những chuỗi nào khớp (chứa cả D và C)?",
+          "options": {
+            "A": "Chỉ s2 và s3",
+            "B": "Chỉ s1 và s2",
+            "C": "Chỉ s3 và s4",
+            "D": "Cả s1, s2, s3 và s4"
+          },
+          "correctAnswer": "D",
+          "explanation": "Cả bốn chuỗi đều chứa D và C (thứ tự không quan trọng)."
+        },
+        {
+          "id": "CDV7_35",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C,D,F⟩; s2 = ⟨D,C,B,E⟩; s3 = ⟨E,A,D,C,B⟩; s4 = ⟨E,G,A,D,B,C⟩. Với truy vấn ⟨D, C⟩, item B xuất hiện trong phần đuôi của bao nhiêu chuỗi?",
+          "options": {
+            "A": "1 chuỗi",
+            "B": "2 chuỗi (s2 và s3)",
+            "C": "3 chuỗi",
+            "D": "4 chuỗi"
+          },
+          "correctAnswer": "B",
+          "explanation": "Đuôi: s1 = ⟨F⟩; s2 = ⟨B,E⟩; s3 = ⟨B⟩; s4 = rỗng → B có trong **2** chuỗi, nhiều nhất."
+        },
+        {
+          "id": "CDV7_36",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C,D,F⟩; s2 = ⟨D,C,B,E⟩; s3 = ⟨E,A,D,C,B⟩; s4 = ⟨E,G,A,D,B,C⟩. Với truy vấn ⟨D, C⟩, item nào KHÔNG có điểm (không xuất hiện trong phần đuôi nào)?",
+          "options": {
+            "A": "B",
+            "B": "E",
+            "C": "F",
+            "D": "G"
+          },
+          "correctAnswer": "D",
+          "explanation": "Đuôi: ⟨F⟩, ⟨B,E⟩, ⟨B⟩, rỗng → B, E, F có điểm; **G** thì không."
+        },
+        {
+          "id": "CDV7_37",
+          "question": "Tập huấn luyện: s1 = ⟨A,B,C,D,F⟩; s2 = ⟨D,C,B,E⟩; s3 = ⟨E,A,D,C,B⟩; s4 = ⟨E,G,A,D,B,C⟩. Với truy vấn ⟨E, A⟩, những chuỗi nào khớp?",
+          "options": {
+            "A": "s1 và s3",
+            "B": "s3 và s4",
+            "C": "s2 và s3",
+            "D": "s1, s3 và s4"
+          },
+          "correctAnswer": "B",
+          "explanation": "Chứa cả E và A: s3 và s4. (s1 không có E; s2 không có A.)"
         }
       ]
     },

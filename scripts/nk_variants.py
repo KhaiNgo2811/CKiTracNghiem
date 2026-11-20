@@ -369,6 +369,88 @@ it.append(('Cùng Inverted Index (A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3
 it.append(('Dùng CPT dự đoán với chuỗi truy vấn ⟨D, C⟩: bước đầu tiên là gì?', 'Tìm các chuỗi huấn luyện chứa cả D và C (dùng Inverted Index)',
            ['Tính PageRank của D và C', 'Xóa mọi chuỗi chứa D hoặc C', 'Sắp xếp item theo bảng chữ cái'],
            'Sau đó lấy phần đuôi (consequent) của các chuỗi đó và cộng điểm từng item.'))
+
+# ---- Bổ sung: bộ CPT+ theo hình trong đề (x = AB) ----
+FIG = ('Tập huấn luyện: s1 = ⟨A,B,C⟩; s2 = ⟨A,B⟩; s3 = ⟨A,B,C,D⟩; s4 = ⟨B,C⟩; s5 = ⟨A,B,E⟩. '
+       'Prediction Tree (đã áp dụng x = AB): root → x → C → D; x → E; root → B → C. '
+       'Inverted Index: A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3; E: s5. ')
+it.append((FIG + 'Chuỗi con AB xuất hiện trong bao nhiêu chuỗi huấn luyện (nên được thay bằng ký hiệu x)?', '4 chuỗi (s1, s2, s3, s5)',
+           ['5 chuỗi (s1 đến s5)', '3 chuỗi (s1, s3, s5)', '2 chuỗi (s3, s5)'],
+           'AB có trong s1, s2, s3, s5. s4 = ⟨B,C⟩ không có A nên không chứa AB.'))
+it.append((FIG + 'Chưa nén, Prediction Tree có bao nhiêu nút (không tính root)?', '7 nút',
+           ['5 nút', '6 nút', '9 nút'],
+           'Nhánh trái: A, B, C, D, E (5 nút) + nhánh phải: B, C (2 nút) = **7**.'))
+it.append((FIG + 'Sau khi áp dụng FSC với x = AB, Prediction Tree có bao nhiêu nút (không tính root)?', '6 nút',
+           ['7 nút', '5 nút', '4 nút'],
+           'x, C, D, E (nhánh trái) + B, C (nhánh phải, không chứa AB nên giữ nguyên) = **6**.'))
+it.append((FIG + 'Nếu áp dụng thêm SBC để gộp nhánh đơn root → B → C thành một nút "BC", cây còn bao nhiêu nút (không tính root)?', '5 nút',
+           ['6 nút', '4 nút', '3 nút'],
+           'x, C, D, E và BC = **5**. Nhánh x → C → D không gộp được vì x rẽ thành 2 nhánh (C và E).'))
+it.append((FIG + 'Nhánh nào trong cây có thể gộp bằng SBC (Simple Branches Compression)?', 'Nhánh root → B → C (mỗi nút chỉ có một con, không rẽ nhánh)',
+           ['Nút x vì x có hai nhánh con C và E', 'Nhánh x → E vì E là lá', 'Không có nhánh nào gộp được'],
+           '**SBC** gộp chuỗi các nút chỉ có một con thành một nút. x có 2 con nên không gộp.'))
+it.append((FIG + 'Lookup Table trỏ chuỗi s3 tới nút nào của Prediction Tree?', 'Nút D (nút cuối của đường x → C → D)',
+           ['Nút x', 'Nút C dưới nhánh B', 'Nút root'],
+           'Lookup Table trỏ mỗi chuỗi tới **nút cuối** của nó. s3 = ⟨A,B,C,D⟩ ↔ x → C → D.'))
+it.append((FIG + 'Lookup Table trỏ chuỗi s2 = ⟨A,B⟩ tới nút nào (sau khi nén x = AB)?', 'Nút x',
+           ['Nút B bên nhánh phải', 'Nút C', 'Nút E'],
+           's2 = ⟨A,B⟩ chính là x nên nút cuối là **x**. (Trước khi nén là nút B dưới A.)'))
+it.append((FIG + 'Các chuỗi nào chứa CẢ A và C?', 's1 và s3',
+           ['s1, s2 và s3', 's3 và s4', 's1, s3 và s4'],
+           'A: {s1,s2,s3,s5} ∩ C: {s1,s3,s4} = **{s1, s3}**.'))
+it.append((FIG + 'Các chuỗi nào chứa CẢ B và C?', 's1, s3 và s4',
+           ['s1 và s3', 's3 và s4', 's1, s2 và s3'],
+           'B có trong mọi chuỗi; C: {s1,s3,s4} → giao = **{s1, s3, s4}**.'))
+it.append((FIG + 'Dự đoán với truy vấn ⟨A,B⟩ (đếm số chuỗi có item đó trong phần đuôi). Item nào có điểm cao nhất?', 'C',
+           ['D', 'E', 'A'],
+           'Chuỗi chứa A và B: s1 (đuôi: C), s2 (đuôi rỗng), s3 (đuôi: C, D), s5 (đuôi: E). C:2, D:1, E:1 → **C**.'))
+it.append((FIG + 'Dự đoán với truy vấn ⟨A⟩. Item nào có điểm cao nhất?', 'B',
+           ['C', 'D', 'E'],
+           'Đuôi sau A: s1: B,C; s2: B; s3: B,C,D; s5: B,E. B xuất hiện 4 lần → **B** cao nhất.'))
+it.append((FIG + 'Dự đoán với truy vấn ⟨B⟩. Item nào có điểm cao nhất?', 'C',
+           ['D', 'E', 'A'],
+           'Đuôi sau B: s1: C; s2: rỗng; s3: C,D; s4: C; s5: E. C xuất hiện 3 lần → **C**.'))
+it.append((FIG + 'Dự đoán với truy vấn ⟨B,C⟩. Item nào xuất hiện trong phần đuôi của các chuỗi khớp?', 'Chỉ D (từ s3)',
+           ['E (từ s5)', 'C và D', 'Không có item nào'],
+           'Chuỗi chứa B và C: s1, s3, s4. Đuôi: s1 rỗng, s3: D, s4 rỗng → chỉ **D**.'))
+it.append((FIG + 'Chuỗi huấn luyện nào KHÔNG chứa item A?', 's4 = ⟨B,C⟩',
+           ['s2 = ⟨A,B⟩', 's5 = ⟨A,B,E⟩', 's1 = ⟨A,B,C⟩'],
+           'Hàng A của Inverted Index có 0 ở cột s4.'))
+it.append(('Khi dự đoán với CPT, khi nút x = AB xuất hiện trong cây thì nó được hiểu thế nào?', 'Nút x đại diện cho chuỗi con A rồi B (được giải nén lại thành A, B khi dùng)',
+           ['x là một item mới hoàn toàn trong dữ liệu gốc', 'x có nghĩa là A hoặc B', 'x bị bỏ qua khi dự đoán'],
+           'FSC chỉ là nén **biểu diễn** cây; ý nghĩa vẫn là chuỗi con AB.'))
+it.append(('Chuỗi con thường xuyên là CD, ta đặt y = CD rồi thay vào Prediction Tree. Đây là chiến lược nào?', 'FSC (Frequent Subsequence Compression)',
+           ['SBC (Simple Branches Compression)', 'PNR (Prediction with improved Noise Reduction)', 'Inverted Index'],
+           'Thay chuỗi con xuất hiện thường xuyên bằng ký hiệu mới → **FSC** (giống x = AB).'))
+it.append(('Mục đích chung của FSC và SBC trong CPT+ là gì?', 'Giảm kích thước (số nút) của Prediction Tree để tiết kiệm bộ nhớ và dự đoán nhanh hơn',
+           ['Tăng số chiều của dữ liệu đầu vào', 'Tạo thêm chuỗi huấn luyện mới', 'Thay thế hoàn toàn Inverted Index'],
+           'Hai chiến lược **nén cây**; PNR mới cải thiện chất lượng dự đoán.'))
+it.append(('PNR (Prediction with improved Noise Reduction) giúp gì cho dự đoán?', 'Bỏ qua các item nhiễu/hiếm trong chuỗi truy vấn để vẫn tìm được chuỗi khớp và dự đoán chính xác hơn',
+           ['Nén các nhánh đơn của Prediction Tree', 'Thay chuỗi con thường xuyên bằng ký hiệu mới', 'Tăng thêm số lượng nút của cây'],
+           '**PNR** thuộc giai đoạn dự đoán, giảm ảnh hưởng nhiễu; FSC/SBC thuộc giai đoạn xây cây.'))
+it.append(('Khi dùng CPT, thứ tự các item trong truy vấn ⟨D, C⟩ có bắt buộc phải khớp đúng thứ tự trong chuỗi huấn luyện không?', 'Không, chỉ cần chuỗi huấn luyện chứa đủ các item D và C (dùng Inverted Index)',
+           ['Có, phải đúng thứ tự D rồi C', 'Có, phải liền kề nhau', 'Không cần chứa cả hai item'],
+           'CPT lấy giao các tập chuỗi từ Inverted Index nên **không quan tâm thứ tự** trong truy vấn.'))
+HOT_SEQ = 'Tập huấn luyện: s1 = ⟨A,B,C,D,F⟩; s2 = ⟨D,C,B,E⟩; s3 = ⟨E,A,D,C,B⟩; s4 = ⟨E,G,A,D,B,C⟩. '
+it.append((HOT_SEQ + 'Với truy vấn ⟨D, C⟩, phần đuôi (consequent) của s2 là gì?', '⟨B, E⟩',
+           ['⟨E⟩', '⟨C, B, E⟩', '⟨D, C⟩'],
+           's2 = ⟨D,C,B,E⟩: D, C đã xuất hiện ở vị trí 1, 2 → phần sau là **⟨B, E⟩**.'))
+it.append((HOT_SEQ + 'Với truy vấn ⟨D, C⟩, phần đuôi của s3 là gì?', '⟨B⟩',
+           ['⟨B, E⟩', '⟨A, D⟩', 'Rỗng'],
+           's3 = ⟨E,A,D,C,B⟩: sau C (vị trí 4) chỉ còn **B**.'))
+it.append((HOT_SEQ + 'Với truy vấn ⟨D, C⟩, những chuỗi nào khớp (chứa cả D và C)?', 'Cả s1, s2, s3 và s4',
+           ['Chỉ s2 và s3', 'Chỉ s1 và s2', 'Chỉ s3 và s4'],
+           'Cả bốn chuỗi đều chứa D và C (thứ tự không quan trọng).'))
+it.append((HOT_SEQ + 'Với truy vấn ⟨D, C⟩, item B xuất hiện trong phần đuôi của bao nhiêu chuỗi?', '2 chuỗi (s2 và s3)',
+           ['1 chuỗi', '3 chuỗi', '4 chuỗi'],
+           'Đuôi: s1 = ⟨F⟩; s2 = ⟨B,E⟩; s3 = ⟨B⟩; s4 = rỗng → B có trong **2** chuỗi, nhiều nhất.'))
+it.append((HOT_SEQ + 'Với truy vấn ⟨D, C⟩, item nào KHÔNG có điểm (không xuất hiện trong phần đuôi nào)?', 'G',
+           ['B', 'E', 'F'],
+           'Đuôi: ⟨F⟩, ⟨B,E⟩, ⟨B⟩, rỗng → B, E, F có điểm; **G** thì không.'))
+it.append((HOT_SEQ + 'Với truy vấn ⟨E, A⟩, những chuỗi nào khớp?', 's3 và s4',
+           ['s1 và s3', 's2 và s3', 's1, s3 và s4'],
+           'Chứa cả E và A: s3 và s4. (s1 không có E; s2 không có A.)'))
+
 T.append(('Biến thể: CPT / CPT+ (FSC, SBC, PNR) (câu 38, 39)', it))
 
 # ---------- 8. Kiến trúc, mô hình hóa, ELT ----------

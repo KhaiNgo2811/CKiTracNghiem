@@ -262,7 +262,7 @@ function isExerciseQuestion(q) {
   const text = String(q.question || '');
   const hasDigit = /\d/.test(text);
   const calc = /bao nhiêu|giá trị|xấp xỉ|tính|bằng|khoảng nào|chuẩn hóa thành|thứ tự|tập phổ biến|điểm dự đoán|cao nhất|thấp nhất|itemset|số /i.test(text);
-  return (hasDigit && calc && !/thường/i.test(text)) || /thứ tự (thăm|duyệt)/i.test(text);
+  return (hasDigit && calc && !/thường/i.test(text)) || /thứ tự (thăm|duyệt)/i.test(text) || /\bCPT\+?|Prediction Tree|Inverted Index/i.test(text);
 }
 
 function escAttr(t) {
