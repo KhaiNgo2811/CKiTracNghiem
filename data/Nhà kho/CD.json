@@ -7936,6 +7936,150 @@
           "images": [
             "assets/img/cpt_tree.png"
           ]
+        },
+        {
+          "id": "CDV7_38",
+          "question": "Cho cấu trúc CPT+ gồm Prediction Tree, Inverted Index và Lookup Table như hình (nén nhánh đơn). Trên cây, nhánh root → A → B → C không rẽ nhánh: A chỉ có một con là B, B chỉ có một con là C, và cả chuỗi đã được gộp thành một nút duy nhất \"ABC\". Hình ảnh minh họa cho chiến lược nén/tối ưu nào đã được áp dụng?",
+          "options": {
+            "A": "PNR (Prediction with improved Noise Reduction)",
+            "B": "FSC (Frequent Subsequence Compression)",
+            "C": "SBC (Simple Branches Compression)",
+            "D": "Không áp dụng chiến lược nào"
+          },
+          "correctAnswer": "C",
+          "explanation": "Chuỗi nút chỉ có một con (A → B → C, không rẽ nhánh) được gộp thành một nút → **SBC**. FSC thì thay chuỗi con thường xuyên bằng một ký hiệu mới (như x = AB); PNR thuộc giai đoạn dự đoán.",
+          "images": [
+            "assets/img/cpt_plus_sbc.png"
+          ]
+        },
+        {
+          "id": "CDV7_39",
+          "question": "Cho cấu trúc CPT+ gồm Prediction Tree, Inverted Index và Lookup Table như hình (chưa nén). Trên cây, nhánh root → A → B → C gồm các nút riêng lẻ A, B, C; không có nút nào gộp hoặc thay bằng ký hiệu mới. Hình ảnh minh họa cho chiến lược nén/tối ưu nào đã được áp dụng?",
+          "options": {
+            "A": "SBC (Simple Branches Compression)",
+            "B": "FSC (Frequent Subsequence Compression)",
+            "C": "PNR (Prediction with improved Noise Reduction)",
+            "D": "Không áp dụng chiến lược nào"
+          },
+          "correctAnswer": "D",
+          "explanation": "Cây vẫn giữ nguyên từng nút A, B, C → **chưa nén** (nếu gộp A → B → C thành \"ABC\" mới là SBC).",
+          "images": [
+            "assets/img/cpt_plus_none.png"
+          ]
+        },
+        {
+          "id": "CDV7_40",
+          "question": "Hình CPT+ nén nhánh đơn: s1 = ⟨A,B,C⟩; s2 = ⟨D,E⟩; s3 = ⟨D,B⟩; s4 = ⟨F⟩. Trong hình, nhánh nào đã được gộp thành một nút?",
+          "options": {
+            "A": "Nhánh D → E và D → B thành nút \"DEB\"",
+            "B": "Nhánh root → A → B → C (mỗi nút chỉ có một con) thành nút \"ABC\"",
+            "C": "Nhánh root → F thành nút \"root-F\"",
+            "D": "Không có nhánh nào được gộp"
+          },
+          "correctAnswer": "B",
+          "explanation": "Chỉ có chuỗi A → B → C không rẽ nhánh được gộp thành \"ABC\".",
+          "images": [
+            "assets/img/cpt_plus_sbc.png"
+          ]
+        },
+        {
+          "id": "CDV7_41",
+          "question": "Hình CPT+ nén nhánh đơn: s1 = ⟨A,B,C⟩; s2 = ⟨D,E⟩; s3 = ⟨D,B⟩; s4 = ⟨F⟩. Vì sao nút D (con của root) không thể gộp với E hoặc B bằng SBC?",
+          "options": {
+            "A": "Vì D là nút lá của cây",
+            "B": "Vì D không xuất hiện trong Inverted Index",
+            "C": "Vì D có số lần xuất hiện nhỏ nhất",
+            "D": "Vì D rẽ thành 2 nhánh con (E và B), SBC chỉ gộp các nút chỉ có một con"
+          },
+          "correctAnswer": "D",
+          "explanation": "SBC chỉ gộp các **nhánh đơn** (không rẽ nhánh). D có 2 con nên giữ nguyên.",
+          "images": [
+            "assets/img/cpt_plus_sbc.png"
+          ]
+        },
+        {
+          "id": "CDV7_42",
+          "question": "Hình CPT+ nén nhánh đơn: s1 = ⟨A,B,C⟩; s2 = ⟨D,E⟩; s3 = ⟨D,B⟩; s4 = ⟨F⟩. Chưa nén, Prediction Tree có bao nhiêu nút (không tính root)?",
+          "options": {
+            "A": "5 nút",
+            "B": "7 nút",
+            "C": "6 nút",
+            "D": "8 nút"
+          },
+          "correctAnswer": "B",
+          "explanation": "A, B, C (3) + D, E, B (3) + F (1) = **7**.",
+          "images": [
+            "assets/img/cpt_plus_sbc.png"
+          ]
+        },
+        {
+          "id": "CDV7_43",
+          "question": "Hình CPT+ nén nhánh đơn: s1 = ⟨A,B,C⟩; s2 = ⟨D,E⟩; s3 = ⟨D,B⟩; s4 = ⟨F⟩. Sau khi gộp A → B → C thành \"ABC\" (SBC), Prediction Tree có bao nhiêu nút (không tính root)?",
+          "options": {
+            "A": "7 nút",
+            "B": "6 nút",
+            "C": "3 nút",
+            "D": "5 nút"
+          },
+          "correctAnswer": "D",
+          "explanation": "ABC, D, E, B, F = **5** (giảm 2 nút so với 7).",
+          "images": [
+            "assets/img/cpt_plus_sbc.png"
+          ]
+        },
+        {
+          "id": "CDV7_44",
+          "question": "Hình CPT+ nén nhánh đơn: s1 = ⟨A,B,C⟩; s2 = ⟨D,E⟩; s3 = ⟨D,B⟩; s4 = ⟨F⟩. Lookup Table trỏ chuỗi s1 tới nút nào?",
+          "options": {
+            "A": "Nút \"ABC\" (nút cuối của chuỗi s1 sau khi nén)",
+            "B": "Nút root",
+            "C": "Nút D",
+            "D": "Nút F"
+          },
+          "correctAnswer": "A",
+          "explanation": "s1 = ⟨A,B,C⟩ đã gộp thành \"ABC\" nên Lookup Table trỏ tới nút **ABC**.",
+          "images": [
+            "assets/img/cpt_plus_sbc.png"
+          ]
+        },
+        {
+          "id": "CDV7_45",
+          "question": "Hình CPT+ nén nhánh đơn: s1 = ⟨A,B,C⟩; s2 = ⟨D,E⟩; s3 = ⟨D,B⟩; s4 = ⟨F⟩. Các chuỗi nào chứa item B (theo Inverted Index)?",
+          "options": {
+            "A": "Chỉ s1",
+            "B": "s2 và s3",
+            "C": "s1 và s3",
+            "D": "s1, s2 và s3"
+          },
+          "correctAnswer": "C",
+          "explanation": "Hàng B: 1 ở cột s1 và s3 → **{s1, s3}**.",
+          "images": [
+            "assets/img/cpt_plus_sbc.png"
+          ]
+        },
+        {
+          "id": "CDV7_46",
+          "question": "Dấu hiệu nào trên hình cho thấy SBC đã được áp dụng?",
+          "options": {
+            "A": "Một chuỗi các nút chỉ có một con (không rẽ nhánh) được gộp thành một nút duy nhất (ví dụ \"ABC\")",
+            "B": "Một chuỗi con thường xuyên được thay bằng ký hiệu mới (ví dụ x = AB)",
+            "C": "Các item nhiễu bị loại khỏi chuỗi truy vấn",
+            "D": "Inverted Index có thêm nhiều cột mới"
+          },
+          "correctAnswer": "A",
+          "explanation": "**SBC**: gộp nhánh đơn. Thay chuỗi con bằng ký hiệu (x = AB) là **FSC**; loại nhiễu khi dự đoán là **PNR**."
+        },
+        {
+          "id": "CDV7_47",
+          "question": "Phân biệt: hình có nút x và chú thích \"x = AB\" là dấu hiệu của chiến lược nào, còn hình có nút \"ABC\" gộp từ nhánh đơn A → B → C là chiến lược nào?",
+          "options": {
+            "A": "x = AB là SBC; nút \"ABC\" là FSC",
+            "B": "Cả hai đều là PNR",
+            "C": "x = AB là FSC; nút \"ABC\" gộp từ nhánh đơn là SBC",
+            "D": "Cả hai đều là FSC"
+          },
+          "correctAnswer": "C",
+          "explanation": "**FSC**: thay chuỗi con thường xuyên bằng ký hiệu mới. **SBC**: gộp các nút chỉ có một con."
         }
       ]
     },

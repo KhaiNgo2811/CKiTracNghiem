@@ -514,6 +514,48 @@ it.append((HOT_SEQ + 'Với truy vấn ⟨E, A⟩, những chuỗi nào khớp?'
            ['s1 và s3', 's2 và s3', 's1, s3 và s4'],
            'Chứa cả E và A: s3 và s4. (s1 không có E; s2 không có A.)'))
 
+
+# ---- Bổ sung: hình CPT+ với SBC (nhánh đơn gộp thành một nút) ----
+SBC_PRE = 'Cho cấu trúc CPT+ gồm Prediction Tree, Inverted Index và Lookup Table như hình (nén nhánh đơn). '
+NONE_PRE = 'Cho cấu trúc CPT+ gồm Prediction Tree, Inverted Index và Lookup Table như hình (chưa nén). '
+SBC_DATA = 'Hình CPT+ nén nhánh đơn: s1 = ⟨A,B,C⟩; s2 = ⟨D,E⟩; s3 = ⟨D,B⟩; s4 = ⟨F⟩. '
+# Câu chính: đáp án đúng ở vị trí C (SBC) như đề mẫu -> pos = 2
+it.append((SBC_PRE + 'Trên cây, nhánh root → A → B → C không rẽ nhánh: A chỉ có một con là B, B chỉ có một con là C, và cả chuỗi đã được gộp thành một nút duy nhất "ABC". '
+           'Hình ảnh minh họa cho chiến lược nén/tối ưu nào đã được áp dụng?',
+           'SBC (Simple Branches Compression)',
+           ['PNR (Prediction with improved Noise Reduction)', 'FSC (Frequent Subsequence Compression)', 'Không áp dụng chiến lược nào'],
+           'Chuỗi nút chỉ có một con (A → B → C, không rẽ nhánh) được gộp thành một nút → **SBC**. '
+           'FSC thì thay chuỗi con thường xuyên bằng một ký hiệu mới (như x = AB); PNR thuộc giai đoạn dự đoán.', 2))
+it.append((NONE_PRE + 'Trên cây, nhánh root → A → B → C gồm các nút riêng lẻ A, B, C; không có nút nào gộp hoặc thay bằng ký hiệu mới. '
+           'Hình ảnh minh họa cho chiến lược nén/tối ưu nào đã được áp dụng?',
+           'Không áp dụng chiến lược nào',
+           ['SBC (Simple Branches Compression)', 'FSC (Frequent Subsequence Compression)', 'PNR (Prediction with improved Noise Reduction)'],
+           'Cây vẫn giữ nguyên từng nút A, B, C → **chưa nén** (nếu gộp A → B → C thành "ABC" mới là SBC).', 3))
+it.append((SBC_DATA + 'Trong hình, nhánh nào đã được gộp thành một nút?', 'Nhánh root → A → B → C (mỗi nút chỉ có một con) thành nút "ABC"',
+           ['Nhánh D → E và D → B thành nút "DEB"', 'Nhánh root → F thành nút "root-F"', 'Không có nhánh nào được gộp'],
+           'Chỉ có chuỗi A → B → C không rẽ nhánh được gộp thành "ABC".'))
+it.append((SBC_DATA + 'Vì sao nút D (con của root) không thể gộp với E hoặc B bằng SBC?', 'Vì D rẽ thành 2 nhánh con (E và B), SBC chỉ gộp các nút chỉ có một con',
+           ['Vì D là nút lá của cây', 'Vì D không xuất hiện trong Inverted Index', 'Vì D có số lần xuất hiện nhỏ nhất'],
+           'SBC chỉ gộp các **nhánh đơn** (không rẽ nhánh). D có 2 con nên giữ nguyên.'))
+it.append((SBC_DATA + 'Chưa nén, Prediction Tree có bao nhiêu nút (không tính root)?', '7 nút',
+           ['5 nút', '6 nút', '8 nút'],
+           'A, B, C (3) + D, E, B (3) + F (1) = **7**.'))
+it.append((SBC_DATA + 'Sau khi gộp A → B → C thành "ABC" (SBC), Prediction Tree có bao nhiêu nút (không tính root)?', '5 nút',
+           ['7 nút', '6 nút', '3 nút'],
+           'ABC, D, E, B, F = **5** (giảm 2 nút so với 7).'))
+it.append((SBC_DATA + 'Lookup Table trỏ chuỗi s1 tới nút nào?', 'Nút "ABC" (nút cuối của chuỗi s1 sau khi nén)',
+           ['Nút root', 'Nút D', 'Nút F'],
+           's1 = ⟨A,B,C⟩ đã gộp thành "ABC" nên Lookup Table trỏ tới nút **ABC**.'))
+it.append((SBC_DATA + 'Các chuỗi nào chứa item B (theo Inverted Index)?', 's1 và s3',
+           ['Chỉ s1', 's2 và s3', 's1, s2 và s3'],
+           'Hàng B: 1 ở cột s1 và s3 → **{s1, s3}**.'))
+it.append(('Dấu hiệu nào trên hình cho thấy SBC đã được áp dụng?', 'Một chuỗi các nút chỉ có một con (không rẽ nhánh) được gộp thành một nút duy nhất (ví dụ "ABC")',
+           ['Một chuỗi con thường xuyên được thay bằng ký hiệu mới (ví dụ x = AB)', 'Các item nhiễu bị loại khỏi chuỗi truy vấn', 'Inverted Index có thêm nhiều cột mới'],
+           '**SBC**: gộp nhánh đơn. Thay chuỗi con bằng ký hiệu (x = AB) là **FSC**; loại nhiễu khi dự đoán là **PNR**.'))
+it.append(('Phân biệt: hình có nút x và chú thích "x = AB" là dấu hiệu của chiến lược nào, còn hình có nút "ABC" gộp từ nhánh đơn A → B → C là chiến lược nào?', 'x = AB là FSC; nút "ABC" gộp từ nhánh đơn là SBC',
+           ['x = AB là SBC; nút "ABC" là FSC', 'Cả hai đều là PNR', 'Cả hai đều là FSC'],
+           '**FSC**: thay chuỗi con thường xuyên bằng ký hiệu mới. **SBC**: gộp các nút chỉ có một con.'))
+
 T.append(('Biến thể: CPT / CPT+ (FSC, SBC, PNR) (câu 38, 39)', it))
 
 # ---------- 8. Kiến trúc, mô hình hóa, ELT ----------
@@ -622,6 +664,7 @@ T.append(('Biến thể: Graph, Blockchain, Vector, bảo mật & AI Act (câu 4
 
 if __name__ == '__main__':
     for name, items in T:
-        for q, c, w, e in items:
+        for item in items:
+            q, c, w = item[0], item[1], item[2]
             assert len(w) == 3 and len({c, *w}) == 4, (q, c, w)
         print(len(items), name)

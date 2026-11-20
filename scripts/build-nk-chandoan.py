@@ -150,14 +150,18 @@ IMG_BY_PREFIX = [
     ('Đồ thị liên kết 2:', ['assets/img/pagerank_graph2.png', 'assets/img/eq_pagerank.png']),
     ('Đồ thị liên kết 3:', ['assets/img/pagerank_graph3.png', 'assets/img/eq_pagerank.png']),
     ('Đồ thị liên kết:', ['assets/img/pagerank_graph.png', 'assets/img/eq_pagerank.png']),
+    ('Cho cấu trúc CPT+ gồm Prediction Tree, Inverted Index và Lookup Table như hình (nén nhánh đơn)', ['assets/img/cpt_plus_sbc.png']),
+    ('Cho cấu trúc CPT+ gồm Prediction Tree, Inverted Index và Lookup Table như hình (chưa nén)', ['assets/img/cpt_plus_none.png']),
+    ('Hình CPT+ nén nhánh đơn:', ['assets/img/cpt_plus_sbc.png']),
     ('Tập huấn luyện: s1 = ⟨A,B,C⟩', ['assets/img/cpt_plus_fsc.png']),
     ('Tập huấn luyện: s1 = ⟨A,B,C,D,F⟩', ['assets/img/cpt_tree.png']),
 ]
 for _i, (_name, _items) in enumerate(_nv.T, 1):
     _qs = []
-    for _k, (_q, _c, _w, _e) in enumerate(_items, 1):
+    for _k, _item in enumerate(_items, 1):
+        _q, _c, _w, _e = _item[:4]
         _id = f'CDV{_i}_{_k}'
-        _pos = _z.crc32(_id.encode()) % 4
+        _pos = _item[4] if len(_item) > 4 else _z.crc32(_id.encode()) % 4
         _o = list(_w); _o.insert(_pos, _c)
         _d = {'id': _id, 'question': _q, 'options': {'ABCD'[j]: _o[j] for j in range(4)}, 'correctAnswer': 'ABCD'[_pos], 'explanation': _e}
         for _pre, _imgs in IMG_BY_PREFIX:
