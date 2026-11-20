@@ -275,10 +275,7 @@ function renderQuestionCard(q, index) {
         </div>
         ${optionsHtml}
         ${q.correctAnswer ? renderCheckArea(q, selected, checked) : ''}
-        ${q.correctAnswer ? `<div class="mt-2 d-flex flex-wrap gap-2">
-          ${isExerciseQuestion(q) ? '<button type="button" class="btn btn-sm btn-outline-success btn-similar"><i class="bi bi-stars"></i> Làm câu tương tự</button>' : ''}
-          <button type="button" class="btn btn-sm btn-outline-info btn-ask-ai"><i class="bi bi-chat-dots"></i> Hỏi AI giải thích</button>
-        </div>` : ''}
+        ${q.correctAnswer && isExerciseQuestion(q) ? '<div class="mt-2"><button type="button" class="btn btn-sm btn-outline-success btn-similar"><i class="bi bi-stars"></i> Làm câu tương tự</button></div>' : ''}
       </div>
     </div>`;
 }
@@ -319,11 +316,6 @@ function attachOptionListeners(container, onlyQid) {
         card.outerHTML = renderQuestionCard(q, idx);
         attachOptionListeners(document.getElementById('quizBody'), qid);
       });
-    }
-
-    const askBtn = card.querySelector('.btn-ask-ai');
-    if (askBtn) {
-      askBtn.addEventListener('click', () => openChat(qid));
     }
 
     const similarBtn = card.querySelector('.btn-similar');
@@ -802,75 +794,3 @@ document.getElementById('btnSimilarNext').addEventListener('click', () => {
   similarState.idx += 1;
   renderSimilarQuestion();
 });
-
-/** ====== CHATBOT GIẢI THÍCH CÂU HỎI (gọi /api/chat) ====== */
-const chatState = { question: null, history: [], busy: false };
-
-function escHtml(t) {
-  return String(t == null ? '' : t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-}
-function chatFormat(t) {
-  return escHtml(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/`([^`]+)`/g, '<code>$1</code>').replace(/\n/g, '<br>');
-}
-function addChatBubble(role, html) {
-  const box = document.getElementById('chatMessages');
-  const div = document.createElement('div');
-  div.className = `d-flex mb-2 ${role === 'user' ? 'justify-content-end' : ''}`;
-  div.innerHTML = `<div class="p-2 rounded-3 ${role === 'user' ? 'bg-primary text-white' : 'bg-light border'}" style="max-width:88%">${html}</div>`;
-  box.appendChild(div);
-  div.scrollIntoView({ block: 'end', behavior: 'smooth' });
-  return div;
-}
-
-function openChat(qid) {
-  const q = Quiz.state && Quiz.state.questions.find((x) => String(x.id) === String(qid));
-  if (!q) return;
-  chatState.question = q;
-  chatState.history = [];
-  chatState.busy = false;
-  document.getElementById('chatMessages').innerHTML = '';
-  document.getElementById('chatSuggestions').classList.remove('d-none');
-  document.getElementById('chatInput').value = '';
-  document.getElementById('chatQuestionPreview').innerHTML = `<b>${escHtml(String(q.question).slice(0, 220))}${String(q.question).length > 220 ? '…' : ''}</b>`;
-  addChatBubble('assistant', 'Chào bạn! Mình sẽ giải thích câu hỏi này. Bạn chưa hiểu chỗ nào thì hỏi nhé, hoặc bấm gợi ý bên dưới.');
-  bootstrap.Modal.getOrCreateInstance(document.getElementById('chatModal')).show();
-}
-
-async function sendChat(text) {
-  const message = String(text || '').trim();
-  if (!message || chatState.busy || !chatState.question) return;
-  chatState.busy = true;
-  document.getElementById('chatSuggestions').classList.add('d-none');
-  document.getElementById('chatInput').value = '';
-  addChatBubble('user', escHtml(message));
-  const loading = addChatBubble('assistant', '<span class="spinner-border spinner-border-sm"></span> Đang suy nghĩ...');
-  const q = chatState.question;
-  try {
-    const res = await fetch('/api/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        message,
-        history: chatState.history,
-        question: { question: q.question, options: q.options, correctAnswer: q.correctAnswer, explanation: q.explanation || '', subject: currentSubject && currentSubject.name }
-      })
-    });
-    let data = {};
-    try { data = await res.json(); } catch (e) { /* không phải JSON */ }
-    if (!res.ok || !data.reply) throw new Error(data.error || 'Chatbot chỉ hoạt động trên bản đã deploy lên Vercel và đã cấu hình API key.');
-    chatState.history.push({ role: 'user', content: message }, { role: 'assistant', content: data.reply });
-    loading.remove();
-    addChatBubble('assistant', chatFormat(data.reply));
-  } catch (e) {
-    loading.remove();
-    addChatBubble('assistant', `<span class="text-danger"><i class="bi bi-exclamation-triangle"></i> ${escHtml(e.message)}</span>`);
-  } finally {
-    chatState.busy = false;
-  }
-}
-
-document.getElementById('chatForm').addEventListener('submit', (ev) => {
-  ev.preventDefault();
-  sendChat(document.getElementById('chatInput').value);
-});
-document.querySelectorAll('.chat-suggest').forEach((b) => b.addEventListener('click', () => sendChat(b.textContent)));
