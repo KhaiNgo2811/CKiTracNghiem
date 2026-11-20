@@ -556,6 +556,130 @@ it.append(('Phân biệt: hình có nút x và chú thích "x = AB" là dấu hi
            ['x = AB là SBC; nút "ABC" là FSC', 'Cả hai đều là PNR', 'Cả hai đều là FSC'],
            '**FSC**: thay chuỗi con thường xuyên bằng ký hiệu mới. **SBC**: gộp các nút chỉ có một con.'))
 
+
+# ---- Bổ sung đợt 2: các dạng câu hỏi cấu trúc CPT+ (đọc Inverted Index, đọc chuỗi, Lookup Table, đường đi, nút nén, nhận diện nén, dự đoán, lý do) ----
+# Hình 1 (x = AB): dùng FIG; hình 2 (SBC): SBC_DATA; hình 3 (FSC + SBC): BOTH_DATA
+BOTH_PRE = 'Cho cấu trúc CPT+ gồm Prediction Tree, Inverted Index và Lookup Table như hình (nén kết hợp). '
+BOTH_DATA = 'Hình CPT+ nén kết hợp: s1 = ⟨A,B,C⟩; s2 = ⟨A,B,D⟩; s3 = ⟨E,F⟩; s4 = ⟨B,E⟩. Cây: root → x → C; x → D; root → BE; root → EF (x = AB). '
+
+
+def q(text, correct, wrongs, expl, pos=None):
+    it.append((text, correct, wrongs, expl) if pos is None else (text, correct, wrongs, expl, pos))
+
+
+# ===== Dạng 1: đọc Inverted Index (hình x = AB) =====
+q(FIG + 'C xuất hiện trong những chuỗi nào?', 's1, s3 và s4', ['s1, s2 và s3', 's3 và s4', 's1, s3 và s5'],
+  'Hàng C của Inverted Index có 1 ở cột s1, s3, s4.')
+q(FIG + 'Item E xuất hiện trong bao nhiêu chuỗi?', '1 chuỗi (s5)', ['2 chuỗi', '3 chuỗi', '5 chuỗi'],
+  'Hàng E chỉ có số 1 ở cột s5.')
+q(FIG + 'Item nào xuất hiện trong NHIỀU chuỗi nhất?', 'B (5 chuỗi)', ['A (4 chuỗi)', 'C (3 chuỗi)', 'E (1 chuỗi)'],
+  'Hàng B toàn số 1 → B có trong cả 5 chuỗi.')
+q(FIG + 'Những item nào chỉ xuất hiện trong đúng một chuỗi?', 'D (chỉ s3) và E (chỉ s5)', ['C và D', 'A và E', 'B và D'],
+  'D chỉ ở s3, E chỉ ở s5; A có 4 chuỗi, B có 5, C có 3.')
+q(FIG + 'Item A xuất hiện trong bao nhiêu chuỗi và đó là chuỗi nào?', '4 chuỗi: s1, s2, s3, s5', ['5 chuỗi: s1 đến s5', '3 chuỗi: s1, s3, s5', '4 chuỗi: s1, s2, s3, s4'],
+  'Hàng A có 1 ở s1, s2, s3, s5 (s4 = ⟨B,C⟩ không có A).')
+
+# ===== Dạng 2: đọc chuỗi (hình x = AB) =====
+q(FIG + 'Chuỗi s3 chứa những item nào?', 'A, B, C, D', ['A, B, C', 'B, C, D', 'A, B, D'],
+  'Cột s3: A = 1, B = 1, C = 1, D = 1, E = 0.')
+q(FIG + 'Chuỗi s5 chứa những item nào?', 'A, B, E', ['A, B, C', 'B, C, E', 'A, B, D'],
+  'Cột s5: A = 1, B = 1, E = 1.')
+q(FIG + 'Chuỗi s4 chứa những item nào?', 'B, C', ['A, B', 'A, B, C', 'B, C, D'],
+  'Cột s4: chỉ B và C có số 1.')
+q(FIG + 'Chuỗi nào dài nhất (nhiều item nhất)?', 's3 (4 item)', ['s1 (3 item)', 's5 (3 item)', 's2 (2 item)'],
+  's3 = ⟨A,B,C,D⟩ có 4 item; s1 và s5 có 3; s2 có 2; s4 có 2.')
+
+# ===== Dạng 3: Lookup Table (hình x = AB) =====
+q(FIG + 'Lookup Table: chuỗi nào có nút cuối là nút D?', 's3', ['s1', 's4', 's5'],
+  'Đường x → C → D ứng với s3 = ⟨A,B,C,D⟩ nên Lookup Table của s3 trỏ tới D.')
+q(FIG + 'Lookup Table: chuỗi nào có nút cuối là nút x?', 's2 = ⟨A,B⟩', ['s1', 's4', 's5'],
+  's2 = ⟨A,B⟩ chính là x → nút cuối là x.')
+q(FIG + 'Chuỗi s5 được lưu (nút cuối) ở nút nào trên cây?', 'Nút E (con của x)', ['Nút x', 'Nút C', 'Nút D'],
+  's5 = ⟨A,B,E⟩ = x → E.')
+q(FIG + 'Chuỗi s1 được lưu (nút cuối) ở nút nào trên cây?', 'Nút C nằm dưới x (x → C)', ['Nút C nằm dưới B', 'Nút D', 'Nút x'],
+  's1 = ⟨A,B,C⟩ = x → C.')
+q(FIG + 'Chuỗi s4 được lưu (nút cuối) ở nút nào trên cây?', 'Nút C nằm dưới B (root → B → C)', ['Nút C nằm dưới x', 'Nút B', 'Nút x'],
+  's4 = ⟨B,C⟩ không chứa AB nên đi theo nhánh root → B → C.')
+
+# ===== Dạng 4: đường đi trên cây (hình x = AB) =====
+q(FIG + 'Đường đi từ root tới nút D qua những nút nào?', 'root → x → C → D', ['root → B → C → D', 'root → x → E → D', 'root → A → B → D'],
+  'D là con của C, C là con của x, x là con của root.')
+q(FIG + 'Những chuỗi nào đi qua nút x?', 's1, s2, s3 và s5', ['s1, s2, s3, s4 và s5', 's3 và s5', 'Chỉ s4'],
+  'Các chuỗi chứa AB (s1, s2, s3, s5) đều đi qua x; s4 đi theo nhánh B.')
+q(FIG + 'Những chuỗi nào đi qua nút B nằm trực tiếp dưới root?', 'Chỉ s4', ['s1 và s4', 's2 và s3', 'Tất cả các chuỗi'],
+  'Nút B (con của root) chỉ thuộc s4 = ⟨B,C⟩.')
+q(FIG + 'Nút E là con trực tiếp của nút nào?', 'x', ['B', 'C', 'root'],
+  's5 = ⟨A,B,E⟩ = x → E.')
+q(FIG + 'Những chuỗi nào đi qua nút C nằm dưới x?', 's1 và s3', ['s1 và s4', 's3 và s4', 's1, s3 và s4'],
+  'x → C thuộc s1 = ⟨A,B,C⟩ và s3 = ⟨A,B,C,D⟩. s4 có nút C nhưng dưới B.')
+
+# ===== Dạng 5: ý nghĩa nút nén (hình x = AB) =====
+q(FIG + 'Nút x trong cây (x = AB) đại diện cho gì?', 'Chuỗi con A rồi B (xuất hiện thường xuyên)', ['Một item mới hoàn toàn trong dữ liệu gốc', 'Item A hoặc item B', 'Chuỗi con B rồi A'],
+  'x là ký hiệu thay cho chuỗi con thường xuyên AB.')
+q(FIG + 'Việc nén bằng x = AB có tác dụng gì?', 'Giảm số nút của cây vì 4 chuỗi cùng dùng một nút x thay cho hai nút A, B riêng', ['Tăng số nút của cây để dự đoán chính xác hơn', 'Loại bỏ item B khỏi dữ liệu', 'Thay thế hoàn toàn Inverted Index'],
+  'Nén giúp tiết kiệm bộ nhớ và duyệt cây nhanh hơn.')
+q(FIG + 'Trên đường đi của s5 = ⟨A,B,E⟩, số nút trước và sau khi nén là:', 'Trước nén: 3 nút (A, B, E); sau nén: 2 nút (x, E)', ['Trước nén: 2 nút; sau nén: 3 nút', 'Trước nén: 3 nút; sau nén: 3 nút', 'Trước nén: 3 nút; sau nén: 1 nút'],
+  'A, B thay bằng x nên 3 nút → 2 nút.')
+
+# ===== Dạng 7: dự đoán (hình x = AB) =====
+q(FIG + 'Dùng Inverted Index dự đoán với truy vấn ⟨A, C⟩. Item nào được dự đoán?', 'D', ['B', 'E', 'Không dự đoán được'],
+  'Chuỗi chứa A và C: s1, s3. Phần đuôi: s1 rỗng; s3 = ⟨D⟩ → **D**.')
+q(FIG + 'Dự đoán với truy vấn ⟨A, B, E⟩ thì kết quả là gì?', 'Không dự đoán được (chuỗi khớp s5 có phần đuôi rỗng)', ['C', 'D', 'E'],
+  'Chỉ s5 chứa cả A, B, E và sau E không còn item nào.')
+q(FIG + 'Các bước dự đoán với truy vấn ⟨A, B⟩ theo CPT theo thứ tự nào?',
+  'Inverted Index: lấy giao các chuỗi chứa A và B → lấy phần đuôi của các chuỗi đó → chọn item có điểm cao nhất',
+  ['Lấy phần đuôi → Inverted Index tìm chuỗi → chọn item có điểm cao nhất', 'Duyệt toàn bộ cây từ root cho mọi chuỗi → đếm item A và B', 'Chọn ngẫu nhiên một item trong Inverted Index'],
+  'Inverted Index trước (tìm chuỗi khớp), sau đó tính điểm trên phần đuôi.')
+
+# ===== Dạng 8: lý do cấu trúc =====
+q('Vì sao CPT cần Inverted Index?', 'Để tìm nhanh các chuỗi chứa mọi item của truy vấn (lấy giao), không phải duyệt lại toàn bộ cây', ['Để nén các nhánh đơn của cây', 'Để lưu điểm PageRank', 'Để thay chuỗi con bằng ký hiệu mới'],
+  'Inverted Index: item → tập chuỗi chứa nó.')
+q('Vì sao CPT cần Lookup Table?', 'Để truy cập thẳng nút cuối của từng chuỗi trên cây, không phải dò từ root', ['Để đếm số lần xuất hiện của item', 'Để nén các nhánh đơn của cây', 'Để loại bỏ item nhiễu khỏi truy vấn'],
+  'Lookup Table: chuỗi → nút cuối trong Prediction Tree.')
+q('Prediction Tree trong CPT có lợi gì so với lưu từng chuỗi riêng lẻ?', 'Các chuỗi có tiền tố chung dùng chung các nút nên tiết kiệm bộ nhớ', ['Giúp tính PageRank nhanh hơn', 'Tự động loại bỏ mọi item hiếm', 'Không cần Inverted Index nữa'],
+  'Cây (trie) chia sẻ tiền tố chung.')
+q('Ba thành phần của CPT phối hợp thế nào khi dự đoán?', 'Inverted Index tìm chuỗi khớp, Lookup Table đưa tới nút cuối, Prediction Tree cho phần đuôi (consequent)', ['Prediction Tree tìm chuỗi khớp, Inverted Index tính điểm, Lookup Table nén cây', 'Lookup Table tìm chuỗi khớp, Prediction Tree nén cây, Inverted Index loại nhiễu', 'Chỉ dùng Prediction Tree, hai thành phần còn lại không cần thiết'],
+  'Mỗi thành phần có vai trò riêng; kết hợp lại giúp dự đoán nhanh mà không duyệt toàn bộ dữ liệu.')
+
+# ===== Hình 2 (SBC) =====
+q(SBC_DATA + 'Truy vấn ⟨D⟩ khớp với những chuỗi nào (dùng Inverted Index)?', 's2 và s3', ['s1 và s2', 's3 và s4', 'Chỉ s2'],
+  'Hàng D: 1 ở cột s2 và s3.')
+q(SBC_DATA + 'Chuỗi nào chứa item F?', 'Chỉ s4', ['s1', 's2 và s3', 's3 và s4'],
+  'Hàng F chỉ có số 1 ở cột s4.')
+q(SBC_DATA + 'Item nào xuất hiện trong nhiều chuỗi nhất?', 'B và D (mỗi item 2 chuỗi)', ['A (3 chuỗi)', 'C và F (mỗi item 2 chuỗi)', 'E (3 chuỗi)'],
+  'B: s1, s3; D: s2, s3; còn lại chỉ 1 chuỗi.')
+q(SBC_DATA + 'Chuỗi s3 được lưu (nút cuối) ở nút nào?', 'Nút B nằm dưới D (root → D → B)', ['Nút "ABC"', 'Nút B nằm dưới ABC', 'Nút E'],
+  's3 = ⟨D,B⟩ = root → D → B.')
+q(SBC_DATA + 'Đường đi từ root tới nút E là:', 'root → D → E', ['root → ABC → E', 'root → F → E', 'root → D → B → E'],
+  's2 = ⟨D,E⟩.')
+q(SBC_DATA + 'Chuỗi s4 gồm những item nào và nằm ở nút nào?', 'Chỉ item F, nút F nằm trực tiếp dưới root', ['Item D và F, nút F dưới D', 'Item F và E, nút E dưới F', 'Item A, B, C'],
+  'Cột s4 chỉ có F = 1.')
+
+# ===== Hình 3 (FSC + SBC kết hợp) =====
+q(BOTH_PRE + 'Trên cây có nút x (x = AB) và các nút gộp "BE", "EF" từ các nhánh đơn. Hình minh họa chiến lược nén nào đã được áp dụng?', 'Cả FSC và SBC',
+  ['Chỉ FSC', 'Chỉ SBC', 'Không áp dụng chiến lược nào'],
+  'x = AB là **FSC**; BE (B → E) và EF (E → F) là nhánh đơn gộp lại → **SBC**. Có cả hai.', 2)
+q(BOTH_DATA + 'Nút "EF" trên cây là kết quả của chiến lược nào?', 'SBC (gộp nhánh đơn E → F thành một nút)', ['FSC (thay chuỗi con thường xuyên bằng ký hiệu)', 'PNR (giảm nhiễu khi dự đoán)', 'Không phải kết quả của chiến lược nào'],
+  'E chỉ có một con là F nên gộp lại → SBC.')
+q(BOTH_DATA + 'Nút x trên cây là kết quả của chiến lược nào?', 'FSC (x thay cho chuỗi con thường xuyên AB)', ['SBC (gộp nhánh đơn)', 'PNR (giảm nhiễu khi dự đoán)', 'Không áp dụng chiến lược nào'],
+  'AB xuất hiện ở s1 và s2 → thay bằng x → FSC.')
+q(BOTH_DATA + 'Vì sao nút x không bị gộp với C hoặc D bằng SBC?', 'Vì x rẽ thành 2 nhánh con (C và D)', ['Vì x là nút lá', 'Vì x không có trong Inverted Index', 'Vì C và D không xuất hiện trong dữ liệu'],
+  'SBC chỉ gộp các nút chỉ có một con.')
+q(BOTH_DATA + 'Chuỗi s3 được lưu (nút cuối) ở nút nào?', 'Nút "EF"', ['Nút "BE"', 'Nút x', 'Nút D'], 's3 = ⟨E,F⟩ đã gộp thành "EF".')
+q(BOTH_DATA + 'Chuỗi s4 được lưu (nút cuối) ở nút nào?', 'Nút "BE"', ['Nút "EF"', 'Nút x', 'Nút C'], 's4 = ⟨B,E⟩ đã gộp thành "BE".')
+q(BOTH_DATA + 'Những chuỗi nào đi qua nút x?', 's1 và s2', ['s3 và s4', 's1 và s4', 'Cả 4 chuỗi'], 's1 = ⟨A,B,C⟩ và s2 = ⟨A,B,D⟩ cùng chứa AB.')
+q(BOTH_DATA + 'Item E xuất hiện trong những chuỗi nào (Inverted Index)?', 's3 và s4', ['s1 và s2', 'Chỉ s3', 's2 và s4'], 'Hàng E: 1 ở cột s3 và s4.')
+q(BOTH_DATA + 'Chưa nén, Prediction Tree có bao nhiêu nút (không tính root)?', '8 nút', ['5 nút', '6 nút', '10 nút'],
+  'A, B, C, D (4) + E, F (2) + B, E (2) = **8**.')
+q(BOTH_DATA + 'Sau khi nén (x = AB, BE, EF), Prediction Tree có bao nhiêu nút (không tính root)?', '5 nút', ['8 nút', '6 nút', '4 nút'],
+  'x, C, D, BE, EF = **5**.')
+q(BOTH_DATA + 'Dự đoán với truy vấn ⟨A⟩, item nào có điểm cao nhất?', 'B (có trong phần đuôi của cả s1 và s2)', ['C (chỉ s1)', 'D (chỉ s2)', 'E'],
+  'Chuỗi chứa A: s1 (đuôi B, C), s2 (đuôi B, D) → B có 2 điểm, C và D 1 điểm.')
+q(BOTH_DATA + 'Dự đoán với truy vấn ⟨E⟩, item nào được dự đoán?', 'F', ['B', 'C', 'Không dự đoán được'],
+  'Chuỗi chứa E: s3 (đuôi F) và s4 = ⟨B,E⟩ (đuôi rỗng) → chỉ **F**.')
+q(BOTH_DATA + 'Dự đoán với truy vấn ⟨A, B⟩, kết quả là:', 'C và D có điểm bằng nhau (1 điểm mỗi item)', ['C có điểm cao nhất', 'D có điểm cao nhất', 'Không dự đoán được'],
+  'Chuỗi chứa A và B: s1 (đuôi C), s2 (đuôi D) → hòa.')
+
 T.append(('Biến thể: CPT / CPT+ (FSC, SBC, PNR) (câu 38, 39)', it))
 
 # ---------- 8. Kiến trúc, mô hình hóa, ELT ----------
