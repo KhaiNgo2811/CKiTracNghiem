@@ -269,3 +269,21 @@ td .q-image {
   border-color: #1f2a5a;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
+
+/* Watermark: tên chủ sở hữu lặp chéo toàn trang, không chặn thao tác */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  pointer-events: none;
+  opacity: 0.09;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='180'><text x='50%' y='50%' text-anchor='middle' dominant-baseline='middle' transform='rotate(-25 150 90)' font-family='Arial, sans-serif' font-size='22' font-weight='bold' fill='%23000000'>Ng%C3%B4 Ho%C3%A0ng Kh%E1%BA%A3i</text></svg>");
+  background-repeat: repeat;
+}
+@media (prefers-color-scheme: dark) {
+  body::after { opacity: 0.12; filter: invert(1); }
+}
+@media print {
+  body::after { opacity: 0.15; }
+}
