@@ -6124,6 +6124,1740 @@
           "explanation": "**Delta Lake** (cùng Iceberg) hỗ trợ đổi cấu trúc bảng mà không cần ghi lại bảng."
         }
       ]
+    },
+    {
+      "topicId": "CD_V1",
+      "topicName": "42. Biến thể: Entropy, Info_A(D) & Information Gain (câu 16, 19, 20)",
+      "questions": [
+        {
+          "id": "CDV1_1",
+          "question": "Dataset D có 10 mẫu thuộc 2 lớp: 5 mẫu Good và 5 mẫu Bad. Entropy Info(D) xấp xỉ bao nhiêu bit?",
+          "options": {
+            "A": "1,000 bit",
+            "B": "0,500 bit",
+            "C": "2,000 bit",
+            "D": "1,100 bit"
+          },
+          "correctAnswer": "A",
+          "explanation": "Info(D) = −(5/10·log2(5/10) + 5/10·log2(5/10)) ≈ **1,000 bit**."
+        },
+        {
+          "id": "CDV1_2",
+          "question": "Dataset D có 10 mẫu thuộc 2 lớp: 8 mẫu Good và 2 mẫu Bad. Entropy Info(D) xấp xỉ bao nhiêu bit?",
+          "options": {
+            "A": "0,800 bit",
+            "B": "1,000 bit",
+            "C": "0,722 bit",
+            "D": "0,500 bit"
+          },
+          "correctAnswer": "C",
+          "explanation": "Info(D) = −(8/10·log2(8/10) + 2/10·log2(2/10)) ≈ **0,722 bit**."
+        },
+        {
+          "id": "CDV1_3",
+          "question": "Dataset D có 10 mẫu thuộc 2 lớp: 7 mẫu Good và 3 mẫu Bad. Entropy Info(D) xấp xỉ bao nhiêu bit?",
+          "options": {
+            "A": "0,881 bit",
+            "B": "0,700 bit",
+            "C": "1,000 bit",
+            "D": "0,500 bit"
+          },
+          "correctAnswer": "A",
+          "explanation": "Info(D) = −(7/10·log2(7/10) + 3/10·log2(3/10)) ≈ **0,881 bit**."
+        },
+        {
+          "id": "CDV1_4",
+          "question": "Dataset D có 10 mẫu thuộc 2 lớp: 9 mẫu Good và 1 mẫu Bad. Entropy Info(D) xấp xỉ bao nhiêu bit?",
+          "options": {
+            "A": "0,900 bit",
+            "B": "1,000 bit",
+            "C": "0,500 bit",
+            "D": "0,469 bit"
+          },
+          "correctAnswer": "D",
+          "explanation": "Info(D) = −(9/10·log2(9/10) + 1/10·log2(1/10)) ≈ **0,469 bit**."
+        },
+        {
+          "id": "CDV1_5",
+          "question": "Dataset D có 20 mẫu thuộc 2 lớp: 12 mẫu Good và 8 mẫu Bad. Entropy Info(D) xấp xỉ bao nhiêu bit?",
+          "options": {
+            "A": "0,600 bit",
+            "B": "0,971 bit",
+            "C": "1,000 bit",
+            "D": "0,500 bit"
+          },
+          "correctAnswer": "B",
+          "explanation": "Info(D) = −(12/20·log2(12/20) + 8/20·log2(8/20)) ≈ **0,971 bit**."
+        },
+        {
+          "id": "CDV1_6",
+          "question": "Dataset D có 12 mẫu thuộc 2 lớp: 3 mẫu Good và 9 mẫu Bad. Entropy Info(D) xấp xỉ bao nhiêu bit?",
+          "options": {
+            "A": "0,250 bit",
+            "B": "1,000 bit",
+            "C": "0,500 bit",
+            "D": "0,811 bit"
+          },
+          "correctAnswer": "D",
+          "explanation": "Info(D) = −(3/12·log2(3/12) + 9/12·log2(9/12)) ≈ **0,811 bit**."
+        },
+        {
+          "id": "CDV1_7",
+          "question": "Dataset D có 10 mẫu, cả 10 đều thuộc lớp Good. Info(D) bằng bao nhiêu?",
+          "options": {
+            "A": "1 bit",
+            "B": "0 bit",
+            "C": "0,5 bit",
+            "D": "10 bit"
+          },
+          "correctAnswer": "B",
+          "explanation": "Tập thuần nhất (một lớp p = 1) → Info(D) = −1·log2(1) = **0** (không còn bất định)."
+        },
+        {
+          "id": "CDV1_8",
+          "question": "Dataset D có 10 mẫu thuộc 3 lớp với số mẫu lần lượt 4, 4 và 2. Info(D) xấp xỉ bao nhiêu bit?",
+          "options": {
+            "A": "1,522 bit",
+            "B": "1,000 bit",
+            "C": "0,971 bit",
+            "D": "2,000 bit"
+          },
+          "correctAnswer": "A",
+          "explanation": "Info(D) = −(0,4·log2 0,4 + 0,4·log2 0,4 + 0,2·log2 0,2) ≈ **1,522 bit** (m = 3 lớp)."
+        },
+        {
+          "id": "CDV1_9",
+          "question": "D có 10 mẫu (6 Good, 4 Bad). Chia theo thuộc tính A thành 2 phân vùng: D1 gồm 4 mẫu toàn Good; D2 gồm 6 mẫu (2 Good, 4 Bad). Info_A(D) xấp xỉ bao nhiêu?",
+          "options": {
+            "A": "0,971",
+            "B": "0,918",
+            "C": "0,551",
+            "D": "0,400"
+          },
+          "correctAnswer": "C",
+          "explanation": "Info_A(D) = (4/10)·Info(D1) + (6/10)·Info(D2) = 0,4·0 + 0,6·0,918 ≈ **0,551** (v = 2 phân vùng)."
+        },
+        {
+          "id": "CDV1_10",
+          "question": "Với D (6 Good, 4 Bad; Info(D) ≈ 0,971) và Info_A(D) ≈ 0,551 ở câu trên, Information Gain của thuộc tính A xấp xỉ bao nhiêu?",
+          "options": {
+            "A": "0,420",
+            "B": "0,971",
+            "C": "0,551",
+            "D": "0,500"
+          },
+          "correctAnswer": "A",
+          "explanation": "Gain(A) = Info(D) − Info_A(D) = 0,971 − 0,551 ≈ **0,420**."
+        },
+        {
+          "id": "CDV1_11",
+          "question": "Thuộc tính A có Gain = 0,42; thuộc tính B có Gain = 0,15; thuộc tính C có Gain = 0,30. ID3 sẽ chọn thuộc tính nào để chia nút?",
+          "options": {
+            "A": "B (Gain nhỏ nhất)",
+            "B": "C (Gain ở mức trung bình)",
+            "C": "A (Gain lớn nhất)",
+            "D": "Không chọn thuộc tính nào"
+          },
+          "correctAnswer": "C",
+          "explanation": "ID3 chọn thuộc tính có **Information Gain lớn nhất**."
+        },
+        {
+          "id": "CDV1_12",
+          "question": "Với 2 lớp, Entropy đạt GIÁ TRỊ LỚN NHẤT khi tỉ lệ hai lớp là:",
+          "options": {
+            "A": "50% – 50%",
+            "B": "90% – 10%",
+            "C": "100% – 0%",
+            "D": "70% – 30%"
+          },
+          "correctAnswer": "A",
+          "explanation": "Hai lớp cân bằng (p = 0,5) → Info(D) = 1 bit (lớn nhất). Một lớp chiếm 100% → 0 bit."
+        },
+        {
+          "id": "CDV1_13",
+          "question": "Trong Info_A(D), nếu thuộc tính A có 5 giá trị khác nhau thì v bằng bao nhiêu?",
+          "options": {
+            "A": "2",
+            "B": "1",
+            "C": "5",
+            "D": "Bằng số lớp m"
+          },
+          "correctAnswer": "C",
+          "explanation": "**v** = số giá trị khác nhau của A = số phân vùng D1…Dv. Số lớp là **m** (trong Info(D))."
+        },
+        {
+          "id": "CDV1_14",
+          "question": "Trong Info(D), nếu biến mục tiêu có 3 nhãn (Low, Medium, High) thì m bằng bao nhiêu?",
+          "options": {
+            "A": "2",
+            "B": "3",
+            "C": "Bằng số giá trị của thuộc tính A",
+            "D": "Bằng số bản ghi"
+          },
+          "correctAnswer": "B",
+          "explanation": "**m** = số lượng lớp = 3."
+        }
+      ]
+    },
+    {
+      "topicId": "CD_V2",
+      "topicName": "43. Biến thể: Chuẩn hóa & Binning (câu 17, 18, 21–25)",
+      "questions": [
+        {
+          "id": "CDV2_1",
+          "question": "Thu nhập thấp nhất là 5 triệu, cao nhất là 10 triệu. Thu nhập 6.5 triệu sau khi chuẩn hóa Min-Max về [0, 1] có giá trị là bao nhiêu?",
+          "options": {
+            "A": "0,65",
+            "B": "0,30",
+            "C": "0,15",
+            "D": "0,70"
+          },
+          "correctAnswer": "B",
+          "explanation": "v' = (v − min)/(max − min) = (6.5 − 5)/(10 − 5) = **0,30**."
+        },
+        {
+          "id": "CDV2_2",
+          "question": "Thu nhập thấp nhất là 5 triệu, cao nhất là 10 triệu. Thu nhập 9 triệu sau khi chuẩn hóa Min-Max về [0, 1] có giá trị là bao nhiêu?",
+          "options": {
+            "A": "0,90",
+            "B": "0,40",
+            "C": "0,20",
+            "D": "0,80"
+          },
+          "correctAnswer": "D",
+          "explanation": "v' = (v − min)/(max − min) = (9 − 5)/(10 − 5) = **0,80**."
+        },
+        {
+          "id": "CDV2_3",
+          "question": "Thu nhập thấp nhất là 20 triệu, cao nhất là 100 triệu. Thu nhập 60 triệu sau khi chuẩn hóa Min-Max về [0, 1] có giá trị là bao nhiêu?",
+          "options": {
+            "A": "0,60",
+            "B": "0,50",
+            "C": "0,40",
+            "D": "1,00"
+          },
+          "correctAnswer": "B",
+          "explanation": "v' = (v − min)/(max − min) = (60 − 20)/(100 − 20) = **0,50**."
+        },
+        {
+          "id": "CDV2_4",
+          "question": "Thu nhập thấp nhất là 0 triệu, cao nhất là 50 triệu. Thu nhập 10 triệu sau khi chuẩn hóa Min-Max về [0, 1] có giá trị là bao nhiêu?",
+          "options": {
+            "A": "0,80",
+            "B": "0,40",
+            "C": "0,20",
+            "D": "0,10"
+          },
+          "correctAnswer": "C",
+          "explanation": "v' = (v − min)/(max − min) = (10 − 0)/(50 − 0) = **0,20**."
+        },
+        {
+          "id": "CDV2_5",
+          "question": "Thu nhập thấp nhất là 5 triệu, cao nhất là 10 triệu. Thu nhập 8 triệu sau khi chuẩn hóa Min-Max về [0, 10] có giá trị là bao nhiêu?",
+          "options": {
+            "A": "6,00",
+            "B": "0,80",
+            "C": "0,30",
+            "D": "0,40"
+          },
+          "correctAnswer": "A",
+          "explanation": "v' = (v − min)/(max − min)×(new_max − new_min) + new_min = (8 − 5)/(10 − 5)×10 + 0 = **6,00**."
+        },
+        {
+          "id": "CDV2_6",
+          "question": "Điểm trung bình của lớp là μ = 50, độ lệch chuẩn σ = 10. Với điểm v = 65, giá trị Z-Score là bao nhiêu?",
+          "options": {
+            "A": "150,00",
+            "B": "6,50",
+            "C": "1,50",
+            "D": "2,50"
+          },
+          "correctAnswer": "C",
+          "explanation": "Z = (v − μ)/σ = (65 − 50)/10 = **1,50**."
+        },
+        {
+          "id": "CDV2_7",
+          "question": "Điểm trung bình của lớp là μ = 70, độ lệch chuẩn σ = 5. Với điểm v = 60, giá trị Z-Score là bao nhiêu?",
+          "options": {
+            "A": "-2,00",
+            "B": "-12,00",
+            "C": "-3,00",
+            "D": "-4,00"
+          },
+          "correctAnswer": "A",
+          "explanation": "Z = (v − μ)/σ = (60 − 70)/5 = **-2,00**."
+        },
+        {
+          "id": "CDV2_8",
+          "question": "Điểm trung bình của lớp là μ = 100, độ lệch chuẩn σ = 20. Với điểm v = 100, giá trị Z-Score là bao nhiêu?",
+          "options": {
+            "A": "5,00",
+            "B": "0,00",
+            "C": "1,00",
+            "D": "0,10"
+          },
+          "correctAnswer": "B",
+          "explanation": "Z = (v − μ)/σ = (100 − 100)/20 = **0,00**."
+        },
+        {
+          "id": "CDV2_9",
+          "question": "Giá trị tuyệt đối lớn nhất của thuộc tính là 986. Dùng Decimal Scaling, giá trị -345 được chuẩn hóa thành:",
+          "options": {
+            "A": "-3,45",
+            "B": "-0,0345",
+            "C": "-0,00345",
+            "D": "-0,345"
+          },
+          "correctAnswer": "D",
+          "explanation": "Chọn j nhỏ nhất sao cho max|v′| < 1 → j = 3 (vì 10^3 > 986). v′ = -345/10^3 = **-0,345**."
+        },
+        {
+          "id": "CDV2_10",
+          "question": "Giá trị tuyệt đối lớn nhất của thuộc tính là 4521. Dùng Decimal Scaling, giá trị 1234 được chuẩn hóa thành:",
+          "options": {
+            "A": "1,234",
+            "B": "0,01234",
+            "C": "0,1234",
+            "D": "0,001234"
+          },
+          "correctAnswer": "C",
+          "explanation": "Chọn j nhỏ nhất sao cho max|v′| < 1 → j = 4 (vì 10^4 > 4521). v′ = 1234/10^4 = **0,1234**."
+        },
+        {
+          "id": "CDV2_11",
+          "question": "Giá trị tuyệt đối lớn nhất của thuộc tính là 75. Dùng Decimal Scaling, giá trị 30 được chuẩn hóa thành:",
+          "options": {
+            "A": "0,3",
+            "B": "3,0",
+            "C": "0,03",
+            "D": "0,003"
+          },
+          "correctAnswer": "A",
+          "explanation": "Chọn j nhỏ nhất sao cho max|v′| < 1 → j = 2 (vì 10^2 > 75). v′ = 30/10^2 = **0,3**."
+        },
+        {
+          "id": "CDV2_12",
+          "question": "Cột lương có vài giá trị ngoại lai rất lớn (outliers). Phương pháp chuẩn hóa nào phù hợp hơn Min-Max?",
+          "options": {
+            "A": "Decimal Scaling",
+            "B": "Equal-width Binning",
+            "C": "Z-Score Normalization",
+            "D": "PCA"
+          },
+          "correctAnswer": "C",
+          "explanation": "Min-Max bị outlier kéo lệch toàn bộ thang. **Z-Score** (dựa trên mean/std) phù hợp khi có ngoại lai hoặc không biết trước min-max."
+        },
+        {
+          "id": "CDV2_13",
+          "question": "Phương pháp chuẩn hóa nào dựa trên giá trị tuyệt đối lớn nhất của thuộc tính (chia cho 10^j)?",
+          "options": {
+            "A": "Decimal Scaling",
+            "B": "Min-Max",
+            "C": "Z-Score",
+            "D": "Equal-frequency Binning"
+          },
+          "correctAnswer": "A",
+          "explanation": "**Decimal Scaling**: v′ = v / 10^j với j nhỏ nhất để max|v′| < 1."
+        },
+        {
+          "id": "CDV2_14",
+          "question": "Chia hạn mức từ 100 đến 700 triệu thành 3 nhóm theo Equal-width Binning. Nhóm cao nhất nằm trong khoảng nào?",
+          "options": {
+            "A": "Từ 100 đến 500",
+            "B": "Từ 600 đến 800",
+            "C": "Từ 300 đến 500",
+            "D": "Từ 500 đến 700"
+          },
+          "correctAnswer": "D",
+          "explanation": "Width = (700 − 100)/3 = 200. Nhóm cao nhất: **500–700**."
+        },
+        {
+          "id": "CDV2_15",
+          "question": "Chia hạn mức từ 0 đến 100 triệu thành 4 nhóm theo Equal-width Binning. Nhóm thứ 2 nằm trong khoảng nào?",
+          "options": {
+            "A": "Từ 0 đến 50",
+            "B": "Từ 25 đến 50",
+            "C": "Từ 37 đến 62",
+            "D": "Từ 0 đến 25"
+          },
+          "correctAnswer": "B",
+          "explanation": "Width = (100 − 0)/4 = 25. Nhóm thứ 2: **25–50**."
+        },
+        {
+          "id": "CDV2_16",
+          "question": "Chia hạn mức từ 100 đến 500 triệu thành 4 nhóm theo Equal-width Binning. Nhóm cao nhất nằm trong khoảng nào?",
+          "options": {
+            "A": "Từ 100 đến 300",
+            "B": "Từ 450 đến 550",
+            "C": "Từ 300 đến 400",
+            "D": "Từ 400 đến 500"
+          },
+          "correctAnswer": "D",
+          "explanation": "Width = (500 − 100)/4 = 100. Nhóm cao nhất: **400–500**."
+        },
+        {
+          "id": "CDV2_17",
+          "question": "Chia hạn mức từ 200 đến 800 triệu thành 3 nhóm theo Equal-width Binning. Nhóm thứ 2 nằm trong khoảng nào?",
+          "options": {
+            "A": "Từ 200 đến 600",
+            "B": "Từ 400 đến 600",
+            "C": "Từ 500 đến 700",
+            "D": "Từ 200 đến 400"
+          },
+          "correctAnswer": "B",
+          "explanation": "Width = (800 − 200)/3 = 200. Nhóm thứ 2: **400–600**."
+        },
+        {
+          "id": "CDV2_18",
+          "question": "Có 12 giá trị đã sắp xếp, chia thành 3 bin theo Equal-frequency Binning. Mỗi bin có bao nhiêu giá trị?",
+          "options": {
+            "A": "4 giá trị",
+            "B": "3 giá trị",
+            "C": "12 giá trị",
+            "D": "Tùy khoảng giá trị của từng bin"
+          },
+          "correctAnswer": "A",
+          "explanation": "Equal-frequency: mỗi bin chứa **số lượng bằng nhau** = 12/3 = 4 (độ rộng khoảng có thể khác nhau)."
+        },
+        {
+          "id": "CDV2_19",
+          "question": "Dữ liệu bị lệch (skewed) nặng. Binning nào cho các bin cân bằng hơn về số lượng phần tử?",
+          "options": {
+            "A": "Equal-width Binning",
+            "B": "Min-Max",
+            "C": "Equal-frequency Binning",
+            "D": "Decimal Scaling"
+          },
+          "correctAnswer": "C",
+          "explanation": "Equal-width trên dữ liệu lệch dễ dồn hầu hết giá trị vào 1–2 bin; **Equal-frequency** chia theo số lượng nên cân bằng."
+        },
+        {
+          "id": "CDV2_20",
+          "question": "Mục đích chính của Discretization (rời rạc hóa) là:",
+          "options": {
+            "A": "Tăng số chiều của dữ liệu",
+            "B": "Giảm số lượng giá trị liên tục thành vài khoảng/nhãn để dễ phân tích và hỗ trợ các thuật toán",
+            "C": "Đưa dữ liệu về phân phối chuẩn",
+            "D": "Loại bỏ toàn bộ giá trị Null"
+          },
+          "correctAnswer": "B",
+          "explanation": "Discretization biến thuộc tính liên tục → các khoảng rời rạc, giảm số lượng giá trị."
+        },
+        {
+          "id": "CDV2_21",
+          "question": "PCA giữ lại tối đa đại lượng nào của dữ liệu khi giảm chiều?",
+          "options": {
+            "A": "Số lượng bản ghi",
+            "B": "Số lượng lớp",
+            "C": "Giá trị trung bình",
+            "D": "Phương sai (variance)"
+          },
+          "correctAnswer": "D",
+          "explanation": "**PCA** tìm các thành phần chính giữ **phương sai lớn nhất**."
+        }
+      ]
+    },
+    {
+      "topicId": "CD_V3",
+      "topicName": "44. Biến thể: Simple Moving Average – SMA (câu 26)",
+      "questions": [
+        {
+          "id": "CDV3_1",
+          "question": "Giá đóng cửa cổ phiếu X trong 6 ngày: 75, 79, 38, 80, 82, 85 (USD). Với cửa sổ k = 3, SMA ngày 4 là bao nhiêu?",
+          "options": {
+            "A": "66,67 USD",
+            "B": "64,00 USD",
+            "C": "65,67 USD",
+            "D": "69,75 USD"
+          },
+          "correctAnswer": "C",
+          "explanation": "SMA ngày 4 = trung bình 3 giá gần nhất (79, 38, 80) = 197/3 = **65,67 USD**."
+        },
+        {
+          "id": "CDV3_2",
+          "question": "Giá đóng cửa cổ phiếu X trong 6 ngày: 75, 79, 38, 80, 82, 85 (USD). Với cửa sổ k = 3, SMA ngày 5 là bao nhiêu?",
+          "options": {
+            "A": "66,67 USD",
+            "B": "82,33 USD",
+            "C": "64,00 USD",
+            "D": "71,25 USD"
+          },
+          "correctAnswer": "A",
+          "explanation": "SMA ngày 5 = trung bình 3 giá gần nhất (38, 80, 82) = 200/3 = **66,67 USD**."
+        },
+        {
+          "id": "CDV3_3",
+          "question": "Giá đóng cửa cổ phiếu X trong 6 ngày: 75, 79, 38, 80, 82, 85 (USD). Với cửa sổ k = 3, SMA ngày 6 là bao nhiêu?",
+          "options": {
+            "A": "85,33 USD",
+            "B": "64,00 USD",
+            "C": "82,33 USD",
+            "D": "61,75 USD"
+          },
+          "correctAnswer": "C",
+          "explanation": "SMA ngày 6 = trung bình 3 giá gần nhất (80, 82, 85) = 247/3 = **82,33 USD**."
+        },
+        {
+          "id": "CDV3_4",
+          "question": "Giá đóng cửa cổ phiếu X trong 6 ngày: 75, 79, 38, 80, 82, 85 (USD). Với cửa sổ k = 3, SMA ngày 3 là bao nhiêu?",
+          "options": {
+            "A": "65,67 USD",
+            "B": "64,00 USD",
+            "C": "68,00 USD",
+            "D": "69,00 USD"
+          },
+          "correctAnswer": "B",
+          "explanation": "SMA ngày 3 = trung bình 3 giá gần nhất (75, 79, 38) = 192/3 = **64,00 USD**."
+        },
+        {
+          "id": "CDV3_5",
+          "question": "Giá đóng cửa cổ phiếu X trong 6 ngày: 75, 79, 38, 80, 82, 85 (USD). Với cửa sổ k = 2, SMA ngày 4 là bao nhiêu?",
+          "options": {
+            "A": "81,00 USD",
+            "B": "77,00 USD",
+            "C": "66,67 USD",
+            "D": "59,00 USD"
+          },
+          "correctAnswer": "D",
+          "explanation": "SMA ngày 4 = trung bình 2 giá gần nhất (38, 80) = 118/2 = **59,00 USD**."
+        },
+        {
+          "id": "CDV3_6",
+          "question": "Tăng cửa sổ k của SMA (ví dụ từ 3 lên 10) thì đường SMA sẽ:",
+          "options": {
+            "A": "Nhạy hơn và bám sát từng biến động giá",
+            "B": "Mượt hơn nhưng phản ứng chậm (trễ) hơn với biến động giá",
+            "C": "Luôn cho giá trị bằng giá hiện tại",
+            "D": "Không thay đổi"
+          },
+          "correctAnswer": "B",
+          "explanation": "k lớn → lấy trung bình nhiều điểm → **mượt hơn nhưng trễ**; k nhỏ → bám sát nhưng nhiễu."
+        },
+        {
+          "id": "CDV3_7",
+          "question": "SMA ngày thứ t với cửa sổ k = 3 (theo cách tính trong đề) được tính từ những giá trị nào?",
+          "options": {
+            "A": "Giá của toàn bộ các ngày đã có",
+            "B": "Chỉ giá ngày t",
+            "C": "Giá của 3 ngày liền sau ngày t",
+            "D": "Giá của 3 ngày gần nhất tính cả ngày t (t−2, t−1, t)"
+          },
+          "correctAnswer": "D",
+          "explanation": "SMA ngày 4 (k = 3) = trung bình giá ngày 2, 3, 4 = (79 + 38 + 80)/3 ≈ 65,67."
+        }
+      ]
+    },
+    {
+      "topicId": "CD_V4",
+      "topicName": "45. Biến thể: Association Rules & Apriori (câu 27–30, 34)",
+      "questions": [
+        {
+          "id": "CDV4_1",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với luật L: {d} → {e}, Support(L) bằng bao nhiêu?",
+          "options": {
+            "A": "0,750",
+            "B": "1,500",
+            "C": "0,125",
+            "D": "0,375"
+          },
+          "correctAnswer": "D",
+          "explanation": "Sup = count({d,e})/8 = 3/8 = **0,375**."
+        },
+        {
+          "id": "CDV4_2",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với luật L: {d} → {e}, Confidence(L) bằng bao nhiêu?",
+          "options": {
+            "A": "0,375",
+            "B": "0,750",
+            "C": "1,500",
+            "D": "0,125"
+          },
+          "correctAnswer": "B",
+          "explanation": "Conf = count(X∪Y)/count(X) = 3/4 = **0,750**."
+        },
+        {
+          "id": "CDV4_3",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với luật L: {e} → {c}, Confidence(L) bằng bao nhiêu?",
+          "options": {
+            "A": "0,500",
+            "B": "1,143",
+            "C": "0,062",
+            "D": "1,000"
+          },
+          "correctAnswer": "D",
+          "explanation": "Conf = count(X∪Y)/count(X) = 4/4 = **1,000**."
+        },
+        {
+          "id": "CDV4_4",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với luật L: {b} → {c}, Confidence(L) bằng bao nhiêu?",
+          "options": {
+            "A": "0,750",
+            "B": "0,375",
+            "C": "0,857",
+            "D": "0,062"
+          },
+          "correctAnswer": "A",
+          "explanation": "Conf = count(X∪Y)/count(X) = 3/4 = **0,750**."
+        },
+        {
+          "id": "CDV4_5",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với luật L: {d} → {e}, Lift(L) bằng bao nhiêu?",
+          "options": {
+            "A": "0,375",
+            "B": "0,750",
+            "C": "1,500",
+            "D": "0,125"
+          },
+          "correctAnswer": "C",
+          "explanation": "Lift = Conf/Sup(Y) = 0,750/0,500 = **1,500**."
+        },
+        {
+          "id": "CDV4_6",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với luật L: {c,d} → {e}, Confidence(L) bằng bao nhiêu?",
+          "options": {
+            "A": "0,750",
+            "B": "0,375",
+            "C": "1,500",
+            "D": "0,125"
+          },
+          "correctAnswer": "A",
+          "explanation": "Conf = count(X∪Y)/count(X) = 3/4 = **0,750**."
+        },
+        {
+          "id": "CDV4_7",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với luật L: {e} → {c}, Lift(L) bằng bao nhiêu?",
+          "options": {
+            "A": "0,500",
+            "B": "1,000",
+            "C": "1,143",
+            "D": "0,062"
+          },
+          "correctAnswer": "C",
+          "explanation": "Lift = Conf/Sup(Y) = 1,000/0,875 = **1,143**."
+        },
+        {
+          "id": "CDV4_8",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với luật L: {d} → {e}, Leverage(L) bằng bao nhiêu?",
+          "options": {
+            "A": "0,375",
+            "B": "0,750",
+            "C": "1,500",
+            "D": "0,125"
+          },
+          "correctAnswer": "D",
+          "explanation": "Leverage = Sup(X∪Y) − Sup(X)·Sup(Y) = 0,375 − 0,500×0,500 = **0,125**."
+        },
+        {
+          "id": "CDV4_9",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với luật L: {b} → {c}, Support(L) bằng bao nhiêu?",
+          "options": {
+            "A": "0,750",
+            "B": "0,375",
+            "C": "0,857",
+            "D": "0,062"
+          },
+          "correctAnswer": "B",
+          "explanation": "Sup = count({b,c})/8 = 3/8 = **0,375**."
+        },
+        {
+          "id": "CDV4_10",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Độ hỗ trợ (Support) của itemset {c,d,b} là bao nhiêu?",
+          "options": {
+            "A": "0,286",
+            "B": "0,500",
+            "C": "0,250",
+            "D": "0,125"
+          },
+          "correctAnswer": "C",
+          "explanation": "Số giao dịch chứa {c,d,b} = 2 → Sup = 2/8 = **0,250**."
+        },
+        {
+          "id": "CDV4_11",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Độ hỗ trợ (Support) của itemset {d,e} là bao nhiêu?",
+          "options": {
+            "A": "0,375",
+            "B": "0,429",
+            "C": "0,500",
+            "D": "0,750"
+          },
+          "correctAnswer": "A",
+          "explanation": "Số giao dịch chứa {d,e} = 3 → Sup = 3/8 = **0,375**."
+        },
+        {
+          "id": "CDV4_12",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Độ hỗ trợ (Support) của itemset {c,e} là bao nhiêu?",
+          "options": {
+            "A": "0,571",
+            "B": "1,000",
+            "C": "0,500",
+            "D": "0,250"
+          },
+          "correctAnswer": "C",
+          "explanation": "Số giao dịch chứa {c,e} = 4 → Sup = 4/8 = **0,500**."
+        },
+        {
+          "id": "CDV4_13",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Độ hỗ trợ (Support) của itemset {b,c} là bao nhiêu?",
+          "options": {
+            "A": "0,375",
+            "B": "0,429",
+            "C": "0,500",
+            "D": "0,750"
+          },
+          "correctAnswer": "A",
+          "explanation": "Số giao dịch chứa {b,c} = 3 → Sup = 3/8 = **0,375**."
+        },
+        {
+          "id": "CDV4_14",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với minsup = 4 (số giao dịch), item nào bị loại khỏi danh sách 1-itemset phổ biến?",
+          "options": {
+            "A": "b (xuất hiện 4 lần)",
+            "B": "d (xuất hiện 4 lần)",
+            "C": "c (xuất hiện 7 lần)",
+            "D": "a (xuất hiện 2 lần)"
+          },
+          "correctAnswer": "D",
+          "explanation": "Đếm: c = 7; b = 4; d = 4; e = 4; a = 2 < 4 → **a** bị loại."
+        },
+        {
+          "id": "CDV4_15",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với minsup = 4, FP-Growth sắp xếp các item phổ biến theo thứ tự giảm dần của số đếm. Item đứng ĐẦU TIÊN là:",
+          "options": {
+            "A": "b (4 giao dịch)",
+            "B": "c (7 giao dịch)",
+            "C": "e (4 giao dịch)",
+            "D": "a (2 giao dịch)"
+          },
+          "correctAnswer": "B",
+          "explanation": "c xuất hiện nhiều nhất (7) nên đứng đầu; b, d, e cùng 4 (hoán đổi được)."
+        },
+        {
+          "id": "CDV4_16",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Nếu minsup tăng từ 4 lên 5 thì tập 1-itemset phổ biến còn lại là:",
+          "options": {
+            "A": "{c, b, d, e}",
+            "B": "{b, d, e}",
+            "C": "{a, c}",
+            "D": "{c}"
+          },
+          "correctAnswer": "D",
+          "explanation": "Chỉ c (7) ≥ 5; b, d, e chỉ 4 < 5."
+        },
+        {
+          "id": "CDV4_17",
+          "question": "Lift(X → Y) = 1,52 có ý nghĩa gì?",
+          "options": {
+            "A": "X và Y độc lập",
+            "B": "Có X thì khả năng xuất hiện Y cao gấp 1,52 lần so với bình thường (quan hệ tích cực)",
+            "C": "X làm giảm khả năng xuất hiện Y",
+            "D": "Luật có Confidence bằng 1,52"
+          },
+          "correctAnswer": "B",
+          "explanation": "Lift > 1: tích cực; = 1: độc lập; < 1: tiêu cực."
+        },
+        {
+          "id": "CDV4_18",
+          "question": "Lift(X → Y) = 0,8 cho biết điều gì?",
+          "options": {
+            "A": "X làm giảm khả năng xuất hiện Y (quan hệ tiêu cực)",
+            "B": "X làm tăng khả năng xuất hiện Y",
+            "C": "X và Y độc lập hoàn toàn",
+            "D": "Luật rất đáng tin cậy"
+          },
+          "correctAnswer": "A",
+          "explanation": "Lift < 1: tiền đề làm **giảm** khả năng hậu đề."
+        },
+        {
+          "id": "CDV4_19",
+          "question": "Công thức nào sau đây là Confidence của luật X → Y?",
+          "options": {
+            "A": "Sup(X ∪ Y) / Sup(Y)",
+            "B": "Sup(X) / Sup(X ∪ Y)",
+            "C": "Sup(X ∪ Y) / Sup(X)",
+            "D": "Sup(X ∪ Y) − Sup(X)·Sup(Y)"
+          },
+          "correctAnswer": "C",
+          "explanation": "Confidence = Sup(X∪Y)/Sup(X). Công thức cuối là Leverage."
+        },
+        {
+          "id": "CDV4_20",
+          "question": "Công thức nào sau đây là Leverage của luật X → Y?",
+          "options": {
+            "A": "Sup(X ∪ Y) / Sup(X)",
+            "B": "Sup(X ∪ Y) − Sup(X)·Sup(Y)",
+            "C": "Conf(X → Y) / Sup(Y)",
+            "D": "Sup(X ∪ Y) / Sup(Y)"
+          },
+          "correctAnswer": "B",
+          "explanation": "**Leverage** = Sup(X∪Y) − Sup(X)×Sup(Y) (chênh lệch giữa tần suất thực và kỳ vọng nếu độc lập)."
+        },
+        {
+          "id": "CDV4_21",
+          "question": "Có 10 item đơn lẻ phổ biến. Theo xấp xỉ n²/2 trong slide Apriori, số itemset 2 phần tử cần kiểm tra là khoảng:",
+          "options": {
+            "A": "20",
+            "B": "100",
+            "C": "10",
+            "D": "50"
+          },
+          "correctAnswer": "D",
+          "explanation": "n²/2 = 10²/2 = **50** (chính xác C(10,2) = 45)."
+        },
+        {
+          "id": "CDV4_22",
+          "question": "Có 5 item. Số tập con khác rỗng (có thể sinh ra) là:",
+          "options": {
+            "A": "25",
+            "B": "31",
+            "C": "32",
+            "D": "10"
+          },
+          "correctAnswer": "B",
+          "explanation": "2⁵ − 1 = **31**."
+        },
+        {
+          "id": "CDV4_23",
+          "question": "Tính chất Apriori (anti-monotone) phát biểu rằng:",
+          "options": {
+            "A": "Nếu itemset phổ biến thì mọi tập cha của nó cũng phổ biến",
+            "B": "Support của tập cha luôn lớn hơn tập con",
+            "C": "Mọi itemset đều phổ biến nếu Confidence cao",
+            "D": "Nếu một tập con của itemset không phổ biến thì itemset đó cũng không phổ biến"
+          },
+          "correctAnswer": "D",
+          "explanation": "Dùng để **cắt tỉa** ứng viên: tập con không phổ biến ⇒ loại tập cha."
+        },
+        {
+          "id": "CDV4_24",
+          "question": "Hạn chế chính của Apriori so với FP-Growth là:",
+          "options": {
+            "A": "Quét CSDL nhiều lần và sinh số lượng ứng viên rất lớn",
+            "B": "Chỉ duyệt CSDL 2 lần",
+            "C": "Không sinh ứng viên",
+            "D": "Chỉ chạy được trên dữ liệu số"
+          },
+          "correctAnswer": "A",
+          "explanation": "FP-Growth: 2 lần quét, không sinh ứng viên (dùng FP-Tree)."
+        }
+      ]
+    },
+    {
+      "topicId": "CD_V5",
+      "topicName": "46. Biến thể: FP-Growth & Conditional Pattern Base (câu 31–33)",
+      "questions": [
+        {
+          "id": "CDV5_1",
+          "question": "Bảng Conditional Pattern Base: X:{Y:4, Z:3}; Y:{X:4, Z:4, T:4}; Z:{X:3, Y:4, T:3}; T:{Y:4, Z:3}. Với Minsup = 4, những tập phổ biến có 2 item là:",
+          "options": {
+            "A": "{X,Y}, {Y,Z}, {Y,T}",
+            "B": "{X,Y}, {X,Z}, {Z,T}",
+            "C": "{X,Z}, {Y,T}",
+            "D": "{Y,Z}, {Z,T}"
+          },
+          "correctAnswer": "A",
+          "explanation": "Các cặp đạt ≥ 4: X–Y (4), Y–Z (4), Y–T (4). X–Z (3), Z–T (3) bị loại."
+        },
+        {
+          "id": "CDV5_2",
+          "question": "Bảng Conditional Pattern Base: X:{Y:4, Z:3}; Y:{X:4, Z:4, T:4}; Z:{X:3, Y:4, T:3}; T:{Y:4, Z:3}. Với Minsup = 3, số tập phổ biến có 2 item là:",
+          "options": {
+            "A": "3",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+          },
+          "correctAnswer": "C",
+          "explanation": "Các cặp: X–Y 4, X–Z 3, Y–Z 4, Y–T 4, Z–T 3 → đều ≥ 3 → **5** cặp."
+        },
+        {
+          "id": "CDV5_3",
+          "question": "Bảng Conditional Pattern Base: X:{Y:4, Z:3}; Y:{X:4, Z:4, T:4}; Z:{X:3, Y:4, T:3}; T:{Y:4, Z:3}. Với Minsup = 4, những tập phổ biến 2 item có chứa item Z là:",
+          "options": {
+            "A": "{Y,Z}",
+            "B": "{X,Z}",
+            "C": "{Z,T}",
+            "D": "{X,Z}, {Z,T}"
+          },
+          "correctAnswer": "A",
+          "explanation": "Z đi cùng X (3), Y (4), T (3) → chỉ **{Y,Z}** đạt 4."
+        },
+        {
+          "id": "CDV5_4",
+          "question": "Bảng Conditional Pattern Base: X:{Y:4, Z:3}; Y:{X:4, Z:4, T:4}; Z:{X:3, Y:4, T:3}; T:{Y:4, Z:3}. Với Minsup = 4, những tập phổ biến 2 item có chứa item T là:",
+          "options": {
+            "A": "{Z,T}",
+            "B": "{Y,T}, {Z,T}",
+            "C": "{X,T}",
+            "D": "{Y,T}"
+          },
+          "correctAnswer": "D",
+          "explanation": "T đi cùng Y (4), Z (3) → chỉ **{Y,T}**."
+        },
+        {
+          "id": "CDV5_5",
+          "question": "Bảng Conditional Pattern Base: X:{Y:4, Z:3}; Y:{X:4, Z:4, T:4}; Z:{X:3, Y:4, T:3}; T:{Y:4, Z:3}. Với Minsup = 4, item nào xuất hiện trong NHIỀU tập phổ biến 2 item nhất?",
+          "options": {
+            "A": "X (1 tập)",
+            "B": "Y (3 tập)",
+            "C": "Z (1 tập)",
+            "D": "T (2 tập)"
+          },
+          "correctAnswer": "B",
+          "explanation": "Các tập {X,Y}, {Y,Z}, {Y,T} đều chứa **Y**."
+        },
+        {
+          "id": "CDV5_6",
+          "question": "Bảng Conditional Pattern Base: X:{Y:4, Z:3}; Y:{X:4, Z:4, T:4}; Z:{X:3, Y:4, T:3}; T:{Y:4, Z:3}. Với Minsup = 4, những tập phổ biến có 2 item KHÔNG chứa Y là:",
+          "options": {
+            "A": "{X,Z}",
+            "B": "{Z,T}",
+            "C": "{X,Z}, {Z,T}",
+            "D": "Không có tập nào"
+          },
+          "correctAnswer": "D",
+          "explanation": "Cặp không chứa Y: X–Z (3), Z–T (3) đều < 4 → **không có**."
+        },
+        {
+          "id": "CDV5_7",
+          "question": "Condition Pattern Base của một item là:",
+          "options": {
+            "A": "Danh sách toàn bộ giao dịch của CSDL",
+            "B": "Tập các đường dẫn tiền tố (prefix path) trong FP-Tree đi cùng item đó, kèm số đếm",
+            "C": "Bảng Header Table của FP-Tree",
+            "D": "Tập các luật kết hợp có Confidence cao"
+          },
+          "correctAnswer": "B",
+          "explanation": "Là CSDL phụ gồm các prefix path đi cùng nút suffix."
+        },
+        {
+          "id": "CDV5_8",
+          "question": "Thứ tự sắp xếp các item trong giao dịch khi xây FP-Tree là:",
+          "options": {
+            "A": "Giảm dần theo số giao dịch (support) mà item xuất hiện",
+            "B": "Theo bảng chữ cái",
+            "C": "Tăng dần theo support",
+            "D": "Ngẫu nhiên"
+          },
+          "correctAnswer": "A",
+          "explanation": "Item phổ biến nhất ở gần gốc để cây nén tốt nhất."
+        },
+        {
+          "id": "CDV5_9",
+          "question": "FP-Growth duyệt CSDL bao nhiêu lần để xây FP-Tree?",
+          "options": {
+            "A": "1 lần",
+            "B": "Số lần bằng kích thước itemset lớn nhất",
+            "C": "2 lần",
+            "D": "Nhiều lần, mỗi lần một item"
+          },
+          "correctAnswer": "C",
+          "explanation": "Lần 1: đếm support từng item; lần 2: xây cây. Không sinh ứng viên."
+        }
+      ]
+    },
+    {
+      "topicId": "CD_V6",
+      "topicName": "47. Biến thể: PageRank (câu 36, 37, 48–50)",
+      "questions": [
+        {
+          "id": "CDV6_1",
+          "question": "Đồ thị liên kết: 1→2; 2→5; 3→1, 3→2, 3→4, 3→5; 4→3, 4→5; 5→4. PageRank khởi tạo bằng 1, d = 0,85. Giá trị PageRank của Page 3 ở vòng lặp đầu tiên là bao nhiêu?",
+          "options": {
+            "A": "0,1500",
+            "B": "0,5750",
+            "C": "1,0000",
+            "D": "1,4250"
+          },
+          "correctAnswer": "B",
+          "explanation": "Page 3 nhận từ Page 4 → PR = 0,15 + 0,85×(1/2) = **0,5750**."
+        },
+        {
+          "id": "CDV6_2",
+          "question": "Đồ thị liên kết: 1→2; 2→5; 3→1, 3→2, 3→4, 3→5; 4→3, 4→5; 5→4. PageRank khởi tạo bằng 1, d = 0,85. Giá trị PageRank của Page 4 ở vòng lặp đầu tiên là bao nhiêu?",
+          "options": {
+            "A": "0,1500",
+            "B": "1,0000",
+            "C": "2,0625",
+            "D": "1,2125"
+          },
+          "correctAnswer": "D",
+          "explanation": "Page 4 nhận từ Page 3, Page 5 → PR = 0,15 + 0,85×(1/4 + 1/1) = **1,2125**."
+        },
+        {
+          "id": "CDV6_3",
+          "question": "Đồ thị liên kết: 1→2; 2→5; 3→1, 3→2, 3→4, 3→5; 4→3, 4→5; 5→4. PageRank khởi tạo bằng 1, d = 0,85. Giá trị PageRank của Page 5 ở vòng lặp đầu tiên là bao nhiêu?",
+          "options": {
+            "A": "0,1500",
+            "B": "1,6375",
+            "C": "1,0000",
+            "D": "2,4875"
+          },
+          "correctAnswer": "B",
+          "explanation": "Page 5 nhận từ Page 2, Page 3, Page 4 → PR = 0,15 + 0,85×(1/1 + 1/4 + 1/2) = **1,6375**."
+        },
+        {
+          "id": "CDV6_4",
+          "question": "Đồ thị liên kết: 1→2; 2→5; 3→1, 3→2, 3→4, 3→5; 4→3, 4→5; 5→4. PageRank khởi tạo bằng 1, d = 0,5. Giá trị PageRank của Page 2 ở vòng lặp đầu tiên là bao nhiêu?",
+          "options": {
+            "A": "1,212",
+            "B": "1,000",
+            "C": "1,125",
+            "D": "1,250"
+          },
+          "correctAnswer": "C",
+          "explanation": "PR(2) = (1 − 0,5) + 0,5×(1/1 + 1/4) = 0,5 + 0,625 = **1,125**."
+        },
+        {
+          "id": "CDV6_5",
+          "question": "Đồ thị liên kết: 1→2; 2→5; 3→1, 3→2, 3→4, 3→5; 4→3, 4→5; 5→4. PageRank khởi tạo bằng 1, d = 0,85. Sau vòng lặp đầu tiên, trang nào có PageRank CAO NHẤT?",
+          "options": {
+            "A": "Page 5 (≈ 1,6375)",
+            "B": "Page 2 (≈ 1,2125)",
+            "C": "Page 4 (≈ 1,2125)",
+            "D": "Page 1 (≈ 0,3625)"
+          },
+          "correctAnswer": "A",
+          "explanation": "PR(5) = 0,15 + 0,85×(1 + 1/4 + 1/2) = 1,6375 là lớn nhất (Page 5 nhận từ 3 trang)."
+        },
+        {
+          "id": "CDV6_6",
+          "question": "Đồ thị liên kết: 1→2; 2→5; 3→1, 3→2, 3→4, 3→5; 4→3, 4→5; 5→4. PageRank khởi tạo bằng 1, d = 0,85. Tổng PageRank của 5 trang sau vòng lặp đầu tiên bằng:",
+          "options": {
+            "A": "1",
+            "B": "0,85",
+            "C": "5",
+            "D": "4,25"
+          },
+          "correctAnswer": "C",
+          "explanation": "Tổng PR bảo toàn bằng số trang (N = 5): 0,3625 + 1,2125 + 0,575 + 1,2125 + 1,6375 = 5."
+        },
+        {
+          "id": "CDV6_7",
+          "question": "Ký hiệu C(p) trong công thức PageRank là gì?",
+          "options": {
+            "A": "Số lượng liên kết đi ra (out-degree) của trang p",
+            "B": "Số lượng liên kết đi vào trang p",
+            "C": "Giá trị PageRank của trang p",
+            "D": "Tổng số trang trong đồ thị"
+          },
+          "correctAnswer": "A",
+          "explanation": "C(p) = số trang mà p liên kết đến."
+        },
+        {
+          "id": "CDV6_8",
+          "question": "Hệ số damping factor d trong PageRank thường được chọn bằng:",
+          "options": {
+            "A": "0,15",
+            "B": "0,85",
+            "C": "0,5",
+            "D": "1,0"
+          },
+          "correctAnswer": "B",
+          "explanation": "d = 0,85 (xác suất người dùng tiếp tục bấm link); 1 − d = 0,15 là xác suất nhảy ngẫu nhiên."
+        },
+        {
+          "id": "CDV6_9",
+          "question": "Thuật toán PageRank dừng lặp khi độ chênh lệch PR giữa hai vòng liên tiếp nhỏ hơn ngưỡng ε. Giá trị ε thường chọn là:",
+          "options": {
+            "A": "0,85",
+            "B": "0,15",
+            "C": "0,5",
+            "D": "0,0001"
+          },
+          "correctAnswer": "D",
+          "explanation": "ε thường = 0,0001."
+        },
+        {
+          "id": "CDV6_10",
+          "question": "Một trang không có liên kết nào trỏ đến nó (in-degree = 0) thì PageRank sau vòng lặp đầu (d = 0,85) bằng:",
+          "options": {
+            "A": "0",
+            "B": "0,15",
+            "C": "0,85",
+            "D": "1"
+          },
+          "correctAnswer": "B",
+          "explanation": "PR = (1 − d) + d×0 = **0,15**."
+        }
+      ]
+    },
+    {
+      "topicId": "CD_V7",
+      "topicName": "48. Biến thể: CPT / CPT+ (FSC, SBC, PNR) (câu 38, 39)",
+      "questions": [
+        {
+          "id": "CDV7_1",
+          "question": "Trong CPT+, chiến lược thay thế chuỗi con xuất hiện thường xuyên (ví dụ x = AB) bằng một ký hiệu duy nhất trên cây dự đoán gọi là gì?",
+          "options": {
+            "A": "SBC (Simple Branches Compression)",
+            "B": "PNR (Prediction with improved Noise Reduction)",
+            "C": "FSC (Frequent Subsequence Compression)",
+            "D": "Inverted Index"
+          },
+          "correctAnswer": "C",
+          "explanation": "**FSC** thay chuỗi con thường gặp (AB) bằng ký hiệu mới x → cây gọn hơn."
+        },
+        {
+          "id": "CDV7_2",
+          "question": "Chiến lược gộp các nhánh đơn (mỗi nút chỉ có một con, không rẽ nhánh) thành một nút duy nhất trong Prediction Tree là:",
+          "options": {
+            "A": "SBC (Simple Branches Compression)",
+            "B": "FSC (Frequent Subsequence Compression)",
+            "C": "PNR (Prediction with improved Noise Reduction)",
+            "D": "Lookup Table"
+          },
+          "correctAnswer": "A",
+          "explanation": "**SBC** nén các nhánh đơn (ví dụ C→D không rẽ nhánh gộp thành nút \"CD\")."
+        },
+        {
+          "id": "CDV7_3",
+          "question": "Chiến lược nào trong CPT+ cải tiến GIAI ĐOẠN DỰ ĐOÁN bằng cách giảm ảnh hưởng của dữ liệu nhiễu khi tính điểm?",
+          "options": {
+            "A": "FSC (Frequent Subsequence Compression)",
+            "B": "SBC (Simple Branches Compression)",
+            "C": "PNR (Prediction with improved Noise Reduction)",
+            "D": "Prediction Tree"
+          },
+          "correctAnswer": "C",
+          "explanation": "**PNR** thuộc giai đoạn dự đoán; FSC và SBC là hai kỹ thuật nén cây ở giai đoạn xây dựng (huấn luyện)."
+        },
+        {
+          "id": "CDV7_4",
+          "question": "Trong Prediction Tree có đường đi C → D, hai nút này không có nhánh rẽ nào khác. Nếu gộp chúng thành một nút \"CD\" thì đã áp dụng chiến lược nào?",
+          "options": {
+            "A": "FSC (Frequent Subsequence Compression)",
+            "B": "SBC (Simple Branches Compression)",
+            "C": "PNR (Prediction with improved Noise Reduction)",
+            "D": "Không áp dụng chiến lược nào"
+          },
+          "correctAnswer": "B",
+          "explanation": "Gộp **nhánh đơn** → SBC. Thay chuỗi con lặp nhiều lần ở nhiều nhánh bằng một ký hiệu → FSC."
+        },
+        {
+          "id": "CDV7_5",
+          "question": "Trong hình CPT+ có nút x được ghi (A, B → x) trên Prediction Tree và bên dưới ghi x = AB. Chú thích này cho biết điều gì?",
+          "options": {
+            "A": "Hai nhánh đơn A và B đã được gộp (SBC)",
+            "B": "Điểm dự đoán của AB bằng x",
+            "C": "x là một item mới trong dữ liệu gốc",
+            "D": "Chuỗi con AB được thay bằng ký hiệu mới x (đã áp dụng FSC)"
+          },
+          "correctAnswer": "D",
+          "explanation": "x = AB nghĩa là chuỗi con thường xuyên AB được nén thành ký hiệu x → **FSC**."
+        },
+        {
+          "id": "CDV7_6",
+          "question": "FSC và SBC thuộc giai đoạn nào của CPT+?",
+          "options": {
+            "A": "Giai đoạn dự đoán",
+            "B": "Giai đoạn xây dựng (huấn luyện) cây: nén Prediction Tree",
+            "C": "Cả hai thuộc giai đoạn kiểm thử độc lập",
+            "D": "Giai đoạn tiền xử lý dữ liệu đầu ra"
+          },
+          "correctAnswer": "B",
+          "explanation": "FSC, SBC nén **cây** (training); PNR cải tiến **dự đoán**."
+        },
+        {
+          "id": "CDV7_7",
+          "question": "Ba thành phần cấu trúc của CPT gồm:",
+          "options": {
+            "A": "FP-Tree, Header Table, Conditional Pattern Base",
+            "B": "Decision Tree, Support Table, Rule Set",
+            "C": "Dendrogram, Hash Table, Lookup Table",
+            "D": "Prediction Tree, Inverted Index, Lookup Table"
+          },
+          "correctAnswer": "D",
+          "explanation": "FP-Tree/Header Table thuộc FP-Growth."
+        },
+        {
+          "id": "CDV7_8",
+          "question": "Lookup Table trong CPT dùng để làm gì?",
+          "options": {
+            "A": "Cho biết mỗi item nằm trong những chuỗi nào",
+            "B": "Lưu số lần xuất hiện của từng item",
+            "C": "Trỏ từ mỗi chuỗi (s1, s2…) tới nút cuối của nó trong Prediction Tree",
+            "D": "Lưu các luật kết hợp đã tìm được"
+          },
+          "correctAnswer": "C",
+          "explanation": "Cho biết mỗi item nằm trong những chuỗi nào là việc của **Inverted Index**."
+        },
+        {
+          "id": "CDV7_9",
+          "question": "Inverted Index trong CPT dùng để làm gì?",
+          "options": {
+            "A": "Cho biết mỗi item xuất hiện trong những chuỗi (sequence) nào",
+            "B": "Trỏ tới nút cuối của mỗi chuỗi",
+            "C": "Lưu cây dự đoán đã nén",
+            "D": "Tính PageRank cho các item"
+          },
+          "correctAnswer": "A",
+          "explanation": "Inverted Index: item → tập các chuỗi chứa nó (tìm nhanh các chuỗi chứa mọi item của truy vấn)."
+        },
+        {
+          "id": "CDV7_10",
+          "question": "Inverted Index (A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3; E: s5). Item D xuất hiện trong những chuỗi nào?",
+          "options": {
+            "A": "Chỉ s3",
+            "B": "s1 và s3",
+            "C": "s3 và s5",
+            "D": "Tất cả các chuỗi"
+          },
+          "correctAnswer": "A",
+          "explanation": "Hàng D chỉ có giá trị 1 ở cột **s3**."
+        },
+        {
+          "id": "CDV7_11",
+          "question": "Cùng Inverted Index (A: s1,s2,s3,s5; B: s1–s5; C: s1,s3,s4; D: s3; E: s5). Các chuỗi nào chứa CẢ A và C?",
+          "options": {
+            "A": "s1, s2 và s3",
+            "B": "s3 và s4",
+            "C": "s1 và s3",
+            "D": "s1 và s4"
+          },
+          "correctAnswer": "C",
+          "explanation": "A: {s1,s2,s3,s5} ∩ C: {s1,s3,s4} = **{s1, s3}**."
+        },
+        {
+          "id": "CDV7_12",
+          "question": "Dùng CPT dự đoán với chuỗi truy vấn ⟨D, C⟩: bước đầu tiên là gì?",
+          "options": {
+            "A": "Tìm các chuỗi huấn luyện chứa cả D và C (dùng Inverted Index)",
+            "B": "Tính PageRank của D và C",
+            "C": "Xóa mọi chuỗi chứa D hoặc C",
+            "D": "Sắp xếp item theo bảng chữ cái"
+          },
+          "correctAnswer": "A",
+          "explanation": "Sau đó lấy phần đuôi (consequent) của các chuỗi đó và cộng điểm từng item."
+        }
+      ]
+    },
+    {
+      "topicId": "CD_V8",
+      "topicName": "49. Biến thể: Kiến trúc, mô hình hóa & pipeline (câu 1–15)",
+      "questions": [
+        {
+          "id": "CDV8_1",
+          "question": "Nền tảng Cloud Data Warehouse nào được xem là tiên phong trong việc tách rời Compute và Storage cùng chia sẻ dữ liệu an toàn?",
+          "options": {
+            "A": "Firebolt",
+            "B": "Google BigQuery",
+            "C": "Databricks SQL",
+            "D": "Snowflake"
+          },
+          "correctAnswer": "D",
+          "explanation": "**Snowflake** tiên phong tách Compute/Storage."
+        },
+        {
+          "id": "CDV8_2",
+          "question": "Nền tảng nào có kiến trúc Serverless và tích hợp sẵn các mô hình AI/ML của Google?",
+          "options": {
+            "A": "Snowflake",
+            "B": "Google BigQuery",
+            "C": "Firebolt",
+            "D": "Databricks SQL"
+          },
+          "correctAnswer": "B",
+          "explanation": "**BigQuery**: Serverless + AI/ML (BigQuery ML)."
+        },
+        {
+          "id": "CDV8_3",
+          "question": "Nền tảng nào nhấn mạnh việc đưa trải nghiệm Data Warehouse vào kiến trúc Lakehouse?",
+          "options": {
+            "A": "Firebolt",
+            "B": "Google BigQuery",
+            "C": "Snowflake",
+            "D": "Databricks SQL"
+          },
+          "correctAnswer": "D",
+          "explanation": "**Databricks SQL** mang Warehouse vào Lakehouse."
+        },
+        {
+          "id": "CDV8_4",
+          "question": "Nền tảng nào tập trung vào tốc độ truy vấn cực nhanh cho ứng dụng phân tích thời gian thực?",
+          "options": {
+            "A": "Firebolt",
+            "B": "Snowflake",
+            "C": "Databricks SQL",
+            "D": "Google BigQuery"
+          },
+          "correctAnswer": "A",
+          "explanation": "**Firebolt** tập trung vào tốc độ truy vấn."
+        },
+        {
+          "id": "CDV8_5",
+          "question": "Cơ chế lưu kết quả truy vấn đã tính để lần sau trả ngay mà không phải tính lại (giảm chi phí) gọi là:",
+          "options": {
+            "A": "Clustering",
+            "B": "Sharding",
+            "C": "Caching",
+            "D": "Mirroring"
+          },
+          "correctAnswer": "C",
+          "explanation": "**Caching** tránh tính toán lại kết quả cũ."
+        },
+        {
+          "id": "CDV8_6",
+          "question": "Thông tin nào mô tả đúng Data Catalog?",
+          "options": {
+            "A": "Thư viện chứa thông tin (metadata) và vị trí của mọi nguồn dữ liệu trong tổ chức",
+            "B": "Kho lưu trữ toàn bộ dữ liệu thô",
+            "C": "Công cụ vẽ biểu đồ BI",
+            "D": "Cơ chế mã hóa dữ liệu khi truyền"
+          },
+          "correctAnswer": "A",
+          "explanation": "**Data Catalog** = danh mục tìm kiếm dữ liệu nhờ metadata."
+        },
+        {
+          "id": "CDV8_7",
+          "question": "Data Fabric tập trung vào mục tiêu nào?",
+          "options": {
+            "A": "Sao chép toàn bộ dữ liệu về một nơi",
+            "B": "Chỉ lưu dữ liệu phi cấu trúc",
+            "C": "Kết nối và ảo hóa (virtualization) các nguồn dữ liệu rời rạc",
+            "D": "Chỉ mã hóa dữ liệu"
+          },
+          "correctAnswer": "C",
+          "explanation": "**Data Fabric** kết nối & ảo hóa dữ liệu, không bắt buộc di chuyển dữ liệu."
+        },
+        {
+          "id": "CDV8_8",
+          "question": "Chính sách nào quy định quyền truy cập cho toàn bộ Data Container (bucket) từ bên ngoài?",
+          "options": {
+            "A": "IAM Policies gắn với từng người dùng",
+            "B": "Row-level Security",
+            "C": "Column-level Masking",
+            "D": "Bucket Policies"
+          },
+          "correctAnswer": "D",
+          "explanation": "**Bucket Policies** gắn vào bucket; IAM Policies gắn vào danh tính."
+        },
+        {
+          "id": "CDV8_9",
+          "question": "Micro-partition trong Snowflake thường có kích thước nén khoảng:",
+          "options": {
+            "A": "1KB – 10KB",
+            "B": "50MB – 500MB",
+            "C": "5GB – 50GB",
+            "D": "1TB trở lên"
+          },
+          "correctAnswer": "B",
+          "explanation": "Mỗi micro-partition ≈ **50–500MB** dữ liệu nén."
+        },
+        {
+          "id": "CDV8_10",
+          "question": "Clustering Key được chọn dựa trên đối tượng nào?",
+          "options": {
+            "A": "Hàng (row) đầu tiên",
+            "B": "Tên bảng",
+            "C": "Cột (column) thường dùng để lọc/sắp xếp",
+            "D": "Kích thước file"
+          },
+          "correctAnswer": "C",
+          "explanation": "Clustering Key là một hoặc nhiều **cột**."
+        },
+        {
+          "id": "CDV8_11",
+          "question": "Loại Fact Table nào phù hợp để theo dõi một quy trình nhiều giai đoạn (đặt hàng → giao → thanh toán) và được cập nhật dần theo từng mốc?",
+          "options": {
+            "A": "Accumulating Snapshot",
+            "B": "Transaction Fact Table",
+            "C": "Periodic Snapshot",
+            "D": "Factless Fact Table"
+          },
+          "correctAnswer": "A",
+          "explanation": "**Accumulating Snapshot** theo dõi vòng đời quy trình, phù hợp tối ưu chuỗi cung ứng/vận hành."
+        },
+        {
+          "id": "CDV8_12",
+          "question": "Loại Fact Table nào ghi lại tình trạng (ví dụ tồn kho cuối ngày) theo chu kỳ cố định?",
+          "options": {
+            "A": "Accumulating Snapshot",
+            "B": "Transaction Fact Table",
+            "C": "Periodic Snapshot",
+            "D": "Bridge Table"
+          },
+          "correctAnswer": "C",
+          "explanation": "**Periodic Snapshot** chụp trạng thái theo định kỳ."
+        },
+        {
+          "id": "CDV8_13",
+          "question": "Bridge Table dùng để giải quyết loại quan hệ nào giữa Fact và Dimension?",
+          "options": {
+            "A": "Quan hệ nhiều-nhiều (M-M)",
+            "B": "Quan hệ một-một",
+            "C": "Quan hệ một-nhiều đơn giản",
+            "D": "Quan hệ phân cấp (hierarchy) không giới hạn"
+          },
+          "correctAnswer": "A",
+          "explanation": "**Bridge Table** là bảng trung gian cho quan hệ M-M."
+        },
+        {
+          "id": "CDV8_14",
+          "question": "Fact table được kết hợp với Dimension table bằng phép toán nào?",
+          "options": {
+            "A": "Union",
+            "B": "Intersect",
+            "C": "Pivot",
+            "D": "Join"
+          },
+          "correctAnswer": "D",
+          "explanation": "Fact – Dimension kết hợp bằng **Join** (Star Schema)."
+        },
+        {
+          "id": "CDV8_15",
+          "question": "Schema Evolution của Snowflake cho phép:",
+          "options": {
+            "A": "Chỉ đọc dữ liệu mà không đổi schema",
+            "B": "Tự động điều chỉnh cấu trúc bảng khi nguồn dữ liệu thay đổi (ví dụ thêm cột)",
+            "C": "Tự xóa toàn bộ dữ liệu cũ",
+            "D": "Chuyển bảng sang dạng file CSV"
+          },
+          "correctAnswer": "B",
+          "explanation": "Giảm công sức bảo trì khi schema nguồn đổi."
+        },
+        {
+          "id": "CDV8_16",
+          "question": "Test nào của dbt là một câu SQL riêng biệt kiểm tra tình huống nghiệp vụ đặc thù?",
+          "options": {
+            "A": "Schema Test (unique, not_null…)",
+            "B": "Freshness Test",
+            "C": "Snapshot Test",
+            "D": "Singular Test"
+          },
+          "correctAnswer": "D",
+          "explanation": "**Singular Test**: SQL tùy biến; Schema/Generic Test: khai báo sẵn (unique, not null…)."
+        },
+        {
+          "id": "CDV8_17",
+          "question": "Kiểm tra cột order_id không trùng lặp và không rỗng trong dbt thường dùng loại test nào?",
+          "options": {
+            "A": "Singular Test",
+            "B": "Schema Test (generic test: unique, not_null)",
+            "C": "Jinja Macro",
+            "D": "Snowpipe"
+          },
+          "correctAnswer": "B",
+          "explanation": "unique/not_null khai báo trong file schema → Schema Test."
+        },
+        {
+          "id": "CDV8_18",
+          "question": "Jinja trong dbt dùng để:",
+          "options": {
+            "A": "Viết SQL động (biến, vòng lặp, macro) giúp giảm code lặp",
+            "B": "Lưu trữ dữ liệu",
+            "C": "Vẽ dashboard",
+            "D": "Mã hóa cột nhạy cảm"
+          },
+          "correctAnswer": "A",
+          "explanation": "Jinja + Dynamic SQL giảm đáng kể số dòng code dư thừa."
+        },
+        {
+          "id": "CDV8_19",
+          "question": "Apache Airflow theo tư duy nào?",
+          "options": {
+            "A": "Asset-centric: quản lý tài sản dữ liệu",
+            "B": "Storage-centric: quản lý lưu trữ",
+            "C": "Task-centric: giám sát các tác vụ (task) đang chạy",
+            "D": "Model-centric: quản lý mô hình ML"
+          },
+          "correctAnswer": "C",
+          "explanation": "Airflow = Task-centric; **Dagster** = Asset-centric."
+        },
+        {
+          "id": "CDV8_20",
+          "question": "Công cụ orchestration nào theo tư duy Asset-centric (quản lý theo tài sản dữ liệu)?",
+          "options": {
+            "A": "Apache Airflow",
+            "B": "Dagster",
+            "C": "Looker",
+            "D": "Firebolt"
+          },
+          "correctAnswer": "B",
+          "explanation": "**Dagster** là Asset-centric."
+        },
+        {
+          "id": "CDV8_21",
+          "question": "Storage Mirroring có đặc điểm nào?",
+          "options": {
+            "A": "Chỉ sao chép một lần duy nhất",
+            "B": "Mã hóa dữ liệu bằng khóa riêng",
+            "C": "Xóa dữ liệu nguồn sau khi sao chép",
+            "D": "Nhận bản sao dữ liệu từ hệ thống nguồn và liên tục cập nhật theo thay đổi ở tầng lưu trữ"
+          },
+          "correctAnswer": "D",
+          "explanation": "Mirroring = nhân bản liên tục ở tầng lưu trữ."
+        }
+      ]
+    },
+    {
+      "topicId": "CD_V9",
+      "topicName": "50. Biến thể: Graph, Blockchain, Vector, bảo mật & AI Act (câu 40–47)",
+      "questions": [
+        {
+          "id": "CDV9_1",
+          "question": "Cần tìm đường đi NGẮN NHẤT giữa hai thực thể trong Knowledge Graph. Nên dùng thuật toán duyệt nào?",
+          "options": {
+            "A": "BFS (duyệt theo cấp, dùng Queue)",
+            "B": "DFS (duyệt sâu, dùng Stack)",
+            "C": "Quick Sort",
+            "D": "K-Means"
+          },
+          "correctAnswer": "A",
+          "explanation": "**BFS** duyệt theo từng cấp nên tìm đường ngắn nhất (theo số cạnh)."
+        },
+        {
+          "id": "CDV9_2",
+          "question": "Cần duyệt ontology để tìm mọi khái niệm con, xây taxonomy. Nên dùng:",
+          "options": {
+            "A": "BFS (duyệt theo cấp, dùng Queue)",
+            "B": "Binary Search",
+            "C": "DFS (duyệt sâu, dùng Stack/đệ quy)",
+            "D": "PCA"
+          },
+          "correctAnswer": "C",
+          "explanation": "**DFS** đi sâu một nhánh rồi quay lui."
+        },
+        {
+          "id": "CDV9_3",
+          "question": "BFS sử dụng cấu trúc dữ liệu nào để quản lý thứ tự duyệt?",
+          "options": {
+            "A": "Queue (FIFO)",
+            "B": "Stack (LIFO)",
+            "C": "Heap",
+            "D": "Hash Table"
+          },
+          "correctAnswer": "A",
+          "explanation": "BFS: Queue; DFS: Stack/đệ quy."
+        },
+        {
+          "id": "CDV9_4",
+          "question": "Đồ thị vô hướng: A–B, A–D, A–G, B–E, G–E, G–F, D–F, F–C. BFS từ A, ưu tiên theo bảng chữ cái, thứ tự thăm là:",
+          "options": {
+            "A": "A, B, E, G, F, C, D",
+            "B": "A, D, G, B, E, F, C",
+            "C": "A, B, E, F, C, D, G",
+            "D": "A, B, D, G, E, F, C"
+          },
+          "correctAnswer": "D",
+          "explanation": "Mức 1: B, D, G. Mức 2: E (từ B), F (từ D). Mức 3: C. → **A, B, D, G, E, F, C**."
+        },
+        {
+          "id": "CDV9_5",
+          "question": "Cùng đồ thị trên, DFS từ A (ưu tiên bảng chữ cái) cho thứ tự thăm:",
+          "options": {
+            "A": "A, B, D, G, E, F, C",
+            "B": "A, B, E, G, F, C, D",
+            "C": "A, B, E, F, C, D, G",
+            "D": "A, D, F, C, G, E, B"
+          },
+          "correctAnswer": "B",
+          "explanation": "A → B → E → G → F → C, quay lui → D. → **A, B, E, G, F, C, D**."
+        },
+        {
+          "id": "CDV9_6",
+          "question": "Dữ liệu thô trên Blockchain tồn tại ở dạng nào?",
+          "options": {
+            "A": "Bảng quan hệ chuẩn hóa",
+            "B": "JSON có schema cố định",
+            "C": "Star Schema",
+            "D": "byte/hex (phi cấu trúc)"
+          },
+          "correctAnswer": "D",
+          "explanation": "Cần dùng **ABI** để giải mã Hex thành hàm/tham số dễ đọc."
+        },
+        {
+          "id": "CDV9_7",
+          "question": "Công cụ nào dịch chuỗi Hex trong Logs của Smart Contract thành tên hàm và tham số?",
+          "options": {
+            "A": "Merkle Root",
+            "B": "ABI (Application Binary Interface)",
+            "C": "Predicate Pushdown",
+            "D": "Embeddings"
+          },
+          "correctAnswer": "B",
+          "explanation": "**ABI** là bảng đặc tả giao diện hàm."
+        },
+        {
+          "id": "CDV9_8",
+          "question": "Cơ chế Anchoring ghi lên Blockchain thông tin nào để chứng minh audit log không bị sửa?",
+          "options": {
+            "A": "Merkle Root Hash của lô nhật ký (không ghi toàn bộ dữ liệu thô)",
+            "B": "Toàn bộ dữ liệu thô của nhật ký",
+            "C": "Mật khẩu của DBA",
+            "D": "Bản sao của CSDL"
+          },
+          "correctAnswer": "A",
+          "explanation": "Băm log (SHA-256) → Merkle Root → ghi lên chain qua Smart Contract."
+        },
+        {
+          "id": "CDV9_9",
+          "question": "IVFFLAT là khái niệm liên quan đến:",
+          "options": {
+            "A": "Row-level Security",
+            "B": "Blockchain",
+            "C": "Vector Index (Inverted File) cho tìm kiếm vector",
+            "D": "Chuẩn hóa dữ liệu"
+          },
+          "correctAnswer": "C",
+          "explanation": "**IVFFLAT/IVF** chia không gian vector thành các phân vùng (Voronoi cells)."
+        },
+        {
+          "id": "CDV9_10",
+          "question": "Cấu trúc đồ thị phân cấp (small world) giúp tìm láng giềng gần nhất rất nhanh trong vector search là:",
+          "options": {
+            "A": "IVFFLAT",
+            "B": "Product Quantization",
+            "C": "FP-Tree",
+            "D": "HNSW"
+          },
+          "correctAnswer": "D",
+          "explanation": "**HNSW**: đồ thị phân cấp; IVF: phân cụm; PQ: nén vector."
+        },
+        {
+          "id": "CDV9_11",
+          "question": "Kỹ thuật nén vector để đưa chỉ mục vào RAM, tiết kiệm lưu trữ, gọi là:",
+          "options": {
+            "A": "HNSW",
+            "B": "Product Quantization",
+            "C": "Z-Score",
+            "D": "Anchoring"
+          },
+          "correctAnswer": "B",
+          "explanation": "**Product Quantization** nén kích thước vector."
+        },
+        {
+          "id": "CDV9_12",
+          "question": "Kỹ thuật CLM (Column-level Masking) liên quan đến:",
+          "options": {
+            "A": "Bảo mật ở mức dòng",
+            "B": "Tối ưu tốc độ truy vấn",
+            "C": "Sao lưu dữ liệu",
+            "D": "Bảo mật ở mức cột (che/mã hóa dữ liệu nhạy cảm như số điện thoại)"
+          },
+          "correctAnswer": "D",
+          "explanation": "CLM = cột; **RLS** = dòng."
+        },
+        {
+          "id": "CDV9_13",
+          "question": "Nhân viên chi nhánh A chỉ nhìn thấy khách hàng của chi nhánh A. Đây là kỹ thuật nào?",
+          "options": {
+            "A": "Column-level Masking (CLM)",
+            "B": "Row-level Security (RLS)",
+            "C": "Differential Privacy",
+            "D": "Zero-copy Data Sharing"
+          },
+          "correctAnswer": "B",
+          "explanation": "Giới hạn theo **dòng** dựa trên danh tính → RLS."
+        },
+        {
+          "id": "CDV9_14",
+          "question": "Số điện thoại hiển thị là 091xxxx888. Đây là kỹ thuật nào?",
+          "options": {
+            "A": "Row-level Security (RLS)",
+            "B": "k-anonymity",
+            "C": "Column-level Masking (CLM)",
+            "D": "Anchoring"
+          },
+          "correctAnswer": "C",
+          "explanation": "Che một phần giá trị trong **cột** → CLM."
+        },
+        {
+          "id": "CDV9_15",
+          "question": "Theo AI Act, hệ thống chấm điểm công dân xã hội (social scoring) thuộc mức rủi ro nào?",
+          "options": {
+            "A": "Unacceptable Risk (bị cấm)",
+            "B": "High Risk",
+            "C": "Transparent/Limited Risk",
+            "D": "Minimal Risk"
+          },
+          "correctAnswer": "A",
+          "explanation": "Unacceptable → **cấm hoàn toàn**."
+        },
+        {
+          "id": "CDV9_16",
+          "question": "Theo AI Act, AI chấm điểm tín dụng trong Fintech thuộc mức rủi ro nào?",
+          "options": {
+            "A": "Unacceptable Risk",
+            "B": "Transparent/Limited Risk",
+            "C": "High Risk (kiểm soát nghiêm ngặt)",
+            "D": "Minimal Risk"
+          },
+          "correctAnswer": "C",
+          "explanation": "Tín dụng ảnh hưởng quyền lợi → **High Risk**."
+        },
+        {
+          "id": "CDV9_17",
+          "question": "Theo AI Act, Chatbot và Deepfake thuộc mức rủi ro nào?",
+          "options": {
+            "A": "Transparent/Limited Risk (phải dán nhãn rõ ràng)",
+            "B": "Unacceptable Risk",
+            "C": "High Risk",
+            "D": "Minimal Risk"
+          },
+          "correctAnswer": "A",
+          "explanation": "Yêu cầu **minh bạch**/dán nhãn."
+        },
+        {
+          "id": "CDV9_18",
+          "question": "Theo AI Act, bộ lọc Spam và AI trong trò chơi thuộc mức rủi ro nào?",
+          "options": {
+            "A": "High Risk",
+            "B": "Minimal Risk (tự do vận hành)",
+            "C": "Unacceptable Risk",
+            "D": "Transparent/Limited Risk"
+          },
+          "correctAnswer": "B",
+          "explanation": "**Minimal Risk**."
+        },
+        {
+          "id": "CDV9_19",
+          "question": "AI Act phân loại hệ thống AI thành bao nhiêu mức độ rủi ro?",
+          "options": {
+            "A": "2 mức",
+            "B": "3 mức",
+            "C": "5 mức",
+            "D": "4 mức"
+          },
+          "correctAnswer": "D",
+          "explanation": "Unacceptable, High, Transparent/Limited, Minimal."
+        },
+        {
+          "id": "CDV9_20",
+          "question": "Hệ thống multimodal xử lý Text, Table, Image và dạng dữ liệu cần truy vấn theo quan hệ giữa các thực thể (GraphRAG). Dạng dữ liệu đó là:",
+          "options": {
+            "A": "Graph",
+            "B": "Audio",
+            "C": "Time-series",
+            "D": "Key-Value"
+          },
+          "correctAnswer": "A",
+          "explanation": "GraphRAG dùng **Graph** (Knowledge Graph)."
+        },
+        {
+          "id": "CDV9_21",
+          "question": "Looker thuộc nhóm nào?",
+          "options": {
+            "A": "Mô hình ngôn ngữ lớn (LLM)",
+            "B": "Cơ sở dữ liệu vector",
+            "C": "BI Tool",
+            "D": "Công cụ orchestration"
+          },
+          "correctAnswer": "C",
+          "explanation": "Looker = BI Tool; ChatGPT, Gemini, DeepSeek là LLM."
+        },
+        {
+          "id": "CDV9_22",
+          "question": "Trong các lựa chọn sau, cái nào KHÔNG phải là BI Tool?",
+          "options": {
+            "A": "Gemini",
+            "B": "Looker",
+            "C": "Power BI",
+            "D": "Tableau"
+          },
+          "correctAnswer": "A",
+          "explanation": "Gemini là mô hình LLM."
+        }
+      ]
     }
   ]
 }

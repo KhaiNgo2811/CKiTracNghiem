@@ -143,6 +143,18 @@ for i, (name, rx) in enumerate(TOPICS, 1):
         total += len(fq)
 allq = sum(len(c) for c in [[1]])  # noop
 import re as _re
+sys.path.insert(0, 'scripts')
+import zlib as _z
+import nk_variants as _nv
+for _i, (_name, _items) in enumerate(_nv.T, 1):
+    _qs = []
+    for _k, (_q, _c, _w, _e) in enumerate(_items, 1):
+        _id = f'CDV{_i}_{_k}'
+        _pos = _z.crc32(_id.encode()) % 4
+        _o = list(_w); _o.insert(_pos, _c)
+        _qs.append({'id': _id, 'question': _q, 'options': {'ABCD'[j]: _o[j] for j in range(4)}, 'correctAnswer': 'ABCD'[_pos], 'explanation': _e})
+    topics.append({'topicId': f'CD_V{_i}', 'topicName': _name, 'questions': _qs})
+    total += len(_qs)
 for n, t in enumerate(topics, 1):
     t['topicName'] = f"{n}. " + _re.sub(r'^\d+\.\s*', '', t['topicName'])
 data = {'chapterId': 'CD', 'chapterName': 'Tổng hợp theo câu hỏi chẩn đoán', 'topics': topics}
