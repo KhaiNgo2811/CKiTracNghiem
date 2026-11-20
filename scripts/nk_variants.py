@@ -786,6 +786,179 @@ it.append(('Looker thuộc nhóm nào?', 'BI Tool',
 it.append(('Trong các lựa chọn sau, cái nào KHÔNG phải là BI Tool?', 'Gemini', ['Looker', 'Power BI', 'Tableau'], 'Gemini là mô hình LLM.'))
 T.append(('Biến thể: Graph, Blockchain, Vector, bảo mật & AI Act (câu 40–47)', it))
 
+
+# =====================================================================
+# Biến thể "khác gợi ý": cùng mục kiến thức với gợi ý của thầy nhưng hỏi theo hướng khác
+# (giống cách đề năm ngoái hỏi Câu 10, 12, 32 khác với gợi ý)
+# =====================================================================
+def Q(lst, text, correct, wrongs, expl):
+    lst.append((text, correct, wrongs, expl))
+
+
+# ---------- (1/3) Kiến trúc, mô hình hóa & pipeline (gợi ý 1–15) ----------
+it = []
+Q(it, 'Ứng dụng nào phù hợp nhất với Firebolt?', 'Dashboard/ứng dụng phân tích tương tác cần phản hồi truy vấn rất nhanh (gần thời gian thực)',
+  ['Lưu trữ file sao lưu dài hạn chi phí thấp', 'Huấn luyện mô hình ML quy mô lớn bằng GPU', 'Quản lý danh tính và phân quyền người dùng'],
+  '**Firebolt** nổi bật ở tốc độ truy vấn cực nhanh cho phân tích thời gian thực.')
+Q(it, 'Result caching hoạt động như thế nào?', 'Khi gặp lại truy vấn giống hệt và dữ liệu nguồn chưa đổi, hệ thống trả kết quả đã lưu thay vì tính lại',
+  ['Luôn tính lại từ đầu để bảo đảm kết quả mới nhất', 'Tự động xóa kết quả sau mỗi truy vấn', 'Chỉ lưu kết quả của các truy vấn ghi (INSERT/UPDATE)'],
+  '**Caching** lưu kết quả đã tính để tránh tính toán lại, giảm chi phí.')
+Q(it, 'Lợi ích chính của caching trong Modern Data Warehouse là gì?', 'Giảm thời gian phản hồi và chi phí tính toán cho các truy vấn lặp lại',
+  ['Tăng dung lượng lưu trữ dữ liệu gốc', 'Tự động mã hóa dữ liệu nhạy cảm', 'Thay thế hoàn toàn việc thiết kế mô hình dữ liệu'],
+  'Caching tối ưu **chi phí và tốc độ** cho truy vấn lặp.')
+Q(it, 'Data Fabric khác cách tiếp cận "sao chép mọi thứ về một kho" ở điểm nào?', 'Kết nối và ảo hóa dữ liệu tại nguồn, không bắt buộc sao chép tất cả về một nơi',
+  ['Sao chép toàn bộ dữ liệu về một kho duy nhất rồi mới truy vấn', 'Chỉ hỗ trợ dữ liệu có cấu trúc trong một CSDL', 'Thay thế toàn bộ hệ thống nguồn bằng hệ thống mới'],
+  '**Data Fabric** tập trung vào kết nối & ảo hóa các nguồn rời rạc.')
+Q(it, 'Mục tiêu nào KHÔNG thuộc Data Fabric?', 'Sao chép vật lý toàn bộ dữ liệu về một kho duy nhất',
+  ['Kết nối các nguồn dữ liệu rời rạc', 'Ảo hóa dữ liệu để truy cập thống nhất', 'Quản trị và bảo mật thống nhất trên nhiều nguồn'],
+  'Data Fabric là kết nối/ảo hóa, không phải sao chép vật lý toàn bộ.')
+Q(it, 'Data Catalog giúp người dùng việc gì?', 'Tìm kiếm và hiểu dữ liệu nhờ metadata (mô tả, vị trí, chủ sở hữu)',
+  ['Tăng tốc độ truy vấn bằng cách nén dữ liệu', 'Tự động sửa lỗi dữ liệu nguồn', 'Huấn luyện mô hình dự báo trên dữ liệu'],
+  '**Data Catalog** là thư viện thông tin và vị trí của các nguồn dữ liệu.')
+Q(it, 'Technical Metadata thường gồm những thông tin nào?', 'Kiểu dữ liệu, schema, tần suất cập nhật (Freshness), chủ sở hữu kỹ thuật',
+  ['Định nghĩa khái niệm kinh doanh như Churn', 'Điểm tin cậy do người dùng bình chọn', 'Nội dung báo cáo BI của phòng kinh doanh'],
+  'Định nghĩa khái niệm kinh doanh thuộc **Business Glossary**.')
+Q(it, 'Business Glossary (từ điển thuật ngữ kinh doanh) do bộ phận nào định nghĩa?', 'Governance Layer (tầng quản trị dữ liệu)',
+  ['Mỗi lập trình viên tự đặt tên riêng', 'Công cụ BI tự sinh ra', 'Hệ quản trị CSDL nguồn'],
+  '**Governance Layer** thống nhất khái niệm kinh doanh (ví dụ Churn).')
+Q(it, 'Chính sách gắn trực tiếp vào danh tính (user/role) để cấp quyền truy cập chi tiết gọi là:', 'IAM Policies',
+  ['Bucket Policies', 'Clustering Key', 'Partition Key'],
+  '**IAM Policies** theo danh tính; **Bucket Policies** gắn vào bucket.')
+Q(it, 'Bucket Policy được gắn vào đối tượng nào?', 'Bản thân bucket (Data Container), áp dụng cho các đối tượng bên trong',
+  ['Từng người dùng riêng lẻ', 'Từng cột của một bảng', 'Từng câu truy vấn SQL'],
+  'Bucket Policies quy định quyền cho **toàn bộ Data Container** từ bên ngoài.')
+Q(it, 'Partition pruning (bỏ qua phân vùng) trong Snowflake hoạt động dựa trên điều gì?', 'Metadata của từng micro-partition (ví dụ giá trị min/max) để bỏ qua các phân vùng không liên quan',
+  ['Xóa các phân vùng ít được dùng', 'Nén mọi phân vùng thành một file duy nhất', 'Sao chép phân vùng sang vùng địa lý khác'],
+  'Micro-partition (~50–500MB) có metadata giúp **pruning**.')
+Q(it, 'Nên chọn cột nào làm Clustering Key?', 'Cột thường dùng trong điều kiện lọc/sắp xếp của truy vấn (WHERE, JOIN)',
+  ['Cột có toàn giá trị NULL', 'Cột lưu hình ảnh nhị phân', 'Cột có kiểu dữ liệu dài nhất'],
+  'Clustering Key chọn theo **cột** thường dùng để lọc.')
+Q(it, 'Mục đích của Clustering là gì?', 'Đưa dữ liệu liên quan nằm gần nhau để pruning hiệu quả hơn',
+  ['Tăng kích thước của micro-partition', 'Mã hóa dữ liệu theo từng cột', 'Sao lưu dữ liệu sang vùng khác'],
+  'Cụm dữ liệu liên quan → quét ít partition hơn.')
+Q(it, 'Đặc điểm nào đúng với Accumulating Snapshot Fact Table?', 'Mỗi quy trình một dòng, dòng được cập nhật khi quy trình đi qua từng mốc',
+  ['Mỗi sự kiện thêm một dòng mới và không bao giờ cập nhật', 'Chụp lại toàn bộ bảng theo chu kỳ cố định', 'Chỉ lưu thuộc tính mô tả, không có số đo'],
+  '**Accumulating Snapshot** theo dõi quy trình nhiều giai đoạn.')
+Q(it, 'Tình huống nào cần dùng Bridge Table?', 'Một tài khoản ngân hàng có nhiều chủ tài khoản và mỗi khách hàng có nhiều tài khoản',
+  ['Mỗi đơn hàng thuộc đúng một khách hàng', 'Mỗi sản phẩm có đúng một mức giá', 'Mỗi ngày có đúng một dòng trong bảng ngày'],
+  '**Bridge Table** giải quyết quan hệ nhiều-nhiều (M-M).')
+Q(it, 'Bridge Table thường chứa những gì?', 'Khóa của hai bên trong quan hệ nhiều-nhiều (có thể thêm trọng số)',
+  ['Chỉ các số đo của Fact', 'Toàn bộ nội dung của bảng Dimension', 'Chỉ khóa chính của bảng Fact'],
+  'Bảng trung gian nối hai thực thể M-M.')
+Q(it, 'Flat table (bảng phẳng/denormalized) được dùng để giảm thiểu phép toán nào khi truy vấn?', 'Phép Join giữa nhiều bảng',
+  ['Phép lọc WHERE', 'Phép sắp xếp ORDER BY', 'Phép mã hóa dữ liệu'],
+  'Gộp sẵn dữ liệu vào một bảng nên **giảm Join**.')
+Q(it, 'Nhược điểm của flat table là gì?', 'Dư thừa dữ liệu (lặp thông tin), tốn dung lượng và khó cập nhật',
+  ['Truy vấn luôn chậm hơn vì phải Join nhiều bảng', 'Không thể lưu số đo', 'Chỉ dùng được với dữ liệu phi cấu trúc'],
+  'Denormalize đổi dung lượng/độ phức tạp cập nhật lấy tốc độ truy vấn.')
+Q(it, 'Ưu điểm của flat table là gì?', 'Truy vấn nhanh, đơn giản vì không cần Join',
+  ['Tiết kiệm dung lượng nhất', 'Không bao giờ dư thừa dữ liệu', 'Dễ cập nhật nhất vì mỗi thông tin chỉ lưu một lần'],
+  'Flat table: ít Join, nhưng dư thừa dữ liệu.')
+Q(it, 'Ví dụ nào minh họa Schema Evolution của Snowflake?', 'Nguồn thêm cột mới, bảng đích tự thêm cột khi nạp dữ liệu mà không cần sửa tay',
+  ['Bảng bị khóa không cho nạp dữ liệu có cột mới', 'Cột cũ bị xóa tự động mỗi ngày', 'Dữ liệu tự chuyển sang kiểu nhị phân'],
+  '**Schema Evolution**: tự điều chỉnh cấu trúc bảng khi nguồn thay đổi.')
+Q(it, 'Schema Test (generic test) trong dbt dùng để kiểm tra điều gì?', 'Các ràng buộc chuẩn khai báo sẵn như unique, not_null, accepted_values, relationships',
+  ['Câu SQL tùy biến riêng cho từng tình huống nghiệp vụ', 'Tốc độ chạy của pipeline', 'Dung lượng lưu trữ của bảng'],
+  'Schema Test khai báo sẵn; **Singular Test** là SQL riêng cho nghiệp vụ đặc thù.')
+Q(it, 'Test relationships trong dbt kiểm tra điều gì?', 'Mỗi giá trị khóa ngoại phải tồn tại ở bảng tham chiếu',
+  ['Giá trị không được trùng lặp', 'Giá trị không được rỗng', 'Giá trị phải thuộc danh sách cho phép'],
+  '**relationships** = kiểm tra toàn vẹn tham chiếu (khóa ngoại).')
+Q(it, 'Test unique trong dbt kiểm tra điều gì?', 'Cột không có giá trị trùng lặp',
+  ['Cột không có giá trị rỗng', 'Cột thuộc danh sách giá trị cho phép', 'Cột tồn tại ở bảng khác'],
+  '**unique**: không trùng lặp; **not_null**: không rỗng.')
+Q(it, 'Test accepted_values trong dbt kiểm tra điều gì?', 'Giá trị của cột phải nằm trong danh sách cho phép',
+  ['Giá trị của cột không được trùng lặp', 'Giá trị của cột không được rỗng', 'Giá trị của cột phải tồn tại ở bảng khác'],
+  '**accepted_values**: giới hạn tập giá trị hợp lệ.')
+Q(it, 'Phân biệt Schema Test và Singular Test trong dbt:', 'Schema Test khai báo sẵn (unique, not_null…); Singular Test là câu SQL riêng cho tình huống nghiệp vụ đặc thù',
+  ['Schema Test là câu SQL riêng; Singular Test khai báo sẵn (unique, not_null…)', 'Cả hai đều là câu SQL tùy biến', 'Schema Test chỉ chạy trên dữ liệu phi cấu trúc'],
+  'Đây là cặp dễ bị hỏi đảo: **Schema = khai báo sẵn**, **Singular = SQL riêng**.')
+Q(it, 'Trong Jinja, cú pháp nào dùng cho biểu thức và câu lệnh điều khiển?', '{{ ... }} cho biểu thức và {% ... %} cho câu lệnh điều khiển',
+  ['<% ... %> cho biểu thức và <%= ... %> cho lệnh', '[[ ... ]] cho biểu thức và (( ... )) cho lệnh', '@@ ... @@ cho biểu thức và ## ... ## cho lệnh'],
+  'Jinja: `{{ }}` (biểu thức), `{% %}` (câu lệnh).')
+Q(it, 'Macro trong dbt/Jinja là gì?', 'Đoạn mã SQL/Jinja tái sử dụng được như một hàm',
+  ['Một bảng tạm lưu kết quả truy vấn', 'Một loại index đặc biệt', 'Một chính sách phân quyền'],
+  'Jinja + Dynamic SQL giúp giảm code lặp.')
+Q(it, 'DAG trong Apache Airflow là gì?', 'Đồ thị có hướng không chu trình mô tả các tác vụ và thứ tự phụ thuộc',
+  ['Đồ thị vô hướng có chu trình', 'Bảng chứa kết quả truy vấn', 'Một loại index của CSDL'],
+  '**DAG** = Directed Acyclic Graph.')
+Q(it, 'Apache Airflow phù hợp nhất để làm gì?', 'Lập lịch, điều phối và giám sát các workflow/pipeline dữ liệu',
+  ['Lưu trữ dữ liệu quy mô lớn', 'Vẽ biểu đồ BI', 'Huấn luyện mô hình ngôn ngữ lớn'],
+  'Airflow là công cụ **orchestration** theo tư duy Task-centric.')
+Q(it, 'Dagster "Asset-centric" nghĩa là gì?', 'Tập trung vào các tài sản dữ liệu (bảng, mô hình) được tạo ra và sự phụ thuộc giữa chúng',
+  ['Tập trung vào từng tác vụ đang chạy', 'Tập trung vào lưu trữ file', 'Tập trung vào bảo mật truy cập'],
+  'Airflow = Task-centric; Dagster = **Asset-centric**.')
+Q(it, 'Lợi ích của Storage Mirroring là gì?', 'Dữ liệu nguồn được nhân bản liên tục sang tầng lưu trữ để phân tích, giảm công sức xây pipeline ETL thủ công',
+  ['Dữ liệu chỉ được sao chép một lần duy nhất', 'Dữ liệu nguồn bị xóa sau khi sao chép', 'Tự động mã hóa mọi cột dữ liệu'],
+  'Mirroring nhận bản sao từ nguồn và **liên tục cập nhật** theo thay đổi.')
+T.append(('Biến thể khác gợi ý (1/3): Kiến trúc, mô hình hóa & pipeline (gợi ý 1–15)', it))
+
+# ---------- (2/3) Tiền xử lý & khai phá dữ liệu (gợi ý 16–30) ----------
+it = []
+Q(it, 'Dataset có 3 lớp với tỉ lệ mẫu bằng nhau (mỗi lớp 1/3). Entropy Info(D) xấp xỉ bao nhiêu?', '1,585 bit', ['1,000 bit', '2,000 bit', '0,918 bit'],
+  'Info(D) = −3·(1/3)·log2(1/3) = log2(3) ≈ **1,585**.')
+Q(it, 'Sau khi chuẩn hóa Min-Max về [0, 1], giá trị nhỏ nhất của thuộc tính trở thành bao nhiêu?', '0', ['1', '0,5', '-1'],
+  "v′ = (min − min)/(max − min) = **0**.")
+Q(it, 'Khách hàng có thu nhập đúng bằng thu nhập cao nhất. Sau Min-Max về [0, 1], thu nhập của họ là:', '1', ['0', '0,5', '10'],
+  "v′ = (max − min)/(max − min) = **1**.")
+Q(it, 'Giá trị Z-Score bằng 0 nghĩa là gì?', 'Giá trị bằng đúng giá trị trung bình', ['Giá trị bằng độ lệch chuẩn', 'Giá trị là giá trị lớn nhất', 'Giá trị bị thiếu'],
+  'Z = (v − μ)/σ = 0 ⇔ v = μ.')
+Q(it, 'Z-Score = 2 nghĩa là gì?', 'Giá trị cao hơn trung bình 2 độ lệch chuẩn', ['Giá trị gấp 2 lần giá trị trung bình', 'Giá trị thấp hơn trung bình 2 độ lệch chuẩn', 'Giá trị bằng 2 lần giá trị lớn nhất'],
+  'Z đo khoảng cách so với trung bình theo đơn vị độ lệch chuẩn.')
+Q(it, 'Ví dụ nào là Discretization (rời rạc hóa)?', 'Chuyển tuổi (số liên tục) thành các nhóm Trẻ / Trung niên / Cao tuổi',
+  ['Chuẩn hóa tuổi về đoạn [0, 1]', 'Xóa cột tuổi khỏi dữ liệu', 'Thay mọi giá trị tuổi bằng giá trị trung bình'],
+  'Discretization biến thuộc tính liên tục thành các khoảng/nhãn rời rạc.')
+Q(it, 'Bản chất của PCA là gì?', 'Biến đổi các thuộc tính ban đầu thành các thành phần chính không tương quan, giữ phần lớn phương sai',
+  ['Chọn ngẫu nhiên một số cột và xóa phần còn lại', 'Gom nhóm các bản ghi thành các cụm', 'Sinh luật kết hợp từ tập giao dịch'],
+  '**PCA** giảm chiều, giữ tối đa phương sai.')
+Q(it, 'Thành phần chính đầu tiên (PC1) của PCA có đặc điểm gì?', 'Là hướng có phương sai lớn nhất của dữ liệu', ['Là hướng có phương sai nhỏ nhất', 'Là hướng trùng với nhãn lớp', 'Là một hướng ngẫu nhiên'],
+  'Các thành phần chính sắp theo phương sai giảm dần.')
+rule(['c'], ['d', 'e'], 'Support')
+rule(['c'], ['d', 'e'], 'Confidence')
+rule(['c'], ['d', 'e'], 'Lift')
+rule(['c'], ['d', 'e'], 'Leverage')
+rule(['d', 'e'], ['c'], 'Confidence')
+rule(['d', 'e'], ['c'], 'Lift')
+Q(it, 'Ngưỡng minconf (độ tin cậy tối thiểu) thông thường được chọn là:', '80%', ['1%', '50%', '100%'], 'minsup thường 1%, **minconf thường 80%**.')
+Q(it, 'Có 6 item đơn lẻ phổ biến. Số itemset 2 phần tử chính xác (tổ hợp) là bao nhiêu?', '15', ['18', '12', '36'],
+  'C(6,2) = 6×5/2 = **15** (xấp xỉ n²/2 = 18 theo slide).')
+T.append(('Biến thể khác gợi ý (2/3): Tiền xử lý & khai phá dữ liệu (gợi ý 16–30)', it))
+
+# ---------- (3/3) Graph, Blockchain, Vector, AI Act & BI (gợi ý 31–40) ----------
+it = []
+Q(it, 'Gợi ý "bạn bè gần nhất" (cách 1–2 bước) trong mạng xã hội nên dùng thuật toán duyệt nào?', 'BFS', ['DFS', 'Quick Sort', 'K-Means'],
+  '**BFS** duyệt theo cấp nên ưu tiên các nút lân cận gần nhất.')
+Q(it, 'Thuật toán nào đi sâu hết một nhánh rồi mới quay lui, hợp để tìm chuỗi liên kết dài hoặc duyệt taxonomy?', 'DFS', ['BFS', 'Binary Search', 'PCA'],
+  '**DFS**: đi sâu, dùng Stack/đệ quy.')
+Q(it, 'Vì sao cần Data Normalization khi chuyển dữ liệu Blockchain thành bảng quan hệ?', 'Để quy đổi đơn vị (Wei → Ether) và đồng bộ Timestamp về UTC',
+  ['Để mã hóa dữ liệu bằng SHA-256', 'Để xóa các giao dịch cũ', 'Để sao chép toàn bộ chuỗi khối về CSDL nguồn'],
+  'Chuẩn hóa đơn vị/thời gian giúp chạy BI/Fintech trên dữ liệu on-chain.')
+Q(it, 'IVFFLAT hoạt động như thế nào?', 'Chia không gian vector thành các phân vùng (cụm/Voronoi cells) và chỉ tìm trong vài phân vùng gần nhất',
+  ['Nén vector thành mã ngắn bằng Product Quantization', 'Xây đồ thị phân cấp nhiều tầng (small world)', 'Băm văn bản thành chuỗi hex'],
+  'IVF thu hẹp phạm vi tìm bằng phân cụm; HNSW dùng đồ thị phân cấp.')
+Q(it, 'Theo slide, AI Act áp dụng toàn diện từ năm nào?', '2026', ['2020', '2023', '2030'], 'Theo slide: áp dụng toàn diện từ **2026**.')
+Q(it, 'Ba trụ cột của AI đáng tin cậy được nhấn mạnh là:', 'Transparency, Human Oversight, Data Quality', ['Speed, Cost, Scale', 'Security, Backup, Recovery', 'Volume, Velocity, Variety'],
+  'Minh bạch, giám sát của con người, chất lượng dữ liệu.')
+Q(it, 'Traceability trong quản trị AI nghĩa là gì?', 'Hệ thống tự động ghi nhật ký để theo dõi và kiểm toán toàn bộ vòng đời vận hành',
+  ['Mã hóa toàn bộ dữ liệu huấn luyện', 'Xóa dữ liệu sau khi huấn luyện', 'Tăng tốc độ huấn luyện mô hình'],
+  '**Traceability** = truy vết/ghi nhật ký phục vụ kiểm toán.')
+Q(it, 'GraphRAG khác RAG thông thường ở điểm nào?', 'Truy vấn theo quan hệ giữa các thực thể trong Knowledge Graph, không chỉ độ tương đồng vector',
+  ['Chỉ xử lý dữ liệu dạng bảng', 'Không dùng mô hình ngôn ngữ', 'Thay thế hoàn toàn cơ sở dữ liệu'],
+  'GraphRAG dùng dạng dữ liệu **Graph**.')
+Q(it, 'Nhóm nào sau đây đều là BI Tool?', 'Looker, Power BI, Tableau', ['ChatGPT, Gemini, DeepSeek', 'Airflow, Dagster, Prefect', 'Snowflake, BigQuery, Redshift'],
+  'ChatGPT/Gemini/DeepSeek là LLM; Airflow/Dagster là orchestration; Snowflake/BigQuery là Data Warehouse.')
+Q(it, 'Điều kiện dừng của thuật toán PageRank là gì?', 'Chênh lệch PageRank giữa hai vòng lặp liên tiếp nhỏ hơn ngưỡng ε',
+  ['Khi mọi trang đều có PageRank bằng 1', 'Sau đúng 1 vòng lặp', 'Khi tổng PageRank bằng 0'],
+  'Dừng khi |PR mới − PR cũ| < ε (thường 0,0001).')
+Q(it, 'Trong công thức PageRank, phần (1 − d) = 0,15 biểu diễn điều gì?', 'Xác suất người dùng nhảy ngẫu nhiên sang một trang bất kỳ',
+  ['Xác suất người dùng tiếp tục bấm liên kết', 'Số vòng lặp tối thiểu', 'Ngưỡng dừng ε'],
+  'd = 0,85 là xác suất bấm tiếp liên kết; (1 − d) là xác suất nhảy ngẫu nhiên.')
+Q(it, 'Ký hiệu C(q) trong công thức PageRank dùng để làm gì?', 'Chia PageRank của trang q cho số liên kết đi ra của q để phân bổ cho các trang nó trỏ tới',
+  ['Đếm số liên kết đi vào của trang p', 'Đặt hệ số damping', 'Đặt ngưỡng dừng ε'],
+  'PR(p) = (1 − d) + d·Σ PR(q)/C(q).')
+Q(it, 'Số liên kết đi ra của trang p, ký hiệu C(p), còn được gọi là:', 'Out-degree', ['In-degree', 'Damping factor', 'PageRank'],
+  'C(p) = out-degree.')
+T.append(('Biến thể khác gợi ý (3/3): Graph, Blockchain, Vector, AI Act & BI (gợi ý 31–40)', it))
+
 if __name__ == '__main__':
     for name, items in T:
         for item in items:

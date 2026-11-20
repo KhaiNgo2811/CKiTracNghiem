@@ -9318,6 +9318,744 @@
           "explanation": "Gemini là mô hình LLM."
         }
       ]
+    },
+    {
+      "topicId": "CD_V10",
+      "topicName": "51. Biến thể khác gợi ý (1/3): Kiến trúc, mô hình hóa & pipeline (gợi ý 1–15)",
+      "questions": [
+        {
+          "id": "CDV10_1",
+          "question": "Ứng dụng nào phù hợp nhất với Firebolt?",
+          "options": {
+            "A": "Lưu trữ file sao lưu dài hạn chi phí thấp",
+            "B": "Huấn luyện mô hình ML quy mô lớn bằng GPU",
+            "C": "Dashboard/ứng dụng phân tích tương tác cần phản hồi truy vấn rất nhanh (gần thời gian thực)",
+            "D": "Quản lý danh tính và phân quyền người dùng"
+          },
+          "correctAnswer": "C",
+          "explanation": "**Firebolt** nổi bật ở tốc độ truy vấn cực nhanh cho phân tích thời gian thực."
+        },
+        {
+          "id": "CDV10_2",
+          "question": "Result caching hoạt động như thế nào?",
+          "options": {
+            "A": "Khi gặp lại truy vấn giống hệt và dữ liệu nguồn chưa đổi, hệ thống trả kết quả đã lưu thay vì tính lại",
+            "B": "Luôn tính lại từ đầu để bảo đảm kết quả mới nhất",
+            "C": "Tự động xóa kết quả sau mỗi truy vấn",
+            "D": "Chỉ lưu kết quả của các truy vấn ghi (INSERT/UPDATE)"
+          },
+          "correctAnswer": "A",
+          "explanation": "**Caching** lưu kết quả đã tính để tránh tính toán lại, giảm chi phí."
+        },
+        {
+          "id": "CDV10_3",
+          "question": "Lợi ích chính của caching trong Modern Data Warehouse là gì?",
+          "options": {
+            "A": "Tăng dung lượng lưu trữ dữ liệu gốc",
+            "B": "Tự động mã hóa dữ liệu nhạy cảm",
+            "C": "Giảm thời gian phản hồi và chi phí tính toán cho các truy vấn lặp lại",
+            "D": "Thay thế hoàn toàn việc thiết kế mô hình dữ liệu"
+          },
+          "correctAnswer": "C",
+          "explanation": "Caching tối ưu **chi phí và tốc độ** cho truy vấn lặp."
+        },
+        {
+          "id": "CDV10_4",
+          "question": "Data Fabric khác cách tiếp cận \"sao chép mọi thứ về một kho\" ở điểm nào?",
+          "options": {
+            "A": "Sao chép toàn bộ dữ liệu về một kho duy nhất rồi mới truy vấn",
+            "B": "Kết nối và ảo hóa dữ liệu tại nguồn, không bắt buộc sao chép tất cả về một nơi",
+            "C": "Chỉ hỗ trợ dữ liệu có cấu trúc trong một CSDL",
+            "D": "Thay thế toàn bộ hệ thống nguồn bằng hệ thống mới"
+          },
+          "correctAnswer": "B",
+          "explanation": "**Data Fabric** tập trung vào kết nối & ảo hóa các nguồn rời rạc."
+        },
+        {
+          "id": "CDV10_5",
+          "question": "Mục tiêu nào KHÔNG thuộc Data Fabric?",
+          "options": {
+            "A": "Kết nối các nguồn dữ liệu rời rạc",
+            "B": "Ảo hóa dữ liệu để truy cập thống nhất",
+            "C": "Quản trị và bảo mật thống nhất trên nhiều nguồn",
+            "D": "Sao chép vật lý toàn bộ dữ liệu về một kho duy nhất"
+          },
+          "correctAnswer": "D",
+          "explanation": "Data Fabric là kết nối/ảo hóa, không phải sao chép vật lý toàn bộ."
+        },
+        {
+          "id": "CDV10_6",
+          "question": "Data Catalog giúp người dùng việc gì?",
+          "options": {
+            "A": "Tăng tốc độ truy vấn bằng cách nén dữ liệu",
+            "B": "Tìm kiếm và hiểu dữ liệu nhờ metadata (mô tả, vị trí, chủ sở hữu)",
+            "C": "Tự động sửa lỗi dữ liệu nguồn",
+            "D": "Huấn luyện mô hình dự báo trên dữ liệu"
+          },
+          "correctAnswer": "B",
+          "explanation": "**Data Catalog** là thư viện thông tin và vị trí của các nguồn dữ liệu."
+        },
+        {
+          "id": "CDV10_7",
+          "question": "Technical Metadata thường gồm những thông tin nào?",
+          "options": {
+            "A": "Định nghĩa khái niệm kinh doanh như Churn",
+            "B": "Điểm tin cậy do người dùng bình chọn",
+            "C": "Nội dung báo cáo BI của phòng kinh doanh",
+            "D": "Kiểu dữ liệu, schema, tần suất cập nhật (Freshness), chủ sở hữu kỹ thuật"
+          },
+          "correctAnswer": "D",
+          "explanation": "Định nghĩa khái niệm kinh doanh thuộc **Business Glossary**."
+        },
+        {
+          "id": "CDV10_8",
+          "question": "Business Glossary (từ điển thuật ngữ kinh doanh) do bộ phận nào định nghĩa?",
+          "options": {
+            "A": "Mỗi lập trình viên tự đặt tên riêng",
+            "B": "Công cụ BI tự sinh ra",
+            "C": "Governance Layer (tầng quản trị dữ liệu)",
+            "D": "Hệ quản trị CSDL nguồn"
+          },
+          "correctAnswer": "C",
+          "explanation": "**Governance Layer** thống nhất khái niệm kinh doanh (ví dụ Churn)."
+        },
+        {
+          "id": "CDV10_9",
+          "question": "Chính sách gắn trực tiếp vào danh tính (user/role) để cấp quyền truy cập chi tiết gọi là:",
+          "options": {
+            "A": "IAM Policies",
+            "B": "Bucket Policies",
+            "C": "Clustering Key",
+            "D": "Partition Key"
+          },
+          "correctAnswer": "A",
+          "explanation": "**IAM Policies** theo danh tính; **Bucket Policies** gắn vào bucket."
+        },
+        {
+          "id": "CDV10_10",
+          "question": "Bucket Policy được gắn vào đối tượng nào?",
+          "options": {
+            "A": "Từng người dùng riêng lẻ",
+            "B": "Từng cột của một bảng",
+            "C": "Từng câu truy vấn SQL",
+            "D": "Bản thân bucket (Data Container), áp dụng cho các đối tượng bên trong"
+          },
+          "correctAnswer": "D",
+          "explanation": "Bucket Policies quy định quyền cho **toàn bộ Data Container** từ bên ngoài."
+        },
+        {
+          "id": "CDV10_11",
+          "question": "Partition pruning (bỏ qua phân vùng) trong Snowflake hoạt động dựa trên điều gì?",
+          "options": {
+            "A": "Xóa các phân vùng ít được dùng",
+            "B": "Metadata của từng micro-partition (ví dụ giá trị min/max) để bỏ qua các phân vùng không liên quan",
+            "C": "Nén mọi phân vùng thành một file duy nhất",
+            "D": "Sao chép phân vùng sang vùng địa lý khác"
+          },
+          "correctAnswer": "B",
+          "explanation": "Micro-partition (~50–500MB) có metadata giúp **pruning**."
+        },
+        {
+          "id": "CDV10_12",
+          "question": "Nên chọn cột nào làm Clustering Key?",
+          "options": {
+            "A": "Cột có toàn giá trị NULL",
+            "B": "Cột lưu hình ảnh nhị phân",
+            "C": "Cột có kiểu dữ liệu dài nhất",
+            "D": "Cột thường dùng trong điều kiện lọc/sắp xếp của truy vấn (WHERE, JOIN)"
+          },
+          "correctAnswer": "D",
+          "explanation": "Clustering Key chọn theo **cột** thường dùng để lọc."
+        },
+        {
+          "id": "CDV10_13",
+          "question": "Mục đích của Clustering là gì?",
+          "options": {
+            "A": "Tăng kích thước của micro-partition",
+            "B": "Đưa dữ liệu liên quan nằm gần nhau để pruning hiệu quả hơn",
+            "C": "Mã hóa dữ liệu theo từng cột",
+            "D": "Sao lưu dữ liệu sang vùng khác"
+          },
+          "correctAnswer": "B",
+          "explanation": "Cụm dữ liệu liên quan → quét ít partition hơn."
+        },
+        {
+          "id": "CDV10_14",
+          "question": "Đặc điểm nào đúng với Accumulating Snapshot Fact Table?",
+          "options": {
+            "A": "Mỗi sự kiện thêm một dòng mới và không bao giờ cập nhật",
+            "B": "Chụp lại toàn bộ bảng theo chu kỳ cố định",
+            "C": "Mỗi quy trình một dòng, dòng được cập nhật khi quy trình đi qua từng mốc",
+            "D": "Chỉ lưu thuộc tính mô tả, không có số đo"
+          },
+          "correctAnswer": "C",
+          "explanation": "**Accumulating Snapshot** theo dõi quy trình nhiều giai đoạn."
+        },
+        {
+          "id": "CDV10_15",
+          "question": "Tình huống nào cần dùng Bridge Table?",
+          "options": {
+            "A": "Một tài khoản ngân hàng có nhiều chủ tài khoản và mỗi khách hàng có nhiều tài khoản",
+            "B": "Mỗi đơn hàng thuộc đúng một khách hàng",
+            "C": "Mỗi sản phẩm có đúng một mức giá",
+            "D": "Mỗi ngày có đúng một dòng trong bảng ngày"
+          },
+          "correctAnswer": "A",
+          "explanation": "**Bridge Table** giải quyết quan hệ nhiều-nhiều (M-M)."
+        },
+        {
+          "id": "CDV10_16",
+          "question": "Bridge Table thường chứa những gì?",
+          "options": {
+            "A": "Chỉ các số đo của Fact",
+            "B": "Toàn bộ nội dung của bảng Dimension",
+            "C": "Khóa của hai bên trong quan hệ nhiều-nhiều (có thể thêm trọng số)",
+            "D": "Chỉ khóa chính của bảng Fact"
+          },
+          "correctAnswer": "C",
+          "explanation": "Bảng trung gian nối hai thực thể M-M."
+        },
+        {
+          "id": "CDV10_17",
+          "question": "Flat table (bảng phẳng/denormalized) được dùng để giảm thiểu phép toán nào khi truy vấn?",
+          "options": {
+            "A": "Phép Join giữa nhiều bảng",
+            "B": "Phép lọc WHERE",
+            "C": "Phép sắp xếp ORDER BY",
+            "D": "Phép mã hóa dữ liệu"
+          },
+          "correctAnswer": "A",
+          "explanation": "Gộp sẵn dữ liệu vào một bảng nên **giảm Join**."
+        },
+        {
+          "id": "CDV10_18",
+          "question": "Nhược điểm của flat table là gì?",
+          "options": {
+            "A": "Truy vấn luôn chậm hơn vì phải Join nhiều bảng",
+            "B": "Dư thừa dữ liệu (lặp thông tin), tốn dung lượng và khó cập nhật",
+            "C": "Không thể lưu số đo",
+            "D": "Chỉ dùng được với dữ liệu phi cấu trúc"
+          },
+          "correctAnswer": "B",
+          "explanation": "Denormalize đổi dung lượng/độ phức tạp cập nhật lấy tốc độ truy vấn."
+        },
+        {
+          "id": "CDV10_19",
+          "question": "Ưu điểm của flat table là gì?",
+          "options": {
+            "A": "Tiết kiệm dung lượng nhất",
+            "B": "Không bao giờ dư thừa dữ liệu",
+            "C": "Dễ cập nhật nhất vì mỗi thông tin chỉ lưu một lần",
+            "D": "Truy vấn nhanh, đơn giản vì không cần Join"
+          },
+          "correctAnswer": "D",
+          "explanation": "Flat table: ít Join, nhưng dư thừa dữ liệu."
+        },
+        {
+          "id": "CDV10_20",
+          "question": "Ví dụ nào minh họa Schema Evolution của Snowflake?",
+          "options": {
+            "A": "Nguồn thêm cột mới, bảng đích tự thêm cột khi nạp dữ liệu mà không cần sửa tay",
+            "B": "Bảng bị khóa không cho nạp dữ liệu có cột mới",
+            "C": "Cột cũ bị xóa tự động mỗi ngày",
+            "D": "Dữ liệu tự chuyển sang kiểu nhị phân"
+          },
+          "correctAnswer": "A",
+          "explanation": "**Schema Evolution**: tự điều chỉnh cấu trúc bảng khi nguồn thay đổi."
+        },
+        {
+          "id": "CDV10_21",
+          "question": "Schema Test (generic test) trong dbt dùng để kiểm tra điều gì?",
+          "options": {
+            "A": "Câu SQL tùy biến riêng cho từng tình huống nghiệp vụ",
+            "B": "Tốc độ chạy của pipeline",
+            "C": "Các ràng buộc chuẩn khai báo sẵn như unique, not_null, accepted_values, relationships",
+            "D": "Dung lượng lưu trữ của bảng"
+          },
+          "correctAnswer": "C",
+          "explanation": "Schema Test khai báo sẵn; **Singular Test** là SQL riêng cho nghiệp vụ đặc thù."
+        },
+        {
+          "id": "CDV10_22",
+          "question": "Test relationships trong dbt kiểm tra điều gì?",
+          "options": {
+            "A": "Mỗi giá trị khóa ngoại phải tồn tại ở bảng tham chiếu",
+            "B": "Giá trị không được trùng lặp",
+            "C": "Giá trị không được rỗng",
+            "D": "Giá trị phải thuộc danh sách cho phép"
+          },
+          "correctAnswer": "A",
+          "explanation": "**relationships** = kiểm tra toàn vẹn tham chiếu (khóa ngoại)."
+        },
+        {
+          "id": "CDV10_23",
+          "question": "Test unique trong dbt kiểm tra điều gì?",
+          "options": {
+            "A": "Cột không có giá trị rỗng",
+            "B": "Cột thuộc danh sách giá trị cho phép",
+            "C": "Cột không có giá trị trùng lặp",
+            "D": "Cột tồn tại ở bảng khác"
+          },
+          "correctAnswer": "C",
+          "explanation": "**unique**: không trùng lặp; **not_null**: không rỗng."
+        },
+        {
+          "id": "CDV10_24",
+          "question": "Test accepted_values trong dbt kiểm tra điều gì?",
+          "options": {
+            "A": "Giá trị của cột không được trùng lặp",
+            "B": "Giá trị của cột phải nằm trong danh sách cho phép",
+            "C": "Giá trị của cột không được rỗng",
+            "D": "Giá trị của cột phải tồn tại ở bảng khác"
+          },
+          "correctAnswer": "B",
+          "explanation": "**accepted_values**: giới hạn tập giá trị hợp lệ."
+        },
+        {
+          "id": "CDV10_25",
+          "question": "Phân biệt Schema Test và Singular Test trong dbt:",
+          "options": {
+            "A": "Schema Test là câu SQL riêng; Singular Test khai báo sẵn (unique, not_null…)",
+            "B": "Cả hai đều là câu SQL tùy biến",
+            "C": "Schema Test chỉ chạy trên dữ liệu phi cấu trúc",
+            "D": "Schema Test khai báo sẵn (unique, not_null…); Singular Test là câu SQL riêng cho tình huống nghiệp vụ đặc thù"
+          },
+          "correctAnswer": "D",
+          "explanation": "Đây là cặp dễ bị hỏi đảo: **Schema = khai báo sẵn**, **Singular = SQL riêng**."
+        },
+        {
+          "id": "CDV10_26",
+          "question": "Trong Jinja, cú pháp nào dùng cho biểu thức và câu lệnh điều khiển?",
+          "options": {
+            "A": "<% ... %> cho biểu thức và <%= ... %> cho lệnh",
+            "B": "{{ ... }} cho biểu thức và {% ... %} cho câu lệnh điều khiển",
+            "C": "[[ ... ]] cho biểu thức và (( ... )) cho lệnh",
+            "D": "@@ ... @@ cho biểu thức và ## ... ## cho lệnh"
+          },
+          "correctAnswer": "B",
+          "explanation": "Jinja: `{{ }}` (biểu thức), `{% %}` (câu lệnh)."
+        },
+        {
+          "id": "CDV10_27",
+          "question": "Macro trong dbt/Jinja là gì?",
+          "options": {
+            "A": "Một bảng tạm lưu kết quả truy vấn",
+            "B": "Một loại index đặc biệt",
+            "C": "Một chính sách phân quyền",
+            "D": "Đoạn mã SQL/Jinja tái sử dụng được như một hàm"
+          },
+          "correctAnswer": "D",
+          "explanation": "Jinja + Dynamic SQL giúp giảm code lặp."
+        },
+        {
+          "id": "CDV10_28",
+          "question": "DAG trong Apache Airflow là gì?",
+          "options": {
+            "A": "Đồ thị vô hướng có chu trình",
+            "B": "Bảng chứa kết quả truy vấn",
+            "C": "Đồ thị có hướng không chu trình mô tả các tác vụ và thứ tự phụ thuộc",
+            "D": "Một loại index của CSDL"
+          },
+          "correctAnswer": "C",
+          "explanation": "**DAG** = Directed Acyclic Graph."
+        },
+        {
+          "id": "CDV10_29",
+          "question": "Apache Airflow phù hợp nhất để làm gì?",
+          "options": {
+            "A": "Lập lịch, điều phối và giám sát các workflow/pipeline dữ liệu",
+            "B": "Lưu trữ dữ liệu quy mô lớn",
+            "C": "Vẽ biểu đồ BI",
+            "D": "Huấn luyện mô hình ngôn ngữ lớn"
+          },
+          "correctAnswer": "A",
+          "explanation": "Airflow là công cụ **orchestration** theo tư duy Task-centric."
+        },
+        {
+          "id": "CDV10_30",
+          "question": "Dagster \"Asset-centric\" nghĩa là gì?",
+          "options": {
+            "A": "Tập trung vào từng tác vụ đang chạy",
+            "B": "Tập trung vào các tài sản dữ liệu (bảng, mô hình) được tạo ra và sự phụ thuộc giữa chúng",
+            "C": "Tập trung vào lưu trữ file",
+            "D": "Tập trung vào bảo mật truy cập"
+          },
+          "correctAnswer": "B",
+          "explanation": "Airflow = Task-centric; Dagster = **Asset-centric**."
+        },
+        {
+          "id": "CDV10_31",
+          "question": "Lợi ích của Storage Mirroring là gì?",
+          "options": {
+            "A": "Dữ liệu chỉ được sao chép một lần duy nhất",
+            "B": "Dữ liệu nguồn bị xóa sau khi sao chép",
+            "C": "Tự động mã hóa mọi cột dữ liệu",
+            "D": "Dữ liệu nguồn được nhân bản liên tục sang tầng lưu trữ để phân tích, giảm công sức xây pipeline ETL thủ công"
+          },
+          "correctAnswer": "D",
+          "explanation": "Mirroring nhận bản sao từ nguồn và **liên tục cập nhật** theo thay đổi."
+        }
+      ]
+    },
+    {
+      "topicId": "CD_V11",
+      "topicName": "52. Biến thể khác gợi ý (2/3): Tiền xử lý & khai phá dữ liệu (gợi ý 16–30)",
+      "questions": [
+        {
+          "id": "CDV11_1",
+          "question": "Dataset có 3 lớp với tỉ lệ mẫu bằng nhau (mỗi lớp 1/3). Entropy Info(D) xấp xỉ bao nhiêu?",
+          "options": {
+            "A": "1,000 bit",
+            "B": "1,585 bit",
+            "C": "2,000 bit",
+            "D": "0,918 bit"
+          },
+          "correctAnswer": "B",
+          "explanation": "Info(D) = −3·(1/3)·log2(1/3) = log2(3) ≈ **1,585**."
+        },
+        {
+          "id": "CDV11_2",
+          "question": "Sau khi chuẩn hóa Min-Max về [0, 1], giá trị nhỏ nhất của thuộc tính trở thành bao nhiêu?",
+          "options": {
+            "A": "1",
+            "B": "0,5",
+            "C": "-1",
+            "D": "0"
+          },
+          "correctAnswer": "D",
+          "explanation": "v′ = (min − min)/(max − min) = **0**."
+        },
+        {
+          "id": "CDV11_3",
+          "question": "Khách hàng có thu nhập đúng bằng thu nhập cao nhất. Sau Min-Max về [0, 1], thu nhập của họ là:",
+          "options": {
+            "A": "0",
+            "B": "1",
+            "C": "0,5",
+            "D": "10"
+          },
+          "correctAnswer": "B",
+          "explanation": "v′ = (max − min)/(max − min) = **1**."
+        },
+        {
+          "id": "CDV11_4",
+          "question": "Giá trị Z-Score bằng 0 nghĩa là gì?",
+          "options": {
+            "A": "Giá trị bằng độ lệch chuẩn",
+            "B": "Giá trị là giá trị lớn nhất",
+            "C": "Giá trị bằng đúng giá trị trung bình",
+            "D": "Giá trị bị thiếu"
+          },
+          "correctAnswer": "C",
+          "explanation": "Z = (v − μ)/σ = 0 ⇔ v = μ."
+        },
+        {
+          "id": "CDV11_5",
+          "question": "Z-Score = 2 nghĩa là gì?",
+          "options": {
+            "A": "Giá trị cao hơn trung bình 2 độ lệch chuẩn",
+            "B": "Giá trị gấp 2 lần giá trị trung bình",
+            "C": "Giá trị thấp hơn trung bình 2 độ lệch chuẩn",
+            "D": "Giá trị bằng 2 lần giá trị lớn nhất"
+          },
+          "correctAnswer": "A",
+          "explanation": "Z đo khoảng cách so với trung bình theo đơn vị độ lệch chuẩn."
+        },
+        {
+          "id": "CDV11_6",
+          "question": "Ví dụ nào là Discretization (rời rạc hóa)?",
+          "options": {
+            "A": "Chuẩn hóa tuổi về đoạn [0, 1]",
+            "B": "Xóa cột tuổi khỏi dữ liệu",
+            "C": "Chuyển tuổi (số liên tục) thành các nhóm Trẻ / Trung niên / Cao tuổi",
+            "D": "Thay mọi giá trị tuổi bằng giá trị trung bình"
+          },
+          "correctAnswer": "C",
+          "explanation": "Discretization biến thuộc tính liên tục thành các khoảng/nhãn rời rạc."
+        },
+        {
+          "id": "CDV11_7",
+          "question": "Bản chất của PCA là gì?",
+          "options": {
+            "A": "Biến đổi các thuộc tính ban đầu thành các thành phần chính không tương quan, giữ phần lớn phương sai",
+            "B": "Chọn ngẫu nhiên một số cột và xóa phần còn lại",
+            "C": "Gom nhóm các bản ghi thành các cụm",
+            "D": "Sinh luật kết hợp từ tập giao dịch"
+          },
+          "correctAnswer": "A",
+          "explanation": "**PCA** giảm chiều, giữ tối đa phương sai."
+        },
+        {
+          "id": "CDV11_8",
+          "question": "Thành phần chính đầu tiên (PC1) của PCA có đặc điểm gì?",
+          "options": {
+            "A": "Là hướng có phương sai nhỏ nhất",
+            "B": "Là hướng có phương sai lớn nhất của dữ liệu",
+            "C": "Là hướng trùng với nhãn lớp",
+            "D": "Là một hướng ngẫu nhiên"
+          },
+          "correctAnswer": "B",
+          "explanation": "Các thành phần chính sắp theo phương sai giảm dần."
+        },
+        {
+          "id": "CDV11_9",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với luật L: {c} → {d,e}, Support(L) bằng bao nhiêu?",
+          "options": {
+            "A": "0,429",
+            "B": "1,143",
+            "C": "0,047",
+            "D": "0,375"
+          },
+          "correctAnswer": "D",
+          "explanation": "Sup = count({c,d,e})/8 = 3/8 = **0,375**."
+        },
+        {
+          "id": "CDV11_10",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với luật L: {c} → {d,e}, Confidence(L) bằng bao nhiêu?",
+          "options": {
+            "A": "0,375",
+            "B": "1,143",
+            "C": "0,429",
+            "D": "0,047"
+          },
+          "correctAnswer": "C",
+          "explanation": "Conf = count(X∪Y)/count(X) = 3/7 = **0,429**."
+        },
+        {
+          "id": "CDV11_11",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với luật L: {c} → {d,e}, Lift(L) bằng bao nhiêu?",
+          "options": {
+            "A": "1,143",
+            "B": "0,375",
+            "C": "0,429",
+            "D": "0,047"
+          },
+          "correctAnswer": "A",
+          "explanation": "Lift = Conf/Sup(Y) = 0,429/0,375 = **1,143**."
+        },
+        {
+          "id": "CDV11_12",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với luật L: {c} → {d,e}, Leverage(L) bằng bao nhiêu?",
+          "options": {
+            "A": "0,375",
+            "B": "0,429",
+            "C": "0,047",
+            "D": "1,143"
+          },
+          "correctAnswer": "C",
+          "explanation": "Leverage = Sup(X∪Y) − Sup(X)·Sup(Y) = 0,375 − 0,875×0,375 = **0,047**."
+        },
+        {
+          "id": "CDV11_13",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với luật L: {d,e} → {c}, Confidence(L) bằng bao nhiêu?",
+          "options": {
+            "A": "1,000",
+            "B": "0,375",
+            "C": "1,143",
+            "D": "0,047"
+          },
+          "correctAnswer": "A",
+          "explanation": "Conf = count(X∪Y)/count(X) = 3/3 = **1,000**."
+        },
+        {
+          "id": "CDV11_14",
+          "question": "CSDL 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với luật L: {d,e} → {c}, Lift(L) bằng bao nhiêu?",
+          "options": {
+            "A": "0,375",
+            "B": "1,000",
+            "C": "0,047",
+            "D": "1,143"
+          },
+          "correctAnswer": "D",
+          "explanation": "Lift = Conf/Sup(Y) = 1,000/0,875 = **1,143**."
+        },
+        {
+          "id": "CDV11_15",
+          "question": "Ngưỡng minconf (độ tin cậy tối thiểu) thông thường được chọn là:",
+          "options": {
+            "A": "1%",
+            "B": "80%",
+            "C": "50%",
+            "D": "100%"
+          },
+          "correctAnswer": "B",
+          "explanation": "minsup thường 1%, **minconf thường 80%**."
+        },
+        {
+          "id": "CDV11_16",
+          "question": "Có 6 item đơn lẻ phổ biến. Số itemset 2 phần tử chính xác (tổ hợp) là bao nhiêu?",
+          "options": {
+            "A": "18",
+            "B": "12",
+            "C": "36",
+            "D": "15"
+          },
+          "correctAnswer": "D",
+          "explanation": "C(6,2) = 6×5/2 = **15** (xấp xỉ n²/2 = 18 theo slide)."
+        }
+      ]
+    },
+    {
+      "topicId": "CD_V12",
+      "topicName": "53. Biến thể khác gợi ý (3/3): Graph, Blockchain, Vector, AI Act & BI (gợi ý 31–40)",
+      "questions": [
+        {
+          "id": "CDV12_1",
+          "question": "Gợi ý \"bạn bè gần nhất\" (cách 1–2 bước) trong mạng xã hội nên dùng thuật toán duyệt nào?",
+          "options": {
+            "A": "BFS",
+            "B": "DFS",
+            "C": "Quick Sort",
+            "D": "K-Means"
+          },
+          "correctAnswer": "A",
+          "explanation": "**BFS** duyệt theo cấp nên ưu tiên các nút lân cận gần nhất."
+        },
+        {
+          "id": "CDV12_2",
+          "question": "Thuật toán nào đi sâu hết một nhánh rồi mới quay lui, hợp để tìm chuỗi liên kết dài hoặc duyệt taxonomy?",
+          "options": {
+            "A": "BFS",
+            "B": "Binary Search",
+            "C": "DFS",
+            "D": "PCA"
+          },
+          "correctAnswer": "C",
+          "explanation": "**DFS**: đi sâu, dùng Stack/đệ quy."
+        },
+        {
+          "id": "CDV12_3",
+          "question": "Vì sao cần Data Normalization khi chuyển dữ liệu Blockchain thành bảng quan hệ?",
+          "options": {
+            "A": "Để quy đổi đơn vị (Wei → Ether) và đồng bộ Timestamp về UTC",
+            "B": "Để mã hóa dữ liệu bằng SHA-256",
+            "C": "Để xóa các giao dịch cũ",
+            "D": "Để sao chép toàn bộ chuỗi khối về CSDL nguồn"
+          },
+          "correctAnswer": "A",
+          "explanation": "Chuẩn hóa đơn vị/thời gian giúp chạy BI/Fintech trên dữ liệu on-chain."
+        },
+        {
+          "id": "CDV12_4",
+          "question": "IVFFLAT hoạt động như thế nào?",
+          "options": {
+            "A": "Nén vector thành mã ngắn bằng Product Quantization",
+            "B": "Xây đồ thị phân cấp nhiều tầng (small world)",
+            "C": "Băm văn bản thành chuỗi hex",
+            "D": "Chia không gian vector thành các phân vùng (cụm/Voronoi cells) và chỉ tìm trong vài phân vùng gần nhất"
+          },
+          "correctAnswer": "D",
+          "explanation": "IVF thu hẹp phạm vi tìm bằng phân cụm; HNSW dùng đồ thị phân cấp."
+        },
+        {
+          "id": "CDV12_5",
+          "question": "Theo slide, AI Act áp dụng toàn diện từ năm nào?",
+          "options": {
+            "A": "2020",
+            "B": "2026",
+            "C": "2023",
+            "D": "2030"
+          },
+          "correctAnswer": "B",
+          "explanation": "Theo slide: áp dụng toàn diện từ **2026**."
+        },
+        {
+          "id": "CDV12_6",
+          "question": "Ba trụ cột của AI đáng tin cậy được nhấn mạnh là:",
+          "options": {
+            "A": "Speed, Cost, Scale",
+            "B": "Security, Backup, Recovery",
+            "C": "Volume, Velocity, Variety",
+            "D": "Transparency, Human Oversight, Data Quality"
+          },
+          "correctAnswer": "D",
+          "explanation": "Minh bạch, giám sát của con người, chất lượng dữ liệu."
+        },
+        {
+          "id": "CDV12_7",
+          "question": "Traceability trong quản trị AI nghĩa là gì?",
+          "options": {
+            "A": "Mã hóa toàn bộ dữ liệu huấn luyện",
+            "B": "Hệ thống tự động ghi nhật ký để theo dõi và kiểm toán toàn bộ vòng đời vận hành",
+            "C": "Xóa dữ liệu sau khi huấn luyện",
+            "D": "Tăng tốc độ huấn luyện mô hình"
+          },
+          "correctAnswer": "B",
+          "explanation": "**Traceability** = truy vết/ghi nhật ký phục vụ kiểm toán."
+        },
+        {
+          "id": "CDV12_8",
+          "question": "GraphRAG khác RAG thông thường ở điểm nào?",
+          "options": {
+            "A": "Truy vấn theo quan hệ giữa các thực thể trong Knowledge Graph, không chỉ độ tương đồng vector",
+            "B": "Chỉ xử lý dữ liệu dạng bảng",
+            "C": "Không dùng mô hình ngôn ngữ",
+            "D": "Thay thế hoàn toàn cơ sở dữ liệu"
+          },
+          "correctAnswer": "A",
+          "explanation": "GraphRAG dùng dạng dữ liệu **Graph**."
+        },
+        {
+          "id": "CDV12_9",
+          "question": "Nhóm nào sau đây đều là BI Tool?",
+          "options": {
+            "A": "ChatGPT, Gemini, DeepSeek",
+            "B": "Airflow, Dagster, Prefect",
+            "C": "Looker, Power BI, Tableau",
+            "D": "Snowflake, BigQuery, Redshift"
+          },
+          "correctAnswer": "C",
+          "explanation": "ChatGPT/Gemini/DeepSeek là LLM; Airflow/Dagster là orchestration; Snowflake/BigQuery là Data Warehouse."
+        },
+        {
+          "id": "CDV12_10",
+          "question": "Điều kiện dừng của thuật toán PageRank là gì?",
+          "options": {
+            "A": "Chênh lệch PageRank giữa hai vòng lặp liên tiếp nhỏ hơn ngưỡng ε",
+            "B": "Khi mọi trang đều có PageRank bằng 1",
+            "C": "Sau đúng 1 vòng lặp",
+            "D": "Khi tổng PageRank bằng 0"
+          },
+          "correctAnswer": "A",
+          "explanation": "Dừng khi |PR mới − PR cũ| < ε (thường 0,0001)."
+        },
+        {
+          "id": "CDV12_11",
+          "question": "Trong công thức PageRank, phần (1 − d) = 0,15 biểu diễn điều gì?",
+          "options": {
+            "A": "Xác suất người dùng tiếp tục bấm liên kết",
+            "B": "Số vòng lặp tối thiểu",
+            "C": "Xác suất người dùng nhảy ngẫu nhiên sang một trang bất kỳ",
+            "D": "Ngưỡng dừng ε"
+          },
+          "correctAnswer": "C",
+          "explanation": "d = 0,85 là xác suất bấm tiếp liên kết; (1 − d) là xác suất nhảy ngẫu nhiên."
+        },
+        {
+          "id": "CDV12_12",
+          "question": "Ký hiệu C(q) trong công thức PageRank dùng để làm gì?",
+          "options": {
+            "A": "Chia PageRank của trang q cho số liên kết đi ra của q để phân bổ cho các trang nó trỏ tới",
+            "B": "Đếm số liên kết đi vào của trang p",
+            "C": "Đặt hệ số damping",
+            "D": "Đặt ngưỡng dừng ε"
+          },
+          "correctAnswer": "A",
+          "explanation": "PR(p) = (1 − d) + d·Σ PR(q)/C(q)."
+        },
+        {
+          "id": "CDV12_13",
+          "question": "Số liên kết đi ra của trang p, ký hiệu C(p), còn được gọi là:",
+          "options": {
+            "A": "In-degree",
+            "B": "Damping factor",
+            "C": "Out-degree",
+            "D": "PageRank"
+          },
+          "correctAnswer": "C",
+          "explanation": "C(p) = out-degree."
+        }
+      ]
     }
   ]
 }
