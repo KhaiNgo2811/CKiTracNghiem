@@ -134,8 +134,21 @@ export function showWrongDetailModal(item, allChaptersData) {
       ${optionsHtml}
     </div>
   `;
-  const modal = new bootstrap.Modal(document.getElementById('wrongDetailModal'));
-  modal.show();
+  // Bootstrap không hỗ trợ 2 modal chồng nhau: nếu đang có modal khác mở (ví dụ
+  // "Lịch sử sai") thì đóng nó trước, hiện chi tiết, rồi mở lại modal cũ khi đóng chi tiết.
+  const detailEl = document.getElementById('wrongDetailModal');
+  const modal = bootstrap.Modal.getOrCreateInstance(detailEl);
+  const openEl = document.querySelector('.modal.show');
+  if (openEl && openEl !== detailEl) {
+    const prev = bootstrap.Modal.getOrCreateInstance(openEl);
+    openEl.addEventListener('hidden.bs.modal', () => {
+      modal.show();
+      detailEl.addEventListener('hidden.bs.modal', () => prev.show(), { once: true });
+    }, { once: true });
+    prev.hide();
+  } else {
+    modal.show();
+  }
 }
 
 function resolveWrongItemFromData(item, allChaptersData) {
