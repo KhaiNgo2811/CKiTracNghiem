@@ -235,6 +235,14 @@ function fmtExplain(t) {
   return String(t || '').replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
 }
 
+/** Nhận diện câu dạng bài tập (tính toán / có số liệu), chỉ các câu này mới có nút "Làm câu tương tự" */
+function isExerciseQuestion(q) {
+  const text = String(q.question || '');
+  const hasDigit = /\d/.test(text);
+  const calc = /bao nhiêu|giá trị|xấp xỉ|tính|bằng|khoảng nào|chuẩn hóa thành|thứ tự|tập phổ biến|điểm dự đoán|cao nhất|thấp nhất|itemset|số /i.test(text);
+  return (hasDigit && calc && !/thường/i.test(text)) || /thứ tự (thăm|duyệt)/i.test(text);
+}
+
 function renderQuestionCard(q, index) {
   const selected = Quiz.state.userAnswers[q.id];
   const flagged = Quiz.isFlagged(q.id);
@@ -267,7 +275,7 @@ function renderQuestionCard(q, index) {
         </div>
         ${optionsHtml}
         ${q.correctAnswer ? renderCheckArea(q, selected, checked) : ''}
-        ${q.correctAnswer ? '<div class="mt-2"><button type="button" class="btn btn-sm btn-outline-success btn-similar"><i class="bi bi-stars"></i> Làm câu tương tự</button></div>' : ''}
+        ${q.correctAnswer && isExerciseQuestion(q) ? '<div class="mt-2"><button type="button" class="btn btn-sm btn-outline-success btn-similar"><i class="bi bi-stars"></i> Làm câu tương tự</button></div>' : ''}
       </div>
     </div>`;
 }
