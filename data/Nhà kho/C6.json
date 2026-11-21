@@ -10,9 +10,9 @@
           "id": "C6_T1_Q1",
           "question": "Hệ quả của cách tiếp cận ML truyền thống (trích xuất dữ liệu ra máy chủ ML riêng) là gì?",
           "options": {
-            "A": "Không có hệ quả",
-            "B": "Giảm chi phí di chuyển",
-            "C": "Tăng cường Data Governance",
+            "A": "Không có hệ quả đáng kể nào xảy ra",
+            "B": "Giảm chi phí di chuyển dữ liệu qua mạng",
+            "C": "Tăng cường Data Governance cho dữ liệu",
             "D": "Tốn băng thông, trễ thời gian, nguy cơ về bảo mật"
           },
           "correctAnswer": "D",
@@ -22,10 +22,10 @@
           "id": "C6_T1_Q2",
           "question": "Ưu điểm cốt lõi của In-Database ML là gì?",
           "options": {
-            "A": "Loại bỏ độ trễ và chi phí dịch chuyển dữ liệu, đảm bảo bảo mật và Data Governance",
-            "B": "Tăng nguy cơ rò rỉ",
-            "C": "Chỉ hỗ trợ dữ liệu nhỏ",
-            "D": "Phải trích xuất dữ liệu ra ngoài"
+            "A": "Không phải dịch chuyển dữ liệu, giữ bảo mật và Data Governance",
+            "B": "Làm tăng nguy cơ rò rỉ dữ liệu ra bên ngoài hệ thống",
+            "C": "Chỉ hỗ trợ được tập dữ liệu có kích thước nhỏ",
+            "D": "Phải trích xuất dữ liệu ra ngoài để huấn luyện"
           },
           "correctAnswer": "A",
           "explanation": "**In-Database ML** giữ dữ liệu tại chỗ, loại bỏ độ trễ và chi phí dịch chuyển, đảm bảo bảo mật và **Data Governance**."
@@ -34,10 +34,10 @@
           "id": "C6_T1_Q3",
           "question": "Governance trong In-Database ML nghĩa là gì?",
           "options": {
-            "A": "Chỉ admin được xem bảng",
-            "B": "Không cần phân quyền",
-            "C": "Mô hình tự do truy cập",
-            "D": "Phân quyền dùng mô hình ML (RBAC) giống như phân quyền truy cập bảng dữ liệu"
+            "A": "Chỉ quản trị viên mới được xem bảng dữ liệu",
+            "B": "Không cần phân quyền gì cho các mô hình ML",
+            "C": "Mô hình được tự do truy cập mọi dữ liệu",
+            "D": "Phân quyền dùng mô hình ML (RBAC) giống phân quyền truy cập bảng"
           },
           "correctAnswer": "D",
           "explanation": "**Governance**: phân quyền dùng mô hình ML (**RBAC**) giống phân quyền truy cập bảng dữ liệu."
@@ -115,10 +115,10 @@
           "id": "C6_T2_Q3",
           "question": "Điều kiện dừng của vòng lặp PageRank thường là gì?",
           "options": {
-            "A": "Độ chênh lệch giữa 2 vòng lặp liên tiếp nhỏ hơn ε (thường 0.0001)",
-            "B": "Khi mọi PR bằng 1",
-            "C": "Sau đúng 3 vòng",
-            "D": "Khi PR bằng 0"
+            "A": "Chênh lệch giữa 2 vòng lặp liên tiếp nhỏ hơn ε (thường 0.0001)",
+            "B": "Khi mọi giá trị PageRank của các trang đều bằng 1",
+            "C": "Sau đúng 3 vòng lặp bất kể độ chênh lệch",
+            "D": "Khi giá trị PageRank của mọi trang bằng 0"
           },
           "correctAnswer": "A",
           "explanation": "Dừng khi chênh lệch PR giữa hai vòng liên tiếp **< ε** (thường 0,0001)."
@@ -157,9 +157,9 @@
           "id": "C6_T2_Q6",
           "question": "Cây CPT gồm những thành phần nào?",
           "options": {
-            "A": "FP-Tree, Header Table và Node-link",
-            "B": "Dendrogram, Grid, Cell",
-            "C": "Root, Leaf và Hash",
+            "A": "FP-Tree, Header Table và Node-link (của FP-Growth)",
+            "B": "Dendrogram, Grid và Cell (của gom cụm)",
+            "C": "Root, Leaf và Hash (của cây nhị phân)",
             "D": "Prediction Tree, Inverted Index và Lookup Table"
           },
           "correctAnswer": "D",
@@ -169,10 +169,10 @@
           "id": "C6_T2_Q7",
           "question": "Trong CPT, Lookup Table dùng để làm gì?",
           "options": {
-            "A": "Trỏ đến nút cuối của mỗi chuỗi (sequence) trong cây dự đoán",
-            "B": "Lưu support của item",
-            "C": "Lưu từ điển Hex",
-            "D": "Lưu độ tin cậy luật"
+            "A": "Trỏ tới nút cuối của mỗi chuỗi trong cây dự đoán",
+            "B": "Lưu độ hỗ trợ (support) của từng item trong CSDL",
+            "C": "Lưu từ điển chuyển đổi chuỗi Hex sang văn bản",
+            "D": "Lưu độ tin cậy của các luật kết hợp đã tìm"
           },
           "correctAnswer": "A",
           "explanation": "**Lookup Table** trỏ tới **nút cuối** của mỗi chuỗi trong cây dự đoán."
@@ -181,10 +181,10 @@
           "id": "C6_T2_Q8",
           "question": "Trong CPT, Inverted Index dùng để làm gì?",
           "options": {
-            "A": "Cho biết mỗi item xuất hiện trong những chuỗi nào (ma trận item × sequence)",
-            "B": "Lưu tên bảng",
-            "C": "Lưu độ lệch chuẩn",
-            "D": "Lưu giá trị PageRank"
+            "A": "Cho biết mỗi item xuất hiện trong những chuỗi nào",
+            "B": "Lưu tên của các bảng dữ liệu trong hệ thống",
+            "C": "Lưu độ lệch chuẩn của số lần xuất hiện item",
+            "D": "Lưu giá trị PageRank của từng trang web"
           },
           "correctAnswer": "A",
           "explanation": "**Inverted Index** cho biết mỗi item xuất hiện trong những chuỗi nào."
@@ -223,10 +223,10 @@
           "id": "C6_T2_Q11",
           "question": "FSC (Frequent Subsequence Compression) trong CPT+ làm gì?",
           "options": {
-            "A": "Gộp các nhánh đơn không rẽ nhánh thành một nút",
-            "B": "Loại bỏ nhiễu ở bước dự đoán",
-            "C": "Mã hóa Inverted Index bằng SHA-256",
-            "D": "Thay chuỗi con xuất hiện thường xuyên (ví dụ AB) bằng một ký hiệu mới (x = AB) để nén cây dự đoán"
+            "A": "Gộp các nhánh đơn không rẽ nhánh thành một nút duy nhất",
+            "B": "Loại bỏ nhiễu và giảm ảnh hưởng của chúng ở bước dự đoán",
+            "C": "Mã hóa Inverted Index bằng thuật toán SHA-256 để bảo mật",
+            "D": "Thay chuỗi con thường xuyên (AB) bằng ký hiệu mới x để nén cây"
           },
           "correctAnswer": "D",
           "explanation": "**FSC** thay chuỗi con xuất hiện thường xuyên bằng một ký hiệu mới để nén cây."
@@ -235,10 +235,10 @@
           "id": "C6_T2_Q12",
           "question": "SBC (Simple Branches Compression) trong CPT+ làm gì?",
           "options": {
-            "A": "Thay chuỗi con thường xuyên bằng ký hiệu mới",
-            "B": "Chia nhỏ cây thành nhiều cây con",
-            "C": "Gộp các nhánh đơn (chuỗi nút không rẽ nhánh) thành một nút để nén cây",
-            "D": "Loại bỏ nhiễu ở bước dự đoán"
+            "A": "Thay chuỗi con thường xuyên bằng một ký hiệu mới",
+            "B": "Chia nhỏ cây dự đoán thành nhiều cây con",
+            "C": "Gộp các nhánh đơn (chuỗi nút không rẽ nhánh) thành một nút",
+            "D": "Loại bỏ nhiễu và giảm ảnh hưởng của chúng khi dự đoán"
           },
           "correctAnswer": "C",
           "explanation": "**SBC** gộp các nhánh đơn (không rẽ nhánh) thành một nút để nén cây."
@@ -247,10 +247,10 @@
           "id": "C6_T2_Q13",
           "question": "PNR (Prediction with improved Noise Reduction) trong CPT+ thuộc giai đoạn nào?",
           "options": {
-            "A": "Giai đoạn nén cây",
-            "B": "Giai đoạn xây Lookup Table",
-            "C": "Giai đoạn dự đoán: cải tiến cách tính điểm, giảm ảnh hưởng của nhiễu",
-            "D": "Giai đoạn mã hóa chuỗi"
+            "A": "Giai đoạn nén cây dự đoán (Prediction Tree)",
+            "B": "Giai đoạn xây dựng Lookup Table cho các chuỗi",
+            "C": "Giai đoạn dự đoán: cải tiến cách tính điểm, giảm nhiễu",
+            "D": "Giai đoạn mã hóa các chuỗi trong tập huấn luyện"
           },
           "correctAnswer": "C",
           "explanation": "**PNR** thuộc **giai đoạn dự đoán**: cải tiến cách tính điểm, giảm ảnh hưởng của nhiễu."
@@ -289,10 +289,10 @@
           "id": "C6_T3_Q2",
           "question": "ML.EVALUATE trong BigQuery ML dùng để làm gì?",
           "options": {
-            "A": "Dự báo trên dữ liệu mới",
-            "B": "Huấn luyện mô hình",
-            "C": "Trích xuất các chỉ số đánh giá (ROC-AUC, F1-Score) bằng câu SELECT",
-            "D": "Xóa mô hình"
+            "A": "Dự báo kết quả trên các bảng dữ liệu mới",
+            "B": "Huấn luyện mô hình từ dữ liệu huấn luyện",
+            "C": "Trích chỉ số đánh giá (ROC-AUC, F1-Score) bằng câu SELECT",
+            "D": "Xóa mô hình đã huấn luyện khỏi dataset"
           },
           "correctAnswer": "C",
           "explanation": "**ML.EVALUATE** trích xuất chỉ số đánh giá (ROC-AUC, F1-Score) bằng câu SELECT."
@@ -302,9 +302,9 @@
           "question": "ML.PREDICT trong BigQuery ML dùng để làm gì?",
           "options": {
             "A": "Gọi mô hình để dự báo trên các bảng dữ liệu mới",
-            "B": "Khởi tạo mô hình",
-            "C": "Đánh giá mô hình",
-            "D": "Nén dữ liệu"
+            "B": "Khởi tạo và huấn luyện mô hình mới",
+            "C": "Đánh giá chất lượng mô hình bằng các chỉ số",
+            "D": "Nén dữ liệu của bảng huấn luyện"
           },
           "correctAnswer": "A",
           "explanation": "**ML.PREDICT** gọi mô hình dự báo trên bảng dữ liệu mới."
@@ -325,10 +325,10 @@
           "id": "C6_T3_Q5",
           "question": "Snowpark là gì?",
           "options": {
-            "A": "Thư viện API dạng DataFrame cho phép viết Python/R/Scala nhưng thực thi bên trong Snowflake",
-            "B": "Hệ thống streaming",
-            "C": "Định dạng bảng",
-            "D": "Công cụ CDC"
+            "A": "API dạng DataFrame viết Python/R/Scala, chạy trong Snowflake",
+            "B": "Hệ thống streaming xử lý dữ liệu thời gian thực",
+            "C": "Định dạng bảng mở dành cho Data Lake",
+            "D": "Công cụ CDC bắt thay đổi từ CSDL nguồn"
           },
           "correctAnswer": "A",
           "explanation": "**Snowpark** là thư viện API dạng DataFrame, cho phép viết Python/R/Scala nhưng **thực thi trong Snowflake**."
@@ -337,10 +337,10 @@
           "id": "C6_T3_Q6",
           "question": "Cơ chế Push-down của Snowpark làm gì?",
           "options": {
-            "A": "Kéo dữ liệu về máy cá nhân",
-            "B": "Mã hóa dữ liệu",
-            "C": "Sao chép dữ liệu ra ngoài",
-            "D": "Biên dịch mã Python thành câu lệnh SQL tối ưu chạy song song trên cụm của kho dữ liệu"
+            "A": "Kéo toàn bộ dữ liệu về máy cá nhân để xử lý",
+            "B": "Mã hóa dữ liệu bằng khóa riêng của khách hàng",
+            "C": "Sao chép dữ liệu ra hệ thống bên ngoài để tính",
+            "D": "Biên dịch mã Python thành SQL tối ưu, chạy song song trên kho"
           },
           "correctAnswer": "D",
           "explanation": "**Push-down**: Snowpark biên dịch mã Python thành SQL tối ưu chạy song song trên cụm kho dữ liệu (zero data movement)."
@@ -349,10 +349,10 @@
           "id": "C6_T3_Q7",
           "question": "Cơ chế Sandboxing trong Secure Runtime Environment nhằm mục đích gì?",
           "options": {
-            "A": "Sao lưu dữ liệu",
-            "B": "Tăng tốc truy vấn",
-            "C": "Chạy mã Python/R trong không gian cô lập, ngăn mã độc xâm nhập hạ tầng dữ liệu",
-            "D": "Nén dữ liệu"
+            "A": "Sao lưu dữ liệu sang vùng lưu trữ khác",
+            "B": "Tăng tốc truy vấn bằng cache thông minh",
+            "C": "Chạy mã Python/R trong vùng cô lập, ngăn mã độc xâm nhập",
+            "D": "Nén dữ liệu trước khi đưa vào chạy mô hình"
           },
           "correctAnswer": "C",
           "explanation": "**Sandboxing** chạy mã trong không gian cô lập, ngăn mã độc xâm nhập hạ tầng dữ liệu."
@@ -367,10 +367,10 @@
           "id": "C6_T4_Q1",
           "question": "Feature Store là gì?",
           "options": {
-            "A": "Kho lưu trữ tập trung quản lý, lưu trữ và phân phối các đặc trưng đã tính sẵn cho nhiều mô hình tái sử dụng",
-            "B": "Cơ sở dữ liệu giao dịch",
-            "C": "Công cụ CDC",
-            "D": "Kho lưu trữ ảnh"
+            "A": "Kho tập trung quản lý đặc trưng đã tính sẵn cho nhiều mô hình",
+            "B": "Cơ sở dữ liệu giao dịch lưu các giao dịch gốc",
+            "C": "Công cụ CDC dùng để bắt thay đổi dữ liệu nguồn",
+            "D": "Kho lưu trữ ảnh và video của doanh nghiệp"
           },
           "correctAnswer": "A",
           "explanation": "**Feature Store** là kho tập trung quản lý và phân phối đặc trưng đã tính sẵn cho nhiều mô hình."
@@ -379,10 +379,10 @@
           "id": "C6_T4_Q2",
           "question": "Ba lợi ích lớn của Feature Store là gì?",
           "options": {
-            "A": "Speed, Cost, Size",
-            "B": "Discovery (tái sử dụng), Consistency (nhất quán), Lineage (truy vết)",
-            "C": "Bronze, Silver, Gold",
-            "D": "Backup, Restore, Archive"
+            "A": "Speed, Cost, Size (tốc độ, chi phí, dung lượng)",
+            "B": "Discovery (tái sử dụng), Consistency, Lineage (truy vết)",
+            "C": "Bronze, Silver, Gold (ba tầng dữ liệu)",
+            "D": "Backup, Restore, Archive (sao lưu, khôi phục)"
           },
           "correctAnswer": "B",
           "explanation": "Ba lợi ích: **Discovery, Consistency, Lineage**."
@@ -391,10 +391,10 @@
           "id": "C6_T4_Q3",
           "question": "Model Registry trong MLOps là gì?",
           "options": {
-            "A": "Công cụ nén dữ liệu",
-            "B": "Danh mục lưu trữ tập trung các mô hình đã huấn luyện, quản lý trạng thái mô hình",
-            "C": "Thư viện Python",
-            "D": "Bảng log truy cập"
+            "A": "Công cụ nén dữ liệu dùng để huấn luyện mô hình",
+            "B": "Danh mục tập trung các mô hình đã huấn luyện, quản lý trạng thái",
+            "C": "Thư viện Python chứa các thuật toán ML",
+            "D": "Bảng ghi log truy cập của người dùng mô hình"
           },
           "correctAnswer": "B",
           "explanation": "**Model Registry** là danh mục tập trung các mô hình đã huấn luyện, quản lý trạng thái mô hình."
@@ -403,10 +403,10 @@
           "id": "C6_T4_Q4",
           "question": "Model Versioning ràng buộc phiên bản mô hình với những gì?",
           "options": {
-            "A": "Đúng phiên bản dữ liệu (Data Version) và mã nguồn tạo ra nó",
-            "B": "Chỉ tên mô hình",
-            "C": "Chỉ người tạo",
-            "D": "Chỉ ngày tạo"
+            "A": "Đúng phiên bản dữ liệu và mã nguồn đã tạo ra nó",
+            "B": "Chỉ tên của mô hình đã được huấn luyện xong",
+            "C": "Chỉ tên của người đã tạo ra mô hình đó",
+            "D": "Chỉ ngày giờ mô hình được tạo ra trong hệ thống"
           },
           "correctAnswer": "A",
           "explanation": "**Model Versioning** ràng buộc mô hình với **đúng phiên bản dữ liệu và mã nguồn** tạo ra nó để tái lập."
@@ -415,10 +415,10 @@
           "id": "C6_T4_Q5",
           "question": "Data Drift là hiện tượng gì?",
           "options": {
-            "A": "Mô hình bị xóa",
-            "B": "Mối quan hệ đầu vào – nhãn thay đổi",
-            "C": "Phân phối dữ liệu đầu vào thực tế thay đổi so với dữ liệu huấn luyện",
-            "D": "Dữ liệu bị mã hóa"
+            "A": "Mô hình bị xóa nhầm khỏi Model Registry",
+            "B": "Mối quan hệ giữa đầu vào và nhãn bị thay đổi",
+            "C": "Phân phối dữ liệu đầu vào thực tế khác với dữ liệu huấn luyện",
+            "D": "Dữ liệu bị mã hóa nên mô hình không đọc được"
           },
           "correctAnswer": "C",
           "explanation": "**Data Drift**: phân phối dữ liệu đầu vào thực tế khác với dữ liệu huấn luyện."
@@ -427,10 +427,10 @@
           "id": "C6_T4_Q6",
           "question": "Concept Drift là hiện tượng gì?",
           "options": {
-            "A": "Mối quan hệ giữa thuộc tính đầu vào và nhãn mục tiêu bị thay đổi",
-            "B": "Thiếu dữ liệu",
-            "C": "Phân phối đầu vào thay đổi",
-            "D": "Lỗi mạng"
+            "A": "Quan hệ giữa thuộc tính đầu vào và nhãn mục tiêu bị thay đổi",
+            "B": "Dữ liệu huấn luyện bị thiếu quá nhiều",
+            "C": "Phân phối của dữ liệu đầu vào bị thay đổi",
+            "D": "Lỗi mạng làm gián đoạn quá trình huấn luyện"
           },
           "correctAnswer": "A",
           "explanation": "**Concept Drift**: quan hệ giữa đầu vào và nhãn mục tiêu thay đổi."
@@ -439,10 +439,10 @@
           "id": "C6_T4_Q7",
           "question": "AutoML tự động hóa những bước nào?",
           "options": {
-            "A": "Chỉ vẽ biểu đồ",
-            "B": "Chỉ phân quyền",
-            "C": "Chọn đặc trưng, huấn luyện nhiều thuật toán và Hyperparameter Tuning",
-            "D": "Chỉ lưu dữ liệu"
+            "A": "Chỉ tự động vẽ biểu đồ kết quả cho báo cáo BI",
+            "B": "Chỉ tự động phân quyền truy cập cho từng mô hình",
+            "C": "Chọn đặc trưng, thử nhiều thuật toán, tinh chỉnh siêu tham số",
+            "D": "Chỉ tự động lưu trữ dữ liệu huấn luyện vào kho"
           },
           "correctAnswer": "C",
           "explanation": "**AutoML** tự động chọn đặc trưng, thử nhiều thuật toán và **Hyperparameter Tuning**."
@@ -452,9 +452,9 @@
           "question": "Triển khai mô hình dưới dạng UDF cho phép làm gì?",
           "options": {
             "A": "Dự báo tức thời bằng câu lệnh SELECT thông thường",
-            "B": "Chỉ dự báo theo batch hàng tuần",
-            "C": "Phải viết API phức tạp",
-            "D": "Không cần mô hình"
+            "B": "Chỉ dự báo theo batch vào mỗi tuần một lần",
+            "C": "Bắt buộc phải viết API phức tạp riêng",
+            "D": "Không cần đến mô hình đã huấn luyện"
           },
           "correctAnswer": "A",
           "explanation": "Mô hình đóng gói thành **UDF** cho phép dự báo tức thời bằng câu lệnh **SELECT** thông thường."

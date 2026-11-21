@@ -22,9 +22,9 @@
           "id": "C5_T1_Q2",
           "question": "Công thức Support của luật X ⇒ Y là gì?",
           "options": {
-            "A": "Sup(X) × Sup(Y)",
-            "B": "Conf(X⇒Y) / P(Y)",
-            "C": "Sup(X ∪ Y) / Sup(X)",
+            "A": "Sup(X) × Sup(Y) (kỳ vọng nếu X, Y độc lập)",
+            "B": "Conf(X⇒Y) / P(Y) (công thức của Lift)",
+            "C": "Sup(X ∪ Y) / Sup(X) (công thức của Confidence)",
             "D": "Số giao dịch chứa cả X và Y / Tổng số giao dịch"
           },
           "correctAnswer": "D",
@@ -58,10 +58,10 @@
           "id": "C5_T1_Q5",
           "question": "Lift > 1 có ý nghĩa gì?",
           "options": {
-            "A": "Tiền đề làm giảm khả năng xảy ra hậu đề",
-            "B": "X và Y độc lập",
-            "C": "Luật không có ý nghĩa",
-            "D": "Tiền đề làm tăng khả năng xảy ra hậu đề (quan hệ tích cực)"
+            "A": "Tiền đề làm giảm khả năng xảy ra hậu đề (tiêu cực)",
+            "B": "X và Y độc lập, không ảnh hưởng nhau",
+            "C": "Luật hoàn toàn không có ý nghĩa thống kê",
+            "D": "Tiền đề làm tăng khả năng xảy ra hậu đề (tích cực)"
           },
           "correctAnswer": "D",
           "explanation": "**Lift > 1**: tiền đề làm **tăng** khả năng xảy ra hậu đề (quan hệ tích cực)."
@@ -70,9 +70,9 @@
           "id": "C5_T1_Q6",
           "question": "Lift = 1 có ý nghĩa gì?",
           "options": {
-            "A": "Quan hệ tiêu cực",
-            "B": "Quan hệ tích cực mạnh",
-            "C": "Luật tuyệt đối đúng",
+            "A": "Quan hệ tiêu cực giữa tiền đề và hậu đề",
+            "B": "Quan hệ tích cực mạnh giữa tiền đề và hậu đề",
+            "C": "Luật tuyệt đối đúng trong mọi giao dịch",
             "D": "Tiền đề và hậu đề độc lập, không tác động lẫn nhau"
           },
           "correctAnswer": "D",
@@ -82,10 +82,10 @@
           "id": "C5_T1_Q7",
           "question": "Lift < 1 có ý nghĩa gì?",
           "options": {
-            "A": "Quan hệ tích cực",
-            "B": "Hai biến độc lập",
-            "C": "Confidence bằng 1",
-            "D": "Tiền đề làm giảm khả năng xảy ra hậu đề (quan hệ tiêu cực)"
+            "A": "Quan hệ tích cực giữa tiền đề và hậu đề",
+            "B": "Hai biến độc lập, không ảnh hưởng nhau",
+            "C": "Confidence của luật luôn bằng đúng 1",
+            "D": "Tiền đề làm giảm khả năng xảy ra hậu đề (tiêu cực)"
           },
           "correctAnswer": "D",
           "explanation": "**Lift < 1**: tiền đề làm **giảm** khả năng xảy ra hậu đề (quan hệ tiêu cực)."
@@ -157,10 +157,10 @@
           "id": "C5_T1_Q13",
           "question": "Thông thường người ta chọn ngưỡng minsup và minconf là bao nhiêu?",
           "options": {
-            "A": "minsup = 0.5, minconf = 0.1",
-            "B": "minsup = 0.8, minconf = 0.01",
-            "C": "minsup = 0.01 (1%), minconf = 0.8 (80%)",
-            "D": "minsup = 0.1, minconf = 0.1"
+            "A": "minsup = 50%, minconf = 10%",
+            "B": "minsup = 80%, minconf = 1%",
+            "C": "minsup = 1%, minconf = 80%",
+            "D": "minsup = 10%, minconf = 10%"
           },
           "correctAnswer": "C",
           "explanation": "Ngưỡng thường dùng: **minsup = 1%**, **minconf = 80%**."
@@ -214,10 +214,10 @@
           "id": "C5_T1_Q17",
           "question": "Cho cơ sở dữ liệu giao dịch gồm 8 giao dịch: T1 {a,b,c}; T2 {a,b,c,d,e}; T3 {b}; T4 {c,d,e}; T5 {c}; T6 {b,c,d}; T7 {c,d,e}; T8 {c,e}. Với L: {c} → {d,e}, Leverage(L) có giá trị là bao nhiêu?",
           "options": {
-            "A": "0.429",
-            "B": "0.375",
+            "A": "0.429 (= 3/7, giá trị Confidence)",
+            "B": "0.375 (= 3/8, giá trị Support)",
             "C": "≈ 0.047 (0.375 − 0.875 × 0.375)",
-            "D": "0.143"
+            "D": "0.328 (= 0.875 × 0.375)"
           },
           "correctAnswer": "C",
           "images": [
@@ -274,9 +274,9 @@
           "id": "C5_T2_Q2",
           "question": "Tính chất 1 của Apriori: nếu X ⊆ Y thì điều gì đúng về support?",
           "options": {
-            "A": "Hai support luôn bằng nhau",
-            "B": "Không có quan hệ",
-            "C": "Support của Y lớn hơn support của X",
+            "A": "Hai support luôn bằng nhau trong mọi trường hợp",
+            "B": "Không có quan hệ gì giữa hai support",
+            "C": "Support của Y luôn lớn hơn support của X",
             "D": "Support của Y nhỏ hơn hoặc bằng support của X"
           },
           "correctAnswer": "D",
@@ -286,10 +286,10 @@
           "id": "C5_T2_Q3",
           "question": "Tính chất 2 của Apriori nói gì?",
           "options": {
-            "A": "Mọi itemset đều phổ biến",
+            "A": "Mọi itemset trong CSDL đều luôn là itemset phổ biến",
             "B": "Nếu tập con phổ biến thì Y chắc chắn phổ biến",
-            "C": "Y luôn phổ biến",
-            "D": "Nếu một tập con của Y không phổ biến thì Y cũng không phổ biến"
+            "C": "Y luôn là itemset phổ biến nếu có đủ giao dịch",
+            "D": "Tập con của Y không phổ biến thì Y cũng không phổ biến"
           },
           "correctAnswer": "D",
           "explanation": "Tính chất 2 (anti-monotone): nếu một **tập con** của Y không phổ biến thì Y cũng **không phổ biến** → dùng để cắt tỉa ứng viên."
@@ -322,10 +322,10 @@
           "id": "C5_T2_Q6",
           "question": "Hạn chế chính của Apriori là gì?",
           "options": {
-            "A": "Không sinh ứng viên",
-            "B": "Chỉ quét CSDL một lần",
-            "C": "Cần cây FP-Tree",
-            "D": "Quét CSDL nhiều lần và sinh số lượng ứng viên khổng lồ"
+            "A": "Không sinh ra bất kỳ itemset ứng viên nào",
+            "B": "Chỉ cần quét CSDL đúng một lần duy nhất",
+            "C": "Bắt buộc phải xây dựng cây FP-Tree trước",
+            "D": "Quét CSDL nhiều lần và sinh số lượng ứng viên rất lớn"
           },
           "correctAnswer": "D",
           "explanation": "Hạn chế của Apriori: **quét CSDL nhiều lần** và **sinh số lượng ứng viên khổng lồ**."
@@ -358,10 +358,10 @@
           "id": "C5_T2_Q9",
           "question": "Bước đầu tiên của Apriori là gì?",
           "options": {
-            "A": "Duyệt CSDL để tính support của các itemset kích thước 1",
-            "B": "Tính Lift",
-            "C": "Xây dựng FP-Tree",
-            "D": "Tạo itemset kích thước 4"
+            "A": "Duyệt CSDL tính support của các itemset kích thước 1",
+            "B": "Tính chỉ số Lift của từng luật kết hợp",
+            "C": "Xây dựng cây FP-Tree từ các giao dịch",
+            "D": "Tạo ngay các itemset có kích thước bằng 4"
           },
           "correctAnswer": "A",
           "explanation": "Bước đầu: **duyệt CSDL tính support itemset kích thước 1**."
@@ -388,10 +388,10 @@
           "id": "C5_T3_Q1",
           "question": "FP-Growth khắc phục hạn chế của Apriori bằng cách nào?",
           "options": {
-            "A": "Bỏ qua minsup",
-            "B": "Quét CSDL nhiều lần hơn",
-            "C": "Xây dựng FP-Tree để nén dữ liệu, chỉ duyệt CSDL 2 lần, không sinh ứng viên",
-            "D": "Sinh thêm ứng viên"
+            "A": "Bỏ qua hoàn toàn ngưỡng minsup khi khai phá",
+            "B": "Quét CSDL nhiều lần hơn để đếm chính xác hơn",
+            "C": "Dùng FP-Tree nén dữ liệu, quét CSDL 2 lần, không sinh ứng viên",
+            "D": "Sinh thêm thật nhiều itemset ứng viên để kiểm tra"
           },
           "correctAnswer": "C",
           "explanation": "FP-Growth xây **FP-Tree** nén dữ liệu, **chỉ duyệt CSDL 2 lần** và **không sinh ứng viên**."
@@ -412,10 +412,10 @@
           "id": "C5_T3_Q3",
           "question": "Condition Pattern Base là gì?",
           "options": {
-            "A": "Danh sách luật kết hợp",
-            "B": "Bảng support của itemset",
-            "C": "Cây FP-tree hoàn chỉnh",
-            "D": "CSDL phụ gồm các đường dẫn tiền tố (prefix paths) trong FP-tree xuất hiện cùng với nút thấp nhất (suffix)"
+            "A": "Danh sách các luật kết hợp đã khai phá, kèm Confidence",
+            "B": "Bảng ghi support của từng itemset ứng viên trong CSDL",
+            "C": "Cây FP-tree hoàn chỉnh xây từ toàn bộ giao dịch của CSDL",
+            "D": "CSDL phụ gồm các prefix path trong FP-tree đi cùng nút suffix"
           },
           "correctAnswer": "D",
           "explanation": "**Condition Pattern Base**: CSDL phụ gồm các **đường dẫn tiền tố** trong FP-tree đi cùng nút suffix."
@@ -425,9 +425,9 @@
           "question": "Thứ tự các item trong FP-Growth được sắp xếp thế nào?",
           "options": {
             "A": "Giảm dần theo số giao dịch mà item xuất hiện",
-            "B": "Tăng dần theo support",
-            "C": "Ngẫu nhiên",
-            "D": "Theo bảng chữ cái luôn"
+            "B": "Tăng dần theo support của từng item",
+            "C": "Sắp xếp ngẫu nhiên giữa các item",
+            "D": "Theo thứ tự bảng chữ cái của tên item"
           },
           "correctAnswer": "A",
           "explanation": "Item được sắp xếp **giảm dần theo số giao dịch** mà chúng xuất hiện."
@@ -487,10 +487,10 @@
           "id": "C5_T3_Q9",
           "question": "FP-Tree là gì?",
           "options": {
-            "A": "Cây quyết định ID3",
-            "B": "Cấu trúc nén của tập mục trong CSDL, lưu vết mối quan hệ giữa các item",
-            "C": "Đồ thị tri thức",
-            "D": "Cây Dendrogram"
+            "A": "Cây quyết định ID3 dùng cho bài toán phân lớp",
+            "B": "Cấu trúc nén tập mục, lưu vết quan hệ giữa các item",
+            "C": "Đồ thị tri thức gồm các thực thể và quan hệ",
+            "D": "Cây Dendrogram biểu diễn gom cụm phân cấp"
           },
           "correctAnswer": "B",
           "explanation": "**FP-Tree** là cấu trúc nén các tập mục trong CSDL, lưu vết quan hệ giữa các item."
@@ -559,10 +559,10 @@
           "id": "C5_T4_Q3",
           "question": "ID3 hỗ trợ loại dữ liệu nào?",
           "options": {
-            "A": "Chỉ dữ liệu liên tục",
-            "B": "Cả rời rạc và liên tục",
+            "A": "Chỉ dữ liệu liên tục (Continuous)",
+            "B": "Cả dữ liệu rời rạc và liên tục",
             "C": "Chỉ dữ liệu rời rạc (Categorical)",
-            "D": "Chỉ văn bản"
+            "D": "Chỉ dữ liệu dạng văn bản tự do"
           },
           "correctAnswer": "C",
           "explanation": "**ID3** chỉ hỗ trợ dữ liệu **rời rạc (categorical)**."
@@ -571,10 +571,10 @@
           "id": "C5_T4_Q4",
           "question": "Điểm nào đúng với C4.5 so với ID3?",
           "options": {
-            "A": "Hỗ trợ dữ liệu liên tục, xử lý Null bằng trọng số xác suất, có Post-pruning",
-            "B": "Báo lỗi khi gặp Null",
-            "C": "Không có cắt tỉa",
-            "D": "Không hỗ trợ dữ liệu liên tục"
+            "A": "Hỗ trợ dữ liệu liên tục, xử lý Null, có Post-pruning",
+            "B": "Báo lỗi và dừng hẳn khi gặp giá trị Null trong dữ liệu",
+            "C": "Không có bước cắt tỉa (pruning) nào cho cây quyết định",
+            "D": "Không hỗ trợ xử lý được dữ liệu dạng liên tục"
           },
           "correctAnswer": "A",
           "explanation": "C4.5 so với ID3: hỗ trợ dữ liệu liên tục, xử lý Null bằng trọng số xác suất, có **post-pruning**."
@@ -625,10 +625,10 @@
           "id": "C5_T5_Q2",
           "question": "Giả định 'Naive' trong Naive Bayes là gì?",
           "options": {
-            "A": "Các thuộc tính luôn phụ thuộc nhau",
-            "B": "Các thuộc tính độc lập hoàn toàn với nhau khi biết nhãn lớp",
-            "C": "Chỉ có một thuộc tính",
-            "D": "Nhãn lớp không quan trọng"
+            "A": "Các thuộc tính luôn phụ thuộc chặt chẽ lẫn nhau",
+            "B": "Các thuộc tính độc lập với nhau khi đã biết nhãn lớp",
+            "C": "Dữ liệu chỉ có duy nhất một thuộc tính đầu vào",
+            "D": "Nhãn lớp không có vai trò gì khi phân loại"
           },
           "correctAnswer": "B",
           "explanation": "Giả định “Naive”: các thuộc tính **độc lập** với nhau khi biết nhãn lớp."
@@ -649,10 +649,10 @@
           "id": "C5_T5_Q4",
           "question": "Mạng Bayes (Bayesian Network) khắc phục điều gì?",
           "options": {
-            "A": "Nhược điểm 'Naive': mô hình hóa được các biến phụ thuộc lẫn nhau",
-            "B": "Tốc độ chạy",
-            "C": "Thiếu dữ liệu",
-            "D": "Chi phí lưu trữ"
+            "A": "Nhược điểm 'Naive': mô hình hóa biến phụ thuộc lẫn nhau",
+            "B": "Tốc độ chạy chậm khi dữ liệu lớn của Naive Bayes",
+            "C": "Tình trạng thiếu dữ liệu huấn luyện ở các lớp",
+            "D": "Chi phí lưu trữ mô hình sau khi huấn luyện"
           },
           "correctAnswer": "A",
           "explanation": "**Bayesian Network** mô hình hóa được các biến **phụ thuộc lẫn nhau**, khắc phục nhược điểm “Naive”."
@@ -691,8 +691,8 @@
           "id": "C5_T6_Q3",
           "question": "Ưu điểm của K-Medoids là gì?",
           "options": {
-            "A": "Chạy rất nhanh với dữ liệu lớn",
-            "B": "Không cần chọn k",
+            "A": "Chạy rất nhanh trên dữ liệu có kích thước lớn",
+            "B": "Không cần phải chọn trước số cụm k",
             "C": "Chống nhiễu tốt, dùng cho mọi loại dữ liệu",
             "D": "Chỉ dùng dữ liệu số"
           },
@@ -703,10 +703,10 @@
           "id": "C5_T6_Q4",
           "question": "K-Modes thay phép Mean bằng gì?",
           "options": {
-            "A": "Medoid",
+            "A": "Medoid, điểm thật gần tâm cụm nhất",
             "B": "Mode, dành cho dữ liệu phân loại",
-            "C": "Max",
-            "D": "Median"
+            "C": "Max, giá trị lớn nhất của cụm",
+            "D": "Median, giá trị trung vị của cụm"
           },
           "correctAnswer": "B",
           "explanation": "**K-Modes** thay Mean bằng **Mode**, dành cho dữ liệu phân loại."
@@ -715,10 +715,10 @@
           "id": "C5_T6_Q5",
           "question": "K-Prototypes dùng cho loại dữ liệu nào?",
           "options": {
-            "A": "Chỉ văn bản",
-            "B": "Chỉ dữ liệu số",
-            "C": "Dữ liệu hỗn hợp (kết hợp K-Means + K-Modes)",
-            "D": "Chỉ dữ liệu phân loại"
+            "A": "Chỉ dùng cho dữ liệu dạng văn bản",
+            "B": "Chỉ dùng cho dữ liệu dạng số thuần túy",
+            "C": "Dữ liệu hỗn hợp (K-Means + K-Modes)",
+            "D": "Chỉ dùng cho dữ liệu dạng phân loại"
           },
           "correctAnswer": "C",
           "explanation": "**K-Prototypes** kết hợp K-Means + K-Modes cho dữ liệu **hỗn hợp**."
@@ -727,10 +727,10 @@
           "id": "C5_T6_Q6",
           "question": "CLARA / CLARANS là biến thể của thuật toán nào?",
           "options": {
-            "A": "K-Means",
-            "B": "DBSCAN",
-            "C": "Apriori",
-            "D": "K-Medoids (phân tách mẫu để chạy trên dữ liệu lớn)"
+            "A": "K-Means (dùng trọng tâm là Mean)",
+            "B": "DBSCAN (gom cụm theo mật độ)",
+            "C": "Apriori (khai phá luật kết hợp)",
+            "D": "K-Medoids (lấy mẫu để chạy trên dữ liệu lớn)"
           },
           "correctAnswer": "D",
           "explanation": "**CLARA/CLARANS** là biến thể của **K-Medoids**, phân tích mẫu để chạy trên dữ liệu lớn."
@@ -739,10 +739,10 @@
           "id": "C5_T6_Q7",
           "question": "DBSCAN có đặc điểm nào sau đây?",
           "options": {
-            "A": "Chỉ tạo cụm hình cầu",
-            "B": "Bắt buộc biết trước k",
-            "C": "Không cần biết trước số cụm k, cụm có hình dạng bất kỳ",
-            "D": "Không phát hiện nhiễu"
+            "A": "Chỉ tạo được các cụm có dạng hình cầu, đều nhau",
+            "B": "Bắt buộc phải biết trước số cụm k trước khi chạy",
+            "C": "Không cần biết trước số cụm k, cụm hình dạng bất kỳ",
+            "D": "Không có khả năng phát hiện các điểm nhiễu"
           },
           "correctAnswer": "C",
           "explanation": "**DBSCAN** không cần biết trước số cụm k, cụm có **hình dạng bất kỳ**, và phát hiện được nhiễu."
@@ -752,9 +752,9 @@
           "question": "Hai tham số quyết định của DBSCAN là gì?",
           "options": {
             "A": "Eps (bán kính lân cận) và MinPts",
-            "B": "k và Epsilon",
-            "C": "Support và Confidence",
-            "D": "Alpha và Beta"
+            "B": "k và Epsilon (số cụm và sai số)",
+            "C": "Support và Confidence (ngưỡng luật)",
+            "D": "Alpha và Beta (hai hệ số học)"
           },
           "correctAnswer": "A",
           "explanation": "Hai tham số DBSCAN: **Eps** (bán kính lân cận) và **MinPts**."
@@ -775,10 +775,10 @@
           "id": "C5_T6_Q10",
           "question": "Điểm Noise trong DBSCAN là gì?",
           "options": {
-            "A": "Điểm trung tâm",
-            "B": "Điểm lõi",
+            "A": "Điểm trung tâm của một cụm dày đặc",
+            "B": "Điểm lõi có ít nhất MinPts láng giềng",
             "C": "Không phải Core cũng không phải Border",
-            "D": "Điểm biên"
+            "D": "Điểm biên nằm ở rìa của một cụm"
           },
           "correctAnswer": "C",
           "explanation": "**Noise** là điểm không phải Core cũng không phải Border → bị loại bỏ."
@@ -829,10 +829,10 @@
           "id": "C5_T7_Q4",
           "question": "Ưu điểm lớn nhất của Grid-based Clustering là gì?",
           "options": {
-            "A": "Trực quan cấu trúc đa tầng",
+            "A": "Trực quan hóa cấu trúc đa tầng của dữ liệu",
             "B": "Tốc độ xử lý siêu nhanh, chuyên trị dữ liệu lớn",
-            "C": "Độ chính xác biên tuyệt đối",
-            "D": "Không cần lưới"
+            "C": "Độ chính xác biên của cụm là tuyệt đối",
+            "D": "Không cần chia dữ liệu thành lưới"
           },
           "correctAnswer": "B",
           "explanation": "Ưu điểm lớn nhất của Grid-based: **tốc độ siêu nhanh**, chuyên trị dữ liệu lớn."
@@ -841,10 +841,10 @@
           "id": "C5_T7_Q5",
           "question": "Nhược điểm của Hierarchical Clustering là gì?",
           "options": {
-            "A": "Chi phí tính toán cao; bước gộp/chia sai không thể đảo ngược",
-            "B": "Chỉ dùng cho dữ liệu nhỏ hơn 10 điểm",
-            "C": "Quá nhanh",
-            "D": "Không có dendrogram"
+            "A": "Chi phí cao; bước gộp/chia sai không thể đảo ngược",
+            "B": "Chỉ dùng được cho dữ liệu nhỏ hơn 10 điểm",
+            "C": "Chạy quá nhanh nên kết quả kém chính xác",
+            "D": "Không thể vẽ được cây phân cấp dendrogram"
           },
           "correctAnswer": "A",
           "explanation": "Nhược điểm của Hierarchical: chi phí cao, bước gộp/chia sai **không thể đảo ngược**."
@@ -853,10 +853,10 @@
           "id": "C5_T7_Q6",
           "question": "Outlier Detection dựa trên thống kê (Statistical-based) giả định điều gì?",
           "options": {
-            "A": "Dữ liệu tuân theo một phân phối xác suất nhất định (thường Gaussian)",
-            "B": "Dữ liệu là đồ thị",
-            "C": "Dữ liệu phân loại",
-            "D": "Dữ liệu không có phân phối"
+            "A": "Dữ liệu tuân theo một phân phối xác suất (thường Gaussian)",
+            "B": "Dữ liệu có dạng đồ thị các nút và cạnh",
+            "C": "Dữ liệu chỉ gồm các thuộc tính phân loại",
+            "D": "Dữ liệu hoàn toàn không tuân theo phân phối nào"
           },
           "correctAnswer": "A",
           "explanation": "**Statistical-based** giả định dữ liệu theo một phân phối xác suất (thường Gaussian); điểm có xác suất cực thấp là outlier."
@@ -865,9 +865,9 @@
           "id": "C5_T7_Q7",
           "question": "Distance-based Outlier Detection coi đối tượng nào là ngoại lai?",
           "options": {
-            "A": "Đối tượng gần trung tâm",
-            "B": "Đối tượng có xác suất cao",
-            "C": "Đối tượng trùng lặp",
+            "A": "Đối tượng nằm gần trung tâm của dữ liệu",
+            "B": "Đối tượng có xác suất xuất hiện rất cao",
+            "C": "Đối tượng bị trùng lặp nhiều lần trong dữ liệu",
             "D": "Đối tượng nằm cách xa hầu hết các điểm dữ liệu khác"
           },
           "correctAnswer": "D",

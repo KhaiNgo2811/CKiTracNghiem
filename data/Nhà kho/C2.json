@@ -10,10 +10,10 @@
           "id": "C2_T1_Q1",
           "question": "Trong kỷ nguyên Cloud, Kimball chuyển trọng tâm thiết kế từ đâu sang đâu?",
           "options": {
-            "A": "Từ Star Schema sang Normalized 3NF",
+            "A": "Từ Star Schema sang Normalized 3NF hoàn toàn",
             "B": "Từ tối ưu hiệu suất sang tối ưu không gian lưu trữ",
             "C": "Từ tối ưu không gian lưu trữ sang tối ưu hiệu suất truy vấn",
-            "D": "Từ User-centric sang IT-centric"
+            "D": "Từ User-centric sang IT-centric trong thiết kế"
           },
           "correctAnswer": "C",
           "explanation": "Cloud có lưu trữ rẻ và tính toán linh hoạt nên Kimball chuyển từ **tối ưu không gian lưu trữ** sang **tối ưu hiệu suất truy vấn**, vẫn giữ triết lý user-centric."
@@ -46,10 +46,10 @@
           "id": "C2_T1_Q4",
           "question": "Denormalization trong Cloud DWH được ưu tiên vì lý do nào?",
           "options": {
-            "A": "Giảm số cột trong bảng",
-            "B": "Tránh dữ liệu trùng lặp",
-            "C": "Tận dụng Columnar scanning và giảm độ phức tạp SQL",
-            "D": "Tiết kiệm dung lượng đĩa tối đa"
+            "A": "Giảm số lượng cột trong mỗi bảng dữ liệu",
+            "B": "Tránh dữ liệu trùng lặp giữa các bảng",
+            "C": "Tận dụng Columnar scanning, giảm độ phức tạp SQL",
+            "D": "Tiết kiệm dung lượng đĩa ở mức tối đa"
           },
           "correctAnswer": "C",
           "explanation": "Denormalization tận dụng **Columnar scanning** và làm SQL đơn giản hơn; lưu trữ rẻ nên không cần tiết kiệm dung lượng."
@@ -58,10 +58,10 @@
           "id": "C2_T1_Q5",
           "question": "Conformed Dimensions đảm bảo điều gì?",
           "options": {
-            "A": "Tính nhất quán, giúp xây dựng Single Version of Truth",
-            "B": "Tăng số lượng bảng Fact",
-            "C": "Giảm số lượng Dimension",
-            "D": "Loại bỏ Surrogate Key"
+            "A": "Tính nhất quán, tạo nên Single Version of Truth",
+            "B": "Tăng số lượng bảng Fact trong kho dữ liệu",
+            "C": "Giảm số lượng Dimension cần quản lý",
+            "D": "Loại bỏ nhu cầu dùng Surrogate Key"
           },
           "correctAnswer": "A",
           "explanation": "**Conformed Dimensions** dùng chung giữa các fact, đảm bảo nhất quán → **Single Version of Truth**."
@@ -70,10 +70,10 @@
           "id": "C2_T1_Q6",
           "question": "Điều cần lưu ý khi phi chuẩn hóa dữ liệu (Denormalization) là gì?",
           "options": {
-            "A": "Làm chậm quét cột",
+            "A": "Làm chậm tốc độ quét cột dữ liệu",
             "B": "Cần quản lý sự nhất quán của dữ liệu",
-            "C": "Không dùng được với BI",
-            "D": "Tăng số lần Join"
+            "C": "Không thể sử dụng được với công cụ BI",
+            "D": "Làm tăng số lần Join giữa các bảng"
           },
           "correctAnswer": "B",
           "explanation": "Phi chuẩn hóa tạo dữ liệu lặp nên phải **quản lý tính nhất quán** khi dữ liệu thay đổi."
@@ -124,10 +124,10 @@
           "id": "C2_T2_Q3",
           "question": "Data Pruning là cơ chế gì?",
           "options": {
-            "A": "Sao lưu dữ liệu",
-            "B": "Xóa dữ liệu cũ khỏi bảng",
-            "C": "Nén dữ liệu bằng Parquet",
-            "D": "Bỏ qua các phân vùng không chứa dữ liệu cần thiết dựa trên điều kiện lọc"
+            "A": "Sao lưu dữ liệu sang vùng lưu trữ khác định kỳ",
+            "B": "Xóa dữ liệu cũ khỏi bảng theo lịch cố định",
+            "C": "Nén dữ liệu bằng định dạng Parquet để tiết kiệm đĩa",
+            "D": "Bỏ qua các phân vùng không chứa dữ liệu cần theo điều kiện lọc"
           },
           "correctAnswer": "D",
           "explanation": "**Data Pruning** bỏ qua các phân vùng không chứa dữ liệu cần thiết dựa trên điều kiện lọc → đọc ít dữ liệu hơn."
@@ -136,10 +136,10 @@
           "id": "C2_T2_Q4",
           "question": "Trong chiến lược Clustering, Clustering Key được chọn dựa trên đối tượng nào?",
           "options": {
-            "A": "Các cột có độ chọn lọc cao (thường xuyên dùng để lọc)",
-            "B": "Cột được tạo ngẫu nhiên",
-            "C": "Các cột kiểu văn bản dài",
-            "D": "Các cột có nhiều giá trị Null"
+            "A": "Cột có độ chọn lọc cao, thường dùng để lọc dữ liệu",
+            "B": "Cột được tạo ngẫu nhiên khi nạp dữ liệu",
+            "C": "Các cột kiểu văn bản có độ dài lớn",
+            "D": "Các cột chứa nhiều giá trị Null nhất"
           },
           "correctAnswer": "A",
           "explanation": "**Clustering Key** chọn theo **cột** có độ chọn lọc cao và hay dùng để lọc, giúp pruning hiệu quả."
@@ -160,9 +160,9 @@
           "id": "C2_T2_Q6",
           "question": "Clustering Depth là chỉ số đo điều gì?",
           "options": {
-            "A": "Số người dùng đồng thời",
-            "B": "Tổng dung lượng bảng",
-            "C": "Số cột trong bảng",
+            "A": "Số người dùng truy vấn đồng thời trên bảng",
+            "B": "Tổng dung lượng lưu trữ của toàn bộ bảng",
+            "C": "Số lượng cột có trong cấu trúc của bảng",
             "D": "Mức độ chồng lấn giữa các Micro-partitions"
           },
           "correctAnswer": "D",
@@ -172,9 +172,9 @@
           "id": "C2_T2_Q7",
           "question": "Tự động hóa Re-clustering có đặc điểm nào?",
           "options": {
-            "A": "Phải dừng bảng để sắp xếp",
-            "B": "Chỉ chạy thủ công",
-            "C": "Sắp xếp lại dữ liệu ngầm mà không làm gián đoạn truy vấn",
+            "A": "Phải dừng bảng trong lúc sắp xếp lại dữ liệu",
+            "B": "Chỉ chạy thủ công do quản trị viên khởi động",
+            "C": "Sắp xếp lại dữ liệu ngầm, không gián đoạn truy vấn",
             "D": "Dùng chung tài nguyên với truy vấn người dùng"
           },
           "correctAnswer": "C",
@@ -190,9 +190,9 @@
           "id": "C2_T3_Q1",
           "question": "Transaction Fact Table lưu trữ dữ liệu ở mức độ nào?",
           "options": {
-            "A": "Tổng hợp theo năm",
-            "B": "Chỉ lưu giá trị trung bình",
-            "C": "Tổng hợp theo tháng",
+            "A": "Tổng hợp theo năm cho từng khách hàng",
+            "B": "Chỉ lưu giá trị trung bình theo nhóm",
+            "C": "Tổng hợp theo tháng cho từng sản phẩm",
             "D": "Atomic level (mức chi tiết nhỏ nhất)"
           },
           "correctAnswer": "D",
@@ -202,10 +202,10 @@
           "id": "C2_T3_Q2",
           "question": "Periodic Snapshot Fact Table phù hợp với ví dụ nào?",
           "options": {
-            "A": "Sự kiện không có số liệu",
-            "B": "Từng giao dịch riêng lẻ khi xảy ra",
-            "C": "Quy trình xử lý đơn hàng nhiều giai đoạn",
-            "D": "Số dư tài khoản ngân hàng cuối ngày, tồn kho cuối tuần"
+            "A": "Các sự kiện không có số liệu đo lường",
+            "B": "Từng giao dịch riêng lẻ ngay khi xảy ra",
+            "C": "Quy trình xử lý đơn hàng gồm nhiều giai đoạn",
+            "D": "Số dư tài khoản cuối ngày, tồn kho cuối tuần"
           },
           "correctAnswer": "D",
           "explanation": "**Periodic Snapshot** lưu trạng thái tại thời điểm cố định (số dư cuối ngày, tồn kho cuối tuần)."
@@ -214,10 +214,10 @@
           "id": "C2_T3_Q3",
           "question": "Accumulating Snapshot Fact Tables phù hợp cho ngữ cảnh nào?",
           "options": {
-            "A": "Lưu số dư cuối ngày",
-            "B": "Theo dõi tiến độ của quy trình có nhiều giai đoạn (ví dụ: đặt hàng, đóng gói, giao hàng)",
-            "C": "Lưu sự kiện không có số liệu",
-            "D": "Ghi từng sự kiện riêng lẻ"
+            "A": "Lưu số dư tài khoản và tồn kho theo chu kỳ cố định",
+            "B": "Theo dõi quy trình nhiều giai đoạn (đặt hàng, đóng gói, giao hàng)",
+            "C": "Lưu sự kiện không có số liệu để phân tích điều không xảy ra",
+            "D": "Ghi lại từng sự kiện riêng lẻ ở mức chi tiết nhất"
           },
           "correctAnswer": "B",
           "explanation": "**Accumulating Snapshot** theo dõi tiến độ quy trình nhiều giai đoạn (đặt hàng → đóng gói → giao hàng)."
@@ -238,10 +238,10 @@
           "id": "C2_T3_Q5",
           "question": "Quy tắc về Grain của Fact Table là gì?",
           "options": {
-            "A": "Không cần xác định Grain",
-            "B": "Tất cả các Fact trong bảng phải cùng một mức chi tiết",
-            "C": "Mỗi Fact có thể có Grain khác nhau",
-            "D": "Grain càng cao thì phân tích càng rộng"
+            "A": "Không cần xác định Grain trước khi thiết kế",
+            "B": "Mọi Fact trong bảng phải có cùng mức chi tiết",
+            "C": "Mỗi Fact có thể có một Grain khác nhau",
+            "D": "Grain càng cao thì phạm vi phân tích càng rộng"
           },
           "correctAnswer": "B",
           "explanation": "Quy tắc Grain: **mọi fact trong bảng phải cùng một mức chi tiết**."
@@ -250,9 +250,9 @@
           "id": "C2_T3_Q6",
           "question": "Chức năng của Bridge Table là gì?",
           "options": {
-            "A": "Lưu lịch sử thay đổi thuộc tính",
-            "B": "Gom các flag vào một bảng",
-            "C": "Lưu sự kiện không có số liệu",
+            "A": "Lưu lịch sử thay đổi của các thuộc tính",
+            "B": "Gom các flag rời rạc vào một bảng chung",
+            "C": "Lưu các sự kiện không có số liệu đo",
             "D": "Giải quyết mối quan hệ nhiều-nhiều (M-M)"
           },
           "correctAnswer": "D",
@@ -262,10 +262,10 @@
           "id": "C2_T3_Q7",
           "question": "Factless Fact Table dùng để làm gì?",
           "options": {
-            "A": "Lưu số liệu tổng hợp theo tháng",
-            "B": "Giải quyết mối quan hệ M-M",
-            "C": "Lưu sự kiện không có số liệu, hữu ích để phân tích những gì không diễn ra",
-            "D": "Lưu mốc thời gian của quy trình"
+            "A": "Lưu số liệu tổng hợp theo từng tháng của năm",
+            "B": "Giải quyết mối quan hệ nhiều-nhiều (M-M) giữa các bảng",
+            "C": "Lưu sự kiện không có số liệu, giúp phân tích điều không xảy ra",
+            "D": "Lưu các mốc thời gian của quy trình nghiệp vụ"
           },
           "correctAnswer": "C",
           "explanation": "**Factless Fact Table** lưu sự kiện không có số liệu, giúp phân tích những gì **không** xảy ra."
@@ -292,10 +292,10 @@
           "id": "C2_T4_Q1",
           "question": "Vì sao dùng Surrogate Keys thay cho Natural Keys trong Dimension?",
           "options": {
-            "A": "Tiết kiệm dung lượng văn bản",
-            "B": "Loại bỏ nhu cầu Join",
-            "C": "Đảm bảo tính độc lập giữa kho dữ liệu và hệ thống nguồn",
-            "D": "Để người dùng dễ đọc mã nghiệp vụ"
+            "A": "Tiết kiệm dung lượng lưu trữ văn bản",
+            "B": "Loại bỏ hoàn toàn nhu cầu Join giữa các bảng",
+            "C": "Đảm bảo kho dữ liệu độc lập với hệ thống nguồn",
+            "D": "Để người dùng dễ đọc mã nghiệp vụ gốc"
           },
           "correctAnswer": "C",
           "explanation": "**Surrogate Key** độc lập với hệ thống nguồn, nên kho dữ liệu không bị ảnh hưởng khi mã nghiệp vụ nguồn đổi."
@@ -316,9 +316,9 @@
           "id": "C2_T4_Q3",
           "question": "SCD Type 2 sử dụng các cột nào để báo cáo 'Point-in-time'?",
           "options": {
-            "A": "Junk_Flag",
-            "B": "Mini_Dimension_Key",
-            "C": "Old_Value, New_Value",
+            "A": "Junk_Flag, Status_Code",
+            "B": "Mini_Dimension_Key, Role_Key",
+            "C": "Old_Value, New_Value, Change_Date",
             "D": "Start_Date, End_Date, Is_Current"
           },
           "correctAnswer": "D",
@@ -364,10 +364,10 @@
           "id": "C2_T4_Q7",
           "question": "Junk Dimensions dùng để làm gì?",
           "options": {
-            "A": "Gom nhóm các flag và mã trạng thái rời rạc vào một bảng để giảm số lượng Join",
-            "B": "Tách thuộc tính thay đổi nhanh sang bảng phụ",
-            "C": "Lưu khóa nghiệp vụ trong bảng Fact",
-            "D": "Dùng một Dimension cho nhiều vai trò"
+            "A": "Gom các flag và mã trạng thái rời rạc vào một bảng, giảm số Join",
+            "B": "Tách các thuộc tính thay đổi nhanh sang bảng phụ riêng",
+            "C": "Lưu khóa nghiệp vụ trực tiếp trong bảng Fact",
+            "D": "Dùng một Dimension duy nhất cho nhiều vai trò"
           },
           "correctAnswer": "A",
           "explanation": "**Junk Dimension** gom các flag/mã trạng thái rời rạc vào một bảng để giảm số lượng Join."
@@ -376,10 +376,10 @@
           "id": "C2_T4_Q8",
           "question": "Degenerate Dimensions là gì?",
           "options": {
-            "A": "Tách thuộc tính thay đổi nhanh sang bảng phụ",
-            "B": "Gom các flag vào một bảng",
-            "C": "Một Dimension dùng cho nhiều vai trò",
-            "D": "Lưu khóa nghiệp vụ trực tiếp trong bảng Fact mà không cần bảng chiều riêng"
+            "A": "Tách thuộc tính thay đổi nhanh sang một bảng phụ",
+            "B": "Gom các flag và mã trạng thái vào một bảng chung",
+            "C": "Một Dimension được dùng cho nhiều vai trò khác nhau",
+            "D": "Lưu khóa nghiệp vụ trực tiếp trong bảng Fact, không cần bảng chiều"
           },
           "correctAnswer": "D",
           "explanation": "**Degenerate Dimension** lưu khóa nghiệp vụ (ví dụ số hóa đơn) ngay trong bảng Fact."
@@ -388,10 +388,10 @@
           "id": "C2_T4_Q9",
           "question": "Role-Playing Dimension là gì?",
           "options": {
-            "A": "Dimension lưu lịch sử thay đổi",
-            "B": "Dimension chỉ lưu flag",
-            "C": "Nhiều Dimension giống nhau cho một vai trò",
-            "D": "Một Dimension Table đơn nhất được dùng cho nhiều vai trò khác nhau trong cùng một Fact"
+            "A": "Dimension chuyên lưu lịch sử thay đổi thuộc tính",
+            "B": "Dimension chỉ lưu các flag và mã trạng thái",
+            "C": "Nhiều Dimension giống nhau, mỗi cái cho một vai trò",
+            "D": "Một Dimension duy nhất được dùng cho nhiều vai trò trong cùng một Fact"
           },
           "correctAnswer": "D",
           "explanation": "**Role-Playing Dimension**: một dimension (ví dụ Date) dùng cho nhiều vai trò trong cùng một fact."
@@ -400,10 +400,10 @@
           "id": "C2_T4_Q10",
           "question": "Mini-dimensions dùng để làm gì?",
           "options": {
-            "A": "Gom các flag rời rạc",
-            "B": "Tách thuộc tính Rapidly Changing sang bảng phụ để tránh Dimension phình to",
-            "C": "Tạo khóa thay thế",
-            "D": "Lưu khóa nghiệp vụ trong Fact"
+            "A": "Gom các flag rời rạc thành một bảng Dimension chung",
+            "B": "Tách thuộc tính Rapidly Changing sang bảng phụ, tránh Dimension phình to",
+            "C": "Tạo khóa thay thế cho từng dòng Dimension",
+            "D": "Lưu khóa nghiệp vụ trực tiếp trong bảng Fact"
           },
           "correctAnswer": "B",
           "explanation": "**Mini-dimension** tách thuộc tính thay đổi nhanh sang bảng phụ để dimension không phình to."
@@ -418,10 +418,10 @@
           "id": "C2_T5_Q1",
           "question": "Tầng Bronze duy trì Immutability nhằm mục đích gì?",
           "options": {
-            "A": "Có khả năng Reprocess dữ liệu khi logic nghiệp vụ thay đổi",
-            "B": "Tự động tạo báo cáo",
-            "C": "Tăng tốc truy vấn BI",
-            "D": "Giảm dung lượng lưu trữ"
+            "A": "Có thể Reprocess dữ liệu khi logic nghiệp vụ thay đổi",
+            "B": "Tự động tạo ra các báo cáo cho người dùng",
+            "C": "Tăng tốc độ truy vấn của các công cụ BI",
+            "D": "Giảm dung lượng lưu trữ của tầng dữ liệu"
           },
           "correctAnswer": "A",
           "explanation": "**Immutability** của Bronze giữ dữ liệu gốc không đổi nên có thể **reprocess** khi logic nghiệp vụ thay đổi."
@@ -430,9 +430,9 @@
           "id": "C2_T5_Q2",
           "question": "Metadata nào thường được lưu kèm ở tầng Bronze?",
           "options": {
-            "A": "KPI đã tổng hợp",
-            "B": "Mật khẩu người dùng",
-            "C": "Điểm dự báo của mô hình AI",
+            "A": "KPI đã được tổng hợp theo từng tháng",
+            "B": "Mật khẩu của người dùng hệ thống nguồn",
+            "C": "Điểm dự báo do mô hình AI sinh ra",
             "D": "Ingestion_Timestamp và mã định danh hệ thống nguồn"
           },
           "correctAnswer": "D",
@@ -442,10 +442,10 @@
           "id": "C2_T5_Q3",
           "question": "Data Quality Gate ở tầng Silver dùng để làm gì?",
           "options": {
-            "A": "Tạo Star Schema",
+            "A": "Tạo Star Schema cho báo cáo",
             "B": "Loại bỏ các bản ghi không hợp lệ",
-            "C": "Lưu dữ liệu thô",
-            "D": "Tổng hợp KPI"
+            "C": "Lưu trữ dữ liệu thô nguyên bản",
+            "D": "Tổng hợp các KPI cho báo cáo"
           },
           "correctAnswer": "B",
           "explanation": "**Data Quality Gate** ở Silver loại bỏ bản ghi không hợp lệ trước khi đi sâu vào hệ thống."
@@ -479,9 +479,9 @@
           "question": "Cơ chế Incremental Load ở tầng Bronze có lợi ích gì?",
           "options": {
             "A": "Giảm tải cho hệ thống nguồn và tối ưu hóa băng thông",
-            "B": "Tăng tải cho hệ thống nguồn",
-            "C": "Mất khả năng truy vết",
-            "D": "Phải nạp lại toàn bộ dữ liệu mỗi lần"
+            "B": "Tăng tải cho hệ thống nguồn và chiếm băng thông",
+            "C": "Mất khả năng truy vết nguồn gốc dữ liệu",
+            "D": "Phải nạp lại toàn bộ dữ liệu mỗi lần chạy"
           },
           "correctAnswer": "A",
           "explanation": "**Incremental Load** chỉ nạp phần thay đổi nên giảm tải hệ thống nguồn và tiết kiệm băng thông."
@@ -496,10 +496,10 @@
           "id": "C2_T6_Q1",
           "question": "Vai trò của Semantic Layer trong Data Lakehouse là gì?",
           "options": {
-            "A": "Chạy mô hình ML",
-            "B": "Nén dữ liệu",
-            "C": "Lưu dữ liệu thô",
-            "D": "Lớp trung gian trừu tượng hóa sự phức tạp của cấu trúc dữ liệu vật lý đối với người dùng kinh doanh"
+            "A": "Chạy các mô hình ML trực tiếp trên dữ liệu của doanh nghiệp",
+            "B": "Nén dữ liệu để giảm dung lượng và chi phí lưu trữ",
+            "C": "Lưu trữ dữ liệu thô nguyên bản đến từ các hệ thống nguồn",
+            "D": "Lớp trừu tượng hóa cấu trúc dữ liệu vật lý cho người dùng kinh doanh"
           },
           "correctAnswer": "D",
           "explanation": "**Semantic Layer** là lớp trung gian trừu tượng hóa cấu trúc vật lý, chuyển tên kỹ thuật thành thuật ngữ nghiệp vụ."
@@ -508,10 +508,10 @@
           "id": "C2_T6_Q2",
           "question": "Semantic Layer giúp giảm thiểu hiện tượng nào?",
           "options": {
-            "A": "Silo logic khi mỗi công cụ BI có một cách tính chỉ số khác nhau",
-            "B": "Tăng dung lượng lưu trữ",
-            "C": "Dữ liệu bị mất",
-            "D": "Tăng độ trễ mạng"
+            "A": "Silo logic khi mỗi công cụ BI tính chỉ số một kiểu",
+            "B": "Làm tăng dung lượng lưu trữ của kho dữ liệu",
+            "C": "Dữ liệu bị mất trong lúc truyền tải",
+            "D": "Làm tăng độ trễ của đường truyền mạng"
           },
           "correctAnswer": "A",
           "explanation": "Semantic Layer giảm **silo logic** khi mỗi công cụ BI tính chỉ số một kiểu khác nhau."
@@ -532,10 +532,10 @@
           "id": "C2_T6_Q4",
           "question": "Semantic Layer hỗ trợ AI Agents như thế nào?",
           "options": {
-            "A": "Không liên quan đến AI",
-            "B": "Chỉ lưu trữ log",
-            "C": "Cung cấp 'bản đồ tri thức' giúp AI hiểu cấu trúc và ý nghĩa dữ liệu doanh nghiệp",
-            "D": "Thay thế hoàn toàn Data Warehouse"
+            "A": "Không có liên quan gì đến các hệ thống AI",
+            "B": "Chỉ dùng để lưu trữ log truy vấn của AI",
+            "C": "Cung cấp 'bản đồ tri thức' để AI hiểu cấu trúc và ý nghĩa dữ liệu",
+            "D": "Thay thế hoàn toàn vai trò của Data Warehouse"
           },
           "correctAnswer": "C",
           "explanation": "Semantic Layer cung cấp “bản đồ tri thức” để **AI Agents** hiểu cấu trúc và ý nghĩa dữ liệu."
@@ -544,10 +544,10 @@
           "id": "C2_T6_Q5",
           "question": "Metric Catalog hỗ trợ khả năng nào về chỉ số?",
           "options": {
-            "A": "Tạo Dimension mới",
-            "B": "Xóa chỉ số cũ tự động",
-            "C": "Chặn mọi truy vấn",
-            "D": "Lineage từ báo cáo cuối ngược về các bảng dữ liệu gốc"
+            "A": "Tạo ra các Dimension mới cho báo cáo",
+            "B": "Tự động xóa các chỉ số cũ không dùng",
+            "C": "Chặn mọi truy vấn không đúng quy tắc",
+            "D": "Lineage từ báo cáo ngược về bảng dữ liệu gốc"
           },
           "correctAnswer": "D",
           "explanation": "Metric Catalog hỗ trợ **lineage** từ báo cáo cuối ngược về bảng dữ liệu gốc."
@@ -562,10 +562,10 @@
           "id": "C2_T7_Q1",
           "question": "Kiểu dữ liệu VARIANT cho phép làm gì?",
           "options": {
-            "A": "Chỉ lưu số nguyên",
-            "B": "Lưu file ảnh",
-            "C": "Lưu toàn bộ tài liệu bán cấu trúc trong một cột duy nhất với hiệu năng cao",
-            "D": "Chỉ lưu ngày tháng"
+            "A": "Chỉ cho phép lưu các giá trị số nguyên dương",
+            "B": "Chỉ dùng để lưu trữ các file ảnh dung lượng lớn",
+            "C": "Lưu tài liệu bán cấu trúc trong một cột duy nhất, hiệu năng cao",
+            "D": "Chỉ dùng để lưu trữ các giá trị ngày và giờ"
           },
           "correctAnswer": "C",
           "explanation": "**VARIANT** lưu toàn bộ tài liệu bán cấu trúc (JSON…) trong **một cột** với hiệu năng cao."
@@ -574,10 +574,10 @@
           "id": "C2_T7_Q2",
           "question": "Hiện tượng Schema Drift là gì?",
           "options": {
-            "A": "Mất kết nối mạng",
-            "B": "Dữ liệu bị nén quá mức",
-            "C": "Lỗi cú pháp SQL",
-            "D": "Cấu trúc của dữ liệu nguồn thay đổi không cố định gây khó khăn cho bảng quan hệ truyền thống"
+            "A": "Mất kết nối mạng thường xuyên giữa hệ thống nguồn và kho dữ liệu",
+            "B": "Dữ liệu bị nén quá mức làm hỏng nội dung các cột",
+            "C": "Lỗi cú pháp SQL xuất hiện khi người dùng viết truy vấn mới",
+            "D": "Cấu trúc dữ liệu nguồn liên tục thay đổi, khó cho bảng quan hệ cố định"
           },
           "correctAnswer": "D",
           "explanation": "**Schema Drift** là cấu trúc dữ liệu nguồn thay đổi không cố định, gây khó cho bảng quan hệ truyền thống."
@@ -586,10 +586,10 @@
           "id": "C2_T7_Q3",
           "question": "Kỹ thuật Flattening dùng để làm gì với dữ liệu VARIANT?",
           "options": {
-            "A": "Chuyển các mảng thành các dòng dữ liệu riêng biệt để phân tích",
-            "B": "Mã hóa dữ liệu",
-            "C": "Nén dữ liệu",
-            "D": "Xóa cột"
+            "A": "Chuyển mảng thành các dòng dữ liệu riêng để phân tích",
+            "B": "Mã hóa dữ liệu VARIANT bằng khóa riêng",
+            "C": "Nén dữ liệu VARIANT để tiết kiệm lưu trữ",
+            "D": "Xóa các cột không cần thiết khỏi bảng gốc"
           },
           "correctAnswer": "A",
           "explanation": "**Flattening** chuyển các mảng thành các dòng riêng để phân tích."
@@ -598,10 +598,10 @@
           "id": "C2_T7_Q4",
           "question": "Khi nào nên Materialization một trường trong cột VARIANT?",
           "options": {
-            "A": "Khi trường không bao giờ được dùng",
-            "B": "Khi dữ liệu quá nhỏ",
-            "C": "Khi trường đó được truy vấn thường xuyên, nên trích xuất thành cột vật lý riêng",
-            "D": "Khi cần xóa trường"
+            "A": "Khi trường đó không bao giờ được truy vấn đến",
+            "B": "Khi tổng dữ liệu quá nhỏ so với dung lượng bảng",
+            "C": "Khi trường được truy vấn thường xuyên, nên tách ra cột riêng",
+            "D": "Khi cần xóa bỏ trường khỏi cột VARIANT"
           },
           "correctAnswer": "C",
           "explanation": "Trường được truy vấn thường xuyên nên **materialize** thành cột vật lý riêng để tận dụng index và tăng tốc."
@@ -610,10 +610,10 @@
           "id": "C2_T7_Q5",
           "question": "Virtual Views cho dữ liệu VARIANT có tác dụng gì?",
           "options": {
-            "A": "Xóa dữ liệu gốc",
-            "B": "Cung cấp giao diện bảng quan hệ cho người dùng mà không thay đổi lưu trữ gốc",
-            "C": "Mã hóa dữ liệu",
-            "D": "Sao chép dữ liệu ra bảng mới"
+            "A": "Xóa dữ liệu gốc sau khi chuyển đổi sang bảng quan hệ",
+            "B": "Cung cấp giao diện bảng quan hệ mà không đổi lưu trữ gốc",
+            "C": "Mã hóa dữ liệu trong cột VARIANT khi truy vấn",
+            "D": "Sao chép dữ liệu ra một bảng mới độc lập"
           },
           "correctAnswer": "B",
           "explanation": "**Virtual Views** cung cấp giao diện bảng quan hệ cho người dùng mà không đổi lưu trữ gốc."
@@ -628,10 +628,10 @@
           "id": "C2_T8_Q1",
           "question": "Khác biệt giữa BI Schema và AI Schema là gì?",
           "options": {
-            "A": "BI tóm tắt xu hướng, AI cần dữ liệu ở mức chi tiết nhất (Granularity) để học đặc trưng",
-            "B": "AI không cần schema",
-            "C": "AI cần dữ liệu tổng hợp, BI cần dữ liệu chi tiết",
-            "D": "Cả hai đều chỉ cần dữ liệu tổng hợp"
+            "A": "BI tóm tắt xu hướng, AI cần dữ liệu chi tiết nhất để học đặc trưng",
+            "B": "AI không cần schema, chỉ cần dữ liệu thô dạng file",
+            "C": "AI cần dữ liệu tổng hợp cao, BI cần dữ liệu ở mức chi tiết",
+            "D": "Cả hai đều chỉ cần dữ liệu đã được tổng hợp sẵn"
           },
           "correctAnswer": "A",
           "explanation": "**BI** tóm tắt xu hướng; **AI** cần dữ liệu **mức chi tiết nhất (granularity)** để học đặc trưng."
@@ -676,10 +676,10 @@
           "id": "C2_T8_Q5",
           "question": "Feature Store đóng vai trò gì?",
           "options": {
-            "A": "Quản lý phiên bản và chia sẻ các đặc trưng giữa các đội phát triển AI",
-            "B": "Lưu trữ dữ liệu giao dịch",
-            "C": "Chạy truy vấn BI",
-            "D": "Lưu log truy cập"
+            "A": "Quản lý phiên bản và chia sẻ feature giữa các đội AI",
+            "B": "Lưu trữ dữ liệu giao dịch gốc của hệ thống",
+            "C": "Chạy các truy vấn BI trên dữ liệu tổng hợp",
+            "D": "Lưu log truy cập của người dùng hệ thống"
           },
           "correctAnswer": "A",
           "explanation": "**Feature Store** quản lý phiên bản và chia sẻ đặc trưng giữa các đội AI."
@@ -688,10 +688,10 @@
           "id": "C2_T8_Q6",
           "question": "Data Drift là gì?",
           "options": {
-            "A": "Theo dõi sự thay đổi của dữ liệu theo thời gian để kịp thời tái huấn luyện mô hình",
-            "B": "Dữ liệu bị mã hóa",
-            "C": "Lỗi kiểu dữ liệu khi nạp",
-            "D": "Mất dữ liệu nguồn"
+            "A": "Theo dõi dữ liệu thay đổi theo thời gian để tái huấn luyện",
+            "B": "Dữ liệu bị mã hóa khi lưu trữ trên đám mây",
+            "C": "Lỗi kiểu dữ liệu xảy ra khi nạp vào bảng",
+            "D": "Mất toàn bộ dữ liệu nguồn do sự cố hệ thống"
           },
           "correctAnswer": "A",
           "explanation": "Theo dõi **Data Drift** (dữ liệu thay đổi theo thời gian) để kịp thời tái huấn luyện mô hình."

@@ -10,9 +10,9 @@
           "id": "C3_T1_Q1",
           "question": "Hạn chế nào sau đây thuộc về quy trình ETL truyền thống?",
           "options": {
-            "A": "Auto-scaling tài nguyên linh hoạt",
+            "A": "Auto-scaling tài nguyên một cách linh hoạt",
             "B": "Nạp dữ liệu thô trực tiếp vào Warehouse trước khi xử lý",
-            "C": "Phụ thuộc vào máy chủ trung gian, dễ tạo nút thắt cổ chai khi dữ liệu lớn",
+            "C": "Phụ thuộc máy chủ trung gian, dễ nghẽn khi dữ liệu lớn",
             "D": "Tách biệt hoàn toàn Storage và Compute"
           },
           "correctAnswer": "C",
@@ -22,10 +22,10 @@
           "id": "C3_T1_Q2",
           "question": "Đặc điểm cốt lõi của Cloud-Native ELT là gì?",
           "options": {
-            "A": "Nạp dữ liệu thô vào Data Lake/Warehouse trước, sau đó biến đổi tại chỗ (In-place Transform)",
-            "B": "Bắt buộc dùng công cụ kéo thả độc quyền",
-            "C": "Biến đổi dữ liệu trên máy chủ trung gian rồi mới nạp",
-            "D": "Chỉ hỗ trợ Schema-on-write"
+            "A": "Nạp dữ liệu thô trước, sau đó biến đổi tại chỗ ngay trong kho (In-place)",
+            "B": "Bắt buộc dùng công cụ kéo thả độc quyền của một nhà cung cấp",
+            "C": "Biến đổi dữ liệu trên máy chủ trung gian rồi mới nạp vào kho",
+            "D": "Chỉ hỗ trợ Schema-on-write và không nhận dữ liệu thô"
           },
           "correctAnswer": "A",
           "explanation": "**ELT**: nạp dữ liệu thô vào Lake/Warehouse **trước**, rồi biến đổi tại chỗ (**in-place transform**) bằng sức mạnh của Cloud."
@@ -46,10 +46,10 @@
           "id": "C3_T1_Q4",
           "question": "Vì sao ELT tăng cường bảo mật so với ETL?",
           "options": {
-            "A": "Dữ liệu không được mã hóa",
-            "B": "Chỉ dùng mạng nội bộ",
-            "C": "Dữ liệu không phải di chuyển qua các máy chủ ETL trung gian",
-            "D": "Dữ liệu được xóa sau khi nạp"
+            "A": "Dữ liệu không được mã hóa trong khi truyền",
+            "B": "Chỉ cho phép dùng mạng nội bộ công ty",
+            "C": "Dữ liệu không phải di chuyển qua máy chủ ETL trung gian",
+            "D": "Dữ liệu bị xóa ngay sau khi nạp xong"
           },
           "correctAnswer": "C",
           "explanation": "Với ELT dữ liệu **không phải di chuyển qua máy chủ ETL trung gian** nên giảm điểm rò rỉ → bảo mật tốt hơn."
@@ -70,10 +70,10 @@
           "id": "C3_T1_Q6",
           "question": "Lợi ích kinh tế của ELT là gì?",
           "options": {
-            "A": "Tối ưu chi phí nhờ Pay-as-you-go và tận dụng xử lý song song của Cloud",
-            "B": "Phải mua máy chủ ETL chuyên dụng",
-            "C": "Giảm khả năng mở rộng",
-            "D": "Chi phí cố định không đổi"
+            "A": "Tối ưu chi phí nhờ Pay-as-you-go và xử lý song song của Cloud",
+            "B": "Phải mua máy chủ ETL chuyên dụng đắt tiền",
+            "C": "Giảm khả năng mở rộng khi dữ liệu tăng",
+            "D": "Chi phí cố định không đổi theo mức sử dụng"
           },
           "correctAnswer": "A",
           "explanation": "ELT tối ưu chi phí nhờ **Pay-as-you-go** và xử lý song song trên Cloud."
@@ -88,10 +88,10 @@
           "id": "C3_T2_Q1",
           "question": "CDC là gì?",
           "options": {
-            "A": "Kỹ thuật nén dữ liệu",
-            "B": "Phương pháp mã hóa",
-            "C": "Công cụ trực quan hóa",
-            "D": "Nhóm kỹ thuật nhận diện và nắm bắt các thay đổi (INSERT, UPDATE, DELETE) từ CSDL nguồn"
+            "A": "Kỹ thuật nén dữ liệu để giảm chi phí khi nạp vào kho",
+            "B": "Phương pháp mã hóa dữ liệu để bảo vệ khi truyền qua mạng",
+            "C": "Công cụ trực quan hóa dữ liệu để xây dựng báo cáo BI",
+            "D": "Kỹ thuật bắt các thay đổi INSERT, UPDATE, DELETE từ CSDL nguồn"
           },
           "correctAnswer": "D",
           "explanation": "**CDC** (Change Data Capture) nhận diện và nắm bắt các thay đổi **INSERT/UPDATE/DELETE** từ CSDL nguồn."
@@ -100,9 +100,9 @@
           "id": "C3_T2_Q2",
           "question": "Cơ chế Log-based CDC hoạt động như thế nào?",
           "options": {
-            "A": "Sao chép file dữ liệu thủ công",
-            "B": "Chạy truy vấn SELECT định kỳ",
-            "C": "Quét toàn bộ bảng theo chu kỳ",
+            "A": "Sao chép file dữ liệu thủ công định kỳ",
+            "B": "Chạy truy vấn SELECT định kỳ trên bảng nguồn",
+            "C": "Quét toàn bộ bảng theo chu kỳ cố định",
             "D": "Đọc trực tiếp từ Redo logs thay vì quét truy vấn"
           },
           "correctAnswer": "D",
@@ -124,9 +124,9 @@
           "id": "C3_T2_Q4",
           "question": "Nhược điểm của Query-based CDC trong việc xử lý bản ghi bị xóa là gì?",
           "options": {
-            "A": "Ghi nhận việc xóa tức thì và chính xác",
-            "B": "Không có nhược điểm",
-            "C": "Không bao giờ bỏ sót bản ghi xóa",
+            "A": "Ghi nhận việc xóa tức thì và chính xác tuyệt đối",
+            "B": "Không có nhược điểm đáng kể nào cần lưu ý",
+            "C": "Không bao giờ bỏ sót bất kỳ bản ghi bị xóa nào",
             "D": "Rất khó phát hiện các bản ghi đã bị Hard Delete"
           },
           "correctAnswer": "D",
@@ -184,10 +184,10 @@
           "id": "C3_T2_Q9",
           "question": "Debezium là nền tảng CDC dựa trên cơ sở nào?",
           "options": {
-            "A": "AWS Step Functions",
-            "B": "dbt",
+            "A": "AWS Step Functions (dịch vụ của Amazon)",
+            "B": "dbt (công cụ biến đổi dữ liệu)",
             "C": "Apache Kafka Connect (mã nguồn mở)",
-            "D": "Snowflake Streams"
+            "D": "Snowflake Streams (tính năng của Snowflake)"
           },
           "correctAnswer": "C",
           "explanation": "**Debezium** là nền tảng CDC mã nguồn mở chạy trên **Apache Kafka Connect**."
@@ -196,10 +196,10 @@
           "id": "C3_T2_Q10",
           "question": "Fivetran trong hệ sinh thái CDC là gì?",
           "options": {
-            "A": "Giải pháp SaaS thương mại tự động hóa và đơn giản hóa luồng CDC",
-            "B": "Dịch vụ của Amazon",
+            "A": "Giải pháp SaaS thương mại tự động hóa luồng CDC",
+            "B": "Dịch vụ CDC do Amazon cung cấp trên AWS",
             "C": "Tính năng theo dõi thay đổi bên trong kho dữ liệu",
-            "D": "Công cụ mã nguồn mở dựa trên Kafka"
+            "D": "Công cụ CDC mã nguồn mở dựa trên Kafka"
           },
           "correctAnswer": "A",
           "explanation": "**Fivetran** là giải pháp **SaaS thương mại** tự động hóa luồng CDC."
@@ -214,10 +214,10 @@
           "id": "C3_T3_Q1",
           "question": "Zero-ETL là gì?",
           "options": {
-            "A": "Kỹ thuật xóa dữ liệu nguồn",
-            "B": "Phương thức tích hợp dữ liệu trực tiếp mà không cần xây dựng code pipeline trung gian",
-            "C": "Phương pháp không cần lưu dữ liệu",
-            "D": "ETL chạy 0 lần mỗi ngày"
+            "A": "Kỹ thuật tự động xóa dữ liệu nguồn sau khi nạp",
+            "B": "Tích hợp dữ liệu trực tiếp, không cần xây pipeline trung gian",
+            "C": "Phương pháp không cần lưu trữ dữ liệu ở đâu cả",
+            "D": "ETL chạy 0 lần mỗi ngày để tiết kiệm chi phí"
           },
           "correctAnswer": "B",
           "explanation": "**Zero-ETL** tích hợp dữ liệu trực tiếp **không cần code pipeline trung gian**."
@@ -226,10 +226,10 @@
           "id": "C3_T3_Q2",
           "question": "Storage Mirroring có chức năng gì?",
           "options": {
-            "A": "Chia sẻ trực tiếp siêu dữ liệu cấu trúc",
-            "B": "Hạ tầng tự động mở rộng khi dữ liệu tăng",
-            "C": "Kỹ thuật nhân bản dữ liệu tự động và liên tục ở tầng hệ thống vật lý",
-            "D": "Giám sát luồng tích hợp trên một bảng điều khiển"
+            "A": "Chia sẻ trực tiếp siêu dữ liệu cấu trúc giữa các hệ thống",
+            "B": "Hạ tầng tự động mở rộng khi khối lượng dữ liệu tăng",
+            "C": "Nhân bản dữ liệu tự động, liên tục ở tầng hệ thống vật lý",
+            "D": "Giám sát luồng tích hợp trên một bảng điều khiển chung"
           },
           "correctAnswer": "C",
           "explanation": "**Storage Mirroring** nhân bản dữ liệu tự động và liên tục ở tầng hệ thống vật lý."
@@ -238,10 +238,10 @@
           "id": "C3_T3_Q3",
           "question": "Metadata Sharing trong Zero-ETL là gì?",
           "options": {
-            "A": "Cơ chế chia sẻ trực tiếp siêu dữ liệu cấu trúc ở cấp độ lưu trữ",
-            "B": "Tự động mở rộng đồng bộ",
-            "C": "Nhân bản dữ liệu vật lý liên tục",
-            "D": "Bảng điều khiển hợp nhất"
+            "A": "Chia sẻ trực tiếp siêu dữ liệu cấu trúc ở cấp lưu trữ",
+            "B": "Tự động mở rộng năng lực đồng bộ khi dữ liệu tăng",
+            "C": "Nhân bản dữ liệu vật lý liên tục ở tầng hệ thống",
+            "D": "Bảng điều khiển hợp nhất để giám sát luồng tích hợp"
           },
           "correctAnswer": "A",
           "explanation": "**Metadata Sharing** chia sẻ trực tiếp siêu dữ liệu cấu trúc ở cấp độ lưu trữ."
@@ -250,10 +250,10 @@
           "id": "C3_T3_Q4",
           "question": "Serverless Scaling trong Zero-ETL dùng để làm gì?",
           "options": {
-            "A": "Mã hóa dữ liệu",
-            "B": "Hạ tầng tự động mở rộng năng lực đồng bộ khi khối lượng dữ liệu tăng cao",
-            "C": "Nhân bản dữ liệu ở tầng vật lý",
-            "D": "Giám sát luồng tích hợp"
+            "A": "Mã hóa dữ liệu khi đồng bộ giữa các hệ thống",
+            "B": "Hạ tầng tự động mở rộng năng lực đồng bộ khi dữ liệu tăng",
+            "C": "Nhân bản dữ liệu ở tầng vật lý một cách liên tục",
+            "D": "Giám sát luồng tích hợp trên bảng điều khiển chung"
           },
           "correctAnswer": "B",
           "explanation": "**Serverless Scaling**: hạ tầng tự mở rộng năng lực đồng bộ khi khối lượng dữ liệu tăng."
@@ -262,10 +262,10 @@
           "id": "C3_T3_Q5",
           "question": "Unified Control Plane trong Zero-ETL là gì?",
           "options": {
-            "A": "Nhân bản dữ liệu liên tục",
-            "B": "Giám sát và quản lý toàn bộ luồng tích hợp trên một bảng điều khiển duy nhất",
-            "C": "Chia sẻ metadata",
-            "D": "Liên kết tối ưu giữa các Cloud"
+            "A": "Nhân bản dữ liệu liên tục ở tầng hệ thống vật lý",
+            "B": "Giám sát và quản lý mọi luồng tích hợp trên một bảng điều khiển",
+            "C": "Chia sẻ trực tiếp metadata cấu trúc giữa các hệ thống",
+            "D": "Liên kết tối ưu giữa các nền tảng Cloud khác nhau"
           },
           "correctAnswer": "B",
           "explanation": "**Unified Control Plane**: giám sát và quản lý toàn bộ luồng tích hợp trên một bảng điều khiển duy nhất."
@@ -274,10 +274,10 @@
           "id": "C3_T3_Q6",
           "question": "Hạn chế nào sau đây thuộc về Zero-ETL?",
           "options": {
-            "A": "Không có SLA",
-            "B": "Tăng số failure point",
-            "C": "Không phù hợp với dữ liệu nguồn bẩn cần làm sạch và biến đổi phức tạp",
-            "D": "Tốc độ hiển thị dữ liệu chậm"
+            "A": "Không có cam kết SLA nào về độ trễ đồng bộ dữ liệu",
+            "B": "Làm tăng số lượng điểm có thể gây lỗi (failure point)",
+            "C": "Không phù hợp với dữ liệu nguồn bẩn cần làm sạch phức tạp",
+            "D": "Tốc độ hiển thị dữ liệu chậm hơn so với ETL"
           },
           "correctAnswer": "C",
           "explanation": "Zero-ETL **không phù hợp** khi dữ liệu nguồn bẩn cần làm sạch và biến đổi phức tạp."
@@ -286,10 +286,10 @@
           "id": "C3_T3_Q7",
           "question": "Rủi ro 'Vendor Lock-in' của Zero-ETL là gì?",
           "options": {
-            "A": "Chi phí giảm về 0",
-            "B": "Mất toàn bộ dữ liệu",
-            "C": "Không thể dùng Cloud",
-            "D": "Bị phụ thuộc vào hệ sinh thái của một nhà cung cấp Cloud duy nhất"
+            "A": "Chi phí vận hành giảm về 0 cho người dùng",
+            "B": "Mất toàn bộ dữ liệu khi chuyển sang Zero-ETL",
+            "C": "Không thể sử dụng bất kỳ nền tảng Cloud nào",
+            "D": "Phụ thuộc vào hệ sinh thái của một nhà cung cấp Cloud"
           },
           "correctAnswer": "D",
           "explanation": "**Vendor Lock-in**: bị phụ thuộc vào hệ sinh thái của một nhà cung cấp Cloud duy nhất."
@@ -298,10 +298,10 @@
           "id": "C3_T3_Q8",
           "question": "Lợi ích 'Time-to-Insight' của Zero-ETL là gì?",
           "options": {
-            "A": "Không ảnh hưởng thời gian",
-            "B": "Rút ngắn tối đa thời gian từ lúc phát sinh dữ liệu đến khi phân tích",
-            "C": "Kéo dài thời gian phân tích",
-            "D": "Tăng thời gian chờ ETL"
+            "A": "Không ảnh hưởng gì đến thời gian phân tích dữ liệu",
+            "B": "Rút ngắn thời gian từ khi phát sinh dữ liệu đến lúc phân tích",
+            "C": "Kéo dài thời gian từ lúc phát sinh đến khi phân tích",
+            "D": "Tăng thời gian chờ đợi của các tác vụ ETL"
           },
           "correctAnswer": "B",
           "explanation": "**Time-to-Insight**: rút ngắn thời gian từ lúc dữ liệu phát sinh đến khi phân tích."
@@ -316,10 +316,10 @@
           "id": "C3_T4_Q1",
           "question": "Orchestration trong Data Pipeline được ví như gì?",
           "options": {
-            "A": "Kiểm toán viên bên ngoài",
+            "A": "Kiểm toán viên độc lập bên ngoài",
             "B": "Nhạc trưởng điều khiển các tác vụ",
-            "C": "Người viết SQL",
-            "D": "Thủ kho lưu dữ liệu"
+            "C": "Người trực tiếp viết các câu SQL",
+            "D": "Thủ kho chịu trách nhiệm lưu dữ liệu"
           },
           "correctAnswer": "B",
           "explanation": "**Orchestration** như “nhạc trưởng” điều khiển các tác vụ theo đúng thứ tự và điều kiện."
@@ -328,10 +328,10 @@
           "id": "C3_T4_Q2",
           "question": "DAG viết tắt của gì?",
           "options": {
-            "A": "Dynamic Aggregation Gateway",
-            "B": "Distributed Access Grid",
-            "C": "Directed Acyclic Graph (Đồ thị có hướng không chu trình)",
-            "D": "Data Analysis Group"
+            "A": "Dynamic Aggregation Gateway (Cổng tổng hợp động)",
+            "B": "Distributed Access Grid (Lưới truy cập phân tán)",
+            "C": "Directed Acyclic Graph (Đồ thị có hướng, không chu trình)",
+            "D": "Data Analysis Group (Nhóm phân tích dữ liệu)"
           },
           "correctAnswer": "C",
           "explanation": "**DAG** = **Directed Acyclic Graph** (đồ thị có hướng không chu trình)."
@@ -340,10 +340,10 @@
           "id": "C3_T4_Q3",
           "question": "Thành phần 'Acyclic' trong DAG có ý nghĩa gì?",
           "options": {
-            "A": "Dòng chảy luôn một chiều",
-            "B": "Cho phép nhiều vòng lặp",
+            "A": "Dòng chảy dữ liệu luôn đi theo một chiều",
+            "B": "Cho phép tạo ra nhiều vòng lặp giữa các tác vụ",
             "C": "Loại bỏ vòng lặp vô hạn có thể gây treo hệ thống",
-            "D": "Xử lý song song"
+            "D": "Cho phép xử lý song song nhiều nhánh tác vụ"
           },
           "correctAnswer": "C",
           "explanation": "**Acyclic** nghĩa là không có chu trình, loại bỏ vòng lặp vô hạn gây treo hệ thống."
@@ -352,10 +352,10 @@
           "id": "C3_T4_Q4",
           "question": "Trong DAG, quản lý phụ thuộc quy định điều gì?",
           "options": {
-            "A": "Lớp Gold chỉ được thực thi sau khi lớp Silver hoàn tất",
-            "B": "Mọi lớp chạy ngẫu nhiên",
-            "C": "Lớp Gold chạy trước Bronze",
-            "D": "Không có thứ tự"
+            "A": "Lớp Gold chỉ chạy sau khi lớp Silver hoàn tất",
+            "B": "Mọi lớp được chạy một cách ngẫu nhiên",
+            "C": "Lớp Gold được chạy trước cả lớp Bronze",
+            "D": "Không quy định thứ tự chạy giữa các lớp"
           },
           "correctAnswer": "A",
           "explanation": "Quản lý phụ thuộc: **Gold chỉ chạy sau khi Silver hoàn tất**."
@@ -364,10 +364,10 @@
           "id": "C3_T4_Q5",
           "question": "Công cụ Apache Airflow có đặc tính nào?",
           "options": {
-            "A": "Chỉ chạy trên Windows",
-            "B": "Chỉ dùng cho Streaming",
-            "C": "Tư duy Asset-centric đặc trưng",
-            "D": "Tiêu chuẩn công nghiệp phổ biến với hàng nghìn thư viện kết nối, tư duy Task-centric"
+            "A": "Chỉ chạy được trên hệ điều hành Windows Server",
+            "B": "Chỉ dùng cho các hệ thống xử lý Streaming thời gian thực",
+            "C": "Tư duy Asset-centric là đặc trưng nổi bật nhất",
+            "D": "Phổ biến với nhiều thư viện kết nối, tư duy Task-centric"
           },
           "correctAnswer": "D",
           "explanation": "**Apache Airflow** là tiêu chuẩn công nghiệp với hàng nghìn thư viện kết nối, tư duy **Task-centric**."
@@ -389,9 +389,9 @@
           "question": "Tư duy Asset-centric (ví dụ Dagster) tập trung vào điều gì?",
           "options": {
             "A": "Quản lý tài sản dữ liệu nào được tạo ra",
-            "B": "Giám sát tác vụ đang chạy",
-            "C": "Chỉ quan tâm thời gian chạy",
-            "D": "Chỉ quan tâm kết quả câu lệnh"
+            "B": "Giám sát các tác vụ đang chạy theo thời gian",
+            "C": "Chỉ quan tâm đến thời gian chạy của tác vụ",
+            "D": "Chỉ quan tâm đến kết quả của câu lệnh"
           },
           "correctAnswer": "A",
           "explanation": "**Asset-centric** (Dagster) tập trung quản lý **tài sản dữ liệu** nào được tạo ra, ưu tiên lineage."
@@ -400,10 +400,10 @@
           "id": "C3_T4_Q8",
           "question": "Mage.ai nổi bật với đặc điểm nào?",
           "options": {
-            "A": "Chỉ dùng cho Serverless AWS",
-            "B": "Chỉ có giao diện CLI",
-            "C": "Điều phối tích hợp sâu AI để hỗ trợ sinh mã nguồn và dự đoán lỗi",
-            "D": "Không hỗ trợ Python"
+            "A": "Chỉ dùng được cho môi trường Serverless AWS",
+            "B": "Chỉ có giao diện dòng lệnh, không có giao diện web",
+            "C": "Tích hợp AI sâu để hỗ trợ sinh mã nguồn và dự đoán lỗi",
+            "D": "Không hỗ trợ ngôn ngữ Python để viết pipeline"
           },
           "correctAnswer": "C",
           "explanation": "**Mage.ai** tích hợp sâu AI để hỗ trợ sinh mã nguồn và dự đoán lỗi."
@@ -424,10 +424,10 @@
           "id": "C3_T4_Q10",
           "question": "AWS Step Functions và Google Workflows thuộc nhóm nào?",
           "options": {
-            "A": "Công cụ CDC",
+            "A": "Các công cụ CDC thu thập thay đổi dữ liệu",
             "B": "Cloud Native Services cho hệ thống Serverless",
-            "C": "Công cụ Data Catalog",
-            "D": "Định dạng bảng mở"
+            "C": "Các công cụ Data Catalog quản lý metadata",
+            "D": "Các định dạng bảng mở cho Lakehouse"
           },
           "correctAnswer": "B",
           "explanation": "**AWS Step Functions và Google Workflows** là Cloud Native Services cho hệ thống Serverless."
@@ -454,10 +454,10 @@
           "id": "C3_T5_Q1",
           "question": "Xử lý Batch có ưu điểm nào so với Streaming?",
           "options": {
-            "A": "Độ phức tạp kỹ thuật thấp hơn, dễ triển khai và khắc phục sự cố",
-            "B": "Chạy liên tục 24/7",
-            "C": "Luôn tốn kém hơn",
-            "D": "Độ trễ cực thấp"
+            "A": "Độ phức tạp thấp hơn, dễ triển khai và khắc phục sự cố",
+            "B": "Luôn chạy liên tục 24/7 để xử lý từng bản ghi",
+            "C": "Luôn tốn kém hơn nhiều so với Streaming",
+            "D": "Độ trễ cực thấp, xử lý gần như tức thời"
           },
           "correctAnswer": "A",
           "explanation": "**Batch** có độ phức tạp thấp hơn, dễ triển khai và khắc phục sự cố; Streaming phức tạp, tốn kém hơn."
@@ -466,10 +466,10 @@
           "id": "C3_T5_Q2",
           "question": "Hệ thống nào bắt buộc dùng Streaming?",
           "options": {
-            "A": "Chống gian lận thẻ, gợi ý sản phẩm real-time (SLA độ trễ cực thấp)",
-            "B": "Sao lưu hàng tuần",
-            "C": "Báo cáo cuối ngày",
-            "D": "Tính lương cuối tháng"
+            "A": "Chống gian lận thẻ, gợi ý sản phẩm real-time",
+            "B": "Sao lưu dữ liệu hệ thống hàng tuần",
+            "C": "Báo cáo tổng hợp doanh thu cuối ngày",
+            "D": "Tính lương cho nhân viên vào cuối tháng"
           },
           "correctAnswer": "A",
           "explanation": "Hệ thống SLA độ trễ cực thấp như **chống gian lận thẻ, gợi ý sản phẩm real-time** bắt buộc dùng Streaming."
@@ -478,10 +478,10 @@
           "id": "C3_T5_Q3",
           "question": "Snowpipe được kích hoạt khi nào?",
           "options": {
-            "A": "Chạy thủ công",
-            "B": "Tự động nạp dữ liệu khi file vừa xuất hiện trên Cloud Storage",
-            "C": "Chỉ chạy theo lịch hàng đêm",
-            "D": "Khi có người dùng đăng nhập"
+            "A": "Khi quản trị viên chạy lệnh thủ công",
+            "B": "Tự động nạp khi file mới xuất hiện trên Cloud Storage",
+            "C": "Chỉ chạy theo lịch cố định vào mỗi đêm",
+            "D": "Khi có người dùng đăng nhập vào hệ thống"
           },
           "correctAnswer": "B",
           "explanation": "**Snowpipe** tự động nạp khi **file vừa xuất hiện** trên Cloud Storage."
@@ -490,10 +490,10 @@
           "id": "C3_T5_Q4",
           "question": "Micro-batch là gì?",
           "options": {
-            "A": "Một bản ghi duy nhất",
-            "B": "Chia dữ liệu thành các lô nhỏ liên tục để nạp vào kho thay vì chờ gom lô lớn",
-            "C": "Một công cụ CDC",
-            "D": "Một lô dữ liệu rất lớn mỗi tuần"
+            "A": "Một bản ghi duy nhất được xử lý riêng lẻ",
+            "B": "Chia dữ liệu thành các lô nhỏ nạp liên tục thay vì gom lô lớn",
+            "C": "Một công cụ CDC dùng để bắt thay đổi dữ liệu",
+            "D": "Một lô dữ liệu rất lớn được nạp mỗi tuần"
           },
           "correctAnswer": "B",
           "explanation": "**Micro-batch** chia dữ liệu thành các lô nhỏ liên tục để nạp."
@@ -514,10 +514,10 @@
           "id": "C3_T5_Q6",
           "question": "Watermarks trong Spark Structured Streaming dùng để làm gì?",
           "options": {
-            "A": "Tính toán theo khung thời gian",
-            "B": "Dùng chung thư viện batch và stream",
-            "C": "Xử lý thông minh các bản ghi đến trễ mà không làm nghẽn luồng chính",
-            "D": "Phục hồi bằng checkpoint"
+            "A": "Tính toán dữ liệu theo từng khung thời gian",
+            "B": "Dùng chung một thư viện cho cả batch và stream",
+            "C": "Xử lý các bản ghi đến trễ mà không làm nghẽn luồng chính",
+            "D": "Phục hồi trạng thái xử lý bằng checkpoint"
           },
           "correctAnswer": "C",
           "explanation": "**Watermarks** xử lý thông minh bản ghi **đến trễ** mà không làm nghẽn luồng chính."
@@ -526,10 +526,10 @@
           "id": "C3_T5_Q7",
           "question": "Exactly-once trong Spark Structured Streaming đảm bảo điều gì?",
           "options": {
-            "A": "Dữ liệu bị bỏ qua",
+            "A": "Dữ liệu có thể bị bỏ qua khi có lỗi",
             "B": "Dữ liệu không bị xử lý lặp lại hoặc thất thoát",
-            "C": "Dữ liệu được xử lý hai lần",
-            "D": "Dữ liệu chỉ xử lý theo batch"
+            "C": "Mỗi bản ghi luôn được xử lý đúng hai lần",
+            "D": "Dữ liệu chỉ được xử lý theo từng batch"
           },
           "correctAnswer": "B",
           "explanation": "**Exactly-once** đảm bảo dữ liệu không bị xử lý lặp hay thất thoát."
@@ -550,10 +550,10 @@
           "id": "C3_T5_Q9",
           "question": "Kiến trúc Lambda duy trì điều gì?",
           "options": {
-            "A": "Không có luồng nào",
-            "B": "Chỉ một luồng Batch",
-            "C": "Chỉ một luồng Streaming",
-            "D": "Hai luồng song song: Batch (chính xác) và Speed/Streaming (nhanh)"
+            "A": "Không có luồng xử lý nào chạy song song",
+            "B": "Chỉ duy nhất một luồng xử lý theo lô (Batch)",
+            "C": "Chỉ duy nhất một luồng xử lý thời gian thực",
+            "D": "Hai luồng song song: Batch (chính xác) và Streaming (nhanh)"
           },
           "correctAnswer": "D",
           "explanation": "**Lambda** duy trì **hai luồng song song**: Batch (chính xác) và Speed/Streaming (nhanh)."
@@ -562,10 +562,10 @@
           "id": "C3_T5_Q10",
           "question": "Ưu điểm của kiến trúc Kappa so với Lambda là gì?",
           "options": {
-            "A": "Rủi ro sai lệch giữa batch và speed",
-            "B": "Chỉ một luồng xử lý và một codebase, dễ bảo trì hơn",
-            "C": "Phải viết hai bộ mã nguồn",
-            "D": "Phức tạp hơn Lambda"
+            "A": "Tăng rủi ro sai lệch kết quả giữa batch và speed",
+            "B": "Chỉ một luồng xử lý và một codebase, dễ bảo trì",
+            "C": "Phải viết và duy trì hai bộ mã nguồn riêng biệt",
+            "D": "Phức tạp hơn nhiều so với kiến trúc Lambda"
           },
           "correctAnswer": "B",
           "explanation": "**Kappa** chỉ **một luồng, một codebase** nên dễ bảo trì hơn Lambda."
@@ -580,10 +580,10 @@
           "id": "C3_T6_Q1",
           "question": "Jinja là gì?",
           "options": {
-            "A": "Một định dạng nén",
-            "B": "Một CSDL NoSQL",
-            "C": "Templating Engine bổ sung cấu trúc điều khiển vào câu lệnh SQL tĩnh",
-            "D": "Một công cụ CDC"
+            "A": "Một định dạng nén dữ liệu cho Data Lake",
+            "B": "Một cơ sở dữ liệu NoSQL dạng tài liệu",
+            "C": "Templating Engine thêm cấu trúc điều khiển vào SQL tĩnh",
+            "D": "Một công cụ CDC để bắt thay đổi dữ liệu"
           },
           "correctAnswer": "C",
           "explanation": "**Jinja** là Templating Engine thêm cấu trúc điều khiển (if/for) vào SQL tĩnh."
@@ -592,10 +592,10 @@
           "id": "C3_T6_Q2",
           "question": "Macros trong Jinja dùng để làm gì?",
           "options": {
-            "A": "Sao lưu bảng",
-            "B": "Đóng gói các đoạn SQL lặp lại thành hàm để gọi tự động",
-            "C": "Xóa bảng",
-            "D": "Mã hóa dữ liệu"
+            "A": "Tự động sao lưu bảng dữ liệu định kỳ",
+            "B": "Đóng gói các đoạn SQL lặp thành hàm để gọi tự động",
+            "C": "Xóa các bảng dữ liệu không còn dùng",
+            "D": "Mã hóa dữ liệu nhạy cảm trong bảng"
           },
           "correctAnswer": "B",
           "explanation": "**Macros** đóng gói đoạn SQL lặp lại thành hàm để gọi tự động."
@@ -604,10 +604,10 @@
           "id": "C3_T6_Q3",
           "question": "dbt theo triết lý nào?",
           "options": {
-            "A": "SQL-first: chuyển đổi logic nghiệp vụ bằng SQL thuần túy",
-            "B": "Chỉ Java",
-            "C": "Python-only",
-            "D": "Chỉ kéo thả"
+            "A": "SQL-first: chuyển đổi logic nghiệp vụ bằng SQL",
+            "B": "Chỉ cho phép viết bằng ngôn ngữ Java",
+            "C": "Chỉ cho phép viết bằng Python (Python-only)",
+            "D": "Chỉ cho phép xây dựng bằng thao tác kéo thả"
           },
           "correctAnswer": "A",
           "explanation": "**dbt** theo triết lý **SQL-first**: logic nghiệp vụ bằng SQL thuần."
@@ -616,10 +616,10 @@
           "id": "C3_T6_Q4",
           "question": "Những chức năng của Schema Tests trong dbt là gì?",
           "options": {
-            "A": "Tự sinh tài liệu web",
-            "B": "Tự động xác thực các điều kiện cơ bản như cột rỗng (not null) hay trùng lặp (unique)",
+            "A": "Tự động sinh tài liệu dạng trang web cho dự án",
+            "B": "Tự động xác thực điều kiện cơ bản như not null và unique",
             "C": "Viết SQL riêng kiểm tra quy tắc nghiệp vụ đặc thù",
-            "D": "Vẽ lineage"
+            "D": "Vẽ sơ đồ lineage giữa các bảng dữ liệu"
           },
           "correctAnswer": "B",
           "explanation": "**Schema Tests** là kiểm thử khai báo sẵn (not null, unique…). Singular Tests mới là SQL tự viết."
@@ -628,10 +628,10 @@
           "id": "C3_T6_Q5",
           "question": "Singular Tests trong dbt là gì?",
           "options": {
-            "A": "Viết câu lệnh SQL riêng biệt để kiểm tra các quy tắc nghiệp vụ đặc thù",
-            "B": "Kiểm tra cột rỗng/trùng lặp tự động",
-            "C": "Kiểm tra phần cứng",
-            "D": "Kiểm tra hiệu năng"
+            "A": "Câu lệnh SQL riêng biệt kiểm tra quy tắc nghiệp vụ đặc thù",
+            "B": "Tự động kiểm tra cột rỗng và cột trùng lặp",
+            "C": "Kiểm tra tình trạng phần cứng máy chủ",
+            "D": "Kiểm tra hiệu năng truy vấn của hệ thống"
           },
           "correctAnswer": "A",
           "explanation": "**Singular Tests** là câu SQL riêng biệt kiểm tra quy tắc nghiệp vụ đặc thù."
@@ -640,10 +640,10 @@
           "id": "C3_T6_Q6",
           "question": "Auto-Docs của dbt làm gì?",
           "options": {
-            "A": "Tự xóa bảng cũ",
-            "B": "Tự sinh dữ liệu mẫu",
-            "C": "Tự động trích xuất comment trong mã nguồn để tạo webpage tài liệu hoàn chỉnh",
-            "D": "Tự mã hóa dữ liệu"
+            "A": "Tự động xóa các bảng cũ không còn dùng",
+            "B": "Tự động sinh dữ liệu mẫu để kiểm thử",
+            "C": "Tự trích xuất comment trong mã nguồn để tạo trang tài liệu",
+            "D": "Tự động mã hóa các cột dữ liệu nhạy cảm"
           },
           "correctAnswer": "C",
           "explanation": "**Auto-Docs** tự trích comment trong mã nguồn để tạo trang tài liệu."
@@ -652,10 +652,10 @@
           "id": "C3_T6_Q7",
           "question": "Visual Lineage hỗ trợ điều gì?",
           "options": {
-            "A": "Vẽ bản đồ trực quan quan hệ đầu vào/đầu ra của từng bảng",
-            "B": "Tăng tốc ETL",
-            "C": "Sao lưu",
-            "D": "Nén dữ liệu"
+            "A": "Vẽ bản đồ quan hệ đầu vào/đầu ra giữa các bảng",
+            "B": "Tăng tốc độ xử lý của quy trình ETL",
+            "C": "Sao lưu dữ liệu của toàn bộ các bảng",
+            "D": "Nén dữ liệu để tiết kiệm chi phí lưu trữ"
           },
           "correctAnswer": "A",
           "explanation": "**Visual Lineage** vẽ bản đồ quan hệ đầu vào/đầu ra của từng bảng."
@@ -718,8 +718,8 @@
           "id": "C3_T7_Q3",
           "question": "Snowflake Evolution liên quan đến phát biểu nào sau đây?",
           "options": {
-            "A": "Kho dữ liệu tự động điều chỉnh cấu trúc bảng ngay trong quá trình chạy lệnh COPY",
-            "B": "Tự động scan và cập nhật thay đổi lên danh mục",
+            "A": "Kho dữ liệu tự điều chỉnh cấu trúc bảng ngay khi chạy lệnh COPY",
+            "B": "Tự động scan và cập nhật các thay đổi lên danh mục",
             "C": "Tự động phát hiện trường mới ở nguồn và đồng bộ vào đích",
             "D": "Quản lý tập trung các thay đổi cấu trúc Kafka Streaming"
           },
@@ -742,10 +742,10 @@
           "id": "C3_T7_Q5",
           "question": "Schema Drift là gì?",
           "options": {
-            "A": "Thiếu bộ nhớ",
-            "B": "Sự thay đổi cấu trúc đột ngột ở dữ liệu nguồn (thêm, xóa cột, đổi kiểu)",
-            "C": "Lỗi mạng",
-            "D": "Dữ liệu bị nén"
+            "A": "Hệ thống bị thiếu bộ nhớ khi xử lý dữ liệu",
+            "B": "Cấu trúc nguồn đột ngột thay đổi (thêm/xóa cột, đổi kiểu)",
+            "C": "Lỗi mạng làm gián đoạn quá trình nạp dữ liệu",
+            "D": "Dữ liệu bị nén quá mức khi lưu xuống đĩa"
           },
           "correctAnswer": "B",
           "explanation": "**Schema Drift** là sự thay đổi cấu trúc đột ngột ở nguồn (thêm/xóa cột, đổi kiểu)."
@@ -754,10 +754,10 @@
           "id": "C3_T7_Q6",
           "question": "Backward Compatibility là gì?",
           "options": {
-            "A": "Không cần tương thích",
+            "A": "Không yêu cầu bất kỳ sự tương thích nào",
             "B": "Code xử lý cũ vẫn đọc được cấu trúc dữ liệu mới",
-            "C": "Cấu trúc cũ chạy được với code mới",
-            "D": "Kết hợp cả hai chiều"
+            "C": "Cấu trúc dữ liệu cũ vẫn chạy được với code mới",
+            "D": "Đảm bảo tương thích đồng thời theo cả hai chiều"
           },
           "correctAnswer": "B",
           "explanation": "**Backward Compatibility**: code xử lý cũ vẫn đọc được cấu trúc dữ liệu **mới**."
@@ -766,10 +766,10 @@
           "id": "C3_T7_Q7",
           "question": "Forward Compatibility là gì?",
           "options": {
-            "A": "Cấu trúc dữ liệu cũ vẫn hoạt động trơn tru với các phiên bản code mới",
-            "B": "Không tương thích",
-            "C": "Chỉ dùng cho streaming",
-            "D": "Code cũ đọc được dữ liệu mới"
+            "A": "Cấu trúc dữ liệu cũ vẫn chạy tốt với các phiên bản code mới",
+            "B": "Hoàn toàn không có khả năng tương thích",
+            "C": "Chỉ áp dụng được cho dữ liệu streaming",
+            "D": "Code cũ vẫn đọc được cấu trúc dữ liệu mới"
           },
           "correctAnswer": "A",
           "explanation": "**Forward Compatibility**: cấu trúc dữ liệu **cũ** hoạt động trơn tru với code **mới**."
@@ -790,10 +790,10 @@
           "id": "C3_T7_Q9",
           "question": "Schema Registry dùng để làm gì?",
           "options": {
-            "A": "Tự động scan danh mục",
-            "B": "Đồng bộ trường mới ở nguồn",
-            "C": "Điều chỉnh bảng khi COPY",
-            "D": "Nền tảng quản lý tập trung và kiểm soát các thay đổi cấu trúc Kafka Streaming"
+            "A": "Tự động scan và cập nhật thay đổi lên danh mục",
+            "B": "Tự phát hiện trường mới ở nguồn và đồng bộ vào đích",
+            "C": "Điều chỉnh cấu trúc bảng khi chạy lệnh COPY",
+            "D": "Quản lý tập trung các thay đổi cấu trúc Kafka Streaming"
           },
           "correctAnswer": "D",
           "explanation": "**Schema Registry** quản lý tập trung và kiểm soát thay đổi cấu trúc cho Kafka Streaming."
@@ -802,10 +802,10 @@
           "id": "C3_T7_Q10",
           "question": "AWS Glue Crawler thuộc nhóm công cụ nào?",
           "options": {
-            "A": "Công cụ CDC",
-            "B": "Schema Registry",
-            "C": "Data Catalog Crawlers: tự động scan và cập nhật thay đổi lên danh mục",
-            "D": "Định dạng bảng hiện đại"
+            "A": "Công cụ CDC bắt thay đổi từ nhật ký CSDL",
+            "B": "Schema Registry quản lý phiên bản schema",
+            "C": "Data Catalog Crawlers: tự động quét và cập nhật danh mục",
+            "D": "Định dạng bảng mở hiện đại cho Lakehouse"
           },
           "correctAnswer": "C",
           "explanation": "**AWS Glue Crawler** thuộc nhóm Data Catalog Crawlers: tự scan và cập nhật thay đổi lên danh mục."
@@ -820,10 +820,10 @@
           "id": "C3_T8_Q1",
           "question": "Observability khác Monitoring ở điểm nào?",
           "options": {
-            "A": "Monitoring tự sửa lỗi",
-            "B": "Monitoring báo hệ thống lỗi; Observability giải thích vì sao lỗi và lỗi ở đâu",
-            "C": "Observability chỉ báo lỗi, không giải thích",
-            "D": "Hai khái niệm hoàn toàn giống nhau"
+            "A": "Monitoring có khả năng tự động sửa lỗi hệ thống",
+            "B": "Monitoring báo có lỗi; Observability chỉ ra lỗi ở đâu và vì sao",
+            "C": "Observability chỉ báo lỗi, không giải thích nguyên nhân",
+            "D": "Hai khái niệm này giống nhau hoàn toàn về bản chất"
           },
           "correctAnswer": "B",
           "explanation": "**Monitoring** báo hệ thống lỗi; **Observability** còn giải thích **vì sao** lỗi và lỗi **ở đâu**."
@@ -832,10 +832,10 @@
           "id": "C3_T8_Q2",
           "question": "Năm trụ cột của Data Observability gồm những gì?",
           "options": {
-            "A": "Accuracy, Speed, Cost, Size, Age",
-            "B": "CPU, RAM, Disk, Network, Cache",
+            "A": "Accuracy, Speed, Cost, Size, Age (5 chỉ số hiệu năng)",
+            "B": "CPU, RAM, Disk, Network, Cache (5 chỉ số phần cứng)",
             "C": "Freshness, Volume, Distribution, Schema, Lineage",
-            "D": "Bronze, Silver, Gold, Archive, Hot"
+            "D": "Bronze, Silver, Gold, Archive, Hot (5 tầng lưu trữ)"
           },
           "correctAnswer": "C",
           "explanation": "Năm trụ cột: **Freshness, Volume, Distribution, Schema, Lineage**."
@@ -844,10 +844,10 @@
           "id": "C3_T8_Q3",
           "question": "Trụ cột 'Freshness' kiểm tra điều gì?",
           "options": {
-            "A": "Truy vết nguồn lỗi",
-            "B": "Cấu trúc bảng thay đổi",
+            "A": "Truy vết nguồn gốc xuất phát của lỗi",
+            "B": "Cấu trúc bảng có bị thay đổi hay không",
             "C": "Dữ liệu có được cập nhật đúng hạn theo SLA không",
-            "D": "Số lượng bản ghi bất thường"
+            "D": "Số lượng bản ghi có bất thường hay không"
           },
           "correctAnswer": "C",
           "explanation": "**Freshness** kiểm tra dữ liệu có được cập nhật đúng hạn theo SLA không."
@@ -856,10 +856,10 @@
           "id": "C3_T8_Q4",
           "question": "Trụ cột 'Volume' kiểm tra điều gì?",
           "options": {
-            "A": "Nguồn gốc dữ liệu",
-            "B": "Số lượng bản ghi nạp vào có đột ngột tăng/giảm so với mức trung bình lịch sử",
-            "C": "Thời gian cập nhật",
-            "D": "Thay đổi cấu trúc"
+            "A": "Nguồn gốc xuất xứ của dữ liệu trong hệ thống",
+            "B": "Số bản ghi nạp vào có đột ngột tăng/giảm so với mức lịch sử",
+            "C": "Thời điểm dữ liệu được cập nhật gần nhất",
+            "D": "Cấu trúc bảng có bị thay đổi hay không"
           },
           "correctAnswer": "B",
           "explanation": "**Volume** kiểm tra số bản ghi nạp có tăng/giảm đột ngột so với mức trung bình lịch sử."
@@ -868,10 +868,10 @@
           "id": "C3_T8_Q5",
           "question": "Data Downtime là gì?",
           "options": {
-            "A": "Thời gian sao lưu",
-            "B": "Thời gian bộ dữ liệu rơi vào trạng thái không khả dụng hoặc bị sai",
-            "C": "Thời gian tải trang",
-            "D": "Thời gian bảo trì phần cứng"
+            "A": "Thời gian dành cho việc sao lưu dữ liệu",
+            "B": "Thời gian bộ dữ liệu không khả dụng hoặc bị sai",
+            "C": "Thời gian chờ tải một trang báo cáo",
+            "D": "Thời gian bảo trì phần cứng máy chủ định kỳ"
           },
           "correctAnswer": "B",
           "explanation": "**Data Downtime** là thời gian dữ liệu không khả dụng hoặc sai."
@@ -880,10 +880,10 @@
           "id": "C3_T8_Q6",
           "question": "MTTR trong Observability có ý nghĩa gì?",
           "options": {
-            "A": "Thời gian trung bình để khôi phục sự cố (được rút ngắn từ vài ngày còn vài phút)",
-            "B": "Tổng chi phí vận hành",
-            "C": "Thời gian nạp dữ liệu",
-            "D": "Số lượng cảnh báo"
+            "A": "Thời gian trung bình để khôi phục một sự cố",
+            "B": "Tổng chi phí vận hành của hệ thống dữ liệu",
+            "C": "Thời gian trung bình để nạp dữ liệu vào kho",
+            "D": "Số lượng cảnh báo phát sinh trong mỗi ngày"
           },
           "correctAnswer": "A",
           "explanation": "**MTTR** là thời gian trung bình để khôi phục sự cố; Observability giúp rút ngắn từ vài ngày còn vài phút."

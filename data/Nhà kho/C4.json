@@ -23,9 +23,9 @@
           "question": "Completeness (tính đầy đủ) đo lường điều gì?",
           "options": {
             "A": "Tỷ lệ dữ liệu không bị khuyết (Null/Missing)",
-            "B": "Sự đồng bộ định dạng",
-            "C": "Mức độ dữ liệu đúng thực thể",
-            "D": "Độ trễ"
+            "B": "Sự đồng bộ định dạng giữa các hệ thống",
+            "C": "Mức độ dữ liệu phản ánh đúng thực thể",
+            "D": "Độ trễ của dữ liệu khi được cập nhật"
           },
           "correctAnswer": "A",
           "explanation": "**Completeness**: tỷ lệ dữ liệu không bị khuyết (Null/Missing)."
@@ -34,10 +34,10 @@
           "id": "C4_T1_Q3",
           "question": "Consistency (tính nhất quán) là gì?",
           "options": {
-            "A": "Dữ liệu chính xác tuyệt đối",
-            "B": "Sự đồng bộ về logic và định dạng giữa các nguồn; tránh xung đột đơn vị",
-            "C": "Dữ liệu không có Null",
-            "D": "Dữ liệu cập nhật kịp thời"
+            "A": "Dữ liệu chính xác tuyệt đối ở mọi thời điểm",
+            "B": "Đồng bộ logic và định dạng giữa các nguồn, tránh xung đột",
+            "C": "Dữ liệu hoàn toàn không có giá trị Null",
+            "D": "Dữ liệu được cập nhật kịp thời theo SLA"
           },
           "correctAnswer": "B",
           "explanation": "**Consistency**: đồng bộ về logic và định dạng giữa các nguồn, tránh xung đột (ví dụ đơn vị tiền tệ)."
@@ -46,10 +46,10 @@
           "id": "C4_T1_Q4",
           "question": "Timeliness (tính kịp thời) liên quan đến điều gì?",
           "options": {
-            "A": "Tỷ lệ Null",
-            "B": "Định dạng ngày",
-            "C": "Độ trễ của dữ liệu; dữ liệu trễ làm mất tính thời sự",
-            "D": "Kiểu dữ liệu"
+            "A": "Tỷ lệ giá trị Null trong từng cột dữ liệu",
+            "B": "Định dạng ngày tháng được dùng thống nhất",
+            "C": "Độ trễ của dữ liệu, dữ liệu trễ sẽ mất tính thời sự",
+            "D": "Kiểu dữ liệu của từng cột trong bảng"
           },
           "correctAnswer": "C",
           "explanation": "**Timeliness**: độ trễ của dữ liệu; dữ liệu trễ làm mất tính thời sự."
@@ -58,10 +58,10 @@
           "id": "C4_T1_Q5",
           "question": "Cross-field Validation là gì?",
           "options": {
-            "A": "Áp dụng các quy tắc logic liên thuộc tính",
-            "B": "Xóa cột trùng",
-            "C": "Kiểm tra từng cột riêng lẻ",
-            "D": "Mã hóa cột"
+            "A": "Áp dụng quy tắc logic giữa nhiều thuộc tính",
+            "B": "Xóa các cột bị trùng lặp khỏi bảng",
+            "C": "Kiểm tra giá trị của từng cột riêng lẻ",
+            "D": "Mã hóa các cột chứa dữ liệu nhạy cảm"
           },
           "correctAnswer": "A",
           "explanation": "**Cross-field Validation**: áp dụng quy tắc logic liên quan nhiều thuộc tính (ví dụ ngày bắt đầu < ngày kết thúc)."
@@ -88,10 +88,10 @@
           "id": "C4_T2_Q1",
           "question": "Noise trong dữ liệu là gì?",
           "options": {
-            "A": "Các sai số ngẫu nhiên làm ẩn tín hiệu thực của dữ liệu",
-            "B": "Dữ liệu bị mã hóa",
-            "C": "Dữ liệu thiếu",
-            "D": "Dữ liệu trùng lặp"
+            "A": "Sai số ngẫu nhiên làm che mờ tín hiệu thực của dữ liệu",
+            "B": "Dữ liệu bị mã hóa nên không đọc được nội dung",
+            "C": "Dữ liệu bị thiếu giá trị ở nhiều cột",
+            "D": "Các bản ghi bị lặp lại nhiều lần trong bảng"
           },
           "correctAnswer": "A",
           "explanation": "**Noise** là sai số ngẫu nhiên làm lu mờ tín hiệu thực của dữ liệu."
@@ -100,10 +100,10 @@
           "id": "C4_T2_Q2",
           "question": "Kỹ thuật Binning để làm mượt dữ liệu thực hiện như thế nào?",
           "options": {
-            "A": "Xóa toàn bộ dữ liệu nhiễu",
-            "B": "Sao chép dữ liệu",
-            "C": "Chia dữ liệu thành các khoảng và thay giá trị bằng trung bình của bin",
-            "D": "Mã hóa dữ liệu"
+            "A": "Xóa toàn bộ các bản ghi chứa giá trị nhiễu khỏi bảng",
+            "B": "Sao chép toàn bộ dữ liệu sang bảng dự phòng khác",
+            "C": "Chia dữ liệu thành bin rồi thay giá trị bằng trung bình bin",
+            "D": "Mã hóa dữ liệu trước khi đưa vào xử lý tiếp"
           },
           "correctAnswer": "C",
           "explanation": "**Binning**: chia dữ liệu thành các khoảng (bin) và thay giá trị bằng **trung bình của bin** để làm mượt."
@@ -137,9 +137,9 @@
           "question": "Cho Q1 = 20, Q3 = 60. Giá trị nào dưới đây là Outlier theo quy tắc IQR (1.5×IQR)?",
           "options": {
             "A": "130 (vì giới hạn trên = 60 + 1.5×40 = 120)",
-            "B": "-30 (giới hạn dưới = -40)",
-            "C": "100",
-            "D": "110"
+            "B": "-30 (nằm trên giới hạn dưới là -40)",
+            "C": "100 (nằm trong giới hạn từ -40 đến 120)",
+            "D": "110 (nằm trong giới hạn từ -40 đến 120)"
           },
           "correctAnswer": "A",
           "explanation": "IQR = 60 − 20 = 40 → giới hạn trên = 60 + 1,5×40 = 120, giới hạn dưới = 20 − 60 = −40. Giá trị **130 > 120** nên là outlier."
@@ -166,9 +166,9 @@
           "id": "C4_T3_Q1",
           "question": "Entity Resolution là gì?",
           "options": {
-            "A": "Xóa thực thể",
-            "B": "Nén thực thể",
-            "C": "Mã hóa thực thể",
+            "A": "Xóa các thực thể bị trùng lặp ra khỏi bảng",
+            "B": "Nén các thực thể để giảm dung lượng lưu trữ",
+            "C": "Mã hóa thực thể bằng khóa bí mật của hệ thống",
             "D": "Xác định các bản ghi từ nhiều nguồn cùng mô tả một thực thể"
           },
           "correctAnswer": "D",
@@ -178,10 +178,10 @@
           "id": "C4_T3_Q2",
           "question": "Độ đo Jaccard dùng để làm gì?",
           "options": {
-            "A": "So sánh mức độ trùng lặp giữa hai tập hợp thuộc tính của thực thể",
-            "B": "Đo khoảng cách địa lý",
-            "C": "Đo dung lượng đĩa",
-            "D": "Đo tốc độ mạng"
+            "A": "So sánh mức độ trùng lặp giữa hai tập thuộc tính",
+            "B": "Đo khoảng cách địa lý giữa hai địa điểm",
+            "C": "Đo dung lượng đĩa còn trống của máy chủ",
+            "D": "Đo tốc độ đường truyền mạng giữa các nút"
           },
           "correctAnswer": "A",
           "explanation": "**Jaccard** so sánh mức trùng lặp giữa hai tập hợp thuộc tính của thực thể."
@@ -226,10 +226,10 @@
           "id": "C4_T3_Q6",
           "question": "Deduplication nhằm mục đích gì?",
           "options": {
-            "A": "Loại bỏ bản ghi trùng lặp sau tích hợp để tạo Golden Record duy nhất",
-            "B": "Mã hóa bản ghi",
-            "C": "Chia nhỏ bảng",
-            "D": "Thêm bản ghi trùng"
+            "A": "Loại bỏ bản ghi trùng lặp để tạo Golden Record duy nhất",
+            "B": "Mã hóa bản ghi để bảo vệ thông tin cá nhân",
+            "C": "Chia nhỏ một bảng lớn thành nhiều bảng con",
+            "D": "Thêm các bản ghi trùng lặp vào bảng dữ liệu"
           },
           "correctAnswer": "A",
           "explanation": "**Deduplication** loại bản ghi trùng sau tích hợp để tạo **Golden Record** duy nhất."
@@ -238,10 +238,10 @@
           "id": "C4_T3_Q7",
           "question": "Hai quy tắc ưu tiên khi hai nguồn cho giá trị khác nhau là gì?",
           "options": {
-            "A": "Source Authority (trọng số tin cậy) hoặc Latest timestamp",
-            "B": "Luôn xóa cả hai",
-            "C": "Chọn ngẫu nhiên",
-            "D": "Giá trị lớn nhất hoặc nhỏ nhất"
+            "A": "Source Authority (độ tin cậy nguồn) hoặc Latest timestamp",
+            "B": "Luôn xóa bỏ cả hai giá trị đang xung đột",
+            "C": "Chọn ngẫu nhiên một trong hai giá trị",
+            "D": "Giá trị lớn nhất hoặc giá trị nhỏ nhất"
           },
           "correctAnswer": "A",
           "explanation": "Khi hai nguồn mâu thuẫn: ưu tiên theo **Source Authority** (độ tin cậy) hoặc lấy **Latest timestamp**."
@@ -268,10 +268,10 @@
           "id": "C4_T4_Q1",
           "question": "Simple Moving Average (SMA) với cửa sổ k là gì?",
           "options": {
-            "A": "Giá trị đầu tiên của chuỗi",
-            "B": "Tổng của toàn bộ chuỗi",
+            "A": "Giá trị đầu tiên của toàn bộ chuỗi thời gian",
+            "B": "Tổng của toàn bộ các giá trị trong chuỗi",
             "C": "Trung bình cộng của k giá trị gần nhất trong chuỗi",
-            "D": "Giá trị lớn nhất trong k phần tử"
+            "D": "Giá trị lớn nhất trong k phần tử gần nhất"
           },
           "correctAnswer": "C",
           "explanation": "**SMA** là trung bình cộng của **k giá trị gần nhất** trong chuỗi (cửa sổ trượt)."
@@ -316,10 +316,10 @@
           "id": "C4_T4_Q5",
           "question": "Đường MA-50 và MA-200 trong ví dụ phân tích kỹ thuật dùng để làm gì?",
           "options": {
-            "A": "Nén dữ liệu",
-            "B": "Mã hóa dữ liệu",
+            "A": "Nén dữ liệu giá để giảm dung lượng lưu trữ",
+            "B": "Mã hóa dữ liệu giá để bảo mật thông tin",
             "C": "Làm mượt và xác định điểm Golden Cross",
-            "D": "Phát hiện dữ liệu trùng"
+            "D": "Phát hiện dữ liệu giá bị trùng lặp"
           },
           "correctAnswer": "C",
           "explanation": "**MA-50 và MA-200** làm mượt giá và xác định điểm **Golden Cross** (MA ngắn cắt lên MA dài)."
@@ -328,10 +328,10 @@
           "id": "C4_T4_Q6",
           "question": "Data Aggregation là gì?",
           "options": {
-            "A": "Mã hóa bản ghi",
-            "B": "Xóa bản ghi trùng",
-            "C": "Kết hợp các bản ghi chi tiết thành bản tóm tắt cấp cao",
-            "D": "Chia nhỏ bản tóm tắt thành chi tiết"
+            "A": "Mã hóa các bản ghi để bảo vệ thông tin",
+            "B": "Xóa các bản ghi trùng lặp khỏi bảng",
+            "C": "Kết hợp bản ghi chi tiết thành bản tóm tắt cấp cao",
+            "D": "Chia nhỏ bản tóm tắt thành các bản ghi chi tiết"
           },
           "correctAnswer": "C",
           "explanation": "**Data Aggregation** kết hợp bản ghi chi tiết thành bản tóm tắt cấp cao (ví dụ doanh thu ngày → tháng)."
@@ -340,10 +340,10 @@
           "id": "C4_T4_Q7",
           "question": "Dùng SMA (k = 3) theo dõi giá đóng cửa cổ phiếu X trong 6 ngày: 75, 79, 38, 80, 82, 85 (USD). SMA ngày 4 là bao nhiêu?",
           "options": {
-            "A": "88 USD",
-            "B": "67 USD",
+            "A": "82 USD (≈ 82.33 = (80 + 82 + 85)/3)",
+            "B": "64 USD (= (75 + 79 + 38)/3)",
             "C": "66 USD (≈ 65.67 = (79 + 38 + 80)/3)",
-            "D": "78 USD"
+            "D": "59 USD (= (38 + 80)/2, cửa sổ k = 2)"
           },
           "correctAnswer": "C",
           "images": [
@@ -361,10 +361,10 @@
           "id": "C4_T5_Q1",
           "question": "Phép biến đổi PCA là gì?",
           "options": {
-            "A": "Phép mã hóa dữ liệu",
-            "B": "Phép biến đổi tuyến tính giúp giữ lại tối đa phương sai của dữ liệu để giảm số chiều",
-            "C": "Phép chia dữ liệu thành bin",
-            "D": "Phép chuẩn hóa về [0,1]"
+            "A": "Phép mã hóa dữ liệu để bảo vệ thông tin nhạy cảm",
+            "B": "Biến đổi tuyến tính giữ tối đa phương sai, giảm số chiều",
+            "C": "Phép chia dữ liệu liên tục thành các bin rời rạc",
+            "D": "Phép chuẩn hóa dữ liệu về đoạn [0,1] theo min-max"
           },
           "correctAnswer": "B",
           "explanation": "**PCA** là phép biến đổi tuyến tính giữ lại tối đa **phương sai** để giảm số chiều."
@@ -373,10 +373,10 @@
           "id": "C4_T5_Q2",
           "question": "Thành phần chính (Principal Components) trong PCA là gì?",
           "options": {
-            "A": "Các vector riêng ứng với các trị riêng lớn nhất của Covariance Matrix",
-            "B": "Các cột có nhiều Null nhất",
-            "C": "Các hàng trùng lặp",
-            "D": "Các giá trị trung bình"
+            "A": "Các vector riêng ứng với trị riêng lớn nhất của ma trận Covariance",
+            "B": "Các cột chứa nhiều giá trị Null nhất trong bảng",
+            "C": "Các hàng bị trùng lặp trong tập dữ liệu",
+            "D": "Các giá trị trung bình của từng thuộc tính"
           },
           "correctAnswer": "A",
           "explanation": "**Principal Components** là các vector riêng ứng với các trị riêng lớn nhất của **Covariance Matrix**."
@@ -410,9 +410,9 @@
           "question": "Stratified Sampling dùng để làm gì?",
           "options": {
             "A": "Chọn tập con đại diện để khai phá trên Big Data",
-            "B": "Xóa dữ liệu ngoại lai",
-            "C": "Chuẩn hóa dữ liệu",
-            "D": "Nén file"
+            "B": "Xóa các giá trị ngoại lai khỏi tập dữ liệu",
+            "C": "Chuẩn hóa dữ liệu về cùng một thang đo",
+            "D": "Nén file dữ liệu để tiết kiệm dung lượng"
           },
           "correctAnswer": "A",
           "explanation": "**Stratified Sampling**: chọn tập con đại diện (theo từng tầng) để khai phá trên Big Data."
@@ -421,10 +421,10 @@
           "id": "C4_T5_Q6",
           "question": "Histograms trong Data Reduction đại diện cho dữ liệu bằng cách nào?",
           "options": {
-            "A": "Lưu hash của dữ liệu",
-            "B": "Dùng phân phối tần suất thay vì lưu từng giá trị chi tiết",
-            "C": "Xóa dữ liệu",
-            "D": "Lưu từng giá trị gốc"
+            "A": "Lưu giá trị băm (hash) của toàn bộ dữ liệu",
+            "B": "Dùng phân phối tần suất thay cho từng giá trị chi tiết",
+            "C": "Xóa toàn bộ dữ liệu chi tiết ban đầu",
+            "D": "Lưu lại đầy đủ từng giá trị gốc của dữ liệu"
           },
           "correctAnswer": "B",
           "explanation": "**Histograms** dùng phân phối tần suất thay vì lưu từng giá trị chi tiết."
@@ -439,10 +439,10 @@
           "id": "C4_T6_Q1",
           "question": "Phương pháp Discretization (rời rạc hóa) là gì?",
           "options": {
-            "A": "Xóa thuộc tính liên tục",
-            "B": "Mã hóa thuộc tính",
-            "C": "Chuyển thuộc tính rời rạc thành liên tục",
-            "D": "Chia thuộc tính liên tục thành các khoảng giá trị hoặc nhãn định danh"
+            "A": "Xóa các thuộc tính liên tục khỏi dữ liệu",
+            "B": "Mã hóa thuộc tính liên tục bằng khóa bí mật",
+            "C": "Chuyển thuộc tính rời rạc thành thuộc tính liên tục",
+            "D": "Chia thuộc tính liên tục thành các khoảng hoặc nhãn định danh"
           },
           "correctAnswer": "D",
           "explanation": "**Discretization** chia thuộc tính liên tục thành các khoảng giá trị hoặc nhãn."
@@ -487,10 +487,10 @@
           "id": "C4_T6_Q5",
           "question": "Phương pháp Equal-frequency Binning có đặc điểm gì?",
           "options": {
-            "A": "Chỉ dùng cho dữ liệu phân loại",
-            "B": "Bin có kích thước ngẫu nhiên",
-            "C": "Mỗi bin có độ rộng bằng nhau",
-            "D": "Mỗi bin chứa số lượng bản ghi bằng nhau; tốt cho dữ liệu lệch (skewed)"
+            "A": "Chỉ áp dụng được cho dữ liệu dạng phân loại",
+            "B": "Các bin có kích thước được chọn ngẫu nhiên",
+            "C": "Mỗi bin có độ rộng khoảng giá trị bằng nhau",
+            "D": "Mỗi bin chứa số bản ghi bằng nhau; tốt cho dữ liệu lệch"
           },
           "correctAnswer": "D",
           "explanation": "**Equal-frequency**: mỗi bin chứa số bản ghi bằng nhau; tốt cho dữ liệu lệch (skewed)."
@@ -499,10 +499,10 @@
           "id": "C4_T6_Q6",
           "question": "Concept Hierarchy là gì?",
           "options": {
-            "A": "Mã hóa thuộc tính",
-            "B": "Xóa thuộc tính cụ thể",
-            "C": "Tổ chức thuộc tính theo tầng bậc từ cụ thể đến tổng quát",
-            "D": "Sắp xếp thuộc tính theo bảng chữ cái"
+            "A": "Mã hóa các thuộc tính bằng khóa bảo mật",
+            "B": "Xóa các thuộc tính cụ thể khỏi dữ liệu",
+            "C": "Tổ chức thuộc tính thành tầng bậc từ cụ thể đến chung",
+            "D": "Sắp xếp các thuộc tính theo bảng chữ cái"
           },
           "correctAnswer": "C",
           "explanation": "**Concept Hierarchy** tổ chức thuộc tính theo tầng bậc từ cụ thể đến tổng quát (chi nhánh → khu vực)."
@@ -511,10 +511,10 @@
           "id": "C4_T6_Q7",
           "question": "Multi-level Mining cho phép làm gì?",
           "options": {
-            "A": "Khai phá các luật kết hợp ở nhiều mức độ trừu tượng khác nhau",
-            "B": "Xóa luật yếu",
-            "C": "Chỉ khai phá một luật",
-            "D": "Chỉ khai phá ở mức chi tiết nhất"
+            "A": "Khai phá luật kết hợp ở nhiều mức độ trừu tượng khác nhau",
+            "B": "Xóa các luật yếu khỏi tập luật đã khai phá",
+            "C": "Chỉ khai phá được duy nhất một luật mỗi lần",
+            "D": "Chỉ khai phá ở mức chi tiết nhất của dữ liệu"
           },
           "correctAnswer": "A",
           "explanation": "**Multi-level Mining** khai phá luật kết hợp ở nhiều mức trừu tượng khác nhau."
@@ -577,10 +577,10 @@
           "id": "C4_T7_Q5",
           "question": "Hiểu về Z-Score Normalization: dữ liệu sau chuẩn hóa có đặc điểm nào?",
           "options": {
-            "A": "Giá trị nằm trong [0,1]",
-            "B": "Giá trị tối đa bằng 1",
+            "A": "Mọi giá trị đều nằm trong khoảng [0, 1]",
+            "B": "Giá trị tối đa của thuộc tính bằng 1",
             "C": "Trung bình μ = 0 và độ lệch chuẩn σ = 1",
-            "D": "Không đổi"
+            "D": "Dữ liệu không thay đổi so với ban đầu"
           },
           "correctAnswer": "C",
           "explanation": "Z-Score cho dữ liệu có **trung bình μ = 0 và độ lệch chuẩn σ = 1**."
@@ -601,10 +601,10 @@
           "id": "C4_T7_Q7",
           "question": "Ưu điểm của Z-Score Normalization là gì?",
           "options": {
-            "A": "Luôn ra kết quả trong [0,1]",
-            "B": "Hiệu quả khi có nhiều ngoại lai hoặc không biết trước Min/Max",
-            "C": "Chỉ dùng cho dữ liệu phân loại",
-            "D": "Không cần tính trung bình"
+            "A": "Luôn cho kết quả nằm trong đoạn [0, 1] cố định",
+            "B": "Hiệu quả khi có nhiều ngoại lai hoặc chưa biết Min/Max",
+            "C": "Chỉ áp dụng được cho dữ liệu dạng phân loại",
+            "D": "Không cần tính giá trị trung bình và độ lệch chuẩn"
           },
           "correctAnswer": "B",
           "explanation": "Z-Score hiệu quả khi **nhiều ngoại lai** hoặc **không biết trước Min/Max**."
@@ -613,10 +613,10 @@
           "id": "C4_T7_Q8",
           "question": "Hiểu về Decimal Scaling: phép này làm gì?",
           "options": {
-            "A": "Trừ trung bình rồi chia độ lệch chuẩn",
-            "B": "Ánh xạ tuyến tính min-max",
-            "C": "Làm tròn về số nguyên",
-            "D": "Di chuyển dấu thập phân dựa trên giá trị tuyệt đối lớn nhất của thuộc tính (v' = v / 10^j)"
+            "A": "Trừ đi trung bình rồi chia cho độ lệch chuẩn",
+            "B": "Ánh xạ tuyến tính dữ liệu theo min và max",
+            "C": "Làm tròn mọi giá trị về số nguyên gần nhất",
+            "D": "Dời dấu thập phân theo |giá trị| lớn nhất (v' = v / 10^j)"
           },
           "correctAnswer": "D",
           "explanation": "**Decimal Scaling** dời dấu thập phân dựa trên **giá trị tuyệt đối lớn nhất**: v′ = v/10^j."
@@ -637,10 +637,10 @@
           "id": "C4_T7_Q10",
           "question": "Trong ví dụ dự báo tỷ giá, vì sao dùng Z-Score cho Lãi suất và Dự trữ ngoại hối?",
           "options": {
-            "A": "Để xóa biến lãi suất",
-            "B": "Để tạo dữ liệu Null",
-            "C": "Để tăng dung lượng dữ liệu",
-            "D": "Đưa cả hai về cùng thang đo thống kê, tránh mô hình bị lệch"
+            "A": "Để loại bỏ hoàn toàn biến lãi suất khỏi mô hình",
+            "B": "Để tạo thêm các giá trị Null cho tập dữ liệu",
+            "C": "Để tăng dung lượng của tập dữ liệu huấn luyện",
+            "D": "Đưa hai biến về cùng thang đo, tránh mô hình bị lệch"
           },
           "correctAnswer": "D",
           "explanation": "Dự trữ ngoại hối lớn hơn lãi suất hàng triệu lần; Z-Score đưa cả hai về **cùng thang đo thống kê** để mô hình không bị lệch."
@@ -655,10 +655,10 @@
           "id": "C4_T8_Q1",
           "question": "Feature Construction là gì?",
           "options": {
-            "A": "Tạo thuộc tính mới từ thuộc tính cũ để làm nổi bật tín hiệu nghiệp vụ (ví dụ BMI, LTV)",
-            "B": "Chuẩn hóa thuộc tính",
-            "C": "Xóa thuộc tính không cần",
-            "D": "Chọn thuộc tính theo Information Gain"
+            "A": "Tạo thuộc tính mới từ thuộc tính cũ (ví dụ BMI, LTV)",
+            "B": "Chuẩn hóa các thuộc tính về cùng thang đo",
+            "C": "Xóa các thuộc tính không cần thiết khỏi dữ liệu",
+            "D": "Chọn các thuộc tính theo Information Gain cao nhất"
           },
           "correctAnswer": "A",
           "explanation": "**Feature Construction** tạo thuộc tính mới từ thuộc tính cũ (ví dụ BMI, LTV)."
@@ -679,10 +679,10 @@
           "id": "C4_T8_Q3",
           "question": "Cho biết ý nghĩa của công thức Info(D) = −Σ pᵢ·log₂(pᵢ).",
           "options": {
-            "A": "Entropy của tập D: đo mức độ hỗn loạn (không thuần nhất) của dữ liệu theo m lớp, pᵢ là xác suất lớp i",
-            "B": "Độ lệch chuẩn của D",
-            "C": "Độ tin cậy của luật kết hợp",
-            "D": "Tổng số bản ghi của D"
+            "A": "Entropy của D: mức hỗn loạn theo m lớp, pᵢ là xác suất lớp i",
+            "B": "Độ lệch chuẩn của các giá trị thuộc tính trong tập D",
+            "C": "Độ tin cậy (Confidence) của luật kết hợp sinh từ tập D",
+            "D": "Tổng số bản ghi hiện có và số thuộc tính của tập D"
           },
           "correctAnswer": "A",
           "images": [
@@ -694,10 +694,10 @@
           "id": "C4_T8_Q4",
           "question": "Cho biết ý nghĩa của công thức Info_A(D) = Σ (|Dⱼ|/|D|) × Info(Dⱼ).",
           "options": {
-            "A": "Entropy của toàn bộ D trước khi chia",
-            "B": "Độ hỗ trợ của luật",
-            "C": "Thông tin kỳ vọng (entropy có trọng số) cần để phân loại D sau khi chia theo thuộc tính A thành v phân vùng",
-            "D": "Khoảng cách giữa hai cụm"
+            "A": "Entropy của toàn bộ tập D trước khi chia theo thuộc tính A",
+            "B": "Độ hỗ trợ (Support) của luật kết hợp sinh từ thuộc tính A",
+            "C": "Entropy kỳ vọng để phân loại D sau khi chia theo A thành v phân vùng",
+            "D": "Khoảng cách giữa hai cụm trong thuật toán gom cụm phân cấp"
           },
           "correctAnswer": "C",
           "images": [
@@ -709,10 +709,10 @@
           "id": "C4_T8_Q5",
           "question": "Trong công thức Info_A(D), |Dⱼ|/|D| thể hiện điều gì?",
           "options": {
-            "A": "Độ lệch chuẩn",
-            "B": "Tỷ lệ bản ghi nằm trong phân vùng thứ j (trọng số của phân vùng j)",
-            "C": "Số thuộc tính",
-            "D": "Xác suất lớp dương"
+            "A": "Độ lệch chuẩn của dữ liệu trong phân vùng",
+            "B": "Tỷ lệ bản ghi thuộc phân vùng j (trọng số của phân vùng j)",
+            "C": "Số lượng thuộc tính của tập dữ liệu D",
+            "D": "Xác suất của lớp dương trong phân vùng j"
           },
           "correctAnswer": "B",
           "images": [
@@ -772,10 +772,10 @@
           "id": "C4_T8_Q10",
           "question": "Embeddings trong trích xuất đặc trưng bằng AI là gì?",
           "options": {
-            "A": "Mã hóa SHA-256",
-            "B": "Xóa thực thể rời rạc",
-            "C": "Chuyển vector thành văn bản",
-            "D": "Chuyển các thực thể rời rạc thành vector trong không gian đa chiều để tính độ tương đồng"
+            "A": "Mã hóa thực thể bằng thuật toán SHA-256",
+            "B": "Xóa các thực thể rời rạc khỏi tập dữ liệu",
+            "C": "Chuyển vector ngược lại thành văn bản gốc",
+            "D": "Biến thực thể rời rạc thành vector để so độ tương đồng"
           },
           "correctAnswer": "D",
           "explanation": "**Embeddings** chuyển các thực thể rời rạc thành vector trong không gian đa chiều để tính độ tương đồng."

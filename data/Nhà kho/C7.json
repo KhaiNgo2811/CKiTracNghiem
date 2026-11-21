@@ -22,10 +22,10 @@
           "id": "C7_T1_Q2",
           "question": "Hệ thống AI thuộc nhóm 'Unacceptable Risk' bị xử lý như thế nào?",
           "options": {
-            "A": "Kiểm soát nghiêm ngặt",
+            "A": "Kiểm soát nghiêm ngặt trước khi cho vận hành",
             "B": "Cấm hoàn toàn (ví dụ chấm điểm công dân xã hội)",
-            "C": "Tự do vận hành",
-            "D": "Chỉ cần dán nhãn"
+            "C": "Tự do vận hành, không yêu cầu gì thêm",
+            "D": "Chỉ cần dán nhãn để người dùng biết"
           },
           "correctAnswer": "B",
           "explanation": "**Unacceptable Risk** bị **cấm hoàn toàn** (ví dụ chấm điểm công dân xã hội)."
@@ -47,9 +47,9 @@
           "question": "Chatbots và hệ thống tạo ảnh Deepfake thuộc mức rủi ro nào, yêu cầu gì?",
           "options": {
             "A": "Transparent/Limited Risk — yêu cầu dán nhãn rõ ràng",
-            "B": "Minimal Risk — không cần gì",
-            "C": "Unacceptable Risk",
-            "D": "High Risk — bị cấm"
+            "B": "Minimal Risk — không có yêu cầu bắt buộc nào",
+            "C": "Unacceptable Risk — bị cấm hoàn toàn",
+            "D": "High Risk — phải kiểm soát nghiêm ngặt"
           },
           "correctAnswer": "A",
           "explanation": "Chatbots và Deepfake thuộc **Transparent/Limited Risk**: yêu cầu **dán nhãn rõ ràng**."
@@ -70,10 +70,10 @@
           "id": "C7_T1_Q6",
           "question": "Ba trụ cột bắt buộc trong quản trị dữ liệu theo AI Act là gì?",
           "options": {
-            "A": "Bronze, Silver, Gold",
+            "A": "Bronze, Silver, Gold (kiến trúc Medallion)",
             "B": "Transparency, Human Oversight, Data Quality",
-            "C": "Backup, Restore, Archive",
-            "D": "Speed, Cost, Scale"
+            "C": "Backup, Restore, Archive (sao lưu dữ liệu)",
+            "D": "Speed, Cost, Scale (tốc độ, chi phí, quy mô)"
           },
           "correctAnswer": "B",
           "explanation": "Ba trụ cột: **Transparency, Human Oversight, Data Quality**."
@@ -82,10 +82,10 @@
           "id": "C7_T1_Q7",
           "question": "Nghĩa vụ 'Traceability' đối với AI rủi ro cao là gì?",
           "options": {
-            "A": "Chỉ lưu mã nguồn",
-            "B": "Xóa log định kỳ",
-            "C": "Không cần ghi nhận",
-            "D": "Hệ thống tự động ghi nhật ký để theo dõi, kiểm toán toàn bộ vòng đời vận hành"
+            "A": "Chỉ cần lưu lại mã nguồn của hệ thống AI",
+            "B": "Xóa log định kỳ để tiết kiệm dung lượng",
+            "C": "Không cần ghi nhận bất kỳ hoạt động nào",
+            "D": "Tự động ghi nhật ký để theo dõi và kiểm toán toàn vòng đời"
           },
           "correctAnswer": "D",
           "explanation": "**Traceability**: hệ thống tự động ghi nhật ký để theo dõi và kiểm toán toàn bộ vòng đời vận hành."
@@ -112,10 +112,10 @@
           "id": "C7_T2_Q1",
           "question": "Automated Data Lineage là gì?",
           "options": {
-            "A": "Khả năng quan sát, ghi nhận flow của data từ nguồn gốc qua các bước biến đổi đến mô hình AI cuối cùng",
-            "B": "Công cụ nén dữ liệu",
-            "C": "Kỹ thuật mã hóa",
-            "D": "Thuật toán phân cụm"
+            "A": "Ghi nhận dòng chảy dữ liệu từ nguồn, qua biến đổi, đến mô hình AI",
+            "B": "Công cụ nén dữ liệu để giảm dung lượng đĩa",
+            "C": "Kỹ thuật mã hóa dữ liệu khi lưu trữ và truyền",
+            "D": "Thuật toán phân cụm dữ liệu khách hàng theo nhóm"
           },
           "correctAnswer": "A",
           "explanation": "**Automated Data Lineage** quan sát và ghi nhận dòng chảy dữ liệu từ nguồn, qua các bước biến đổi, đến mô hình AI cuối cùng."
@@ -124,10 +124,10 @@
           "id": "C7_T2_Q2",
           "question": "Impact Analysis trong Lineage cảnh báo điều gì?",
           "options": {
-            "A": "Khi hết dung lượng",
-            "B": "Khi mạng chậm",
+            "A": "Khi hệ thống lưu trữ đã hết dung lượng đĩa",
+            "B": "Khi đường truyền mạng giữa các vùng bị chậm",
             "C": "Khi người dùng đăng nhập",
-            "D": "Khi bảng Bronze đổi schema, các model AI ở tầng Gold sẽ bị ảnh hưởng"
+            "D": "Bảng Bronze đổi schema thì các model AI ở tầng Gold bị ảnh hưởng"
           },
           "correctAnswer": "D",
           "explanation": "**Impact Analysis** cảnh báo: khi bảng Bronze đổi schema, các model AI ở tầng Gold sẽ bị ảnh hưởng."
@@ -136,10 +136,10 @@
           "id": "C7_T2_Q3",
           "question": "Giá trị cốt lõi của Lineage đối với kiểm toán viên là gì?",
           "options": {
-            "A": "Mã hóa dữ liệu",
-            "B": "Hiểu mô hình AI lấy dữ liệu từ đâu và bị biến đổi bởi câu lệnh SQL nào",
-            "C": "Giảm dung lượng lưu trữ",
-            "D": "Tăng tốc truy vấn"
+            "A": "Mã hóa toàn bộ dữ liệu để bảo mật thông tin",
+            "B": "Biết mô hình AI lấy dữ liệu từ đâu và bị biến đổi bởi SQL nào",
+            "C": "Giảm dung lượng lưu trữ của toàn hệ thống",
+            "D": "Tăng tốc độ truy vấn của toàn kho dữ liệu"
           },
           "correctAnswer": "B",
           "explanation": "Với kiểm toán viên, lineage giúp biết mô hình AI lấy dữ liệu từ đâu và bị biến đổi bởi câu SQL nào."
@@ -154,10 +154,10 @@
           "id": "C7_T3_Q1",
           "question": "Row-level Security (RLS) hoạt động theo cơ chế nào?",
           "options": {
-            "A": "Mã hóa toàn bộ bảng",
-            "B": "Che dấu một phần giá trị cột",
-            "C": "Xóa dòng nhạy cảm",
-            "D": "Bộ lọc động dựa trên danh tính người truy cập (User Context)"
+            "A": "Mã hóa toàn bộ nội dung bảng bằng khóa bí mật",
+            "B": "Che một phần giá trị của cột dữ liệu nhạy cảm",
+            "C": "Xóa vĩnh viễn các dòng nhạy cảm khỏi bảng gốc",
+            "D": "Bộ lọc động theo danh tính người truy cập (User Context)"
           },
           "correctAnswer": "D",
           "explanation": "**RLS** dùng **bộ lọc động** dựa trên danh tính người truy cập (User Context) để giới hạn các dòng được thấy."
@@ -166,10 +166,10 @@
           "id": "C7_T3_Q2",
           "question": "Hiểu về CLM: Column-level Masking là gì?",
           "options": {
-            "A": "Ẩn hoặc mã hóa một phần dữ liệu nhạy cảm (PII) của cột mà không thay đổi cấu trúc bảng",
-            "B": "Xóa cột nhạy cảm",
-            "C": "Chia sẻ dữ liệu không sao chép",
-            "D": "Bộ lọc dòng theo danh tính"
+            "A": "Ẩn một phần dữ liệu nhạy cảm (PII) mà không đổi cấu trúc bảng",
+            "B": "Xóa hẳn cột chứa dữ liệu nhạy cảm khỏi bảng",
+            "C": "Chia sẻ dữ liệu cho đối tác mà không sao chép",
+            "D": "Bộ lọc dòng dựa theo danh tính người dùng"
           },
           "correctAnswer": "A",
           "explanation": "**CLM** ẩn hoặc mã hóa một phần dữ liệu nhạy cảm (PII) trong cột mà không đổi cấu trúc bảng."
@@ -190,10 +190,10 @@
           "id": "C7_T3_Q4",
           "question": "Ví dụ nào minh họa Row-level Security?",
           "options": {
-            "A": "Nhân viên vùng A chỉ được xem dữ liệu khách hàng vùng A; quản lý xem toàn bộ",
-            "B": "Cột email bị xóa",
-            "C": "Số điện thoại bị che",
-            "D": "Số thẻ hiển thị xxxx"
+            "A": "Nhân viên vùng A chỉ xem khách hàng vùng A; quản lý xem toàn bộ",
+            "B": "Cột email của khách hàng bị xóa khỏi bảng",
+            "C": "Số điện thoại chỉ hiển thị một phần, bị che",
+            "D": "Số thẻ tín dụng chỉ hiển thị 4 số cuối xxxx"
           },
           "correctAnswer": "A",
           "explanation": "Nhân viên vùng A chỉ thấy khách hàng vùng A là ví dụ **Row-level Security**."
@@ -202,10 +202,10 @@
           "id": "C7_T3_Q5",
           "question": "Bài học cho MIS về sự đánh đổi bảo mật – hiệu năng là gì?",
           "options": {
-            "A": "Có thể bỏ bảo mật để nhanh hơn",
-            "B": "Bảo mật không được phép đánh đổi bằng hiệu năng vận hành thời gian thực của hệ thống",
-            "C": "Mã hóa luôn làm hệ thống nhanh hơn",
-            "D": "Hiệu năng không quan trọng"
+            "A": "Có thể bỏ bớt bảo mật để hệ thống chạy nhanh hơn",
+            "B": "Không được đánh đổi bảo mật để lấy hiệu năng thời gian thực",
+            "C": "Mã hóa dữ liệu luôn làm hệ thống chạy nhanh hơn",
+            "D": "Hiệu năng không phải là yếu tố quan trọng"
           },
           "correctAnswer": "B",
           "explanation": "Bảo mật **không được đánh đổi bằng hiệu năng** vận hành thời gian thực của hệ thống."
@@ -220,10 +220,10 @@
           "id": "C7_T4_Q1",
           "question": "Zero-copy Data Sharing hoạt động như thế nào?",
           "options": {
-            "A": "Gửi file Excel",
-            "B": "Sao chép dữ liệu qua FTP",
-            "C": "Đồng bộ qua email",
-            "D": "Chủ quản cấp quyền truy cập trực tiếp; đối tác xem dữ liệu tại chỗ, không sao chép byte nào"
+            "A": "Gửi file Excel chứa toàn bộ dữ liệu cho đối tác",
+            "B": "Sao chép dữ liệu cho đối tác qua giao thức FTP",
+            "C": "Đồng bộ bản sao dữ liệu cho đối tác qua email",
+            "D": "Cấp quyền truy cập trực tiếp, đối tác xem tại chỗ, không sao chép"
           },
           "correctAnswer": "D",
           "explanation": "**Zero-copy Data Sharing**: chủ quản cấp quyền truy cập trực tiếp, đối tác xem dữ liệu tại chỗ, **không sao chép byte nào**."
@@ -232,10 +232,10 @@
           "id": "C7_T4_Q2",
           "question": "Khi dừng hợp tác trong Zero-copy Data Sharing, chủ quản làm gì?",
           "options": {
-            "A": "Gửi yêu cầu xóa qua email",
-            "B": "Không thể thu hồi",
-            "C": "Revoke access trên Cloud, đối tác lập tức không còn thấy dữ liệu",
-            "D": "Xóa bản sao ở máy đối tác"
+            "A": "Gửi yêu cầu xóa dữ liệu cho đối tác qua email",
+            "B": "Không thể thu hồi quyền đã cấp cho đối tác",
+            "C": "Revoke access trên Cloud, đối tác không còn thấy dữ liệu ngay",
+            "D": "Xóa bản sao dữ liệu đang nằm ở máy đối tác"
           },
           "correctAnswer": "C",
           "explanation": "Dừng hợp tác chỉ cần **Revoke access** trên Cloud — đối tác lập tức không còn thấy dữ liệu."
@@ -244,10 +244,10 @@
           "id": "C7_T4_Q3",
           "question": "So với ETL truyền thống, Secure Data Sharing có ưu điểm nào về chi phí?",
           "options": {
-            "A": "Cần nhân bản dữ liệu",
-            "B": "Tốn gấp đôi tài nguyên",
+            "A": "Cần nhân bản dữ liệu riêng cho từng đối tác",
+            "B": "Tốn gấp đôi tài nguyên lưu trữ và tính toán",
             "C": "Dùng chung không gian lưu trữ gốc, không sinh bản sao",
-            "D": "Chi phí tính toán tăng gấp đôi"
+            "D": "Chi phí tính toán tăng gấp đôi khi chia sẻ"
           },
           "correctAnswer": "C",
           "explanation": "Zero-copy **dùng chung không gian lưu trữ gốc, không sinh bản sao** nên tiết kiệm chi phí so với ETL nhân bản."
@@ -262,10 +262,10 @@
           "id": "C7_T5_Q1",
           "question": "Differential Privacy thực hiện cơ chế gì?",
           "options": {
-            "A": "Chia sẻ dữ liệu thô",
-            "B": "Mã hóa kết quả",
-            "C": "Chủ động bơm 'nhiễu' ngẫu nhiên vào kết quả để hòa lẫn thông tin cá nhân",
-            "D": "Xóa mọi dữ liệu"
+            "A": "Chia sẻ trực tiếp dữ liệu thô cho mọi người dùng",
+            "B": "Mã hóa kết quả truy vấn bằng khóa công khai",
+            "C": "Bơm 'nhiễu' ngẫu nhiên vào kết quả để hòa lẫn thông tin cá nhân",
+            "D": "Xóa toàn bộ dữ liệu cá nhân sau khi truy vấn"
           },
           "correctAnswer": "C",
           "explanation": "**Differential Privacy** chủ động **bơm nhiễu ngẫu nhiên** vào kết quả để hòa lẫn thông tin cá nhân."
@@ -286,10 +286,10 @@
           "id": "C7_T5_Q3",
           "question": "Epsilon cao trong Differential Privacy dẫn đến điều gì?",
           "options": {
-            "A": "Dữ liệu vô dụng",
+            "A": "Dữ liệu trở nên vô dụng với mọi phân tích",
             "B": "Báo cáo tốt hơn nhưng rủi ro bảo mật danh tính",
-            "C": "Bảo mật tối đa",
-            "D": "Không có rủi ro"
+            "C": "Bảo mật ở mức tối đa cho mọi cá nhân trong bảng",
+            "D": "Hoàn toàn không có rủi ro nào về quyền riêng tư"
           },
           "correctAnswer": "B",
           "explanation": "**Epsilon cao** → báo cáo chính xác hơn nhưng **rủi ro lộ danh tính**."
@@ -298,10 +298,10 @@
           "id": "C7_T5_Q4",
           "question": "Một tập dữ liệu đạt k-anonymity khi nào?",
           "options": {
-            "A": "Mọi cá nhân không thể phân biệt với ít nhất k−1 cá nhân khác trong bảng",
-            "B": "Có k cột",
-            "C": "Có đúng k bản ghi",
-            "D": "Mọi cột được mã hóa"
+            "A": "Mọi cá nhân không thể phân biệt với ít nhất k−1 cá nhân khác",
+            "B": "Bảng dữ liệu có đúng k cột thuộc tính nhạy cảm",
+            "C": "Bảng dữ liệu chứa đúng k bản ghi của cá nhân",
+            "D": "Mọi cột trong bảng đều đã được mã hóa bằng khóa"
           },
           "correctAnswer": "A",
           "explanation": "**k-anonymity**: mỗi cá nhân không thể phân biệt với ít nhất **k − 1** cá nhân khác trong bảng."
@@ -310,10 +310,10 @@
           "id": "C7_T5_Q5",
           "question": "Quasi-identifiers là gì?",
           "options": {
-            "A": "Khóa chính",
-            "B": "Mật khẩu người dùng",
-            "C": "Các cột bị mã hóa",
-            "D": "Các cột đơn lẻ không nhạy cảm (tuổi, giới tính…) nhưng kết hợp lại có thể giúp re-identification"
+            "A": "Khóa chính định danh duy nhất từng bản ghi",
+            "B": "Mật khẩu của người dùng được lưu trong hệ thống",
+            "C": "Các cột đã được mã hóa hoàn toàn bằng khóa bí mật",
+            "D": "Các cột vô hại đơn lẻ (tuổi, giới tính…) nhưng ghép lại có thể re-identify"
           },
           "correctAnswer": "D",
           "explanation": "**Quasi-identifiers** là các cột không nhạy cảm đơn lẻ (tuổi, giới tính…) nhưng kết hợp lại có thể dẫn đến re-identification."
@@ -322,10 +322,10 @@
           "id": "C7_T5_Q6",
           "question": "Generalization trong k-anonymity là gì?",
           "options": {
-            "A": "Thêm nhiễu ngẫu nhiên",
-            "B": "Biến số cụ thể thành khoảng (ví dụ 23 tuổi → nhóm 20–30)",
-            "C": "Mã hóa SHA-256",
-            "D": "Xóa hẳn dòng dị biệt"
+            "A": "Thêm nhiễu ngẫu nhiên vào từng giá trị số liệu",
+            "B": "Biến giá trị cụ thể thành khoảng (ví dụ 23 tuổi → 20–30)",
+            "C": "Mã hóa từng giá trị bằng thuật toán SHA-256",
+            "D": "Xóa hẳn dòng của những cá nhân quá dị biệt"
           },
           "correctAnswer": "B",
           "explanation": "**Generalization**: biến giá trị cụ thể thành khoảng (23 tuổi → 20–30)."
@@ -334,10 +334,10 @@
           "id": "C7_T5_Q7",
           "question": "Suppression trong k-anonymity là gì?",
           "options": {
-            "A": "Biến số thành khoảng",
-            "B": "Xóa hẳn dòng dữ liệu của những cá nhân quá dị biệt để tránh bị lộ",
-            "C": "Hash dữ liệu",
-            "D": "Bơm nhiễu"
+            "A": "Biến giá trị cụ thể thành các khoảng giá trị",
+            "B": "Xóa hẳn dòng của những cá nhân quá dị biệt để tránh bị lộ",
+            "C": "Băm (hash) dữ liệu bằng thuật toán SHA-256",
+            "D": "Bơm nhiễu ngẫu nhiên vào kết quả truy vấn"
           },
           "correctAnswer": "B",
           "explanation": "**Suppression**: xóa hẳn dòng của cá nhân quá dị biệt để tránh bị lộ."
@@ -352,10 +352,10 @@
           "id": "C7_T6_Q1",
           "question": "Data Swamps là gì?",
           "options": {
-            "A": "Một công cụ CDC",
-            "B": "Kho dữ liệu sạch",
-            "C": "Dữ liệu mở rộng quá nhanh, khó nhận biết dữ liệu sạch nằm ở đâu",
-            "D": "Một định dạng bảng"
+            "A": "Một công cụ CDC thu thập thay đổi dữ liệu",
+            "B": "Kho dữ liệu sạch, có tổ chức và dễ tìm kiếm",
+            "C": "Dữ liệu mở rộng quá nhanh, khó biết dữ liệu sạch ở đâu",
+            "D": "Một định dạng bảng mở dành cho Lakehouse"
           },
           "correctAnswer": "C",
           "explanation": "**Data Swamps**: dữ liệu mở rộng quá nhanh, không quản lý được nên khó biết dữ liệu sạch ở đâu."
@@ -364,10 +364,10 @@
           "id": "C7_T6_Q2",
           "question": "Semantic Search trong AI Data Catalog cho phép làm gì?",
           "options": {
-            "A": "Chỉ tìm theo dung lượng",
-            "B": "Chỉ tìm theo ID",
+            "A": "Chỉ tìm kiếm được theo dung lượng của bảng",
+            "B": "Chỉ tìm kiếm được theo mã ID của từng bảng",
             "C": "Dùng ngôn ngữ tự nhiên để tìm bảng dữ liệu",
-            "D": "Chỉ tìm theo từ khóa chính xác"
+            "D": "Chỉ tìm được theo từ khóa khớp chính xác"
           },
           "correctAnswer": "C",
           "explanation": "**Semantic Search** cho phép dùng ngôn ngữ tự nhiên để tìm bảng dữ liệu."
@@ -376,10 +376,10 @@
           "id": "C7_T6_Q3",
           "question": "Trust Score đánh giá điều gì?",
           "options": {
-            "A": "Chất lượng bảng dữ liệu dựa trên tần suất sử dụng và lịch sử kiểm định chất lượng tự động",
-            "B": "Giá thành lưu trữ",
-            "C": "Tốc độ mạng",
-            "D": "Số cột"
+            "A": "Chất lượng bảng dựa trên tần suất dùng và kiểm định tự động",
+            "B": "Giá thành lưu trữ của từng bảng dữ liệu",
+            "C": "Tốc độ đường truyền mạng của hệ thống",
+            "D": "Số lượng cột có trong mỗi bảng dữ liệu"
           },
           "correctAnswer": "A",
           "explanation": "**Trust Score** đánh giá chất lượng bảng dựa trên tần suất sử dụng và lịch sử kiểm định tự động."
@@ -388,10 +388,10 @@
           "id": "C7_T6_Q4",
           "question": "Business Glossary do lớp nào định nghĩa và dùng để làm gì?",
           "options": {
-            "A": "Data Engineer — lưu kiểu dữ liệu",
-            "B": "Người dùng cuối — chọn biểu đồ",
-            "C": "Nhà cung cấp Cloud — lưu log",
-            "D": "Governance Layer — thống nhất khái niệm kinh doanh (ví dụ Churn)"
+            "A": "Data Engineer — quản lý kiểu dữ liệu và schema",
+            "B": "Người dùng cuối — chọn loại biểu đồ hiển thị",
+            "C": "Nhà cung cấp Cloud — lưu nhật ký truy cập",
+            "D": "Governance Layer — thống nhất khái niệm kinh doanh (như Churn)"
           },
           "correctAnswer": "D",
           "explanation": "**Business Glossary** do **Governance Layer** định nghĩa, thống nhất khái niệm kinh doanh (ví dụ Churn)."
@@ -400,10 +400,10 @@
           "id": "C7_T6_Q5",
           "question": "Technical Metadata gồm những gì?",
           "options": {
-            "A": "Điểm tin cậy người dùng",
-            "B": "Định nghĩa khái niệm kinh doanh",
-            "C": "Kiểu dữ liệu, schema bảng, tần suất cập nhật, chủ sở hữu kỹ thuật",
-            "D": "Nội dung báo cáo"
+            "A": "Điểm tin cậy do người dùng bình chọn cho bảng",
+            "B": "Định nghĩa các khái niệm kinh doanh như Churn",
+            "C": "Kiểu dữ liệu, schema, tần suất cập nhật, chủ sở hữu kỹ thuật",
+            "D": "Nội dung chi tiết của các báo cáo BI hiện có"
           },
           "correctAnswer": "C",
           "explanation": "**Technical Metadata**: kiểu dữ liệu, schema, tần suất cập nhật (Freshness), chủ sở hữu kỹ thuật."
@@ -418,10 +418,10 @@
           "id": "C7_T7_Q1",
           "question": "Nguồn gốc của Bias trong AI theo slide là gì?",
           "options": {
-            "A": "Lỗi mạng",
-            "B": "AI tự sinh ra định kiến",
-            "C": "Lỗi phần cứng",
-            "D": "Định kiến nằm trong dữ liệu lịch sử của con người, AI học và khuếch đại nó"
+            "A": "Lỗi mạng làm sai lệch kết quả huấn luyện",
+            "B": "Bản thân thuật toán AI tự sinh ra định kiến",
+            "C": "Lỗi phần cứng của máy chủ khi huấn luyện",
+            "D": "Định kiến có sẵn trong dữ liệu lịch sử, AI học và khuếch đại nó"
           },
           "correctAnswer": "D",
           "explanation": "Bias nằm trong **dữ liệu lịch sử của con người**; AI học và **khuếch đại** nó."
@@ -430,10 +430,10 @@
           "id": "C7_T7_Q2",
           "question": "Kỹ thuật Pre-processing khử bias làm gì?",
           "options": {
-            "A": "Tác động vào tập dữ liệu trước khi học: Resampling hoặc gán trọng số cân bằng nhóm",
-            "B": "Xóa mô hình",
+            "A": "Tác động vào dữ liệu trước khi học: Resampling hoặc gán trọng số",
+            "B": "Xóa mô hình đã huấn luyện khỏi hệ thống",
             "C": "Thêm Fairness Constraints vào Loss Function",
-            "D": "Điều chỉnh ngưỡng quyết định"
+            "D": "Điều chỉnh ngưỡng quyết định cho từng nhóm"
           },
           "correctAnswer": "A",
           "explanation": "**Pre-processing**: tác động vào dữ liệu trước khi học (resampling, gán trọng số cân bằng)."
@@ -442,10 +442,10 @@
           "id": "C7_T7_Q3",
           "question": "Kỹ thuật In-processing khử bias làm gì?",
           "options": {
-            "A": "Xóa dữ liệu",
-            "B": "Thêm Fairness Constraints trực tiếp vào Loss Function khi huấn luyện",
-            "C": "Điều chỉnh ngưỡng phân loại",
-            "D": "Resampling dữ liệu"
+            "A": "Xóa bớt dữ liệu của nhóm đa số trước khi học",
+            "B": "Thêm Fairness Constraints vào Loss Function khi huấn luyện",
+            "C": "Điều chỉnh ngưỡng phân loại cho từng nhóm",
+            "D": "Resampling lại dữ liệu trước khi huấn luyện"
           },
           "correctAnswer": "B",
           "explanation": "**In-processing**: thêm **Fairness Constraints** vào Loss Function khi huấn luyện."
@@ -454,10 +454,10 @@
           "id": "C7_T7_Q4",
           "question": "Kỹ thuật Post-processing khử bias làm gì?",
           "options": {
-            "A": "Thêm ràng buộc vào Loss Function",
-            "B": "Điều chỉnh Classification Threshold tối ưu riêng cho từng nhóm thiểu số",
-            "C": "Resampling dữ liệu",
-            "D": "Mã hóa kết quả"
+            "A": "Thêm ràng buộc vào Loss Function khi huấn luyện",
+            "B": "Điều chỉnh Classification Threshold riêng cho từng nhóm thiểu số",
+            "C": "Resampling lại dữ liệu trước khi huấn luyện",
+            "D": "Mã hóa kết quả dự đoán trước khi trả về"
           },
           "correctAnswer": "B",
           "explanation": "**Post-processing**: điều chỉnh **Classification Threshold** riêng cho từng nhóm thiểu số."
@@ -466,10 +466,10 @@
           "id": "C7_T7_Q5",
           "question": "Nguyên tắc Human-in-the-loop yêu cầu gì?",
           "options": {
-            "A": "Quyết định cuối ảnh hưởng quyền lợi công dân bắt buộc có sự phê duyệt của con người",
-            "B": "AI tự quyết định hoàn toàn",
-            "C": "Chỉ con người xem log",
-            "D": "Không cần con người"
+            "A": "Quyết định ảnh hưởng quyền lợi công dân phải do con người phê duyệt",
+            "B": "AI được quyền tự quyết định hoàn toàn mọi việc",
+            "C": "Con người chỉ cần xem lại log sau khi quyết định",
+            "D": "Không cần có sự tham gia của con người trong quy trình"
           },
           "correctAnswer": "A",
           "explanation": "**Human-in-the-loop**: quyết định cuối ảnh hưởng quyền lợi công dân bắt buộc có con người phê duyệt."
@@ -478,10 +478,10 @@
           "id": "C7_T7_Q6",
           "question": "Explainable AI yêu cầu điều gì?",
           "options": {
-            "A": "Mô hình không được là hộp đen; phải giải trình được lý do của kết quả",
-            "B": "Không cần giải trình",
-            "C": "Mô hình ẩn hoàn toàn logic",
-            "D": "Chỉ cần độ chính xác cao"
+            "A": "Mô hình không là hộp đen; phải giải trình được lý do kết quả",
+            "B": "Không cần giải trình lý do của kết quả dự đoán",
+            "C": "Mô hình phải ẩn hoàn toàn logic ra quyết định",
+            "D": "Chỉ cần đạt độ chính xác cao là đã đủ điều kiện"
           },
           "correctAnswer": "A",
           "explanation": "**Explainable AI**: mô hình không được là hộp đen, phải giải trình được lý do."
@@ -496,10 +496,10 @@
           "id": "C7_T8_Q1",
           "question": "Continuous Auditing khác audit truyền thống ở điểm nào?",
           "options": {
-            "A": "AI theo dõi tự động toàn bộ hạ tầng theo thời gian thực 24/7",
-            "B": "Không kiểm toán",
-            "C": "Kiểm toán thủ công theo quý",
-            "D": "Kiểm toán định kỳ hàng năm"
+            "A": "AI tự động theo dõi toàn bộ hạ tầng 24/7 theo thời gian thực",
+            "B": "Không thực hiện bất kỳ hoạt động kiểm toán nào",
+            "C": "Kiểm toán thủ công do con người theo từng quý",
+            "D": "Kiểm toán định kỳ do con người thực hiện hằng năm"
           },
           "correctAnswer": "A",
           "explanation": "**Continuous Auditing**: AI theo dõi tự động toàn bộ hạ tầng **24/7 theo thời gian thực**, khác audit định kỳ của con người."
@@ -520,10 +520,10 @@
           "id": "C7_T8_Q3",
           "question": "Data Audit Trail là gì?",
           "options": {
-            "A": "Biểu đồ dashboard",
-            "B": "Sổ cái bất biến (immutable log) ghi nhận ai đã tạo, sửa, xóa, xem dữ liệu",
-            "C": "Bảng tổng hợp doanh thu",
-            "D": "Danh sách bảng"
+            "A": "Biểu đồ dashboard hiển thị số liệu kinh doanh",
+            "B": "Sổ cái bất biến (immutable log) ghi ai tạo, sửa, xóa, xem dữ liệu",
+            "C": "Bảng tổng hợp doanh thu theo từng tháng của công ty",
+            "D": "Danh sách tên các bảng trong kho dữ liệu"
           },
           "correctAnswer": "B",
           "explanation": "**Data Audit Trail** là sổ cái **bất biến (immutable log)** ghi ai đã tạo, sửa, xóa, xem dữ liệu."
@@ -532,10 +532,10 @@
           "id": "C7_T8_Q4",
           "question": "Privacy Audit Trail theo dõi điều gì?",
           "options": {
-            "A": "Dung lượng đĩa",
-            "B": "Số lượng bảng",
-            "C": "Mức hao hụt ngân sách quyền riêng tư (Epsilon privacy budget loss) theo thời gian",
-            "D": "Tốc độ truy vấn"
+            "A": "Dung lượng đĩa đã sử dụng theo thời gian",
+            "B": "Số lượng bảng được tạo mới theo thời gian",
+            "C": "Mức hao hụt Epsilon privacy budget theo thời gian",
+            "D": "Tốc độ truy vấn trung bình theo thời gian"
           },
           "correctAnswer": "C",
           "explanation": "**Privacy Audit Trail** theo dõi mức hao hụt **Epsilon privacy budget** theo thời gian."
