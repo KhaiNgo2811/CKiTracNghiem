@@ -60,6 +60,7 @@ function updateFlaggedBadge() {
 }
 
 /** ====== TRANG CHƯƠNG: chọn chủ đề + cấu hình ====== */
+const topicSelectionMemory = {};
 async function openChapter(chapterId) {
   const chapterMeta = manifest.chapters.find((ch) => ch.chapterId === chapterId) || { chapterId };
   const data = await loadChapter(chapterMeta);
@@ -78,7 +79,10 @@ async function openChapter(chapterId) {
     const item = document.createElement('div');
     item.className = 'list-group-item d-flex justify-content-between align-items-center';
     item.innerHTML = `
-      <span><i class="bi bi-bookmark-star-fill text-primary me-2"></i>${topic.topicName} <span class="badge rounded-pill text-bg-light border ms-1">${topic.questions.length} câu</span></span>
+      <label class="d-flex align-items-center flex-grow-1 mb-0" style="cursor:pointer">
+        <input class="form-check-input topic-check me-2 mt-0" type="checkbox" data-topic="${topic.topicId}">
+        <span><i class="bi bi-bookmark-star-fill text-primary me-2"></i>${topic.topicName} <span class="badge rounded-pill text-bg-light border ms-1">${topic.questions.length} câu</span></span>
+      </label>
       <button class="btn btn-sm btn-outline-primary btn-start-topic" data-topic="${topic.topicId}"><i class="bi bi-play-fill"></i> Làm chủ đề này</button>`;
     topicList.appendChild(item);
   });
@@ -96,6 +100,57 @@ async function openChapter(chapterId) {
       });
     });
   });
+
+  // ---- Chọn nhiều chủ đề để làm cùng lúc ----
+  const chkAll = document.getElementById('chkTopicAll');
+  const btnSelected = document.getElementById('btnStartSelectedTopics');
+  const infoEl = document.getElementById('topicSelectedInfo');
+  const checks = () => Array.from(topicList.querySelectorAll('.topic-check'));
+  const selectedTopics = () => data.topics.filter((t) => checks().some((c) => c.checked && c.dataset.topic === t.topicId));
+  const mergeQuestions = (topics) => {
+    const seen = new Set();
+    return topics
+      .flatMap((t) => t.questions.map((q) => ({ ...q, _topicName: t.topicName })))
+      .filter((q) => {
+        const id = String(q.id);
+        if (seen.has(id)) return false;
+        seen.add(id);
+        return true;
+      });
+  };
+  const updateSelection = () => {
+    const all = checks();
+    const sel = selectedTopics();
+    const qCount = mergeQuestions(sel).length;
+    topicSelectionMemory[chapterMeta.chapterId] = sel.map((t) => t.topicId);
+    chkAll.checked = all.length > 0 && sel.length === all.length;
+    chkAll.indeterminate = sel.length > 0 && sel.length < all.length;
+    btnSelected.disabled = sel.length === 0;
+    infoEl.textContent = sel.length === 0
+      ? 'Tích chọn nhiều chủ đề để làm cùng lúc'
+      : `Đã chọn ${sel.length}/${all.length} chủ đề · ${qCount} câu (không trùng)`;
+    btnSelected.innerHTML = `<i class="bi bi-play-fill"></i> Làm ${sel.length > 0 ? sel.length + ' chủ đề' : 'các chủ đề'} đã chọn`;
+  };
+  const savedSel = topicSelectionMemory[chapterMeta.chapterId] || [];
+  checks().forEach((c) => { c.checked = savedSel.includes(c.dataset.topic); });
+  chkAll.onchange = () => {
+    checks().forEach((c) => { c.checked = chkAll.checked; });
+    updateSelection();
+  };
+  topicList.querySelectorAll('.topic-check').forEach((c) => c.addEventListener('change', updateSelection));
+  btnSelected.onclick = () => {
+    const sel = selectedTopics();
+    if (sel.length === 0) return;
+    startQuizConfig({
+      type: 'topics',
+      chapterId: chapterMeta.chapterId,
+      chapterName: chapterMeta.chapterName || data.chapterName,
+      topicId: null,
+      topicName: sel.length === 1 ? sel[0].topicName : `${sel.length} chủ đề đã chọn`,
+      questions: mergeQuestions(sel)
+    });
+  };
+  updateSelection();
 
   document.getElementById('btnStartFullChapter').onclick = () => {
     // Một câu có thể xuất hiện ở nhiều chủ đề (chương tổng hợp) -> chỉ lấy mỗi câu một lần
@@ -559,10 +614,11 @@ function renderResult(attempt) {
     })
     .join('');
 
-  document.getElementById('btnRetryChapter').onclick = () =>
-    ['FLAGGED', 'WRONG', 'WEAK', 'EXAM'].includes(attempt.chapterId)
-      ? renderHome()
-      : openChapter(attempt.chapterId);
+  const retryBtn = document.getElementById('btnRetryChapter');
+  const isVirtual = ['FLAGGED', 'WRONG', 'WEAK', 'EXAM'].includes(attempt.chapterId);
+  retryBtn.classList.toggle('d-none', isVirtual);
+  retryBtn.innerHTML = '<i class="bi bi-arrow-left"></i> Quay lại chọn chủ đề';
+  retryBtn.onclick = () => openChapter(attempt.chapterId);
   document.getElementById('btnBackHomeFromResult').onclick = renderHome;
 }
 
