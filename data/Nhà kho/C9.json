@@ -166,7 +166,10 @@
             "D": "A, B, D, G, E, F, C"
           },
           "correctAnswer": "D",
-          "explanation": "BFS từ A: thăm các nút kề A (B, D, G) rồi mức tiếp theo (E, F) và cuối cùng C → **A, B, D, G, E, F, C**."
+          "explanation": "BFS từ A: thăm các nút kề A (B, D, G) rồi mức tiếp theo (E, F) và cuối cùng C → **A, B, D, G, E, F, C**.",
+          "images": [
+            "assets/img/graph_bfs.png"
+          ]
         },
         {
           "id": "C9_T2_Q8",
@@ -178,7 +181,10 @@
             "D": "A, B, D, G, E, F, C"
           },
           "correctAnswer": "B",
-          "explanation": "DFS từ A chọn theo bảng chữ cái: A → B → E → G, quay lui → F → C, quay lui → D → **A, B, E, G, F, C, D**."
+          "explanation": "DFS từ A chọn theo bảng chữ cái: A → B → E → G, quay lui → F → C, quay lui → D → **A, B, E, G, F, C, D**.",
+          "images": [
+            "assets/img/graph_dfs.png"
+          ]
         },
         {
           "id": "C9_T2_Q9",

@@ -747,7 +747,7 @@ it.append(('BFS sử dụng cấu trúc dữ liệu nào để quản lý thứ 
 it.append(('Đồ thị vô hướng: A–B, A–D, A–G, B–E, G–E, G–F, D–F, F–C. BFS từ A, ưu tiên theo bảng chữ cái, thứ tự thăm là:', 'A, B, D, G, E, F, C',
            ['A, B, E, G, F, C, D', 'A, D, G, B, E, F, C', 'A, B, E, F, C, D, G'],
            'Mức 1: B, D, G. Mức 2: E (từ B), F (từ D). Mức 3: C. → **A, B, D, G, E, F, C**.'))
-it.append(('Cùng đồ thị trên, DFS từ A (ưu tiên bảng chữ cái) cho thứ tự thăm:', 'A, B, E, G, F, C, D',
+it.append(('Đồ thị vô hướng: A–B, A–D, A–G, B–E, G–E, G–F, D–F, F–C. DFS từ A (ưu tiên bảng chữ cái) cho thứ tự thăm:', 'A, B, E, G, F, C, D',
            ['A, B, D, G, E, F, C', 'A, B, E, F, C, D, G', 'A, D, F, C, G, E, B'],
            'A → B → E → G → F → C, quay lui → D. → **A, B, E, G, F, C, D**.'))
 it.append(('Dữ liệu thô trên Blockchain tồn tại ở dạng nào?', 'byte/hex (phi cấu trúc)',

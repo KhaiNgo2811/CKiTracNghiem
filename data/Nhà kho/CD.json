@@ -4267,7 +4267,10 @@
             "D": "A, B, D, G, E, F, C"
           },
           "correctAnswer": "D",
-          "explanation": "BFS từ A: thăm các nút kề A (B, D, G) rồi mức tiếp theo (E, F) và cuối cùng C → **A, B, D, G, E, F, C**."
+          "explanation": "BFS từ A: thăm các nút kề A (B, D, G) rồi mức tiếp theo (E, F) và cuối cùng C → **A, B, D, G, E, F, C**.",
+          "images": [
+            "assets/img/graph_bfs.png"
+          ]
         },
         {
           "id": "C9_T2_Q8",
@@ -4279,7 +4282,10 @@
             "D": "A, B, D, G, E, F, C"
           },
           "correctAnswer": "B",
-          "explanation": "DFS từ A chọn theo bảng chữ cái: A → B → E → G, quay lui → F → C, quay lui → D → **A, B, E, G, F, C, D**."
+          "explanation": "DFS từ A chọn theo bảng chữ cái: A → B → E → G, quay lui → F → C, quay lui → D → **A, B, E, G, F, C, D**.",
+          "images": [
+            "assets/img/graph_dfs.png"
+          ]
         },
         {
           "id": "C9_T2_Q9",
@@ -9105,11 +9111,14 @@
             "D": "A, B, D, G, E, F, C"
           },
           "correctAnswer": "D",
-          "explanation": "Mức 1: B, D, G. Mức 2: E (từ B), F (từ D). Mức 3: C. → **A, B, D, G, E, F, C**."
+          "explanation": "Mức 1: B, D, G. Mức 2: E (từ B), F (từ D). Mức 3: C. → **A, B, D, G, E, F, C**.",
+          "images": [
+            "assets/img/graph_bfs2.png"
+          ]
         },
         {
           "id": "CDV9_5",
-          "question": "Cùng đồ thị trên, DFS từ A (ưu tiên bảng chữ cái) cho thứ tự thăm:",
+          "question": "Đồ thị vô hướng: A–B, A–D, A–G, B–E, G–E, G–F, D–F, F–C. DFS từ A (ưu tiên bảng chữ cái) cho thứ tự thăm:",
           "options": {
             "A": "A, B, D, G, E, F, C",
             "B": "A, B, E, G, F, C, D",
@@ -9117,7 +9126,10 @@
             "D": "A, D, F, C, G, E, B"
           },
           "correctAnswer": "B",
-          "explanation": "A → B → E → G → F → C, quay lui → D. → **A, B, E, G, F, C, D**."
+          "explanation": "A → B → E → G → F → C, quay lui → D. → **A, B, E, G, F, C, D**.",
+          "images": [
+            "assets/img/graph_bfs2.png"
+          ]
         },
         {
           "id": "CDV9_6",

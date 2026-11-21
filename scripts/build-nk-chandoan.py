@@ -155,6 +155,7 @@ IMG_BY_PREFIX = [
     ('Hình CPT+ nén nhánh đơn:', ['assets/img/cpt_plus_sbc.png']),
     ('Cho cấu trúc CPT+ gồm Prediction Tree, Inverted Index và Lookup Table như hình (nén kết hợp)', ['assets/img/cpt_plus_both.png']),
     ('Hình CPT+ nén kết hợp:', ['assets/img/cpt_plus_both.png']),
+    ('Đồ thị vô hướng: A–B, A–D', ['assets/img/graph_bfs2.png']),
     ('Tập huấn luyện: s1 = ⟨A,B,C⟩', ['assets/img/cpt_plus_fsc.png']),
     ('Tập huấn luyện: s1 = ⟨A,B,C,D,F⟩', ['assets/img/cpt_tree.png']),
 ]
