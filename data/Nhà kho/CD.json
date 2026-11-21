@@ -3161,7 +3161,10 @@
             "D": "2 (50%)"
           },
           "correctAnswer": "C",
-          "explanation": "{pasta, orange} xuất hiện trong 3/4 giao dịch → support = **3** (75%)."
+          "explanation": "{pasta, orange} xuất hiện trong 3/4 giao dịch → support = **3** (75%).",
+          "images": [
+            "assets/img/apriori_txn.png"
+          ]
         },
         {
           "id": "C5_T2_Q9",
@@ -3359,7 +3362,10 @@
             "D": "2 (50%)"
           },
           "correctAnswer": "C",
-          "explanation": "{pasta, orange} xuất hiện trong 3/4 giao dịch → support = **3** (75%)."
+          "explanation": "{pasta, orange} xuất hiện trong 3/4 giao dịch → support = **3** (75%).",
+          "images": [
+            "assets/img/apriori_txn.png"
+          ]
         },
         {
           "id": "C5_T2_Q9",
