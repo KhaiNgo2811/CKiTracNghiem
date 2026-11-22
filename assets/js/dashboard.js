@@ -3,6 +3,7 @@
  */
 import Storage from './storage.js';
 import { renderQuestionImages } from './images.js';
+import { ansLabel } from './answer.js';
 import { renderBarChart, renderDonutChart } from './charts.js';
 
 /** Render danh sách card chương */
@@ -114,8 +115,8 @@ export function showWrongDetailModal(item, allChaptersData) {
       return `<div class="${cls}">${key}. ${val} ${key === resolved.correctAnswer ? '<i class="bi bi-check-circle-fill"></i>' : ''} ${key === item.lastSelected ? '(bạn chọn)' : ''}</div>`;
     })
     .join('');
-  const correctText = resolved.correctAnswer ? `${resolved.correctAnswer}. ${resolved.correctAnswerText || ''}` : 'Chưa có đáp án đúng';
-  const lastSelectedText = item.lastSelected ? `${item.lastSelected}. ${item.options?.[item.lastSelected] || ''}` : 'Chưa có dữ liệu lần chọn gần nhất';
+  const correctText = resolved.correctAnswer ? ansLabel({ type: resolved.type, options: { [resolved.correctAnswer]: resolved.correctAnswerText } }, resolved.correctAnswer) : 'Chưa có đáp án đúng';
+  const lastSelectedText = item.lastSelected ? ansLabel({ type: resolved.type || item.type, options: item.options }, item.lastSelected) : 'Chưa có dữ liệu lần chọn gần nhất';
 
   modalBody.innerHTML = `
     <div class="mb-3">
@@ -170,6 +171,7 @@ function resolveWrongItemFromData(item, allChaptersData) {
           question: found.question,
           images: found.images || [],
           options: found.options || item.options || {},
+          type: found.type || item.type || null,
           correctAnswer: found.correctAnswer || item.correctAnswer || null,
           correctAnswerText: found.options?.[found.correctAnswer] || item.options?.[item.correctAnswer] || ''
         };
@@ -181,6 +183,7 @@ function resolveWrongItemFromData(item, allChaptersData) {
     chapterId: item.chapterId,
     question: item.question,
     options: item.options || {},
+    type: item.type || null,
     correctAnswer: item.correctAnswer || null,
     correctAnswerText: item.options?.[item.correctAnswer] || ''
   };

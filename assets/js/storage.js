@@ -83,6 +83,8 @@ const Storage = {
             question: ans.question,
             images: ans.images || [],
             options: ans.options,
+            type: ans.type || null,
+            acceptedAnswers: ans.acceptedAnswers || null,
             correctAnswer: ans.correctAnswer,
             chapterId: ans.chapterId || attempt.chapterId,
             chapterName: ans.chapterName || attempt.chapterName,

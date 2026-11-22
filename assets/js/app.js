@@ -4,6 +4,7 @@
 import Storage from './storage.js';
 import Quiz from './quiz.js';
 import { renderQuestionImages } from './images.js';
+import { isFill, matchFill, ansLabel } from './answer.js';
 import { renderChapterCards, renderSummary, showWrongDetailModal } from './dashboard.js';
 
 let manifest = null;
@@ -339,7 +340,10 @@ function renderQuestionCard(q, index) {
   const selected = Quiz.state.userAnswers[q.id];
   const flagged = Quiz.isFlagged(q.id);
   const checked = !!(Quiz.state.checkedQuestions && Quiz.state.checkedQuestions[String(q.id)]);
-  const optionsHtml = Object.entries(q.options)
+  const fillOk = isFill(q) && checked && matchFill(q, selected);
+  const optionsHtml = isFill(q)
+    ? `<div class="mb-2"><input type="text" class="form-control fill-input${checked ? (fillOk ? ' is-valid' : ' is-invalid') : ''}" data-qid="${q.id}" placeholder="Nhập đáp án của bạn..." value="${escAttr(selected || '')}" ${checked ? 'disabled' : ''} autocomplete="off" spellcheck="false"></div>`
+    : Object.entries(q.options)
     .map(
       ([key, val]) => `
       <div class="form-check option-item${checked && key === q.correctAnswer ? ' opt-correct' : ''}${checked && key === selected && key !== q.correctAnswer ? ' opt-wrong' : ''}">
@@ -383,9 +387,9 @@ function renderCheckArea(q, selected, checked) {
     return `<button type="button" class="btn btn-sm btn-outline-primary mt-2 btn-check-answer" ${selected ? '' : 'disabled'}><i class="bi bi-check2-circle"></i> Kiểm tra đáp án</button>
       ${selected ? '' : '<span class="small text-muted ms-2">Chọn đáp án để kiểm tra</span>'}`;
   }
-  const ok = selected === q.correctAnswer;
+  const ok = isFill(q) ? matchFill(q, selected) : selected === q.correctAnswer;
   return `<div class="alert ${ok ? 'alert-success' : 'alert-danger'} mt-2 mb-0 py-2">
-    ${ok ? '<i class="bi bi-check-circle-fill"></i> Chính xác!' : `<i class="bi bi-x-circle-fill"></i> Sai rồi. Đáp án đúng: <b>${q.correctAnswer}. ${q.options[q.correctAnswer]}</b>`}
+    ${ok ? '<i class="bi bi-check-circle-fill"></i> Chính xác!' : `<i class="bi bi-x-circle-fill"></i> Sai rồi. Đáp án đúng: <b>${ansLabel(q, q.correctAnswer)}</b>`}
     ${q.explanation ? `<div class="small mt-2 pt-2 border-top"><b><i class="bi bi-lightbulb-fill"></i> Giải thích:</b> ${fmtExplain(q.explanation)}</div>` : ''}
   </div>`;
 }
@@ -413,6 +417,27 @@ function attachOptionListeners(container, onlyQid) {
         const idx = Quiz.state.questions.indexOf(q);
         card.outerHTML = renderQuestionCard(q, idx);
         attachOptionListeners(document.getElementById('quizBody'), qid);
+      });
+    }
+
+    const fillInput = card.querySelector('.fill-input');
+    if (fillInput) {
+      fillInput.addEventListener('input', () => {
+        Quiz.selectAnswer(qid, fillInput.value);
+        const cb = card.querySelector('.btn-check-answer');
+        if (cb) {
+          const has = fillInput.value.trim().length > 0;
+          cb.disabled = !has;
+          if (has && cb.nextElementSibling) cb.nextElementSibling.remove();
+        }
+        updateProgressBar();
+        renderQuizNavigator();
+      });
+      fillInput.addEventListener('keydown', (ev) => {
+        if (ev.key === 'Enter') {
+          const cb = card.querySelector('.btn-check-answer');
+          if (cb && !cb.disabled) cb.click();
+        }
       });
     }
 
@@ -538,8 +563,9 @@ function showChapterWrongHistoryModal() {
     emptyMsg.classList.add('d-none');
     wrongList.forEach((item) => {
       const resolved = resolveQuestionFromChapter(item.questionId, currentChapterContext.data);
-      const correctText = resolved.correctAnswer ? `${resolved.correctAnswer}. ${resolved.correctAnswerText}` : 'Chưa có đáp án đúng';
-      const selectedText = item.lastSelected ? `${item.lastSelected}. ${item.options?.[item.lastSelected] || ''}` : 'Chưa có';
+      const typeObj = { type: resolved.type || item.type, options: item.options };
+      const correctText = resolved.correctAnswer ? ansLabel({ type: typeObj.type, options: { [resolved.correctAnswer]: resolved.correctAnswerText } }, resolved.correctAnswer) : 'Chưa có đáp án đúng';
+      const selectedText = item.lastSelected ? ansLabel(typeObj, item.lastSelected) : 'Chưa có';
       const tr = document.createElement('tr');
       tr.innerHTML = `
         <td>${resolved.question || item.question}${renderQuestionImages(resolved.images || item.images)}</td>
@@ -573,6 +599,7 @@ function resolveQuestionFromChapter(questionId, chapterData) {
       return {
         question: found.question,
         images: found.images || [],
+        type: found.type || null,
         correctAnswer: found.correctAnswer || null,
         correctAnswerText: found.options?.[found.correctAnswer] || ''
       };
@@ -600,8 +627,8 @@ function renderResult(attempt) {
   detailBody.innerHTML = attempt.answers
     .map((a, i) => {
       const rowClass = a.isCorrect ? 'table-success' : 'table-danger';
-      const selectedText = a.selectedAnswer ? `${a.selectedAnswer}. ${a.options[a.selectedAnswer] || ''}` : '(chưa trả lời)';
-      const correctText = `${a.correctAnswer}. ${a.options[a.correctAnswer] || ''}`;
+      const selectedText = a.selectedAnswer ? ansLabel(a, a.selectedAnswer) : '(chưa trả lời)';
+      const correctText = ansLabel(a, a.correctAnswer);
       const flagText = a.flagged ? '<br><span class="badge bg-warning text-dark mt-1">Đã gắn cờ</span>' : '';
       return `
         <tr class="${rowClass}">
@@ -807,7 +834,7 @@ async function findSimilarQuestions(base, limit = 8) {
   Object.values(all).forEach((chapter) => {
     chapter.topics.forEach((topic) => {
       topic.questions.forEach((q) => {
-        if (!q.correctAnswer || !Quiz.isValidQuestion(q)) return;
+        if (!q.correctAnswer || !Quiz.isValidQuestion(q) || q.type === 'fill') return;
         const id = String(q.id);
         const key = simKey(q);
         if (seenIds.has(id) || seenKeys.has(key)) return;

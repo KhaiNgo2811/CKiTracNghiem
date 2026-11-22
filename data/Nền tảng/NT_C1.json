@@ -646,126 +646,139 @@
     },
     {
       "topicId": "NT_C1_T10",
-      "topicName": "Điền khuyết (chuyển sang trắc nghiệm)",
+      "topicName": "Điền khuyết (gõ đáp án)",
       "questions": [
         {
           "id": "NT_C1_T10_Q1",
+          "type": "fill",
           "question": "Dịch vụ như Google Docs hay Microsoft 365 là ví dụ điển hình của mô hình _______ trong điện toán đám mây.",
-          "options": {
-            "A": "IaaS",
-            "B": "SaaS",
-            "C": "PaaS",
-            "D": "DaaS"
-          },
-          "correctAnswer": "B",
+          "options": {},
+          "correctAnswer": "SaaS",
+          "acceptedAnswers": [
+            "Software as a Service",
+            "Software-as-a-Service"
+          ],
           "explanation": ""
         },
         {
           "id": "NT_C1_T10_Q2",
+          "type": "fill",
           "question": "Trong mạng con 192.168.10.0/26, địa chỉ broadcast là ________.",
-          "options": {
-            "A": "192.168.10.62",
-            "B": "192.168.10.127",
-            "C": "192.168.10.255",
-            "D": "192.168.10.63"
-          },
-          "correctAnswer": "D",
+          "options": {},
+          "correctAnswer": "192.168.10.63",
+          "acceptedAnswers": [],
           "explanation": ""
         },
         {
           "id": "NT_C1_T10_Q3",
+          "type": "fill",
           "question": "Tầng _______ trong mô hình OSI chịu trách nhiệm định tuyến gói tin giữa các mạng.",
-          "options": {
-            "A": "Transport",
-            "B": "Network",
-            "C": "Data Link",
-            "D": "Session"
-          },
-          "correctAnswer": "B",
+          "options": {},
+          "correctAnswer": "Network",
+          "acceptedAnswers": [
+            "Tầng Network",
+            "Network Layer",
+            "Mạng",
+            "Tầng mạng",
+            "Layer 3",
+            "Tầng 3"
+          ],
           "explanation": ""
         },
         {
           "id": "NT_C1_T10_Q4",
+          "type": "fill",
           "question": "Tầng _______ đảm bảo dữ liệu được truyền tin cậy, có thứ tự và không bị trùng lặp.",
-          "options": {
-            "A": "Network",
-            "B": "Session",
-            "C": "Transport",
-            "D": "Presentation"
-          },
-          "correctAnswer": "C",
+          "options": {},
+          "correctAnswer": "Transport",
+          "acceptedAnswers": [
+            "Tầng Transport",
+            "Transport Layer",
+            "Giao vận",
+            "Vận chuyển",
+            "Layer 4",
+            "Tầng 4"
+          ],
           "explanation": ""
         },
         {
           "id": "NT_C1_T10_Q5",
+          "type": "fill",
           "question": "Tầng ứng dụng là tầng thứ _______ trong mô hình OSI, nơi người dùng tương tác trực tiếp với các dịch vụ mạng.",
-          "options": {
-            "A": "7",
-            "B": "4",
-            "C": "5",
-            "D": "6"
-          },
-          "correctAnswer": "A",
+          "options": {},
+          "correctAnswer": "7",
+          "acceptedAnswers": [
+            "bảy",
+            "tầng 7",
+            "layer 7",
+            "7th"
+          ],
           "explanation": ""
         },
         {
           "id": "NT_C1_T10_Q6",
+          "type": "fill",
           "question": "Giao thức _______ hoạt động ở tầng ứng dụng và được sử dụng để truyền tải nội dung web qua Internet.",
-          "options": {
-            "A": "TCP",
-            "B": "IP",
-            "C": "HTTP",
-            "D": "ARP"
-          },
-          "correctAnswer": "C",
+          "options": {},
+          "correctAnswer": "HTTP",
+          "acceptedAnswers": [
+            "HTTPS",
+            "HTTP/HTTPS"
+          ],
           "explanation": ""
         },
         {
           "id": "NT_C1_T10_Q7",
+          "type": "fill",
           "question": "Tầng _______ cung cấp giao diện trực tiếp giữa người dùng và mạng, ví dụ như trình duyệt web hoặc ứng dụng email.",
-          "options": {
-            "A": "Application",
-            "B": "Presentation",
-            "C": "Session",
-            "D": "Transport"
-          },
-          "correctAnswer": "A",
+          "options": {},
+          "correctAnswer": "Application",
+          "acceptedAnswers": [
+            "Tầng Application",
+            "Application Layer",
+            "Ứng dụng",
+            "Tầng ứng dụng",
+            "Layer 7",
+            "Tầng 7"
+          ],
           "explanation": ""
         },
         {
           "id": "NT_C1_T10_Q8",
+          "type": "fill",
           "question": "Tầng _______ xử lý việc mã hóa, nén và chuyển đổi định dạng dữ liệu giữa các hệ thống.",
-          "options": {
-            "A": "Application",
-            "B": "Presentation",
-            "C": "Session",
-            "D": "Network"
-          },
-          "correctAnswer": "B",
+          "options": {},
+          "correctAnswer": "Presentation",
+          "acceptedAnswers": [
+            "Tầng Presentation",
+            "Presentation Layer",
+            "Trình bày",
+            "Tầng trình bày",
+            "Layer 6",
+            "Tầng 6"
+          ],
           "explanation": ""
         },
         {
           "id": "NT_C1_T10_Q9",
+          "type": "fill",
           "question": "Giao thức ________ được thiết kế nhẹ, phù hợp với thiết bị IoT có tài nguyên hạn chế và cần truyền dữ liệu hiệu quả.",
-          "options": {
-            "A": "FTP",
-            "B": "SMTP",
-            "C": "POP3",
-            "D": "MQTT"
-          },
-          "correctAnswer": "D",
+          "options": {},
+          "correctAnswer": "MQTT",
+          "acceptedAnswers": [],
           "explanation": ""
         },
         {
           "id": "NT_C1_T10_Q10",
+          "type": "fill",
           "question": "Trong hệ thống IoT, thiết bị ________ đóng vai trò trung gian, kết nối các cảm biến với Internet hoặc nền tảng đám mây.",
-          "options": {
-            "A": "Switch",
-            "B": "Hub",
-            "C": "Repeater",
-            "D": "Gateway"
-          },
-          "correctAnswer": "D",
+          "options": {},
+          "correctAnswer": "Gateway",
+          "acceptedAnswers": [
+            "IoT Gateway",
+            "Cổng kết nối",
+            "Cổng IoT"
+          ],
           "explanation": ""
         }
       ]

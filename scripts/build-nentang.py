@@ -88,28 +88,25 @@ for ti, (name, _) in enumerate(TOPICS):
     topics.append({'topicId': f'{CHAPTER}_T{ti + 1}', 'topicName': name, 'questions': qs})
     n += len(qs)
 
-# Phần 2 (điền khuyết) -> chuyển thành trắc nghiệm 4 lựa chọn
+# Phần 2 (điền khuyết): giữ nguyên dạng điền khuyết; "accepted" là các cách viết khác được chấp nhận
 CLOZE = [
-    ('Dịch vụ như Google Docs hay Microsoft 365 là ví dụ điển hình của mô hình _______ trong điện toán đám mây.', 'SaaS', ['IaaS', 'PaaS', 'DaaS']),
-    ('Trong mạng con 192.168.10.0/26, địa chỉ broadcast là ________.', '192.168.10.63', ['192.168.10.62', '192.168.10.127', '192.168.10.255']),
-    ('Tầng _______ trong mô hình OSI chịu trách nhiệm định tuyến gói tin giữa các mạng.', 'Network', ['Transport', 'Data Link', 'Session']),
-    ('Tầng _______ đảm bảo dữ liệu được truyền tin cậy, có thứ tự và không bị trùng lặp.', 'Transport', ['Network', 'Session', 'Presentation']),
-    ('Tầng ứng dụng là tầng thứ _______ trong mô hình OSI, nơi người dùng tương tác trực tiếp với các dịch vụ mạng.', '7', ['4', '5', '6']),
-    ('Giao thức _______ hoạt động ở tầng ứng dụng và được sử dụng để truyền tải nội dung web qua Internet.', 'HTTP', ['TCP', 'IP', 'ARP']),
-    ('Tầng _______ cung cấp giao diện trực tiếp giữa người dùng và mạng, ví dụ như trình duyệt web hoặc ứng dụng email.', 'Application', ['Presentation', 'Session', 'Transport']),
-    ('Tầng _______ xử lý việc mã hóa, nén và chuyển đổi định dạng dữ liệu giữa các hệ thống.', 'Presentation', ['Application', 'Session', 'Network']),
-    ('Giao thức ________ được thiết kế nhẹ, phù hợp với thiết bị IoT có tài nguyên hạn chế và cần truyền dữ liệu hiệu quả.', 'MQTT', ['FTP', 'SMTP', 'POP3']),
-    ('Trong hệ thống IoT, thiết bị ________ đóng vai trò trung gian, kết nối các cảm biến với Internet hoặc nền tảng đám mây.', 'Gateway', ['Switch', 'Hub', 'Repeater']),
+    ('Dịch vụ như Google Docs hay Microsoft 365 là ví dụ điển hình của mô hình _______ trong điện toán đám mây.', 'SaaS', ['Software as a Service', 'Software-as-a-Service']),
+    ('Trong mạng con 192.168.10.0/26, địa chỉ broadcast là ________.', '192.168.10.63', []),
+    ('Tầng _______ trong mô hình OSI chịu trách nhiệm định tuyến gói tin giữa các mạng.', 'Network', ['Tầng Network', 'Network Layer', 'Mạng', 'Tầng mạng', 'Layer 3', 'Tầng 3']),
+    ('Tầng _______ đảm bảo dữ liệu được truyền tin cậy, có thứ tự và không bị trùng lặp.', 'Transport', ['Tầng Transport', 'Transport Layer', 'Giao vận', 'Vận chuyển', 'Layer 4', 'Tầng 4']),
+    ('Tầng ứng dụng là tầng thứ _______ trong mô hình OSI, nơi người dùng tương tác trực tiếp với các dịch vụ mạng.', '7', ['bảy', 'tầng 7', 'layer 7', '7th']),
+    ('Giao thức _______ hoạt động ở tầng ứng dụng và được sử dụng để truyền tải nội dung web qua Internet.', 'HTTP', ['HTTPS', 'HTTP/HTTPS']),
+    ('Tầng _______ cung cấp giao diện trực tiếp giữa người dùng và mạng, ví dụ như trình duyệt web hoặc ứng dụng email.', 'Application', ['Tầng Application', 'Application Layer', 'Ứng dụng', 'Tầng ứng dụng', 'Layer 7', 'Tầng 7']),
+    ('Tầng _______ xử lý việc mã hóa, nén và chuyển đổi định dạng dữ liệu giữa các hệ thống.', 'Presentation', ['Tầng Presentation', 'Presentation Layer', 'Trình bày', 'Tầng trình bày', 'Layer 6', 'Tầng 6']),
+    ('Giao thức ________ được thiết kế nhẹ, phù hợp với thiết bị IoT có tài nguyên hạn chế và cần truyền dữ liệu hiệu quả.', 'MQTT', []),
+    ('Trong hệ thống IoT, thiết bị ________ đóng vai trò trung gian, kết nối các cảm biến với Internet hoặc nền tảng đám mây.', 'Gateway', ['IoT Gateway', 'Cổng kết nối', 'Cổng IoT']),
 ]
 ti = len(TOPICS) + 1
 qs = []
-for k, (text, right, wrong) in enumerate(CLOZE, 1):
-    qid = f'{CHAPTER}_T{ti}_Q{k}'
-    pos = zlib.crc32(qid.encode()) % 4
-    opts = list(wrong)
-    opts.insert(pos, right)
-    qs.append({'id': qid, 'question': text, 'options': {LETTERS[i]: opts[i] for i in range(4)}, 'correctAnswer': LETTERS[pos], 'explanation': ''})
-topics.append({'topicId': f'{CHAPTER}_T{ti}', 'topicName': 'Điền khuyết (chuyển sang trắc nghiệm)', 'questions': qs})
+for k, (text, right, accepted) in enumerate(CLOZE, 1):
+    qs.append({'id': f'{CHAPTER}_T{ti}_Q{k}', 'type': 'fill', 'question': text, 'options': {}, 'correctAnswer': right,
+               'acceptedAnswers': accepted, 'explanation': ''})
+topics.append({'topicId': f'{CHAPTER}_T{ti}', 'topicName': 'Điền khuyết (gõ đáp án)', 'questions': qs})
 n += len(qs)
 
 data = {'chapterId': CHAPTER, 'chapterName': 'Bộ câu hỏi 1 – Mạng máy tính', 'topics': topics}

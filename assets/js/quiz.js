@@ -2,6 +2,7 @@
  * quiz.js — Logic tạo đề, chạy bài làm, chấm điểm
  */
 import Storage from './storage.js';
+import { isFill, matchFill } from './answer.js';
 
 const Quiz = {
   state: null, // Trạng thái bài làm hiện tại
@@ -21,6 +22,7 @@ const Quiz = {
    * Không bắt buộc phải có `correctAnswer` — cho phép câu hỏi "practice" không chấm điểm.
    */
   isValidQuestion(q) {
+    if (q && q.type === 'fill') return !!q.correctAnswer;
     return q && q.options && Object.keys(q.options).length >= 2;
   },
 
@@ -44,6 +46,7 @@ const Quiz = {
 
     if (config.shuffleOptions) {
       questions = questions.map((q) => {
+        if (q.type === 'fill') return q;
         const entries = Object.entries(q.options);
         const shuffled = this.shuffleArray(entries);
         const newOptions = {};
@@ -87,7 +90,9 @@ const Quiz = {
 
   selectAnswer(questionId, optionKey) {
     if (!this.state) return;
-    this.state.userAnswers[String(questionId)] = optionKey;
+    const key = String(questionId);
+    if (typeof optionKey === 'string' && optionKey.trim() === '') delete this.state.userAnswers[key];
+    else this.state.userAnswers[key] = typeof optionKey === 'string' ? optionKey.trim() : optionKey;
   },
 
   toggleFlag(questionId) {
@@ -150,7 +155,7 @@ const Quiz = {
       let isCorrect = null;
       if (q.correctAnswer) {
         gradedCount += 1;
-        isCorrect = selected === q.correctAnswer;
+        isCorrect = isFill(q) ? matchFill(q, selected) : selected === q.correctAnswer;
         if (isCorrect) correctCount += 1;
       } else {
         // Question is ungraded (no correctAnswer in source)
@@ -162,6 +167,8 @@ const Quiz = {
         question: q.question,
         images: q.images || [],
         options: q.options,
+        type: q.type || null,
+        acceptedAnswers: q.acceptedAnswers || null,
         correctAnswer: q.correctAnswer || null,
         explanation: q.explanation || '',
         selectedAnswer: selected,
