@@ -5,8 +5,20 @@
       "chapterName": "Bộ câu hỏi 1 – Mạng máy tính",
       "topicCount": 10,
       "questionCount": 59
+    },
+    {
+      "chapterId": "NT_C2",
+      "chapterName": "Module Quiz – câu hỏi cuối bài",
+      "topicCount": 10,
+      "questionCount": 300
+    },
+    {
+      "chapterId": "NT_C3",
+      "chapterName": "Quiz cuối chương",
+      "topicCount": 10,
+      "questionCount": 238
     }
   ],
-  "totalQuestions": 59,
-  "totalTopics": 10
+  "totalQuestions": 597,
+  "totalTopics": 30
 }

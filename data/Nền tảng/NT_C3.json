@@ -1,0 +1,2922 @@
+{
+  "chapterId": "NT_C3",
+  "chapterName": "Quiz cuối chương",
+  "topics": [
+    {
+      "topicId": "NT_C3_T1",
+      "topicName": "Quiz Module 01 – GIỚI THIỆU",
+      "questions": [
+        {
+          "id": "NT_C3_T1_Q1",
+          "question": "IoT khác IoE ở điểm nào?",
+          "options": {
+            "A": "IoE chỉ dùng cho mạng LAN",
+            "B": "IoT không cần internet, IoE cần internet",
+            "C": "IoE chỉ áp dụng cho doanh nghiệp",
+            "D": "IoT chỉ tập trung vào thiết bị, IoE mở rộng sang con người và quy trình"
+          },
+          "correctAnswer": "D",
+          "explanation": "Kiến thức về khái niệm mạng kết nối vạn vật — IoE là bước phát triển tiếp theo của IoT, do Cisco đề xuất, bổ sung thêm 2 yếu tố ngoài thiết bị."
+        },
+        {
+          "id": "NT_C3_T1_Q2",
+          "question": "Trong quản trị mạng, công việc nào KHÔNG thuộc trách nhiệm chính?",
+          "options": {
+            "A": "Tối ưu hóa SEO website",
+            "B": "Giám sát lưu lượng mạng",
+            "C": "Quản lý người dùng",
+            "D": "Cấu hình firewall"
+          },
+          "correctAnswer": "A",
+          "explanation": "Phân biệt phạm vi công việc — network admin xử lý hạ tầng kỹ thuật, còn việc này thuộc mảng marketing."
+        },
+        {
+          "id": "NT_C3_T1_Q3",
+          "question": "Điện toán đám mây (Cloud Computing) KHÔNG mang lại lợi ích nào sau đây?",
+          "options": {
+            "A": "Khả năng mở rộng linh hoạt",
+            "B": "Giảm chi phí đầu tư hạ tầng",
+            "C": "Dễ dàng triển khai dịch vụ",
+            "D": "Tăng độ trễ mạng"
+          },
+          "correctAnswer": "D",
+          "explanation": "So sánh ưu/nhược điểm Cloud Computing — 3 phương án còn lại là các benefit kinh điển (elasticity, cost saving, ease of deployment)."
+        },
+        {
+          "id": "NT_C3_T1_Q4",
+          "question": "Điểm khác biệt chính giữa TCP và UDP là gì?",
+          "options": {
+            "A": "TCP đảm bảo truyền dữ liệu tin cậy, UDP không đảm bảo",
+            "B": "TCP chỉ dùng cho mạng LAN",
+            "C": "UDP hỗ trợ mã hóa, TCP không hỗ trợ",
+            "D": "TCP nhanh hơn UDP"
+          },
+          "correctAnswer": "A",
+          "explanation": "Kiến thức Transport Layer (3_TransportLayer.pdf) — cơ chế sequence number, ACK, timer, flow/congestion control là điểm phân biệt cốt lõi giữa hai giao thức."
+        },
+        {
+          "id": "NT_C3_T1_Q5",
+          "question": "Theo IDC, bao nhiêu % người ra quyết định toàn cầu thừa nhận DI là yếu tố quan trọng để đạt mục tiêu kinh doanh?",
+          "options": {
+            "A": "90%",
+            "B": "50%",
+            "C": "80%",
+            "D": "60%"
+          },
+          "correctAnswer": "C",
+          "explanation": "⚠️ Số liệu khảo sát từ báo cáo IDC, không có trong tài liệu project — cần đối chiếu slide gốc để xác nhận."
+        },
+        {
+          "id": "NT_C3_T1_Q6",
+          "question": "Trung tâm dữ liệu xanh (Green Data Center) hướng đến mục tiêu nào?",
+          "options": {
+            "A": "Tăng chi phí vận hành",
+            "B": "Tăng tốc độ xử lý",
+            "C": "Loại bỏ hoàn toàn điện toán đám mây",
+            "D": "Giảm tiêu thụ năng lượng và thân thiện môi trường"
+          },
+          "correctAnswer": "D",
+          "explanation": "Liên quan phần Facility trong 8_DataCenter.pdf — do DC tiêu tốn năng lượng rất lớn nên xu hướng \"green\" nhằm tối ưu môi trường vận hành, tiết kiệm năng lượng."
+        },
+        {
+          "id": "NT_C3_T1_Q7",
+          "question": "Công nghệ nào được xem là \"plugin\" trong DI, không thể thành công nếu thiếu DI?",
+          "options": {
+            "A": "Forward Osmosis",
+            "B": "SEO Optimization",
+            "C": "Cloud Storage",
+            "D": "API Integration"
+          },
+          "correctAnswer": "A",
+          "explanation": "(Đáp án theo LMS: A; gợi ý của AI: D.) ⚠️ Suy luận — công nghệ đóng vai trò \"cắm thêm\" vào để kết nối hệ thống thường phụ thuộc vào hạ tầng nền tảng sẵn có; cần đối chiếu slide gốc."
+        },
+        {
+          "id": "NT_C3_T1_Q8",
+          "question": "Trong 10 xu hướng hạ tầng CNTT, công nghệ nào giúp đảm bảo tính minh bạch và tin cậy dữ liệu?",
+          "options": {
+            "A": "IoT",
+            "B": "Edge Computing",
+            "C": "Blockchain",
+            "D": "VR/AR"
+          },
+          "correctAnswer": "C",
+          "explanation": "Đặc trưng công nghệ sổ cái phân tán (distributed ledger) — dữ liệu ghi vào không thể sửa đổi, mọi bên đều xác thực được."
+        },
+        {
+          "id": "NT_C3_T1_Q9",
+          "question": "API & Integration trong DI có vai trò gì?",
+          "options": {
+            "A": "Giảm chi phí phần cứng",
+            "B": "Thay thế hoàn toàn hệ điều hành",
+            "C": "Cho phép các hệ thống, ứng dụng khác nhau kết nối và chia sẻ dữ liệu",
+            "D": "Tăng tốc độ truyền dữ liệu"
+          },
+          "correctAnswer": "C",
+          "explanation": "Bản chất của API là giao diện lập trình trung gian, giúp các phần mềm/nền tảng độc lập giao tiếp được với nhau."
+        },
+        {
+          "id": "NT_C3_T1_Q10",
+          "question": "Trong mô hình tiếp cận Top-Down, tầng nào trực tiếp cung cấp dịch vụ cho người dùng cuối?",
+          "options": {
+            "A": "Network Layer",
+            "B": "Transport Layer",
+            "C": "Network Access Layer",
+            "D": "Application Layer"
+          },
+          "correctAnswer": "D",
+          "explanation": "Mô hình phân tầng mạng — tầng cao nhất trong kiến trúc TCP/IP, nơi các giao thức như HTTP, SMTP, FTP tương tác trực tiếp với người dùng."
+        },
+        {
+          "id": "NT_C3_T1_Q11",
+          "question": "Trong mô hình OSI, tầng nào chịu trách nhiệm định tuyến gói tin giữa các mạng?",
+          "options": {
+            "A": "Transport Layer",
+            "B": "Application Layer",
+            "C": "Network Layer",
+            "D": "Data Link Layer"
+          },
+          "correctAnswer": "C",
+          "explanation": "Kiến thức 4_NetworkLayer.pdf — tầng này dùng địa chỉ IP và giao thức routing để chuyển gói tin qua nhiều mạng khác nhau."
+        },
+        {
+          "id": "NT_C3_T1_Q12",
+          "question": "Kết nối vệ tinh (Satellite Connectivity) mang lại lợi ích chính nào?",
+          "options": {
+            "A": "Tăng tốc độ xử lý dữ liệu",
+            "B": "Phủ sóng internet toàn cầu",
+            "C": "Thay thế hoàn toàn mạng di động",
+            "D": "Giảm chi phí bảo mật"
+          },
+          "correctAnswer": "B",
+          "explanation": "Ưu điểm nổi bật của vệ tinh là khả năng tiếp cận những khu vực mà cáp quang hay trạm phát sóng mặt đất không vươn tới được."
+        },
+        {
+          "id": "NT_C3_T1_Q13",
+          "question": "Mã hóa dữ liệu giúp đạt được mục tiêu nào sau đây?",
+          "options": {
+            "A": "Tối ưu hóa SEO",
+            "B": "Giảm chi phí lưu trữ",
+            "C": "Tăng tốc độ truyền dữ liệu",
+            "D": "Đảm bảo tính toàn vẹn và bảo mật thông tin"
+          },
+          "correctAnswer": "D",
+          "explanation": "Kiến thức Cryptography (7_Cryptography.pdf) — mục tiêu cốt lõi của mã hóa là confidentiality (bảo mật) và integrity (toàn vẹn) dữ liệu."
+        },
+        {
+          "id": "NT_C3_T1_Q14",
+          "question": "Dữ liệu phân tán khác dữ liệu tập trung ở điểm nào?",
+          "options": {
+            "A": "Lưu trữ trên nhiều máy chủ, nhiều vị trí",
+            "B": "Chỉ dùng cho mạng LAN",
+            "C": "Lưu trữ tại một máy chủ duy nhất",
+            "D": "Không thể truy cập từ xa"
+          },
+          "correctAnswer": "A",
+          "explanation": "Khái niệm kiến trúc dữ liệu — mô hình phân tán chia nhỏ và đặt dữ liệu ở nhiều node/địa điểm để tăng khả năng chịu lỗi và mở rộng."
+        },
+        {
+          "id": "NT_C3_T1_Q15",
+          "question": "Trong các thành phần của DI, đâu là \"cửa sổ\" của doanh nghiệp ra thế giới bên ngoài?",
+          "options": {
+            "A": "Cloud Computing",
+            "B": "IoT Devices",
+            "C": "Data Center",
+            "D": "Website & SEO"
+          },
+          "correctAnswer": "D",
+          "explanation": "⚠️ Suy luận theo ngữ cảnh — thành phần đóng vai trò điểm tiếp xúc công khai, nơi khách hàng bên ngoài tìm thấy và tương tác với doanh nghiệp; nên đối chiếu slide gốc."
+        },
+        {
+          "id": "NT_C3_T1_Q16",
+          "question": "Trong các xu hướng phát triển DI, công nghệ nào được xem là nền tảng cho kết nối tốc độ cao và độ trễ thấp?",
+          "options": {
+            "A": "VR/AR",
+            "B": "Blockchain",
+            "C": "5G/6G",
+            "D": "API Integration"
+          },
+          "correctAnswer": "C",
+          "explanation": "Đặc trưng kỹ thuật của công nghệ mạng di động thế hệ mới — băng thông rộng, latency cực thấp, hỗ trợ ứng dụng thời gian thực."
+        },
+        {
+          "id": "NT_C3_T1_Q17",
+          "question": "Digital Infrastructure (DI) là gì?",
+          "options": {
+            "A": "Một loại hệ điều hành cho doanh nghiệp",
+            "B": "Khả năng lưu trữ và trao đổi dữ liệu qua hệ thống truyền thông tập trung",
+            "C": "Công cụ tối ưu hóa SEO",
+            "D": "Hệ thống phần mềm quản lý dữ liệu"
+          },
+          "correctAnswer": "B",
+          "explanation": "Định nghĩa nền tảng — DI là hạ tầng công nghệ cơ bản (network, storage, compute) làm nền cho mọi hoạt động số của tổ chức."
+        },
+        {
+          "id": "NT_C3_T1_Q18",
+          "question": "Ứng dụng nào KHÔNG phải là ví dụ điển hình của IoT?",
+          "options": {
+            "A": "Wearable Devices",
+            "B": "Smart Home",
+            "C": "Blockchain Ledger",
+            "D": "Connected Cars"
+          },
+          "correctAnswer": "C",
+          "explanation": "Phân biệt loại công nghệ — 3 phương án còn lại là thiết bị vật lý có cảm biến kết nối internet, còn phương án này là công nghệ dữ liệu/sổ cái, không phải \"vật\" kết nối."
+        },
+        {
+          "id": "NT_C3_T1_Q19",
+          "question": "Xu hướng phát triển DI trong tương lai KHÔNG bao gồm yếu tố nào sau đây?",
+          "options": {
+            "A": "Loại bỏ hoàn toàn mạng Internet",
+            "B": "Sustainable Infrastructure",
+            "C": "Quantum Computing",
+            "D": "Cloud Computing"
+          },
+          "correctAnswer": "A",
+          "explanation": "Về bản chất logic — hạ tầng số được xây dựng trên nền Internet, nên phương án này mâu thuẫn nội tại với khái niệm DI."
+        },
+        {
+          "id": "NT_C3_T1_Q20",
+          "question": "Tường lửa (Firewall) hoạt động chủ yếu ở tầng nào của mô hình OSI?",
+          "options": {
+            "A": "Transport Layer",
+            "B": "Physical Layer",
+            "C": "Application Layer",
+            "D": "Network Layer"
+          },
+          "correctAnswer": "D",
+          "explanation": "Kiến thức 6_Firewall_IDS.pdf — packet filter kiểm tra thông tin trong header IP (địa chỉ nguồn/đích) để quyết định cho phép hay chặn gói tin."
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C3_T2",
+      "topicName": "Quiz Module 02 – MẠNG MÁY TÍNH VÀ INTERNET",
+      "questions": [
+        {
+          "id": "NT_C3_T2_Q1",
+          "question": "So sánh Disk Mirroring và Disk Duplexing, điểm khác biệt chính là gì?",
+          "options": {
+            "A": "Duplexing không tăng độ tin cậy và thường gây lỗi hệ thống",
+            "B": "Mirroring dùng một controller, Duplexing dùng hai controller",
+            "C": "Mirroring không tạo bản sao dữ liệu nên dễ mất thông tin",
+            "D": "Duplexing lưu dữ liệu trên một ổ duy nhất mà không có bản sao"
+          },
+          "correctAnswer": "B",
+          "explanation": "Mirroring dùng chung 1 controller cho 2 ổ đĩa; Duplexing dùng 2 controller riêng biệt cho từng ổ, loại bỏ điểm lỗi đơn ở controller, độ tin cậy cao hơn."
+        },
+        {
+          "id": "NT_C3_T2_Q2",
+          "question": "So sánh mạng ngang hàng và client/server về khả năng backup dữ liệu?",
+          "options": {
+            "A": "Cả hai mô hình như nhau về khả năng backup dữ liệu",
+            "B": "Ngang hàng không cần thực hiện backup dữ liệu toàn hệ thống",
+            "C": "Ngang hàng dễ backup hơn vì dữ liệu phân tán trên nhiều máy",
+            "D": "Client/server dễ backup hơn vì dữ liệu tập trung"
+          },
+          "correctAnswer": "D",
+          "explanation": "Client/server có dữ liệu tập trung tại server nên chỉ cần backup một nơi; ngang hàng dữ liệu rải rác nhiều máy nên khó backup toàn diện."
+        },
+        {
+          "id": "NT_C3_T2_Q3",
+          "question": "Bandwidth được ví như độ rộng của đường ống nước. Trong phép so sánh này, packet tương ứng với gì?",
+          "options": {
+            "A": "Ngã rẽ chia dòng thành nhiều hướng khác nhau",
+            "B": "Máy bơm tạo áp lực để đẩy dữ liệu",
+            "C": "Van điều khiển dòng chảy để kiểm soát tốc độ",
+            "D": "Nước chảy trong đường ống"
+          },
+          "correctAnswer": "D",
+          "explanation": "Bandwidth = độ rộng ống; dữ liệu (packet) chảy qua ống giống như nước chảy trong đường ống."
+        },
+        {
+          "id": "NT_C3_T2_Q4",
+          "question": "Mạng máy tính được định nghĩa chính xác nhất là gì?",
+          "options": {
+            "A": "Một tập hợp máy tính liên kết để chia sẻ",
+            "B": "Một hệ thống phần mềm xử lý dữ liệu nhanh hơn để tăng tốc độ tính toán",
+            "C": "Một thiết bị phần cứng chuyên dụng để quản lý thông tin",
+            "D": "Một hệ thống lưu trữ dữ liệu cá nhân cho từng người dùng"
+          },
+          "correctAnswer": "A",
+          "explanation": "Bản chất mạng máy tính là các máy tính được liên kết với nhau nhằm mục đích chia sẻ tài nguyên/thông tin."
+        },
+        {
+          "id": "NT_C3_T2_Q5",
+          "question": "Băng thông 100Mbps nghĩa là gì?",
+          "options": {
+            "A": "100 Megabit truyền trong một giây",
+            "B": "100 Gigabit truyền trong một giây trong hệ thống quốc tế",
+            "C": "100 Megabyte truyền trong một giây theo chuẩn lưu trữ",
+            "D": "100 Kilobit truyền trong một giây theo chuẩn cũ"
+          },
+          "correctAnswer": "A",
+          "explanation": "bps = bit per second; 100Mbps nghĩa là 100 triệu bit truyền trong 1 giây."
+        },
+        {
+          "id": "NT_C3_T2_Q6",
+          "question": "Throughput khác bandwidth ở điểm nào?",
+          "options": {
+            "A": "Throughput luôn lớn hơn bandwidth trong mọi trường hợp",
+            "B": "Throughput là lưu lượng thực tế nhỏ hơn hoặc bằng bandwidth",
+            "C": "Throughput không liên quan đến người dùng hay thiết bị mạng",
+            "D": "Bandwidth phụ thuộc vào thời điểm trong ngày và số lượng người dùng"
+          },
+          "correctAnswer": "B",
+          "explanation": "Bandwidth là tốc độ lý thuyết tối đa; throughput là tốc độ thực tế đạt được, luôn ≤ bandwidth do ảnh hưởng của tải mạng, thiết bị, số người dùng."
+        },
+        {
+          "id": "NT_C3_T2_Q7",
+          "question": "Trong mô hình client/server, cơ sở dữ liệu thường được quản lý bằng gì?",
+          "options": {
+            "A": "SQL Server hoặc Oracle",
+            "B": "Access Point hoặc Switch để lưu trữ dữ liệu",
+            "C": "Excel hoặc Word với các bảng tính phức tạp",
+            "D": "File đơn giản hoặc Printer để chia sẻ thông tin"
+          },
+          "correctAnswer": "A",
+          "explanation": "CSDL tập trung tại server thường dùng hệ quản trị CSDL chuyên dụng như SQL Server, Oracle."
+        },
+        {
+          "id": "NT_C3_T2_Q8",
+          "question": "Giao thức mạng được xem như gì?",
+          "options": {
+            "A": "Một thiết bị mở rộng phạm vi mạng trong hệ thống lớn",
+            "B": "Một phần mềm diệt virus trên máy tính để bảo vệ dữ liệu",
+            "C": "Ngôn ngữ giao tiếp giữa các máy tính",
+            "D": "Một cách mã hóa dữ liệu cá nhân để tránh rò rỉ"
+          },
+          "correctAnswer": "C",
+          "explanation": "Protocol là tập quy tắc chung để các thiết bị/máy tính giao tiếp, trao đổi dữ liệu với nhau."
+        },
+        {
+          "id": "NT_C3_T2_Q9",
+          "question": "So sánh LAN và WAN, điểm khác biệt chính là gì?",
+          "options": {
+            "A": "LAN có phạm vi địa lý rộng hơn WAN và thường kết nối nhiều quốc gia",
+            "B": "WAN không thể kết nối toàn cầu trong bất kỳ trường hợp nào",
+            "C": "LAN luôn sử dụng kết nối không dây để truyền dữ liệu",
+            "D": "WAN có phạm vi địa lý rộng hơn LAN"
+          },
+          "correctAnswer": "D",
+          "explanation": "LAN giới hạn trong phạm vi hẹp (toà nhà, khuôn viên); WAN có phạm vi địa lý rộng hơn, liên kết nhiều thành phố/quốc gia."
+        },
+        {
+          "id": "NT_C3_T2_Q10",
+          "question": "Trong phân loại mạng theo phạm vi, GAN khác WAN ở điểm nào?",
+          "options": {
+            "A": "WAN có tốc độ cao hơn GAN trong mọi tình huống",
+            "B": "GAN chỉ dùng cho mạng không dây và không có dây dẫn",
+            "C": "GAN có phạm vi toàn cầu, WAN chỉ rộng lớn",
+            "D": "WAN không thể kết nối nhiều quốc gia trong cùng hệ thống"
+          },
+          "correctAnswer": "C",
+          "explanation": "WAN kết nối phạm vi rộng (vùng/quốc gia); GAN (Global Area Network) mở rộng hơn, bao phủ phạm vi toàn cầu."
+        },
+        {
+          "id": "NT_C3_T2_Q11",
+          "question": "Mạng ngang hàng khác mô hình client/server ở điểm nào?",
+          "options": {
+            "A": "Client/server không có cơ sở dữ liệu tập trung và không thể quản lý dữ liệu",
+            "B": "Peer-to-peer chỉ dùng cho mạng diện rộng với hàng nghìn máy tính",
+            "C": "Client/server không thể quản lý dữ liệu trong hệ thống lớn",
+            "D": "Không cần dịch vụ trung tâm, mỗi máy vừa là client vừa là server"
+          },
+          "correctAnswer": "D",
+          "explanation": "Peer-to-peer không có máy chủ trung tâm; mỗi máy vừa đóng vai trò client vừa đóng vai trò server."
+        },
+        {
+          "id": "NT_C3_T2_Q12",
+          "question": "Công việc nào không thuộc trách nhiệm của quản trị mạng?",
+          "options": {
+            "A": "Thiết kế dây dẫn mạng và hệ thống truyền tải",
+            "B": "Cài đặt hệ thống mạng và các dịch vụ liên quan",
+            "C": "Viết phần mềm ứng dụng văn phòng để phục vụ người dùng",
+            "D": "Backup dữ liệu hệ thống bằng phần mềm chuyên dụng"
+          },
+          "correctAnswer": "C",
+          "explanation": "Viết phần mềm ứng dụng thuộc lĩnh vực phát triển phần mềm, không phải nhiệm vụ của quản trị mạng (tập trung vào hạ tầng, cài đặt, backup, bảo trì hệ thống mạng)."
+        },
+        {
+          "id": "NT_C3_T2_Q13",
+          "question": "Trong mô hình cộng tác, điểm nổi bật so với mô hình tập trung là gì?",
+          "options": {
+            "A": "Workstation có thể cùng tham gia xử lý",
+            "B": "Chỉ server mới có thể xử lý dữ liệu trong toàn hệ thống",
+            "C": "Không thể chia sẻ tài nguyên mạng giữa các máy tính",
+            "D": "Không có client trong hệ thống cộng tác nên khó quản lý"
+          },
+          "correctAnswer": "A",
+          "explanation": "Ở mô hình cộng tác, các workstation cùng tham gia xử lý dữ liệu thay vì dồn hết về server như mô hình tập trung."
+        },
+        {
+          "id": "NT_C3_T2_Q14",
+          "question": "Đơn vị đo bandwidth 1Gbps tương đương với gì?",
+          "options": {
+            "A": "1024Mbps theo chuẩn nhị phân",
+            "B": "10^6 bps theo lý thuyết tính toán tốc độ truyền dữ liệu",
+            "C": "10^12 bps theo công thức chuyển đổi phức tạp",
+            "D": "1000Mbps theo chuẩn thập phân trong hệ thống quốc tế"
+          },
+          "correctAnswer": "D",
+          "explanation": "Theo chuẩn thập phân (SI) dùng cho tốc độ truyền, 1 Giga = 1000 Mega, nên 1Gbps = 1000Mbps."
+        },
+        {
+          "id": "NT_C3_T2_Q15",
+          "question": "So sánh Intranet và Extranet, điểm khác biệt chính là gì?",
+          "options": {
+            "A": "Extranet chỉ dùng cho mạng ngang hàng với vài máy tính",
+            "B": "Intranet chỉ cho nội bộ, Extranet cho phép đối tác bên ngoài truy cập",
+            "C": "Intranet luôn kết nối toàn cầu và không giới hạn phạm vi",
+            "D": "Extranet không có khả năng bảo mật và dễ bị tấn công"
+          },
+          "correctAnswer": "B",
+          "explanation": "Intranet chỉ phục vụ nội bộ tổ chức; Extranet mở rộng, cho phép đối tác/khách hàng bên ngoài truy cập phần dữ liệu được cấp quyền."
+        },
+        {
+          "id": "NT_C3_T2_Q16",
+          "question": "Lợi ích nào phản ánh đúng vai trò của mạng máy tính trong kinh doanh?",
+          "options": {
+            "A": "Loại bỏ hoàn toàn chi phí thiết bị và bảo dưỡng",
+            "B": "Giảm nhu cầu bảo mật của hệ thống bằng cách loại bỏ các cơ chế kiểm soát phức tạp",
+            "C": "Tăng khả năng xử lý nhờ phân tán",
+            "D": "Giảm tốc độ truyền thông dữ liệu giữa các bộ phận"
+          },
+          "correctAnswer": "C",
+          "explanation": "Mạng cho phép phân tán xử lý/tài nguyên giữa nhiều máy, qua đó tăng khả năng xử lý và hiệu quả hoạt động của doanh nghiệp."
+        },
+        {
+          "id": "NT_C3_T2_Q17",
+          "question": "Khi tính thời gian truyền file, công thức T = S/BW phản ánh điều gì?",
+          "options": {
+            "A": "Thời gian xử lý CPU của máy tính trong quá trình truyền",
+            "B": "Thời gian lý thuyết dựa trên băng thông",
+            "C": "Thời gian backup dữ liệu hệ thống bằng phần mềm chuyên dụng",
+            "D": "Thời gian thực tế dựa trên throughput và số người dùng"
+          },
+          "correctAnswer": "B",
+          "explanation": "Công thức T = S/BW tính thời gian truyền lý thuyết (kích thước file chia băng thông), chưa tính các yếu tố thực tế như tải mạng."
+        },
+        {
+          "id": "NT_C3_T2_Q18",
+          "question": "Mạng WLAN khác LAN truyền thống ở điểm nào?",
+          "options": {
+            "A": "LAN luôn có phạm vi toàn cầu và kết nối quốc tế",
+            "B": "WLAN sử dụng sóng vô tuyến thay vì dây dẫn",
+            "C": "WLAN không thể chia sẻ tài nguyên giữa các máy tính",
+            "D": "WLAN không có khả năng bảo mật dữ liệu người dùng"
+          },
+          "correctAnswer": "B",
+          "explanation": "WLAN (Wireless LAN) truyền dữ liệu qua sóng vô tuyến thay vì dây dẫn vật lý như LAN truyền thống."
+        },
+        {
+          "id": "NT_C3_T2_Q19",
+          "question": "Trong quản trị mạng, cơ chế sẵn sàng nhằm mục đích gì?",
+          "options": {
+            "A": "Tăng tốc độ truyền dữ liệu mạng trong mọi trường hợp",
+            "B": "Đảm bảo hệ thống tiếp tục hoạt động khi có lỗi",
+            "C": "Loại bỏ nhu cầu backup dữ liệu vì không cần thiết",
+            "D": "Giảm chi phí thiết bị phần cứng bằng cách loại bỏ dự phòng"
+          },
+          "correctAnswer": "B",
+          "explanation": "Cơ chế sẵn sàng (high availability) đảm bảo hệ thống vẫn hoạt động, giảm thiểu gián đoạn khi có sự cố."
+        },
+        {
+          "id": "NT_C3_T2_Q20",
+          "question": "So sánh VPN với Intranet, điểm khác biệt chính là gì?",
+          "options": {
+            "A": "Intranet luôn miễn phí sử dụng và không cần bảo mật",
+            "B": "VPN không có khả năng bảo mật dữ liệu người dùng",
+            "C": "VPN kết nối qua Internet, Intranet chỉ nội bộ",
+            "D": "VPN chỉ dùng cho mạng LAN nhỏ trong phạm vi hẹp"
+          },
+          "correctAnswer": "C",
+          "explanation": "VPN tạo kết nối bảo mật thông qua hạ tầng Internet công cộng; Intranet chỉ là mạng nội bộ giới hạn trong tổ chức."
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C3_T3",
+      "topicName": "Quiz Module 03 – TỔNG QUAN VỀ MÔ HÌNH OSI VÀ TCP/IP",
+      "questions": [
+        {
+          "id": "NT_C3_T3_Q1",
+          "question": "Những lớp nào của OSI được gộp lại thành Application Layer trong TCP/IP?",
+          "options": {
+            "A": "Application, Presentation, Session",
+            "B": "Data Link, Physical",
+            "C": "Transport, Network",
+            "D": "Network, Data Link"
+          },
+          "correctAnswer": "A",
+          "explanation": "TCP/IP chỉ có 4 tầng, ít hơn OSI (7 tầng). Application Layer của TCP/IP gánh luôn chức năng của 3 tầng trên cùng bên OSI (Application, Presentation, Session) vì các tác vụ này được xem là trách nhiệm của ứng dụng, không cần tầng mạng riêng xử lý."
+        },
+        {
+          "id": "NT_C3_T3_Q2",
+          "question": "Lớp nào của OSI tương ứng với Transport Layer trong TCP/IP?",
+          "options": {
+            "A": "Data Link Layer",
+            "B": "Transport Layer",
+            "C": "Network Layer",
+            "D": "Session Layer"
+          },
+          "correctAnswer": "B",
+          "explanation": "Transport Layer giữ nguyên tên và vai trò ở cả hai mô hình — truyền dữ liệu end-to-end, kiểm soát luồng và độ tin cậy (TCP/UDP), là tầng duy nhất không bị gộp hay tách khi chuyển từ OSI sang TCP/IP."
+        },
+        {
+          "id": "NT_C3_T3_Q3",
+          "question": "Lớp nào của OSI tương ứng với Internet Layer trong TCP/IP?",
+          "options": {
+            "A": "Transport Layer",
+            "B": "Network Layer",
+            "C": "Data Link Layer",
+            "D": "Application Layer"
+          },
+          "correctAnswer": "B",
+          "explanation": "Cả hai đều đảm nhiệm định địa chỉ logic (IP) và định tuyến gói tin qua nhiều mạng khác nhau — chỉ khác tên gọi (Network Layer trong OSI, Internet Layer trong TCP/IP)."
+        },
+        {
+          "id": "NT_C3_T3_Q4",
+          "question": "Lớp nào của TCP/IP cung cấp dịch vụ như HTTP, FTP, SMTP?",
+          "options": {
+            "A": "Transport Layer",
+            "B": "Network Access Layer",
+            "C": "Application Layer",
+            "D": "Internet Layer"
+          },
+          "correctAnswer": "C",
+          "explanation": "Application Layer là nơi các giao thức phục vụ trực tiếp người dùng hoạt động — HTTP (duyệt web), FTP (truyền file), SMTP (gửi mail) đều thuộc tầng này."
+        },
+        {
+          "id": "NT_C3_T3_Q5",
+          "question": "Quản lý phiên làm việc (session management) trong OSI thuộc lớp nào, nhưng trong TCP/IP được xử lý ở Application Layer?",
+          "options": {
+            "A": "Network Layer",
+            "B": "Session Layer",
+            "C": "Data Link Layer",
+            "D": "Transport Layer"
+          },
+          "correctAnswer": "B",
+          "explanation": "Session Layer trong OSI chuyên thiết lập/duy trì/kết thúc phiên làm việc. TCP/IP không có tầng riêng cho việc này nên chức năng được đẩy lên tầng Application tự xử lý (ví dụ session ID, cookie trong HTTP)."
+        },
+        {
+          "id": "NT_C3_T3_Q6",
+          "question": "Lớp nào của OSI đảm bảo truyền dữ liệu tin cậy bằng cơ chế xác nhận, tương tự TCP trong TCP/IP?",
+          "options": {
+            "A": "Network Layer",
+            "B": "Data Link Layer",
+            "C": "Application Layer",
+            "D": "Transport Layer"
+          },
+          "correctAnswer": "D",
+          "explanation": "Cơ chế xác nhận (acknowledgement), truyền lại gói mất, và kiểm soát luồng đều thuộc Transport Layer ở cả hai mô hình — TCP là ví dụ điển hình hiện thực các cơ chế này."
+        },
+        {
+          "id": "NT_C3_T3_Q7",
+          "question": "Những lớp nào của OSI được gộp lại thành Application Layer trong TCP/IP?",
+          "options": {
+            "A": "Physical, Data Link",
+            "B": "Application, Presentation, Session",
+            "C": "Transport, Network, Data Link",
+            "D": "Network, Transport"
+          },
+          "correctAnswer": "B",
+          "explanation": "(Tương tự câu 3.1) Application Layer của TCP/IP tích hợp chức năng của 3 tầng trên cùng OSI vì các tác vụ định dạng, mã hóa, quản lý phiên đều do bản thân ứng dụng đảm nhiệm trong kiến trúc TCP/IP."
+        },
+        {
+          "id": "NT_C3_T3_Q8",
+          "question": "Lớp nào của OSI đảm nhiệm việc mã hóa và nén dữ liệu, nhưng TCP/IP không có lớp tương ứng?",
+          "options": {
+            "A": "Presentation Layer",
+            "B": "Network Layer",
+            "C": "Application Layer",
+            "D": "Transport Layer"
+          },
+          "correctAnswer": "A",
+          "explanation": "Presentation Layer xử lý định dạng, mã hóa (encryption), nén (compression), chuyển đổi cú pháp dữ liệu. TCP/IP không tách riêng — các tác vụ tương tự (như TLS/SSL) được đặt ở tầng Application hoặc do thư viện ứng dụng tự xử lý."
+        },
+        {
+          "id": "NT_C3_T3_Q9",
+          "question": "Trong TCP/IP, lớp nào chịu trách nhiệm truyền dữ liệu tin cậy giữa các host?",
+          "options": {
+            "A": "Internet Layer",
+            "B": "Transport Layer",
+            "C": "Application Layer",
+            "D": "Network Access Layer"
+          },
+          "correctAnswer": "B",
+          "explanation": "Transport Layer (giao thức TCP) thiết lập kết nối, xác nhận gói tin, và truyền lại khi mất gói để đảm bảo dữ liệu đến đúng và đủ giữa 2 host."
+        },
+        {
+          "id": "NT_C3_T3_Q10",
+          "question": "Lớp nào của OSI định nghĩa chế độ truyền thông (simplex, half-duplex, full-duplex), nhưng TCP/IP không quy định rõ?",
+          "options": {
+            "A": "Session Layer",
+            "B": "Transport Layer",
+            "C": "Data Link Layer",
+            "D": "Network Layer"
+          },
+          "correctAnswer": "A",
+          "explanation": "Session Layer quản lý \"dialog control\" — tức chế độ trao đổi giữa hai bên. TCP/IP không có tầng session riêng nên vấn đề này không được quy định ở cấp giao thức mạng."
+        },
+        {
+          "id": "NT_C3_T3_Q11",
+          "question": "Lớp nào của OSI được chia thành hai lớp con MAC và LLC, nhưng TCP/IP không tách biệt?",
+          "options": {
+            "A": "Data Link Layer",
+            "B": "Application Layer",
+            "C": "Transport Layer",
+            "D": "Network Layer"
+          },
+          "correctAnswer": "A",
+          "explanation": "Data Link Layer trong OSI chia thành MAC (kiểm soát truy cập đường truyền) và LLC (giao tiếp với tầng Network). TCP/IP gộp chung vào Network Access Layer, không phân tách hai sub-layer này."
+        },
+        {
+          "id": "NT_C3_T3_Q12",
+          "question": "Lớp nào của OSI chuyển đổi bit thành tín hiệu điện/quang, tương ứng với Network Access Layer trong TCP/IP?",
+          "options": {
+            "A": "Data Link Layer",
+            "B": "Network Layer",
+            "C": "Physical Layer",
+            "D": "Transport Layer"
+          },
+          "correctAnswer": "C",
+          "explanation": "Physical Layer truyền các bit dưới dạng tín hiệu vật lý (điện, quang, sóng) qua môi trường truyền. Trong TCP/IP, chức năng này nằm chung với Data Link trong Network Access Layer."
+        },
+        {
+          "id": "NT_C3_T3_Q13",
+          "question": "Lớp nào của OSI định nghĩa cú pháp dữ liệu, nhưng TCP/IP để cho ứng dụng tự xử lý?",
+          "options": {
+            "A": "Presentation Layer",
+            "B": "Network Layer",
+            "C": "Transport Layer",
+            "D": "Physical Layer"
+          },
+          "correctAnswer": "A",
+          "explanation": "Presentation Layer quy định cú pháp/định dạng dữ liệu (ví dụ encoding, mã hóa) để hai hệ thống hiểu đúng nhau. TCP/IP không có tầng riêng, việc này do từng ứng dụng tự định nghĩa."
+        },
+        {
+          "id": "NT_C3_T3_Q14",
+          "question": "Trong TCP/IP, lớp nào đảm bảo phân mảnh và tái lắp dữ liệu, tương ứng với Transport Layer trong OSI?",
+          "options": {
+            "A": "Transport Layer",
+            "B": "Internet Layer",
+            "C": "Network Access Layer",
+            "D": "Application Layer"
+          },
+          "correctAnswer": "A",
+          "explanation": "Transport Layer chia nhỏ dữ liệu ứng dụng thành các segment để gửi đi (segmentation) và ghép lại đúng thứ tự ở nơi nhận (reassembly) — chức năng tương đồng ở cả hai mô hình."
+        },
+        {
+          "id": "NT_C3_T3_Q15",
+          "question": "Lớp nào của OSI tương ứng với Network Access Layer trong TCP/IP?",
+          "options": {
+            "A": "Data Link + Physical",
+            "B": "Transport",
+            "C": "Network",
+            "D": "Application"
+          },
+          "correctAnswer": "A",
+          "explanation": "Network Access Layer gộp chung chức năng đóng khung/địa chỉ MAC (Data Link) và truyền tín hiệu vật lý (Physical) của OSI vào một tầng duy nhất."
+        },
+        {
+          "id": "NT_C3_T3_Q16",
+          "question": "Giao thức nào được sử dụng ở Internet Layer của TCP/IP để định địa chỉ logic?",
+          "options": {
+            "A": "HTTP",
+            "B": "TCP",
+            "C": "IP",
+            "D": "Ethernet"
+          },
+          "correctAnswer": "C",
+          "explanation": "IP hoạt động ở Internet Layer, đảm nhiệm gán địa chỉ logic và định tuyến gói tin. HTTP thuộc Application, TCP thuộc Transport, Ethernet thuộc Network Access Layer."
+        },
+        {
+          "id": "NT_C3_T3_Q17",
+          "question": "Lớp nào của OSI chịu trách nhiệm định tuyến, tương ứng với Internet Layer trong TCP/IP?",
+          "options": {
+            "A": "Physical Layer",
+            "B": "Network Layer",
+            "C": "Data Link Layer",
+            "D": "Transport Layer"
+          },
+          "correctAnswer": "B",
+          "explanation": "Network Layer xác định đường đi tối ưu cho gói tin qua nhiều mạng trung gian dựa vào địa chỉ IP — đúng chức năng định tuyến (routing)."
+        },
+        {
+          "id": "NT_C3_T3_Q18",
+          "question": "Lớp nào trong mô hình OSI không có lớp tương ứng trực tiếp trong TCP/IP?",
+          "options": {
+            "A": "Lớp Ứng dụng (Application)",
+            "B": "Lớp Vận chuyển (Transport)",
+            "C": "Lớp Trình diễn (Presentation)",
+            "D": "Lớp Mạng (Network)"
+          },
+          "correctAnswer": "C",
+          "explanation": "Presentation và Session Layer của OSI không tồn tại như tầng riêng trong TCP/IP — chức năng của chúng được tích hợp chung vào Application Layer."
+        },
+        {
+          "id": "NT_C3_T3_Q19",
+          "question": "Lớp nào của OSI sử dụng port dịch vụ, và trong TCP/IP cũng được xử lý ở Transport Layer?",
+          "options": {
+            "A": "Transport Layer",
+            "B": "Application Layer",
+            "C": "Network Layer",
+            "D": "Data Link Layer"
+          },
+          "correctAnswer": "A",
+          "explanation": "Transport Layer dùng số hiệu cổng (port number) để phân biệt và chuyển dữ liệu đến đúng tiến trình/ứng dụng trên host nhận — cơ chế giống nhau ở cả OSI và TCP/IP."
+        },
+        {
+          "id": "NT_C3_T3_Q20",
+          "question": "Trong TCP/IP, lớp nào kết hợp chức năng của lớp Liên kết dữ liệu và lớp Vật lý trong OSI?",
+          "options": {
+            "A": "Network Access Layer",
+            "B": "Application Layer",
+            "C": "Transport Layer",
+            "D": "Internet Layer"
+          },
+          "correctAnswer": "A",
+          "explanation": "Network Access Layer (còn gọi Link Layer) gộp chung chức năng đóng khung/kiểm soát lỗi (Data Link) và truyền tín hiệu vật lý (Physical) của mô hình OSI."
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C3_T4",
+      "topicName": "Quiz Module 04 – APPLICATION LAYER",
+      "questions": [
+        {
+          "id": "NT_C3_T4_Q1",
+          "question": "Phương thức HTTP nào chỉ dùng để kiểm tra header mà không nhận body?",
+          "options": {
+            "A": "HEAD",
+            "B": "POST",
+            "C": "DELETE",
+            "D": "GET"
+          },
+          "correctAnswer": "A",
+          "explanation": "HEAD hoạt động giống GET nhưng server không trả về body, thường dùng để kiểm tra kích thước, loại nội dung, thời gian sửa đổi... mà không cần tải toàn bộ tài nguyên — hữu ích khi debug hoặc kiểm tra link còn sống mà tiết kiệm băng thông. Các đáp án khác sai: b. POST: dùng để gửi dữ liệu lên server, request có kèm body. c. DELETE: dùng để yêu cầu xoá tài nguyên trên server. d. GET: nhận về đầy đủ cả header lẫn body của tài nguyên."
+        },
+        {
+          "id": "NT_C3_T4_Q2",
+          "question": "Trong giao thức HTTP, dòng nào sau đây là request message hợp lệ?",
+          "options": {
+            "A": "HTTP/1.1 200 OK",
+            "B": "GET /index.html HTTP/1.1",
+            "C": "200 OK GET",
+            "D": "RESPONSE HTTP"
+          },
+          "correctAnswer": "B",
+          "explanation": "Cú pháp request line chuẩn của HTTP là Method URL HTTP-Version. Các đáp án khác sai: a. HTTP/1.1 200 OK: đây là status line của response, cấu trúc ngược lại (HTTP-Version rồi mới đến mã trạng thái). c. 200 OK GET: không theo bất kỳ cú pháp chuẩn nào của HTTP. d. RESPONSE HTTP: không phải cú pháp request hay response hợp lệ nào của HTTP."
+        },
+        {
+          "id": "NT_C3_T4_Q3",
+          "question": "Mã lỗi HTTP nào biểu thị tài nguyên không tồn tại?",
+          "options": {
+            "A": "505",
+            "B": "404",
+            "C": "400",
+            "D": "200"
+          },
+          "correctAnswer": "B",
+          "explanation": "404 thuộc nhóm 4xx (client error), nghĩa là request hợp lệ về cú pháp nhưng server không tìm thấy tài nguyên được yêu cầu. Các đáp án khác sai: a. 505: HTTP Version Not Supported — lỗi do server không hỗ trợ phiên bản giao thức được dùng. c. 400: Bad Request — lỗi cú pháp trong chính request của client. d. 200: OK — mã báo thành công, không phải lỗi."
+        },
+        {
+          "id": "NT_C3_T4_Q4",
+          "question": "Iterative query khác recursive query ở điểm nào?",
+          "options": {
+            "A": "Không trả lời",
+            "B": "Luôn dùng cache",
+            "C": "Không cần server",
+            "D": "Client tự truy vấn tiếp"
+          },
+          "correctAnswer": "D",
+          "explanation": "Recursive query thường dùng giữa client (stub resolver) và local DNS server — server sẽ tự đi hỏi thay và chỉ trả kết quả cuối. Iterative query thường dùng giữa các DNS server với nhau: local server tự thực hiện chuỗi truy vấn iterative đến root, rồi TLD, rồi authoritative server. Các đáp án khác sai: a. Không trả lời: sai, server luôn trả lời — chỉ khác cách trả lời (kết quả cuối hay gợi ý tiếp theo). b. Luôn dùng cache: sai, cache có thể được dùng ở cả hai loại truy vấn. c. Không cần server: sai, cả hai loại đều cần đến DNS server khác để lấy thông tin."
+        },
+        {
+          "id": "NT_C3_T4_Q5",
+          "question": "Ưu điểm của P2P so với client-server là gì?",
+          "options": {
+            "A": "Độ bảo mật cao hơn tuyệt đối",
+            "B": "Chi phí thấp và tự mở rộng",
+            "C": "Luôn cần data center",
+            "D": "Dễ quản lý tập trung"
+          },
+          "correctAnswer": "B",
+          "explanation": "Đặc trưng self-scalability của P2P — mỗi peer mới tham gia vừa tiêu thụ vừa đóng góp tài nguyên (băng thông, lưu trữ) nên hệ thống tự mở rộng theo số lượng người dùng mà không cần đầu tư thêm hạ tầng tập trung. Các đáp án khác sai: a. Độ bảo mật cao hơn tuyệt đối: sai, P2P thường khó kiểm soát bảo mật hơn do không có điểm quản lý tập trung. c. Luôn cần data center: sai, đặc điểm cốt lõi của P2P là KHÔNG cần data center lớn. d. Dễ quản lý tập trung: sai, P2P khó quản lý tập trung hơn client-server do tính chất phân tán."
+        },
+        {
+          "id": "NT_C3_T4_Q6",
+          "question": "Cookie được lưu ở đâu?",
+          "options": {
+            "A": "Server",
+            "B": "DNS",
+            "C": "Router",
+            "D": "Client"
+          },
+          "correctAnswer": "D",
+          "explanation": "Cơ chế cookie gồm 4 thành phần chính: header Set-Cookie trong response, header Cookie trong request, file cookie lưu tại client (trình duyệt), và cơ sở dữ liệu backend ở server để tra cứu thông tin liên quan đến cookie đó. Các đáp án khác sai: a. Server: chỉ lưu dữ liệu liên quan trong database, không lưu chính file cookie. b. DNS: không liên quan đến cơ chế lưu trữ cookie. c. Router: không liên quan đến cơ chế lưu trữ cookie."
+        },
+        {
+          "id": "NT_C3_T4_Q7",
+          "question": "Trong quá trình gửi email bằng SMTP, bước nào diễn ra đầu tiên?",
+          "options": {
+            "A": "Đóng kết nối",
+            "B": "SMTP handshaking",
+            "C": "Gửi message",
+            "D": "TCP connection handshaking"
+          },
+          "correctAnswer": "D",
+          "explanation": "Trước khi trao đổi được bất kỳ lệnh SMTP nào (HELO/EHLO, MAIL FROM, RCPT TO, DATA...), client và server phải thiết lập kết nối TCP (thường ở cổng 25) trước. Các đáp án khác sai: a. Đóng kết nối: là bước cuối cùng của cả quy trình. b. SMTP handshaking: diễn ra sau khi đã có kết nối TCP. c. Gửi message: diễn ra sau SMTP handshaking, không phải bước đầu."
+        },
+        {
+          "id": "NT_C3_T4_Q8",
+          "question": "Địa chỉ tiến trình trong mạng Internet bao gồm yếu tố nào?",
+          "options": {
+            "A": "IP address + Port number",
+            "B": "MAC address",
+            "C": "URL",
+            "D": "Hostname"
+          },
+          "correctAnswer": "A",
+          "explanation": "Cặp (IP address, port number) tạo thành socket address, cho phép hệ điều hành định tuyến dữ liệu đến đúng tiến trình ứng dụng đang lắng nghe trên cổng đó. Các đáp án khác sai: b. MAC address: chỉ dùng để định danh thiết bị ở tầng liên kết dữ liệu (mạng local). c. URL: là địa chỉ tài nguyên web, cần DNS phân giải trước, không định danh tiến trình. d. Hostname: chỉ xác định máy, chưa đủ để xác định một tiến trình cụ thể trên máy đó."
+        },
+        {
+          "id": "NT_C3_T4_Q9",
+          "question": "Đặc điểm nào sau đây đúng với POP3?",
+          "options": {
+            "A": "Không dùng TCP",
+            "B": "Stateless protocol",
+            "C": "Stateful protocol",
+            "D": "Chỉ tải header"
+          },
+          "correctAnswer": "B",
+          "explanation": "POP3 không lưu trạng thái giữa các phiên — sau khi client tải mail về (và thường xoá khỏi server), server không giữ thông tin gì về phiên đó cho lần kết nối sau. Đây là điểm khác biệt lớn so với IMAP. Các đáp án khác sai: a. Không dùng TCP: sai, POP3 vẫn chạy trên TCP. c. Stateful protocol: sai, đây là đặc điểm của IMAP, không phải POP3. d. Chỉ tải header: sai, POP3 tải toàn bộ message chứ không chỉ header."
+        },
+        {
+          "id": "NT_C3_T4_Q10",
+          "question": "Trong DNS Resource Record (RR), trường TTL có ý nghĩa gì?",
+          "options": {
+            "A": "Xác định thời gian tồn tại",
+            "B": "Xác định tên miền",
+            "C": "Xác định loại bản ghi",
+            "D": "Xác định IP"
+          },
+          "correctAnswer": "A",
+          "explanation": "TTL quy định thời gian một bản ghi được phép lưu tại local DNS server trước khi phải truy vấn lại authoritative server, giúp cân bằng giữa hiệu năng (giảm số lần truy vấn) và tính cập nhật của dữ liệu. Các đáp án khác sai: b. Xác định tên miền: đó là trường Name. c. Xác định loại bản ghi: đó là trường Type/Class. d. Xác định IP: đó là trường Value."
+        },
+        {
+          "id": "NT_C3_T4_Q11",
+          "question": "Lệnh FTP nào dùng để upload file lên server?",
+          "options": {
+            "A": "USER",
+            "B": "RETR",
+            "C": "STOR",
+            "D": "LIST"
+          },
+          "correctAnswer": "C",
+          "explanation": "STOR (store) dùng để upload file từ client lên server; STOR và RETR đều hoạt động trên data connection riêng biệt với control connection. Các đáp án khác sai: a. USER: dùng để đăng nhập. b. RETR: dùng để download file từ server về client — ngược nghĩa với STOR. d. LIST: dùng để liệt kê nội dung thư mục trên server."
+        },
+        {
+          "id": "NT_C3_T4_Q12",
+          "question": "Nhược điểm chính của caching là gì?",
+          "options": {
+            "A": "Dữ liệu có thể lỗi thời",
+            "B": "Giảm bảo mật TLS",
+            "C": "Tốn CPU",
+            "D": "Tăng độ trễ"
+          },
+          "correctAnswer": "A",
+          "explanation": "Dữ liệu trong cache có thể trở nên lỗi thời (stale) nếu nguồn gốc đã thay đổi mà TTL chưa hết hạn hoặc cache chưa được cập nhật — đây cũng là lý do cơ chế Conditional GET (If-Modified-Since) ra đời. Các đáp án khác sai: b. Giảm bảo mật TLS: caching không liên quan trực tiếp đến bảo mật TLS. c. Tốn CPU: caching thường tiết kiệm tài nguyên xử lý hơn là tốn thêm. d. Tăng độ trễ: ngược với thực tế, caching thường giúp giảm độ trễ."
+        },
+        {
+          "id": "NT_C3_T4_Q13",
+          "question": "Trong mô hình client-server, server thường có đặc điểm nào?",
+          "options": {
+            "A": "Địa chỉ thay đổi liên tục",
+            "B": "Địa chỉ cố định",
+            "C": "Chỉ hoạt động khi có client",
+            "D": "Không xử lý yêu cầu"
+          },
+          "correctAnswer": "B",
+          "explanation": "Vì server phải luôn sẵn sàng (always-on host) để client kết nối bất cứ lúc nào, địa chỉ IP cố định (thường được đăng ký trỏ qua DNS) là điều kiện cần thiết để đảm bảo tính sẵn sàng đó. Các đáp án khác sai: a. Địa chỉ thay đổi liên tục: ngược lại là đặc điểm thường thấy ở client (IP động). c. Chỉ hoạt động khi có client: sai, server luôn bật kể cả khi chưa có client nào kết nối. d. Không xử lý yêu cầu: sai, xử lý yêu cầu chính là chức năng cốt lõi của server."
+        },
+        {
+          "id": "NT_C3_T4_Q14",
+          "question": "Nếu tài nguyên không thay đổi, server phản hồi gì trong Conditional GET?",
+          "options": {
+            "A": "200 OK",
+            "B": "500 Server Error",
+            "C": "304 Not Modified",
+            "D": "404 Not Found"
+          },
+          "correctAnswer": "C",
+          "explanation": "304 Not Modified được trả về khi client gửi kèm header If-Modified-Since và tài nguyên chưa thay đổi kể từ mốc thời gian đó; response này không có body, giúp tiết kiệm băng thông. Các đáp án khác sai: a. 200 OK: chỉ được trả về khi tài nguyên đã thay đổi (kèm nội dung mới). b. 500 Server Error: lỗi phía server, không liên quan ngữ cảnh này. d. 404 Not Found: nghĩa là tài nguyên không tồn tại, không liên quan Conditional GET thành công."
+        },
+        {
+          "id": "NT_C3_T4_Q15",
+          "question": "SMTP mã hóa message dưới dạng nào?",
+          "options": {
+            "A": "Binary 16-bit",
+            "B": "Unicode UTF-16",
+            "C": "ASCII 7-bit",
+            "D": "Hexadecimal"
+          },
+          "correctAnswer": "C",
+          "explanation": "Giới hạn ASCII 7-bit là di sản lịch sử của giao thức SMTP, nên các loại dữ liệu khác (hình ảnh, âm thanh, ký tự Unicode...) cần được mã hoá qua chuẩn MIME trước khi gửi. Các đáp án khác sai: a. Binary 16-bit: không phải bảng mã SMTP nguyên bản sử dụng. b. Unicode UTF-16: không phải bảng mã SMTP nguyên bản sử dụng. d. Hexadecimal: không phải bảng mã SMTP nguyên bản sử dụng."
+        },
+        {
+          "id": "NT_C3_T4_Q16",
+          "question": "DNS hỗ trợ cân bằng tải bằng cách nào?",
+          "options": {
+            "A": "Tăng TTL",
+            "B": "Dùng TCP multiplexing",
+            "C": "Giảm kích thước gói tin",
+            "D": "DNS rotation với nhiều địa chỉ IP"
+          },
+          "correctAnswer": "D",
+          "explanation": "Khi một domain trỏ tới nhiều địa chỉ IP, DNS server sẽ đổi thứ tự (rotate) các IP trả về cho mỗi truy vấn khác nhau, giúp phân tán traffic tương đối đều ra nhiều server vật lý. Các đáp án khác sai: a. Tăng TTL: chỉ ảnh hưởng đến thời gian cache, không liên quan cân bằng tải. b. Dùng TCP multiplexing: không phải cơ chế DNS sử dụng cho mục đích này. c. Giảm kích thước gói tin: không liên quan đến cân bằng tải."
+        },
+        {
+          "id": "NT_C3_T4_Q17",
+          "question": "DNS được sử dụng bởi giao thức nào sau đây?",
+          "options": {
+            "A": "FTP",
+            "B": "Tất cả các đáp án trên",
+            "C": "SMTP",
+            "D": "HTTP"
+          },
+          "correctAnswer": "B",
+          "explanation": "Gần như mọi giao thức tầng ứng dụng cần giao tiếp qua tên miền (thay vì IP) đều phải gọi đến DNS resolver trước khi thiết lập kết nối TCP thực sự — riêng SMTP còn cần tra cứu thêm loại bản ghi MX để biết mail server đích. Các đáp án khác sai: a, c, d (FTP, SMTP, HTTP riêng lẻ): không sai về nội dung, nhưng chưa đầy đủ vì cả ba giao thức đều cần DNS, nên đáp án đúng nhất phải là \"tất cả các đáp án trên\"."
+        },
+        {
+          "id": "NT_C3_T4_Q18",
+          "question": "Trong FTP, data connection có đặc điểm gì?",
+          "options": {
+            "A": "Non-persistent",
+            "B": "Không dùng TCP",
+            "C": "Persistent",
+            "D": "Stateless"
+          },
+          "correctAnswer": "A",
+          "explanation": "Control connection (cổng 21) giữ trạng thái đăng nhập và tồn tại xuyên suốt phiên làm việc (persistent, stateful). Data connection (cổng 20) chỉ mở khi cần truyền một file/lệnh cụ thể rồi đóng ngay sau đó. Các đáp án khác sai: b. Không dùng TCP: sai, FTP vẫn dùng TCP cho cả hai loại kết nối. c. Persistent: ngược lại với đặc điểm thực tế của data connection. d. Stateless: không phải khái niệm dùng để mô tả data connection trong ngữ cảnh này."
+        },
+        {
+          "id": "NT_C3_T4_Q19",
+          "question": "DNS hoạt động theo mô hình nào?",
+          "options": {
+            "A": "Ngẫu nhiên",
+            "B": "Phân tán và phân cấp",
+            "C": "Tuyến tính",
+            "D": "Tập trung"
+          },
+          "correctAnswer": "B",
+          "explanation": "Cấu trúc gồm Root DNS server → TLD server → Authoritative server giúp tránh single point of failure, giảm tải cho một server duy nhất, và cho phép quản lý phân quyền theo từng cấp domain. Các đáp án khác sai: a. Ngẫu nhiên: không phản ánh đúng kiến trúc có tổ chức của DNS. c. Tuyến tính: không phản ánh đúng cấu trúc phân cấp nhiều tầng. d. Tập trung: ngược lại, DNS được thiết kế để tránh tập trung vào một server duy nhất."
+        },
+        {
+          "id": "NT_C3_T4_Q20",
+          "question": "Trường nào trong DNS message chứa các truy vấn?",
+          "options": {
+            "A": "Answer",
+            "B": "Question",
+            "C": "Authority",
+            "D": "Additional"
+          },
+          "correctAnswer": "B",
+          "explanation": "Question field chứa tên miền cần tra (name) và loại truy vấn (type, ví dụ A cho IPv4, MX cho mail server). Các đáp án khác sai: a. Answer: chứa các resource record trả lời cho câu hỏi. c. Authority: chứa thông tin về các authoritative server khác. d. Additional: chứa thông tin bổ sung hữu ích (ví dụ IP tương ứng của server nêu trong Authority)."
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C3_T5",
+      "topicName": "Quiz Module 05 – TRANSPORT LAYER",
+      "questions": [
+        {
+          "id": "NT_C3_T5_Q1",
+          "question": "Dịch vụ nào thường sử dụng UDP thay vì TCP?",
+          "options": {
+            "A": "FTP",
+            "B": "HTTP",
+            "C": "Truyền phát video trực tuyến",
+            "D": "Gmail"
+          },
+          "correctAnswer": "C",
+          "explanation": "UDP không đảm bảo tin cậy (không xác nhận, không truyền lại gói mất) nhưng bù lại có độ trễ thấp và không tốn overhead thiết lập kết nối, phù hợp ứng dụng thời gian thực như streaming video, nơi độ trễ thấp quan trọng hơn việc nhận đủ 100% dữ liệu. FTP, HTTP và Gmail đều cần dữ liệu chính xác tuyệt đối (file, trang web, nội dung email), nên đều dùng TCP để đảm bảo không mất hay sai lệch dữ liệu."
+        },
+        {
+          "id": "NT_C3_T5_Q2",
+          "question": "Giao thức nào đảm bảo truyền dữ liệu tin cậy?",
+          "options": {
+            "A": "TCP",
+            "B": "UDP",
+            "C": "DNS",
+            "D": "IP"
+          },
+          "correctAnswer": "A",
+          "explanation": "TCP đảm bảo truyền tin cậy nhờ acknowledgment (ACK) xác nhận đã nhận, retransmission truyền lại gói mất, và kiểm soát thứ tự qua sequence number. UDP hoàn toàn không có các cơ chế này (best-effort). DNS là giao thức tầng ứng dụng dùng để phân giải tên miền, còn IP là giao thức tầng mạng chỉ định tuyến gói tin theo kiểu best-effort, không đảm nhiệm việc đảm bảo tin cậy end-to-end."
+        },
+        {
+          "id": "NT_C3_T5_Q3",
+          "question": "Chức năng nào KHÔNG thuộc tầng Transport?",
+          "options": {
+            "A": "Quản lý kết nối",
+            "B": "Phân đoạn và tái tạo dữ liệu",
+            "C": "Kiểm soát luồng",
+            "D": "Định tuyến gói tin qua nhiều mạng"
+          },
+          "correctAnswer": "D",
+          "explanation": "Định tuyến (routing) là chức năng của tầng Network (IP), chọn đường đi cho gói tin qua nhiều mạng — tầng Transport chỉ hoạt động ở mức logic end-to-end giữa hai tiến trình, không quan tâm đường đi vật lý. Quản lý kết nối (như 3-way handshake), phân đoạn/tái tạo dữ liệu, và kiểm soát luồng (flow control) đều là chức năng thực sự thuộc tầng Transport."
+        },
+        {
+          "id": "NT_C3_T5_Q4",
+          "question": "Trong TCP, khi đóng kết nối, gói tin nào được gửi đầu tiên?",
+          "options": {
+            "A": "ACK",
+            "B": "RST",
+            "C": "SYN",
+            "D": "FIN"
+          },
+          "correctAnswer": "D",
+          "explanation": "Khi một bên muốn đóng kết nối, nó gửi FIN (finish) báo không còn dữ liệu để gửi; vì TCP là kết nối song công (full-duplex) nên mỗi bên đều cần gửi FIN riêng. ACK chỉ là xác nhận đi kèm, không phải gói khởi đầu; SYN dùng thiết lập kết nối (three-way handshake), không phải đóng; RST dùng hủy bỏ đột ngột kết nối khi có lỗi, khác với đóng bình thường (graceful close)."
+        },
+        {
+          "id": "NT_C3_T5_Q5",
+          "question": "Kích thước tiêu đề của TCP và UDP lần lượt là:",
+          "options": {
+            "A": "32 byte và 16 byte",
+            "B": "8 byte và 20 byte",
+            "C": "16 byte và 32 byte",
+            "D": "20 byte và 8 byte"
+          },
+          "correctAnswer": "D",
+          "explanation": "Header TCP tối thiểu 20 byte (lên tới 60 byte nếu có Options), chứa sequence number, ACK number, flags, window size, checksum... Header UDP chỉ 8 byte gồm source port, destination port, length, checksum — nhẹ hơn nhiều vì UDP không cần cơ chế tin cậy hay kiểm soát luồng. Các đáp án còn lại đưa ra con số sai lệch hoặc đảo ngược thứ tự so với thực tế."
+        },
+        {
+          "id": "NT_C3_T5_Q6",
+          "question": "Ưu điểm chính của UDP so với TCP là gì?",
+          "options": {
+            "A": "Đảm bảo dữ liệu đến đúng thứ tự",
+            "B": "Có xác nhận dữ liệu",
+            "C": "Truyền nhanh, giảm độ trễ",
+            "D": "Hỗ trợ cơ chế cửa sổ trượt"
+          },
+          "correctAnswer": "C",
+          "explanation": "UDP không cần thiết lập kết nối, không có ACK hay truyền lại gói mất, không kiểm soát luồng/tắc nghẽn — header nhẹ và ít xử lý nên độ trễ thấp hơn hẳn TCP, phù hợp ứng dụng thời gian thực (streaming, voice/video call, game online). Đảm bảo đúng thứ tự, có ACK, và sliding window đều là đặc điểm của TCP, không phải UDP."
+        },
+        {
+          "id": "NT_C3_T5_Q7",
+          "question": "Cơ chế nào giúp TCP phát hiện và khôi phục gói tin bị mất?",
+          "options": {
+            "A": "Multiplexing",
+            "B": "CRC",
+            "C": "Retransmission Timeout và Fast Retransmit",
+            "D": "Port number"
+          },
+          "correctAnswer": "C",
+          "explanation": "Retransmission Timeout (RTO) tự động gửi lại nếu không nhận ACK trong thời gian ước lượng từ RTT; Fast Retransmit gửi lại ngay khi nhận 3 ACK trùng lặp liên tiếp mà không cần đợi hết timeout. Multiplexing chỉ phân phối dữ liệu đến đúng tiến trình dựa trên port; CRC là kiểm tra lỗi dữ liệu thường ở tầng Link; port number chỉ định danh tiến trình — cả ba đều không liên quan việc phát hiện mất gói."
+        },
+        {
+          "id": "NT_C3_T5_Q8",
+          "question": "Khi đánh giá lựa chọn giao thức cho ứng dụng thời gian thực (VoIP, gaming), tại sao UDP được ưu tiên hơn TCP?",
+          "options": {
+            "A": "UDP có cơ chế congestion control tốt hơn",
+            "B": "UDP đảm bảo dữ liệu toàn vẹn tuyệt đối",
+            "C": "UDP sử dụng three-way handshake",
+            "D": "UDP không yêu cầu xác nhận gói tin, giảm độ trễ"
+          },
+          "correctAnswer": "D",
+          "explanation": "Với ứng dụng thời gian thực, độ trễ thấp quan trọng hơn toàn vẹn dữ liệu tuyệt đối; UDP không chờ ACK hay truyền lại gói mất nên dữ liệu gửi ngay. UDP không hề có cơ chế congestion control (đặc điểm của TCP); UDP không đảm bảo toàn vẹn tuyệt đối — chính việc bỏ qua đảm bảo này giúp UDP nhanh hơn; three-way handshake là cơ chế của TCP, UDP hoàn toàn connectionless."
+        },
+        {
+          "id": "NT_C3_T5_Q9",
+          "question": "Ưu điểm chính của UDP trong trò chơi trực tuyến là:",
+          "options": {
+            "A": "Đảm bảo dữ liệu không mất gói",
+            "B": "Giảm thiểu độ trễ, phản hồi nhanh",
+            "C": "Có cơ chế congestion control",
+            "D": "Hỗ trợ sliding window"
+          },
+          "correctAnswer": "B",
+          "explanation": "Trạng thái game thay đổi liên tục nên dữ liệu cũ nhanh lỗi thời — chờ truyền lại gói mất như TCP chỉ gây trễ hình vô nghĩa; UDP gửi ngay giúp độ trễ thấp và mượt hơn, chấp nhận mất gói cũ vì chỉ cần trạng thái mới nhất. Đảm bảo không mất gói, congestion control, và sliding window đều là đặc điểm của TCP, tạo thêm overhead mà UDP cố tình bỏ qua để đổi lấy tốc độ."
+        },
+        {
+          "id": "NT_C3_T5_Q10",
+          "question": "Trong UDP, lý do chính để sử dụng là gì?",
+          "options": {
+            "A": "Có cơ chế sliding window",
+            "B": "Hỗ trợ nhiều máy khách hơn nhờ không trạng thái",
+            "C": "Bắt buộc phải bắt tay trước khi truyền",
+            "D": "Đảm bảo độ tin cậy tuyệt đối"
+          },
+          "correctAnswer": "B",
+          "explanation": "UDP là connectionless, không lưu trạng thái phiên cho từng client, nên server không phải duy trì tài nguyên riêng cho từng kết nối như TCP — phục vụ được nhiều client đồng thời với chi phí thấp (ví dụ DNS server). Sliding window là flow control của TCP, UDP không có; UDP không cần bắt tay trước khi truyền — đây là đặc trưng phân biệt chứ không phải lý do sử dụng; UDP không đảm bảo độ tin cậy — đây là điểm yếu, không phải lý do dùng."
+        },
+        {
+          "id": "NT_C3_T5_Q11",
+          "question": "DNS sử dụng UDP chủ yếu vì:",
+          "options": {
+            "A": "Hỗ trợ sliding window",
+            "B": "Có cơ chế bắt tay ba bước",
+            "C": "Cần độ tin cậy cao",
+            "D": "Truy vấn nhỏ, cần phản hồi nhanh"
+          },
+          "correctAnswer": "D",
+          "explanation": "Truy vấn DNS chỉ là gói nhỏ và phản hồi nhỏ, không cần overhead thiết lập kết nối và cơ chế tin cậy phức tạp của TCP — nếu mất gói chỉ cần gửi lại truy vấn. Sliding window và 3-way handshake là cơ chế của TCP, DNS qua UDP không dùng; DNS không yêu cầu độ tin cậy cao đến mức phải dùng TCP mọi lúc — chỉ chuyển sang TCP khi cần (zone transfer, phản hồi vượt kích thước UDP)."
+        },
+        {
+          "id": "NT_C3_T5_Q12",
+          "question": "Khi một host nhận TCP SYN segment với port không hỗ trợ, nó sẽ phản hồi bằng:",
+          "options": {
+            "A": "Reset segment (RST=1)",
+            "B": "FIN segment",
+            "C": "ICMP datagram",
+            "D": "ACK segment"
+          },
+          "correctAnswer": "A",
+          "explanation": "Host phản hồi ngay bằng RST để báo kết nối bị từ chối vì port không có tiến trình lắng nghe. FIN dùng đóng một kết nối đã thiết lập, trong khi kết nối ở đây chưa hề tạo ra; ICMP datagram (Port Unreachable) là cơ chế báo lỗi thường dùng cho UDP; ACK đơn thuần chỉ xác nhận, không thể dùng để từ chối yêu cầu kết nối đến port không tồn tại."
+        },
+        {
+          "id": "NT_C3_T5_Q13",
+          "question": "Ứng dụng nào thường sử dụng TCP thay vì UDP?",
+          "options": {
+            "A": "VoIP",
+            "B": "Google Meet",
+            "C": "Zoom",
+            "D": "HTTP"
+          },
+          "correctAnswer": "D",
+          "explanation": "HTTP truyền trang web, file, dữ liệu API... cần nhận đầy đủ, chính xác, đúng thứ tự nên cần cơ chế tin cậy của TCP (ACK, truyền lại, kiểm soát thứ tự). VoIP, Google Meet, Zoom đều là ứng dụng âm thanh/video thời gian thực, ưu tiên UDP để giảm độ trễ — chấp nhận mất vài gói còn hơn chờ TCP truyền lại gây trễ khó chịu."
+        },
+        {
+          "id": "NT_C3_T5_Q14",
+          "question": "Port number có vai trò gì trong tầng Transport?",
+          "options": {
+            "A": "Xác định địa chỉ IP",
+            "B": "Định danh socket để phân biệt tiến trình",
+            "C": "Quản lý luồng dữ liệu",
+            "D": "Kiểm tra lỗi dữ liệu"
+          },
+          "correctAnswer": "B",
+          "explanation": "Port number kết hợp IP address tạo socket address, định danh tiến trình cụ thể, giúp tầng Transport demultiplex đúng dữ liệu đến đúng tiến trình (ví dụ web server lắng nghe port 80/443). Xác định IP là chức năng tầng Network; quản lý luồng do trường window size đảm nhiệm; kiểm tra lỗi do trường checksum đảm nhiệm — không phải vai trò của port."
+        },
+        {
+          "id": "NT_C3_T5_Q15",
+          "question": "Tầng Transport trong mô hình OSI cung cấp dịch vụ gì?",
+          "options": {
+            "A": "Định tuyến dữ liệu giữa các mạng",
+            "B": "Quản lý địa chỉ IP",
+            "C": "Mã hóa dữ liệu trước khi gửi",
+            "D": "Chuyển phát host-to-host và process-to-process"
+          },
+          "correctAnswer": "D",
+          "explanation": "Tầng Transport chuyển dữ liệu end-to-end giữa hai tiến trình (process-to-process) trên hai host khác nhau, dựa trên nền chuyển phát host-to-host của tầng Network — là tầng đầu tiên xử lý dữ liệu ở mức ứng dụng-đến-ứng dụng. Định tuyến và quản lý IP thuộc tầng Network; mã hóa dữ liệu thường là chức năng của TLS/SSL nằm giữa Transport và Application, không phải Transport tự đảm nhiệm."
+        },
+        {
+          "id": "NT_C3_T5_Q16",
+          "question": "Trong cơ chế Multiplexing/Demultiplexing, mỗi socket được định danh bằng:",
+          "options": {
+            "A": "Port number",
+            "B": "Sequence number",
+            "C": "IP address",
+            "D": "Địa chỉ MAC"
+          },
+          "correctAnswer": "A",
+          "explanation": "Socket được định danh dựa trên port number (kết hợp IP tạo socket address); với UDP chỉ cần (dest IP, dest port), với TCP cần bộ 4 giá trị (source IP, source port, dest IP, dest port) để phân biệt từng kết nối. Sequence number dùng theo dõi thứ tự byte, không định danh socket; IP address chỉ xác định máy, chưa đủ phân biệt tiến trình; địa chỉ MAC thuộc tầng Link, không liên quan tầng Transport."
+        },
+        {
+          "id": "NT_C3_T5_Q17",
+          "question": "Cơ chế Flow Control của TCP sử dụng:",
+          "options": {
+            "A": "Sliding Window",
+            "B": "Port number",
+            "C": "CRC",
+            "D": "Fast Retransmit"
+          },
+          "correctAnswer": "A",
+          "explanation": "TCP dùng Sliding Window để flow control — bên nhận thông báo buffer còn trống (window size) qua header, bên gửi giới hạn lượng dữ liệu gửi chưa xác nhận để tránh tràn buffer bên nhận. Port number dùng định danh tiến trình; CRC kiểm tra lỗi dữ liệu ở tầng Link; Fast Retransmit thuộc cơ chế phát hiện/khôi phục mất gói, gắn với congestion control hơn là flow control."
+        },
+        {
+          "id": "NT_C3_T5_Q18",
+          "question": "So sánh TCP và UDP, nhận định nào đúng?",
+          "options": {
+            "A": "TCP nhanh hơn UDP vì có xác nhận dữ liệu",
+            "B": "UDP đảm bảo dữ liệu đến đúng thứ tự",
+            "C": "UDP nhẹ hơn TCP vì không cần bắt tay",
+            "D": "TCP có header nhỏ hơn UDP"
+          },
+          "correctAnswer": "C",
+          "explanation": "UDP connectionless, không 3-way handshake, không duy trì trạng thái kết nối, header chỉ 8 byte (so với tối thiểu 20 byte của TCP) — nhẹ hơn nhiều về overhead và độ trễ. Việc có ACK chính là nguyên nhân khiến TCP chậm hơn chứ không phải nhanh hơn; đảm bảo đúng thứ tự là đặc điểm của TCP; TCP có header lớn hơn UDP, không phải nhỏ hơn."
+        },
+        {
+          "id": "NT_C3_T5_Q19",
+          "question": "Trong TCP, quá trình bắt tay ba bước (three-way handshake) nhằm mục đích gì?",
+          "options": {
+            "A": "Kiểm tra lỗi trong gói tin",
+            "B": "Xác định địa chỉ IP của máy chủ",
+            "C": "Thiết lập kết nối đáng tin cậy",
+            "D": "Mã hóa dữ liệu trước khi gửi"
+          },
+          "correctAnswer": "C",
+          "explanation": "Bắt tay ba bước (SYN → SYN-ACK → ACK) đồng bộ hóa sequence number ban đầu và xác nhận cả hai bên sẵn sàng gửi/nhận, làm nền tảng cho các cơ chế tin cậy sau đó. Kiểm tra lỗi gói tin do checksum đảm nhiệm; xác định IP máy chủ là việc của DNS/tầng Network, xảy ra trước khi handshake bắt đầu; mã hóa dữ liệu là chức năng của TLS/SSL ở tầng cao hơn."
+        },
+        {
+          "id": "NT_C3_T5_Q20",
+          "question": "Trong TCP, trường Sequence Number dùng để:",
+          "options": {
+            "A": "Xác định port nguồn",
+            "B": "Đánh số thứ tự byte trong dòng dữ liệu",
+            "C": "Kiểm tra checksum",
+            "D": "Xác định địa chỉ MAC"
+          },
+          "correctAnswer": "B",
+          "explanation": "TCP xem dữ liệu như luồng byte liên tục, Sequence Number đánh số byte đầu tiên trong mỗi segment, giúp bên nhận sắp xếp lại segment đến sai thứ tự, phát hiện segment thiếu, và gửi ACK chính xác. Port nguồn do trường Source Port riêng đảm nhiệm; checksum do trường Checksum riêng; địa chỉ MAC thuộc tầng Link, không xuất hiện trong header TCP."
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C3_T6",
+      "topicName": "Quiz Module 06 – NETWORK LAYER",
+      "questions": [
+        {
+          "id": "NT_C3_T6_Q1",
+          "question": "Cho địa chỉ IP 192.168.10.34/27. Địa chỉ nào sau đây là địa chỉ mạng (Network Address)?",
+          "options": {
+            "A": "192.168.10.64",
+            "B": "192.168.10.31",
+            "C": "192.168.10.32",
+            "D": "192.168.10.0"
+          },
+          "correctAnswer": "C",
+          "explanation": "Với tiền tố /27, mỗi subnet có kích thước là 2^(32-27)=32 địa chỉ (bước nhảy là 32). Các dải mạng sẽ bắt đầu từ .0, .32, .64,... Địa chỉ IP 192.168.10.34 nằm trong dải từ 192.168.10.32 đến 192.168.10.63, do đó địa chỉ đại diện cho mạng này là 192.168.10.32."
+        },
+        {
+          "id": "NT_C3_T6_Q2",
+          "question": "Đặc điểm nào sau đây mô tả chính xác về mạng Virtual Circuit (Mạch ảo)?",
+          "options": {
+            "A": "Tất cả các gói tin thuộc cùng một kết nối đều đi qua một đường truyền cố định đã thiết lập",
+            "B": "Không yêu cầu bước thiết lập kết nối trước khi truyền dữ liệu",
+            "C": "Các gói tin trong cùng một phiên có thể di chuyển theo nhiều đường đi khác nhau",
+            "D": "Các thiết bị chuyển mạch không cần sử dụng bảng chuyển tiếp"
+          },
+          "correctAnswer": "A",
+          "explanation": "Mạng Virtual Circuit là mạng hướng kết nối (connection-oriented). Trước khi gửi dữ liệu, hệ thống phải thực hiện bước thiết lập đường đi cố định; do đó, tất cả các gói tin trong suốt phiên truyền đều nối đuôi nhau đi theo tuyến đường duy nhất này."
+        },
+        {
+          "id": "NT_C3_T6_Q3",
+          "question": "Trong các thuật toán định tuyến (Routing), chi phí của toàn bộ đường đi (Path Cost) được xác định như thế nào?",
+          "options": {
+            "A": "Lấy giá trị chi phí lớn nhất trong số các cạnh cấu thành",
+            "B": "Bằng tổng chi phí của tất cả các cạnh trên đường đi đó",
+            "C": "Được gán giá trị ngẫu nhiên tùy thuộc vào thiết bị",
+            "D": "Bằng trung bình cộng chi phí của các cạnh"
+          },
+          "correctAnswer": "B",
+          "explanation": "Chi phí tổng thể của một đường đi từ nút nguồn đến nút đích trong mạng được tính bằng tổng chi phí (metric/weight) của từng đoạn liên kết (cạnh) mà gói tin đi qua. Thuật toán định tuyến sẽ ưu tiên đường đi có tổng chi phí nhỏ nhất."
+        },
+        {
+          "id": "NT_C3_T6_Q4",
+          "question": "Thông điệp nào trong quy trình DHCP đánh dấu sự xác nhận hoàn tất việc cấp phát địa chỉ IP cho client?",
+          "options": {
+            "A": "DHCP Offer",
+            "B": "DHCP Discover",
+            "C": "DHCP ACK",
+            "D": "DHCP Request"
+          },
+          "correctAnswer": "C",
+          "explanation": "Tiến trình DHCP diễn ra qua 4 bước (DORA): Discover → Offer → Request → ACK. Thông điệp DHCP ACK (Acknowledge) do DHCP Server gửi lại để xác nhận chính thức cho phép Client sử dụng địa chỉ IP cùng các thông số cấu hình mạng đi kèm."
+        },
+        {
+          "id": "NT_C3_T6_Q5",
+          "question": "Địa chỉ IPv4 Private (Tư nhân) được định nghĩa theo RFC 1918 có tính chất nào dưới đây?",
+          "options": {
+            "A": "Có khả năng tự định tuyến trực tiếp trên mạng Internet toàn cầu",
+            "B": "Luôn được gán làm địa chỉ Public cho các máy chủ dịch vụ",
+            "C": "Được tổ chức ICANN phân bổ và quản lý trực tiếp cho người dùng cuối",
+            "D": "Chỉ dùng để đặt cho các thiết bị trong không gian mạng nội bộ"
+          },
+          "correctAnswer": "D",
+          "explanation": "Địa chỉ IPv4 private (như 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) được thiết kế riêng cho mạng nội bộ (LAN). Các router trên mạng Internet công cộng sẽ chặn (drop) các gói tin mang địa chỉ private này; muốn ra Internet cần phải thông qua kỹ thuật NAT."
+        },
+        {
+          "id": "NT_C3_T6_Q6",
+          "question": "Trong phân loại địa chỉ IPv4 Classful, octet đầu tiên của Class A nằm trong phạm vi giá trị nào?",
+          "options": {
+            "A": "192–223",
+            "B": "128–191",
+            "C": "224–239",
+            "D": "1–126"
+          },
+          "correctAnswer": "D",
+          "explanation": "Địa chỉ Class A có octet đầu tiên dạng 0xxxxxxx (tương đương dải 1–126, loại trừ 127 dùng cho Loopback). Class B nằm trong dải 128–191 (10xxxxxx), Class C từ 192–223 (110xxxxx), và Class D từ 224–239 (1110xxxx)."
+        },
+        {
+          "id": "NT_C3_T6_Q7",
+          "question": "Khái niệm MTU (Maximum Transmission Unit) được hiểu đúng là gì?",
+          "options": {
+            "A": "Dung lượng nhỏ nhất mà một gói tin phải đạt được",
+            "B": "Độ dài cố định của phần IP Header",
+            "C": "Kích thước dữ liệu tối đa mà Tầng Ứng dụng (Application Layer) có thể xử lý",
+            "D": "Kích thước khung dữ liệu tối đa có thể di chuyển qua một liên kết vật lý"
+          },
+          "correctAnswer": "D",
+          "explanation": "MTU quy định kích thước tối đa của một đơn vị dữ liệu (PDU) có thể truyền tải qua một liên kết mạng vật lý cụ thể (ví dụ: Ethernet thông thường có MTU = 1500 bytes). Nếu gói IP lớn hơn MTU của liên kết, nó bắt buộc phải bị phân mảnh (fragmentation)."
+        },
+        {
+          "id": "NT_C3_T6_Q8",
+          "question": "Trong mô hình mạng Virtual Circuit, chỉ số VC number đóng vai trò gì?",
+          "options": {
+            "A": "Mã hóa nội dung dữ liệu được truyền",
+            "B": "Định danh duy nhất cho một máy host trên toàn mạng",
+            "C": "Định danh đường đi logic cho từng kết nối trên từng đoạn liên kết",
+            "D": "Phát hiện và sửa lỗi dữ liệu ở tầng liên kết"
+          },
+          "correctAnswer": "C",
+          "explanation": "Trong mạng Virtual Circuit, gói tin không chứa địa chỉ đích đầy đủ mà chỉ mang chỉ số VC (Virtual Circuit number). Chỉ số này đại diện cho đường đi logic và có thể thay đổi trên từng chặng (link-by-link) khi qua mỗi router dựa vào bảng chuyển tiếp."
+        },
+        {
+          "id": "NT_C3_T6_Q9",
+          "question": "Thuật ngữ Interface (Giao diện) trong ngữ cảnh kiến trúc mạng IP được định nghĩa là gì?",
+          "options": {
+            "A": "Chương trình ứng dụng chạy trên thiết bị người dùng",
+            "B": "Dung lượng bộ nhớ RAM của thiết bị định tuyến",
+            "C": "Giao thức điều khiển truyền tải dữ liệu giữa các tiến trình",
+            "D": "Ranh giới kết nối vật lý giữa một host/router và liên kết mạng"
+          },
+          "correctAnswer": "D",
+          "explanation": "Interface là điểm kết nối giữa một thiết bị (Host hoặc Router) với đường truyền vật lý. Một router có nhiều interface tương ứng với việc nối vào nhiều phân đoạn mạng khác nhau, và mỗi interface này đều có một địa chỉ IP riêng."
+        },
+        {
+          "id": "NT_C3_T6_Q10",
+          "question": "Tổ chức cấp cao nào chịu trách nhiệm quản lý và phân bổ không gian địa chỉ IP trên phạm vi toàn cầu?",
+          "options": {
+            "A": "IETF",
+            "B": "IEEE",
+            "C": "ICANN",
+            "D": "ISO"
+          },
+          "correctAnswer": "C",
+          "explanation": "ICANN (thông qua cơ quan thuộc cấp IANA) chịu trách nhiệm quản lý tổng thể và phân bổ vùng địa chỉ IP toàn cầu cho các tổ chức đăng ký Internet khu vực (RIRs). IETF tập trung phát triển tiêu chuẩn giao thức, còn IEEE phát triển chuẩn mạng vật lý/dữ liệu."
+        },
+        {
+          "id": "NT_C3_T6_Q11",
+          "question": "Ở dạng nhị phân, các bit đầu tiên của octet 1 đối với địa chỉ thuộc Class C luôn bắt đầu bằng:",
+          "options": {
+            "A": "0",
+            "B": "10",
+            "C": "1110",
+            "D": "110"
+          },
+          "correctAnswer": "D",
+          "explanation": "Quy tắc nhận dạng bit đầu tiên cho các lớp IPv4 classful: Class A bắt đầu bằng 0, Class B bắt đầu bằng 10, Class C bắt đầu bằng 110 (tương ứng dải thập phân 192–223), và Class D bắt đầu bằng 1110."
+        },
+        {
+          "id": "NT_C3_T6_Q12",
+          "question": "Trong kỹ thuật NAT, giao thức UPnP (Universal Plug and Play) mang lại lợi ích gì?",
+          "options": {
+            "A": "Mã hóa các dòng dữ liệu đi qua thiết bị NAT",
+            "B": "Cho phép ứng dụng tự động cấu hình ánh xạ cổng (port mapping) giữa IP Private và Public",
+            "C": "Tăng giá trị thời gian sống (TTL) của gói tin",
+            "D": "Thay thế DHCP để cấp phát IP tự động trong LAN"
+          },
+          "correctAnswer": "B",
+          "explanation": "UPnP mở ra cơ chế NAT traversal, cho phép các ứng dụng (như game online, P2P) tự động yêu cầu router NAT tạo quy tắc chuyển tiếp cổng (port forwarding/mapping), giúp các thiết bị bên ngoài Internet chủ động khởi tạo kết nối vào thiết bị trong mạng private mà không cần cấu hình thủ công."
+        },
+        {
+          "id": "NT_C3_T6_Q13",
+          "question": "Router mặc định (Default router) kết nối trực tiếp với một host còn được gọi bằng thuật ngữ nào?",
+          "options": {
+            "A": "Core router",
+            "B": "First-hop router",
+            "C": "Border router",
+            "D": "Gateway server"
+          },
+          "correctAnswer": "B",
+          "explanation": "Router chặng đầu tiên (First-hop router) hay Default Gateway là thiết bị định tuyến đầu tiên tiếp nhận gói tin khi một host muốn gửi dữ liệu ra ngoài phân đoạn mạng nội bộ của nó."
+        },
+        {
+          "id": "NT_C3_T6_Q14",
+          "question": "Cho địa chỉ IP 192.168.10.34/27. Địa chỉ quảng bá (Broadcast Address) của dải mạng này là gì?",
+          "options": {
+            "A": "192.168.10.64",
+            "B": "192.168.10.63",
+            "C": "192.168.10.255",
+            "D": "192.168.10.31"
+          },
+          "correctAnswer": "B",
+          "explanation": "Subnet /27 chứa địa chỉ IP 192.168.10.34 có địa chỉ mạng là 192.168.10.32 và kích thước dải là 32 địa chỉ. Do đó, địa chỉ mạng tiếp theo sẽ là 192.168.10.64. Địa chỉ broadcast là địa chỉ liền trước mạng kế tiếp, tức là 192.168.10.63."
+        },
+        {
+          "id": "NT_C3_T6_Q15",
+          "question": "Trong kỹ thuật Connection Reversal áp dụng cho NAT traversal, nút trung gian giữ vai trò gì?",
+          "options": {
+            "A": "Đóng vai trò làm DHCP relay agent",
+            "B": "Đóng vai trò là DNS server phân giải địa chỉ",
+            "C": "Thay thế NAT server xử lý gói tin",
+            "D": "Làm điểm kết nối trung gian để hỗ trợ thiết lập kết nối gián tiếp giữa hai peer"
+          },
+          "correctAnswer": "D",
+          "explanation": "Khi một peer nằm sau NAT không thể nhận kết nối trực tiếp từ bên ngoài, nó sẽ kết nối trước tới một peer/server trung gian có IP Public. Nút trung gian này sẽ thông báo cho peer đó chủ động mở kết nối ngược ra (connection reversal) tới bên yêu cầu."
+        },
+        {
+          "id": "NT_C3_T6_Q16",
+          "question": "Subnet mask mặc định (Default Subnet Mask) áp dụng cho địa chỉ thuộc Class A là gì?",
+          "options": {
+            "A": "255.255.255.255",
+            "B": "255.255.255.0",
+            "C": "255.0.0.0",
+            "D": "255.255.0.0"
+          },
+          "correctAnswer": "C",
+          "explanation": "Class A dành 8 bit đầu cho Network ID và 24 bit sau cho Host ID, tương ứng với mặt nạ mạng mặc định là 255.0.0.0 (/8). (Class B là 255.255.0.0 và Class C là 255.255.255.0)."
+        },
+        {
+          "id": "NT_C3_T6_Q17",
+          "question": "Công cụ Traceroute tận dụng cơ chế nào của giao thức IP để xác định danh sách các router trung gian?",
+          "options": {
+            "A": "Phát tin broadcast ARP toàn mạng",
+            "B": "Tăng dần giá trị trường TTL (Time To Live) từ 1",
+            "C": "Gửi các gói tin TCP SYN tạo kết nối",
+            "D": "Sử dụng thông điệp ICMP Echo Request tiêu chuẩn"
+          },
+          "correctAnswer": "B",
+          "explanation": "Traceroute gửi chuỗi gói tin với TTL tăng dần (1, 2, 3,...). Khi gói tin có TTL=1 đến router đầu tiên, TTL giảm về 0, router sẽ hủy gói tin và phản hồi lại thông điệp \"ICMP Time Exceeded\", giúp Traceroute xác định được IP của router chặng đó."
+        },
+        {
+          "id": "NT_C3_T6_Q18",
+          "question": "Địa chỉ IP 130.25.60.1 được xếp vào lớp địa chỉ nào?",
+          "options": {
+            "A": "Class C",
+            "B": "Class B",
+            "C": "Class D",
+            "D": "Class A"
+          },
+          "correctAnswer": "B",
+          "explanation": "Octet đầu tiên của địa chỉ là 130, thuộc khoảng giá trị từ 128 đến 191. Đây là dải nhận dạng dành riêng cho địa chỉ lớp B (Class B)."
+        },
+        {
+          "id": "NT_C3_T6_Q19",
+          "question": "Trường Flags trong cấu trúc IP Header đảm nhận chức năng gì trong quá trình phân mảnh gói tin?",
+          "options": {
+            "A": "Điều khiển tiến trình phân mảnh và chỉ thị fragment cuối cùng",
+            "B": "Lưu trữ địa chỉ thiết bị nhận dữ liệu",
+            "C": "Khai báo giao thức tầng trên nhận dữ liệu",
+            "D": "Phát hiện lỗi toàn vẹn của phần Header"
+          },
+          "correctAnswer": "A",
+          "explanation": "Trường Flags (3 bits) chứa bit DF (Don't Fragment - cấm phân mảnh) và bit MF (More Fragments). Bit MF được dùng để báo hiệu cho phía nhận biết gói tin hiện tại có phải là mảnh cuối cùng (MF=0) hay vẫn còn các mảnh tiếp theo (MF=1)."
+        },
+        {
+          "id": "NT_C3_T6_Q20",
+          "question": "Địa chỉ IPv4 tiêu chuẩn có tổng chiều dài bao nhiêu bit?",
+          "options": {
+            "A": "32 bit",
+            "B": "64 bit",
+            "C": "16 bit",
+            "D": "128 bit"
+          },
+          "correctAnswer": "A",
+          "explanation": "Địa chỉ IPv4 bao gồm 32 bit nhị phân, thường được biểu diễn dưới dạng 4 octet thập phân phân cách bởi dấu chấm (địa chỉ IPv6 mới có chiều dài 128 bit)."
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C3_T7",
+      "topicName": "Quiz Module 07 – NETWORK ACCESS LAYER",
+      "questions": [
+        {
+          "id": "NT_C3_T7_Q1",
+          "question": "So sánh ưu điểm của Switch với Hub trong mạng LAN?",
+          "options": {
+            "A": "Switch giảm collision, Hub không",
+            "B": "Switch không cần địa chỉ MAC",
+            "C": "Switch rẻ hơn Hub",
+            "D": "Switch giảm broadcast, Hub không"
+          },
+          "correctAnswer": "A",
+          "explanation": "Hub là thiết bị tầng Physical, chỉ phát lại tín hiệu ra mọi cổng nên tất cả máy nằm chung một collision domain. Switch (tầng Data Link) học bảng MAC và chỉ chuyển frame đến đúng cổng đích, nên mỗi cổng là một collision domain riêng. Switch không giảm được broadcast vì broadcast frame vẫn được chuyển ra mọi cổng (muốn chia broadcast domain phải dùng VLAN hoặc router). Switch cần địa chỉ MAC để xây bảng chuyển tiếp và có giá cao hơn Hub."
+        },
+        {
+          "id": "NT_C3_T7_Q2",
+          "question": "Trong mô hình Star, nếu một máy tính bị hỏng thì điều gì xảy ra?",
+          "options": {
+            "A": "Chỉ máy đó bị ảnh hưởng",
+            "B": "Toàn mạng ngừng hoạt động",
+            "C": "Tất cả thiết bị mất kết nối",
+            "D": "Hub ngừng hoạt động"
+          },
+          "correctAnswer": "A",
+          "explanation": "Trong mô hình Star, mỗi máy nối riêng đến thiết bị trung tâm bằng một đường cáp, nên máy hỏng hoặc đứt cáp chỉ làm mất kết nối của chính máy đó. Điểm yếu của Star nằm ở thiết bị trung tâm: nếu Hub/Switch hỏng thì toàn mạng mới ngừng hoạt động. Vì vậy các phương án B, C, D chỉ đúng khi thiết bị trung tâm hỏng chứ không phải khi một máy tính hỏng."
+        },
+        {
+          "id": "NT_C3_T7_Q3",
+          "question": "Hiện tượng gây nhiễu giữa các cặp dây xoắn đôi gọi là gì?",
+          "options": {
+            "A": "Phản xạ (reflection)",
+            "B": "Khúc xạ (refraction)",
+            "C": "Nhiễu xuyên âm (crosstalk)",
+            "D": "Suy hao (attenuation)"
+          },
+          "correctAnswer": "C",
+          "explanation": "Crosstalk xảy ra khi tín hiệu điện từ của một cặp dây lan sang cặp dây bên cạnh. Đây là lý do cáp xoắn đôi phải xoắn các sợi lại với nhau để triệt tiêu nhiễu. Suy hao (attenuation) là tín hiệu yếu dần theo khoảng cách; phản xạ và khúc xạ là hiện tượng của sóng/ánh sáng khi gặp môi trường khác, không phải nhiễu giữa các cặp dây."
+        },
+        {
+          "id": "NT_C3_T7_Q4",
+          "question": "Loại cáp nào rẻ và phổ biến nhất trong mạng LAN?",
+          "options": {
+            "A": "UTP Cat5",
+            "B": "STP",
+            "C": "Cáp quang",
+            "D": "Cáp đồng trục"
+          },
+          "correctAnswer": "A",
+          "explanation": "UTP (Unshielded Twisted Pair) không có lớp chống nhiễu bọc ngoài nên giá rẻ, dễ lắp đặt và là chuẩn phổ biến nhất trong mạng LAN. STP có thêm lớp bọc chống nhiễu nên đắt hơn; cáp đồng trục ngày nay ít dùng; cáp quang cho tốc độ và khoảng cách rất lớn nhưng chi phí cao nhất."
+        },
+        {
+          "id": "NT_C3_T7_Q5",
+          "question": "Loại cáp nào hỗ trợ tần số đến 250 MHz và giảm nhiễu hơn Cat5?",
+          "options": {
+            "A": "Cat3",
+            "B": "Cat5e",
+            "C": "Cat6",
+            "D": "Cat7"
+          },
+          "correctAnswer": "C",
+          "explanation": "Cat6 hỗ trợ băng thông đến 250 MHz (chạy được Gigabit, và 10 Gbps ở khoảng cách ngắn) và có cấu trúc chống nhiễu tốt hơn Cat5. Các loại khác không khớp: Cat3 chỉ 16 MHz, Cat5e 100 MHz, còn Cat7 lên tới 600 MHz."
+        },
+        {
+          "id": "NT_C3_T7_Q6",
+          "question": "Trong địa chỉ MAC, bao nhiêu bit đầu tiên dùng để xác định nhà sản xuất (OUI)?",
+          "options": {
+            "A": "48",
+            "B": "16",
+            "C": "24",
+            "D": "32"
+          },
+          "correctAnswer": "C",
+          "explanation": "Địa chỉ MAC dài 48 bit. 24 bit đầu là OUI (Organizationally Unique Identifier) do IEEE cấp cho từng nhà sản xuất, 24 bit sau là số serial do nhà sản xuất tự gán cho từng card mạng, nhờ đó mỗi địa chỉ MAC là duy nhất toàn cầu. 48 bit là độ dài của toàn bộ địa chỉ, còn 16 và 32 không tương ứng với phần nào trong cấu trúc này."
+        },
+        {
+          "id": "NT_C3_T7_Q7",
+          "question": "Phương pháp nào cho phép thiết bị truyền dữ liệu khi chiếm được token?",
+          "options": {
+            "A": "CSMA/CA",
+            "B": "CSMA/CD",
+            "C": "Token Passing",
+            "D": "Polling"
+          },
+          "correctAnswer": "C",
+          "explanation": "Trong Token Passing (Token Ring, FDDI), một khung đặc biệt gọi là token lưu thông vòng quanh mạng, và thiết bị nào giữ token mới được phép truyền dữ liệu. Vì tại mỗi thời điểm chỉ một thiết bị có token nên không xảy ra đụng độ. CSMA/CD và CSMA/CA là các phương pháp truy cập ngẫu nhiên (nghe đường truyền rồi gửi): CSMA/CD phát hiện va chạm trong Ethernet có dây, CSMA/CA tránh va chạm trong Wi-Fi. Polling là cơ chế trạm trung tâm lần lượt hỏi từng thiết bị xem có dữ liệu cần gửi không, không dùng token."
+        },
+        {
+          "id": "NT_C3_T7_Q8",
+          "question": "Thiết bị nào khuếch đại tín hiệu nhưng không xử lý nội dung?",
+          "options": {
+            "A": "Router",
+            "B": "Bridge",
+            "C": "Switch",
+            "D": "Repeater"
+          },
+          "correctAnswer": "D",
+          "explanation": "Repeater hoạt động ở tầng Physical, chỉ nhận tín hiệu đã suy hao, khuếch đại hoặc tái tạo rồi phát tiếp để kéo dài khoảng cách mạng, mà không đọc hay xử lý nội dung frame. Bridge và Switch (tầng Data Link) đọc địa chỉ MAC để quyết định chuyển frame, còn Router (tầng Network) đọc địa chỉ IP để định tuyến, nên cả ba đều xử lý nội dung."
+        },
+        {
+          "id": "NT_C3_T7_Q9",
+          "question": "Thiết bị nào chia nhỏ collision domain nhưng không chia broadcast domain?",
+          "options": {
+            "A": "Gateway",
+            "B": "Router",
+            "C": "Hub",
+            "D": "Switch"
+          },
+          "correctAnswer": "D",
+          "explanation": "Mỗi cổng của Switch là một collision domain riêng, nhưng broadcast frame vẫn được chuyển ra mọi cổng nên toàn bộ vẫn chung một broadcast domain (muốn chia nhỏ phải dùng VLAN). Hub không chia được collision domain vì chỉ phát lại tín hiệu ra mọi cổng. Router chia cả collision lẫn broadcast domain vì không chuyển tiếp broadcast. Gateway cũng ngăn broadcast vì hoạt động ở tầng cao và chuyển đổi giữa các mạng khác nhau."
+        },
+        {
+          "id": "NT_C3_T7_Q10",
+          "question": "Điểm khác biệt chính giữa Ethernet II và Ethernet 802.3 là gì?",
+          "options": {
+            "A": "Ethernet 802.3 hỗ trợ tốc độ cao hơn",
+            "B": "Ethernet II không có địa chỉ MAC",
+            "C": "Ethernet II dùng trường Type để xác định giao thức tầng trên",
+            "D": "Ethernet 802.3 không có FCS"
+          },
+          "correctAnswer": "C",
+          "explanation": "Trường 2 byte sau địa chỉ MAC nguồn có ý nghĩa khác nhau giữa hai chuẩn. Ethernet II (DIX) dùng nó làm Type (ví dụ 0x0800 là IPv4, 0x0806 là ARP, 0x86DD là IPv6) để biết gói tin thuộc giao thức nào ở tầng trên. Ethernet 802.3 dùng nó làm Length (độ dài dữ liệu) và cần thêm header LLC (802.2) để xác định giao thức tầng trên. Cả hai chuẩn đều có địa chỉ MAC và FCS, tốc độ không phải điểm khác biệt giữa hai định dạng frame này."
+        },
+        {
+          "id": "NT_C3_T7_Q11",
+          "question": "Trong Ethernet, độ dài tối thiểu của một frame là bao nhiêu byte?",
+          "options": {
+            "A": "32",
+            "B": "1518",
+            "C": "46",
+            "D": "64"
+          },
+          "correctAnswer": "D",
+          "explanation": "Frame Ethernet tối thiểu là 64 byte, gồm header 14 byte (MAC đích 6 + MAC nguồn 6 + Type/Length 2), dữ liệu tối thiểu 46 byte và FCS 4 byte. Nếu dữ liệu ít hơn 46 byte, hệ thống sẽ chèn thêm byte đệm (padding). Độ dài tối thiểu này đảm bảo bên gửi vẫn đang phát khi tín hiệu va chạm quay về, nhờ đó CSMA/CD phát hiện được đụng độ. Đáp án 46 là kích thước tối thiểu của phần dữ liệu chứ không phải của cả frame, còn 1518 là kích thước tối đa của frame."
+        },
+        {
+          "id": "NT_C3_T7_Q12",
+          "question": "Đơn vị nào dùng để đo suy hao tín hiệu trong mạng?",
+          "options": {
+            "A": "Decibel",
+            "B": "Ohm",
+            "C": "Volt",
+            "D": "Hertz"
+          },
+          "correctAnswer": "A",
+          "explanation": "Suy hao (attenuation) được đo bằng decibel (dB), là đơn vị logarit biểu thị tỉ lệ giữa công suất tín hiệu đầu vào và đầu ra. Giá trị dB càng lớn thì tín hiệu mất càng nhiều trên đường truyền. Ohm đo điện trở, Volt đo hiệu điện thế và Hertz đo tần số, nên không dùng để đo mức suy hao."
+        },
+        {
+          "id": "NT_C3_T7_Q13",
+          "question": "So sánh ưu nhược điểm của CSMA/CD và Token Passing trong mạng tải nặng?",
+          "options": {
+            "A": "Cả hai đều kém hiệu quả khi tải nặng",
+            "B": "CSMA/CD hiệu quả hơn khi tải nặng",
+            "C": "Token Passing không dùng trong mạng tải nặng",
+            "D": "Token Passing hiệu quả hơn khi tải nặng"
+          },
+          "correctAnswer": "D",
+          "explanation": "Khi tải nặng, nhiều trạm cùng muốn gửi nên CSMA/CD xảy ra đụng độ liên tục, mỗi lần phải chờ backoff rồi gửi lại, khiến hiệu suất giảm mạnh. Token Passing không có va chạm và mỗi trạm đều được đảm bảo lượt truyền trong thời gian xác định, nên hiệu suất ổn định khi tải cao. Đổi lại, khi tải nhẹ Token Passing lại kém hơn vì trạm phải chờ token dù đường truyền đang rảnh, còn CSMA/CD gửi được ngay."
+        },
+        {
+          "id": "NT_C3_T7_Q14",
+          "question": "Phương pháp truy cập đường truyền nào được Ethernet sử dụng?",
+          "options": {
+            "A": "CSMA/CD",
+            "B": "CSMA/CA",
+            "C": "Polling",
+            "D": "Token Passing"
+          },
+          "correctAnswer": "A",
+          "explanation": "Ethernet có dây dùng CSMA/CD (Carrier Sense Multiple Access with Collision Detection): trạm nghe đường truyền, gửi khi rảnh, nếu phát hiện va chạm thì dừng và chờ một khoảng ngẫu nhiên rồi gửi lại. CSMA/CA dùng cho Wi-Fi, Token Passing dùng cho Token Ring/FDDI, còn Polling là cơ chế hỏi lần lượt từng thiết bị, không phải của Ethernet."
+        },
+        {
+          "id": "NT_C3_T7_Q15",
+          "question": "Trong mạng, thêm Switch sẽ ảnh hưởng thế nào đến collision domain?",
+          "options": {
+            "A": "Không thay đổi",
+            "B": "Làm tăng số vùng collision domain, giảm đụng độ",
+            "C": "Làm tăng broadcast domain",
+            "D": "Làm giảm số vùng collision domain, tăng đụng độ"
+          },
+          "correctAnswer": "B",
+          "explanation": "Mỗi cổng Switch là một collision domain riêng, nên thêm Switch sẽ tách mạng thành nhiều collision domain nhỏ hơn, mỗi vùng có ít thiết bị tranh chấp hơn nên đụng độ giảm. Switch không chia broadcast domain (broadcast vẫn được chuyển ra mọi cổng), vì vậy broadcast domain không tăng. Các phương án còn lại đều ngược với thực tế."
+        },
+        {
+          "id": "NT_C3_T7_Q16",
+          "question": "Trong kiểm tra cáp mạng, thông số NEXT (Near-End Crosstalk) đo gì?",
+          "options": {
+            "A": "Suy hao tín hiệu",
+            "B": "Nhiễu xen gần giữa các cặp dây",
+            "C": "Điện trở cáp",
+            "D": "Độ trễ truyền tín hiệu"
+          },
+          "correctAnswer": "B",
+          "explanation": "NEXT đo mức tín hiệu từ một cặp dây lan sang cặp dây khác, được đo ở đầu gần phía thiết bị phát. Giá trị NEXT càng cao thì chất lượng cáp càng tốt vì nhiễu xuyên âm càng nhỏ. Suy hao tín hiệu đo bằng chỉ số Attenuation, điện trở đo bằng Resistance, còn độ trễ truyền tín hiệu là Propagation Delay, nên đều là các thông số khác trong kiểm tra cáp."
+        },
+        {
+          "id": "NT_C3_T7_Q17",
+          "question": "Mạng không dây thường sử dụng cơ chế truy cập nào?",
+          "options": {
+            "A": "CSMA/CA",
+            "B": "Polling",
+            "C": "CSMA/CD",
+            "D": "Token Ring"
+          },
+          "correctAnswer": "A",
+          "explanation": "Mạng không dây (Wi-Fi 802.11) dùng CSMA/CA (Collision Avoidance). Thiết bị không thể vừa phát vừa nghe để phát hiện va chạm như Ethernet có dây, nên phải tránh va chạm từ trước bằng cách chờ đường truyền rảnh, backoff ngẫu nhiên và dùng cơ chế ACK xác nhận. CSMA/CD không áp dụng được trong môi trường không dây, còn Polling và Token Ring không phải cơ chế phổ biến của Wi-Fi."
+        },
+        {
+          "id": "NT_C3_T7_Q18",
+          "question": "Chức năng chính của tầng vật lý (Physical Layer) trong mô hình OSI là gì?",
+          "options": {
+            "A": "Truyền các bit thô qua môi trường truyền dẫn",
+            "B": "Phát hiện và sửa lỗi",
+            "C": "Định tuyến gói tin giữa các mạng",
+            "D": "Quản lý địa chỉ logic"
+          },
+          "correctAnswer": "A",
+          "explanation": "Tầng Physical chỉ lo việc truyền chuỗi bit 0/1 dưới dạng tín hiệu điện, ánh sáng hoặc sóng vô tuyến, gồm các đặc tả về cáp, đầu nối, điện áp và tốc độ bit. Phát hiện lỗi là việc của tầng Data Link (FCS), còn định tuyến gói tin và quản lý địa chỉ logic (IP) thuộc tầng Network."
+        },
+        {
+          "id": "NT_C3_T7_Q19",
+          "question": "Thiết bị nào hoạt động ở tầng liên kết dữ liệu (Data Link Layer)?",
+          "options": {
+            "A": "Router",
+            "B": "Repeater",
+            "C": "Gateway",
+            "D": "Switch"
+          },
+          "correctAnswer": "D",
+          "explanation": "Switch hoạt động ở tầng Data Link, dựa vào địa chỉ MAC để chuyển frame. Repeater (và Hub) hoạt động ở tầng Physical, chỉ khuếch đại tín hiệu. Router hoạt động ở tầng Network, dùng địa chỉ IP. Gateway hoạt động ở các tầng cao hơn, chuyển đổi giữa các giao thức hoặc mạng khác nhau."
+        },
+        {
+          "id": "NT_C3_T7_Q20",
+          "question": "Điểm yếu lớn nhất của mô hình mạng Bus là gì?",
+          "options": {
+            "A": "Một điểm đứt cáp làm toàn mạng ngừng hoạt động",
+            "B": "Chi phí cao",
+            "C": "Khó lắp đặt",
+            "D": "Yêu cầu switch đắt tiền"
+          },
+          "correctAnswer": "A",
+          "explanation": "Mô hình Bus dùng một đường cáp chung (backbone) cho tất cả thiết bị, nên cáp đứt hoặc lỏng đầu nối terminator sẽ làm toàn mạng ngừng hoạt động, và việc tìm điểm lỗi cũng khó. Bus cũng có hiệu suất giảm khi thêm nhiều máy do đụng độ. Ngược lại, chi phí thấp và lắp đặt đơn giản là ưu điểm của Bus (ít cáp, dễ triển khai), và Bus không cần switch như mô hình Star."
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C3_T8",
+      "topicName": "Quiz Module 08 – BẢO MẬT CƠ BẢN",
+      "questions": [
+        {
+          "id": "NT_C3_T8_Q1",
+          "question": "MD5 hiện nay được xem là:",
+          "options": {
+            "A": "Không còn an toàn",
+            "B": "Rất an toàn",
+            "C": "Chỉ dùng mã hóa",
+            "D": "Không dùng trong hash"
+          },
+          "correctAnswer": "A",
+          "explanation": "MD5 đã bị phá về khả năng chống va chạm (collision resistance): từ năm 2004 người ta có thể tạo hai dữ liệu khác nhau cho cùng một giá trị băm trong thời gian rất ngắn. Vì vậy MD5 không còn phù hợp cho chữ ký số hay chứng chỉ, thay vào đó nên dùng SHA-256 trở lên. MD5 là hàm băm chứ không phải thuật toán mã hóa, nên đáp án C và D sai về bản chất."
+        },
+        {
+          "id": "NT_C3_T8_Q2",
+          "question": "Trong public-key cryptography, public key được dùng để:",
+          "options": {
+            "A": "Mã hóa",
+            "B": "Xóa dữ liệu",
+            "C": "Giải mã",
+            "D": "Ký số"
+          },
+          "correctAnswer": "A",
+          "explanation": "Public key được công khai cho mọi người để mã hóa dữ liệu gửi cho chủ sở hữu, và chỉ private key tương ứng mới giải mã được. Giải mã và ký số đều dùng private key (người nhận chữ ký dùng public key để xác thực chữ ký, không phải để ký). Không có khóa nào trong mật mã dùng để xóa dữ liệu."
+        },
+        {
+          "id": "NT_C3_T8_Q3",
+          "question": "Trong hệ mã bất đối xứng, số lượng khóa mỗi bên là:",
+          "options": {
+            "A": "3",
+            "B": "2",
+            "C": "1",
+            "D": "4"
+          },
+          "correctAnswer": "B",
+          "explanation": "Mỗi bên sở hữu một cặp khóa gồm public key (công khai) và private key (giữ bí mật), hai khóa này liên hệ toán học với nhau. Dùng 1 khóa là đặc điểm của hệ mã đối xứng. Không có hệ mã chuẩn nào yêu cầu 3 hoặc 4 khóa cho mỗi bên."
+        },
+        {
+          "id": "NT_C3_T8_Q4",
+          "question": "Đặc điểm nào KHÔNG đúng với message digest?",
+          "options": {
+            "A": "Tạo ra giá trị cố định",
+            "B": "Không thể đảo ngược",
+            "C": "Nhạy với thay đổi nhỏ",
+            "D": "Dễ tìm va chạm"
+          },
+          "correctAnswer": "D",
+          "explanation": "Một hàm băm tốt phải khó tìm va chạm, tức là rất khó tìm hai đầu vào khác nhau cho cùng một digest. Các đặc điểm còn lại đều đúng: độ dài đầu ra cố định bất kể kích thước dữ liệu (SHA-256 luôn 256 bit), tính một chiều nên không suy ngược được dữ liệu gốc, và hiệu ứng thác lũ (avalanche effect) khiến đổi 1 bit đầu vào làm digest thay đổi hoàn toàn."
+        },
+        {
+          "id": "NT_C3_T8_Q5",
+          "question": "Stateful firewall khác packet filter ở điểm nào?",
+          "options": {
+            "A": "Theo dõi trạng thái kết nối",
+            "B": "Không dùng ACL",
+            "C": "Không kiểm tra packet",
+            "D": "Chỉ dùng cho mạng LAN"
+          },
+          "correctAnswer": "A",
+          "explanation": "Packet filter xét từng gói độc lập theo ACL (IP, port, giao thức), còn stateful firewall lưu bảng trạng thái các kết nối (ví dụ đã hoàn tất bắt tay ba bước) nên chỉ cho gói phản hồi hợp lệ đi vào và chặn các gói không thuộc kết nối nào. Stateful firewall vẫn kiểm tra packet và vẫn dùng luật (ACL), không bị giới hạn ở mạng LAN."
+        },
+        {
+          "id": "NT_C3_T8_Q6",
+          "question": "Ưu điểm của triển khai thuật toán mã hóa bằng phần cứng là gì?",
+          "options": {
+            "A": "Dễ thay đổi",
+            "B": "Tốc độ cao",
+            "C": "Linh hoạt",
+            "D": "Giá rẻ"
+          },
+          "correctAnswer": "B",
+          "explanation": "Mạch phần cứng chuyên dụng (như AES-NI trong CPU hay module HSM) thực thi thuật toán mã hóa nhanh hơn nhiều và an toàn hơn vì khóa không nằm trong bộ nhớ thường. Dễ thay đổi và linh hoạt là ưu điểm của phần mềm (cập nhật thuật toán bằng bản vá). Phần cứng thường đắt hơn nên không thể là ưu điểm về giá."
+        },
+        {
+          "id": "NT_C3_T8_Q7",
+          "question": "Screened subnet firewall có ưu điểm gì?",
+          "options": {
+            "A": "Tách biệt nhiều lớp bảo mật",
+            "B": "Chỉ dùng cho LAN",
+            "C": "Không cần firewall",
+            "D": "Không cần router"
+          },
+          "correctAnswer": "A",
+          "explanation": "Kiến trúc này tạo vùng DMZ (screened subnet) nằm giữa hai lớp lọc: router/firewall ngoài hướng ra Internet và firewall trong bảo vệ LAN. Các máy chủ công khai (web, mail) đặt trong DMZ, nên nếu bị chiếm quyền thì kẻ tấn công vẫn phải vượt thêm một lớp nữa mới vào được mạng nội bộ. Kiến trúc này vẫn cần cả firewall lẫn router, và dùng để nối LAN với Internet chứ không chỉ cho LAN."
+        },
+        {
+          "id": "NT_C3_T8_Q8",
+          "question": "Symmetric key cryptography sử dụng bao nhiêu khóa?",
+          "options": {
+            "A": "3 khóa",
+            "B": "2 khóa",
+            "C": "1 khóa",
+            "D": "Không dùng khóa"
+          },
+          "correctAnswer": "C",
+          "explanation": "Mật mã đối xứng (AES, DES) dùng chung một khóa bí mật cho cả mã hóa và giải mã, nên bài toán khó nhất là phân phối khóa an toàn giữa hai bên. Dùng 2 khóa (public/private) là đặc điểm của mật mã bất đối xứng. Mọi hệ mã hóa đều cần khóa, trừ các cách mã hóa lịch sử không có khóa vốn không còn được xem là an toàn."
+        },
+        {
+          "id": "NT_C3_T8_Q9",
+          "question": "Firewall application gateway hoạt động ở tầng nào của OSI?",
+          "options": {
+            "A": "Tầng mạng",
+            "B": "Tầng vật lý",
+            "C": "Tầng ứng dụng",
+            "D": "Tầng vận chuyển"
+          },
+          "correctAnswer": "C",
+          "explanation": "Application gateway (proxy firewall) hiểu nội dung giao thức ứng dụng như HTTP, FTP, SMTP nên có thể lọc theo URL, lệnh hay nội dung, và còn có thể bắt người dùng xác thực. Packet filter hoạt động ở tầng mạng/vận chuyển (IP, port), còn tầng vật lý chỉ truyền bit, không có chức năng lọc."
+        },
+        {
+          "id": "NT_C3_T8_Q10",
+          "question": "Cryptology bao gồm những lĩnh vực nào?",
+          "options": {
+            "A": "Encoding và Decoding",
+            "B": "Cryptography và Cryptanalysis",
+            "C": "Hardware và Software",
+            "D": "Networking và Security"
+          },
+          "correctAnswer": "B",
+          "explanation": "Cryptology (mật mã học) gồm hai nhánh đối lập: Cryptography là thiết kế các hệ mã để bảo vệ thông tin, còn Cryptanalysis là nghiên cứu cách phá mã hay tìm điểm yếu của hệ mã. Encoding/Decoding chỉ là biến đổi định dạng dữ liệu (như Base64) không có khóa bí mật, còn Hardware/Software và Networking/Security là cách phân loại khác, không phải cấu thành của cryptology."
+        },
+        {
+          "id": "NT_C3_T8_Q11",
+          "question": "Signature-based IDS phụ thuộc vào yếu tố nào?",
+          "options": {
+            "A": "Tốc độ mạng",
+            "B": "Hành vi người dùng",
+            "C": "Cơ sở dữ liệu chữ ký tấn công",
+            "D": "CPU"
+          },
+          "correctAnswer": "C",
+          "explanation": "Signature-based IDS so khớp lưu lượng với các mẫu tấn công đã biết trong cơ sở dữ liệu chữ ký, giống cách phần mềm diệt virus hoạt động. Vì vậy phải cập nhật chữ ký thường xuyên và không phát hiện được tấn công hoàn toàn mới (zero-day). Việc dựa vào hành vi người dùng là đặc điểm của anomaly-based IDS."
+        },
+        {
+          "id": "NT_C3_T8_Q12",
+          "question": "Ưu điểm của anomaly-based IDS là gì?",
+          "options": {
+            "A": "Phát hiện được tấn công mới",
+            "B": "Không cần cấu hình",
+            "C": "Không cần dữ liệu",
+            "D": "Không cần xử lý"
+          },
+          "correctAnswer": "A",
+          "explanation": "Anomaly-based IDS học “hành vi bình thường” của hệ thống rồi cảnh báo mọi sai lệch, nên có thể phát hiện cả tấn công chưa có chữ ký. Đổi lại, nó cần dữ liệu và thời gian huấn luyện, phải cấu hình, tốn xử lý và dễ báo động giả (false positive). Do đó các đáp án B, C, D đều sai."
+        },
+        {
+          "id": "NT_C3_T8_Q13",
+          "question": "IDS khác IPS ở điểm nào?",
+          "options": {
+            "A": "Không khác nhau",
+            "B": "IDS chặn, IPS cảnh báo",
+            "C": "IDS mã hóa",
+            "D": "IDS cảnh báo, IPS chặn"
+          },
+          "correctAnswer": "D",
+          "explanation": "IDS thường đặt ở chế độ thụ động (nghe lén bản sao lưu lượng), chỉ phát hiện và gửi cảnh báo. IPS đặt trực tiếp trên đường đi của lưu lượng (inline) nên có thể chủ động chặn gói độc hại, nhưng nếu cấu hình sai thì có nguy cơ chặn nhầm lưu lượng hợp lệ. Hai thiết bị đều không có chức năng mã hóa, và đáp án B bị đảo ngược vai trò."
+        },
+        {
+          "id": "NT_C3_T8_Q14",
+          "question": "Độ lớn không gian khóa của substitution cipher đầy đủ là bao nhiêu?",
+          "options": {
+            "A": "26",
+            "B": "26!",
+            "C": "2^26",
+            "D": "26^2"
+          },
+          "correctAnswer": "B",
+          "explanation": "Khóa của substitution cipher là một hoán vị bất kỳ của 26 chữ cái, nên có 26! ≈ 4×10^26 khả năng, quá lớn để vét cạn. Tuy vậy mã này vẫn bị phá dễ dàng bằng phân tích tần suất chữ cái vì mỗi chữ luôn được thay bằng cùng một chữ. Con số 26 chỉ là số khả năng của mã dịch vòng Caesar."
+        },
+        {
+          "id": "NT_C3_T8_Q15",
+          "question": "Đặc điểm chính của transposition cipher là gì?",
+          "options": {
+            "A": "Hoán vị vị trí ký tự",
+            "B": "Mã hóa bit",
+            "C": "Thay thế ký tự",
+            "D": "Dùng nhiều khóa"
+          },
+          "correctAnswer": "A",
+          "explanation": "Transposition cipher giữ nguyên các ký tự của bản rõ nhưng xáo trộn vị trí của chúng theo một quy tắc (ví dụ ghi theo hàng rồi đọc theo cột), nên tần suất chữ cái không đổi. Thay thế ký tự là đặc điểm của substitution cipher. Transposition không phải mã hóa theo bit và không nhất thiết dùng nhiều khóa."
+        },
+        {
+          "id": "NT_C3_T8_Q16",
+          "question": "Protocol nào thường được lọc bởi firewall?",
+          "options": {
+            "A": "TCP, UDP, ICMP",
+            "B": "SMTP, POP3",
+            "C": "DNS",
+            "D": "HTTP, FTP"
+          },
+          "correctAnswer": "A",
+          "explanation": "Firewall dạng packet filter và stateful lọc theo giao thức ở tầng mạng/vận chuyển cùng địa chỉ IP và port, nên đối tượng điển hình là TCP, UDP và ICMP (ví dụ chặn ping từ ngoài vào). SMTP, POP3, DNS, HTTP, FTP là các giao thức tầng ứng dụng, thường chỉ được lọc gián tiếp qua số port hoặc cần application gateway mới xem được nội dung."
+        },
+        {
+          "id": "NT_C3_T8_Q17",
+          "question": "Khi nào một kết nối TCP được xem là kết thúc trong stateful firewall?",
+          "options": {
+            "A": "Khi có FIN hoặc timeout",
+            "B": "Khi có UDP packet",
+            "C": "Khi nhận SYN",
+            "D": "Khi nhận ACK"
+          },
+          "correctAnswer": "A",
+          "explanation": "Stateful firewall xóa mục của kết nối khỏi bảng trạng thái khi thấy quá trình đóng kết nối (gói FIN, hoặc RST nếu bị hủy đột ngột) hoặc khi kết nối im lặng quá thời gian quy định (timeout), để giải phóng bộ nhớ và tránh kẻ tấn công lợi dụng mục cũ. SYN là gói mở đầu kết nối mới, ACK xuất hiện liên tục trong suốt phiên, còn UDP không liên quan đến kết nối TCP."
+        },
+        {
+          "id": "NT_C3_T8_Q18",
+          "question": "Vai trò của message digest trong chữ ký số là gì?",
+          "options": {
+            "A": "Mã hóa trực tiếp dữ liệu",
+            "B": "Xóa dữ liệu",
+            "C": "Giảm kích thước dữ liệu cần ký",
+            "D": "Làm tăng dung lượng"
+          },
+          "correctAnswer": "C",
+          "explanation": "Mật mã bất đối xứng chạy rất chậm, nên thay vì ký cả thông điệp dài, người ký băm thông điệp thành digest cố định ngắn rồi dùng private key ký digest đó. Người nhận băm lại thông điệp và so với digest giải ra từ chữ ký, vừa nhanh vừa phát hiện được mọi thay đổi. Digest cũng không dùng để mã hóa hay xóa dữ liệu, và làm giảm chứ không làm tăng dung lượng cần xử lý."
+        },
+        {
+          "id": "NT_C3_T8_Q19",
+          "question": "IDS có chức năng chính là gì?",
+          "options": {
+            "A": "Mã hóa dữ liệu",
+            "B": "Phát hiện xâm nhập",
+            "C": "Cân bằng tải",
+            "D": "Ngăn chặn truy cập"
+          },
+          "correctAnswer": "B",
+          "explanation": "IDS (Intrusion Detection System) giám sát lưu lượng hoặc nhật ký hệ thống để nhận ra hoạt động đáng ngờ và cảnh báo quản trị viên. Việc ngăn chặn truy cập là chức năng của firewall hoặc IPS, mã hóa dữ liệu là việc của các giao thức như TLS/VPN, còn cân bằng tải là việc của load balancer."
+        },
+        {
+          "id": "NT_C3_T8_Q20",
+          "question": "Port number trong firewall dùng để làm gì?",
+          "options": {
+            "A": "Xác định ứng dụng",
+            "B": "Xác định thiết bị",
+            "C": "Mã hóa dữ liệu",
+            "D": "Lưu trữ log"
+          },
+          "correctAnswer": "A",
+          "explanation": "Port number cho biết gói tin thuộc dịch vụ/ứng dụng nào (ví dụ 80 là HTTP, 443 là HTTPS, 22 là SSH), nên firewall dựa vào port để cho phép hay chặn từng dịch vụ. Việc xác định thiết bị là nhiệm vụ của địa chỉ IP hoặc MAC. Port không có chức năng mã hóa và cũng không dùng để lưu log."
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C3_T9",
+      "topicName": "Quiz Module 09 – DATA CENTER, CLOUD COMPUTING, IOE/IOT",
+      "questions": [
+        {
+          "id": "NT_C3_T9_Q1",
+          "question": "Trong các dịch vụ Cloud, dịch vụ nào cho phép lập trình viên chỉ viết code giao diện, còn backend được cung cấp sẵn?",
+          "options": {
+            "A": "IaaS",
+            "B": "SaaS",
+            "C": "BaaS",
+            "D": "PaaS"
+          },
+          "correctAnswer": "C",
+          "explanation": "BaaS (Backend as a Service) cung cấp sẵn các thành phần backend như cơ sở dữ liệu, xác thực người dùng, lưu trữ file và push notification qua API/SDK (ví dụ Firebase, Supabase), nên lập trình viên chủ yếu viết phần giao diện. PaaS cung cấp môi trường để tự viết cả frontend lẫn backend. IaaS chỉ cho thuê hạ tầng, còn SaaS là phần mềm hoàn chỉnh cho người dùng cuối, không phải để lập trình."
+        },
+        {
+          "id": "NT_C3_T9_Q2",
+          "question": "Điểm khác biệt giữa FaaS và PaaS là gì?",
+          "options": {
+            "A": "FaaS yêu cầu cài đặt phần mềm, PaaS không cần",
+            "B": "FaaS chỉ dùng cho AI, PaaS chỉ dùng cho IoT",
+            "C": "FaaS miễn phí, PaaS tính phí",
+            "D": "FaaS chạy code chức năng độc lập, PaaS cung cấp môi trường phát triển ứng dụng"
+          },
+          "correctAnswer": "D",
+          "explanation": "FaaS (như AWS Lambda) chạy từng hàm nhỏ theo sự kiện (event-driven), tự co giãn và tính tiền theo số lần/thời gian thực thi. PaaS cung cấp nền tảng đầy đủ (runtime, database, công cụ triển khai) để xây dựng và chạy cả ứng dụng. Cả hai đều không bắt người dùng cài đặt hạ tầng, đều tính phí theo mức sử dụng và không bị giới hạn theo lĩnh vực AI hay IoT."
+        },
+        {
+          "id": "NT_C3_T9_Q3",
+          "question": "Điểm khác biệt lớn nhất giữa IaaS và PaaS là gì?",
+          "options": {
+            "A": "IaaS miễn phí, PaaS tính phí",
+            "B": "IaaS cung cấp phần mềm, PaaS cung cấp phần cứng",
+            "C": "IaaS cho thuê hạ tầng, PaaS cung cấp môi trường phát triển",
+            "D": "IaaS chỉ dùng cho doanh nghiệp lớn"
+          },
+          "correctAnswer": "C",
+          "explanation": "IaaS (như EC2) cho thuê máy ảo, lưu trữ, mạng và người dùng tự quản lý từ hệ điều hành trở lên. PaaS (như Heroku, App Engine) lo luôn hệ điều hành, runtime và middleware nên người dùng chỉ tập trung vào code và dữ liệu. Đáp án B đảo ngược vai trò, còn A và D sai vì cả hai đều tính phí theo mức dùng và phù hợp với mọi quy mô."
+        },
+        {
+          "id": "NT_C3_T9_Q4",
+          "question": "Trong xu hướng tương lai, công nghệ nào giúp Data Center tối ưu vận hành và dự đoán sự cố?",
+          "options": {
+            "A": "IoT",
+            "B": "SaaS",
+            "C": "AI và Tự động hóa",
+            "D": "Blockchain"
+          },
+          "correctAnswer": "C",
+          "explanation": "AI phân tích dữ liệu cảm biến để dự đoán hỏng hóc (predictive maintenance), tự điều chỉnh làm mát và phân bổ tải, giúp giảm sự cố và tiết kiệm năng lượng (Google từng dùng AI để giảm điện năng làm mát). IoT chỉ thu thập dữ liệu chứ không tự phân tích, SaaS là mô hình dịch vụ phần mềm, còn Blockchain chủ yếu phục vụ lưu trữ phi tập trung và minh bạch, không nhằm tối ưu vận hành."
+        },
+        {
+          "id": "NT_C3_T9_Q5",
+          "question": "Trong Data Center, nhân viên điều hành có vai trò gì?",
+          "options": {
+            "A": "Quản lý hệ thống mạng",
+            "B": "Phát triển ứng dụng",
+            "C": "Quản lý khách hàng",
+            "D": "Giám sát và duy trì hoạt động hạ tầng CNTT 24/7"
+          },
+          "correctAnswer": "D",
+          "explanation": "Data Center phải chạy liên tục nên nhân viên điều hành (operator) trực theo ca để theo dõi cảnh báo, xử lý sự cố, bảo trì thiết bị và đảm bảo uptime. Quản lý mạng là vai trò chuyên biệt của kỹ sư mạng, phát triển ứng dụng thuộc đội phần mềm, còn quản lý khách hàng thuộc bộ phận kinh doanh."
+        },
+        {
+          "id": "NT_C3_T9_Q6",
+          "question": "So sánh Blockchain và Cloud trong lưu trữ dữ liệu, đâu là ưu điểm nổi bật của Blockchain?",
+          "options": {
+            "A": "Chi phí thấp hơn",
+            "B": "Dễ dàng mở rộng hơn",
+            "C": "Phi tập trung và chống kiểm duyệt",
+            "D": "Tốc độ xử lý cao hơn"
+          },
+          "correctAnswer": "C",
+          "explanation": "Dữ liệu trên blockchain được sao chép qua nhiều nút và được bảo vệ bằng mật mã, nên không có một bên duy nhất nào nắm quyền sửa hoặc xóa, và dữ liệu đã ghi gần như không thể thay đổi. Ngược lại, Cloud lại có lợi thế về chi phí, khả năng mở rộng và tốc độ, nên các đáp án A, B, D thực chất là điểm mạnh của Cloud."
+        },
+        {
+          "id": "NT_C3_T9_Q7",
+          "question": "Trong các mô hình triển khai Cloud, mô hình nào phù hợp nhất cho doanh nghiệp vừa và nhỏ muốn tiết kiệm chi phí?",
+          "options": {
+            "A": "Multi-cloud",
+            "B": "Public Cloud",
+            "C": "Private Cloud",
+            "D": "Hybrid Cloud"
+          },
+          "correctAnswer": "B",
+          "explanation": "Public Cloud dùng chung hạ tầng của nhà cung cấp, trả tiền theo mức sử dụng, không cần đầu tư máy chủ hay đội vận hành riêng, rất hợp với doanh nghiệp vừa và nhỏ. Private Cloud đòi hỏi đầu tư và vận hành riêng nên tốn kém, còn Hybrid và Multi-cloud phức tạp hơn khi quản lý và thường chỉ cần thiết khi có yêu cầu đặc thù về bảo mật hoặc tránh phụ thuộc nhà cung cấp."
+        },
+        {
+          "id": "NT_C3_T9_Q8",
+          "question": "Trong các dịch vụ Cloud, dịch vụ nào phù hợp nhất để triển khai ứng dụng AI/ML phức tạp?",
+          "options": {
+            "A": "FaaS",
+            "B": "PaaS",
+            "C": "SaaS",
+            "D": "IaaS"
+          },
+          "correctAnswer": "D",
+          "explanation": "Huấn luyện và triển khai mô hình AI/ML phức tạp cần quyền kiểm soát phần cứng như GPU/TPU, cấu hình hệ điều hành, thư viện và cụm máy tính, đúng thế mạnh của IaaS. FaaS bị giới hạn về thời gian chạy và tài nguyên mỗi lần gọi, còn SaaS chỉ cung cấp phần mềm dựng sẵn nên không cho tùy biến. PaaS vẫn dùng được cho ML ở mức đơn giản, nhưng với yêu cầu “phức tạp” thì IaaS linh hoạt nhất."
+        },
+        {
+          "id": "NT_C3_T9_Q9",
+          "question": "Điểm khác biệt giữa Multi-cloud và Hybrid Cloud là gì?",
+          "options": {
+            "A": "Multi-cloud miễn phí, Hybrid tính phí",
+            "B": "Multi-cloud dùng nhiều nhà cung cấp, Hybrid kết hợp cloud và on-premise",
+            "C": "Multi-cloud tập trung dữ liệu, Hybrid phân tán dữ liệu",
+            "D": "Multi-cloud chỉ dùng cho doanh nghiệp nhỏ, Hybrid cho doanh nghiệp lớn"
+          },
+          "correctAnswer": "B",
+          "explanation": "Multi-cloud là dùng cùng lúc nhiều nhà cung cấp cloud (ví dụ AWS cùng Azure) để tránh phụ thuộc một bên và tận dụng thế mạnh từng nơi. Hybrid Cloud là kết hợp hạ tầng cloud với hạ tầng tại chỗ (on-premise hoặc private cloud), thường để giữ dữ liệu nhạy cảm trong nội bộ. Hai mô hình không khác nhau về giá, quy mô doanh nghiệp hay cách tập trung dữ liệu."
+        },
+        {
+          "id": "NT_C3_T9_Q10",
+          "question": "Trong các thách thức của Cloud, yếu tố nào liên quan trực tiếp đến pháp lý?",
+          "options": {
+            "A": "Quản lý phức tạp",
+            "B": "Tuân thủ quy định bảo mật dữ liệu",
+            "C": "Chi phí cao",
+            "D": "Thiếu nhân lực IT"
+          },
+          "correctAnswer": "B",
+          "explanation": "Dữ liệu trên cloud có thể nằm ở quốc gia khác nên phải tuân thủ các quy định như GDPR (châu Âu), HIPAA (y tế Mỹ) hay luật về lưu trữ dữ liệu trong nước (data residency). Quản lý phức tạp, chi phí và thiếu nhân lực là thách thức về kỹ thuật, vận hành và tài chính, không liên quan trực tiếp đến pháp lý."
+        },
+        {
+          "id": "NT_C3_T9_Q11",
+          "question": "Điểm khác biệt giữa thông tin và dữ liệu là gì?",
+          "options": {
+            "A": "Thông tin độc lập, dữ liệu phụ thuộc",
+            "B": "Dữ liệu có ý nghĩa, thông tin vô nghĩa",
+            "C": "Dữ liệu có thể sao chép, thông tin không thể sao chép",
+            "D": "Thông tin có giá trị, dữ liệu thô và vô nghĩa"
+          },
+          "correctAnswer": "D",
+          "explanation": "Dữ liệu là các dữ kiện thô chưa qua xử lý (ví dụ dãy số 38.5, 39.2). Khi được xử lý và đặt vào ngữ cảnh (đó là nhiệt độ bệnh nhân qua các ngày, có xu hướng sốt tăng) thì trở thành thông tin có giá trị phục vụ ra quyết định. Đáp án B đảo ngược khái niệm, còn A và C không phải tiêu chí phân biệt, vì cả hai đều có thể sao chép."
+        },
+        {
+          "id": "NT_C3_T9_Q12",
+          "question": "Trong Data Center, hệ thống nào tiêu thụ tới 50% tổng năng lượng?",
+          "options": {
+            "A": "Máy chủ",
+            "B": "Hệ thống làm mát",
+            "C": "Hệ thống lưu trữ",
+            "D": "Hệ thống mạng"
+          },
+          "correctAnswer": "B",
+          "explanation": "Thiết bị IT tỏa nhiệt rất lớn nên hệ thống làm mát (điều hòa chính xác, quạt, chiller) có thể chiếm tới khoảng 40-50% điện năng của cả Data Center. Đây là lý do chỉ số PUE (Power Usage Effectiveness) được dùng để đo hiệu quả năng lượng, và các giải pháp như làm mát bằng chất lỏng, free cooling được ưu tiên. Máy chủ chiếm phần lớn còn lại, còn lưu trữ và mạng chỉ chiếm tỷ lệ nhỏ."
+        },
+        {
+          "id": "NT_C3_T9_Q13",
+          "question": "So sánh Data Center xanh và Data Center truyền thống, đâu là ưu điểm nổi bật của Data Center xanh?",
+          "options": {
+            "A": "Chi phí đầu tư thấp hơn",
+            "B": "Không cần bảo mật dữ liệu",
+            "C": "Không cần hệ thống làm mát",
+            "D": "Hiệu quả năng lượng cao hơn"
+          },
+          "correctAnswer": "D",
+          "explanation": "Data Center xanh dùng năng lượng tái tạo, thiết bị tiết kiệm điện và làm mát thông minh nên PUE thấp hơn, giảm phát thải carbon và chi phí điện về lâu dài. Chi phí đầu tư ban đầu thường cao hơn chứ không thấp hơn. Mọi Data Center đều vẫn cần bảo mật và làm mát, chỉ là làm mát hiệu quả hơn."
+        },
+        {
+          "id": "NT_C3_T9_Q14",
+          "question": "So sánh SaaS và PaaS, đâu là lợi thế nổi bật của SaaS đối với người dùng cuối?",
+          "options": {
+            "A": "Không cần quản lý hạ tầng",
+            "B": "Cho phép tùy chỉnh hệ điều hành",
+            "C": "Tích hợp dễ dàng với hệ thống mạng",
+            "D": "Không cần cài đặt phần mềm"
+          },
+          "correctAnswer": "D",
+          "explanation": "Người dùng SaaS (Gmail, Google Docs, Salesforce) chỉ cần trình duyệt hoặc ứng dụng nhẹ để dùng ngay, mọi việc cài đặt, cập nhật và vận hành do nhà cung cấp lo. Việc không phải quản lý hạ tầng cũng đúng với PaaS nên không tạo ra điểm khác biệt nổi bật. Tùy chỉnh hệ điều hành là đặc điểm của IaaS, còn tích hợp mạng không phải lợi thế riêng của SaaS."
+        },
+        {
+          "id": "NT_C3_T9_Q15",
+          "question": "Điểm khác biệt giữa dữ liệu phân tán và dữ liệu tập trung là gì?",
+          "options": {
+            "A": "Dữ liệu phân tán chỉ dùng cho doanh nghiệp nhỏ",
+            "B": "Dữ liệu phân tán lưu ở nhiều nơi, dữ liệu tập trung lưu tại một điểm",
+            "C": "Dữ liệu phân tán bảo mật hơn dữ liệu tập trung",
+            "D": "Dữ liệu phân tán miễn phí, dữ liệu tập trung tính phí"
+          },
+          "correctAnswer": "B",
+          "explanation": "Dữ liệu phân tán được lưu trên nhiều máy hoặc địa điểm, nhờ đó chịu lỗi tốt (một nơi hỏng vẫn còn bản khác) và dễ mở rộng, nhưng đồng bộ và quản lý phức tạp hơn. Dữ liệu tập trung nằm ở một điểm nên dễ quản lý, nhưng dễ trở thành điểm lỗi duy nhất (single point of failure). Mức độ bảo mật, chi phí hay quy mô doanh nghiệp không phải tiêu chí phân biệt hai mô hình."
+        },
+        {
+          "id": "NT_C3_T9_Q16",
+          "question": "So sánh Data Center truyền thống và Cloud, đâu là ưu điểm nổi bật của Cloud?",
+          "options": {
+            "A": "Không cần nhân sự IT",
+            "B": "Tốc độ xử lý cao hơn",
+            "C": "Chi phí đầu tư ban đầu thấp hơn",
+            "D": "Bảo mật tuyệt đối"
+          },
+          "correctAnswer": "C",
+          "explanation": "Cloud theo mô hình trả tiền theo mức dùng (pay-as-you-go), không phải mua máy chủ và xây phòng máy ngay từ đầu, đồng thời co giãn tài nguyên linh hoạt theo nhu cầu. Cloud vẫn cần nhân sự IT để cấu hình và quản trị, không đảm bảo bảo mật tuyệt đối (còn mô hình trách nhiệm chia sẻ), và tốc độ xử lý phụ thuộc cấu hình chứ không mặc nhiên cao hơn."
+        },
+        {
+          "id": "NT_C3_T9_Q17",
+          "question": "Điện toán đám mây ra đời từ ý tưởng của ai trong thập niên 1960?",
+          "options": {
+            "A": "John McCarthy",
+            "B": "Larry Page",
+            "C": "Bill Gates",
+            "D": "Steve Jobs"
+          },
+          "correctAnswer": "A",
+          "explanation": "Năm 1961, John McCarthy (nhà khoa học máy tính, người đặt ra thuật ngữ “trí tuệ nhân tạo”) đề xuất ý tưởng tính toán như một tiện ích công cộng (utility computing), tức dùng sức mạnh tính toán như điện hay nước, đây là tiền đề của điện toán đám mây. Larry Page (Google, thành lập 1998), Bill Gates (Microsoft, 1975) và Steve Jobs (Apple, 1976) đều hoạt động sau thập niên 1960 và không gắn với ý tưởng này."
+        },
+        {
+          "id": "NT_C3_T9_Q18",
+          "question": "Trong xu hướng tương lai, giải pháp nào giúp Data Center giảm phát thải carbon?",
+          "options": {
+            "A": "Chuyển toàn bộ sang Private Cloud",
+            "B": "Sử dụng năng lượng tái tạo",
+            "C": "Giảm số lượng người dùng",
+            "D": "Tăng số lượng máy chủ"
+          },
+          "correctAnswer": "B",
+          "explanation": "Dùng điện từ mặt trời, gió, thủy điện thay cho nhiên liệu hóa thạch cắt giảm trực tiếp lượng carbon phát thải từ nguồn điện, thường đi cùng làm mát hiệu quả và tối ưu PUE. Tăng số lượng máy chủ làm tăng tiêu thụ điện, giảm người dùng không phải giải pháp khả thi cho doanh nghiệp, còn chuyển sang Private Cloud chỉ đổi mô hình triển khai chứ không giảm phát thải."
+        },
+        {
+          "id": "NT_C3_T9_Q19",
+          "question": "So sánh IoT trên Cloud và IoT trên Edge, đâu là lợi thế nổi bật của Edge?",
+          "options": {
+            "A": "Phân tích chuyên sâu",
+            "B": "Lưu trữ tập trung",
+            "C": "Dễ dàng mở rộng",
+            "D": "Phản hồi tức thì tại chỗ"
+          },
+          "correctAnswer": "D",
+          "explanation": "Edge xử lý dữ liệu ngay gần thiết bị nên độ trễ thấp, phù hợp với các tình huống cần phản ứng trong mili giây như xe tự lái hay robot công nghiệp, đồng thời giảm lượng dữ liệu phải gửi lên mạng. Phân tích chuyên sâu, lưu trữ tập trung và mở rộng dễ dàng là thế mạnh của Cloud nhờ tài nguyên lớn và tập trung."
+        },
+        {
+          "id": "NT_C3_T9_Q20",
+          "question": "Điện toán biên (Edge Computing) khác với Cloud Computing ở điểm nào?",
+          "options": {
+            "A": "Edge xử lý dữ liệu ngay tại nguồn, Cloud xử lý tập trung",
+            "B": "Edge miễn phí, Cloud tính phí",
+            "C": "Edge chỉ dùng cho AI, Cloud chỉ dùng cho IoT",
+            "D": "Edge không cần mạng Internet"
+          },
+          "correctAnswer": "A",
+          "explanation": "Edge Computing đưa việc xử lý đến gần nơi dữ liệu sinh ra (thiết bị, gateway, trạm biên), còn Cloud xử lý tại các Data Center tập trung ở xa. Hai mô hình thường bổ sung cho nhau: Edge xử lý nhanh tại chỗ, Cloud lo phân tích sâu và lưu trữ dài hạn. Edge không miễn phí, không giới hạn theo lĩnh vực AI hay IoT, và vẫn thường cần kết nối mạng để đồng bộ với Cloud (chỉ có thể hoạt động tạm thời khi mất kết nối)."
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C3_T10",
+      "topicName": "Quiz Module 10 – MỞ RỘNG",
+      "questions": [
+        {
+          "id": "NT_C3_T10_Q1",
+          "question": "Với subnet mask 255.255.255.0, hai địa chỉ 178.203.192.1 và 178.203.242.100 thuộc:",
+          "options": {
+            "A": "Khác mạng",
+            "B": "Cùng mạng",
+            "C": "NetID giống nhau",
+            "D": "Broadcast giống nhau"
+          },
+          "correctAnswer": "A",
+          "explanation": "Mask /24 nên NetID lấy đủ 3 octet đầu. Địa chỉ thứ nhất có NetID 178.203.192.0, địa chỉ thứ hai có NetID 178.203.242.0, hai giá trị khác nhau nên không cùng mạng. Vì NetID khác nhau nên B và C sai. Broadcast (178.203.192.255 và 178.203.242.255) cũng khác nhau nên D sai."
+        },
+        {
+          "id": "NT_C3_T10_Q2",
+          "question": "Công ty có mạng 189.79.0.0 và cần chia cho 234 phòng, mỗi phòng 250 máy. Subnet mask tối ưu là?",
+          "options": {
+            "A": "/23",
+            "B": "/22",
+            "C": "/24",
+            "D": "/21"
+          },
+          "correctAnswer": "C",
+          "explanation": "189.79.0.0 là Class B (/16). Cần 234 subnet nên phải mượn 8 bit (2^8 = 256 ≥ 234), tức /16 + 8 = /24. Mỗi subnet /24 có 2^8 − 2 = 254 host, đủ cho 250 máy. Các mask /23, /22, /21 mượn ít bit hơn nên chỉ tạo được 128, 64, 32 subnet, không đủ 234 phòng."
+        },
+        {
+          "id": "NT_C3_T10_Q3",
+          "question": "Đổi password wifi giúp tăng cường bảo mật bằng cách nào?",
+          "options": {
+            "A": "Tăng băng thông",
+            "B": "Ngăn truy cập trái phép",
+            "C": "Tăng tốc độ mạng",
+            "D": "Giảm nhiễu sóng"
+          },
+          "correctAnswer": "B",
+          "explanation": "Password là khóa xác thực để thiết bị được phép vào mạng. Khi đổi password, các thiết bị lạ từng biết mật khẩu cũ (hàng xóm, khách cũ, kẻ tấn công đã dò được) bị loại ra. Nên dùng chuẩn WPA2/WPA3 với mật khẩu dài và đổi định kỳ. Băng thông, tốc độ và nhiễu sóng phụ thuộc vào đường truyền, kênh phát và phần cứng, không liên quan đến mật khẩu."
+        },
+        {
+          "id": "NT_C3_T10_Q4",
+          "question": "Với subnet mask 255.255.240.0, số mạng con tạo ra từ 159.7.0.0/16 là?",
+          "options": {
+            "A": "16",
+            "B": "64",
+            "C": "8",
+            "D": "32"
+          },
+          "correctAnswer": "A",
+          "explanation": "255.255.240.0 tương ứng /20 (octet thứ 3 là 11110000, có 4 bit 1). So với /16, mask mượn thêm 20 − 16 = 4 bit nên số mạng con là 2^4 = 16. Các đáp án 8, 32, 64 ứng với 3, 5, 6 bit mượn, tức mask /19, /21, /22."
+        },
+        {
+          "id": "NT_C3_T10_Q5",
+          "question": "Kiểm tra IP 178.203.192.1 và 178.203.242.100 với subnet mask 255.255.0.0, kết quả là gì?",
+          "options": {
+            "A": "Khác mạng",
+            "B": "Broadcast trùng nhau",
+            "C": "Không xác định",
+            "D": "Cùng mạng"
+          },
+          "correctAnswer": "D",
+          "explanation": "Mask /16 chỉ lấy 2 octet đầu làm NetID, cả hai địa chỉ đều có NetID 178.203.0.0 nên cùng mạng. So với câu 10.1, đổi mask từ /24 sang /16 làm kết quả đổi hoàn toàn. Đáp án A sai vì NetID giống nhau, B sai vì cả hai cùng broadcast 178.203.255.255 chỉ là hệ quả của việc cùng mạng chứ không phải điểm để so sánh, và C sai vì kết quả hoàn toàn xác định được."
+        },
+        {
+          "id": "NT_C3_T10_Q6",
+          "question": "Khi chia mạng 159.7.0.0/16 thành các subnet /20, số host tối đa mỗi subnet là?",
+          "options": {
+            "A": "1022",
+            "B": "4094",
+            "C": "8190",
+            "D": "2046"
+          },
+          "correctAnswer": "B",
+          "explanation": "Mask /20 còn 32 − 20 = 12 bit host, nên số host tối đa là 2^12 − 2 = 4094 (trừ địa chỉ mạng và broadcast). Các đáp án khác ứng với số bit host khác: 1022 (10 bit, /22), 2046 (11 bit, /21), 8190 (13 bit, /19)."
+        },
+        {
+          "id": "NT_C3_T10_Q7",
+          "question": "Với mạng 19.168.1.0/24, nếu chia thành 8 mạng con, subnet mask sẽ là?",
+          "options": {
+            "A": "/27",
+            "B": "/25",
+            "C": "/26",
+            "D": "/28"
+          },
+          "correctAnswer": "A",
+          "explanation": "Chia 8 mạng con cần mượn 3 bit (2^3 = 8), nên mask mới là /24 + 3 = /27 (255.255.255.224). Mask /25 chỉ tạo 2 mạng, /26 tạo 4 mạng, /28 tạo 16 mạng."
+        },
+        {
+          "id": "NT_C3_T10_Q8",
+          "question": "So sánh SSID và password trong cấu hình wifi, điểm khác biệt chính là?",
+          "options": {
+            "A": "SSID và password giống nhau",
+            "B": "SSID dùng để bảo mật, password dùng để hiển thị",
+            "C": "SSID dùng để nhận diện, password dùng để xác thực",
+            "D": "SSID chỉ dùng cho router"
+          },
+          "correctAnswer": "C",
+          "explanation": "SSID (Service Set Identifier) là tên mạng hiển thị trong danh sách wifi để người dùng chọn đúng mạng, còn password là khóa để chứng minh quyền kết nối. SSID được phát công khai nên bản thân nó không bảo mật. Đáp án B đảo ngược vai trò, A sai vì hai thứ có chức năng khác nhau, D sai vì SSID là tên mạng mà mọi thiết bị đều thấy và dùng để kết nối."
+        },
+        {
+          "id": "NT_C3_T10_Q9",
+          "question": "Khi cấu hình wifi, tài khoản đăng nhập vào router thường mặc định là?",
+          "options": {
+            "A": "user/user",
+            "B": "guest/guest",
+            "C": "admin/admin",
+            "D": "root/root"
+          },
+          "correctAnswer": "C",
+          "explanation": "Đa số router gia đình dùng tài khoản mặc định admin/admin (một số hãng dùng admin/password hoặc in sẵn trên nhãn dưới thiết bị). Vì thông tin mặc định ai cũng biết nên bạn nên đổi ngay sau khi cài đặt để tránh bị chiếm quyền quản trị. Các cặp user/user, guest/guest, root/root không phải mặc định phổ biến của router."
+        },
+        {
+          "id": "NT_C3_T10_Q10",
+          "question": "Địa chỉ 123.124.125.126 với subnet mask 255.255.224.0 thuộc NetID nào?",
+          "options": {
+            "A": "123.124.125.0",
+            "B": "123.124.96.0",
+            "C": "123.124.112.0",
+            "D": "123.124.128.0"
+          },
+          "correctAnswer": "B",
+          "explanation": "Mask 255.255.224.0 có block size ở octet thứ 3 là 256 − 224 = 32, nên các NetID có octet thứ 3 là 0, 32, 64, 96, 128... Giá trị 125 nằm trong khoảng 96–127 nên NetID là 123.124.96.0. Kiểm tra bằng nhị phân: 125 = 01111101 AND 224 = 11100000 cho 01100000 = 96. Đáp án 112 không phải bội của 32, 125 là chính octet gốc (mask không giữ nguyên octet này), còn 128 nằm sau địa chỉ nên không chứa nó."
+        },
+        {
+          "id": "NT_C3_T10_Q11",
+          "question": "Nếu một công ty cần 400 host trong một mạng con, subnet mask tối thiểu phải là?",
+          "options": {
+            "A": "/25",
+            "B": "/26",
+            "C": "/23",
+            "D": "/24"
+          },
+          "correctAnswer": "C",
+          "explanation": "Cần 2^n − 2 ≥ 400 nên n = 9 bit host (2^9 − 2 = 510), do đó mask là 32 − 9 = /23. Mask /24 chỉ có 254 host, /25 có 126 host, /26 có 62 host nên đều không đủ 400."
+        },
+        {
+          "id": "NT_C3_T10_Q12",
+          "question": "Trong cấu hình wifi, việc thay đổi SSID thường được thực hiện nhằm mục đích gì?",
+          "options": {
+            "A": "Tăng tốc độ mạng",
+            "B": "Ngăn chặn nhiễu sóng",
+            "C": "Giảm băng thông",
+            "D": "Cá nhân hóa và dễ nhận diện mạng"
+          },
+          "correctAnswer": "D",
+          "explanation": "SSID mặc định thường là tên hãng hoặc model router, dễ trùng với mạng xung quanh và lộ thông tin thiết bị. Đặt tên riêng giúp bạn nhận ra mạng của mình và tránh kết nối nhầm. SSID chỉ là tên nên không ảnh hưởng tốc độ, băng thông hay nhiễu sóng (nhiễu phụ thuộc kênh và tần số phát)."
+        },
+        {
+          "id": "NT_C3_T10_Q13",
+          "question": "Với địa chỉ 196.123.134.90/26, NetID là gì?",
+          "options": {
+            "A": "196.123.134.128",
+            "B": "196.123.134.192",
+            "C": "196.123.134.64",
+            "D": "196.123.134.0"
+          },
+          "correctAnswer": "C",
+          "explanation": "Mask /26 có block size 64, nên các NetID ở octet cuối là 0, 64, 128, 192. Giá trị 90 nằm trong khoảng 64–127 nên NetID là 196.123.134.64 (broadcast là .127). Đáp án 0 là mạng chứa các địa chỉ 0–63, còn 128 và 192 nằm sau địa chỉ 90 nên không thể là NetID của nó."
+        },
+        {
+          "id": "NT_C3_T10_Q14",
+          "question": "Một công ty có mạng 159.7.0.0/16, muốn chia thành 14 phòng, mỗi phòng 255 máy. Subnet mask phù hợp là?",
+          "options": {
+            "A": "255.255.240.0",
+            "B": "255.255.255.0",
+            "C": "255.255.248.0",
+            "D": "255.255.224.0"
+          },
+          "correctAnswer": "A",
+          "explanation": "14 phòng cần 4 bit mượn (2^4 = 16 ≥ 14) nên mask là /20 (255.255.240.0), mỗi subnet có 4094 host, dư cho 255 máy. Mask 255.255.255.0 (/24) chỉ có 254 host nên thiếu 1 máy so với yêu cầu 255. Mask 255.255.248.0 (/21) chỉ tạo 8 subnet và 255.255.224.0 (/19) chỉ tạo 4 subnet nên không đủ 14 phòng."
+        },
+        {
+          "id": "NT_C3_T10_Q15",
+          "question": "Với subnet mask 255.255.252.0, số host tối đa trên một mạng là bao nhiêu?",
+          "options": {
+            "A": "1024",
+            "B": "2046",
+            "C": "1022",
+            "D": "4094"
+          },
+          "correctAnswer": "C",
+          "explanation": "255.255.252.0 tương ứng /22 (octet thứ 3 là 11111100), còn 32 − 22 = 10 bit host nên số host tối đa là 2^10 − 2 = 1022. Đáp án 1024 sai vì chưa trừ địa chỉ mạng và broadcast. Đáp án 2046 ứng với /21 và 4094 ứng với /20."
+        },
+        {
+          "id": "NT_C3_T10_Q16",
+          "question": "Hai địa chỉ 133.69.73.85 và 133.69.97.123 với subnet mask 255.255.192.0 có cùng mạng không?",
+          "options": {
+            "A": "Có, cùng NetID 133.69.64.0",
+            "B": "Không cùng mạng",
+            "C": "Broadcast trùng nhau",
+            "D": "Có, cùng NetID 133.69.96.0"
+          },
+          "correctAnswer": "A",
+          "explanation": "Mask 255.255.192.0 có block size 64 ở octet thứ 3 nên các mạng là 0, 64, 128, 192. Cả 73 và 97 đều nằm trong khoảng 64–127, nên cùng NetID 133.69.64.0 (nhị phân: 73 = 01001001 và 97 = 01100001, AND với 11000000 đều cho 01000000 = 64). Đáp án D sai vì 96 không phải bội của 64. Đáp án B sai vì hai địa chỉ cùng mạng. Đáp án C sai vì cùng broadcast chỉ là hệ quả của cùng mạng, không phải điểm cần xác định."
+        },
+        {
+          "id": "NT_C3_T10_Q17",
+          "question": "Số host tối đa trên mỗi mạng con khi chia 19.168.1.0/24 thành 8 mạng là?",
+          "options": {
+            "A": "64",
+            "B": "32",
+            "C": "30",
+            "D": "62"
+          },
+          "correctAnswer": "C",
+          "explanation": "Chia thành 8 mạng con thì mask là /27, còn 5 bit host, mỗi subnet có 2^5 = 32 địa chỉ và dùng được 32 − 2 = 30 host (trừ địa chỉ mạng và broadcast). Đáp án 32 sai vì chưa trừ 2 địa chỉ đặc biệt. Đáp án 62 ứng với /26 (4 mạng con), còn 64 là số địa chỉ của /26 chưa trừ."
+        },
+        {
+          "id": "NT_C3_T10_Q18",
+          "question": "Khi cấu hình SSID cho wifi, yếu tố nào quan trọng nhất để phân biệt mạng?",
+          "options": {
+            "A": "MAC address",
+            "B": "Password",
+            "C": "SSID",
+            "D": "Channel"
+          },
+          "correctAnswer": "C",
+          "explanation": "SSID là tên mạng hiển thị trong danh sách wifi, nên đây là yếu tố người dùng nhìn vào để phân biệt các mạng với nhau. MAC address (BSSID) xác định từng thiết bị phát sóng, người dùng thường không thấy hoặc không dùng để chọn mạng. Password dùng để xác thực chứ không dùng để nhận diện, còn Channel là kênh tần số phát sóng và nhiều mạng có thể dùng chung một kênh."
+        },
+        {
+          "id": "NT_C3_T10_Q19",
+          "question": "IDS cần kiểm tra sâu packet để làm gì?",
+          "options": {
+            "A": "Giảm lưu lượng",
+            "B": "Tăng tốc mạng",
+            "C": "Phát hiện hành vi bất thường",
+            "D": "Định tuyến"
+          },
+          "correctAnswer": "C",
+          "explanation": "Deep packet inspection cho phép IDS đọc cả phần payload (không chỉ header IP/port) để so khớp chữ ký tấn công hoặc nhận ra mẫu lưu lượng bất thường, ví dụ chuỗi mã độc nằm trong dữ liệu HTTP. IDS chỉ giám sát và cảnh báo nên không làm giảm lưu lượng. Việc kiểm tra sâu còn tốn tài nguyên xử lý nên không thể tăng tốc mạng. Định tuyến là chức năng của router."
+        },
+        {
+          "id": "NT_C3_T10_Q20",
+          "question": "Chức năng nào sau đây KHÔNG thuộc tầng MAC?",
+          "options": {
+            "A": "Xử lý va chạm trên đường truyền",
+            "B": "Thiết lập kết nối logic giữa các nút mạng",
+            "C": "Định địa chỉ vật lý",
+            "D": "Điều khiển truy cập môi trường truyền"
+          },
+          "correctAnswer": "B",
+          "explanation": "Tầng Data Link chia thành hai tầng con: LLC (Logical Link Control) lo kết nối logic, điều khiển luồng và kiểm soát lỗi giữa các nút, còn MAC (Media Access Control) lo việc truy cập môi trường truyền chung. Vì vậy xử lý va chạm (CSMA/CD, CSMA/CA), định địa chỉ vật lý (địa chỉ MAC) và điều khiển truy cập môi trường đều là chức năng của MAC."
+        },
+        {
+          "id": "NT_C3_T10_Q21",
+          "question": "Phát biểu nào sau đây đúng về tính duy nhất của địa chỉ IP?",
+          "options": {
+            "A": "Mỗi interface phải có địa chỉ IP duy nhất toàn cục",
+            "B": "Chỉ router cần IP duy nhất",
+            "C": "Chỉ cần duy nhất trong LAN",
+            "D": "Có thể trùng nếu khác router"
+          },
+          "correctAnswer": "A",
+          "explanation": "Địa chỉ IP gắn với interface chứ không phải với thiết bị (một router có nhiều interface thì có nhiều IP). Để gói tin định tuyến đúng đích trên Internet, mỗi IP public phải duy nhất toàn cầu. Địa chỉ private (RFC 1918) có thể trùng giữa các mạng nội bộ khác nhau nhờ NAT, nhưng đó là ngoại lệ chứ không phải nguyên tắc chung. Vì vậy các phát biểu giới hạn cho router hoặc chỉ trong LAN đều không đúng."
+        },
+        {
+          "id": "NT_C3_T10_Q22",
+          "question": "Canonical hostname trong DNS là gì?",
+          "options": {
+            "A": "Cổng dịch vụ",
+            "B": "Tên bí danh",
+            "C": "Địa chỉ IP",
+            "D": "Tên chính thức của host"
+          },
+          "correctAnswer": "D",
+          "explanation": "Canonical hostname là tên thật, chính thức của máy chủ (ví dụ relay1.west-coast.enterprise.com), còn tên dễ nhớ như www.enterprise.com chỉ là alias (bí danh) trỏ về nó thông qua bản ghi CNAME. Địa chỉ IP là giá trị của bản ghi A, còn cổng dịch vụ là port number, không thuộc phần tên miền."
+        },
+        {
+          "id": "NT_C3_T10_Q23",
+          "question": "Nhược điểm của phần mềm trong cryptography là gì?",
+          "options": {
+            "A": "Không chạy được",
+            "B": "Không bảo mật",
+            "C": "Tốc độ thấp hơn phần cứng",
+            "D": "Kém linh hoạt"
+          },
+          "correctAnswer": "C",
+          "explanation": "Thuật toán mã hóa chạy bằng phần mềm phải dùng CPU đa dụng nên chậm hơn mạch phần cứng chuyên dụng (như AES-NI, HSM). Đổi lại phần mềm rất linh hoạt: dễ cập nhật, vá lỗi và thay đổi thuật toán, nên đáp án D ngược với thực tế. Phần mềm vẫn chạy và bảo mật tốt nếu thuật toán và cách cài đặt đúng."
+        },
+        {
+          "id": "NT_C3_T10_Q24",
+          "question": "Loại mạng nào thường sử dụng cơ chế CSMA/CA?",
+          "options": {
+            "A": "Wireless LAN",
+            "B": "Ethernet cổ điển",
+            "C": "Token Ring",
+            "D": "FDDI"
+          },
+          "correctAnswer": "A",
+          "explanation": "Trong Wi-Fi (802.11) thiết bị không thể vừa phát vừa nghe để phát hiện va chạm, nên phải tránh va chạm từ trước bằng backoff ngẫu nhiên và gói ACK xác nhận (CSMA/CA). Ethernet cổ điển dùng CSMA/CD để phát hiện va chạm, còn Token Ring và FDDI dùng Token Passing nên không có va chạm."
+        },
+        {
+          "id": "NT_C3_T10_Q25",
+          "question": "Khi sử dụng cache, request nào giúp giảm tải server?",
+          "options": {
+            "A": "Conditional GET",
+            "B": "POST",
+            "C": "GET thông thường",
+            "D": "DELETE"
+          },
+          "correctAnswer": "A",
+          "explanation": "Conditional GET gửi kèm header If-Modified-Since; nếu tài nguyên chưa đổi, server chỉ trả 304 Not Modified không có body, nên server khỏi phải gửi lại toàn bộ nội dung và client tiếp tục dùng bản cache. GET thông thường luôn tải lại đầy đủ. POST gửi dữ liệu lên server và DELETE xóa tài nguyên, cả hai đều không liên quan đến việc tận dụng cache."
+        },
+        {
+          "id": "NT_C3_T10_Q26",
+          "question": "Một trong các nguyên nhân gây suy hao tín hiệu trên cáp đồng là:",
+          "options": {
+            "A": "Thiếu gateway",
+            "B": "Sai subnet mask",
+            "C": "Địa chỉ MAC trùng lặp",
+            "D": "Điện trở dây dẫn"
+          },
+          "correctAnswer": "D",
+          "explanation": "Khi tín hiệu điện truyền qua dây đồng, một phần năng lượng bị tiêu hao thành nhiệt do điện trở của dây, nên cáp càng dài thì suy hao (attenuation, đo bằng dB) càng lớn. Ngoài ra tần số tín hiệu càng cao suy hao càng mạnh. Thiếu gateway, sai subnet mask và trùng địa chỉ MAC là lỗi cấu hình ở tầng cao hơn, ảnh hưởng đến kết nối chứ không làm tín hiệu vật lý yếu đi."
+        },
+        {
+          "id": "NT_C3_T10_Q27",
+          "question": "Khi TTL của gói tin giảm về 0, router sẽ gửi ICMP gì?",
+          "options": {
+            "A": "Echo reply",
+            "B": "Destination unreachable",
+            "C": "(phương án trống trong đề, nhiều khả năng là Time exceeded)",
+            "D": "Redirect"
+          },
+          "correctAnswer": "C",
+          "explanation": "Router giảm TTL mỗi chặng, khi về 0 sẽ hủy gói và gửi ICMP Time Exceeded (type 11) về nguồn, nhờ đó chống gói lặp vòng vô hạn, và traceroute cũng khai thác thông báo này để dò từng router. Echo reply là phản hồi của ping, Destination unreachable dùng khi không tìm được đường hoặc port đích, còn Redirect báo host dùng router khác tối ưu hơn."
+        },
+        {
+          "id": "NT_C3_T10_Q28",
+          "question": "Trường Receive Window dùng để:",
+          "options": {
+            "A": "Error Detection",
+            "B": "Flow Control",
+            "C": "Congestion Control",
+            "D": "Routing"
+          },
+          "correctAnswer": "B",
+          "explanation": "Receive Window (rwnd) trong header TCP cho biết bên nhận còn bao nhiêu byte trống trong buffer, bên gửi dựa vào đó giới hạn lượng dữ liệu chưa được xác nhận để không làm tràn bộ đệm bên nhận. Kiểm soát tắc nghẽn dùng cửa sổ khác (cwnd) do bên gửi tự điều chỉnh theo tình trạng mạng. Phát hiện lỗi do trường checksum đảm nhiệm, còn định tuyến thuộc tầng Network."
+        },
+        {
+          "id": "NT_C3_T10_Q29",
+          "question": "Predictive trong IoE có vai trò gì?",
+          "options": {
+            "A": "Kết nối thiết bị",
+            "B": "Lưu trữ dữ liệu",
+            "C": "Bảo mật hệ thống",
+            "D": "Dự đoán xu hướng và sự kiện tương lai"
+          },
+          "correctAnswer": "D",
+          "explanation": "Predictive analytics trong IoE (Internet of Everything) dùng dữ liệu lịch sử và dữ liệu cảm biến thời gian thực, kết hợp học máy, để dự đoán điều sắp xảy ra, ví dụ dự báo máy móc sắp hỏng để bảo trì trước. Kết nối thiết bị là vai trò của lớp mạng, lưu trữ dữ liệu là việc của Data Center/Cloud, còn bảo mật là một lớp riêng của hệ thống."
+        },
+        {
+          "id": "NT_C3_T10_Q30",
+          "question": "Vai trò chính của Data Center trong IoE là gì?",
+          "options": {
+            "A": "Điều khiển người dùng",
+            "B": "Thu thập cảm biến",
+            "C": "Tạo giao diện",
+            "D": "Lưu trữ và xử lý dữ liệu"
+          },
+          "correctAnswer": "D",
+          "explanation": "Hàng tỷ thiết bị IoE sinh ra lượng dữ liệu khổng lồ, và Data Center là nơi tập trung lưu trữ, xử lý, phân tích khối dữ liệu đó. Thu thập dữ liệu là việc của cảm biến và thiết bị đầu cuối, còn giao diện là việc của lớp ứng dụng. Data Center không “điều khiển người dùng”."
+        },
+        {
+          "id": "NT_C3_T10_Q31",
+          "question": "Trong DHCP, client chọn server bằng cách nào?",
+          "options": {
+            "A": "Chọn ngẫu nhiên không cần phản hồi",
+            "B": "Gửi DHCP Request xác nhận một Offer cụ thể",
+            "C": "Dựa vào MAC address server",
+            "D": "Chọn server gửi Offer đầu tiên"
+          },
+          "correctAnswer": "B",
+          "explanation": "Client broadcast Discover và có thể nhận Offer từ nhiều DHCP server. Nó chọn một Offer rồi broadcast DHCP Request có ghi rõ server được chọn, nhờ đó các server còn lại biết mình bị từ chối và thu hồi địa chỉ đã đề nghị. Việc chọn Offer đến đầu tiên chỉ là cách làm thường gặp của nhiều triển khai, không phải cơ chế do giao thức quy định. Cũng không có chuyện chọn ngẫu nhiên không phản hồi, và MAC của server không phải tiêu chí chọn."
+        },
+        {
+          "id": "NT_C3_T10_Q32",
+          "question": "Trong IP datagram, trường Protocol dùng để làm gì?",
+          "options": {
+            "A": "Xác định loại dữ liệu",
+            "B": "Xác định kích thước fragment",
+            "C": "(phương án trống trong đề, nhiều khả năng là “Xác định giao thức tầng trên”)",
+            "D": "Xác định địa chỉ IP"
+          },
+          "correctAnswer": "C",
+          "explanation": "Trường Protocol (8 bit) cho biết phần dữ liệu của datagram thuộc giao thức nào để bên nhận chuyển lên đúng tầng trên, ví dụ 6 là TCP, 17 là UDP, 1 là ICMP. Kích thước fragment do trường Fragment Offset và Total Length đảm nhiệm, địa chỉ IP nằm ở các trường Source/Destination Address."
+        },
+        {
+          "id": "NT_C3_T10_Q33",
+          "question": "Ứng dụng nào thường ưu tiên UDP hơn TCP?",
+          "options": {
+            "A": "SSH",
+            "B": "Streaming video trực tiếp",
+            "C": "HTTP",
+            "D": "FTP"
+          },
+          "correctAnswer": "B",
+          "explanation": "Streaming trực tiếp cần độ trễ thấp, mất vài gói chỉ gây giật nhẹ còn hơn phải chờ TCP truyền lại làm trễ cả luồng. SSH, HTTP và FTP đều cần dữ liệu đầy đủ, chính xác, đúng thứ tự (lệnh, trang web, file) nên dùng TCP."
+        },
+        {
+          "id": "NT_C3_T10_Q34",
+          "question": "Primary và Secondary DNS server khác nhau ở điểm nào?",
+          "options": {
+            "A": "Một cho LAN, một cho WAN",
+            "B": "Một chính, một dự phòng",
+            "C": "Không khác nhau",
+            "D": "Một lưu cache, một không"
+          },
+          "correctAnswer": "B",
+          "explanation": "Primary DNS giữ bản gốc dữ liệu vùng (zone) và là nơi quản trị viên chỉnh sửa. Secondary DNS sao chép dữ liệu từ Primary qua cơ chế zone transfer và phục vụ truy vấn khi Primary gặp sự cố, nhờ vậy hệ thống không bị gián đoạn và chia sẻ được tải. Cả hai đều có thể trả lời truy vấn và dùng cache, không phân biệt theo LAN hay WAN."
+        },
+        {
+          "id": "NT_C3_T10_Q35",
+          "question": "Trong chữ ký số, ai là người kiểm tra chữ ký?",
+          "options": {
+            "A": "Hacker",
+            "B": "Người gửi",
+            "C": "Máy chủ trung gian",
+            "D": "Người nhận"
+          },
+          "correctAnswer": "D",
+          "explanation": "Người gửi ký bằng private key của mình, còn người nhận dùng public key của người gửi để kiểm tra, từ đó xác thực danh tính người gửi và biết nội dung có bị sửa hay không. Người gửi là bên tạo chữ ký nên không tự kiểm tra cho người khác. Máy chủ trung gian (như CA) chỉ xác nhận public key thuộc về ai, không phải bên kiểm tra từng chữ ký."
+        },
+        {
+          "id": "NT_C3_T10_Q36",
+          "question": "TDM là kỹ thuật:",
+          "options": {
+            "A": "Chia thời gian",
+            "B": "Chia bước sóng",
+            "C": "Chia địa chỉ",
+            "D": "Chia tần số"
+          },
+          "correctAnswer": "A",
+          "explanation": "TDM (Time Division Multiplexing) chia thời gian thành các khe (slot) lặp lại, mỗi kết nối được dùng toàn bộ băng thông của đường truyền trong khe của mình. Chia tần số là FDM, chia bước sóng là WDM (dùng trong cáp quang), còn “chia địa chỉ” không phải kỹ thuật ghép kênh."
+        },
+        {
+          "id": "NT_C3_T10_Q37",
+          "question": "TCP không chạy trên:",
+          "options": {
+            "A": "Máy chủ",
+            "B": "Máy khách",
+            "C": "End System",
+            "D": "Router"
+          },
+          "correctAnswer": "D",
+          "explanation": "TCP là giao thức end-to-end của tầng Transport, chỉ được cài ở các hệ thống đầu cuối (máy khách, máy chủ, tức end system). Router thuộc lõi mạng và chỉ xử lý đến tầng Network (đọc header IP để chuyển tiếp), không mở segment TCP ra xử lý."
+        },
+        {
+          "id": "NT_C3_T10_Q38",
+          "question": "Cloud Computing trong IoE cung cấp điều gì?",
+          "options": {
+            "A": "Giảm bảo mật",
+            "B": "Tài nguyên tính toán linh hoạt",
+            "C": "Loại bỏ dữ liệu",
+            "D": "Giảm kết nối"
+          },
+          "correctAnswer": "B",
+          "explanation": "Cloud cho phép co giãn tài nguyên tính toán và lưu trữ theo nhu cầu, trả tiền theo mức dùng, phù hợp với lượng dữ liệu biến động lớn từ thiết bị IoE. Cloud không nhằm giảm bảo mật, loại bỏ dữ liệu hay giảm kết nối, ngược lại còn hỗ trợ lưu trữ, phân tích và kết nối các thiết bị."
+        },
+        {
+          "id": "NT_C3_T10_Q39",
+          "question": "IMAP khác POP3 ở điểm nào?",
+          "options": {
+            "A": "Không cần xác thực",
+            "B": "Không hỗ trợ TCP",
+            "C": "Cho phép quản lý thư mục từ xa",
+            "D": "Không cho phép tìm kiếm email"
+          },
+          "correctAnswer": "C",
+          "explanation": "IMAP giữ thư trên server và lưu trạng thái (thư mục, cờ đã đọc/chưa đọc), nên người dùng tạo thư mục, di chuyển, tìm kiếm thư ngay trên server và đồng bộ giữa nhiều thiết bị. POP3 chủ yếu tải thư về máy rồi xóa khỏi server. Cả hai đều chạy trên TCP và đều cần xác thực, còn IMAP hỗ trợ tìm kiếm trên server nên đáp án D ngược với thực tế."
+        },
+        {
+          "id": "NT_C3_T10_Q40",
+          "question": "Hai IP: 10.0.0.5/8 và 10.1.2.3/8 có cùng mạng không?",
+          "options": {
+            "A": "Không xác định",
+            "B": "Không",
+            "C": "Có",
+            "D": "Chỉ khi NAT"
+          },
+          "correctAnswer": "C",
+          "explanation": "Mask /8 chỉ lấy octet đầu làm NetID, cả hai địa chỉ đều có NetID 10.0.0.0 nên cùng mạng. Việc xác định này chỉ cần phép AND địa chỉ với mask, không cần NAT. NAT dùng để chuyển đổi địa chỉ private sang public, không liên quan đến việc hai địa chỉ có cùng mạng hay không."
+        },
+        {
+          "id": "NT_C3_T10_Q41",
+          "question": "Một socket được định danh chủ yếu bằng:",
+          "options": {
+            "A": "Port Number",
+            "B": "Sequence Number",
+            "C": "Địa chỉ MAC",
+            "D": "Frame Check Sequence"
+          },
+          "correctAnswer": "A",
+          "explanation": "Socket được định danh bằng port number kết hợp với địa chỉ IP, giúp tầng Transport chuyển dữ liệu đến đúng tiến trình. Với TCP, mỗi kết nối còn được phân biệt bởi bộ bốn (IP nguồn, port nguồn, IP đích, port đích). Sequence Number dùng đánh số byte, địa chỉ MAC thuộc tầng Link, còn FCS là trường kiểm tra lỗi của frame."
+        },
+        {
+          "id": "NT_C3_T10_Q42",
+          "question": "Trong DNS reply message, phần Additional thường chứa gì?",
+          "options": {
+            "A": "Chỉ chứa NS record",
+            "B": "Chỉ chứa MX record",
+            "C": "Thông tin bổ sung hữu ích",
+            "D": "Dữ liệu không cần thiết"
+          },
+          "correctAnswer": "C",
+          "explanation": "Phần Additional chứa các bản ghi giúp client khỏi phải truy vấn thêm, ví dụ địa chỉ IP (bản ghi A) của name server được nêu trong phần Authority, hoặc IP của mail server nêu trong bản ghi MX. Phần này không giới hạn ở một loại bản ghi, và cũng không phải dữ liệu thừa vì nó giúp tiết kiệm một lượt truy vấn."
+        },
+        {
+          "id": "NT_C3_T10_Q43",
+          "question": "Trong hệ mã đối xứng, khóa được sử dụng như thế nào?",
+          "options": {
+            "A": "Khóa khác nhau cho mã hóa và giải mã",
+            "B": "Cùng một khóa cho cả hai quá trình",
+            "C": "Khóa thay đổi liên tục",
+            "D": "Không cần khóa"
+          },
+          "correctAnswer": "B",
+          "explanation": "Mật mã đối xứng (AES, DES) dùng chung một khóa bí mật để mã hóa và giải mã, nên khó khăn chính là phân phối khóa an toàn giữa hai bên. Dùng hai khóa khác nhau là đặc điểm của mật mã bất đối xứng. Khóa thay đổi liên tục (như session key) là một kỹ thuật quản lý khóa chứ không phải cách dùng khóa của hệ đối xứng, và mọi hệ mã đều cần khóa."
+        },
+        {
+          "id": "NT_C3_T10_Q44",
+          "question": "Nếu một router không nhận được thông tin từ neighbor trong 180 giây, điều gì xảy ra?",
+          "options": {
+            "A": "Xóa toàn bộ bảng định tuyến",
+            "B": "Đánh dấu neighbor không thể truy cập",
+            "C": "Gửi ICMP",
+            "D": "Reset kết nối TCP"
+          },
+          "correctAnswer": "B",
+          "explanation": "Đây là cơ chế timeout của giao thức định tuyến vector khoảng cách như RIP: router gửi cập nhật mỗi 30 giây, nếu 180 giây không nghe thấy gì từ neighbor thì coi neighbor (và các tuyến học qua nó) là không thể truy cập, đặt metric bằng 16 rồi tính lại đường đi. Router không xóa toàn bộ bảng định tuyến mà chỉ các tuyến liên quan, và việc này không liên quan đến ICMP hay kết nối TCP."
+        },
+        {
+          "id": "NT_C3_T10_Q45",
+          "question": "Thành phần ‘Data’ trong IoE có vai trò gì?",
+          "options": {
+            "A": "Tạo phần cứng",
+            "B": "Kết nối con người",
+            "C": "Biến dữ liệu thành thông tin hữu ích",
+            "D": "Điều khiển thiết bị"
+          },
+          "correctAnswer": "C",
+          "explanation": "IoE gồm bốn thành phần: People, Process, Data, Things. Thành phần Data lo việc thu thập dữ liệu thô từ thiết bị rồi phân tích để trở thành thông tin có giá trị phục vụ ra quyết định. Tạo phần cứng và điều khiển thiết bị thuộc về Things, còn kết nối con người thuộc về People."
+        },
+        {
+          "id": "NT_C3_T10_Q46",
+          "question": "Địa chỉ nào thuộc dải private Class B?",
+          "options": {
+            "A": "191.255.255.255",
+            "B": "128.0.0.1",
+            "C": "172.16.5.4",
+            "D": "150.10.10.10"
+          },
+          "correctAnswer": "C",
+          "explanation": "Dải private theo RFC 1918 gồm 10.0.0.0/8 (Class A), 172.16.0.0 đến 172.31.255.255 (Class B) và 192.168.0.0/16 (Class C). Địa chỉ 172.16.5.4 nằm trong dải Class B private. Ba địa chỉ còn lại (191.255.255.255, 128.0.0.1, 150.10.10.10) tuy thuộc Class B (octet đầu 128–191) nhưng là địa chỉ public, không nằm trong dải private."
+        },
+        {
+          "id": "NT_C3_T10_Q47",
+          "question": "Trong non-persistent HTTP, mỗi request cần bao nhiêu kết nối TCP?",
+          "options": {
+            "A": "Một kết nối cho nhiều request",
+            "B": "Hai kết nối cố định",
+            "C": "Không cần TCP",
+            "D": "Một kết nối cho mỗi request"
+          },
+          "correctAnswer": "D",
+          "explanation": "Non-persistent HTTP (HTTP/1.0) mở một kết nối TCP riêng cho mỗi đối tượng, gửi xong thì đóng. Vì vậy mỗi đối tượng tốn thêm 2 RTT (một cho bắt tay TCP, một cho request/response). Một kết nối dùng cho nhiều request là đặc điểm của persistent HTTP, và HTTP luôn chạy trên TCP."
+        },
+        {
+          "id": "NT_C3_T10_Q48",
+          "question": "Chiều dài tối đa điển hình của cáp UTP là:",
+          "options": {
+            "A": "185 m",
+            "B": "50 m",
+            "C": "500 m",
+            "D": "100 m"
+          },
+          "correctAnswer": "D",
+          "explanation": "Theo chuẩn Ethernet, cáp UTP có chiều dài tối đa 100 m cho mỗi đoạn, vượt quá thì tín hiệu suy hao quá mức nên cần repeater hoặc switch. Các con số còn lại ứng với loại cáp khác: 185 m là cáp đồng trục mảnh 10Base2 và 500 m là cáp đồng trục dày 10Base5."
+        },
+        {
+          "id": "NT_C3_T10_Q49",
+          "question": "Firewall được triển khai phổ biến ở đâu?",
+          "options": {
+            "A": "Router",
+            "B": "Hub",
+            "C": "Switch",
+            "D": "Modem"
+          },
+          "correctAnswer": "A",
+          "explanation": "Firewall thường đặt tại biên mạng, nơi lưu lượng ra vào được kiểm soát, nên tích hợp trong router hoặc là thiết bị chuyên dụng đặt sau router. Hub chỉ khuếch đại tín hiệu ở tầng Physical nên không có khả năng lọc, switch chỉ chuyển frame theo MAC trong mạng nội bộ, còn modem chỉ điều chế tín hiệu."
+        },
+        {
+          "id": "NT_C3_T10_Q50",
+          "question": "Số lượng host tối đa trong một mạng Class B là bao nhiêu?",
+          "options": {
+            "A": "254",
+            "B": "65534",
+            "C": "16777214",
+            "D": "1022"
+          },
+          "correctAnswer": "B",
+          "explanation": "Class B có mask mặc định /16, còn 16 bit host nên có 2^16 − 2 = 65534 host (trừ địa chỉ mạng và broadcast). Con số 254 là của Class C (8 bit host), 16777214 là của Class A (24 bit host), còn 1022 ứng với mask /22."
+        },
+        {
+          "id": "NT_C3_T10_Q51",
+          "question": "Giá trị Acknowledgment Number thể hiện:",
+          "options": {
+            "A": "Byte cuối cùng đã nhận",
+            "B": "Byte đầu tiên đã nhận",
+            "C": "Tổng số byte đã nhận",
+            "D": "Byte kế tiếp mong đợi nhận"
+          },
+          "correctAnswer": "D",
+          "explanation": "ACK trong TCP mang tính tích lũy: Acknowledgment Number cho biết số thứ tự của byte tiếp theo mà bên nhận đang chờ, ngầm xác nhận mọi byte trước đó đã nhận đúng. Ví dụ ACK = 1001 nghĩa là đã nhận đủ các byte đến 1000. Vì vậy nó không phải byte cuối đã nhận, không phải byte đầu, cũng không phải tổng số byte."
+        },
+        {
+          "id": "NT_C3_T10_Q52",
+          "question": "Trong IoE, ‘Things’ bao gồm yếu tố nào?",
+          "options": {
+            "A": "Quy trình",
+            "B": "Thiết bị và cảm biến",
+            "C": "Con người",
+            "D": "Chính sách"
+          },
+          "correctAnswer": "B",
+          "explanation": "Things là các vật thể vật lý kết nối mạng như cảm biến, thiết bị thông minh, máy móc, xe cộ, có khả năng thu thập và gửi dữ liệu. Con người thuộc thành phần People, còn quy trình và chính sách thuộc thành phần Process."
+        },
+        {
+          "id": "NT_C3_T10_Q53",
+          "question": "Tấn công nào có thể lợi dụng traditional packet filter bằng cách giả ACK?",
+          "options": {
+            "A": "DoS và scan mạng",
+            "B": "SQL Injection",
+            "C": "XSS",
+            "D": "Phishing"
+          },
+          "correctAnswer": "A",
+          "explanation": "Packet filter truyền thống không theo dõi trạng thái kết nối, nên thường cho phép mọi gói có cờ ACK đi qua vì coi là phản hồi của kết nối đã có. Kẻ tấn công lợi dụng điều này bằng cách gửi gói giả ACK để dò quét cổng, ánh xạ mạng (scan) hoặc làm ngập hệ thống bên trong (DoS). Stateful firewall chặn được kiểu này vì kiểm tra gói ACK có thuộc kết nối nào trong bảng trạng thái không. SQL Injection và XSS là tấn công ở tầng ứng dụng web, còn Phishing là tấn công lừa đảo người dùng, đều không liên quan đến việc giả cờ ACK."
+        },
+        {
+          "id": "NT_C3_T10_Q54",
+          "question": "Nhóm well-known port nằm trong khoảng:",
+          "options": {
+            "A": "0–255",
+            "B": "0–1023",
+            "C": "1024–49151",
+            "D": "49152–65535"
+          },
+          "correctAnswer": "B",
+          "explanation": "IANA chia port thành ba nhóm: well-known (0–1023) cho dịch vụ chuẩn như HTTP 80, HTTPS 443, SSH 22; registered (1024–49151) cho ứng dụng đăng ký riêng; dynamic/private (49152–65535) cấp tạm cho client. Khoảng 0–255 là phạm vi well-known cũ trước đây, không còn là định nghĩa hiện hành."
+        },
+        {
+          "id": "NT_C3_T10_Q55",
+          "question": "RSA được phát triển vào năm nào?",
+          "options": {
+            "A": "1969",
+            "B": "1978",
+            "C": "1976",
+            "D": "1985"
+          },
+          "correctAnswer": "B",
+          "explanation": "RSA do Rivest, Shamir và Adleman (MIT) phát triển và công bố năm 1978 (nghiên cứu hoàn thành năm 1977), là một trong những hệ mã khóa công khai đầu tiên. Năm 1976 là mốc của Diffie-Hellman với ý tưởng trao đổi khóa công khai, còn 1969 và 1985 không gắn với RSA (1985 là năm ElGamal ra đời)."
+        },
+        {
+          "id": "NT_C3_T10_Q56",
+          "question": "ICMP thường được sử dụng để làm gì?",
+          "options": {
+            "A": "Streaming video",
+            "B": "Gửi email",
+            "C": "Truyền file",
+            "D": "Thông báo lỗi và chẩn đoán mạng"
+          },
+          "correctAnswer": "D",
+          "explanation": "ICMP nằm ở tầng Network, dùng để báo lỗi (Destination Unreachable, Time Exceeded) và chẩn đoán qua các công cụ như ping (Echo Request/Reply) và traceroute. Streaming video, gửi email và truyền file là việc của các giao thức tầng ứng dụng (RTP, SMTP, FTP)."
+        },
+        {
+          "id": "NT_C3_T10_Q57",
+          "question": "Trong Active FTP, ai là bên khởi tạo data connection?",
+          "options": {
+            "A": "Router",
+            "B": "Client",
+            "C": "Proxy",
+            "D": "Server"
+          },
+          "correctAnswer": "D",
+          "explanation": "Ở chế độ Active, client mở control connection tới cổng 21 của server và báo cổng của mình qua lệnh PORT, sau đó server chủ động kết nối từ cổng 20 ngược về client để truyền dữ liệu. Vì kết nối đi vào từ bên ngoài nên Active FTP hay bị firewall hoặc NAT của client chặn. Chế độ Passive ra đời để khắc phục: client là bên khởi tạo cả hai kết nối."
+        },
+        {
+          "id": "NT_C3_T10_Q58",
+          "question": "Trong sự so sánh giữa tầng giao vận và tầng mạng, điểm khác biệt chính là gì?",
+          "options": {
+            "A": "Tầng mạng không sử dụng địa chỉ",
+            "B": "Tầng mạng cung cấp host-to-host, tầng giao vận cung cấp process-to-process",
+            "C": "Tầng giao vận cung cấp host-to-host",
+            "D": "Hai tầng giống nhau hoàn toàn"
+          },
+          "correctAnswer": "B",
+          "explanation": "Tầng Network (IP) chuyển gói tin giữa các máy dựa trên địa chỉ IP, còn tầng Transport mở rộng thành giao tiếp giữa các tiến trình nhờ port number, kèm các dịch vụ như truyền tin cậy (TCP). Tầng mạng vẫn dùng địa chỉ (địa chỉ IP) nên A sai, C đảo ngược vai trò, và hai tầng có chức năng khác nhau rõ rệt nên D sai."
+        }
+      ]
+    }
+  ]
+}
