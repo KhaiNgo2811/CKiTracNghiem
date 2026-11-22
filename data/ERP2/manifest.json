@@ -47,8 +47,20 @@
       "chapterName": "TS410 Unit 4 – Record to Report: FI & CO",
       "topicCount": 6,
       "questionCount": 64
+    },
+    {
+      "chapterId": "ERP2_C9",
+      "chapterName": "TS410 Unit 6 – Source to Pay: MM",
+      "topicCount": 5,
+      "questionCount": 57
+    },
+    {
+      "chapterId": "ERP2_C10",
+      "chapterName": "TS410 Unit 9 – Lead to Cash: SD",
+      "topicCount": 5,
+      "questionCount": 50
     }
   ],
-  "totalQuestions": 620,
-  "totalTopics": 49
+  "totalQuestions": 727,
+  "totalTopics": 59
 }
