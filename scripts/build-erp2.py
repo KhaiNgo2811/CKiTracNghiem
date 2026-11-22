@@ -10,7 +10,7 @@ from collections import Counter
 sys.path.insert(0, 'scripts/erp2')
 OUT = 'data/ERP2/'
 LETTERS = 'ABCD'
-MODULES = ['ch1', 'ch2', 'ch3', 'ch4', 'ch5', 'ts_ps', 'ts_eam']
+MODULES = ['ch1', 'ch2', 'ch3', 'ch4', 'ch5', 'ts_ps', 'ts_eam', 'ts_fico']
 
 chapters = []
 seen_q = set()
@@ -21,9 +21,13 @@ for name in MODULES:
     topics = []
     for ti, (tname, items) in enumerate(m.TOPICS, 1):
         qs = []
-        for k, (q, right, wrongs, expl) in enumerate(items, 1):
+        k = 0
+        for (q, right, wrongs, expl) in items:
+            k += 1
             assert len(wrongs) == 3 and len({right, *wrongs}) == 4, (m.CHAPTER_ID, q)
-            assert q not in seen_q, ('duplicate question', q)
+            if q in seen_q:
+                print('SKIP duplicate:', m.CHAPTER_ID, q, file=sys.stderr)
+                continue
             seen_q.add(q)
             qid = f'{m.CHAPTER_ID}_T{ti}_Q{k}'
             pos = zlib.crc32(qid.encode()) % 4

@@ -1,0 +1,810 @@
+{
+  "chapterId": "ERP2_C8",
+  "chapterName": "TS410 Unit 4 – Record to Report: FI & CO",
+  "topics": [
+    {
+      "topicId": "ERP2_C8_T1",
+      "topicName": "Financial Accounting (FI) overview",
+      "questions": [
+        {
+          "id": "ERP2_C8_T1_Q1",
+          "question": "What are the main tasks of Financial Accounting (FI)?",
+          "options": {
+            "A": "Collect revenues and expenses by area of responsibility for internal management",
+            "B": "Plan and allocate overhead costs to cost centers and internal orders",
+            "C": "Analyze the profit of market segments using costs assigned to revenues",
+            "D": "Post all financial transactions, keep them unchanged for reporting and produce the legal P&L statement and balance sheet"
+          },
+          "correctAnswer": "D",
+          "explanation": "FI is subject to legal requirements and reporting standards such as US GAAP, IFRS and HGB."
+        },
+        {
+          "id": "ERP2_C8_T1_Q2",
+          "question": "Who are the stakeholders of financial accounting reports?",
+          "options": {
+            "A": "Internal managers who control costs and revenues",
+            "B": "External parties such as suppliers, banks and tax authorities",
+            "C": "Plant supervisors who coordinate production and maintenance",
+            "D": "Project managers who budget and plan their projects"
+          },
+          "correctAnswer": "B",
+          "explanation": "Management Accounting serves internal stakeholders."
+        },
+        {
+          "id": "ERP2_C8_T1_Q3",
+          "question": "At which level is the general ledger (G/L) managed?",
+          "options": {
+            "A": "The client level",
+            "B": "The plant level",
+            "C": "The controlling area level",
+            "D": "The company code level"
+          },
+          "correctAnswer": "D",
+          "explanation": "Accounting-relevant transactions from Logistics or HR are posted to FI in real time through automatic account determination."
+        },
+        {
+          "id": "ERP2_C8_T1_Q4",
+          "question": "How is every general ledger structured?",
+          "options": {
+            "A": "According to a chart of accounts",
+            "B": "According to a cost center standard hierarchy",
+            "C": "According to a profit center standard hierarchy",
+            "D": "According to a work breakdown structure"
+          },
+          "correctAnswer": "A",
+          "explanation": "The chart of accounts contains the definitions of all G/L accounts."
+        },
+        {
+          "id": "ERP2_C8_T1_Q5",
+          "question": "What ensures that a subledger is always reconciled with the G/L?",
+          "options": {
+            "A": "The subledger and the G/L are compared once at every period end",
+            "B": "Users post the same amounts manually to both ledgers",
+            "C": "Every subledger posting generates a corresponding posting to the assigned reconciliation G/L account",
+            "D": "The G/L accounts of subledgers are enabled for direct posting"
+          },
+          "correctAnswer": "C",
+          "explanation": "Reconciliation accounts are not enabled for direct posting."
+        },
+        {
+          "id": "ERP2_C8_T1_Q6",
+          "question": "Which FI component records the transactions of suppliers, and from which process does it take most of its data?",
+          "options": {
+            "A": "Accounts payable (AP), from the procure-to-pay process",
+            "B": "Accounts receivable (AR), from the order-to-cash process",
+            "C": "Asset accounting (AA), from the design-to-operate process",
+            "D": "Bank ledger (FI-BL), from the hire-to-retire process"
+          },
+          "correctAnswer": "A",
+          "explanation": "AR takes most of its data from order-to-cash."
+        },
+        {
+          "id": "ERP2_C8_T1_Q7",
+          "question": "What does Asset Accounting (AA) deal with?",
+          "options": {
+            "A": "Only fixed assets such as machines and buildings",
+            "B": "Only the booking of cash flows of the bank accounts",
+            "C": "Both current assets and non-current (fixed) assets",
+            "D": "Only receivables from customers of the company"
+          },
+          "correctAnswer": "C",
+          "explanation": "The Bank Ledger (FI-BL) supports the booking of cash flows."
+        },
+        {
+          "id": "ERP2_C8_T1_Q8",
+          "question": "Why do companies need parallel accounting (parallel valuation)?",
+          "options": {
+            "A": "To keep management accounting separate from legal reporting",
+            "B": "To post every document twice in different company codes",
+            "C": "To avoid the use of reconciliation accounts in the G/L",
+            "D": "To compare financial statements on internationally accepted standards instead of only local principles"
+          },
+          "correctAnswer": "D",
+          "explanation": "Many companies publish statements under both local rules (US GAAP, HGB) and international standards."
+        },
+        {
+          "id": "ERP2_C8_T1_Q9",
+          "question": "What are the two options for parallel accounting in G/L Accounting?",
+          "options": {
+            "A": "The leading ledger solution and the group ledger solution",
+            "B": "The accounts solution (parallel accounts) and the ledger solution",
+            "C": "The company code solution and the plant solution",
+            "D": "The segment solution and the profit center solution"
+          },
+          "correctAnswer": "B",
+          "explanation": "The ledger solution is strongly recommended for new (greenfield) SAP S/4HANA systems."
+        },
+        {
+          "id": "ERP2_C8_T1_Q10",
+          "question": "How does the accounts solution create financial statements for different accounting principles?",
+          "options": {
+            "A": "Several general ledgers are managed in parallel within G/L Accounting",
+            "B": "Each principle uses its own client with a separate chart of accounts",
+            "C": "Documents are split between the leading and non-leading ledgers",
+            "D": "Different valuation approaches post to different accounts, and the financial statement version evaluates the relevant accounts"
+          },
+          "correctAnswer": "D",
+          "explanation": "It was formerly used often."
+        },
+        {
+          "id": "ERP2_C8_T1_Q11",
+          "question": "What does the ledger solution in SAP S/4HANA allow?",
+          "options": {
+            "A": "Posting different valuations to separate parallel accounts only",
+            "B": "Managing multiple general ledgers in parallel within G/L Accounting to create different financial statements",
+            "C": "Assigning a different chart of accounts to every company code",
+            "D": "Replacing the need for a leading ledger in each client"
+          },
+          "correctAnswer": "B",
+          "explanation": "G/L Accounting has one leading ledger in each client."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C8_T2",
+      "topicName": "Management Accounting (CO) & FI–CO integration",
+      "questions": [
+        {
+          "id": "ERP2_C8_T2_Q1",
+          "question": "What is the purpose of Management Accounting (CO)?",
+          "options": {
+            "A": "To meet the legal requirements of a country or reporting standard",
+            "B": "To collect revenue and expenses by areas of responsibility and provide information for management decisions",
+            "C": "To record all monetary flows and evaluate the inventories",
+            "D": "To produce the balance sheet for external stakeholders"
+          },
+          "correctAnswer": "B",
+          "explanation": "CO covers all functions necessary for controlling costs and revenues effectively."
+        },
+        {
+          "id": "ERP2_C8_T2_Q2",
+          "question": "Which is the primary source of data for CO?",
+          "options": {
+            "A": "Human Capital Management, which posts all labor costs to CO",
+            "B": "Sales order management, which posts all revenue to CO",
+            "C": "Production planning, which posts all production costs to CO",
+            "D": "Financial Accounting (FI): most expense postings in the G/L result in a cost posting in CO"
+          },
+          "correctAnswer": "D",
+          "explanation": "Expense postings can be journal postings, vendor invoices or depreciation postings."
+        },
+        {
+          "id": "ERP2_C8_T2_Q3",
+          "question": "What does Product Cost Controlling calculate?",
+          "options": {
+            "A": "The profit or loss of an organization per market segment",
+            "B": "The costs incurred when a service is provided or a product is manufactured, e.g., the minimum price for profitable marketing",
+            "C": "The costs that occur at the cost centers for each period",
+            "D": "The costs that are collected for temporary internal activities"
+          },
+          "correctAnswer": "B",
+          "explanation": "BOMs and routings can be used in CO-PC."
+        },
+        {
+          "id": "ERP2_C8_T2_Q4",
+          "question": "What does Profitability Analysis (CO-PA) do?",
+          "options": {
+            "A": "Calculates the cost of manufacturing a product or service",
+            "B": "Allocates costs between cost centers and internal orders",
+            "C": "Analyzes profit or loss per market segment by assigning costs to the revenues of each segment",
+            "D": "Records the depreciation of fixed assets in the G/L"
+          },
+          "correctAnswer": "C",
+          "explanation": "It gives a basis for calculating prices, targeting customers and choosing sales channels."
+        },
+        {
+          "id": "ERP2_C8_T2_Q5",
+          "question": "What does Cost Center Accounting take the costs of a company and do with them?",
+          "options": {
+            "A": "Allocates them to the sub-areas that actually caused them",
+            "B": "Assigns them to the market segments with the highest revenue",
+            "C": "Posts them to the balance sheet accounts of the company code",
+            "D": "Combines them in one internal order for the period"
+          },
+          "correctAnswer": "A",
+          "explanation": "Cost centers are separate areas within a controlling area at which costs are incurred."
+        },
+        {
+          "id": "ERP2_C8_T2_Q6",
+          "question": "In cost center accounting, what is the role of an activity type?",
+          "options": {
+            "A": "The category of a cost element used in assessments",
+            "B": "The hierarchy node a cost center belongs to",
+            "C": "The type of activity that can be provided by a cost center, valued with a price",
+            "D": "The profit center to which a cost center is assigned"
+          },
+          "correctAnswer": "C",
+          "explanation": "Activity outputs supplied by one cost center to others represent a utilization of resources."
+        },
+        {
+          "id": "ERP2_C8_T2_Q7",
+          "question": "What are internal orders used for?",
+          "options": {
+            "A": "To plan, collect and analyze the costs arising from internal activities",
+            "B": "To record the costs of customer orders for billing",
+            "C": "To post the depreciation of fixed assets to the G/L",
+            "D": "To group cost centers with similar characteristics"
+          },
+          "correctAnswer": "A",
+          "explanation": "Internal orders can settle costs to cost centers, ABC processes and other internal orders."
+        },
+        {
+          "id": "ERP2_C8_T2_Q8",
+          "question": "Which statement describes the difference between FI and CO regarding the level at which they are needed?",
+          "options": {
+            "A": "The level for CO is determined by law; FI analyzes costs worldwide",
+            "B": "The level for FI is determined by law and differs per country; CO analyzes costs and revenues across country boundaries",
+            "C": "Both are determined by law and identical in every country",
+            "D": "Neither is limited by legal reporting requirements"
+          },
+          "correctAnswer": "B",
+          "explanation": "Results in Management Accounting can be compared with those in FI (reconciliation)."
+        },
+        {
+          "id": "ERP2_C8_T2_Q9",
+          "question": "What is the Universal Journal in SAP S/4HANA, and what is its table?",
+          "options": {
+            "A": "The list of all journal entry templates, table BKPF",
+            "B": "The header table of accounting documents, table BSEG",
+            "C": "The table of controlling objects, table COSP",
+            "D": "The common line item store of actual data for FI and CO, table ACDOCA"
+          },
+          "correctAnswer": "D",
+          "explanation": "It is the single source of truth for all accounting components."
+        },
+        {
+          "id": "ERP2_C8_T2_Q10",
+          "question": "Which benefits does the Universal Journal data model provide?",
+          "options": {
+            "A": "Separate tables for FI and CO that are reconciled every night",
+            "B": "Aggregated totals only, to reduce the memory footprint",
+            "C": "Replication of all postings to BI for every report",
+            "D": "One line item table with full detail, data stored only once so no reconciliation is needed, and fast multi-dimensional reporting without replication to BI"
+          },
+          "correctAnswer": "D",
+          "explanation": "It also reduces the memory footprint through elimination of redundancy."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C8_T3",
+      "topicName": "Organizational levels in SAP Financials",
+      "questions": [
+        {
+          "id": "ERP2_C8_T3_Q1",
+          "question": "What does a controlling area represent?",
+          "options": {
+            "A": "A separate unit of cost accounting with a self-contained organizational structure for managing and allocating costs and revenues",
+            "B": "The smallest entity that supports a full legal set of books",
+            "C": "The structure of the external market segments of the enterprise",
+            "D": "A sub-activity of a company with its own risks and revenues"
+          },
+          "correctAnswer": "A",
+          "explanation": "Assigning more than one company code to a controlling area allows cost accounting across them."
+        },
+        {
+          "id": "ERP2_C8_T3_Q2",
+          "question": "What must a CO area and its company codes have in common?",
+          "options": {
+            "A": "The same currency and the same language",
+            "B": "The same plant and the same cost centers",
+            "C": "The same operating chart of accounts and the same fiscal year variant",
+            "D": "The same segment and the same profit centers"
+          },
+          "correctAnswer": "C",
+          "explanation": "Currencies can differ in cross-company-code cost accounting."
+        },
+        {
+          "id": "ERP2_C8_T3_Q3",
+          "question": "How can accounts be linked to country-specific accounts in this setup?",
+          "options": {
+            "A": "By an alternative account number (country chart of accounts) stored in the account master record",
+            "B": "By assigning a separate operating chart of accounts to each company code",
+            "C": "By creating a new controlling area for each country",
+            "D": "By using a different fiscal year variant for each country"
+          },
+          "correctAnswer": "A",
+          "explanation": "This preserves a common operating chart of accounts."
+        },
+        {
+          "id": "ERP2_C8_T3_Q4",
+          "question": "What does the operating concern represent?",
+          "options": {
+            "A": "A separate unit of cost accounting inside one company code",
+            "B": "The smallest legal unit with a full set of books",
+            "C": "A reporting dimension for business or geographic segments",
+            "D": "The structure of the external market segments of the enterprise; several controlling areas can be assigned to it"
+          },
+          "correctAnswer": "D",
+          "explanation": "Profitability Analysis (CO-PA) is used within the operating concern."
+        },
+        {
+          "id": "ERP2_C8_T3_Q5",
+          "question": "What are the characteristics of a company code?",
+          "options": {
+            "A": "An organizational unit used as a reporting dimension for segment reporting",
+            "B": "The smallest SAP entity that supports a full legal set of books, usually within national boundaries, with a four-character key",
+            "C": "A unit of cost accounting that groups several company codes",
+            "D": "A management-oriented unit used for internal profit control"
+          },
+          "correctAnswer": "B",
+          "explanation": "At least one company code must exist for a business to go live."
+        },
+        {
+          "id": "ERP2_C8_T3_Q6",
+          "question": "What is a segment in General Ledger Accounting?",
+          "options": {
+            "A": "The smallest entity that holds a full legal set of books",
+            "B": "A self-contained unit in which costs and revenues are allocated",
+            "C": "A tool that assigns costs to the revenues of market segments",
+            "D": "An organizational unit used as a dimension for reporting, e.g., a business or geographical segment"
+          },
+          "correctAnswer": "D",
+          "explanation": "Segment reporting gives insight into different business activities and improves forecasting."
+        },
+        {
+          "id": "ERP2_C8_T3_Q7",
+          "question": "How does a business segment differ from a geographical segment?",
+          "options": {
+            "A": "A business segment is a country; a geographical one is a product line",
+            "B": "A business segment is a sub-activity (product or service) with its own risks and revenues; a geographical one differs by economic or political factors",
+            "C": "A business segment is a cost center; a geographical one is a profit center",
+            "D": "A business segment is a company code; a geographical one is a plant"
+          },
+          "correctAnswer": "B",
+          "explanation": "International Accounting Standards (IAS) distinguish these two kinds."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C8_T4",
+      "topicName": "G/L accounts, cost elements & account groups",
+      "questions": [
+        {
+          "id": "ERP2_C8_T4_Q1",
+          "question": "What does the chart of accounts contain for each G/L account?",
+          "options": {
+            "A": "The account currency and the tax code of the account",
+            "B": "The account number, account name and type of G/L account",
+            "C": "The cost center and the profit center of the account",
+            "D": "The posting key and the document type of the account"
+          },
+          "correctAnswer": "B",
+          "explanation": "A chart of accounts can be used by multiple company codes so their general ledgers have an identical structure."
+        },
+        {
+          "id": "ERP2_C8_T4_Q2",
+          "question": "What are the two segments of the G/L master record?",
+          "options": {
+            "A": "The balance sheet segment and the income statement segment",
+            "B": "The controlling area segment and the cost element segment",
+            "C": "The vendor segment and the customer segment",
+            "D": "The chart of accounts segment and the company code segment"
+          },
+          "correctAnswer": "D",
+          "explanation": "The account definition must first be maintained at the chart of accounts level."
+        },
+        {
+          "id": "ERP2_C8_T4_Q3",
+          "question": "What does the chart of accounts segment contain?",
+          "options": {
+            "A": "The account currency and tax-related settings for the company code",
+            "B": "The account description, the account type, the account group and the consolidation account number",
+            "C": "The posting blocks and the correspondence settings for the account",
+            "D": "The reconciliation account and the payment terms of the account"
+          },
+          "correctAnswer": "B",
+          "explanation": "The account group controls the company code segment fields."
+        },
+        {
+          "id": "ERP2_C8_T4_Q4",
+          "question": "Which setting is an example of a company-code-specific account setting?",
+          "options": {
+            "A": "The account number",
+            "B": "The account type",
+            "C": "The account currency",
+            "D": "The account group"
+          },
+          "correctAnswer": "C",
+          "explanation": "E.g., company code 1010 uses EUR and company code 1710 uses USD for most accounts."
+        },
+        {
+          "id": "ERP2_C8_T4_Q6",
+          "question": "Why is the G/L reconciliation account not enabled for direct posting?",
+          "options": {
+            "A": "Because reconciliation accounts only exist in the company code segment",
+            "B": "Because they are allowed only in the leading ledger",
+            "C": "To guarantee that the subledger and G/L are always reconciled",
+            "D": "Because they are balance sheet accounts without a number range"
+          },
+          "correctAnswer": "C",
+          "explanation": "Postings in the G/L are limited to reconciliation account types only for subledger postings."
+        },
+        {
+          "id": "ERP2_C8_T4_Q7",
+          "question": "How are costs defined for Management Accounting in the second (central European) approach?",
+          "options": {
+            "A": "Expenditures related to the business of the company, assigned to periods and valued",
+            "B": "All expenditures in the company, regardless of their business relation",
+            "C": "Only revenues that are related to a specific market segment",
+            "D": "Only the expenditures that are posted to a balance sheet account"
+          },
+          "correctAnswer": "A",
+          "explanation": "A gift to a welfare organization is an expenditure but not a cost."
+        },
+        {
+          "id": "ERP2_C8_T4_Q8",
+          "question": "What are neutral expenditures?",
+          "options": {
+            "A": "Costs that are posted only to statistical cost centers",
+            "B": "Expenditures that do not meet the definition of costs and are only reflected in Financials",
+            "C": "Costs that are allocated to several controlling areas",
+            "D": "Revenues that are posted to non-operating income accounts"
+          },
+          "correctAnswer": "B",
+          "explanation": "They do not appear in Management Accounting."
+        },
+        {
+          "id": "ERP2_C8_T4_Q9",
+          "question": "Which G/L account type is carried forward at the fiscal year end?",
+          "options": {
+            "A": "Primary costs or revenue",
+            "B": "Secondary costs",
+            "C": "Non-operating expense or income",
+            "D": "Balance sheet"
+          },
+          "correctAnswer": "D",
+          "explanation": "Income statement accounts are closed."
+        },
+        {
+          "id": "ERP2_C8_T4_Q10",
+          "question": "Which G/L account type functions as a cost element for operating expenses such as payroll and selling expenses?",
+          "options": {
+            "A": "Secondary costs",
+            "B": "Cash account",
+            "C": "Non-operating expense or income",
+            "D": "Primary costs or revenue"
+          },
+          "correctAnswer": "D",
+          "explanation": "Secondary costs arise from internal value flows."
+        },
+        {
+          "id": "ERP2_C8_T4_Q11",
+          "question": "Which G/L account type functions as a cost element for internal activity allocations, overhead allocations and settlements?",
+          "options": {
+            "A": "Primary costs or revenue",
+            "B": "Secondary costs",
+            "C": "Cash account",
+            "D": "Balance sheet"
+          },
+          "correctAnswer": "B",
+          "explanation": "Secondary costs result from value flows within the organization."
+        },
+        {
+          "id": "ERP2_C8_T4_Q12",
+          "question": "What is the benefit of a cash account type?",
+          "options": {
+            "A": "It carries the balance forward to the next fiscal year automatically",
+            "B": "It functions as a cost element for secondary costs",
+            "C": "It allows direct posting to reconciliation accounts",
+            "D": "One G/L account can be assigned to more than one house bank account, reducing the number of G/L accounts"
+          },
+          "correctAnswer": "D",
+          "explanation": "A G/L account is otherwise required for each house bank account."
+        },
+        {
+          "id": "ERP2_C8_T4_Q13",
+          "question": "For which G/L accounts is controlling-area-specific data needed?",
+          "options": {
+            "A": "Balance sheet accounts and cash accounts",
+            "B": "Secondary costs and primary costs or revenue accounts, where a cost element category is assigned",
+            "C": "Reconciliation accounts only",
+            "D": "Every G/L account of the chart of accounts"
+          },
+          "correctAnswer": "B",
+          "explanation": "The cost element category determines which account can be used for which business transaction in CO."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C8_T5",
+      "topicName": "Cost centers & profit centers",
+      "questions": [
+        {
+          "id": "ERP2_C8_T5_Q1",
+          "question": "What is a cost center?",
+          "options": {
+            "A": "Master data in a CO area representing a delimited location where costs occur",
+            "B": "A management-oriented unit used for internal profit control",
+            "C": "A temporary object that collects the costs of an event",
+            "D": "A G/L account that records the costs of a department"
+          },
+          "correctAnswer": "A",
+          "explanation": "It supports cost determination and cost controlling."
+        },
+        {
+          "id": "ERP2_C8_T5_Q2",
+          "question": "According to which approaches can cost centers be defined?",
+          "options": {
+            "A": "Only by the legal entity (company code) they belong to",
+            "B": "Only by the product groups that they produce",
+            "C": "Functional requirements, allocation criteria, activities and services provided, geographic location or area of responsibility",
+            "D": "Only by the customers they supply with services"
+          },
+          "correctAnswer": "C",
+          "explanation": "The approach should be consistent throughout the enterprise."
+        },
+        {
+          "id": "ERP2_C8_T5_Q3",
+          "question": "What must each CO area have regarding cost centers?",
+          "options": {
+            "A": "A unique standard hierarchy that includes every cost center of the CO area",
+            "B": "A separate standard hierarchy for each company code",
+            "C": "A profit center for every cost center created",
+            "D": "One cost center for each G/L account"
+          },
+          "correctAnswer": "A",
+          "explanation": "The standard hierarchy node field in the cost center master data must be filled."
+        },
+        {
+          "id": "ERP2_C8_T5_Q4",
+          "question": "Which organizational area is a cost center mostly assigned to?",
+          "options": {
+            "A": "A plant",
+            "B": "A sales area",
+            "C": "A purchasing group",
+            "D": "A profit center (its responsible organizational area)"
+          },
+          "correctAnswer": "D",
+          "explanation": "Segments can be derived via the profit center entered in the cost center master record."
+        },
+        {
+          "id": "ERP2_C8_T5_Q5",
+          "question": "What is the cost center master record in terms of time?",
+          "options": {
+            "A": "Valid for all periods and assigned directly to the company code",
+            "B": "Time dependent and assigned to a node of the standard cost center hierarchy",
+            "C": "Valid only for one fiscal year and deleted at year end",
+            "D": "Independent of the standard hierarchy"
+          },
+          "correctAnswer": "B",
+          "explanation": "The control data can lock the cost center against planning and posting."
+        },
+        {
+          "id": "ERP2_C8_T5_Q6",
+          "question": "What are statistical key figures?",
+          "options": {
+            "A": "Monetary amounts allocated from one cost center to another",
+            "B": "Secondary cost elements used in assessments",
+            "C": "Prices valuing the activity types of a cost center",
+            "D": "Non-monetary information planned and posted on cost centers, used for reporting and as distribution factors"
+          },
+          "correctAnswer": "D",
+          "explanation": "Example: distributing facility costs by the square meters used."
+        },
+        {
+          "id": "ERP2_C8_T5_Q7",
+          "question": "What does the category \"Fixed\" mean for a statistical key figure?",
+          "options": {
+            "A": "Periodic values can be added to a total",
+            "B": "Periodic values cannot be added; the total of a period is calculated as the average of single values",
+            "C": "The value cannot be changed after posting",
+            "D": "The value is the same for all cost centers"
+          },
+          "correctAnswer": "B",
+          "explanation": "With category \"Total\" the periodic values can be added to a total."
+        },
+        {
+          "id": "ERP2_C8_T5_Q8",
+          "question": "What is Profit Center Accounting (PCA) used for?",
+          "options": {
+            "A": "Evaluating specific areas of the organization, e.g., by region, function or product, to analyze internal profit and loss",
+            "B": "Calculating the cost of manufacturing a product",
+            "C": "Recording all legal financial transactions of a company code",
+            "D": "Tracking costs at the location where they occur"
+          },
+          "correctAnswer": "A",
+          "explanation": "Typical questions: contribution of a unit, return on investment, cost management."
+        },
+        {
+          "id": "ERP2_C8_T5_Q9",
+          "question": "What is a profit center?",
+          "options": {
+            "A": "A delimited location where costs occur",
+            "B": "A temporary collector of costs of an event",
+            "C": "A management-oriented organizational unit used for internal control, essentially a company within the company",
+            "D": "The smallest unit with a legal set of books"
+          },
+          "correctAnswer": "C",
+          "explanation": "It is defined at CO area level and its master data is time dependent."
+        },
+        {
+          "id": "ERP2_C8_T5_Q10",
+          "question": "What makes profit centers unique among account assignment objects?",
+          "options": {
+            "A": "They can only receive revenue postings",
+            "B": "They can only be assigned to cost centers",
+            "C": "They can be created without a controlling area",
+            "D": "They can be assigned to balance sheet transactions as well as to profit and loss transactions"
+          },
+          "correctAnswer": "D",
+          "explanation": "Online document splitting provides balance sheet reporting at profit center level."
+        },
+        {
+          "id": "ERP2_C8_T5_Q11",
+          "question": "Which objects have fields for profit center assignment in their master records?",
+          "options": {
+            "A": "Only cost centers and internal orders",
+            "B": "Cost centers, business processes, internal orders, projects, production orders and cost objects",
+            "C": "Only G/L accounts and company codes",
+            "D": "Only plants and storage locations"
+          },
+          "correctAnswer": "B",
+          "explanation": "When the original object is posted, the system automatically posts to the profit center."
+        },
+        {
+          "id": "ERP2_C8_T5_Q12",
+          "question": "Do profitability segments have a master record?",
+          "options": {
+            "A": "Yes: they are master data defined at controlling area level",
+            "B": "Yes: they are assigned to a fixed asset in the master record",
+            "C": "No: they are posted only to the standard hierarchy node",
+            "D": "No: a profitability segment combines characteristics such as customer, product, plant or distribution channel, and the profit center is always one of them"
+          },
+          "correctAnswer": "D",
+          "explanation": "The profit center can be derived from the material and plant."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C8_T6",
+      "topicName": "G/L document posting & business partners",
+      "questions": [
+        {
+          "id": "ERP2_C8_T6_Q1",
+          "question": "What are the main parts of an accounting document?",
+          "options": {
+            "A": "A vendor line and a customer line",
+            "B": "A debit part and a credit part posted separately",
+            "C": "A document header and line items",
+            "D": "A budget part and an actual part"
+          },
+          "correctAnswer": "C",
+          "explanation": "The entry view allows a maximum of 999 line items."
+        },
+        {
+          "id": "ERP2_C8_T6_Q2",
+          "question": "Which fields uniquely identify an accounting document?",
+          "options": {
+            "A": "Document number, company code and fiscal year",
+            "B": "Document number, posting key and document type",
+            "C": "Posting date, plant and cost center",
+            "D": "Company code, controlling area and profit center"
+          },
+          "correctAnswer": "A",
+          "explanation": "Document numbers come from number ranges assigned to document types."
+        },
+        {
+          "id": "ERP2_C8_T6_Q3",
+          "question": "Which two control keys are important in an accounting document?",
+          "options": {
+            "A": "The company code (header) and the fiscal year (line items)",
+            "B": "The posting date (header) and the account type (line items)",
+            "C": "The document type (header) and the posting key (line items)",
+            "D": "The reference number (header) and the profit center (line items)"
+          },
+          "correctAnswer": "C",
+          "explanation": "Document types distinguish and order the various accounting documents."
+        },
+        {
+          "id": "ERP2_C8_T6_Q4",
+          "question": "What does a posting key control for a line item?",
+          "options": {
+            "A": "The company code and the fiscal year of the document",
+            "B": "The account type to be posted, the type of posting (debit or credit) and the field statuses",
+            "C": "The document number range and the document type",
+            "D": "The profit center and the segment of the line item"
+          },
+          "correctAnswer": "B",
+          "explanation": "Each line item contains one posting key."
+        },
+        {
+          "id": "ERP2_C8_T6_Q5",
+          "question": "In the Fiori app Post General Journal Entries, which posting keys do debit and credit correspond to?",
+          "options": {
+            "A": "Debit = 50, credit = 40",
+            "B": "Debit = 01, credit = 31",
+            "C": "Debit = 89, credit = 99",
+            "D": "Debit = 40, credit = 50"
+          },
+          "correctAnswer": "D",
+          "explanation": "In selected transactions (e.g., FB50) the posting key no longer has to be entered."
+        },
+        {
+          "id": "ERP2_C8_T6_Q6",
+          "question": "What do journal entry templates allow?",
+          "options": {
+            "A": "Posting entries automatically at each period end",
+            "B": "Saving time by pre-selecting fields and values for numerous similar journal entries; templates can be shared publicly",
+            "C": "Reversing an entry that was posted in error",
+            "D": "Splitting an entry across several company codes"
+          },
+          "correctAnswer": "B",
+          "explanation": "They are created with the Manage Journal Entry Templates app."
+        },
+        {
+          "id": "ERP2_C8_T6_Q7",
+          "question": "In SAP S/4HANA, which master record is used to manage vendors?",
+          "options": {
+            "A": "The vendor master record in the MM component only",
+            "B": "The customer master record with a vendor indicator",
+            "C": "The cost center master with a vendor assignment",
+            "D": "The business partner, which is the single point of entry for business partners, customers and vendors"
+          },
+          "correctAnswer": "D",
+          "explanation": "Application-neutral data such as name, address and bank details is stored in the general data."
+        },
+        {
+          "id": "ERP2_C8_T6_Q8",
+          "question": "What does a business partner role represent?",
+          "options": {
+            "A": "A natural person, group or organization classification",
+            "B": "The grouping that determines the number range",
+            "C": "A business context in which the partner appears and which provides the application-specific data, e.g., FI Vendor, FI Customer, Supplier",
+            "D": "The company code in which the partner is used"
+          },
+          "correctAnswer": "C",
+          "explanation": "The role FI Vendor allows company-code-specific data for Accounts Payable."
+        },
+        {
+          "id": "ERP2_C8_T6_Q9",
+          "question": "What does the business partner category classify?",
+          "options": {
+            "A": "The partner as a natural person, a group or an organization, which determines the available fields",
+            "B": "The partner as a vendor, customer or prospect",
+            "C": "The partner as external or internal",
+            "D": "The partner as a domestic or foreign company"
+          },
+          "correctAnswer": "A",
+          "explanation": "For an organization, the legal form can be entered."
+        },
+        {
+          "id": "ERP2_C8_T6_Q10",
+          "question": "What does the business partner grouping determine, and can it be changed?",
+          "options": {
+            "A": "The business partner role; it can be changed at any time",
+            "B": "The company code; it can be changed at any time",
+            "C": "The account group; it cannot be changed",
+            "D": "The number range (internal/external); it cannot be changed afterwards"
+          },
+          "correctAnswer": "D",
+          "explanation": "Groupings are defined in Customizing together with their number ranges."
+        },
+        {
+          "id": "ERP2_C8_T6_Q11",
+          "question": "Which data does the company code segment of a vendor contain?",
+          "options": {
+            "A": "Name, address and bank details of the vendor",
+            "B": "Reconciliation account, terms of payment, payment methods, dunning data, correspondence settings and posting blocks",
+            "C": "Purchasing organization and incoterms of the vendor",
+            "D": "Tax jurisdiction and general data of the vendor"
+          },
+          "correctAnswer": "B",
+          "explanation": "A company must create a company code segment to do business with a vendor."
+        },
+        {
+          "id": "ERP2_C8_T6_Q12",
+          "question": "Why is document splitting used?",
+          "options": {
+            "A": "To post one document to several company codes in different currencies",
+            "B": "To separate FI documents from CO documents in the Universal Journal",
+            "C": "To limit each document to a maximum of 999 line items",
+            "D": "To get an accurate balance sheet per segment, because otherwise the vendor line has no segment and segments only receive the expense posting"
+          },
+          "correctAnswer": "D",
+          "explanation": "Customizing can specify that the system completes the missing entries automatically."
+        }
+      ]
+    }
+  ]
+}

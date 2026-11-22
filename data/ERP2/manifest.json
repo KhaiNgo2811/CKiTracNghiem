@@ -41,8 +41,14 @@
       "chapterName": "TS410 Unit 11 – Enterprise Asset Management (EAM)",
       "topicCount": 5,
       "questionCount": 55
+    },
+    {
+      "chapterId": "ERP2_C8",
+      "chapterName": "TS410 Unit 4 – Record to Report: FI & CO",
+      "topicCount": 6,
+      "questionCount": 64
     }
   ],
-  "totalQuestions": 556,
-  "totalTopics": 43
+  "totalQuestions": 620,
+  "totalTopics": 49
 }
