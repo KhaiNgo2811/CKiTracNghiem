@@ -1,0 +1,1344 @@
+{
+  "chapterId": "ERP2_C5",
+  "chapterName": "Chapter 5 – The Fulfillment Process (SD)",
+  "topics": [
+    {
+      "topicId": "ERP2_C5_T1",
+      "topicName": "Fulfillment process steps",
+      "questions": [
+        {
+          "id": "ERP2_C5_T1_Q1",
+          "question": "The fulfillment process is often called:",
+          "options": {
+            "A": "\"Procure to pay\"",
+            "B": "\"Plan to produce\"",
+            "C": "\"Record to report\"",
+            "D": "\"Order to cash\" (or \"inquiry to cash\")"
+          },
+          "correctAnswer": "D",
+          "explanation": "It starts with a customer inquiry (or PO) and ends with the receipt of payment."
+        },
+        {
+          "id": "ERP2_C5_T1_Q2",
+          "question": "What is a customer inquiry?",
+          "options": {
+            "A": "A legally binding offer by the company to deliver products on specified terms",
+            "B": "A request for product or service information (availability, delivery dates, pricing) without any obligation to purchase",
+            "C": "An internal document that tracks the progress of the fulfillment process",
+            "D": "A request to the customer for payment for the shipped products"
+          },
+          "correctAnswer": "B",
+          "explanation": "The company responds with a sales quote."
+        },
+        {
+          "id": "ERP2_C5_T1_Q3",
+          "question": "What is a sales quote?",
+          "options": {
+            "A": "A request from the customer for availability and price",
+            "B": "An approval to purchase requested materials sent to a vendor",
+            "C": "A document authorizing employees to prepare a shipment",
+            "D": "A legally binding offer by the company to deliver certain products or services on specified terms, normally valid for a limited time"
+          },
+          "correctAnswer": "D",
+          "explanation": "After the time expires, the company must generate a new quote."
+        },
+        {
+          "id": "ERP2_C5_T1_Q4",
+          "question": "How does a customer purchase order link two organizations?",
+          "options": {
+            "A": "It links the procurement process of the customer to the fulfillment process of the vendor",
+            "B": "It links the fulfillment process of the customer to the production process of the vendor",
+            "C": "It links the financial accounting of both organizations",
+            "D": "It links the cost centers of both organizations"
+          },
+          "correctAnswer": "A",
+          "explanation": "In Chapter 4 GBI was the customer; in Chapter 5 GBI is the vendor."
+        },
+        {
+          "id": "ERP2_C5_T1_Q5",
+          "question": "What is a sales order?",
+          "options": {
+            "A": "A request to the customer for payment",
+            "B": "A document sent to the customer with product prices",
+            "C": "An internal document created from the customer PO that the company uses to track progress of the fulfillment process",
+            "D": "An approval to buy materials from a vendor"
+          },
+          "correctAnswer": "C",
+          "explanation": "It contains quantities, delivery dates, prices, material characteristics and the delivering plant."
+        },
+        {
+          "id": "ERP2_C5_T1_Q6",
+          "question": "Which two key tasks does the system perform when a sales order is created?",
+          "options": {
+            "A": "Availability check and material reservation",
+            "B": "Goods issue and invoice creation",
+            "C": "Picking and packing",
+            "D": "Credit posting and payment clearing"
+          },
+          "correctAnswer": "A",
+          "explanation": "If materials are available, they are reserved for the order and not allocated to other orders."
+        },
+        {
+          "id": "ERP2_C5_T1_Q7",
+          "question": "What does the availability check determine?",
+          "options": {
+            "A": "Whether the customer is creditworthy",
+            "B": "Whether the price is within the tolerance limit",
+            "C": "Whether the necessary materials will be available in time to meet the customer's delivery requirements",
+            "D": "Whether the invoice matches the goods issue"
+          },
+          "correctAnswer": "C",
+          "explanation": "It is performed for each item in the sales order."
+        },
+        {
+          "id": "ERP2_C5_T1_Q8",
+          "question": "What does the shipping step include?",
+          "options": {
+            "A": "Creating the invoice, recording payment and closing the order",
+            "B": "Creating a purchase requisition and a purchase order",
+            "C": "Planning production and confirming the production order",
+            "D": "Creating an outbound delivery, picking and packing the materials, and recording a goods issue"
+          },
+          "correctAnswer": "D",
+          "explanation": "More sophisticated processes include transportation planning."
+        },
+        {
+          "id": "ERP2_C5_T1_Q9",
+          "question": "What does an outbound delivery document do?",
+          "options": {
+            "A": "Requests payment from the customer",
+            "B": "Authorizes an employee to prepare the shipment",
+            "C": "Records the removal of materials from inventory",
+            "D": "Reserves materials for the sales order"
+          },
+          "correctAnswer": "B",
+          "explanation": "Picking removes materials from storage locations; packing prepares them for transport."
+        },
+        {
+          "id": "ERP2_C5_T1_Q10",
+          "question": "What does transportation planning involve?",
+          "options": {
+            "A": "Selecting the vendor and negotiating the purchasing terms",
+            "B": "Determining the pricing procedure and condition types",
+            "C": "Selecting the shipping mode and company, determining the shipping schedule and addressing special requirements",
+            "D": "Selecting the storage location and valuation class"
+          },
+          "correctAnswer": "C",
+          "explanation": "It is a more sophisticated step beyond the basic fulfillment process."
+        },
+        {
+          "id": "ERP2_C5_T1_Q11",
+          "question": "When does the goods issue occur and what does it record?",
+          "options": {
+            "A": "When the shipment leaves the plant; it records the removal of materials from inventory",
+            "B": "When the customer pays; it records the clearing of the customer account",
+            "C": "When the sales order is created; it records the reservation of materials",
+            "D": "When the invoice is created; it records the revenue"
+          },
+          "correctAnswer": "A",
+          "explanation": "It also marks the sales order as ready to be invoiced."
+        },
+        {
+          "id": "ERP2_C5_T1_Q12",
+          "question": "Which tasks does the system perform automatically at goods issue?",
+          "options": {
+            "A": "Updates the customer master and creates the sales quote",
+            "B": "Creates the purchase order and posts the vendor invoice",
+            "C": "Updates G/L accounts, updates inventory quantity and value, creates FI/CO/material documents and marks the order ready to be invoiced",
+            "D": "Settles the internal order and posts the revenue"
+          },
+          "correctAnswer": "C",
+          "explanation": "Billing follows goods issue."
+        },
+        {
+          "id": "ERP2_C5_T1_Q13",
+          "question": "In which situation is billing integrated with the sales order and payment required before shipping?",
+          "options": {
+            "A": "Online retail sales",
+            "B": "Standard wholesale orders",
+            "C": "Return orders",
+            "D": "Rush orders"
+          },
+          "correctAnswer": "A",
+          "explanation": "Billing documents are usually created after the materials are shipped."
+        },
+        {
+          "id": "ERP2_C5_T1_Q14",
+          "question": "Which three steps of the fulfillment process have a financial accounting consequence?",
+          "options": {
+            "A": "Customer inquiry, sales quote and sales order",
+            "B": "Sales order, goods issue and billing",
+            "C": "Picking, packing and goods issue",
+            "D": "Goods issue, billing and customer payment"
+          },
+          "correctAnswer": "D",
+          "explanation": "Inquiry, quote and sales order do not post to the general ledger."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C5_T2",
+      "topicName": "Enterprise structure: sales organization, channel, division, sales area & shipping point",
+      "questions": [
+        {
+          "id": "ERP2_C5_T2_Q1",
+          "question": "Which enterprise structure elements specific to fulfillment are discussed in the chapter?",
+          "options": {
+            "A": "Purchasing organization, purchasing group, plant and storage location",
+            "B": "Sales organization, distribution channel, distribution chain, division, sales area and shipping point",
+            "C": "Controlling area, cost center, profit center and internal order",
+            "D": "Company code, chart of accounts and fiscal year variant"
+          },
+          "correctAnswer": "B",
+          "explanation": "Client, company code, delivering plant and storage location are also relevant."
+        },
+        {
+          "id": "ERP2_C5_T2_Q2",
+          "question": "How do companies typically use a sales organization?",
+          "options": {
+            "A": "To group products with similar characteristics into product lines",
+            "B": "To define the path by which products reach customers",
+            "C": "To define the physical location from which deliveries are sent",
+            "D": "To segregate their market based on geography so different sales strategies can be used in different markets"
+          },
+          "correctAnswer": "D",
+          "explanation": "GBI divides its market into US East, US West, DE North and DE South."
+        },
+        {
+          "id": "ERP2_C5_T2_Q3",
+          "question": "What is the relationship between sales organizations and company codes?",
+          "options": {
+            "A": "A sales organization can be assigned to several company codes",
+            "B": "A company code can have several sales organizations, but a sales organization is assigned to only one company code",
+            "C": "Each company code has exactly one sales organization",
+            "D": "Sales organizations are not assigned to company codes"
+          },
+          "correctAnswer": "B",
+          "explanation": "Sales organization UE00 is assigned to company code US00."
+        },
+        {
+          "id": "ERP2_C5_T2_Q4",
+          "question": "What is the highest level of aggregation for sales reports?",
+          "options": {
+            "A": "The distribution channel",
+            "B": "The division",
+            "C": "The sales organization",
+            "D": "The shipping point"
+          },
+          "correctAnswer": "C",
+          "explanation": "Each item in a sales document is associated with a sales organization."
+        },
+        {
+          "id": "ERP2_C5_T2_Q5",
+          "question": "What does a distribution channel define?",
+          "options": {
+            "A": "The path by which an organization gets its products and services to its customers (e.g., wholesale, internet)",
+            "B": "The geographic market segment the company sells to",
+            "C": "The product line a company sells",
+            "D": "The place from which outbound deliveries leave"
+          },
+          "correctAnswer": "A",
+          "explanation": "GBI has two channels: wholesale (WH) and internet (IN)."
+        },
+        {
+          "id": "ERP2_C5_T2_Q6",
+          "question": "At which level are distribution channels (and divisions) defined?",
+          "options": {
+            "A": "The company code level",
+            "B": "The sales organization level",
+            "C": "The client level, so they can be used across the client",
+            "D": "The plant level"
+          },
+          "correctAnswer": "C",
+          "explanation": "This is unusual compared with most enterprise structure elements."
+        },
+        {
+          "id": "ERP2_C5_T2_Q7",
+          "question": "Distribution channels can be assigned to:",
+          "options": {
+            "A": "One or more sales organizations, and the same channel can serve several sales organizations",
+            "B": "Only one sales organization",
+            "C": "Only plants",
+            "D": "Only company codes"
+          },
+          "correctAnswer": "A",
+          "explanation": "In GBI, US East and DE South sell only through the wholesale channel."
+        },
+        {
+          "id": "ERP2_C5_T2_Q8",
+          "question": "To which category in a sales document do all line items of the same document belong?",
+          "options": {
+            "A": "Different distribution channels for each line item",
+            "B": "The same distribution channel (and the same sales area)",
+            "C": "Different sales organizations for each line item",
+            "D": "Different company codes for each line item"
+          },
+          "correctAnswer": "B",
+          "explanation": "All line items in a sales document belong to the same distribution channel."
+        },
+        {
+          "id": "ERP2_C5_T2_Q9",
+          "question": "What is a distribution chain?",
+          "options": {
+            "A": "A combination of a sales organization, distribution channel and division",
+            "B": "A combination of a plant and a storage location",
+            "C": "A combination of a division and a shipping point",
+            "D": "A combination of a sales organization and a distribution channel that reflects how a sales organization distributes its products"
+          },
+          "correctAnswer": "D",
+          "explanation": "GBI has six distribution chains."
+        },
+        {
+          "id": "ERP2_C5_T2_Q10",
+          "question": "What is the purpose of assigning distribution chains to plants?",
+          "options": {
+            "A": "It permits purchase orders to be created for the plant",
+            "B": "It defines the valuation level of the plant",
+            "C": "It permits outbound deliveries from the plant, defining it as a delivering plant",
+            "D": "It assigns the plant to a company code"
+          },
+          "correctAnswer": "C",
+          "explanation": "The relationship between distribution chains and plants is many-to-many."
+        },
+        {
+          "id": "ERP2_C5_T2_Q11",
+          "question": "What is a division used for?",
+          "options": {
+            "A": "To group together products with similar characteristics; each division is a product line",
+            "B": "To segregate the market based on geography",
+            "C": "To define how products reach customers",
+            "D": "To group storage locations within a plant"
+          },
+          "correctAnswer": "A",
+          "explanation": "GBI has divisions accessories (AS) and bicycles (BI)."
+        },
+        {
+          "id": "ERP2_C5_T2_Q12",
+          "question": "To which element are divisions assigned?",
+          "options": {
+            "A": "Plants",
+            "B": "Distribution channels",
+            "C": "Sales organizations",
+            "D": "Company codes"
+          },
+          "correctAnswer": "C",
+          "explanation": "Divisions, like distribution channels, are defined at the client level."
+        },
+        {
+          "id": "ERP2_C5_T2_Q13",
+          "question": "What is a sales area?",
+          "options": {
+            "A": "A combination of one sales organization, one distribution channel and one division",
+            "B": "A combination of a sales organization and a distribution channel",
+            "C": "A combination of a plant and a shipping point",
+            "D": "A combination of a company code and a plant"
+          },
+          "correctAnswer": "A",
+          "explanation": "Example: UE00 + WH + AS."
+        },
+        {
+          "id": "ERP2_C5_T2_Q14",
+          "question": "Why can a sales area belong to only one company code?",
+          "options": {
+            "A": "Because a division is assigned to exactly one plant",
+            "B": "Because a distribution channel is defined at company code level",
+            "C": "Because sales areas are defined at plant level",
+            "D": "Because a sales organization is assigned to exactly one company code"
+          },
+          "correctAnswer": "D",
+          "explanation": "All sales documents are associated with a single sales area."
+        },
+        {
+          "id": "ERP2_C5_T2_Q15",
+          "question": "Must sales areas be created for every possible combination of sales organization, distribution channel and division?",
+          "options": {
+            "A": "Yes, all combinations must exist",
+            "B": "No, only for combinations required to support the organization's strategy",
+            "C": "No, only for the combinations with the wholesale channel",
+            "D": "Yes, but only for company code US00"
+          },
+          "correctAnswer": "B",
+          "explanation": "E.g., if GBI sells no bicycles via the internet, UW00+IN+BI is not required."
+        },
+        {
+          "id": "ERP2_C5_T2_Q16",
+          "question": "What is a shipping point?",
+          "options": {
+            "A": "A storage area within a plant where materials are stored",
+            "B": "A facility where a company executes its operations",
+            "C": "A unit that negotiates sales contracts",
+            "D": "A physical location within a delivering plant from which outbound deliveries are sent out"
+          },
+          "correctAnswer": "D",
+          "explanation": "Examples: a railhead, a port or a designated location in a plant."
+        },
+        {
+          "id": "ERP2_C5_T2_Q17",
+          "question": "From how many shipping points can one outbound delivery be shipped?",
+          "options": {
+            "A": "Two",
+            "B": "Only one",
+            "C": "Any number",
+            "D": "One per material"
+          },
+          "correctAnswer": "B",
+          "explanation": "Each outbound delivery is processed from a single shipping point."
+        },
+        {
+          "id": "ERP2_C5_T2_Q18",
+          "question": "For what is an express shipping point typically used?",
+          "options": {
+            "A": "Rush orders or situations where the customer picks up the shipment",
+            "B": "Routine deliveries",
+            "C": "Return deliveries only",
+            "D": "Deliveries between plants"
+          },
+          "correctAnswer": "A",
+          "explanation": "The normal shipping point is for routine deliveries."
+        },
+        {
+          "id": "ERP2_C5_T2_Q19",
+          "question": "What are loading points (loading bays)?",
+          "options": {
+            "A": "Mandatory subdivisions of a plant for storing finished products",
+            "B": "Locations from which purchase orders are sent",
+            "C": "Optional subdivisions of a shipping point that let companies load shipments in parallel or handle special materials",
+            "D": "Areas where invoices are printed"
+          },
+          "correctAnswer": "C",
+          "explanation": "GBI has no loading points because products have similar characteristics and volumes are low."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C5_T3",
+      "topicName": "Shipping point & price determination",
+      "questions": [
+        {
+          "id": "ERP2_C5_T3_Q1",
+          "question": "Which two key factors does the shipping point determination procedure consider (together with the plant)?",
+          "options": {
+            "A": "Shipping condition and loading group",
+            "B": "Distribution channel and division",
+            "C": "Condition type and access sequence",
+            "D": "Checking group and checking rule"
+          },
+          "correctAnswer": "A",
+          "explanation": "The procedure specifies a shipping point for each combination of shipping condition, loading group and plant."
+        },
+        {
+          "id": "ERP2_C5_T3_Q2",
+          "question": "What do shipping conditions specify?",
+          "options": {
+            "A": "The method used for loading or handling a material",
+            "B": "The path by which products reach the customers",
+            "C": "The conditions under which the company sends the shipment to the customer (Standard, Pick up, Immediately, Returns)",
+            "D": "The terms that determine which party pays for freight"
+          },
+          "correctAnswer": "C",
+          "explanation": "A shipping condition is assigned to the customer master at the sales area level."
+        },
+        {
+          "id": "ERP2_C5_T3_Q3",
+          "question": "What is the shipping condition \"Returns\" used for?",
+          "options": {
+            "A": "To record a return of a shipment from the customer (no shipment is sent)",
+            "B": "To send urgent shipments immediately",
+            "C": "To let customers pick up the shipment",
+            "D": "To ship the order on the standard schedule"
+          },
+          "correctAnswer": "A",
+          "explanation": "Standard = normal procedure; Immediately = urgent; Pick up = customer collects."
+        },
+        {
+          "id": "ERP2_C5_T3_Q4",
+          "question": "What is a loading group?",
+          "options": {
+            "A": "A grouping of customers with the same shipping condition",
+            "B": "A grouping of plants with the same valuation group code",
+            "C": "A grouping of shipping points within a plant",
+            "D": "A grouping of materials with the same loading requirements (equipment, time, loading point)"
+          },
+          "correctAnswer": "D",
+          "explanation": "The loading group is included in the material master."
+        },
+        {
+          "id": "ERP2_C5_T3_Q5",
+          "question": "How is the net price in a sales order calculated?",
+          "options": {
+            "A": "By multiplying the moving average price by the quantity",
+            "B": "By adding or subtracting charges based on the applicable condition types",
+            "C": "By using the purchase price from the vendor",
+            "D": "By using the standard price of the material only"
+          },
+          "correctAnswer": "B",
+          "explanation": "Each condition is represented in the system using condition types."
+        },
+        {
+          "id": "ERP2_C5_T3_Q6",
+          "question": "What is a condition type?",
+          "options": {
+            "A": "A table of parameters used to define condition records",
+            "B": "A procedure that sequences the evaluation of condition types",
+            "C": "A record holding the specific value for a condition",
+            "D": "An element of price determination representing a price, discount, surcharge or freight (e.g., PR00, SKTO, KF00)"
+          },
+          "correctAnswer": "D",
+          "explanation": "PR00 determines the gross price and SKTO a cash discount."
+        },
+        {
+          "id": "ERP2_C5_T3_Q7",
+          "question": "Which condition type determines the gross price of a material?",
+          "options": {
+            "A": "SKTO",
+            "B": "PR00",
+            "C": "KF00",
+            "D": "RA00"
+          },
+          "correctAnswer": "B",
+          "explanation": "SKTO is evaluated for the cash discount; KF00 is freight."
+        },
+        {
+          "id": "ERP2_C5_T3_Q8",
+          "question": "What is a condition record?",
+          "options": {
+            "A": "A record holding the specific values (e.g., a price of $50) for a condition type for a combination of parameters",
+            "B": "A list of fields available for defining conditions",
+            "C": "The order in which condition records are searched",
+            "D": "A procedure that lists the condition types in a pricing calculation"
+          },
+          "correctAnswer": "A",
+          "explanation": "PR00 records are defined per material; KF00 records per incoterm."
+        },
+        {
+          "id": "ERP2_C5_T3_Q9",
+          "question": "For which parameter is the freight condition record (KF00) defined in the example?",
+          "options": {
+            "A": "Material, for a sales organization and channel",
+            "B": "Customer, for a plant",
+            "C": "Incoterms, for a sales area",
+            "D": "Price list, for a document currency"
+          },
+          "correctAnswer": "C",
+          "explanation": "No freight charge applies for FOB; a UPS shipment costs $9 per kilogram."
+        },
+        {
+          "id": "ERP2_C5_T3_Q10",
+          "question": "What do condition tables define?",
+          "options": {
+            "A": "The order in which condition records are searched",
+            "B": "The sequence of condition types in a calculation",
+            "C": "The parameters (fields) used to define condition records, e.g., sales organization, distribution channel and material",
+            "D": "The values of price and freight"
+          },
+          "correctAnswer": "C",
+          "explanation": "Condition table 004 uses sales organization, distribution channel and material."
+        },
+        {
+          "id": "ERP2_C5_T3_Q11",
+          "question": "What does an access sequence specify?",
+          "options": {
+            "A": "The order in which the system evaluates condition records of each condition type, prioritizing specific over general records",
+            "B": "The condition types that can be used in pricing",
+            "C": "The fields used to define condition records",
+            "D": "The account to which revenue is posted"
+          },
+          "correctAnswer": "A",
+          "explanation": "Example: tables 005, 006, then 004 for PR00."
+        },
+        {
+          "id": "ERP2_C5_T3_Q12",
+          "question": "In the access sequence for PR00 (tables 005, 006, 004), what does the system do first?",
+          "options": {
+            "A": "Searches table 004 first because it is the most general",
+            "B": "Uses the pricing procedure to enter the price manually",
+            "C": "Searches for a condition record based on table 005; if none exists, it tries 006 then 004",
+            "D": "Terminates the pricing and displays an error"
+          },
+          "correctAnswer": "C",
+          "explanation": "Table 005 includes customer and material, so it is the most specific."
+        },
+        {
+          "id": "ERP2_C5_T3_Q13",
+          "question": "What does a pricing procedure identify?",
+          "options": {
+            "A": "The condition types that can be included in calculating the net price and the sequence in which they are evaluated",
+            "B": "The order in which condition records are evaluated for each condition type",
+            "C": "The parameters used to define condition records",
+            "D": "The values of the condition types"
+          },
+          "correctAnswer": "A",
+          "explanation": "It also indicates whether a condition type can be entered manually and whether it is required."
+        },
+        {
+          "id": "ERP2_C5_T3_Q14",
+          "question": "Which condition type is required in the simple pricing procedure PR0000?",
+          "options": {
+            "A": "All five condition types",
+            "B": "RA00 and RB00",
+            "C": "SKTO only",
+            "D": "PR00 only"
+          },
+          "correctAnswer": "D",
+          "explanation": "If the system cannot determine a value for PR00, the user can enter it manually."
+        },
+        {
+          "id": "ERP2_C5_T3_Q15",
+          "question": "What happens if no condition record is found for a REQUIRED condition type?",
+          "options": {
+            "A": "The system continues with the next condition type",
+            "B": "The system terminates the price determination procedure and displays an error",
+            "C": "The system uses the price from the material master",
+            "D": "The system creates a new condition record"
+          },
+          "correctAnswer": "B",
+          "explanation": "If it is not required, the system proceeds to the next condition type."
+        },
+        {
+          "id": "ERP2_C5_T3_Q16",
+          "question": "Which parameters are used to select the pricing procedure?",
+          "options": {
+            "A": "Plant, shipping condition and loading group",
+            "B": "Material, price list and document currency",
+            "C": "Sales organization, plant and company code",
+            "D": "Sales area, document pricing procedure and customer pricing procedure"
+          },
+          "correctAnswer": "D",
+          "explanation": "GBI uses RVAJUS for U.S. sales areas and RVAA01 for German sales areas."
+        },
+        {
+          "id": "ERP2_C5_T3_Q17",
+          "question": "Which pricing procedure is assigned to all sales areas in the GBI U.S. company code?",
+          "options": {
+            "A": "RVAA01",
+            "B": "RVAJUS",
+            "C": "PR0000",
+            "D": "RB00"
+          },
+          "correctAnswer": "B",
+          "explanation": "RVAA01 is for the German company code."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C5_T4",
+      "topicName": "Availability check",
+      "questions": [
+        {
+          "id": "ERP2_C5_T4_Q1",
+          "question": "Which two parameters determine the procedure for the availability check?",
+          "options": {
+            "A": "Scope of check and replenishment lead time",
+            "B": "Checking rule and checking group",
+            "C": "Shipping condition and loading group",
+            "D": "Condition type and access sequence"
+          },
+          "correctAnswer": "B",
+          "explanation": "The scope of check is then defined for the combination of checking group and checking rule."
+        },
+        {
+          "id": "ERP2_C5_T4_Q2",
+          "question": "What does a checking rule identify?",
+          "options": {
+            "A": "The level of detail included in the availability check",
+            "B": "Which data the system considers during the check",
+            "C": "The time required to procure or produce a material",
+            "D": "The process step in which the availability check must be completed (e.g., sales order, outbound delivery)"
+          },
+          "correctAnswer": "D",
+          "explanation": "Rules exist for the standard SD order and variations such as make-to-stock and consignment."
+        },
+        {
+          "id": "ERP2_C5_T4_Q3",
+          "question": "What does a checking group determine?",
+          "options": {
+            "A": "The process step in which the check is made",
+            "B": "The level of detail of the availability check (daily or individual requirements)",
+            "C": "The scope of data considered in the check",
+            "D": "The replenishment lead time of the material"
+          },
+          "correctAnswer": "B",
+          "explanation": "It is assigned to each material in the material master."
+        },
+        {
+          "id": "ERP2_C5_T4_Q4",
+          "question": "What does the \"daily requirements\" option do?",
+          "options": {
+            "A": "Evaluates each requirement separately",
+            "B": "Totals requirements for a week only",
+            "C": "Totals all requirements for a material for a day and evaluates availability for them in a single step",
+            "D": "Skips the check for requirements of the same day"
+          },
+          "correctAnswer": "C",
+          "explanation": "Individual requirements evaluate each requirement separately."
+        },
+        {
+          "id": "ERP2_C5_T4_Q5",
+          "question": "In the fulfillment process, what is a requirement?",
+          "options": {
+            "A": "Each item in a sales order",
+            "B": "Each purchase order for the material",
+            "C": "Each production order for the material",
+            "D": "Each customer in the system"
+          },
+          "correctAnswer": "A",
+          "explanation": "A requirement is a general term indicating a need for material."
+        },
+        {
+          "id": "ERP2_C5_T4_Q6",
+          "question": "What does the scope of check specify?",
+          "options": {
+            "A": "The process step where the check is completed",
+            "B": "Whether requirements are totaled daily or individually",
+            "C": "Which data (stock, inward and outward movements, replenishment lead time) the system considers when evaluating availability",
+            "D": "The shipping point from which the delivery is made"
+          },
+          "correctAnswer": "C",
+          "explanation": "It is defined for a combination of checking group and checking rule."
+        },
+        {
+          "id": "ERP2_C5_T4_Q7",
+          "question": "Which of the following steps result in an inward movement (increase in stock)?",
+          "options": {
+            "A": "Purchase orders and production orders",
+            "B": "Material reservations and sales orders",
+            "C": "Outbound deliveries and goods issues",
+            "D": "Customer invoices and payments"
+          },
+          "correctAnswer": "A",
+          "explanation": "Material reservations and sales orders represent outward movement."
+        },
+        {
+          "id": "ERP2_C5_T4_Q8",
+          "question": "What is replenishment lead time (RLT)?",
+          "options": {
+            "A": "The time required to ship a material to the customer",
+            "B": "The time required to procure or produce a material",
+            "C": "The time between invoice and payment",
+            "D": "The time a material stays in storage"
+          },
+          "correctAnswer": "B",
+          "explanation": "RLT is relevant only when materials are not currently available."
+        },
+        {
+          "id": "ERP2_C5_T4_Q9",
+          "question": "With \"check without RLT\", what happens when the materials are not currently available?",
+          "options": {
+            "A": "The system assumes materials can be procured and confirms the order",
+            "B": "The system proposes a later date based on RLT",
+            "C": "The system creates a purchase requisition automatically",
+            "D": "The availability check fails and a delivery proposal is not possible"
+          },
+          "correctAnswer": "D",
+          "explanation": "Message: \"Dely proposal: not possible\"."
+        },
+        {
+          "id": "ERP2_C5_T4_Q10",
+          "question": "The scope of check includes RLT, materials are unavailable and the requested date is BEFORE the end of the lead time. What does the system do?",
+          "options": {
+            "A": "Confirms the sales order for the requested date",
+            "B": "Rejects the sales order and closes it",
+            "C": "Proposes an alternate delivery date based on the RLT",
+            "D": "Creates a production order"
+          },
+          "correctAnswer": "C",
+          "explanation": "Example: requested March 3, material available March 4, proposal March 4."
+        },
+        {
+          "id": "ERP2_C5_T4_Q11",
+          "question": "The scope of check includes RLT and the requested delivery date falls BEYOND the RLT. What does the system do?",
+          "options": {
+            "A": "Assumes the materials can be obtained in time and confirms the sales order",
+            "B": "Proposes an alternate delivery date",
+            "C": "Displays an error and blocks the order",
+            "D": "Reserves the stock immediately"
+          },
+          "correctAnswer": "A",
+          "explanation": "The availability check then confirms the order quantity."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C5_T5",
+      "topicName": "Automatic account determination in fulfillment",
+      "questions": [
+        {
+          "id": "ERP2_C5_T5_Q1",
+          "question": "Selling 50 units of a material (MAP $60) at $100 each: what is posted to the inventory account at goods issue?",
+          "options": {
+            "A": "A credit of $3,000 (50 x $60), with the offsetting debit to cost of goods sold",
+            "B": "A debit of $3,000 with the offsetting credit to revenue",
+            "C": "A credit of $5,000 (50 x $100)",
+            "D": "A debit of $5,000 to accounts receivable"
+          },
+          "correctAnswer": "A",
+          "explanation": "Goods issue is valued at MAP; 150 units remain valued at $9,000."
+        },
+        {
+          "id": "ERP2_C5_T5_Q2",
+          "question": "In the same scenario, what is posted when the customer invoice is created?",
+          "options": {
+            "A": "A credit of $3,000 to inventory and a debit to cost of goods sold",
+            "B": "A debit of $5,000 to the bank account",
+            "C": "A credit of $5,000 to revenue and a debit to the customer account (A/R updated)",
+            "D": "A debit of $5,000 to revenue and a credit to inventory"
+          },
+          "correctAnswer": "C",
+          "explanation": "Invoice and payment steps do not affect the material master valuation."
+        },
+        {
+          "id": "ERP2_C5_T5_Q3",
+          "question": "When the customer payment is posted, which accounts are affected?",
+          "options": {
+            "A": "The customer and A/R accounts are cleared with credit postings and the bank account is debited",
+            "B": "The customer account is debited and the bank account is credited",
+            "C": "The inventory account is credited and COGS is debited",
+            "D": "The revenue account is credited and the customer account is debited"
+          },
+          "correctAnswer": "A",
+          "explanation": "The bank account is provided by the user when the payment is recorded."
+        },
+        {
+          "id": "ERP2_C5_T5_Q4",
+          "question": "After the goods issue of 50 of 200 units at MAP $60, what is the MAP?",
+          "options": {
+            "A": "$75",
+            "B": "$45",
+            "C": "$50",
+            "D": "$60 (unchanged)"
+          },
+          "correctAnswer": "D",
+          "explanation": "MAP is recalculated only at goods receipt and invoice receipt."
+        },
+        {
+          "id": "ERP2_C5_T5_Q5",
+          "question": "Which three accounts need specific account determination rules in the fulfillment scenario?",
+          "options": {
+            "A": "Customer subledger, A/R reconciliation and bank accounts",
+            "B": "Inventory account, cost of goods sold account and revenue account",
+            "C": "GR/IR, price difference and tax accounts",
+            "D": "Inventory, GR/IR and small difference accounts"
+          },
+          "correctAnswer": "B",
+          "explanation": "The customer subledger account comes from the sales order, the A/R reconciliation account from the customer master."
+        },
+        {
+          "id": "ERP2_C5_T5_Q6",
+          "question": "Which posting key is used for the stock outward movement (credit to inventory) at goods issue?",
+          "options": {
+            "A": "89",
+            "B": "40",
+            "C": "01",
+            "D": "99"
+          },
+          "correctAnswer": "D",
+          "explanation": "Posting key 89 is used for stock inward movement at goods receipt."
+        },
+        {
+          "id": "ERP2_C5_T5_Q7",
+          "question": "Which posting key is used for the stock inward movement (debit to inventory) at goods receipt?",
+          "options": {
+            "A": "99",
+            "B": "89",
+            "C": "31",
+            "D": "19"
+          },
+          "correctAnswer": "B",
+          "explanation": "Goods receipt increases stock; goods issue decreases it."
+        },
+        {
+          "id": "ERP2_C5_T5_Q8",
+          "question": "Which three parameters determine the offsetting entry for an inventory posting?",
+          "options": {
+            "A": "Valuation modifier, valuation class and general modifier",
+            "B": "Sales organization, distribution channel and division",
+            "C": "Condition type, access sequence and pricing procedure",
+            "D": "Plant, storage location and shipping point"
+          },
+          "correctAnswer": "A",
+          "explanation": "The general modifier determines the reason for the inventory posting."
+        },
+        {
+          "id": "ERP2_C5_T5_Q9",
+          "question": "Which general modifier applies to the goods issue for a sales order (offsetting entry to COGS)?",
+          "options": {
+            "A": "BSA",
+            "B": "VBR",
+            "C": "VAX",
+            "D": "WRX"
+          },
+          "correctAnswer": "C",
+          "explanation": "BSA is the initial entry of stock; VBR is withdrawal for consumption."
+        },
+        {
+          "id": "ERP2_C5_T5_Q10",
+          "question": "Which general modifier applies to the initial entry of stock, and what is the offsetting account?",
+          "options": {
+            "A": "VAX; cost of goods sold",
+            "B": "VBR; material consumption expense",
+            "C": "BSA; an inventory suspense account",
+            "D": "DIF; small difference account"
+          },
+          "correctAnswer": "C",
+          "explanation": "It is used when a company first implements an ERP system and records existing inventory."
+        },
+        {
+          "id": "ERP2_C5_T5_Q11",
+          "question": "Which general modifier applies to withdrawal of materials for consumption (e.g., prizes at a trade show)?",
+          "options": {
+            "A": "VBR",
+            "B": "VAX",
+            "C": "BSA",
+            "D": "BSX"
+          },
+          "correctAnswer": "A",
+          "explanation": "The offsetting entry is a material consumption expense account that differs by material type."
+        },
+        {
+          "id": "ERP2_C5_T5_Q12",
+          "question": "Why is revenue account determination more complex than the other procedures?",
+          "options": {
+            "A": "Because it uses a single parameter that changes with every posting",
+            "B": "Because it does not use account keys or condition types",
+            "C": "Revenue can come from several processes, can have a controlling impact with profitability accounting, and can differ by sales organization, material type and customer type",
+            "D": "Because it applies only to the fulfillment process"
+          },
+          "correctAnswer": "C",
+          "explanation": "Parameters include application, condition type, sales organization, account assignment groups and account key."
+        },
+        {
+          "id": "ERP2_C5_T5_Q13",
+          "question": "In revenue account determination, what does the \"application\" parameter identify?",
+          "options": {
+            "A": "The process that generates the revenue (e.g., V = Sales/Distribution)",
+            "B": "The type of customer",
+            "C": "The type of material",
+            "D": "The type of revenue such as freight or discount"
+          },
+          "correctAnswer": "A",
+          "explanation": "Customer service (RW – warranty) is another application."
+        },
+        {
+          "id": "ERP2_C5_T5_Q14",
+          "question": "What does the account key in revenue account determination identify?",
+          "options": {
+            "A": "The type of customer, domestic or foreign",
+            "B": "The type of material, trading goods or finished products",
+            "C": "The sales organization of the order",
+            "D": "The type of revenue (sales, service, freight) and revenue deductions such as discounts"
+          },
+          "correctAnswer": "D",
+          "explanation": "Revenues go to account 600000 and deductions to the sales discount account 610000 in GBI."
+        },
+        {
+          "id": "ERP2_C5_T5_Q15",
+          "question": "When several revenue determination rules conflict, which does the system select?",
+          "options": {
+            "A": "The most general rule",
+            "B": "The most specific rule (table 001 is the most specific; tables 004 and 005 the least)",
+            "C": "The rule with the lowest account number",
+            "D": "The rule most recently created"
+          },
+          "correctAnswer": "B",
+          "explanation": "The system prefers specific data over general data."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C5_T6",
+      "topicName": "Customer account groups & sales document types",
+      "questions": [
+        {
+          "id": "ERP2_C5_T6_Q1",
+          "question": "What do customer account groups define?",
+          "options": {
+            "A": "Groups of materials with the same loading requirements",
+            "B": "Groups of fields on transaction screens",
+            "C": "Categories of customers with similar characteristics; they determine the status of the fields in the customer master",
+            "D": "Groups of plants assigned to a distribution chain"
+          },
+          "correctAnswer": "C",
+          "explanation": "They also determine number ranges and one-time customer status."
+        },
+        {
+          "id": "ERP2_C5_T6_Q2",
+          "question": "In the example, the corporate headquarters that places an order for bicycles is the:",
+          "options": {
+            "A": "Sold-to-party",
+            "B": "Ship-to-party (goods recipient)",
+            "C": "Bill-to-party",
+            "D": "Payer"
+          },
+          "correctAnswer": "A",
+          "explanation": "Retail stores receiving the shipment are ship-to-parties; the outsourced payer makes payment."
+        },
+        {
+          "id": "ERP2_C5_T6_Q3",
+          "question": "Which customer role receives the shipment of goods?",
+          "options": {
+            "A": "Sold-to-party",
+            "B": "Bill-to-party",
+            "C": "Ship-to-party (goods recipient)",
+            "D": "Payer"
+          },
+          "correctAnswer": "C",
+          "explanation": "The invoice may be sent to the bill-to-party for verification."
+        },
+        {
+          "id": "ERP2_C5_T6_Q4",
+          "question": "Which customer roles require billing and payment data?",
+          "options": {
+            "A": "Ship-to-party only",
+            "B": "Bill-to-party and payer",
+            "C": "Sold-to-party and ship-to-party",
+            "D": "No role requires them"
+          },
+          "correctAnswer": "B",
+          "explanation": "Billing and payment data are not required for the ship-to-party."
+        },
+        {
+          "id": "ERP2_C5_T6_Q5",
+          "question": "What is a one-time customer account group used for?",
+          "options": {
+            "A": "To store the complete master data of all customers permanently",
+            "B": "To group customers of the same sales area",
+            "C": "To block customers who exceed their credit limit",
+            "D": "As a template (reference customer): data such as name and address are entered when the sales document is created"
+          },
+          "correctAnswer": "D",
+          "explanation": "It avoids using storage for customers an organization sells to only once or rarely."
+        },
+        {
+          "id": "ERP2_C5_T6_Q6",
+          "question": "What is the only required field in the field group account management of the customer master example?",
+          "options": {
+            "A": "The payment terms",
+            "B": "The reconciliation account number",
+            "C": "The incoterms",
+            "D": "The delivery priority"
+          },
+          "correctAnswer": "B",
+          "explanation": "Customer account group field status is similar to G/L account field status."
+        },
+        {
+          "id": "ERP2_C5_T6_Q7",
+          "question": "Why are different sales document types needed?",
+          "options": {
+            "A": "Because the system allows only one order type per sales area",
+            "B": "Because document types determine the chart of accounts",
+            "C": "Because each order type uses a different company code",
+            "D": "Variations such as rush orders, cash sales, returns and complaints require different data and process steps"
+          },
+          "correctAnswer": "D",
+          "explanation": "Sales document types specify parameters that determine how the system completes process steps."
+        },
+        {
+          "id": "ERP2_C5_T6_Q8",
+          "question": "Which statement about the document types is correct?",
+          "options": {
+            "A": "Cash sales always involve accounts receivable, and returns include a goods issue",
+            "B": "Rush orders always use the standard shipping point",
+            "C": "Cash sales do not involve accounts receivable, and returns include a goods receipt rather than a goods issue",
+            "D": "Returns do not create any financial accounting consequence"
+          },
+          "correctAnswer": "C",
+          "explanation": "Rush orders may be sent from a different shipping point."
+        },
+        {
+          "id": "ERP2_C5_T6_Q9",
+          "question": "Which delivery type does a standard order use?",
+          "options": {
+            "A": "LF (normal outbound delivery)",
+            "B": "LR (return delivery)",
+            "C": "BV (cash sales)",
+            "D": "F2 (standard invoice)"
+          },
+          "correctAnswer": "A",
+          "explanation": "A return order uses LR and a cash sale BV."
+        },
+        {
+          "id": "ERP2_C5_T6_Q10",
+          "question": "Which delivery type is associated with a return order?",
+          "options": {
+            "A": "LF",
+            "B": "BV",
+            "C": "LR",
+            "D": "F2"
+          },
+          "correctAnswer": "C",
+          "explanation": "Returns reverse the consequences of the previous outbound delivery."
+        },
+        {
+          "id": "ERP2_C5_T6_Q11",
+          "question": "What does a delivery block do?",
+          "options": {
+            "A": "Prevents a user from completing the delivery (shipping) of an order, e.g., when a credit limit is exceeded",
+            "B": "Prevents a user from creating the sales order",
+            "C": "Prevents the customer from paying the invoice",
+            "D": "Prevents the availability check from running"
+          },
+          "correctAnswer": "A",
+          "explanation": "The block can be removed when the condition (e.g., credit limit) has been met."
+        },
+        {
+          "id": "ERP2_C5_T6_Q12",
+          "question": "Where is the shipping condition preferred if it is defined in both the customer master and the sales document type?",
+          "options": {
+            "A": "The customer master",
+            "B": "The material master",
+            "C": "The sales document type (the more specific data)",
+            "D": "The shipping point"
+          },
+          "correctAnswer": "C",
+          "explanation": "In a conflict, the system uses the more specific data."
+        },
+        {
+          "id": "ERP2_C5_T6_Q13",
+          "question": "Which billing type is the standard invoice for a sales order?",
+          "options": {
+            "A": "F2",
+            "B": "LF",
+            "C": "BV",
+            "D": "PR00"
+          },
+          "correctAnswer": "A",
+          "explanation": "A quotation may use a pro-forma invoice, which is not a true invoice."
+        },
+        {
+          "id": "ERP2_C5_T6_Q14",
+          "question": "What is a pro-forma invoice?",
+          "options": {
+            "A": "A final invoice that clears the customer account",
+            "B": "A credit memo for returned goods",
+            "C": "A document that authorizes shipment",
+            "D": "A representation of the actual invoice if the customer places an order based on the quotation (not a true invoice)"
+          },
+          "correctAnswer": "D",
+          "explanation": "The cash sales order type uses the \"cash sales\" invoice."
+        },
+        {
+          "id": "ERP2_C5_T6_Q15",
+          "question": "What does the incompletion procedure of a sales document type determine?",
+          "options": {
+            "A": "Which condition types are used for pricing",
+            "B": "Which fields the system checks when a document is created and in which process step they are checked",
+            "C": "Which shipping point is used for the delivery",
+            "D": "Which account receives the revenue posting"
+          },
+          "correctAnswer": "B",
+          "explanation": "A warning about missing data appears only if the warning parameter is selected."
+        },
+        {
+          "id": "ERP2_C5_T6_Q16",
+          "question": "In the example, incoterms are missing in the sales order. What happens when an outbound delivery is created?",
+          "options": {
+            "A": "Nothing, because incoterms are checked only at order creation",
+            "B": "A warning only, because incoterms are optional",
+            "C": "The order is deleted",
+            "D": "An error results because incoterms are checked in several subsequent steps"
+          },
+          "correctAnswer": "D",
+          "explanation": "The PO number is relevant only at creation, so a missing PO number does not block later steps."
+        },
+        {
+          "id": "ERP2_C5_T6_Q17",
+          "question": "What does the pricing date of a sales document type affect?",
+          "options": {
+            "A": "The date on which the goods are shipped",
+            "B": "Which prices and discounts are valid, since prices can be valid for different dates or periods",
+            "C": "The date on which the customer must pay",
+            "D": "The date on which the sales order expires"
+          },
+          "correctAnswer": "B",
+          "explanation": "The system uses the proposed pricing date in the price determination procedures."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C5_T7",
+      "topicName": "Master data for fulfillment & testing",
+      "questions": [
+        {
+          "id": "ERP2_C5_T7_Q1",
+          "question": "Which master data are required to support the fulfillment process?",
+          "options": {
+            "A": "Vendor master, purchasing info records and material master",
+            "B": "Cost elements, cost centers and activity types",
+            "C": "G/L accounts, chart of accounts and posting keys",
+            "D": "Material master, customer master, condition records and customer-material info records"
+          },
+          "correctAnswer": "D",
+          "explanation": "Condition records were discussed in the price determination section."
+        },
+        {
+          "id": "ERP2_C5_T7_Q2",
+          "question": "Which additional material master views are relevant for fulfillment?",
+          "options": {
+            "A": "Purchasing data and storage data",
+            "B": "General sales data and plant-related sales data",
+            "C": "Work-scheduling data and costing data",
+            "D": "Basic data and vendor data"
+          },
+          "correctAnswer": "B",
+          "explanation": "Basic data and accounting data are relevant for fulfillment as well."
+        },
+        {
+          "id": "ERP2_C5_T7_Q3",
+          "question": "For which organizational level are general sales data of the material master defined?",
+          "options": {
+            "A": "A plant",
+            "B": "A company code",
+            "C": "A storage location",
+            "D": "A distribution chain (sales organization + distribution channel)"
+          },
+          "correctAnswer": "D",
+          "explanation": "To sell material RHMT1000 in UW00 it must be defined for UW00+WH."
+        },
+        {
+          "id": "ERP2_C5_T7_Q4",
+          "question": "The delivering plant is specified in the distribution chain and in the material master. Which does the system select?",
+          "options": {
+            "A": "The plant in the material master (the more specific data)",
+            "B": "The plant in the distribution chain",
+            "C": "The plant in the customer master",
+            "D": "The plant in the sales document type"
+          },
+          "correctAnswer": "A",
+          "explanation": "Multiple delivering plants may be specified for a distribution chain."
+        },
+        {
+          "id": "ERP2_C5_T7_Q5",
+          "question": "Which parameters appear in the sales plant data of the material master?",
+          "options": {
+            "A": "Condition type, access sequence and pricing procedure",
+            "B": "Shipping condition, delivery priority and delivering plant",
+            "C": "Checking group, loading group and transportation group",
+            "D": "Valuation class, price control and valuation group code"
+          },
+          "correctAnswer": "C",
+          "explanation": "The transportation group groups materials with similar transportation requirements and is used to determine routes."
+        },
+        {
+          "id": "ERP2_C5_T7_Q6",
+          "question": "Which three categories of data does the customer master include?",
+          "options": {
+            "A": "General data, sales data and accounting data",
+            "B": "General data, purchasing data and accounting data",
+            "C": "Basic data, storage data and sales data",
+            "D": "Sales data, billing data and shipping data"
+          },
+          "correctAnswer": "A",
+          "explanation": "General data are at client level, accounting data at company code level and sales data per sales area."
+        },
+        {
+          "id": "ERP2_C5_T7_Q7",
+          "question": "At which level are the sales data of the customer master defined?",
+          "options": {
+            "A": "For each plant",
+            "B": "For each company code",
+            "C": "For each sales area in which the customer does business with the company",
+            "D": "For each distribution channel only"
+          },
+          "correctAnswer": "C",
+          "explanation": "Sales data are on tabs: general (sales), shipping, billing and partner functions."
+        },
+        {
+          "id": "ERP2_C5_T7_Q8",
+          "question": "Which accounting data does the customer master include?",
+          "options": {
+            "A": "Delivery priority, shipping conditions and delivering plant",
+            "B": "Incoterms and account assignment group",
+            "C": "Customer pricing procedure and partner functions",
+            "D": "Reconciliation account, payment terms and tolerance group"
+          },
+          "correctAnswer": "D",
+          "explanation": "In the GBI example the A/R reconciliation account is 110000 and the A/P reconciliation account is 300000."
+        },
+        {
+          "id": "ERP2_C5_T7_Q9",
+          "question": "What does the delivery priority in the customer master provide?",
+          "options": {
+            "A": "The percentage discount for each customer",
+            "B": "Options for the system to give preference to one customer's order over another",
+            "C": "The tolerance for under deliveries",
+            "D": "The shipping point for each customer"
+          },
+          "correctAnswer": "B",
+          "explanation": "Other shipping parameters: shipping conditions, delivering plant, partial deliveries and tolerances."
+        },
+        {
+          "id": "ERP2_C5_T7_Q10",
+          "question": "Which billing parameter of the customer master is an essential element of price determination?",
+          "options": {
+            "A": "Account assignment group",
+            "B": "Delivery priority",
+            "C": "Incoterms",
+            "D": "Partner functions"
+          },
+          "correctAnswer": "C",
+          "explanation": "Incoterms are used in the freight condition records; the account assignment group is used in revenue account determination."
+        },
+        {
+          "id": "ERP2_C5_T7_Q11",
+          "question": "Which four partner functions (roles) must be identified in every customer master?",
+          "options": {
+            "A": "Sold-to-party, bill-to-party, ship-to-party and payer",
+            "B": "Sold-to-party, vendor, plant and payer",
+            "C": "Customer, vendor, bank and tax authority",
+            "D": "Sales organization, channel, division and plant"
+          },
+          "correctAnswer": "A",
+          "explanation": "In the example customer 2000 serves all four roles."
+        },
+        {
+          "id": "ERP2_C5_T7_Q12",
+          "question": "What is the key difference between tolerances in fulfillment and in procurement?",
+          "options": {
+            "A": "In fulfillment they involve prices only; in procurement quantities only",
+            "B": "Fulfillment does not use tolerances",
+            "C": "In fulfillment they involve under/over deliveries to the customer; in procurement they involve deliveries from a vendor",
+            "D": "Procurement tolerances are in the customer master"
+          },
+          "correctAnswer": "C",
+          "explanation": "The concepts are otherwise identical."
+        },
+        {
+          "id": "ERP2_C5_T7_Q13",
+          "question": "What is a customer-material info record?",
+          "options": {
+            "A": "A master data record with data specific to one customer and one material; it is preferred over the customer and material master data",
+            "B": "A master data record with data specific to one vendor and one material",
+            "C": "A record of all sales orders placed by a customer",
+            "D": "A record of the condition types used for pricing a material"
+          },
+          "correctAnswer": "A",
+          "explanation": "Example: a different delivering plant (DL00 vs. MI00), a higher delivery priority and no partial deliveries for customer 2000 and material RHMT1000."
+        },
+        {
+          "id": "ERP2_C5_T7_Q14",
+          "question": "How can the customer-material info record handle the customer’s own material number (e.g., X1000)?",
+          "options": {
+            "A": "The system rejects any PO with a material number that differs from its own",
+            "B": "The customer number is replaced by the plant number on the PO",
+            "C": "The material number must be entered manually in the sales order",
+            "D": "The customer can use its own number on its PO, and the system references the info record to identify the material"
+          },
+          "correctAnswer": "D",
+          "explanation": "The company uses the customer’s number in its sales documents and the info record determines the material."
+        },
+        {
+          "id": "ERP2_C5_T7_Q15",
+          "question": "Which testing types and process steps does the chapter list for the fulfillment process?",
+          "options": {
+            "A": "Only performance testing of the sales order creation",
+            "B": "Scenario, integration and user acceptance testing of: create sales quote, create sales order, pick/pack/ship, create invoice, receive payment",
+            "C": "Only unit testing of the customer invoice",
+            "D": "Only regression testing after go-live of the shipment"
+          },
+          "correctAnswer": "B",
+          "explanation": "Various scenarios should use different pricing parameters and sales order types."
+        }
+      ]
+    }
+  ]
+}

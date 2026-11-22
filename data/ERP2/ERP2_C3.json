@@ -1,0 +1,1098 @@
+{
+  "chapterId": "ERP2_C3",
+  "chapterName": "Chapter 3 – Overhead Management (CO)",
+  "topics": [
+    {
+      "topicId": "ERP2_C3_T1",
+      "topicName": "Management accounting overview",
+      "questions": [
+        {
+          "id": "ERP2_C3_T1_Q1",
+          "question": "Management accounting is also referred to as:",
+          "options": {
+            "A": "Financial reporting or external auditing",
+            "B": "Cost accounting or controlling",
+            "C": "Procurement accounting or sourcing",
+            "D": "Fulfillment accounting or order-to-cash"
+          },
+          "correctAnswer": "B",
+          "explanation": "It is concerned with tracking costs and revenues for internal purposes."
+        },
+        {
+          "id": "ERP2_C3_T1_Q2",
+          "question": "Which statement correctly contrasts financial and management accounting?",
+          "options": {
+            "A": "Management accounting must follow GAAP or IFRS and uses only historical data",
+            "B": "Financial accounting is geared toward internal managers and is highly flexible",
+            "C": "Both are required to use identical methods and standards",
+            "D": "Management accounting is more flexible, is geared toward internal users and includes forward-looking as well as historical data"
+          },
+          "correctAnswer": "D",
+          "explanation": "Financial accounting serves outside parties such as investors and regulators and follows GAAP/IFRS."
+        },
+        {
+          "id": "ERP2_C3_T1_Q3",
+          "question": "Which consideration is important when selecting techniques used in management accounting?",
+          "options": {
+            "A": "The techniques must be identical to those used for financial accounting",
+            "B": "Cost-benefit: the benefits of the analysis must outweigh the costs of capturing and analyzing the data",
+            "C": "The techniques must be approved by external regulators",
+            "D": "The techniques must use the same depreciation method as the tax return"
+          },
+          "correctAnswer": "B",
+          "explanation": "An organization may use a different inventory or depreciation method for management accounting."
+        },
+        {
+          "id": "ERP2_C3_T1_Q4",
+          "question": "Which three processes are the key processes in management accounting?",
+          "options": {
+            "A": "Procurement, fulfillment and production",
+            "B": "General ledger, accounts payable and accounts receivable",
+            "C": "Product costing, overhead management and profitability analysis",
+            "D": "Cost centers, internal orders and cost elements"
+          },
+          "correctAnswer": "C",
+          "explanation": "Chapter 3 focuses exclusively on overhead management."
+        },
+        {
+          "id": "ERP2_C3_T1_Q5",
+          "question": "What is product costing concerned with?",
+          "options": {
+            "A": "Accurately tracking the costs of creating a product or service and calculating the cost of goods manufactured",
+            "B": "Tracking and allocating indirect costs with the goal of cost containment",
+            "C": "Evaluating the profitability of different parts of the organization",
+            "D": "Recording the consequences of vendor invoices in the general ledger"
+          },
+          "correctAnswer": "A",
+          "explanation": "Product costs include direct and indirect costs."
+        },
+        {
+          "id": "ERP2_C3_T1_Q6",
+          "question": "Which of the following is a direct cost of producing a bicycle?",
+          "options": {
+            "A": "The rent for the factory building",
+            "B": "The salaries of factory supervisors",
+            "C": "The wheels and handlebars used (material) and the time to assemble the bike (labor)",
+            "D": "The electricity and water used in the factory"
+          },
+          "correctAnswer": "C",
+          "explanation": "Rent, utilities, repairs and supervisor salaries are indirect costs (factory overhead)."
+        },
+        {
+          "id": "ERP2_C3_T1_Q7",
+          "question": "What is the cost of goods manufactured formula in the text?",
+          "options": {
+            "A": "Direct material cost + direct labor cost + indirect cost",
+            "B": "Direct material cost + selling costs + administrative costs",
+            "C": "Revenue – direct labor cost – indirect cost",
+            "D": "Direct labor cost + marketing cost + overhead of support departments"
+          },
+          "correctAnswer": "A",
+          "explanation": "Indirect costs are also called factory overhead."
+        },
+        {
+          "id": "ERP2_C3_T1_Q8",
+          "question": "Which of the following is overhead of support departments that is NOT assigned to the cost of goods manufactured?",
+          "options": {
+            "A": "Rent of the factory where bicycles are produced",
+            "B": "Costs of human resources, accounting, purchasing, marketing and IT departments",
+            "C": "Repairs to production machinery in the factory",
+            "D": "Salaries of supervisors who oversee factory operations"
+          },
+          "correctAnswer": "B",
+          "explanation": "These costs are included in accounts such as selling, general, and administrative costs."
+        },
+        {
+          "id": "ERP2_C3_T1_Q9",
+          "question": "What does profitability analysis take into consideration that product costing and overhead management do not?",
+          "options": {
+            "A": "Only costs of the support departments",
+            "B": "Only the direct material and labor",
+            "C": "Only the costs of internal orders",
+            "D": "Revenues in addition to costs"
+          },
+          "correctAnswer": "D",
+          "explanation": "It evaluates the profitability of different parts of the organization."
+        },
+        {
+          "id": "ERP2_C3_T1_Q10",
+          "question": "Which process is used to track and allocate ongoing indirect costs, and which for temporary costs?",
+          "options": {
+            "A": "Internal order accounting for ongoing costs; cost center accounting for temporary costs",
+            "B": "Cost center accounting for ongoing costs; internal order accounting for temporary costs",
+            "C": "Product costing for ongoing costs; profitability analysis for temporary costs",
+            "D": "Cost center accounting for both ongoing and temporary costs"
+          },
+          "correctAnswer": "B",
+          "explanation": "Participating in a trade show is a temporary event with finite starting and ending times."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C3_T2",
+      "topicName": "Cost centers, cost elements & controlling objects",
+      "questions": [
+        {
+          "id": "ERP2_C3_T2_Q1",
+          "question": "Why are cost centers sometimes called responsibility centers?",
+          "options": {
+            "A": "They are responsible for recording revenue from customer invoices",
+            "B": "They are responsible for defining the chart of accounts of the company",
+            "C": "They are responsible for settling the costs of internal orders",
+            "D": "They are the organizational units most responsible for controlling (containing) the costs"
+          },
+          "correctAnswer": "D",
+          "explanation": "Cost center accounting is often called responsibility accounting."
+        },
+        {
+          "id": "ERP2_C3_T2_Q2",
+          "question": "What are cost elements?",
+          "options": {
+            "A": "Organizational units that are responsible for incurring and controlling costs",
+            "B": "Master data used to transfer costs between financial accounting and management accounting and within management accounting",
+            "C": "Temporary events with finite starting and ending times",
+            "D": "Values that serve as the basis for allocating costs"
+          },
+          "correctAnswer": "B",
+          "explanation": "There are two categories: primary and secondary."
+        },
+        {
+          "id": "ERP2_C3_T2_Q3",
+          "question": "Which cost elements are associated with general ledger accounts?",
+          "options": {
+            "A": "Secondary cost elements",
+            "B": "Statistical key figures",
+            "C": "Activity types",
+            "D": "Primary cost elements"
+          },
+          "correctAnswer": "D",
+          "explanation": "Primary cost elements transfer data between financial accounting and management accounting."
+        },
+        {
+          "id": "ERP2_C3_T2_Q4",
+          "question": "For what are secondary cost elements used?",
+          "options": {
+            "A": "To transfer data within management accounting; they are not associated with G/L accounts",
+            "B": "To transfer costs from the general ledger to cost centers",
+            "C": "To record vendor invoices in accounts payable",
+            "D": "To define the posting periods of the controlling area"
+          },
+          "correctAnswer": "A",
+          "explanation": "Examples: assessment and internal activity allocation."
+        },
+        {
+          "id": "ERP2_C3_T2_Q5",
+          "question": "How are postings from financial accounting to management accounting different from postings within financial accounting?",
+          "options": {
+            "A": "They are two-sided, while financial accounting postings are one-sided",
+            "B": "Both are one-sided",
+            "C": "They are one-sided (a debit to the cost center with no corresponding credit), while financial accounting postings are two-sided",
+            "D": "Both are two-sided but use different currencies"
+          },
+          "correctAnswer": "C",
+          "explanation": "Example: $500 debit to supplies expense and credit to bank in FI, and $500 debit to the cost center in CO."
+        },
+        {
+          "id": "ERP2_C3_T2_Q6",
+          "question": "What is a controlling (management accounting) object?",
+          "options": {
+            "A": "An object in management accounting that can receive and accumulate costs and in some cases allocate costs to other objects",
+            "B": "A general ledger account that is linked to a reconciliation account",
+            "C": "An organizational unit that represents a separate legal entity",
+            "D": "A document that records the allocation of costs"
+          },
+          "correctAnswer": "A",
+          "explanation": "A cost center is an example."
+        },
+        {
+          "id": "ERP2_C3_T2_Q7",
+          "question": "Which of the following are real controlling objects?",
+          "options": {
+            "A": "Profit centers and statistical internal orders only",
+            "B": "Cost elements and activity types",
+            "C": "Cost centers, internal orders and production orders",
+            "D": "Company codes and plants"
+          },
+          "correctAnswer": "C",
+          "explanation": "Real objects can receive real postings and can allocate costs to other objects."
+        },
+        {
+          "id": "ERP2_C3_T2_Q8",
+          "question": "What is a statistical posting?",
+          "options": {
+            "A": "A posting that is included in the account balance of the object",
+            "B": "A posting that transfers costs from financial accounting",
+            "C": "A posting that is made only to profit centers",
+            "D": "An additional posting made for informational or reporting purposes that is not included in the account balance of the object"
+          },
+          "correctAnswer": "D",
+          "explanation": "Statistical postings appear only in reports for the object."
+        },
+        {
+          "id": "ERP2_C3_T2_Q9",
+          "question": "A cost is posted to an internal order (real posting) and a cost center (additional posting). What happens to the cost center?",
+          "options": {
+            "A": "It receives a real posting; the amount is included in its balance",
+            "B": "It receives a statistical posting; the amount is not included in its account balance",
+            "C": "It receives no posting at all",
+            "D": "It receives a credit posting for the same amount"
+          },
+          "correctAnswer": "B",
+          "explanation": "The internal order receives the real posting because of the order of priority among objects."
+        },
+        {
+          "id": "ERP2_C3_T2_Q10",
+          "question": "What is the order of priority used to determine which object receives the real posting?",
+          "options": {
+            "A": "Cost center, internal order, WBS element, make-to-order sales order, profitability segment",
+            "B": "Profitability segment, make-to-order sales order, WBS element, internal order, cost center",
+            "C": "Internal order, cost center, profitability segment, WBS element, sales order",
+            "D": "WBS element, cost center, internal order, profitability segment, sales order"
+          },
+          "correctAnswer": "B",
+          "explanation": "Up to four objects can be specified in a posting."
+        },
+        {
+          "id": "ERP2_C3_T2_Q11",
+          "question": "Which objects can receive only statistical postings?",
+          "options": {
+            "A": "Real objects such as cost centers",
+            "B": "Real objects such as internal orders",
+            "C": "General ledger accounts",
+            "D": "Statistical objects such as profit centers"
+          },
+          "correctAnswer": "D",
+          "explanation": "Internal orders and projects can also be designated as statistical objects when they are created."
+        },
+        {
+          "id": "ERP2_C3_T2_Q12",
+          "question": "How many objects can be specified in a single posting?",
+          "options": {
+            "A": "Only one",
+            "B": "Up to four",
+            "C": "Up to two",
+            "D": "Up to ten"
+          },
+          "correctAnswer": "B",
+          "explanation": "The system uses a predefined order of priority to decide which one gets the real posting."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C3_T3",
+      "topicName": "Periodic allocation: distribution & assessment",
+      "questions": [
+        {
+          "id": "ERP2_C3_T3_Q1",
+          "question": "What are the two techniques available for allocating costs in cost center accounting?",
+          "options": {
+            "A": "Distribution and settlement",
+            "B": "Assessment and settlement",
+            "C": "Periodic allocation and internal activity allocation",
+            "D": "Settlement and internal activity allocation"
+          },
+          "correctAnswer": "C",
+          "explanation": "Internal order accounting uses settlement instead."
+        },
+        {
+          "id": "ERP2_C3_T3_Q2",
+          "question": "How does periodic allocation work?",
+          "options": {
+            "A": "Costs are accumulated over a period (e.g., a month) and allocated to other objects at the end of the period",
+            "B": "Costs are allocated at the moment they are incurred based on activity performed",
+            "C": "Costs are allocated only when the order is closed",
+            "D": "Costs are allocated once when the cost center is created"
+          },
+          "correctAnswer": "A",
+          "explanation": "Techniques include distribution and assessment."
+        },
+        {
+          "id": "ERP2_C3_T3_Q3",
+          "question": "The distribution technique of periodic allocation is appropriate for allocating which costs?",
+          "options": {
+            "A": "Secondary costs only",
+            "B": "Several costs combined into one secondary cost",
+            "C": "Primary costs, each allocated individually",
+            "D": "Costs of internal orders"
+          },
+          "correctAnswer": "C",
+          "explanation": "The same primary cost element is used in the distribution, so receivers can identify the source of the cost."
+        },
+        {
+          "id": "ERP2_C3_T3_Q4",
+          "question": "What is a statistical key figure?",
+          "options": {
+            "A": "A document that records a statistical posting",
+            "B": "A value that serves as the basis for allocating costs, such as the number of employees or building area",
+            "C": "A cost element used in assessments",
+            "D": "The rate charged for an activity type"
+          },
+          "correctAnswer": "B",
+          "explanation": "Other examples: area in square feet and miles driven."
+        },
+        {
+          "id": "ERP2_C3_T3_Q5",
+          "question": "$5,000 of supplies cost is distributed to Departments A (10 employees), B (20 employees) and C (20 employees) based on the number of employees. How much does Department A receive?",
+          "options": {
+            "A": "$2,000",
+            "B": "$1,667",
+            "C": "$500",
+            "D": "$1,000"
+          },
+          "correctAnswer": "D",
+          "explanation": "Department A has 10 of 50 employees = 20%, i.e., $1,000; B and C each receive $2,000."
+        },
+        {
+          "id": "ERP2_C3_T3_Q6",
+          "question": "Which objects are valid senders in a distribution or an assessment?",
+          "options": {
+            "A": "Cost centers and internal orders",
+            "B": "Only cost centers",
+            "C": "Only internal orders",
+            "D": "Cost centers, internal orders and G/L accounts"
+          },
+          "correctAnswer": "B",
+          "explanation": "Receivers can be cost centers or other real objects, but there must be at least one receiver."
+        },
+        {
+          "id": "ERP2_C3_T3_Q7",
+          "question": "How are the sending cost center and the receivers posted in a distribution?",
+          "options": {
+            "A": "The sender receives a debit posting and the receivers receive credit postings",
+            "B": "Only the receivers are posted; the sender is not posted",
+            "C": "All objects receive statistical postings",
+            "D": "The sender receives a credit posting and the receivers receive debit postings (double entry)"
+          },
+          "correctAnswer": "D",
+          "explanation": "Postings within management accounting use the double-entry technique."
+        },
+        {
+          "id": "ERP2_C3_T3_Q8",
+          "question": "How does an assessment differ from a distribution?",
+          "options": {
+            "A": "An assessment allocates only one primary cost using the original cost element",
+            "B": "An assessment allocates costs based on activity quantity and activity type",
+            "C": "An assessment assigns multiple costs (primary and secondary) to receivers at the same time as a single secondary cost",
+            "D": "An assessment settles the costs of an internal order to a G/L account"
+          },
+          "correctAnswer": "C",
+          "explanation": "In an assessment, two or more costs are combined into a secondary cost."
+        },
+        {
+          "id": "ERP2_C3_T3_Q9",
+          "question": "Why can the receivers of an assessment not see the makeup of the allocated cost?",
+          "options": {
+            "A": "Because the combined costs are posted with a secondary cost element, which is not associated with a G/L account",
+            "B": "Because assessments are posted as statistical postings only",
+            "C": "Because the receivers are statistical objects",
+            "D": "Because the original cost elements are deleted after the period closes"
+          },
+          "correctAnswer": "A",
+          "explanation": "The original costs lose their identity in the receiving objects."
+        },
+        {
+          "id": "ERP2_C3_T3_Q10",
+          "question": "Which cost element category is used in the assessment technique of periodic allocation?",
+          "options": {
+            "A": "Primary cost element category 01",
+            "B": "Secondary cost element category 42",
+            "C": "Secondary cost element category 43",
+            "D": "Secondary cost element category 21"
+          },
+          "correctAnswer": "B",
+          "explanation": "Category 43 is used for internal activity allocation; 21 for internal settlement; 22 for external settlement."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C3_T4",
+      "topicName": "Internal activity allocation",
+      "questions": [
+        {
+          "id": "ERP2_C3_T4_Q1",
+          "question": "How does internal activity allocation differ from periodic allocation?",
+          "options": {
+            "A": "Costs are accumulated for a period and then allocated using statistical key figures",
+            "B": "Costs are settled to a G/L account at the end of the life of an order",
+            "C": "Costs are allocated only to profit centers",
+            "D": "No initial accumulation occurs; costs are allocated from a cost center based on activity performed, when they are incurred"
+          },
+          "correctAnswer": "D",
+          "explanation": "The cost center continues to receive postings independent of its allocation."
+        },
+        {
+          "id": "ERP2_C3_T4_Q2",
+          "question": "The IT department charges $100 per hour for 12 hours of website development for marketing. What amount is charged and how is it posted?",
+          "options": {
+            "A": "$100: debit to the IT cost center and credit to the marketing cost center",
+            "B": "$1,200: credit to the IT cost center (sender) and debit to the marketing cost center (receiver)",
+            "C": "$1,200: debit to the IT cost center and credit to the marketing cost center",
+            "D": "$1,200: statistical posting to both cost centers"
+          },
+          "correctAnswer": "B",
+          "explanation": "The allocation is a secondary cost using a secondary cost element."
+        },
+        {
+          "id": "ERP2_C3_T4_Q3",
+          "question": "What does an activity type define?",
+          "options": {
+            "A": "The cost center category that determines which postings are permitted",
+            "B": "The basis used for periodic allocation, such as number of employees",
+            "C": "The category of cost elements used for settlement",
+            "D": "The activity or work performed by a cost center, such as programming time charged at a rate per hour"
+          },
+          "correctAnswer": "D",
+          "explanation": "Internal activity allocation uses activity type and quantity as the basis."
+        },
+        {
+          "id": "ERP2_C3_T4_Q4",
+          "question": "What is the allocation basis of internal activity allocation?",
+          "options": {
+            "A": "Activity type and quantity of activity",
+            "B": "Statistical key figures",
+            "C": "Equivalence numbers",
+            "D": "Percentages defined in distribution rules"
+          },
+          "correctAnswer": "A",
+          "explanation": "Periodic allocations use statistical key figures."
+        },
+        {
+          "id": "ERP2_C3_T4_Q5",
+          "question": "Which cost element category is used for internal activity allocation?",
+          "options": {
+            "A": "Primary cost element category 01",
+            "B": "Secondary cost element category 42",
+            "C": "Secondary cost element category 43",
+            "D": "Primary cost element category 22"
+          },
+          "correctAnswer": "C",
+          "explanation": "Internal activity allocation is for a secondary cost using a secondary cost element."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C3_T5",
+      "topicName": "Internal orders & settlement",
+      "questions": [
+        {
+          "id": "ERP2_C3_T5_Q1",
+          "question": "What is internal order accounting used to manage?",
+          "options": {
+            "A": "Ongoing costs such as rent, utilities and purchasing",
+            "B": "The cost of goods manufactured for each product",
+            "C": "Temporary costs associated with an activity that has a finite life, such as a trade show or picnic",
+            "D": "The allocation of costs using statistical key figures"
+          },
+          "correctAnswer": "C",
+          "explanation": "Internal orders are the initial cost collectors for these temporary events."
+        },
+        {
+          "id": "ERP2_C3_T5_Q2",
+          "question": "Which technique does internal order accounting use to allocate accumulated costs?",
+          "options": {
+            "A": "Settlement",
+            "B": "Assessment",
+            "C": "Distribution",
+            "D": "Internal activity allocation"
+          },
+          "correctAnswer": "A",
+          "explanation": "Settlement transfers costs from the internal order to other controlling objects or G/L accounts."
+        },
+        {
+          "id": "ERP2_C3_T5_Q3",
+          "question": "What happens when an internal order is closed?",
+          "options": {
+            "A": "It can still receive costs but they are posted statistically",
+            "B": "It is deleted from the system",
+            "C": "It cannot receive any further costs",
+            "D": "Its costs are automatically settled to a profit center"
+          },
+          "correctAnswer": "C",
+          "explanation": "The order is closed after the event is complete and the costs are settled."
+        },
+        {
+          "id": "ERP2_C3_T5_Q4",
+          "question": "What does a settlement rule indicate?",
+          "options": {
+            "A": "Which general ledger accounts can be posted to by the order",
+            "B": "How the costs accumulated in the internal order will be allocated among the receivers",
+            "C": "Which strategy sequence the system uses to determine the posting key",
+            "D": "Which cost elements are used to allocate costs in cost centers"
+          },
+          "correctAnswer": "B",
+          "explanation": "It is defined when the internal order is created."
+        },
+        {
+          "id": "ERP2_C3_T5_Q5",
+          "question": "What does each distribution rule specify?",
+          "options": {
+            "A": "A sender, a posting key and a document type",
+            "B": "A cost center, an activity type and a quantity",
+            "C": "A company code, a currency and a language",
+            "D": "A receiver, an amount (percentage or equivalence number) and the timing of settlement"
+          },
+          "correctAnswer": "D",
+          "explanation": "A settlement rule consists of one or more distribution rules."
+        },
+        {
+          "id": "ERP2_C3_T5_Q6",
+          "question": "Two cost centers are to receive 2/3 and 1/3 of the costs of an internal order. Which equivalence numbers are specified?",
+          "options": {
+            "A": "2 and 3",
+            "B": "2 and 1",
+            "C": "1 and 1",
+            "D": "66 and 33"
+          },
+          "correctAnswer": "B",
+          "explanation": "The first rule allocates 2/3 and the second 1/3."
+        },
+        {
+          "id": "ERP2_C3_T5_Q7",
+          "question": "What are the three categories of settlement receivers for internal orders?",
+          "options": {
+            "A": "Cost center, profit center and company code",
+            "B": "Controlling area, plant and cost element",
+            "C": "Vendor, customer and G/L account",
+            "D": "Cost center, general ledger account and another order"
+          },
+          "correctAnswer": "D",
+          "explanation": "The valid receivers are determined by the settlement profile."
+        },
+        {
+          "id": "ERP2_C3_T5_Q8",
+          "question": "What are the two options for the timing of settlement?",
+          "options": {
+            "A": "Daily and monthly",
+            "B": "Partial and complete",
+            "C": "Periodic and full",
+            "D": "Manual and automatic"
+          },
+          "correctAnswer": "C",
+          "explanation": "Periodic settles at the end of each period; full settles once at the end of the order's life."
+        },
+        {
+          "id": "ERP2_C3_T5_Q9",
+          "question": "In \"full\" settlement timing, when are the costs settled?",
+          "options": {
+            "A": "Once, at the end of the life of the order",
+            "B": "At the end of each period in which the order is open",
+            "C": "Every time a cost is posted to the order",
+            "D": "When the order is created"
+          },
+          "correctAnswer": "A",
+          "explanation": "In periodic settlement, costs are settled at the end of each period the order is open."
+        },
+        {
+          "id": "ERP2_C3_T5_Q10",
+          "question": "An internal order tracks the cost of constructing a building and is settled to an asset account in financial accounting. What type of settlement is this?",
+          "options": {
+            "A": "Internal settlement",
+            "B": "External settlement",
+            "C": "Periodic allocation",
+            "D": "Internal activity allocation"
+          },
+          "correctAnswer": "B",
+          "explanation": "Internal settlement is to another object within controlling, e.g., a cost center."
+        },
+        {
+          "id": "ERP2_C3_T5_Q11",
+          "question": "Which cost element category is used in external settlement from an internal order to financial accounting?",
+          "options": {
+            "A": "Secondary cost element category 21",
+            "B": "Secondary cost element category 42",
+            "C": "Primary cost element category 01",
+            "D": "Primary cost element category 22"
+          },
+          "correctAnswer": "D",
+          "explanation": "Category 21 is used for settlement to receivers within management accounting."
+        },
+        {
+          "id": "ERP2_C3_T5_Q12",
+          "question": "Which cost element category is used to transfer costs from financial accounting to cost centers and internal orders?",
+          "options": {
+            "A": "Primary cost element category 22",
+            "B": "Primary cost element category 01",
+            "C": "Secondary cost element category 42",
+            "D": "Secondary cost element category 43"
+          },
+          "correctAnswer": "B",
+          "explanation": "Category 01 is the standard primary cost element category."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C3_T6",
+      "topicName": "Controlling area & enterprise structure",
+      "questions": [
+        {
+          "id": "ERP2_C3_T6_Q1",
+          "question": "Which enterprise structure elements are relevant to management accounting?",
+          "options": {
+            "A": "Company code and controlling area",
+            "B": "Plant and storage location",
+            "C": "Sales organization and distribution channel",
+            "D": "Purchasing organization and purchasing group"
+          },
+          "correctAnswer": "A",
+          "explanation": "The controlling area is the key element for management accounting."
+        },
+        {
+          "id": "ERP2_C3_T6_Q2",
+          "question": "At which level are overhead management and product costing processes completed?",
+          "options": {
+            "A": "At the plant level",
+            "B": "At the client level",
+            "C": "At the controlling area level",
+            "D": "At the company code level only"
+          },
+          "correctAnswer": "C",
+          "explanation": "All costs in management accounting are allocated within a controlling area."
+        },
+        {
+          "id": "ERP2_C3_T6_Q3",
+          "question": "How is a controlling area identified?",
+          "options": {
+            "A": "By a unique four-character alphanumeric value, a descriptive name and optionally the person responsible",
+            "B": "By a two-digit numeric code assigned to each company code",
+            "C": "By a ten-digit number that falls within an account group range",
+            "D": "By the language and country of the company code"
+          },
+          "correctAnswer": "A",
+          "explanation": "GBI's North America controlling area is NA00."
+        },
+        {
+          "id": "ERP2_C3_T6_Q4",
+          "question": "What is the centralized model of controlling called in the assignment control parameter?",
+          "options": {
+            "A": "Controlling area same as company code",
+            "B": "Parallel cost accounting",
+            "C": "Plant-level cost accounting",
+            "D": "Cross-company-code cost accounting"
+          },
+          "correctAnswer": "D",
+          "explanation": "Several company codes are assigned to the same controlling area (a 1:n relationship)."
+        },
+        {
+          "id": "ERP2_C3_T6_Q5",
+          "question": "What does the option \"controlling area same as company code\" create?",
+          "options": {
+            "A": "A one-to-many relationship between a controlling area and several company codes",
+            "B": "A one-to-one (1:1) relationship between each controlling area and company code (decentralized model)",
+            "C": "A many-to-many relationship between cost centers and internal orders",
+            "D": "A hybrid with no company code assignment"
+          },
+          "correctAnswer": "B",
+          "explanation": "Organizations typically choose the centralized option because it is easier to configure and offers more flexible analysis."
+        },
+        {
+          "id": "ERP2_C3_T6_Q6",
+          "question": "What is required in a centralized model of controlling between the controlling area and its assigned company codes?",
+          "options": {
+            "A": "They must use the same currency and the same language",
+            "B": "They must have the same number of cost centers",
+            "C": "They must be located in the same country",
+            "D": "They must use the same fiscal year variant and the same chart of accounts"
+          },
+          "correctAnswer": "D",
+          "explanation": "Controlling areas, like company codes, are assigned a chart of accounts and fiscal year variant."
+        },
+        {
+          "id": "ERP2_C3_T6_Q7",
+          "question": "Which currency is the currency the organization uses for all of its management accounting activity?",
+          "options": {
+            "A": "Object currency",
+            "B": "Controlling area currency",
+            "C": "Transaction currency",
+            "D": "Country currency"
+          },
+          "correctAnswer": "B",
+          "explanation": "In a decentralized model it equals the company code currency."
+        },
+        {
+          "id": "ERP2_C3_T6_Q8",
+          "question": "What is the object currency?",
+          "options": {
+            "A": "The currency associated with a controlling object such as a cost center or an internal order",
+            "B": "The currency used when posting controlling transactions",
+            "C": "The currency used for all management accounting",
+            "D": "The currency of the company code that owns the object"
+          },
+          "correctAnswer": "A",
+          "explanation": "It can differ from the company code currency only if the controlling area currency and company code currency are the same."
+        },
+        {
+          "id": "ERP2_C3_T6_Q9",
+          "question": "What is the transaction currency in controlling?",
+          "options": {
+            "A": "The currency of the controlling area only",
+            "B": "The currency of the company code only",
+            "C": "The currency used when posting controlling transactions, which need not be the controlling area or object currency",
+            "D": "The currency of the cost center hierarchy"
+          },
+          "correctAnswer": "C",
+          "explanation": "Example: research costs incurred in China and Germany posted in yuan and euros."
+        },
+        {
+          "id": "ERP2_C3_T6_Q10",
+          "question": "What does the cost center standard hierarchy contain?",
+          "options": {
+            "A": "Only the cost centers that have internal orders assigned",
+            "B": "All cost centers of the organization; every cost center must belong to it",
+            "C": "Only the cost centers of one company code",
+            "D": "Only the cost center groups, not the cost centers"
+          },
+          "correctAnswer": "B",
+          "explanation": "Alternate hierarchies can be created for reporting, but each cost center must be in the standard hierarchy."
+        },
+        {
+          "id": "ERP2_C3_T6_Q11",
+          "question": "Why must company codes be assigned to the controlling area?",
+          "options": {
+            "A": "So that the controlling area can define its own chart of accounts",
+            "B": "So that each company code can create its own cost elements",
+            "C": "So that internal orders can be created without number ranges",
+            "D": "So that expense and revenue postings in financial accounting can be posted to the appropriate controlling objects"
+          },
+          "correctAnswer": "D",
+          "explanation": "Management accounting receives much of its data from financial accounting."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C3_T7",
+      "topicName": "Number ranges, settlement parameters & order types",
+      "questions": [
+        {
+          "id": "ERP2_C3_T7_Q1",
+          "question": "Document number ranges in controlling are unique to which element?",
+          "options": {
+            "A": "Each company code",
+            "B": "Each controlling area",
+            "C": "Each cost center",
+            "D": "The whole client"
+          },
+          "correctAnswer": "B",
+          "explanation": "Number ranges must also be defined for internal orders and settlement documents."
+        },
+        {
+          "id": "ERP2_C3_T7_Q2",
+          "question": "What does the \"Ext\" checkbox of a number range specify?",
+          "options": {
+            "A": "Whether the number range extends into the next fiscal year",
+            "B": "Whether the number range is shared with other company codes",
+            "C": "Whether the documents can be reversed",
+            "D": "Whether the number is selected manually by the user (checked) or automatically by the system (unchecked)"
+          },
+          "correctAnswer": "D",
+          "explanation": "Other parameters: interval number, from/to numbers and NR status (last number used)."
+        },
+        {
+          "id": "ERP2_C3_T7_Q3",
+          "question": "Which three categories of settlement parameters determine how costs are allocated to other controlling objects?",
+          "options": {
+            "A": "Number ranges, order types and strategy sequences",
+            "B": "Allocation structures, source structures and settlement profiles",
+            "C": "Cost elements, cost centers and activity types",
+            "D": "Posting keys, document types and field statuses"
+          },
+          "correctAnswer": "B",
+          "explanation": "The settlement profile is the critical parameter that gathers the others."
+        },
+        {
+          "id": "ERP2_C3_T7_Q4",
+          "question": "What does an allocation structure identify?",
+          "options": {
+            "A": "The sequence in which strategies are evaluated for generating settlement rules",
+            "B": "The purpose and number range of an internal order",
+            "C": "The type and source of costs to be included, the method of settlement and the valid types of receivers",
+            "D": "The numbers of employees used as an allocation basis"
+          },
+          "correctAnswer": "C",
+          "explanation": "Examples: A3 for customer service, A4 for enterprise asset management, Z1 for internal orders."
+        },
+        {
+          "id": "ERP2_C3_T7_Q5",
+          "question": "What do assignments in an allocation structure identify?",
+          "options": {
+            "A": "The types of costs or revenues to be accumulated and settled",
+            "B": "The cost centers that are valid receivers",
+            "C": "The strategy used to generate a settlement rule",
+            "D": "The statuses that an internal order can have"
+          },
+          "correctAnswer": "A",
+          "explanation": "They can include primary costs, secondary costs and revenue."
+        },
+        {
+          "id": "ERP2_C3_T7_Q6",
+          "question": "An allocation structure uses assessment cost elements to settle costs. What does that mean?",
+          "options": {
+            "A": "Each cost keeps its original cost element during settlement",
+            "B": "The costs are settled to a G/L account only",
+            "C": "All the costs are combined into a single secondary cost element",
+            "D": "The costs are posted statistically"
+          },
+          "correctAnswer": "C",
+          "explanation": "Settlement cost elements allow multiple options depending on the receiver category."
+        },
+        {
+          "id": "ERP2_C3_T7_Q7",
+          "question": "Which source structure statement is true?",
+          "options": {
+            "A": "It identifies the source of the costs to be settled and can be embedded in an allocation structure or defined standalone",
+            "B": "It defines the receivers that are valid for an internal order",
+            "C": "It defines the number range of internal orders",
+            "D": "It can only be defined inside a settlement profile"
+          },
+          "correctAnswer": "A",
+          "explanation": "A standalone source structure is more general and can be used in multiple scenarios."
+        },
+        {
+          "id": "ERP2_C3_T7_Q8",
+          "question": "What does a settlement profile do?",
+          "options": {
+            "A": "It defines the strategy sequence for creating cost elements",
+            "B": "It defines numerous settlement parameters that the internal order inherits when the profile is assigned to it",
+            "C": "It defines the fiscal year variant of the controlling area",
+            "D": "It defines the posting keys used by the internal order"
+          },
+          "correctAnswer": "B",
+          "explanation": "Its parameters are grouped into type of settlement, default values, allocation basis, valid receivers and other parameters."
+        },
+        {
+          "id": "ERP2_C3_T7_Q9",
+          "question": "If the type of settlement is \"full settlement\", what happens when a user tries to close an order that has a balance?",
+          "options": {
+            "A": "The system closes the order and displays a warning",
+            "B": "The system closes the order and posts the balance to a cost center",
+            "C": "The system leaves the order open without any message",
+            "D": "The system generates an error because the order must have a zero balance"
+          },
+          "correctAnswer": "D",
+          "explanation": "With the \"can be settled\" option, the system displays a warning but permits closing."
+        },
+        {
+          "id": "ERP2_C3_T7_Q10",
+          "question": "What does the type of settlement \"not for settlement\" indicate?",
+          "options": {
+            "A": "The order must be fully settled before closing",
+            "B": "The order should not be settled",
+            "C": "The order can be settled but need not be",
+            "D": "The order is settled automatically each period"
+          },
+          "correctAnswer": "B",
+          "explanation": "The three options: full settlement required, can be settled, not for settlement."
+        },
+        {
+          "id": "ERP2_C3_T7_Q11",
+          "question": "What does the 100%-validation option of a settlement profile do?",
+          "options": {
+            "A": "It forces every order to be settled in one period",
+            "B": "It requires every cost center to receive 100% of the costs",
+            "C": "It validates that the order has a balance of 100",
+            "D": "It makes the system verify that the percentages in the distribution rules total 100"
+          },
+          "correctAnswer": "D",
+          "explanation": "This ensures all of the costs are settled."
+        },
+        {
+          "id": "ERP2_C3_T7_Q12",
+          "question": "What does the \"maximum number of distribution rules\" parameter specify?",
+          "options": {
+            "A": "The number of orders permitted for each cost center",
+            "B": "The number of distribution rules permitted in a settlement rule",
+            "C": "The number of receivers permitted in each company code",
+            "D": "The number of periods in which an order can be settled"
+          },
+          "correctAnswer": "B",
+          "explanation": "In the GBI example 10 distribution rules are permitted."
+        },
+        {
+          "id": "ERP2_C3_T7_Q13",
+          "question": "Strategies for automatically generating settlement rules determine:",
+          "options": {
+            "A": "The priority and sequence in which strategies are evaluated",
+            "B": "The status of the order",
+            "C": "The number range of the order",
+            "D": "Which receivers to include in the distribution rules"
+          },
+          "correctAnswer": "D",
+          "explanation": "The strategy sequence gives the priority and sequence in which strategies are evaluated."
+        },
+        {
+          "id": "ERP2_C3_T7_Q14",
+          "question": "What does a strategy sequence indicate?",
+          "options": {
+            "A": "The priority and sequence in which to evaluate whether a particular strategy is applicable",
+            "B": "Which receivers to include in distribution rules",
+            "C": "Which number range the order uses",
+            "D": "Which statuses are permitted for the order"
+          },
+          "correctAnswer": "A",
+          "explanation": "Example: SAP030 determines the requesting cost center and generates a 100% periodic rule."
+        },
+        {
+          "id": "ERP2_C3_T7_Q15",
+          "question": "Why are separate internal order types defined?",
+          "options": {
+            "A": "Because each order type has its own company code and chart of accounts",
+            "B": "Because order types determine which accounts are balance sheet accounts",
+            "C": "Each purpose (e.g., construction, marketing, picnic) has different parameters, and an order type simplifies the creation of actual orders",
+            "D": "Because order types define the controlling area currency"
+          },
+          "correctAnswer": "C",
+          "explanation": "An order type is associated with parameters such as number range, settlement profile and strategy sequence."
+        },
+        {
+          "id": "ERP2_C3_T7_Q16",
+          "question": "What is a model order?",
+          "options": {
+            "A": "An order created based on the internal order type that contains default values and serves as the basis for creating internal orders",
+            "B": "An order that is settled to a model cost center",
+            "C": "An order that has been closed and archived",
+            "D": "An order that is used only for statistical postings"
+          },
+          "correctAnswer": "A",
+          "explanation": "Object class and responsible cost center come from the model order."
+        },
+        {
+          "id": "ERP2_C3_T7_Q17",
+          "question": "Which internal order status permits planning activities only?",
+          "options": {
+            "A": "Released",
+            "B": "Technically complete",
+            "C": "Created",
+            "D": "Closed"
+          },
+          "correctAnswer": "C",
+          "explanation": "In the Released status logistics activities are permitted."
+        },
+        {
+          "id": "ERP2_C3_T7_Q18",
+          "question": "Which statuses of an internal order allow the order to be settled?",
+          "options": {
+            "A": "Created only",
+            "B": "Closed only",
+            "C": "Created and closed",
+            "D": "Technically complete (settlement is possible); it cannot be settled when closed"
+          },
+          "correctAnswer": "D",
+          "explanation": "The order is closed after settlement; no further activities are permitted afterwards."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C3_T8",
+      "topicName": "Master data: cost centers, cost element groups & categories",
+      "questions": [
+        {
+          "id": "ERP2_C3_T8_Q1",
+          "question": "What are cost centers created based on?",
+          "options": {
+            "A": "Company code, plant and storage location",
+            "B": "Posting period, fiscal year and document type",
+            "C": "Material type, vendor and customer",
+            "D": "Geographic location, function or activity"
+          },
+          "correctAnswer": "D",
+          "explanation": "Examples: the copy center, security department and IT function."
+        },
+        {
+          "id": "ERP2_C3_T8_Q2",
+          "question": "What are cost center groups used for?",
+          "options": {
+            "A": "Grouping cost elements for allocation to internal orders",
+            "B": "Grouping cost centers with similar characteristics to provide additional structure for the cost center hierarchy",
+            "C": "Grouping controlling areas for consolidation",
+            "D": "Grouping settlement rules for automatic generation"
+          },
+          "correctAnswer": "B",
+          "explanation": "Each group can include subgroups; the standard hierarchy is like a tree with cost centers at the lowest level."
+        },
+        {
+          "id": "ERP2_C3_T8_Q3",
+          "question": "What does the cost center category indicate?",
+          "options": {
+            "A": "Which person is responsible for the cost center",
+            "B": "Which controlling area the cost center belongs to",
+            "C": "Which company code the cost center is assigned to",
+            "D": "Which types of postings (e.g., primary and secondary costs) are permitted to the cost center; it is also used for reporting"
+          },
+          "correctAnswer": "D",
+          "explanation": "Other cost center data: name, status, validity dates, person responsible and department."
+        },
+        {
+          "id": "ERP2_C3_T8_Q4",
+          "question": "How are primary cost elements typically named relative to the associated G/L account?",
+          "options": {
+            "A": "They have the same number, name and description as the associated G/L account",
+            "B": "They have a different number range from the G/L accounts",
+            "C": "They have no association with G/L accounts",
+            "D": "They use the group chart of accounts"
+          },
+          "correctAnswer": "A",
+          "explanation": "Example: account and cost element 740000 Supplies Expense."
+        },
+        {
+          "id": "ERP2_C3_T8_Q5",
+          "question": "What is a cost element group used for?",
+          "options": {
+            "A": "Combining cost centers into a hierarchy",
+            "B": "Combining company codes assigned to the same controlling area",
+            "C": "Combining cost elements with similar characteristics to make tracking and cost control more efficient",
+            "D": "Combining internal orders of the same type"
+          },
+          "correctAnswer": "C",
+          "explanation": "GBI has groups for salary and wages, utilities and tax-related expenses."
+        },
+        {
+          "id": "ERP2_C3_T8_Q6",
+          "question": "What does the default account assignment of a cost element do?",
+          "options": {
+            "A": "Automatically posts an expense to a specified cost center or internal order when the G/L account is posted",
+            "B": "Automatically creates the G/L account for the cost element",
+            "C": "Automatically settles the internal order at the end of the period",
+            "D": "Automatically assigns the controlling area to the company code"
+          },
+          "correctAnswer": "A",
+          "explanation": "It is optional."
+        },
+        {
+          "id": "ERP2_C3_T8_Q7",
+          "question": "What does a statistical key figure serve as in periodic allocation?",
+          "options": {
+            "A": "The rate charged per activity unit",
+            "B": "The receiver of a distribution",
+            "C": "The allocation basis, such as number of employees",
+            "D": "The category of a cost element"
+          },
+          "correctAnswer": "C",
+          "explanation": "Statistical key figures are master data used for periodic allocation."
+        },
+        {
+          "id": "ERP2_C3_T8_Q8",
+          "question": "Which master data are listed as relevant for overhead management?",
+          "options": {
+            "A": "Material master, vendor master, customer master, BOM and routing",
+            "B": "G/L accounts, document types, posting keys and number ranges",
+            "C": "Plants, storage locations, purchasing groups and sales areas",
+            "D": "Cost elements, cost centers, activity types, statistical key figures and internal orders"
+          },
+          "correctAnswer": "D",
+          "explanation": "Cost elements move data between objects; activity types are for internal activity allocation."
+        },
+        {
+          "id": "ERP2_C3_T8_Q9",
+          "question": "The costs of repairing equipment are accumulated in a maintenance order and then settled to the cost center that owns the equipment. Which concept does this illustrate?",
+          "options": {
+            "A": "Settlement applies only to internal orders created for events",
+            "B": "Settlement applies in other management accounting processes such as enterprise asset management",
+            "C": "Periodic allocation applies to enterprise asset management",
+            "D": "Statistical postings are made to maintenance orders"
+          },
+          "correctAnswer": "B",
+          "explanation": "The same settlement techniques are used for service orders in customer service."
+        }
+      ]
+    }
+  ]
+}

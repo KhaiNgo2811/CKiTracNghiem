@@ -1,0 +1,42 @@
+{
+  "chapters": [
+    {
+      "chapterId": "ERP2_C1",
+      "chapterName": "Chapter 1 – Introduction to Business Process Configuration",
+      "topicCount": 4,
+      "questionCount": 58
+    },
+    {
+      "chapterId": "ERP2_C2",
+      "chapterName": "Chapter 2 – Financial Accounting (FI)",
+      "topicCount": 7,
+      "questionCount": 89
+    },
+    {
+      "chapterId": "ERP2_C3",
+      "chapterName": "Chapter 3 – Overhead Management (CO)",
+      "topicCount": 8,
+      "questionCount": 87
+    },
+    {
+      "chapterId": "ERP2_C4",
+      "chapterName": "Chapter 4 – The Procurement Process (MM)",
+      "topicCount": 6,
+      "questionCount": 100
+    },
+    {
+      "chapterId": "ERP2_C5",
+      "chapterName": "Chapter 5 – The Fulfillment Process (SD)",
+      "topicCount": 7,
+      "questionCount": 108
+    },
+    {
+      "chapterId": "ERP2_C6",
+      "chapterName": "PS & EAM (topics mentioned in the textbook)",
+      "topicCount": 2,
+      "questionCount": 16
+    }
+  ],
+  "totalQuestions": 458,
+  "totalTopics": 34
+}

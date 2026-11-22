@@ -34,6 +34,13 @@
       "biIcon": "diagram-3-fill",
       "folder": "Nền tảng",
       "description": "Mạng máy tính: mô hình OSI, TCP/IP, thiết bị mạng, Wi-Fi, tường lửa, mã hóa, định tuyến"
+    },
+    {
+      "id": "ERP2",
+      "name": "ERP2 – SAP Configuration (English)",
+      "biIcon": "gear-wide-connected",
+      "folder": "ERP2",
+      "description": "Business Process Configuration with SAP ERP: FI, CO, MM, SD (Ch. 1–5), PS & EAM"
     }
   ]
 }

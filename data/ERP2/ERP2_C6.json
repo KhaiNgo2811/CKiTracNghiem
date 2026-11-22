@@ -1,0 +1,210 @@
+{
+  "chapterId": "ERP2_C6",
+  "chapterName": "PS & EAM (topics mentioned in the textbook)",
+  "topics": [
+    {
+      "topicId": "ERP2_C6_T1",
+      "topicName": "PS – Project System concepts in the textbook",
+      "questions": [
+        {
+          "id": "ERP2_C6_T1_Q1",
+          "question": "Which controlling object is described as relevant to project management?",
+          "options": {
+            "A": "Cost center",
+            "B": "Profit center",
+            "C": "WBS element",
+            "D": "Activity type"
+          },
+          "correctAnswer": "C",
+          "explanation": "In the order of priority for real postings: profitability segment, make-to-order sales order, WBS element, internal order, cost center."
+        },
+        {
+          "id": "ERP2_C6_T1_Q2",
+          "question": "In the order of priority for real postings in controlling, where does the WBS element rank?",
+          "options": {
+            "A": "Third: after the profitability segment and the make-to-order sales order, and before the internal order and cost center",
+            "B": "First, before the profitability segment",
+            "C": "Last, after the cost center",
+            "D": "Second, directly after the cost center"
+          },
+          "correctAnswer": "A",
+          "explanation": "The order is profitability segment, make-to-order sales order, WBS element, internal order, cost center."
+        },
+        {
+          "id": "ERP2_C6_T1_Q3",
+          "question": "Which objects other than cost centers can be designated as statistical objects when they are created?",
+          "options": {
+            "A": "Cost elements and activity types",
+            "B": "Company codes and plants",
+            "C": "Internal orders and projects",
+            "D": "Vendors and customers"
+          },
+          "correctAnswer": "C",
+          "explanation": "Profit centers are statistical objects by definition."
+        },
+        {
+          "id": "ERP2_C6_T1_Q4",
+          "question": "Projects can be receivers of costs in which allocation techniques?",
+          "options": {
+            "A": "Only settlement of purchase orders",
+            "B": "Distribution and assessment (periodic allocation), and internal activity allocation",
+            "C": "Only period closing",
+            "D": "None; projects can never be receivers"
+          },
+          "correctAnswer": "B",
+          "explanation": "Valid receivers include several real objects such as internal orders, projects and maintenance orders; internal activity allocation can charge production orders and projects."
+        },
+        {
+          "id": "ERP2_C6_T1_Q5",
+          "question": "Which production process is most often applied in constructing a facility or manufacturing an item such as an aircraft that requires a complex production process?",
+          "options": {
+            "A": "Discrete production",
+            "B": "Repetitive production",
+            "C": "Process manufacturing",
+            "D": "The project process"
+          },
+          "correctAnswer": "D",
+          "explanation": "The job shop process is used for highly customized items such as a custom motorcycle."
+        },
+        {
+          "id": "ERP2_C6_T1_Q6",
+          "question": "What do the job shop and project production processes focus on?",
+          "options": {
+            "A": "A desired production rate such as units per day",
+            "B": "A single item (project) or a highly customized item or items (job shop)",
+            "C": "Materials that are indistinguishable from their components",
+            "D": "Mass production of consumer products"
+          },
+          "correctAnswer": "B",
+          "explanation": "Repetitive production specifies a rate; discrete production specifies a quantity."
+        },
+        {
+          "id": "ERP2_C6_T1_Q7",
+          "question": "Which sales scenario is a make-to-order scenario that is relevant to controlling postings (priority just above WBS element)?",
+          "options": {
+            "A": "Make-to-stock production plan",
+            "B": "Standard purchase order",
+            "C": "Customer inquiry",
+            "D": "Make-to-order sales order"
+          },
+          "correctAnswer": "D",
+          "explanation": "Make-to-order is triggered by an actual customer order."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C6_T2",
+      "topicName": "EAM – Enterprise Asset Management concepts in the textbook",
+      "questions": [
+        {
+          "id": "ERP2_C6_T2_Q1",
+          "question": "The costs of repairing equipment (materials, labor) are accumulated in which object in the enterprise asset management process?",
+          "options": {
+            "A": "A maintenance order",
+            "B": "A purchase order",
+            "C": "A sales order",
+            "D": "A planned order"
+          },
+          "correctAnswer": "A",
+          "explanation": "EAM is used to repair equipment; the repair costs accumulate in the maintenance order."
+        },
+        {
+          "id": "ERP2_C6_T2_Q2",
+          "question": "When the maintenance process is completed, to which receiver are the accumulated costs typically settled?",
+          "options": {
+            "A": "The vendor who supplied the spare parts",
+            "B": "The customer who ordered the repair",
+            "C": "The cost center that owns the equipment",
+            "D": "The controlling area"
+          },
+          "correctAnswer": "C",
+          "explanation": "Settlement applies to other management accounting processes, not only to internal orders."
+        },
+        {
+          "id": "ERP2_C6_T2_Q3",
+          "question": "Which technique transfers the costs accumulated in a maintenance order to a controlling object?",
+          "options": {
+            "A": "Settlement",
+            "B": "Distribution",
+            "C": "Assessment",
+            "D": "Internal activity allocation"
+          },
+          "correctAnswer": "A",
+          "explanation": "Settlement uses settlement rules, parameters and profiles."
+        },
+        {
+          "id": "ERP2_C6_T2_Q4",
+          "question": "Which allocation structure in the example is for enterprise asset management?",
+          "options": {
+            "A": "A3",
+            "B": "A1",
+            "C": "Z1",
+            "D": "A4"
+          },
+          "correctAnswer": "D",
+          "explanation": "A3 is for customer service; Z1 for internal orders; A1 and A2 are general structures."
+        },
+        {
+          "id": "ERP2_C6_T2_Q5",
+          "question": "Can maintenance orders function as valid receivers in a distribution?",
+          "options": {
+            "A": "No, only cost centers can be receivers",
+            "B": "Yes, together with other real objects such as internal orders and projects",
+            "C": "No, only G/L accounts can be receivers",
+            "D": "Yes, but only as senders"
+          },
+          "correctAnswer": "B",
+          "explanation": "Only cost centers are valid senders in a distribution or assessment."
+        },
+        {
+          "id": "ERP2_C6_T2_Q6",
+          "question": "Which financial accounting-related process step generates costs that flow into management accounting, including the cost of repairs to machinery?",
+          "options": {
+            "A": "Customer payment",
+            "B": "Vendor payment clearing",
+            "C": "Period closing of balance sheet accounts",
+            "D": "Asset management (maintenance), alongside asset accounting and procurement"
+          },
+          "correctAnswer": "D",
+          "explanation": "Costs originate in postings of processes such as asset accounting (depreciation), procurement (supplies) and asset management (repairs)."
+        },
+        {
+          "id": "ERP2_C6_T2_Q7",
+          "question": "For which processes can bills of materials be created, according to the textbook?",
+          "options": {
+            "A": "Only production",
+            "B": "Production, product costing and enterprise asset management",
+            "C": "Only fulfillment and procurement",
+            "D": "Only financial accounting"
+          },
+          "correctAnswer": "B",
+          "explanation": "The BOM application parameter indicates which type of BOM may be used in production."
+        },
+        {
+          "id": "ERP2_C6_T2_Q8",
+          "question": "For which purposes are routings used, according to the textbook?",
+          "options": {
+            "A": "Production, asset management and quality inspections",
+            "B": "Only vendor invoicing",
+            "C": "Only controlling allocations",
+            "D": "Only sales order pricing"
+          },
+          "correctAnswer": "A",
+          "explanation": "The routing selection parameter also indicates whether routing is mandatory or optional."
+        },
+        {
+          "id": "ERP2_C6_T2_Q9",
+          "question": "For which application areas are work center categories assigned?",
+          "options": {
+            "A": "Only sales and distribution",
+            "B": "Only financial accounting",
+            "C": "Application areas such as production and maintenance, which determine the types of routings (task lists) that can be assigned",
+            "D": "Only controlling"
+          },
+          "correctAnswer": "C",
+          "explanation": "Work centers are used in many processes including production and asset management."
+        }
+      ]
+    }
+  ]
+}

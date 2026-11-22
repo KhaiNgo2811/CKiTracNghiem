@@ -1,0 +1,1242 @@
+{
+  "chapterId": "ERP2_C4",
+  "chapterName": "Chapter 4 – The Procurement Process (MM)",
+  "topics": [
+    {
+      "topicId": "ERP2_C4_T1",
+      "topicName": "Procurement process steps",
+      "questions": [
+        {
+          "id": "ERP2_C4_T1_Q1",
+          "question": "Which other names are used for the procurement process?",
+          "options": {
+            "A": "\"Order to cash\" or the fulfillment process",
+            "B": "\"Plan to produce\" or the production process",
+            "C": "\"Record to report\" or the closing process",
+            "D": "\"Procure to pay\", \"P2P\" or the sourcing process"
+          },
+          "correctAnswer": "D",
+          "explanation": "Procurement is concerned with acquiring (purchasing) materials and services."
+        },
+        {
+          "id": "ERP2_C4_T1_Q2",
+          "question": "What is the first step of the simple procurement process?",
+          "options": {
+            "A": "Creating a purchase order",
+            "B": "Creating a purchase requisition",
+            "C": "Recording a goods receipt",
+            "D": "Verifying the vendor invoice"
+          },
+          "correctAnswer": "B",
+          "explanation": "Order: requisition, purchase order, goods receipt, invoice verification, vendor payment."
+        },
+        {
+          "id": "ERP2_C4_T1_Q3",
+          "question": "What is a purchase requisition?",
+          "options": {
+            "A": "An approval sent to the vendor that is a binding commitment to purchase",
+            "B": "A document that verifies the materials received match the order",
+            "C": "A request from the vendor for payment of the delivered materials",
+            "D": "An internal \"request to buy\" needed materials, with materials, quantities and desired receipt date"
+          },
+          "correctAnswer": "D",
+          "explanation": "It can be generated automatically by fulfillment, production or material planning, or created manually."
+        },
+        {
+          "id": "ERP2_C4_T1_Q4",
+          "question": "Which processes can automatically generate purchase requisitions?",
+          "options": {
+            "A": "Fulfillment, production and material planning",
+            "B": "Financial accounting and overhead management only",
+            "C": "Vendor payment and invoice verification",
+            "D": "Period closing and settlement"
+          },
+          "correctAnswer": "A",
+          "explanation": "It can also be created manually by the user."
+        },
+        {
+          "id": "ERP2_C4_T1_Q5",
+          "question": "What is a purchase order?",
+          "options": {
+            "A": "An internal request to buy materials that contains only quantities and dates",
+            "B": "A record that verifies received materials match the specified order",
+            "C": "An approval to purchase the requested materials, typically created by converting purchase requisitions, including pricing and terms",
+            "D": "A document sent by the vendor requesting payment"
+          },
+          "correctAnswer": "C",
+          "explanation": "When sent to a vendor, it becomes a binding commitment to purchase under the stated terms."
+        },
+        {
+          "id": "ERP2_C4_T1_Q6",
+          "question": "What is sending a purchase order to a vendor called, and sending it to another plant of the enterprise?",
+          "options": {
+            "A": "External procurement; internal procurement",
+            "B": "Internal procurement; external procurement",
+            "C": "Both are called external procurement",
+            "D": "Direct procurement; indirect procurement"
+          },
+          "correctAnswer": "A",
+          "explanation": "Purchase orders can be sent to a vendor or to another plant within the enterprise."
+        },
+        {
+          "id": "ERP2_C4_T1_Q7",
+          "question": "Which tasks does the ERP system perform automatically at goods receipt?",
+          "options": {
+            "A": "Updates the vendor master and creates the purchase requisition",
+            "B": "Creates the vendor invoice and authorizes the payment",
+            "C": "Updates G/L accounts, updates inventory quantity and value in the material master, and creates FI, CO and material documents as needed",
+            "D": "Calculates the cost of goods manufactured and settles the order"
+          },
+          "correctAnswer": "C",
+          "explanation": "The goods receipt verifies the received materials match the purchase order."
+        },
+        {
+          "id": "ERP2_C4_T1_Q8",
+          "question": "What is a three-way match in invoice verification?",
+          "options": {
+            "A": "Comparing the purchase requisition, the purchase order and the payment",
+            "B": "Comparing the invoice, the payment and the bank statement",
+            "C": "Comparing three different vendors for the same purchase order",
+            "D": "Comparing the data in the purchase order, the goods receipt document and the invoice"
+          },
+          "correctAnswer": "D",
+          "explanation": "A two-way match compares only the invoice and purchase order."
+        },
+        {
+          "id": "ERP2_C4_T1_Q9",
+          "question": "How does the system calculate the vendor payment amount when it authorizes a payment?",
+          "options": {
+            "A": "Based on the amount on the goods receipt only",
+            "B": "Based on the terms specified in the purchase order",
+            "C": "Based on the tolerance group of the employee",
+            "D": "Based on the moving average price of the material"
+          },
+          "correctAnswer": "B",
+          "explanation": "Payments can be sent by electronic funds transfer or a printed check."
+        },
+        {
+          "id": "ERP2_C4_T1_Q10",
+          "question": "Which three steps of the procurement process have a financial accounting consequence?",
+          "options": {
+            "A": "Goods receipt, invoice verification and vendor payment",
+            "B": "Purchase requisition, purchase order and goods receipt",
+            "C": "Purchase requisition, invoice verification and vendor payment",
+            "D": "Purchase order, goods receipt and invoice verification"
+          },
+          "correctAnswer": "A",
+          "explanation": "Requisitions and purchase orders do not post to the general ledger."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C4_T2",
+      "topicName": "Enterprise structure: plant, valuation level, purchasing organization & storage location",
+      "questions": [
+        {
+          "id": "ERP2_C4_T2_Q1",
+          "question": "Which enterprise structure elements are involved in the procurement process?",
+          "options": {
+            "A": "Client, sales organization, distribution channel, division and shipping point",
+            "B": "Company code, plant, material valuation level, purchasing organization, purchasing group and storage location",
+            "C": "Controlling area, cost center, profit center and internal order",
+            "D": "Chart of accounts, fiscal year variant, posting key and document type"
+          },
+          "correctAnswer": "B",
+          "explanation": "These elements define where procurement tasks are completed."
+        },
+        {
+          "id": "ERP2_C4_T2_Q2",
+          "question": "What does a plant represent in an ERP system?",
+          "options": {
+            "A": "A separate legal entity for financial accounting purposes",
+            "B": "A unit with legal responsibility for purchasing transactions",
+            "C": "An area within a facility where materials are stored",
+            "D": "A facility where a company executes some or all of its operations, such as a manufacturing, maintenance or storage facility"
+          },
+          "correctAnswer": "D",
+          "explanation": "A plant is key for processes that create or store materials."
+        },
+        {
+          "id": "ERP2_C4_T2_Q3",
+          "question": "Which of the following tasks is completed at the plant level?",
+          "options": {
+            "A": "Negotiating terms and conditions with vendors",
+            "B": "Material requirements planning, maintaining material stocks and executing production",
+            "C": "Defining the chart of accounts of the enterprise",
+            "D": "Closing posting periods"
+          },
+          "correctAnswer": "B",
+          "explanation": "Maintenance and service are also planned and executed at the plant level."
+        },
+        {
+          "id": "ERP2_C4_T2_Q4",
+          "question": "Which parameter of a plant identifies the organization's working days and holidays?",
+          "options": {
+            "A": "Fiscal year variant",
+            "B": "Posting period variant",
+            "C": "Factory calendar",
+            "D": "Holiday key"
+          },
+          "correctAnswer": "C",
+          "explanation": "When scheduling deliveries or payment dates, the system includes only working days."
+        },
+        {
+          "id": "ERP2_C4_T2_Q5",
+          "question": "How is the factory calendar of GBI defined?",
+          "options": {
+            "A": "All days of the week are workdays with no holiday calendar attached (365 working days)",
+            "B": "Only Monday to Friday are workdays",
+            "C": "Only U.S. public holidays are excluded",
+            "D": "Each plant has its own calendar at the plant level"
+          },
+          "correctAnswer": "A",
+          "explanation": "This lets GBI schedule activities for any day of the year."
+        },
+        {
+          "id": "ERP2_C4_T2_Q6",
+          "question": "At which level are factory calendars and holiday calendars defined?",
+          "options": {
+            "A": "The plant level only",
+            "B": "The company code level only",
+            "C": "The client level, so they can be used by all company codes",
+            "D": "The purchasing organization level"
+          },
+          "correctAnswer": "C",
+          "explanation": "GBI's plants are assigned to the US factory calendar."
+        },
+        {
+          "id": "ERP2_C4_T2_Q7",
+          "question": "What is the relationship between a plant and a company code?",
+          "options": {
+            "A": "A plant belongs to only one company code, while a company code can have multiple plants",
+            "B": "A plant can belong to several company codes, and a company code has only one plant",
+            "C": "A plant and a company code have a one-to-one relationship",
+            "D": "Plants are not assigned to company codes"
+          },
+          "correctAnswer": "A",
+          "explanation": "GBI's U.S. company has three plants and the German company two."
+        },
+        {
+          "id": "ERP2_C4_T2_Q8",
+          "question": "What does the material valuation level specify?",
+          "options": {
+            "A": "The level at which materials are purchased from vendors",
+            "B": "The enterprise structure level at which material prices and valuation of materials are established",
+            "C": "The level at which storage conditions are defined",
+            "D": "The level at which invoices are verified"
+          },
+          "correctAnswer": "B",
+          "explanation": "The two options are plant and company code."
+        },
+        {
+          "id": "ERP2_C4_T2_Q9",
+          "question": "Which valuation level must be chosen to use production planning or product costing capabilities?",
+          "options": {
+            "A": "Company code level",
+            "B": "Client level",
+            "C": "Purchasing organization level",
+            "D": "Plant level"
+          },
+          "correctAnswer": "D",
+          "explanation": "These techniques are plant specific. GBI elected plant-level valuation for this reason."
+        },
+        {
+          "id": "ERP2_C4_T2_Q10",
+          "question": "What is true about the material valuation level once chosen?",
+          "options": {
+            "A": "It cannot be modified, must be defined before plants are assigned, and applies to all company codes in the client",
+            "B": "It can be changed at any time for each company code",
+            "C": "It is defined separately for each plant after it is created",
+            "D": "It must be defined after the plants are assigned to company codes"
+          },
+          "correctAnswer": "A",
+          "explanation": "It is configured at the client level."
+        },
+        {
+          "id": "ERP2_C4_T2_Q11",
+          "question": "With company code-level valuation, how is the price of a material treated across plants?",
+          "options": {
+            "A": "A material can have a different price in each plant",
+            "B": "A material has no price in the plants",
+            "C": "A material has the same price across all plants within the company code",
+            "D": "Each purchasing organization sets its own price"
+          },
+          "correctAnswer": "C",
+          "explanation": "With plant-level valuation the same material can have different prices in different plants."
+        },
+        {
+          "id": "ERP2_C4_T2_Q12",
+          "question": "What is a purchasing organization?",
+          "options": {
+            "A": "A unit with legal responsibility for all purchasing transactions involving vendors, including negotiating terms and resolving disputes",
+            "B": "An individual or group who perform day-to-day purchasing activities",
+            "C": "An area within a plant where materials are stored",
+            "D": "A facility where operations are executed"
+          },
+          "correctAnswer": "A",
+          "explanation": "Only the purchasing organization has legal authority to enter into procurement transactions."
+        },
+        {
+          "id": "ERP2_C4_T2_Q13",
+          "question": "In the plant-specific model of purchasing, how are purchasing organizations set up?",
+          "options": {
+            "A": "One purchasing organization is assigned to all plants of all company codes",
+            "B": "One purchasing organization is assigned to a company code and all its plants",
+            "C": "One purchasing organization is created for each plant and assigned to that plant and its company code",
+            "D": "Purchasing organizations are not assigned to plants"
+          },
+          "correctAnswer": "C",
+          "explanation": "This is the most decentralized model."
+        },
+        {
+          "id": "ERP2_C4_T2_Q14",
+          "question": "In the cross-plant model of purchasing, a purchasing organization is responsible for:",
+          "options": {
+            "A": "Procurement for all plants of all company codes",
+            "B": "Procurement for all plants of one company code",
+            "C": "Procurement for a single plant",
+            "D": "Procurement for a single material group"
+          },
+          "correctAnswer": "B",
+          "explanation": "It is assigned to one company code and to all plants that belong to that company code."
+        },
+        {
+          "id": "ERP2_C4_T2_Q15",
+          "question": "In the enterprise-level model, why is the purchasing organization NOT assigned to a company code?",
+          "options": {
+            "A": "Because it can only be assigned to plants, never to company codes",
+            "B": "Because company codes do not exist at the enterprise level",
+            "C": "Because it is assigned to the controlling area instead",
+            "D": "Because its plants belong to more than one company code; the company code is identified when the purchase order is created"
+          },
+          "correctAnswer": "D",
+          "explanation": "This model standardizes procurement and exploits economies of scale."
+        },
+        {
+          "id": "ERP2_C4_T2_Q16",
+          "question": "Which purchasing model has GBI adopted?",
+          "options": {
+            "A": "Only the enterprise-level model with GL00",
+            "B": "A hybrid model: a central purchasing organization (GL00) plus country-specific purchasing organizations (US00, DE00)",
+            "C": "Only a plant-specific model with one purchasing organization per plant",
+            "D": "Only the cross-plant model with US00 and DE00"
+          },
+          "correctAnswer": "B",
+          "explanation": "GL00 negotiates contracts for the enterprise; US00 and DE00 take advantage of local customs."
+        },
+        {
+          "id": "ERP2_C4_T2_Q17",
+          "question": "What does a purchasing group represent?",
+          "options": {
+            "A": "A unit with legal authority to enter into procurement transactions",
+            "B": "A facility where materials are stored",
+            "C": "A grouping of plants that share the same valuation",
+            "D": "An individual or group of people who perform day-to-day purchasing activities for specific materials"
+          },
+          "correctAnswer": "D",
+          "explanation": "A purchasing group has no legal authority and serves multiple purchasing organizations."
+        },
+        {
+          "id": "ERP2_C4_T2_Q18",
+          "question": "What is the key characteristic that distinguishes a purchasing group from a purchasing organization?",
+          "options": {
+            "A": "It is assigned to a company code",
+            "B": "It negotiates enterprise-wide contracts",
+            "C": "It does not have the legal authority to enter into procurement transactions",
+            "D": "It is responsible for goods receipts"
+          },
+          "correctAnswer": "C",
+          "explanation": "GBI has purchasing groups E00 (Europe) and N00 (North America)."
+        },
+        {
+          "id": "ERP2_C4_T2_Q19",
+          "question": "What is a storage location?",
+          "options": {
+            "A": "An area within a plant where an organization stores materials",
+            "B": "A facility where production is executed",
+            "C": "A legal entity that holds the inventory accounts",
+            "D": "A unit that negotiates with vendors"
+          },
+          "correctAnswer": "A",
+          "explanation": "GBI's storage locations differentiate raw materials, semifinished goods, finished products and trading goods."
+        },
+        {
+          "id": "ERP2_C4_T2_Q20",
+          "question": "How many plants can a storage location be assigned to?",
+          "options": {
+            "A": "Several plants; a plant has exactly one storage location",
+            "B": "Any number of plants and any number of locations",
+            "C": "None; storage locations are assigned to company codes",
+            "D": "Exactly one; a plant can have many storage locations"
+          },
+          "correctAnswer": "D",
+          "explanation": "Each storage location must be assigned to one and only one plant."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C4_T3",
+      "topicName": "Tax parameters, material types & price control",
+      "questions": [
+        {
+          "id": "ERP2_C4_T3_Q1",
+          "question": "What do tax-related parameters specify?",
+          "options": {
+            "A": "Whether a transaction is relevant for tax purposes and, if so, how to calculate the tax amounts",
+            "B": "Which plants may purchase taxable materials",
+            "C": "Which purchasing organization handles taxes",
+            "D": "Which general ledger account receives the inventory posting"
+          },
+          "correctAnswer": "A",
+          "explanation": "Tax jurisdiction codes, tax versions and tax codes must be configured."
+        },
+        {
+          "id": "ERP2_C4_T3_Q2",
+          "question": "What does the tax version define?",
+          "options": {
+            "A": "The tax rate of each tax jurisdiction",
+            "B": "The default tax code of the company code",
+            "C": "The number of tax codes and tax amounts available when entering a vendor invoice",
+            "D": "The G/L account used for input tax"
+          },
+          "correctAnswer": "C",
+          "explanation": "Tax version 0801 allows one tax amount and code, 0802 two, and 0804 four."
+        },
+        {
+          "id": "ERP2_C4_T3_Q3",
+          "question": "Which tax version allows up to four tax amounts and tax codes?",
+          "options": {
+            "A": "0804",
+            "B": "0801",
+            "C": "0802",
+            "D": "0803"
+          },
+          "correctAnswer": "A",
+          "explanation": "GBI uses the version with one tax amount and one tax code for both company codes."
+        },
+        {
+          "id": "ERP2_C4_T3_Q4",
+          "question": "What is a tax code?",
+          "options": {
+            "A": "A four-character key that identifies a company code",
+            "B": "A ten-digit key that identifies a G/L account",
+            "C": "A code identifying one of many U.S. tax authorities",
+            "D": "A two-digit code assigned to the tax jurisdiction code that specifies the percent tax rate for different types of taxes"
+          },
+          "correctAnswer": "D",
+          "explanation": "Several tax codes are predefined, e.g., XI for input tax."
+        },
+        {
+          "id": "ERP2_C4_T3_Q5",
+          "question": "What is input tax?",
+          "options": {
+            "A": "The tax collected by a company when it sells to customers",
+            "B": "The tax paid by a company when it purchases materials from its vendors",
+            "C": "The tax paid on the income of the company",
+            "D": "The tax on payments to employees"
+          },
+          "correctAnswer": "B",
+          "explanation": "Output tax is collected when selling to customers."
+        },
+        {
+          "id": "ERP2_C4_T3_Q6",
+          "question": "What do material types classify?",
+          "options": {
+            "A": "Materials based on the plant where they are stored",
+            "B": "Materials based on the vendor that supplies them",
+            "C": "Materials based on their weight and dimensions",
+            "D": "Materials based on how the company utilizes them (purchased or made, used internally or sold)"
+          },
+          "correctAnswer": "D",
+          "explanation": "The use of a material determines which data are needed in its material master."
+        },
+        {
+          "id": "ERP2_C4_T3_Q7",
+          "question": "How are material master data grouped?",
+          "options": {
+            "A": "By company codes",
+            "B": "By user departments (views) based on functional areas such as purchasing, sales and accounting",
+            "C": "By vendors",
+            "D": "By posting periods"
+          },
+          "correctAnswer": "B",
+          "explanation": "Not all user departments are relevant for all material types."
+        },
+        {
+          "id": "ERP2_C4_T3_Q8",
+          "question": "Which data are NOT relevant for finished products because they are produced in house?",
+          "options": {
+            "A": "Purchasing data",
+            "B": "Accounting data",
+            "C": "Sales data",
+            "D": "Basic data"
+          },
+          "correctAnswer": "A",
+          "explanation": "Trading goods need purchasing data but not work-scheduling data."
+        },
+        {
+          "id": "ERP2_C4_T3_Q9",
+          "question": "Which data are required for trading goods but not for finished products?",
+          "options": {
+            "A": "Work-scheduling data",
+            "B": "Accounting data",
+            "C": "Purchasing data",
+            "D": "Basic data"
+          },
+          "correctAnswer": "C",
+          "explanation": "Trading goods are purchased and sold, but not produced."
+        },
+        {
+          "id": "ERP2_C4_T3_Q10",
+          "question": "Which materials are valuated (stock) materials?",
+          "options": {
+            "A": "Materials for which both quantity and value are tracked, such as raw materials and trading goods",
+            "B": "Materials whose value but not quantity is tracked",
+            "C": "Materials expensed as supplies for which neither quantity nor value is tracked",
+            "D": "Materials for which only the quantity is tracked"
+          },
+          "correctAnswer": "A",
+          "explanation": "The value is maintained in G/L accounts and the materials appear as assets on the balance sheet."
+        },
+        {
+          "id": "ERP2_C4_T3_Q11",
+          "question": "What are non-stock materials?",
+          "options": {
+            "A": "Materials for which only the quantity is tracked",
+            "B": "Materials produced in house but never sold",
+            "C": "Materials treated as business expenses where neither quantity nor value is tracked, such as pens and notepads",
+            "D": "Materials whose value is tracked but not their quantity"
+          },
+          "correctAnswer": "C",
+          "explanation": "Non-valuated materials track quantity but not value."
+        },
+        {
+          "id": "ERP2_C4_T3_Q12",
+          "question": "What are non-valuated materials?",
+          "options": {
+            "A": "Materials for which the quantity is tracked but not the value",
+            "B": "Materials for which the value is tracked but not the quantity",
+            "C": "Materials for which neither quantity nor value is tracked",
+            "D": "Materials for which both quantity and value are tracked"
+          },
+          "correctAnswer": "A",
+          "explanation": "For them quantity updating is enabled but value updating is not."
+        },
+        {
+          "id": "ERP2_C4_T3_Q13",
+          "question": "What does the parameter price control determine?",
+          "options": {
+            "A": "Which general ledger account receives the inventory posting",
+            "B": "Which tolerance limits apply to purchase orders",
+            "C": "How the system calculates the cost (price) of a material: standard price or moving average price",
+            "D": "Which plants may purchase the material"
+          },
+          "correctAnswer": "C",
+          "explanation": "Two options are available: standard price and moving average price (MAP)."
+        },
+        {
+          "id": "ERP2_C4_T3_Q14",
+          "question": "Which price control is typically used for purchased materials such as raw materials and trading goods?",
+          "options": {
+            "A": "Standard price",
+            "B": "Moving average price (MAP)",
+            "C": "No price control",
+            "D": "Plant-level price control"
+          },
+          "correctAnswer": "B",
+          "explanation": "Materials produced in-house typically use standard price."
+        },
+        {
+          "id": "ERP2_C4_T3_Q15",
+          "question": "Which price control is typically used for finished products and semifinished goods produced in house?",
+          "options": {
+            "A": "Moving average price",
+            "B": "Weighted tax price",
+            "C": "No price control",
+            "D": "Standard price"
+          },
+          "correctAnswer": "D",
+          "explanation": "No price control is defined for non-valuated materials."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C4_T4",
+      "topicName": "Account determination: valuation class, account category reference & procedures",
+      "questions": [
+        {
+          "id": "ERP2_C4_T4_Q1",
+          "question": "When a goods receipt is recorded, which posting does the system make (e.g., 100 items x $75)?",
+          "options": {
+            "A": "A $7,500 debit to the vendor account and a credit to the inventory account",
+            "B": "A $7,500 debit to the inventory account and a credit to the GR/IR account",
+            "C": "A $7,500 debit to the GR/IR account and a credit to the bank account",
+            "D": "A $7,500 debit to the price difference account and a credit to inventory"
+          },
+          "correctAnswer": "B",
+          "explanation": "When the invoice is received, the GR/IR account is cleared and the vendor account is credited."
+        },
+        {
+          "id": "ERP2_C4_T4_Q2",
+          "question": "What happens at invoice verification in the basic scenario (no variances)?",
+          "options": {
+            "A": "The inventory account is credited and the bank account debited",
+            "B": "The bank account is credited and the vendor account debited",
+            "C": "The price difference account is debited",
+            "D": "The GR/IR account is cleared and the vendor/A-P accounts are credited"
+          },
+          "correctAnswer": "D",
+          "explanation": "At payment the bank account is credited and the vendor account is cleared with a debit."
+        },
+        {
+          "id": "ERP2_C4_T4_Q3",
+          "question": "Initial inventory is 200 items valued at $12,000. 100 more items are received at $75 each. What is the MAP after the goods receipt?",
+          "options": {
+            "A": "$60 ($12,000 / 200)",
+            "B": "$65 ($19,500 / 300)",
+            "C": "$75 ($7,500 / 100)",
+            "D": "$67.50"
+          },
+          "correctAnswer": "B",
+          "explanation": "The MAP before the receipt was $60; it is recalculated at goods receipt."
+        },
+        {
+          "id": "ERP2_C4_T4_Q4",
+          "question": "With a vendor invoice of $8,500 including a $1,000 fuel surcharge and all 300 items still in inventory, what is the recalculated MAP?",
+          "options": {
+            "A": "$65.00 ($19,500 / 300)",
+            "B": "$75.00",
+            "C": "$68.33 ($20,500 / 300)",
+            "D": "$62.50"
+          },
+          "correctAnswer": "C",
+          "explanation": "The $1,000 is posted to the inventory account and the material value increases."
+        },
+        {
+          "id": "ERP2_C4_T4_Q5",
+          "question": "When is the moving average price recalculated?",
+          "options": {
+            "A": "At goods receipt and invoice receipt, not at goods issue",
+            "B": "At goods issue only",
+            "C": "At goods receipt and goods issue",
+            "D": "At vendor payment only"
+          },
+          "correctAnswer": "A",
+          "explanation": "At goods issue the quantity and value are reduced but the MAP is unchanged."
+        },
+        {
+          "id": "ERP2_C4_T4_Q6",
+          "question": "Materials are sold before the invoice with a $1,000 surcharge arrives. To which account is the $1,000 posted?",
+          "options": {
+            "A": "The inventory account",
+            "B": "The GR/IR account",
+            "C": "The price difference account (a temporary account)",
+            "D": "The bank account"
+          },
+          "correctAnswer": "C",
+          "explanation": "Inventory cannot be credited because there is no inventory left."
+        },
+        {
+          "id": "ERP2_C4_T4_Q7",
+          "question": "How is a tax amount on the invoice posted (e.g., $500 on $7,500)?",
+          "options": {
+            "A": "To an input tax account; it does not affect inventory valuation or the material master",
+            "B": "To the inventory account, increasing the MAP",
+            "C": "To the price difference account",
+            "D": "To the GR/IR account"
+          },
+          "correctAnswer": "A",
+          "explanation": "All other accounts then have postings of $8,000 instead of $7,500."
+        },
+        {
+          "id": "ERP2_C4_T4_Q8",
+          "question": "An invoice shows $7,502 instead of $7,500 because of a typographical error. Where is the $2 difference posted?",
+          "options": {
+            "A": "To the inventory account",
+            "B": "To a temporary account (the price difference / small difference account)",
+            "C": "To the bank account",
+            "D": "To the tax account"
+          },
+          "correctAnswer": "B",
+          "explanation": "The company may also ask the vendor for a corrected invoice."
+        },
+        {
+          "id": "ERP2_C4_T4_Q9",
+          "question": "From where does the system obtain the A/P reconciliation account in the procurement scenarios?",
+          "options": {
+            "A": "From the purchase order",
+            "B": "From the material master",
+            "C": "From the user at payment time",
+            "D": "From the vendor master record"
+          },
+          "correctAnswer": "D",
+          "explanation": "The vendor subledger account comes from the purchase order; the bank account is entered by the user at payment."
+        },
+        {
+          "id": "ERP2_C4_T4_Q10",
+          "question": "What is a valuation class?",
+          "options": {
+            "A": "A grouping of materials that have the same account determination (the same G/L account)",
+            "B": "A grouping of plants with the same account determination rules",
+            "C": "A link between valuation class and material type",
+            "D": "A grouping of vendors with the same payment terms"
+          },
+          "correctAnswer": "A",
+          "explanation": "The valuation class is specified in the material master."
+        },
+        {
+          "id": "ERP2_C4_T4_Q11",
+          "question": "What is the role of the account category reference?",
+          "options": {
+            "A": "It links the material type to the plant",
+            "B": "It links the vendor to the purchasing organization",
+            "C": "It links the valuation class and the material type",
+            "D": "It links the posting key to the document type"
+          },
+          "correctAnswer": "C",
+          "explanation": "There is a one-to-many relationship between account category reference and valuation class."
+        },
+        {
+          "id": "ERP2_C4_T4_Q12",
+          "question": "How is a valuation class related to an account category reference?",
+          "options": {
+            "A": "A valuation class can be assigned to only one account category reference",
+            "B": "A valuation class can be assigned to several account category references",
+            "C": "A valuation class is not related to account category references",
+            "D": "A valuation class is assigned to a plant, not to an account category reference"
+          },
+          "correctAnswer": "A",
+          "explanation": "Likewise, a material type can be associated with only one account category reference."
+        },
+        {
+          "id": "ERP2_C4_T4_Q13",
+          "question": "What does the valuation group code (grouping of valuation areas) allow?",
+          "options": {
+            "A": "Plants to be assigned to several company codes",
+            "B": "Materials to be valued at the company code level",
+            "C": "Account determination rules to be configured collectively for multiple plants that share the same rules",
+            "D": "Vendors to share the same tolerance group"
+          },
+          "correctAnswer": "C",
+          "explanation": "The valuation modifier is the valuation group code."
+        },
+        {
+          "id": "ERP2_C4_T4_Q14",
+          "question": "How many valuation grouping codes can a valuation area (plant) be assigned to?",
+          "options": {
+            "A": "Any number",
+            "B": "Only one",
+            "C": "Exactly two",
+            "D": "None"
+          },
+          "correctAnswer": "B",
+          "explanation": "One code can be assigned to multiple plants and at least one code must be defined."
+        },
+        {
+          "id": "ERP2_C4_T4_Q15",
+          "question": "If all plants of GBI use the same valuation group code, what must be true of the company codes?",
+          "options": {
+            "A": "They must use the same currency",
+            "B": "They must have the same purchasing organization",
+            "C": "They must be in the same country",
+            "D": "They must use the same chart of accounts"
+          },
+          "correctAnswer": "D",
+          "explanation": "Otherwise separate rules are needed (e.g., one code for U.S. plants and another for German plants)."
+        },
+        {
+          "id": "ERP2_C4_T4_Q16",
+          "question": "Which account determination procedure (transaction) determines the inventory account?",
+          "options": {
+            "A": "WRX",
+            "B": "BSX",
+            "C": "DIF",
+            "D": "ZDI"
+          },
+          "correctAnswer": "B",
+          "explanation": "The parameters are valuation modifier, valuation class and posting key."
+        },
+        {
+          "id": "ERP2_C4_T4_Q17",
+          "question": "Which procedure (transaction) determines the GR/IR account?",
+          "options": {
+            "A": "BSX",
+            "B": "DIF",
+            "C": "PRD",
+            "D": "WRX"
+          },
+          "correctAnswer": "D",
+          "explanation": "GBI uses one account (310000) for all materials regardless of valuation class."
+        },
+        {
+          "id": "ERP2_C4_T4_Q18",
+          "question": "Which procedure (transaction) determines the small difference account?",
+          "options": {
+            "A": "BSX",
+            "B": "WRX",
+            "C": "DIF",
+            "D": "ZDI"
+          },
+          "correctAnswer": "C",
+          "explanation": "It uses no valuation modifier or valuation class in GBI."
+        },
+        {
+          "id": "ERP2_C4_T4_Q19",
+          "question": "Which procedure determines the G/L account for payment differences posted within tolerance on vendor payments?",
+          "options": {
+            "A": "ZDI",
+            "B": "BSX",
+            "C": "WRX",
+            "D": "DIF"
+          },
+          "correctAnswer": "A",
+          "explanation": "It is similar to other account determination procedures."
+        },
+        {
+          "id": "ERP2_C4_T4_Q20",
+          "question": "For an inventory posting, what does the posting key determine?",
+          "options": {
+            "A": "Which plant receives the posting",
+            "B": "Which valuation class is used",
+            "C": "Which tax code applies",
+            "D": "Whether the posting is a debit (stock increase) or a credit (stock decrease)"
+          },
+          "correctAnswer": "D",
+          "explanation": "A debit is posted for an inward movement and a credit for an outward movement."
+        },
+        {
+          "id": "ERP2_C4_T4_Q21",
+          "question": "Why is the price difference account for semifinished goods and finished products not the purchase price difference account?",
+          "options": {
+            "A": "Because they are always valued at moving average price",
+            "B": "Because those materials are produced, not purchased; the production variance account is used",
+            "C": "Because they have no valuation class",
+            "D": "Because they are not stored in storage locations"
+          },
+          "correctAnswer": "B",
+          "explanation": "The production variance account is discussed in Chapter 6."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C4_T5",
+      "topicName": "Tolerance limits in procurement",
+      "questions": [
+        {
+          "id": "ERP2_C4_T5_Q1",
+          "question": "What do tolerance limits tell the system?",
+          "options": {
+            "A": "How to proceed when data in a transaction deviate from the expected values",
+            "B": "Which general ledger accounts to post to",
+            "C": "Which materials are valuated materials",
+            "D": "Which vendors may receive payments"
+          },
+          "correctAnswer": "A",
+          "explanation": "They are a form of financial control."
+        },
+        {
+          "id": "ERP2_C4_T5_Q2",
+          "question": "What are the two options when a deviation exceeds the tolerance limit?",
+          "options": {
+            "A": "Warn and terminate, or error and continue",
+            "B": "Block the vendor, or block the material",
+            "C": "Warn and continue, or error and terminate",
+            "D": "Reverse the document, or park the document"
+          },
+          "correctAnswer": "C",
+          "explanation": "With a warning the user can continue after acknowledging it; an error must be corrected."
+        },
+        {
+          "id": "ERP2_C4_T5_Q3",
+          "question": "In which procurement steps can tolerance limits be specified?",
+          "options": {
+            "A": "Purchase order creation, goods receipt, invoice verification and vendor payment",
+            "B": "Purchase requisition and purchase order only",
+            "C": "Goods receipt and vendor payment only",
+            "D": "Invoice verification only"
+          },
+          "correctAnswer": "A",
+          "explanation": "Tolerances can be percentages or amounts."
+        },
+        {
+          "id": "ERP2_C4_T5_Q4",
+          "question": "Which tolerance key defines the purchase price tolerance?",
+          "options": {
+            "A": "SE",
+            "B": "DQ",
+            "C": "PP",
+            "D": "PE"
+          },
+          "correctAnswer": "D",
+          "explanation": "The system compares the purchase order price with the valuation price in the material master."
+        },
+        {
+          "id": "ERP2_C4_T5_Q5",
+          "question": "Which tolerance key determines the maximum permitted discount on a purchase order?",
+          "options": {
+            "A": "PE",
+            "B": "SE",
+            "C": "DW",
+            "D": "VP"
+          },
+          "correctAnswer": "B",
+          "explanation": "Only percentage limits are available because the discount is expressed as a percent."
+        },
+        {
+          "id": "ERP2_C4_T5_Q6",
+          "question": "The valuation price of a road helmet is $25 with upper limit 10% and lower limit 20%. A PO price of $27.60 will:",
+          "options": {
+            "A": "Be accepted without any message",
+            "B": "Generate a warning (below $20)",
+            "C": "Be blocked for payment",
+            "D": "Generate a warning (above $27.50)"
+          },
+          "correctAnswer": "D",
+          "explanation": "Upper limit $27.50; lower limit $20; GBI is configured to warn and continue."
+        },
+        {
+          "id": "ERP2_C4_T5_Q7",
+          "question": "What is an under delivery?",
+          "options": {
+            "A": "The quantity received is greater than the purchase order quantity",
+            "B": "The quantity received is less than the purchase order quantity",
+            "C": "The price invoiced is less than the PO price",
+            "D": "The delivery arrives before the requested date"
+          },
+          "correctAnswer": "B",
+          "explanation": "The system typically permits under deliveries."
+        },
+        {
+          "id": "ERP2_C4_T5_Q8",
+          "question": "If an under delivery exceeds tolerance at goods receipt, what does the system do?",
+          "options": {
+            "A": "Warns the user but completes the step and assumes a partial delivery",
+            "B": "Displays an error and blocks the goods receipt",
+            "C": "Blocks the invoice for payment",
+            "D": "Closes the purchase order"
+          },
+          "correctAnswer": "A",
+          "explanation": "Additional deliveries can still be recorded unless the delivery complete indicator is set."
+        },
+        {
+          "id": "ERP2_C4_T5_Q9",
+          "question": "What does the \"delivery complete\" indicator do?",
+          "options": {
+            "A": "It allows unlimited over deliveries",
+            "B": "It blocks the invoice for payment",
+            "C": "The system considers the purchase order complete and permits no additional deliveries",
+            "D": "It sets the tolerance limit to 0%"
+          },
+          "correctAnswer": "C",
+          "explanation": "A user can set the indicator at any time, regardless of the quantity received."
+        },
+        {
+          "id": "ERP2_C4_T5_Q10",
+          "question": "If over-delivered quantity exceeds the tolerance, what does the system do?",
+          "options": {
+            "A": "Displays an error and does not permit the user to complete the step",
+            "B": "Displays a warning and completes the step",
+            "C": "Completes the step without messages",
+            "D": "Creates a new purchase order"
+          },
+          "correctAnswer": "A",
+          "explanation": "Within tolerance the system warns but lets the user continue."
+        },
+        {
+          "id": "ERP2_C4_T5_Q11",
+          "question": "What does the \"unlimited\" over delivery option do?",
+          "options": {
+            "A": "It permits unlimited under deliveries",
+            "B": "It disables the delivery complete indicator",
+            "C": "It overrides the tolerance limit and permits unlimited over deliveries without any warnings",
+            "D": "It permits invoices above the PO price"
+          },
+          "correctAnswer": "C",
+          "explanation": "It can be specified in the material master or the purchase order."
+        },
+        {
+          "id": "ERP2_C4_T5_Q12",
+          "question": "Which tolerance keys address a change in the moving average price at goods receipt?",
+          "options": {
+            "A": "B1 (error and no PO creation) and B2 (warning but PO can be created)",
+            "B": "PE and SE",
+            "C": "DQ and DW",
+            "D": "PP and VP"
+          },
+          "correctAnswer": "A",
+          "explanation": "They apply when the valuation price change exceeds the tolerance."
+        },
+        {
+          "id": "ERP2_C4_T5_Q13",
+          "question": "In a two-way match, what is compared?",
+          "options": {
+            "A": "The invoice, goods receipt and purchase order data",
+            "B": "The goods receipt and the payment",
+            "C": "The invoice data with the purchase order data",
+            "D": "The purchase requisition and the purchase order"
+          },
+          "correctAnswer": "C",
+          "explanation": "In a three-way match, quantities in all three documents and values in the PO and invoice must match."
+        },
+        {
+          "id": "ERP2_C4_T5_Q14",
+          "question": "Which tolerance key is for quantity variance in a three-way match?",
+          "options": {
+            "A": "DW",
+            "B": "DQ",
+            "C": "PP",
+            "D": "VP"
+          },
+          "correctAnswer": "B",
+          "explanation": "DW is for a two-way match where there is no goods receipt."
+        },
+        {
+          "id": "ERP2_C4_T5_Q15",
+          "question": "What happens when an invoice variance exceeds the specified tolerance for DQ?",
+          "options": {
+            "A": "The system rejects the invoice and deletes it",
+            "B": "The system pays the invoice immediately",
+            "C": "The system posts the difference to the inventory account",
+            "D": "The system records the invoice but adds a payment block"
+          },
+          "correctAnswer": "D",
+          "explanation": "A payment block prevents a user from paying the invoice."
+        },
+        {
+          "id": "ERP2_C4_T5_Q16",
+          "question": "Which tolerance key compares the value of each invoice item with the PO item value (price variance)?",
+          "options": {
+            "A": "DQ",
+            "B": "PP",
+            "C": "DW",
+            "D": "VP"
+          },
+          "correctAnswer": "B",
+          "explanation": "If the difference exceeds tolerance the invoice is blocked for payment."
+        },
+        {
+          "id": "ERP2_C4_T5_Q17",
+          "question": "Which tolerance key relates to potential moving average price change when an invoice is recorded and results in only a warning (no payment block)?",
+          "options": {
+            "A": "PP",
+            "B": "DQ",
+            "C": "SE",
+            "D": "VP"
+          },
+          "correctAnswer": "D",
+          "explanation": "Moving average price variance compares the new MAP to the previous one."
+        },
+        {
+          "id": "ERP2_C4_T5_Q18",
+          "question": "What does a tolerance group for vendor payments specify?",
+          "options": {
+            "A": "Limits for purchase price differences defined as upper and lower limits",
+            "B": "Limits for goods receipt quantity differences",
+            "C": "Limits for permitted payment differences defined as gain or loss, in absolute amount or percentage",
+            "D": "Limits for the amount an employee can post"
+          },
+          "correctAnswer": "C",
+          "explanation": "A gain is an underpayment of the invoice and a loss is an overpayment; the lower of absolute and percent limit applies."
+        },
+        {
+          "id": "ERP2_C4_T5_Q19",
+          "question": "In a vendor payment tolerance group, what does a \"gain\" represent?",
+          "options": {
+            "A": "An underpayment of an invoice",
+            "B": "An overpayment of an invoice",
+            "C": "A discount granted by the vendor",
+            "D": "A price increase in the purchase order"
+          },
+          "correctAnswer": "A",
+          "explanation": "A loss represents an overpayment."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C4_T6",
+      "topicName": "Plant parameters & master data",
+      "questions": [
+        {
+          "id": "ERP2_C4_T6_Q1",
+          "question": "What does the plant parameter \"create SLoc automatically\" do?",
+          "options": {
+            "A": "Creates the plant automatically when a purchase order is created",
+            "B": "Creates the material master automatically for new vendors",
+            "C": "Creates storage location data for a material automatically when the first goods receipt is recorded",
+            "D": "Creates storage locations for every plant at the same time"
+          },
+          "correctAnswer": "C",
+          "explanation": "Storage data for the plant must exist before materials can be stored there; for storage locations it is optional."
+        },
+        {
+          "id": "ERP2_C4_T6_Q2",
+          "question": "Which master data are used when executing the procurement process steps?",
+          "options": {
+            "A": "Material master, vendor master and purchasing info records",
+            "B": "Customer master, material master and routing",
+            "C": "Cost elements, cost centers and activity types",
+            "D": "G/L accounts, chart of accounts and posting keys"
+          },
+          "correctAnswer": "A",
+          "explanation": "The purchasing info record is not mandatory."
+        },
+        {
+          "id": "ERP2_C4_T6_Q3",
+          "question": "At which level are the basic data of the material master (material number, description, weight, unit of measure) defined?",
+          "options": {
+            "A": "Plant level",
+            "B": "Company code level",
+            "C": "Client level",
+            "D": "Purchasing organization level"
+          },
+          "correctAnswer": "C",
+          "explanation": "They are valid for all company codes in the enterprise."
+        },
+        {
+          "id": "ERP2_C4_T6_Q4",
+          "question": "At which level are purchasing data in the material master defined?",
+          "options": {
+            "A": "Client level",
+            "B": "Plant level",
+            "C": "Company code level",
+            "D": "Storage location level"
+          },
+          "correctAnswer": "B",
+          "explanation": "Purchasing data include purchasing group, under/over delivery tolerances and unlimited over delivery indicator."
+        },
+        {
+          "id": "ERP2_C4_T6_Q5",
+          "question": "What do the storage data of the material master specify?",
+          "options": {
+            "A": "The valuation class and price control of the material",
+            "B": "The purchasing group responsible for the material",
+            "C": "The tolerance limits for goods receipts",
+            "D": "Environmental conditions such as temperature and humidity required for storage, and shelf life"
+          },
+          "correctAnswer": "D",
+          "explanation": "They are defined for each plant and storage location."
+        },
+        {
+          "id": "ERP2_C4_T6_Q6",
+          "question": "At which level are accounting data of the material master defined, and why?",
+          "options": {
+            "A": "Company code level, because all financial transactions impact the company code",
+            "B": "Plant level, because material valuation is at the plant level",
+            "C": "Client level, because they are general data",
+            "D": "Storage location level, because stock is kept there"
+          },
+          "correctAnswer": "B",
+          "explanation": "In GBI, valuation is at plant level; there is no valuation at the storage location level."
+        },
+        {
+          "id": "ERP2_C4_T6_Q7",
+          "question": "Which are key accounting data of the material master?",
+          "options": {
+            "A": "Purchasing group, payment terms and incoterms",
+            "B": "Reconciliation account and tolerance group",
+            "C": "Tax version, tax code and tax jurisdiction",
+            "D": "Valuation class, price control, moving average price, quantity and value"
+          },
+          "correctAnswer": "D",
+          "explanation": "The valuation class links the material to the general ledger account."
+        },
+        {
+          "id": "ERP2_C4_T6_Q8",
+          "question": "In the vendor master, at which level are general data, purchasing data and accounting data defined?",
+          "options": {
+            "A": "Plant level, company code level and client level respectively",
+            "B": "Company code level, plant level and client level respectively",
+            "C": "Client level, purchasing organization level and company code level respectively",
+            "D": "Purchasing organization level for all three"
+          },
+          "correctAnswer": "C",
+          "explanation": "General data: number, name, address, tax data; purchasing data: currency, payment terms, incoterms."
+        },
+        {
+          "id": "ERP2_C4_T6_Q9",
+          "question": "Which key accounting data in the vendor master are defined for each company code?",
+          "options": {
+            "A": "The reconciliation account number and the tolerance group for payments",
+            "B": "The purchasing group and incoterms",
+            "C": "The valuation class and price control",
+            "D": "The tax version and tax code"
+          },
+          "correctAnswer": "A",
+          "explanation": "The reconciliation account determines the A/P account associated with the vendor."
+        },
+        {
+          "id": "ERP2_C4_T6_Q10",
+          "question": "What is a purchasing info record?",
+          "options": {
+            "A": "A record containing data applicable to purchasing one specific material from one specific vendor",
+            "B": "A record containing purchasing data valid for all vendors of a material",
+            "C": "A record containing the purchasing data valid for all materials of a vendor",
+            "D": "A record created automatically at every goods receipt"
+          },
+          "correctAnswer": "A",
+          "explanation": "It can be defined at the purchasing organization and plant levels."
+        },
+        {
+          "id": "ERP2_C4_T6_Q11",
+          "question": "Which data are included in a purchasing info record but not in the material or vendor master?",
+          "options": {
+            "A": "Basic data such as weight and dimensions",
+            "B": "Valuation class and price control",
+            "C": "Typical and minimum order quantities, price conditions, and historical purchase order and quotation data",
+            "D": "Reconciliation account and tolerance group"
+          },
+          "correctAnswer": "C",
+          "explanation": "Some data such as unit of measure and delivery tolerances also appear in the material or vendor master."
+        },
+        {
+          "id": "ERP2_C4_T6_Q12",
+          "question": "Delivery tolerances exist in the material master, purchasing info record and purchase order. Which source does the system prefer?",
+          "options": {
+            "A": "The purchase order, followed by the info record, then the material master",
+            "B": "The material master, followed by the info record, then the purchase order",
+            "C": "The info record, followed by the material master, then the purchase order",
+            "D": "The vendor master, then the material master"
+          },
+          "correctAnswer": "A",
+          "explanation": "The system prefers more specific data over general data."
+        },
+        {
+          "id": "ERP2_C4_T6_Q13",
+          "question": "Is the purchasing info record mandatory master data for the procurement process?",
+          "options": {
+            "A": "Yes, no purchase order can be created without it",
+            "B": "Yes, but only for trading goods",
+            "C": "No, but it connects the material master and vendor master and records the vendor/material relationship",
+            "D": "No, and it has no purpose"
+          },
+          "correctAnswer": "C",
+          "explanation": "It identifies which vendors a material was bought from and which materials were bought from a vendor."
+        },
+        {
+          "id": "ERP2_C4_T6_Q14",
+          "question": "Which testing types are typically used for the procurement process?",
+          "options": {
+            "A": "Unit and performance testing only",
+            "B": "Scenario, integration and user acceptance testing",
+            "C": "Regression and modification testing",
+            "D": "Only user acceptance testing"
+          },
+          "correctAnswer": "B",
+          "explanation": "Each process step must be tested: requisition, PO, goods receipt, invoice verification, vendor payment."
+        },
+        {
+          "id": "ERP2_C4_T6_Q15",
+          "question": "What does testing of procurement confirm regarding automatic account determination?",
+          "options": {
+            "A": "That the MAP never changes",
+            "B": "That no tolerance limits are needed",
+            "C": "That the chart of accounts has only one account",
+            "D": "That the procedures result in correct postings to the various accounts"
+          },
+          "correctAnswer": "D",
+          "explanation": "Testing also checks that business rules and parameters are executed properly."
+        }
+      ]
+    }
+  ]
+}
