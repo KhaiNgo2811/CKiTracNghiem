@@ -1,0 +1,774 @@
+{
+  "chapterId": "NT_C1",
+  "chapterName": "Bộ câu hỏi 1 – Mạng máy tính",
+  "topics": [
+    {
+      "topicId": "NT_C1_T1",
+      "topicName": "Thiết bị mạng & giao thức cơ bản",
+      "questions": [
+        {
+          "id": "NT_C1_T1_Q1",
+          "question": "Thiết bị nào sau đây thường được sử dụng để kết nối các mạng khác nhau?",
+          "options": {
+            "A": "Router",
+            "B": "Modem",
+            "C": "Switch",
+            "D": "Hub"
+          },
+          "correctAnswer": "A",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T1_Q2",
+          "question": "Giao thức nào sau đây được sử dụng phổ biến để truyền dữ liệu trên Internet?",
+          "options": {
+            "A": "SMTP",
+            "B": "SNMP",
+            "C": "HTTP",
+            "D": "FTP"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T1_Q3",
+          "question": "Địa chỉ IP phiên bản 4 (IPv4) có bao nhiêu bit?",
+          "options": {
+            "A": "16 bit",
+            "B": "32 bit",
+            "C": "64 bit",
+            "D": "128 bit"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T1_Q4",
+          "question": "Thiết bị nào hoạt động ở tầng 2 của mô hình OSI?",
+          "options": {
+            "A": "Router",
+            "B": "Repeater",
+            "C": "Firewall",
+            "D": "Switch"
+          },
+          "correctAnswer": "D",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T1_Q5",
+          "question": "Giao thức nào sau đây dùng để cấp phát địa chỉ IP tự động cho thiết bị?",
+          "options": {
+            "A": "TCP",
+            "B": "DHCP",
+            "C": "IPSec",
+            "D": "DNS"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T1_Q6",
+          "question": "CSMA/CD hoạt động hiệu quả nhất trong môi trường nào?",
+          "options": {
+            "A": "Mạng không dây",
+            "B": "Mạng có dây dùng cáp đồng trục",
+            "C": "Mạng quang",
+            "D": "Mạng vệ tinh"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T1_Q7",
+          "question": "Khi xảy ra xung đột trên đường truyền thì giao thức CSMA/CD xử lý như thế nào?",
+          "options": {
+            "A": "Gửi lại ngay lập tức",
+            "B": "Hủy bản tin, chờ ngẫu nhiên để gửi lại",
+            "C": "Dừng truyền vĩnh viễn",
+            "D": "Gửi yêu cầu đến máy chủ"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T1_Q8",
+          "question": "Thiết bị nào khuếch đại tín hiệu để truyền xa hơn nhưng không phân tích dữ liệu?",
+          "options": {
+            "A": "Router",
+            "B": "Switch",
+            "C": "Repeater",
+            "D": "Access Point"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T1_Q9",
+          "question": "Thiết bị nào thường được sử dụng để kết nối các thiết bị không dây vào mạng?",
+          "options": {
+            "A": "Hub",
+            "B": "Access Point",
+            "C": "Switch",
+            "D": "Firewall"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T1_Q10",
+          "question": "Thiết bị nào có chức năng bảo vệ mạng khỏi truy cập trái phép từ bên ngoài?",
+          "options": {
+            "A": "Switch",
+            "B": "Router",
+            "C": "Firewall",
+            "D": "Modem"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C1_T2",
+      "topicName": "Tầng Network (OSI)",
+      "questions": [
+        {
+          "id": "NT_C1_T2_Q1",
+          "question": "Chức năng chính của tầng Network trong mô hình OSI là gì?",
+          "options": {
+            "A": "Mã hóa dữ liệu",
+            "B": "Định tuyến và chuyển tiếp gói tin",
+            "C": "Kiểm tra lỗi",
+            "D": "Quản lý phiên kết nối"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T2_Q2",
+          "question": "Giao thức nào sau đây hoạt động ở tầng Network?",
+          "options": {
+            "A": "TCP",
+            "B": "IP",
+            "C": "HTTP",
+            "D": "FTP"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T2_Q3",
+          "question": "Thiết bị nào hoạt động chủ yếu ở tầng Network?",
+          "options": {
+            "A": "Switch",
+            "B": "Router",
+            "C": "Hub",
+            "D": "Repeater"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T2_Q4",
+          "question": "Tầng Network sử dụng địa chỉ nào để định danh thiết bị?",
+          "options": {
+            "A": "Địa chỉ MAC",
+            "B": "Địa chỉ IP",
+            "C": "Địa chỉ vật lý",
+            "D": "Địa chỉ cổng"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T2_Q5",
+          "question": "Tầng Network xử lý dữ liệu dưới dạng nào?",
+          "options": {
+            "A": "Frame",
+            "B": "Segment",
+            "C": "Packet",
+            "D": "Bit"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C1_T3",
+      "topicName": "Tầng Transport (OSI)",
+      "questions": [
+        {
+          "id": "NT_C1_T3_Q1",
+          "question": "Chức năng chính của tầng Transport là gì?",
+          "options": {
+            "A": "Định tuyến gói tin",
+            "B": "Cung cấp truyền dữ liệu tin cậy giữa các thiết bị",
+            "C": "Mã hóa dữ liệu",
+            "D": "Quản lý địa chỉ IP"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T3_Q2",
+          "question": "Giao thức nào sau đây hoạt động ở tầng Transport?",
+          "options": {
+            "A": "IP",
+            "B": "TCP",
+            "C": "HTTP",
+            "D": "ARP"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T3_Q3",
+          "question": "Giao thức UDP khác TCP ở điểm nào?",
+          "options": {
+            "A": "UDP không cung cấp kiểm tra lỗi và thứ tự gói tin",
+            "B": "UDP nhanh hơn TCP vì có mã hóa",
+            "C": "UDP dùng cho truyền dữ liệu có dây",
+            "D": "UDP yêu cầu xác nhận từ người dùng"
+          },
+          "correctAnswer": "A",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T3_Q4",
+          "question": "Tầng Transport sử dụng đơn vị dữ liệu nào?",
+          "options": {
+            "A": "Bit",
+            "B": "Frame",
+            "C": "Segment",
+            "D": "Packet"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T3_Q5",
+          "question": "Cổng (port) trong tầng Transport dùng để làm gì?",
+          "options": {
+            "A": "Xác định địa chỉ IP",
+            "B": "Xác định ứng dụng đích trên thiết bị",
+            "C": "Định tuyến gói tin",
+            "D": "Mã hóa dữ liệu"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C1_T4",
+      "topicName": "Tầng Session & phiên làm việc",
+      "questions": [
+        {
+          "id": "NT_C1_T4_Q1",
+          "question": "Phiên làm việc trong mạng máy tính là gì?",
+          "options": {
+            "A": "Một gói tin được truyền đi",
+            "B": "Một kết nối tạm thời giữa hai thiết bị để trao đổi dữ liệu",
+            "C": "Một địa chỉ IP",
+            "D": "Một giao thức bảo mật"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T4_Q2",
+          "question": "Tầng nào trong mô hình OSI chịu trách nhiệm quản lý phiên làm việc?",
+          "options": {
+            "A": "Tầng Transport",
+            "B": "Tầng Session",
+            "C": "Tầng Network",
+            "D": "Tầng Application"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T4_Q3",
+          "question": "Phiên làm việc thường bắt đầu bằng quá trình nào?",
+          "options": {
+            "A": "Định tuyến",
+            "B": "Xác thực và thiết lập kết nối",
+            "C": "Mã hóa dữ liệu",
+            "D": "Phân tích lưu lượng"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T4_Q4",
+          "question": "Khi phiên làm việc bị gián đoạn, tầng Session có thể làm gì để khôi phục?",
+          "options": {
+            "A": "Gửi lại toàn bộ dữ liệu",
+            "B": "Sử dụng điểm kiểm tra (checkpoint)",
+            "C": "Tăng tốc độ truyền",
+            "D": "Đổi địa chỉ IP"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T4_Q5",
+          "question": "Ví dụ nào sau đây thể hiện rõ nhất về phiên làm việc?",
+          "options": {
+            "A": "Truy cập một trang web",
+            "B": "Gửi email",
+            "C": "Cuộc gọi video giữa hai người",
+            "D": "Tải một tập tin"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C1_T5",
+      "topicName": "Tầng ứng dụng (Application)",
+      "questions": [
+        {
+          "id": "NT_C1_T5_Q1",
+          "question": "Giao thức nào sau đây hoạt động ở tầng ứng dụng?",
+          "options": {
+            "A": "TCP",
+            "B": "IP",
+            "C": "HTTP",
+            "D": "ARP"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T5_Q2",
+          "question": "Chức năng chính của tầng ứng dụng là gì?",
+          "options": {
+            "A": "Định tuyến gói tin",
+            "B": "Cung cấp giao diện cho người dùng và ứng dụng",
+            "C": "Mã hóa dữ liệu",
+            "D": "Quản lý địa chỉ IP"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T5_Q3",
+          "question": "Giao thức FTP dùng để làm gì ở tầng ứng dụng?",
+          "options": {
+            "A": "Truy cập website",
+            "B": "Truyền file giữa các thiết bị",
+            "C": "Gửi email",
+            "D": "Phát video trực tuyến"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T5_Q4",
+          "question": "Giao thức nào sau đây dùng để gửi email ở tầng ứng dụng?",
+          "options": {
+            "A": "SMTP",
+            "B": "DNS",
+            "C": "DHCP",
+            "D": "SNMP"
+          },
+          "correctAnswer": "A",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C1_T6",
+      "topicName": "Wi-Fi",
+      "questions": [
+        {
+          "id": "NT_C1_T6_Q1",
+          "question": "Chuẩn Wi-Fi nào sau đây có tốc độ cao nhất hiện nay?",
+          "options": {
+            "A": "802.11n",
+            "B": "802.11ac",
+            "C": "802.11ax",
+            "D": "802.11g"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T6_Q2",
+          "question": "Tần số phổ biến nhất mà Wi-Fi sử dụng là gì?",
+          "options": {
+            "A": "1.2 GHz",
+            "B": "2.4 GHz và 5 GHz",
+            "C": "3.6 GHz",
+            "D": "6.8 GHz"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T6_Q3",
+          "question": "Thiết bị nào sau đây phát tín hiệu Wi-Fi cho các thiết bị khác kết nối?",
+          "options": {
+            "A": "Switch",
+            "B": "Router",
+            "C": "Modem",
+            "D": "Repeater"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T6_Q4",
+          "question": "Giao thức bảo mật nào sau đây được khuyến nghị sử dụng cho mạng Wi-Fi hiện đại?",
+          "options": {
+            "A": "WEP",
+            "B": "WPA",
+            "C": "WPA2",
+            "D": "WPA3"
+          },
+          "correctAnswer": "D",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C1_T7",
+      "topicName": "Tường lửa (Firewall)",
+      "questions": [
+        {
+          "id": "NT_C1_T7_Q1",
+          "question": "Chức năng chính của tường lửa là gì?",
+          "options": {
+            "A": "Tăng tốc độ mạng",
+            "B": "Phân phối địa chỉ IP",
+            "C": "Bảo vệ mạng khỏi truy cập trái phép",
+            "D": "Lưu trữ dữ liệu"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T7_Q2",
+          "question": "Tường lửa hoạt động ở tầng nào trong mô hình OSI?",
+          "options": {
+            "A": "Tầng 1",
+            "B": "Tầng 3 và tầng 4",
+            "C": "Tầng 7",
+            "D": "Tầng 2"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T7_Q3",
+          "question": "Loại tường lửa nào phân tích nội dung gói tin để quyết định cho phép hay chặn?",
+          "options": {
+            "A": "Packet-filtering firewall",
+            "B": "Stateful firewall",
+            "C": "Application-layer firewall",
+            "D": "Proxy firewall"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T7_Q4",
+          "question": "Tường lửa có thể được triển khai ở đâu?",
+          "options": {
+            "A": "Chỉ trên phần cứng",
+            "B": "Chỉ trên phần mềm",
+            "C": "Trên cả phần cứng và phần mềm",
+            "D": "Trên thiết bị đầu cuối"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T7_Q5",
+          "question": "Tường lửa giúp ngăn chặn loại tấn công nào sau đây?",
+          "options": {
+            "A": "Tấn công từ chối dịch vụ (DoS)",
+            "B": "Tấn công vật lý",
+            "C": "Tấn công bằng mã hóa",
+            "D": "Tấn công bằng phần cứng"
+          },
+          "correctAnswer": "A",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C1_T8",
+      "topicName": "Mã hóa & tấn công mạng",
+      "questions": [
+        {
+          "id": "NT_C1_T8_Q1",
+          "question": "Mục tiêu chính của mã hóa dữ liệu trong bảo mật mạng là gì?",
+          "options": {
+            "A": "Tăng tốc độ truyền dữ liệu",
+            "B": "Giảm dung lượng dữ liệu",
+            "C": "Bảo vệ tính bí mật của thông tin",
+            "D": "Tăng khả năng định tuyến"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T8_Q2",
+          "question": "Giao thức nào sau đây cung cấp mã hóa đầu cuối cho kết nối web?",
+          "options": {
+            "A": "HTTP",
+            "B": "FTP",
+            "C": "HTTPS",
+            "D": "SMTP"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T8_Q3",
+          "question": "Loại tấn công nào nhằm mục tiêu đánh cắp dữ liệu mà không làm thay đổi nội dung?",
+          "options": {
+            "A": "Tấn công chủ động",
+            "B": "Tấn công thụ động",
+            "C": "Tấn công từ chối dịch vụ",
+            "D": "Tấn công giả mạo"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T8_Q4",
+          "question": "Chữ ký số (digital signature) giúp đảm bảo điều gì trong bảo mật?",
+          "options": {
+            "A": "Tính bí mật",
+            "B": "Tính toàn vẹn và xác thực",
+            "C": "Tính sẵn sàng",
+            "D": "Tính ẩn danh"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T8_Q5",
+          "question": "Giao thức nào sau đây được sử dụng để mã hóa dữ liệu ở tầng mạng?",
+          "options": {
+            "A": "IPsec",
+            "B": "SSL",
+            "C": "TLS",
+            "D": "SSH"
+          },
+          "correctAnswer": "A",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C1_T9",
+      "topicName": "Địa chỉ IP & định tuyến",
+      "questions": [
+        {
+          "id": "NT_C1_T9_Q1",
+          "question": "Địa chỉ IP nào sau đây là địa chỉ loopback?",
+          "options": {
+            "A": "192.168.1.1",
+            "B": "10.0.0.1",
+            "C": "127.0.0.1",
+            "D": "255.255.255.0"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T9_Q2",
+          "question": "Địa chỉ IP nào sau đây thuộc dải địa chỉ riêng (private)?",
+          "options": {
+            "A": "8.8.8.8",
+            "B": "172.16.0.1",
+            "C": "203.0.113.1",
+            "D": "192.0.2.1"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T9_Q3",
+          "question": "Mục đích chính của bảng định tuyến trong một bộ định tuyến (router) là gì?",
+          "options": {
+            "A": "Lưu trữ địa chỉ MAC của các thiết bị",
+            "B": "Ghi lại lịch sử truy cập Internet",
+            "C": "Xác định đường đi tốt nhất để chuyển tiếp gói tin",
+            "D": "Mã hóa dữ liệu trước khi truyền"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T9_Q4",
+          "question": "Trong bảng định tuyến, cột “Next Hop” thể hiện điều gì?",
+          "options": {
+            "A": "Địa chỉ IP của thiết bị đích cuối cùng",
+            "B": "Địa chỉ IP của router kế tiếp trên đường đi",
+            "C": "Tên miền của máy chủ",
+            "D": "Giao thức định tuyến đang sử dụng"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T9_Q5",
+          "question": "Khi có nhiều tuyến đường đến cùng một đích, router sẽ chọn tuyến nào?",
+          "options": {
+            "A": "Tuyến có địa chỉ IP đích lớn nhất",
+            "B": "Tuyến có giao thức định tuyến mới nhất",
+            "C": "Tuyến có độ ưu tiên thấp nhất",
+            "D": "Tuyến có mặt nạ mạng dài nhất (most specific match)"
+          },
+          "correctAnswer": "D",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T9_Q6",
+          "question": "Giao thức nào được sử dụng để gán địa chỉ IP tự động cho thiết bị trong mạng?",
+          "options": {
+            "A": "DNS",
+            "B": "ARP",
+            "C": "DHCP",
+            "D": "ICMP"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C1_T10",
+      "topicName": "Điền khuyết (chuyển sang trắc nghiệm)",
+      "questions": [
+        {
+          "id": "NT_C1_T10_Q1",
+          "question": "Dịch vụ như Google Docs hay Microsoft 365 là ví dụ điển hình của mô hình _______ trong điện toán đám mây.",
+          "options": {
+            "A": "IaaS",
+            "B": "SaaS",
+            "C": "PaaS",
+            "D": "DaaS"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T10_Q2",
+          "question": "Trong mạng con 192.168.10.0/26, địa chỉ broadcast là ________.",
+          "options": {
+            "A": "192.168.10.62",
+            "B": "192.168.10.127",
+            "C": "192.168.10.255",
+            "D": "192.168.10.63"
+          },
+          "correctAnswer": "D",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T10_Q3",
+          "question": "Tầng _______ trong mô hình OSI chịu trách nhiệm định tuyến gói tin giữa các mạng.",
+          "options": {
+            "A": "Transport",
+            "B": "Network",
+            "C": "Data Link",
+            "D": "Session"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T10_Q4",
+          "question": "Tầng _______ đảm bảo dữ liệu được truyền tin cậy, có thứ tự và không bị trùng lặp.",
+          "options": {
+            "A": "Network",
+            "B": "Session",
+            "C": "Transport",
+            "D": "Presentation"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T10_Q5",
+          "question": "Tầng ứng dụng là tầng thứ _______ trong mô hình OSI, nơi người dùng tương tác trực tiếp với các dịch vụ mạng.",
+          "options": {
+            "A": "7",
+            "B": "4",
+            "C": "5",
+            "D": "6"
+          },
+          "correctAnswer": "A",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T10_Q6",
+          "question": "Giao thức _______ hoạt động ở tầng ứng dụng và được sử dụng để truyền tải nội dung web qua Internet.",
+          "options": {
+            "A": "TCP",
+            "B": "IP",
+            "C": "HTTP",
+            "D": "ARP"
+          },
+          "correctAnswer": "C",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T10_Q7",
+          "question": "Tầng _______ cung cấp giao diện trực tiếp giữa người dùng và mạng, ví dụ như trình duyệt web hoặc ứng dụng email.",
+          "options": {
+            "A": "Application",
+            "B": "Presentation",
+            "C": "Session",
+            "D": "Transport"
+          },
+          "correctAnswer": "A",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T10_Q8",
+          "question": "Tầng _______ xử lý việc mã hóa, nén và chuyển đổi định dạng dữ liệu giữa các hệ thống.",
+          "options": {
+            "A": "Application",
+            "B": "Presentation",
+            "C": "Session",
+            "D": "Network"
+          },
+          "correctAnswer": "B",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T10_Q9",
+          "question": "Giao thức ________ được thiết kế nhẹ, phù hợp với thiết bị IoT có tài nguyên hạn chế và cần truyền dữ liệu hiệu quả.",
+          "options": {
+            "A": "FTP",
+            "B": "SMTP",
+            "C": "POP3",
+            "D": "MQTT"
+          },
+          "correctAnswer": "D",
+          "explanation": ""
+        },
+        {
+          "id": "NT_C1_T10_Q10",
+          "question": "Trong hệ thống IoT, thiết bị ________ đóng vai trò trung gian, kết nối các cảm biến với Internet hoặc nền tảng đám mây.",
+          "options": {
+            "A": "Switch",
+            "B": "Hub",
+            "C": "Repeater",
+            "D": "Gateway"
+          },
+          "correctAnswer": "D",
+          "explanation": ""
+        }
+      ]
+    }
+  ]
+}
