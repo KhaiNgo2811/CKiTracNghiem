@@ -2,3 +2,6 @@
 data/**/*.docx
 data/**/*.pdf
 ~$*
+
+__pycache__/
+*.pyc
