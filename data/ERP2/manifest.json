@@ -32,11 +32,17 @@
     },
     {
       "chapterId": "ERP2_C6",
-      "chapterName": "PS & EAM (topics mentioned in the textbook)",
-      "topicCount": 2,
-      "questionCount": 16
+      "chapterName": "TS410 Unit 10 – Project System (PS)",
+      "topicCount": 6,
+      "questionCount": 59
+    },
+    {
+      "chapterId": "ERP2_C7",
+      "chapterName": "TS410 Unit 11 – Enterprise Asset Management (EAM)",
+      "topicCount": 5,
+      "questionCount": 55
     }
   ],
-  "totalQuestions": 458,
-  "totalTopics": 34
+  "totalQuestions": 556,
+  "totalTopics": 43
 }

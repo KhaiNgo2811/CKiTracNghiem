@@ -1,0 +1,696 @@
+{
+  "chapterId": "ERP2_C7",
+  "chapterName": "TS410 Unit 11 – Enterprise Asset Management (EAM)",
+  "topics": [
+    {
+      "topicId": "ERP2_C7_T1",
+      "topicName": "EAM business steps & maintenance strategies",
+      "questions": [
+        {
+          "id": "ERP2_C7_T1_Q1",
+          "question": "Which five phases make up the corrective maintenance process?",
+          "options": {
+            "A": "Planning, budgeting, execution, settlement and closing",
+            "B": "Inspection, notification, release, confirmation and billing",
+            "C": "Notification, planning, control, execution and completion",
+            "D": "Request, approval, procurement, withdrawal and settlement"
+          },
+          "correctAnswer": "C",
+          "explanation": "SAP workflows can control and partly automate this five-phase procedure."
+        },
+        {
+          "id": "ERP2_C7_T1_Q2",
+          "question": "What happens in the notification phase?",
+          "options": {
+            "A": "Malfunctions and other requirements are recorded in a notification",
+            "B": "Orders are created and the required material is planned",
+            "C": "The order is checked for material availability and released",
+            "D": "Partial steps such as time confirmation are executed"
+          },
+          "correctAnswer": "A",
+          "explanation": "Notifications can be accessed and processed through a list."
+        },
+        {
+          "id": "ERP2_C7_T1_Q3",
+          "question": "What happens in the planning phase?",
+          "options": {
+            "A": "Malfunctions are recorded in a notification by the reporting employee",
+            "B": "The required material is withdrawn and the order is executed",
+            "C": "Orders are created and planned: steps to be performed, material needed and utilities such as measurement devices and cranes",
+            "D": "The order is technically completed and settled by Controlling"
+          },
+          "correctAnswer": "C",
+          "explanation": "Planning is based on the reported requirements."
+        },
+        {
+          "id": "ERP2_C7_T1_Q4",
+          "question": "What happens in the control phase?",
+          "options": {
+            "A": "Malfunctions are recorded in notifications and assigned to objects",
+            "B": "The order runs through checks such as material availability and capacity planning, is put in process and the shop papers are printed",
+            "C": "The order is executed and unplanned material is withdrawn",
+            "D": "The partial steps of time and technical confirmation are executed"
+          },
+          "correctAnswer": "B",
+          "explanation": "The checks are important for the release of the order."
+        },
+        {
+          "id": "ERP2_C7_T1_Q5",
+          "question": "What happens in the execution phase?",
+          "options": {
+            "A": "The order is checked for capacity and material availability",
+            "B": "The order is technically completed and the costs settled",
+            "C": "The notification is created by the reporting employee",
+            "D": "The order is executed and the required material is withdrawn, even material not planned or reserved for the order"
+          },
+          "correctAnswer": "D",
+          "explanation": "Unplanned withdrawals are entered with reference to the order number."
+        },
+        {
+          "id": "ERP2_C7_T1_Q6",
+          "question": "Which partial steps are executed in the completion phase?",
+          "options": {
+            "A": "Notification, planning and release of the order",
+            "B": "Time confirmation, technical confirmation and technical completion",
+            "C": "Availability check, capacity planning and printing shop papers",
+            "D": "Material reservation, purchase requisition and goods receipt"
+          },
+          "correctAnswer": "B",
+          "explanation": "Settlement by Controlling can be performed before or after technical completion."
+        },
+        {
+          "id": "ERP2_C7_T1_Q7",
+          "question": "Which options does a planner have to create a notification and an order for corrective maintenance?",
+          "options": {
+            "A": "Only create the order first and add the notification after completion",
+            "B": "Only create the notification, since orders are created automatically",
+            "C": "Only use the SAP GUI transaction; Fiori and mobile are not supported",
+            "D": "Create a notification first then add an order; create an order with a combined notification; or use a Fiori malfunction report"
+          },
+          "correctAnswer": "D",
+          "explanation": "The notification can also be created via a mobile device."
+        },
+        {
+          "id": "ERP2_C7_T1_Q8",
+          "question": "Who corrects the malfunction and who completes the maintenance order?",
+          "options": {
+            "A": "The reporting employee corrects it; the controller completes the order",
+            "B": "The plant engineer corrects it; the purchasing group completes the order",
+            "C": "A maintenance work center corrects it; the supervisor or maintenance planner completes the order",
+            "D": "The maintenance planner corrects it; the work center completes the order"
+          },
+          "correctAnswer": "C",
+          "explanation": "The order is confirmed by an employee of the work center, the supervisor or the planner."
+        },
+        {
+          "id": "ERP2_C7_T1_Q9",
+          "question": "What does preventive maintenance include, compared with reactive maintenance?",
+          "options": {
+            "A": "Overhauls at specific periods and inspections to repair worn parts before they cause failures",
+            "B": "Repairs only after a malfunction has been reported by an employee",
+            "C": "Maintenance schedules based on device and sensor data from machines",
+            "D": "Maintenance that is performed only by external service companies"
+          },
+          "correctAnswer": "A",
+          "explanation": "Reactive means repairing after the failure."
+        },
+        {
+          "id": "ERP2_C7_T1_Q10",
+          "question": "What does predictive maintenance additionally take into account?",
+          "options": {
+            "A": "Fixed overhaul periods defined in advance for every asset",
+            "B": "Only the inspection records of the maintenance workers",
+            "C": "Only the costs of previous maintenance orders",
+            "D": "Device and sensor data from the machine to optimize schedules and predict failures more precisely"
+          },
+          "correctAnswer": "D",
+          "explanation": "It requires connecting business information with sensor data; the Internet of Things (IoT) supports this."
+        },
+        {
+          "id": "ERP2_C7_T1_Q11",
+          "question": "Which mega-trend supports connecting business information with sensor data for predictive maintenance?",
+          "options": {
+            "A": "Blockchain",
+            "B": "Internet of Things (IoT)",
+            "C": "Robotic process automation",
+            "D": "Quantum computing"
+          },
+          "correctAnswer": "B",
+          "explanation": "A digital twin of each asset gives insight for better business insights and collaboration across the supply chain."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C7_T2",
+      "topicName": "Organizational levels in EAM",
+      "questions": [
+        {
+          "id": "ERP2_C7_T2_Q1",
+          "question": "What is a maintenance plant?",
+          "options": {
+            "A": "The plant in which the operational systems of a company are installed",
+            "B": "The organizational unit in which maintenance requirements are planned",
+            "C": "The unit of capacity in which maintenance work is carried out",
+            "D": "A section of a plant defined by production responsibility"
+          },
+          "correctAnswer": "A",
+          "explanation": "If maintenance is planned at this plant, it is also the maintenance planning plant."
+        },
+        {
+          "id": "ERP2_C7_T2_Q2",
+          "question": "What is a maintenance planning plant?",
+          "options": {
+            "A": "The facility where the technical systems of the company are installed",
+            "B": "The workshop in which the maintenance orders are executed",
+            "C": "The organizational unit in which maintenance requirements are planned, from its own plant or from assigned maintenance plants",
+            "D": "The place where the spare parts are stored by the planner"
+          },
+          "correctAnswer": "C",
+          "explanation": "Planners within a planning plant are defined by maintenance planner groups."
+        },
+        {
+          "id": "ERP2_C7_T2_Q3",
+          "question": "Which organizational level is listed for Enterprise Asset Management?",
+          "options": {
+            "A": "Maintenance planning plant",
+            "B": "Company code",
+            "C": "Controlling area",
+            "D": "Storage location"
+          },
+          "correctAnswer": "A",
+          "explanation": "Maintenance plants that do not plan their tasks are assigned to planning plants."
+        },
+        {
+          "id": "ERP2_C7_T2_Q4",
+          "question": "How are the units of capacity in plant maintenance managed?",
+          "options": {
+            "A": "As maintenance planner groups assigned to the planning plant",
+            "B": "As plant sections assigned to the plant engineer",
+            "C": "As functional locations assigned to the equipment",
+            "D": "As maintenance work centers assigned to the maintenance plant as workshops"
+          },
+          "correctAnswer": "D",
+          "explanation": "Work centers are the capacity units of maintenance."
+        },
+        {
+          "id": "ERP2_C7_T2_Q5",
+          "question": "Who is the plant engineer?",
+          "options": {
+            "A": "The planner who belongs to a maintenance planner group",
+            "B": "The person responsible for a plant section, coordinating production and maintenance",
+            "C": "The worker who confirms the time on the maintenance order",
+            "D": "The employee who reports the malfunction in a notification"
+          },
+          "correctAnswer": "B",
+          "explanation": "A maintenance plant can be subdivided into plant sections by responsibility for production."
+        },
+        {
+          "id": "ERP2_C7_T2_Q6",
+          "question": "How can a maintenance plant be subdivided?",
+          "options": {
+            "A": "By cost center groups and profit center groups of the controlling area",
+            "B": "By company codes and business areas of the enterprise structure",
+            "C": "By functional locations and equipment records only",
+            "D": "By location-based criteria such as site, building and coordinates, and into plant sections by production responsibility"
+          },
+          "correctAnswer": "D",
+          "explanation": "Locations subdivide a maintenance plant by location-based criteria."
+        },
+        {
+          "id": "ERP2_C7_T2_Q7",
+          "question": "In plant-specific planning, where are maintenance measures planned and executed?",
+          "options": {
+            "A": "In a different plant that is assigned as the planning plant",
+            "B": "In the same plant where the requirement occurs, with workshops and spare parts from that plant",
+            "C": "In several plants that share the same workshops",
+            "D": "Centrally in the company code of the enterprise"
+          },
+          "correctAnswer": "B",
+          "explanation": "One maintenance plant is assigned to one planning plant."
+        },
+        {
+          "id": "ERP2_C7_T2_Q8",
+          "question": "What characterizes cross-plant planning?",
+          "options": {
+            "A": "Multiple maintenance plants are assigned to one planning plant, which handles planning, execution and spare parts",
+            "B": "One maintenance plant is assigned to its own planning plant",
+            "C": "Each maintenance plant plans and executes its orders itself",
+            "D": "The planning plant only stores the spare parts of other plants"
+          },
+          "correctAnswer": "A",
+          "explanation": "Example: plant 1200 requires maintenance but another plant carries out all further functions."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C7_T3",
+      "topicName": "Master data: functional locations & notifications",
+      "questions": [
+        {
+          "id": "ERP2_C7_T3_Q1",
+          "question": "What are functional locations?",
+          "options": {
+            "A": "Records of the individual objects such as engines and pumps",
+            "B": "Hierarchically ordered structures that represent a technical system, a building or a part of it",
+            "C": "Documents that record the work performed for a notification",
+            "D": "Plant sections assigned to a maintenance planner group"
+          },
+          "correctAnswer": "B",
+          "explanation": "They structure a technical system into units that are relevant to plant maintenance."
+        },
+        {
+          "id": "ERP2_C7_T3_Q2",
+          "question": "According to which criteria can a functional location be structured?",
+          "options": {
+            "A": "Spatial, objective, and strategic",
+            "B": "Financial, technical, and legal",
+            "C": "Notification, order, and confirmation",
+            "D": "Spatial, technical, and functional or process-oriented"
+          },
+          "correctAnswer": "D",
+          "explanation": "Examples: building 1 and 2; press frame and hydraulics; polymerization and condensation."
+        },
+        {
+          "id": "ERP2_C7_T3_Q3",
+          "question": "When should functional locations be used to structure systems?",
+          "options": {
+            "A": "To plan the dates and budgets of a project for its WBS elements",
+            "B": "To represent technical structures, record maintenance tasks for parts, store technical data and monitor maintenance costs",
+            "C": "To post actual costs and revenues for customer billing",
+            "D": "To define the capacities of work centers for production"
+          },
+          "correctAnswer": "B",
+          "explanation": "They also help analyze the effect of usage conditions on the likelihood of damage."
+        },
+        {
+          "id": "ERP2_C7_T3_Q4",
+          "question": "How is a functional location identified?",
+          "options": {
+            "A": "Using a number range of ten digits defined in the controlling area",
+            "B": "Using the plant number combined with the material number",
+            "C": "Using a structure indicator made of a coding template and hierarchy levels, up to a maximum of 40 characters",
+            "D": "Using a serial number assigned automatically for each equipment"
+          },
+          "correctAnswer": "C",
+          "explanation": "The coding template controls which characters may be used and how they are grouped."
+        },
+        {
+          "id": "ERP2_C7_T3_Q5",
+          "question": "What do the hierarchy levels of the structure indicator define?",
+          "options": {
+            "A": "Which level ends at which character and the number of hierarchy levels the structure may contain",
+            "B": "Which characters (letters or numbers) may be used for identification",
+            "C": "Which organizational units are assigned to the functional location",
+            "D": "Which equipment is installed at the functional location"
+          },
+          "correctAnswer": "A",
+          "explanation": "The coding template controls the characters that may be used."
+        },
+        {
+          "id": "ERP2_C7_T3_Q6",
+          "question": "Which views does the master record of a functional location use?",
+          "options": {
+            "A": "General, sales, purchasing and accounting",
+            "B": "Basic, storage, costing and work scheduling",
+            "C": "General, location, organization and structure",
+            "D": "Header, item, activity and task"
+          },
+          "correctAnswer": "C",
+          "explanation": "Organization covers account assignment (company code, cost center) and the maintenance planning plant."
+        },
+        {
+          "id": "ERP2_C7_T3_Q7",
+          "question": "What does a maintenance notification header contain?",
+          "options": {
+            "A": "Information used to identify and manage the notification, valid for the whole notification",
+            "B": "The spare parts that are required for the maintenance work",
+            "C": "The tasks that are pending after the maintenance was executed",
+            "D": "The settlement rule that determines who bears the costs"
+          },
+          "correctAnswer": "A",
+          "explanation": "Items determine the problem or damage; a notification can contain several items."
+        },
+        {
+          "id": "ERP2_C7_T3_Q8",
+          "question": "What do activities document in a notification?",
+          "options": {
+            "A": "The activities that are pending and arose after maintenance",
+            "B": "The work performed, which is important for inspections as proof that tasks were carried out",
+            "C": "The planned costs of the maintenance task",
+            "D": "The damage found on the reference object"
+          },
+          "correctAnswer": "B",
+          "explanation": "Tasks describe pending activities, e.g., creating a report."
+        },
+        {
+          "id": "ERP2_C7_T3_Q9",
+          "question": "Which reference objects can a maintenance notification be created for?",
+          "options": {
+            "A": "A cost center, a profit center or an internal order",
+            "B": "A vendor, a customer or a business partner",
+            "C": "A WBS element, a network or an activity",
+            "D": "A functional location, a piece of equipment (with or without assembly), or a material with a serial number"
+          },
+          "correctAnswer": "D",
+          "explanation": "A notification may also be created without a reference object, e.g., for an object not managed under a number."
+        },
+        {
+          "id": "ERP2_C7_T3_Q10",
+          "question": "When can a notification be entered without an object number?",
+          "options": {
+            "A": "Never; every notification needs an object number",
+            "B": "Only when the order is created before the notification",
+            "C": "Only for notifications of the type activity report",
+            "D": "When a malfunction report refers to an object not managed under a number, or a request refers to a new object for an investment program"
+          },
+          "correctAnswer": "D",
+          "explanation": "The view of the reference object can be configured per notification or notification type."
+        },
+        {
+          "id": "ERP2_C7_T3_Q11",
+          "question": "A notification is entered for an assembly on a piece of equipment that is assigned to a functional location. What does the system transfer?",
+          "options": {
+            "A": "Only the data of the assembly",
+            "B": "All relevant data of the equipment and the functional location",
+            "C": "Only the data of the functional location",
+            "D": "No data; it must be entered manually"
+          },
+          "correctAnswer": "B",
+          "explanation": "The hierarchy of the objects corresponds to the specified sequence."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C7_T4",
+      "topicName": "Maintenance orders",
+      "questions": [
+        {
+          "id": "ERP2_C7_T4_Q1",
+          "question": "A maintenance notification is required to create a maintenance order. True or false?",
+          "options": {
+            "A": "False: a maintenance order can be created directly (e.g., a breakdown order)",
+            "B": "True: the order always takes its data from a notification",
+            "C": "True: otherwise no costs can be collected on the order",
+            "D": "False: notifications are created only after the order is completed"
+          },
+          "correctAnswer": "A",
+          "explanation": "An order can also be created for a notification, for combined notifications, or automatically from a maintenance plan."
+        },
+        {
+          "id": "ERP2_C7_T4_Q2",
+          "question": "From which source can a maintenance order be generated automatically?",
+          "options": {
+            "A": "A purchase requisition of a stock item",
+            "B": "A budget release of a project",
+            "C": "A maintenance item of a maintenance plan",
+            "D": "A planned order from MRP"
+          },
+          "correctAnswer": "C",
+          "explanation": "An activity report can also be entered afterwards as a technical confirmation."
+        },
+        {
+          "id": "ERP2_C7_T4_Q3",
+          "question": "Which elements are included in a maintenance order?",
+          "options": {
+            "A": "Header data, object list, order operation, material list, production resources and tools, settlement rule and costs",
+            "B": "Project definition, WBS elements, network and milestones",
+            "C": "Items, activities, tasks and damage codes",
+            "D": "Sales area, shipping point, delivery and billing document"
+          },
+          "correctAnswer": "A",
+          "explanation": "The header data identify and manage the order."
+        },
+        {
+          "id": "ERP2_C7_T4_Q4",
+          "question": "What does the object list of a maintenance order contain?",
+          "options": {
+            "A": "The spare parts that are used up when the order is executed",
+            "B": "The tools and protective clothing that are not used up",
+            "C": "The tasks and guidelines for who performs the work",
+            "D": "The technical objects to be processed and the notifications, used when the same activity is carried out on several objects"
+          },
+          "correctAnswer": "D",
+          "explanation": "Notifications assigned via the object list are separable from the order again."
+        },
+        {
+          "id": "ERP2_C7_T4_Q5",
+          "question": "Does the object list control the order?",
+          "options": {
+            "A": "Yes: it controls the work and costs of every listed object",
+            "B": "No: no adjustment of work, history or cost distribution takes place through it",
+            "C": "Yes: it updates the history of every listed object",
+            "D": "Yes: it distributes the order costs to the objects automatically"
+          },
+          "correctAnswer": "B",
+          "explanation": "Customer exit IWO10027 can distribute order costs proportionally to the objects."
+        },
+        {
+          "id": "ERP2_C7_T4_Q6",
+          "question": "What do production resources and tools in a maintenance order represent?",
+          "options": {
+            "A": "Spare parts that are required and used when the order is executed",
+            "B": "Tasks that are necessary and the people who perform them",
+            "C": "Costs that are estimated, planned and actual for the order",
+            "D": "Resources required to execute the order but not used up, such as tools, protective clothing and trucks"
+          },
+          "correctAnswer": "D",
+          "explanation": "Spare parts belong to the material (component) list."
+        },
+        {
+          "id": "ERP2_C7_T4_Q7",
+          "question": "What does the settlement rule of a maintenance order provide?",
+          "options": {
+            "A": "A list of the technical objects processed by the order",
+            "B": "Information on who should bear the costs; it is proposed from the master record of the reference object",
+            "C": "A description of tasks and who performs them",
+            "D": "The reservations for the stock materials of the order"
+          },
+          "correctAnswer": "B",
+          "explanation": "It can be changed when the first settlement rule is maintained for the order."
+        },
+        {
+          "id": "ERP2_C7_T4_Q8",
+          "question": "What happens to stock materials planned for a maintenance order?",
+          "options": {
+            "A": "They are reserved in the warehouse (reservation)",
+            "B": "They are transferred to project stock",
+            "C": "A production order is created for them",
+            "D": "They are posted as a commitment on the order"
+          },
+          "correctAnswer": "A",
+          "explanation": "The reservation time can be set in Customizing."
+        },
+        {
+          "id": "ERP2_C7_T4_Q9",
+          "question": "When is an availability check performed for the components of a maintenance order?",
+          "options": {
+            "A": "It is only performed after the order is technically completed",
+            "B": "It is only performed after goods receipts are posted",
+            "C": "It can be called when components are assigned and is performed automatically at release; the order can be released without availability",
+            "D": "It is performed at release and the order cannot be released without it"
+          },
+          "correctAnswer": "C",
+          "explanation": "Planned goods issues refer to the reservation; unplanned ones to the order number."
+        },
+        {
+          "id": "ERP2_C7_T4_Q10",
+          "question": "How are planned and unplanned goods issues entered for a maintenance order?",
+          "options": {
+            "A": "Planned with reference to the order number; unplanned to the reservation",
+            "B": "Both with reference to the notification number",
+            "C": "Both with reference to the purchase order number",
+            "D": "Planned with reference to the reservation number; unplanned with reference to the order number"
+          },
+          "correctAnswer": "D",
+          "explanation": "The Material Where-Used List (IW13) shows which withdrawals were planned and which unplanned."
+        },
+        {
+          "id": "ERP2_C7_T4_Q11",
+          "question": "What is the process for non-stock materials in a maintenance order?",
+          "options": {
+            "A": "Materials are reserved in the warehouse and withdrawn with a reservation",
+            "B": "Purchase requisitions are generated (on save or release), converted to purchase orders assigned to the order, and goods receipts debit the order with the PO value",
+            "C": "Materials are posted as stock transfers from another plant",
+            "D": "Materials are charged to the cost center of the equipment directly"
+          },
+          "correctAnswer": "B",
+          "explanation": "Invoice differences are automatically credited or debited to the order."
+        },
+        {
+          "id": "ERP2_C7_T4_Q12",
+          "question": "Which activities can only be performed after a maintenance order is released?",
+          "options": {
+            "A": "Creating the notification and assigning the reference object",
+            "B": "Planning operations and assigning components to the order",
+            "C": "Changing the settlement rule and the header data of the order",
+            "D": "Printing shop papers, withdrawing material, booking goods receipts, entering time confirmations and completing a task"
+          },
+          "correctAnswer": "D",
+          "explanation": "At release the system also checks availability of materials and production resources."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C7_T5",
+      "topicName": "Confirmation, completion & settlement",
+      "questions": [
+        {
+          "id": "ERP2_C7_T5_Q1",
+          "question": "In which ways can the time for a maintenance order be confirmed?",
+          "options": {
+            "A": "Only individually for each operation by the work center",
+            "B": "Individually per operation, collectively, overall completion confirmation, or via the Cross-Application Time Sheet (CATS)",
+            "C": "Only collectively through the operation list of the order",
+            "D": "Only via CATS entered by the supervisor of the plant"
+          },
+          "correctAnswer": "B",
+          "explanation": "Maintenance activities can be entered as activity reports or confirmation texts."
+        },
+        {
+          "id": "ERP2_C7_T5_Q2",
+          "question": "What status do operations get after a partial completion confirmation?",
+          "options": {
+            "A": "CNF (finally confirmed)",
+            "B": "TECO (technically completed)",
+            "C": "NOCO (notification completed)",
+            "D": "PCNF (partially confirmed)"
+          },
+          "correctAnswer": "D",
+          "explanation": "The order gets CNF when all operations are completely confirmed."
+        },
+        {
+          "id": "ERP2_C7_T5_Q3",
+          "question": "Which status does a maintenance order get when all operations are completely confirmed?",
+          "options": {
+            "A": "PCNF (partially confirmed)",
+            "B": "CNF (finally confirmed)",
+            "C": "TECO (technically completed)",
+            "D": "OSTS (outstanding tasks)"
+          },
+          "correctAnswer": "B",
+          "explanation": "Completion confirmations can be reversed if they were assigned to the wrong operations."
+        },
+        {
+          "id": "ERP2_C7_T5_Q4",
+          "question": "What does the completion confirmation of an internal operation trigger?",
+          "options": {
+            "A": "A goods issue from the warehouse to the maintenance order",
+            "B": "A settlement of the order to the cost center of the equipment",
+            "C": "An internal activity allocation between the cost center of the work center and the order, calculated as work time times activity price",
+            "D": "A purchase requisition for the external service"
+          },
+          "correctAnswer": "C",
+          "explanation": "The order is debited with the costs."
+        },
+        {
+          "id": "ERP2_C7_T5_Q5",
+          "question": "What does the overall completion confirmation allow?",
+          "options": {
+            "A": "Confirming times, technical details, inspection rounds and counter readings for an order on one configurable screen",
+            "B": "Confirming only the working times of one operation",
+            "C": "Confirming only the goods movements of the order",
+            "D": "Confirming only the activity reports of the notification"
+          },
+          "correctAnswer": "A",
+          "explanation": "Time confirmations and technical confirmations can be processed in the same way."
+        },
+        {
+          "id": "ERP2_C7_T5_Q6",
+          "question": "Which status does a maintenance order get at technical completion?",
+          "options": {
+            "A": "CNF (finally confirmed)",
+            "B": "PCNF (partially confirmed)",
+            "C": "TECO (technically completed)",
+            "D": "NOCO (notification completed)"
+          },
+          "correctAnswer": "C",
+          "explanation": "It means the maintenance work required for the order has been completed."
+        },
+        {
+          "id": "ERP2_C7_T5_Q7",
+          "question": "What status identifies a notification with outstanding tasks?",
+          "options": {
+            "A": "OSTS",
+            "B": "NOCO",
+            "C": "CNF",
+            "D": "TECO"
+          },
+          "correctAnswer": "A",
+          "explanation": "A notification with outstanding tasks cannot be completed until the tasks are finished, but its order can be completed."
+        },
+        {
+          "id": "ERP2_C7_T5_Q8",
+          "question": "Which status does a completed maintenance notification receive?",
+          "options": {
+            "A": "OSTS (outstanding tasks)",
+            "B": "NOCO (notification completed)",
+            "C": "TECO (technically completed)",
+            "D": "CNF (finally confirmed)"
+          },
+          "correctAnswer": "B",
+          "explanation": "The notification is locked for changes."
+        },
+        {
+          "id": "ERP2_C7_T5_Q9",
+          "question": "Which changes can still be made online to a technically completed order?",
+          "options": {
+            "A": "Add new operations and assign new spare parts to the order",
+            "B": "Create new purchase requisitions for additional material",
+            "C": "Re-open the order by changing the order type",
+            "D": "Lock or unlock it, set the deletion flag, enter outstanding goods movements, confirmations and invoice receipts, and change the settlement rule"
+          },
+          "correctAnswer": "D",
+          "explanation": "Purchase requisitions without purchase orders get a deletion flag; open reservations and capacities are closed."
+        },
+        {
+          "id": "ERP2_C7_T5_Q10",
+          "question": "What happens when technical completion is reversed?",
+          "options": {
+            "A": "The order is closed and cannot be changed in any way",
+            "B": "The order is deleted together with its notifications",
+            "C": "All settlement rules of the order are removed",
+            "D": "The order gets its previous status, capacity requirements and reservations are rebuilt and deletion flags of unconverted requisitions are reset"
+          },
+          "correctAnswer": "D",
+          "explanation": "The status TECO can be reversed if required."
+        },
+        {
+          "id": "ERP2_C7_T5_Q11",
+          "question": "What is the maintenance order, from a cost perspective, at period end?",
+          "options": {
+            "A": "The final bearer of all costs of the maintenance task",
+            "B": "A collector of all costs of the planning and execution phases, which are settled to the actual originator of the costs",
+            "C": "A statistical object that never carries real costs",
+            "D": "A cost center that allocates activities to other orders"
+          },
+          "correctAnswer": "B",
+          "explanation": "Settlement follows the allocation-by-cause principle."
+        },
+        {
+          "id": "ERP2_C7_T5_Q12",
+          "question": "To which receiver are routine maintenance costs generally settled?",
+          "options": {
+            "A": "The cost center of the maintenance work center",
+            "B": "The G/L account of the spare parts inventory",
+            "C": "The profit center of the plant section",
+            "D": "The cost center of the maintenance object"
+          },
+          "correctAnswer": "D",
+          "explanation": "The cost center must be specified as the receiver in the settlement rule."
+        },
+        {
+          "id": "ERP2_C7_T5_Q13",
+          "question": "After the order is completely settled, what is the balance of actual costs on the order and on the receiving cost center?",
+          "options": {
+            "A": "Greater than zero on the order; zero on the cost center",
+            "B": "Zero on the order; greater than zero on the cost center",
+            "C": "Zero on both the order and the cost center",
+            "D": "Greater than zero on both the order and the cost center"
+          },
+          "correctAnswer": "B",
+          "explanation": "The cost center is debited while the order is credited."
+        }
+      ]
+    }
+  ]
+}

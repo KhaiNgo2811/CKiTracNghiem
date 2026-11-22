@@ -10,7 +10,7 @@ from collections import Counter
 sys.path.insert(0, 'scripts/erp2')
 OUT = 'data/ERP2/'
 LETTERS = 'ABCD'
-MODULES = ['ch1', 'ch2', 'ch3', 'ch4', 'ch5', 'ch6']
+MODULES = ['ch1', 'ch2', 'ch3', 'ch4', 'ch5', 'ts_ps', 'ts_eam']
 
 chapters = []
 seen_q = set()

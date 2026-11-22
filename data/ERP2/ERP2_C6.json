@@ -1,208 +1,748 @@
 {
   "chapterId": "ERP2_C6",
-  "chapterName": "PS & EAM (topics mentioned in the textbook)",
+  "chapterName": "TS410 Unit 10 – Project System (PS)",
   "topics": [
     {
       "topicId": "ERP2_C6_T1",
-      "topicName": "PS – Project System concepts in the textbook",
+      "topicName": "Project characteristics & phases",
       "questions": [
         {
           "id": "ERP2_C6_T1_Q1",
-          "question": "Which controlling object is described as relevant to project management?",
+          "question": "Which statement describes a typical characteristic of a project?",
           "options": {
-            "A": "Cost center",
-            "B": "Profit center",
-            "C": "WBS element",
-            "D": "Activity type"
+            "A": "Projects are unlimited in time and use few capacity resources",
+            "B": "Projects involve one department and have no quality demands",
+            "C": "Projects are usually complex and unique and involve a high degree of risk",
+            "D": "Projects are routine tasks with standardized, repeatable results"
           },
           "correctAnswer": "C",
-          "explanation": "In the order of priority for real postings: profitability segment, make-to-order sales order, WBS element, internal order, cost center."
+          "explanation": "Projects are also limited in duration, cost and capacity intensive, involve several departments and are of strategic significance."
         },
         {
           "id": "ERP2_C6_T1_Q2",
-          "question": "In the order of priority for real postings in controlling, where does the WBS element rank?",
+          "question": "How is a project defined in the course?",
           "options": {
-            "A": "Third: after the profitability segment and the make-to-order sales order, and before the internal order and cost center",
-            "B": "First, before the profitability segment",
-            "C": "Last, after the cost center",
-            "D": "Second, directly after the cost center"
+            "A": "An undertaking whose general conditions and constraints are unique to it",
+            "B": "A recurring activity that is repeated every fiscal period",
+            "C": "A set of master data records used by several departments",
+            "D": "A budget approved by management for one fiscal year"
           },
           "correctAnswer": "A",
-          "explanation": "The order is profitability segment, make-to-order sales order, WBS element, internal order, cost center."
+          "explanation": "General conditions: the objectives, the time frame, and the financial and capacity-related restrictions."
         },
         {
           "id": "ERP2_C6_T1_Q3",
-          "question": "Which objects other than cost centers can be designated as statistical objects when they are created?",
+          "question": "Which are the general conditions of a project?",
           "options": {
-            "A": "Cost elements and activity types",
-            "B": "Company codes and plants",
-            "C": "Internal orders and projects",
-            "D": "Vendors and customers"
+            "A": "The profit centers, the plants, and the company codes involved",
+            "B": "The vendors, the customers, and the bank accounts involved",
+            "C": "The objectives, the time frame, and the financial and capacity-related restrictions",
+            "D": "The cost elements, the activity types, and the settlement rules"
           },
           "correctAnswer": "C",
-          "explanation": "Profit centers are statistical objects by definition."
+          "explanation": "These conditions make every project unique."
         },
         {
           "id": "ERP2_C6_T1_Q4",
-          "question": "Projects can be receivers of costs in which allocation techniques?",
+          "question": "Why are project structures arranged as a hierarchy?",
           "options": {
-            "A": "Only settlement of purchase orders",
-            "B": "Distribution and assessment (periodic allocation), and internal activity allocation",
-            "C": "Only period closing",
-            "D": "None; projects can never be receivers"
+            "A": "To keep every activity independent from the other project objects",
+            "B": "To evaluate aggregated data, allocate budgets and define responsibilities",
+            "C": "To replace the need for planning dates, resources and costs",
+            "D": "To limit each project to exactly one organizational unit"
           },
           "correctAnswer": "B",
-          "explanation": "Valid receivers include several real objects such as internal orders, projects and maintenance orders; internal activity allocation can charge production orders and projects."
+          "explanation": "The hierarchy lets dates, resources, costs, budgets and payments be planned, controlled and monitored transparently."
         },
         {
           "id": "ERP2_C6_T1_Q5",
-          "question": "Which production process is most often applied in constructing a facility or manufacturing an item such as an aircraft that requires a complex production process?",
+          "question": "Between which parties are the precise targets of a project agreed?",
           "options": {
-            "A": "Discrete production",
-            "B": "Repetitive production",
-            "C": "Process manufacturing",
-            "D": "The project process"
+            "A": "The vendor and the plant manager",
+            "B": "The controller and the cost center owner",
+            "C": "The auditor and the project team member",
+            "D": "The contractor and the sold-to party"
           },
           "correctAnswer": "D",
-          "explanation": "The job shop process is used for highly customized items such as a custom motorcycle."
+          "explanation": "Projects have precise targets agreed on between the contractor and the sold-to party."
         },
         {
           "id": "ERP2_C6_T1_Q6",
-          "question": "What do the job shop and project production processes focus on?",
+          "question": "Which of the following can be a project, according to the course?",
           "options": {
-            "A": "A desired production rate such as units per day",
-            "B": "A single item (project) or a highly customized item or items (job shop)",
-            "C": "Materials that are indistinguishable from their components",
-            "D": "Mass production of consumer products"
+            "A": "Only construction projects in the building industry",
+            "B": "Research and development, investment measures, make-to-order production, or extensive maintenance tasks",
+            "C": "Only routine production orders for stock items",
+            "D": "Only software implementation projects of a company"
           },
           "correctAnswer": "B",
-          "explanation": "Repetitive production specifies a rate; discrete production specifies a quantity."
+          "explanation": "The term project is not specific to a particular industry sector."
         },
         {
           "id": "ERP2_C6_T1_Q7",
-          "question": "Which sales scenario is a make-to-order scenario that is relevant to controlling postings (priority just above WBS element)?",
+          "question": "For which kinds of projects is the planned finish date of major relevance, and for which are budgeted costs more important?",
           "options": {
-            "A": "Make-to-stock production plan",
-            "B": "Standard purchase order",
-            "C": "Customer inquiry",
-            "D": "Make-to-order sales order"
+            "A": "Finish date: investment projects; budgeted costs: customer projects",
+            "B": "Finish date and costs: only for customer projects",
+            "C": "Neither aspect depends on the type of the project",
+            "D": "Finish date: customer projects; budgeted costs: investment projects"
           },
           "correctAnswer": "D",
-          "explanation": "Make-to-order is triggered by an actual customer order."
+          "explanation": "The aspects of planning are mutually dependent: more resources keep a deadline but increase costs."
         }
       ]
     },
     {
       "topicId": "ERP2_C6_T2",
-      "topicName": "EAM – Enterprise Asset Management concepts in the textbook",
+      "topicName": "Project structure: WBS, networks & activities",
       "questions": [
         {
           "id": "ERP2_C6_T2_Q1",
-          "question": "The costs of repairing equipment (materials, labor) are accumulated in which object in the enterprise asset management process?",
+          "question": "Which two structures does SAP PS provide for mapping projects?",
           "options": {
-            "A": "A maintenance order",
-            "B": "A purchase order",
-            "C": "A sales order",
-            "D": "A planned order"
+            "A": "Work Breakdown Structure (WBS) and network",
+            "B": "Profit center hierarchy and cost center hierarchy",
+            "C": "Bill of materials and routing",
+            "D": "Project definition and budget profile"
           },
           "correctAnswer": "A",
-          "explanation": "EAM is used to repair equipment; the repair costs accumulate in the maintenance order."
+          "explanation": "The WBS shows activities hierarchically; networks show the flow of the project."
         },
         {
           "id": "ERP2_C6_T2_Q2",
-          "question": "When the maintenance process is completed, to which receiver are the accumulated costs typically settled?",
+          "question": "What is a work breakdown structure (WBS)?",
           "options": {
-            "A": "The vendor who supplied the spare parts",
-            "B": "The customer who ordered the repair",
-            "C": "The cost center that owns the equipment",
-            "D": "The controlling area"
+            "A": "A diagram of activities linked by their temporal and logical relationships",
+            "B": "A list of document info records assigned to the activities",
+            "C": "A model of a project showing the required activities in a hierarchical form, the basis for planning costs, revenues, payments, scheduling and budgeting",
+            "D": "A set of settlement rules that allocate the costs of the project"
           },
           "correctAnswer": "C",
-          "explanation": "Settlement applies to other management accounting processes, not only to internal orders."
+          "explanation": "The various work packages are described as individual WBS elements."
         },
         {
           "id": "ERP2_C6_T2_Q3",
-          "question": "Which technique transfers the costs accumulated in a maintenance order to a controlling object?",
+          "question": "What does a network represent in SAP PS?",
           "options": {
-            "A": "Settlement",
-            "B": "Distribution",
-            "C": "Assessment",
-            "D": "Internal activity allocation"
+            "A": "The individual project activities with their temporal and logical relationships (the flow of the project)",
+            "B": "The hierarchical breakdown of the project into work packages",
+            "C": "The budget assigned to each work package of the project",
+            "D": "The organizational units assigned to each project element"
           },
           "correctAnswer": "A",
-          "explanation": "Settlement uses settlement rules, parameters and profiles."
+          "explanation": "Networks link the activities and define in what chronological order they are performed."
         },
         {
           "id": "ERP2_C6_T2_Q4",
-          "question": "Which allocation structure in the example is for enterprise asset management?",
+          "question": "What do activities form in a project?",
           "options": {
-            "A": "A3",
-            "B": "A1",
-            "C": "Z1",
-            "D": "A4"
+            "A": "The hierarchical basis for assigning organizational units",
+            "B": "The legal basis for the contract with the sold-to party",
+            "C": "The financial basis for approving the project budget",
+            "D": "The operative basis for planning and controlling dates, costs and resources"
           },
           "correctAnswer": "D",
-          "explanation": "A3 is for customer service; Z1 for internal orders; A1 and A2 are general structures."
+          "explanation": "Activities are linked by relationships and can be grouped into networks."
         },
         {
           "id": "ERP2_C6_T2_Q5",
-          "question": "Can maintenance orders function as valid receivers in a distribution?",
+          "question": "What happens when activities are assigned to WBS elements?",
           "options": {
-            "A": "No, only cost centers can be receivers",
-            "B": "Yes, together with other real objects such as internal orders and projects",
-            "C": "No, only G/L accounts can be receivers",
-            "D": "Yes, but only as senders"
+            "A": "The WBS elements become billing elements automatically",
+            "B": "The dates and costs of the activities are aggregated at the WBS level and can be evaluated there",
+            "C": "The activities are removed from the network structure",
+            "D": "The budget of the WBS elements is released for posting"
           },
           "correctAnswer": "B",
-          "explanation": "Only cost centers are valid senders in a distribution or assessment."
+          "explanation": "Activity funds already assigned are checked against the budgets of the WBS elements."
         },
         {
           "id": "ERP2_C6_T2_Q6",
-          "question": "Which financial accounting-related process step generates costs that flow into management accounting, including the cost of repairs to machinery?",
+          "question": "What is the project definition?",
           "options": {
-            "A": "Customer payment",
-            "B": "Vendor payment clearing",
-            "C": "Period closing of balance sheet accounts",
-            "D": "Asset management (maintenance), alongside asset accounting and procurement"
+            "A": "The lowest level WBS element in which actual costs are posted",
+            "B": "The list of activities and relationships in the network",
+            "C": "The set of settlement rules for the project at period end",
+            "D": "The framework for all objects of a project, containing data that affects the whole project and default values for WBS elements"
           },
           "correctAnswer": "D",
-          "explanation": "Costs originate in postings of processes such as asset accounting (depreciation), procurement (supplies) and asset management (repairs)."
+          "explanation": "It contains start and finish dates, organizational data and planning parameters."
         },
         {
           "id": "ERP2_C6_T2_Q7",
-          "question": "For which processes can bills of materials be created, according to the textbook?",
+          "question": "For which project data is the controlling area specified only once?",
           "options": {
-            "A": "Only production",
-            "B": "Production, product costing and enterprise asset management",
-            "C": "Only fulfillment and procurement",
-            "D": "Only financial accounting"
+            "A": "Each WBS element; every element can have its own controlling area",
+            "B": "The project definition; it is unique for the entire project",
+            "C": "Each activity; every activity uses a different controlling area",
+            "D": "Each network; every network is assigned to a different area"
           },
           "correctAnswer": "B",
-          "explanation": "The BOM application parameter indicates which type of BOM may be used in production."
+          "explanation": "The controlling area is specified when the project definition is created."
         },
         {
           "id": "ERP2_C6_T2_Q8",
-          "question": "For which purposes are routings used, according to the textbook?",
+          "question": "Which of the following can be done with WBS elements?",
           "options": {
-            "A": "Production, asset management and quality inspections",
-            "B": "Only vendor invoicing",
-            "C": "Only controlling allocations",
-            "D": "Only sales order pricing"
+            "A": "Plan costs and revenues, post actual costs, enter a budget, assign purchase requisitions and plan payments",
+            "B": "Plan only dates; costs and budgets are handled in the network",
+            "C": "Post goods receipts but not vendor invoices to the project",
+            "D": "Define activity types and capacity requirements of work centers"
           },
           "correctAnswer": "A",
-          "explanation": "The routing selection parameter also indicates whether routing is mandatory or optional."
+          "explanation": "WBS elements also allow dates to be planned manually."
         },
         {
           "id": "ERP2_C6_T2_Q9",
-          "question": "For which application areas are work center categories assigned?",
+          "question": "Why can projects be processed across companies?",
           "options": {
-            "A": "Only sales and distribution",
-            "B": "Only financial accounting",
-            "C": "Application areas such as production and maintenance, which determine the types of routings (task lists) that can be assigned",
-            "D": "Only controlling"
+            "A": "The project definition is assigned to several company codes at once",
+            "B": "All WBS elements of a project must belong to the same controlling area",
+            "C": "Each WBS element is assigned its own company code, so different WBS elements can use different company codes",
+            "D": "The network header contains the company codes of all the activities"
           },
           "correctAnswer": "C",
-          "explanation": "Work centers are used in many processes including production and asset management."
+          "explanation": "Organizational units such as profit centers and business areas can also be assigned to each WBS element."
+        },
+        {
+          "id": "ERP2_C6_T2_Q10",
+          "question": "Which of the following can be assigned to WBS elements for reporting?",
+          "options": {
+            "A": "Plants, storage locations and purchasing groups responsible for the project",
+            "B": "Profit centers, business areas, persons responsible, partners and cost centers responsible for the project",
+            "C": "Sales areas, distribution channels and divisions responsible for the project",
+            "D": "Company codes only, because other assignments are not permitted"
+          },
+          "correctAnswer": "B",
+          "explanation": "These assignments are used mainly for reporting and project summarization."
+        },
+        {
+          "id": "ERP2_C6_T2_Q11",
+          "question": "What is the Project Builder?",
+          "options": {
+            "A": "A report that compares planned and actual project progress values",
+            "B": "A budget profile for assigning funds to the project and its parts",
+            "C": "A transaction that settles the costs of a project to receivers",
+            "D": "A user-friendly tool in SAP PS for creating and editing projects quickly, covering all objects except PRT assignment"
+          },
+          "correctAnswer": "D",
+          "explanation": "It offers context-sensitive menus, drag and relate, a worklist and templates."
+        },
+        {
+          "id": "ERP2_C6_T2_Q12",
+          "question": "The Project Builder window is divided into which three areas?",
+          "options": {
+            "A": "Header data, object list and cost view",
+            "B": "Structure overview, worklist and work area",
+            "C": "Planning board, budget view and settlement view",
+            "D": "Project definition, WBS overview and network overview"
+          },
+          "correctAnswer": "B",
+          "explanation": "The worklist stores frequently used projects, networks and WBS elements per user."
+        },
+        {
+          "id": "ERP2_C6_T2_Q13",
+          "question": "Which objects can be used as templates when creating a project?",
+          "options": {
+            "A": "Only the budgets of projects that were already settled",
+            "B": "Only the notifications of the maintenance plant",
+            "C": "Only the cost center groups of the controlling area",
+            "D": "Operative projects and standard projects, including standard WBSs and standard networks"
+          },
+          "correctAnswer": "D",
+          "explanation": "Projects can be copied with all lower-level objects: WBS elements, activities, texts, documents, milestones and components."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C6_T3",
+      "topicName": "WBS operative indicators, networks & milestones",
+      "questions": [
+        {
+          "id": "ERP2_C6_T3_Q1",
+          "question": "Which operative indicator marks WBS elements for which costs are planned manually?",
+          "options": {
+            "A": "Account assignment element",
+            "B": "Planning element",
+            "C": "Billing element",
+            "D": "Statistic indicator"
+          },
+          "correctAnswer": "B",
+          "explanation": "Operative indicators define the characteristics of a WBS element."
+        },
+        {
+          "id": "ERP2_C6_T3_Q2",
+          "question": "Which operative indicator marks WBS elements to which actual costs are posted?",
+          "options": {
+            "A": "Planning element",
+            "B": "Billing element",
+            "C": "Statistic indicator",
+            "D": "Account assignment element"
+          },
+          "correctAnswer": "D",
+          "explanation": "Actual costs can only be posted to account assignment elements."
+        },
+        {
+          "id": "ERP2_C6_T3_Q3",
+          "question": "Which operative indicator marks WBS elements to which revenues are posted?",
+          "options": {
+            "A": "Planning element",
+            "B": "Billing element",
+            "C": "Account assignment element",
+            "D": "Statistic indicator"
+          },
+          "correctAnswer": "B",
+          "explanation": "Results analysis is usually performed in the billing element."
+        },
+        {
+          "id": "ERP2_C6_T3_Q4",
+          "question": "What does the Statistic indicator of a WBS element specify?",
+          "options": {
+            "A": "Whether the element may be used to plan costs manually",
+            "B": "Whether the element is allowed to receive revenue postings",
+            "C": "Whether the element is used only for statistical purposes or works with real costs",
+            "D": "Whether the element belongs to the standard project template"
+          },
+          "correctAnswer": "C",
+          "explanation": "A statistical WBS element does not carry real costs."
+        },
+        {
+          "id": "ERP2_C6_T3_Q5",
+          "question": "In the example, planning is carried out as far as level 2 of the hierarchy. What does that mean for level 3 WBS elements?",
+          "options": {
+            "A": "They are not planning elements",
+            "B": "They are planning elements",
+            "C": "They are billing elements",
+            "D": "They are statistical WBS elements"
+          },
+          "correctAnswer": "A",
+          "explanation": "Only elements flagged as planning elements can be used for manual cost planning."
+        },
+        {
+          "id": "ERP2_C6_T3_Q6",
+          "question": "What does a network header contain?",
+          "options": {
+            "A": "The planned costs of every activity in the network",
+            "B": "The WBS elements that are billing elements",
+            "C": "Control data and default values for the entire network",
+            "D": "The budget profile and the budget release dates"
+          },
+          "correctAnswer": "C",
+          "explanation": "Each network has exactly one header."
+        },
+        {
+          "id": "ERP2_C6_T3_Q7",
+          "question": "For what are milestones assigned to activities and WBS elements used?",
+          "options": {
+            "A": "To document important events, for milestone billing in SD, and to start automatic workflow tasks",
+            "B": "To post actual costs and revenues to the activities",
+            "C": "To release the budget in various points of the fiscal year",
+            "D": "To assign production resources and tools to the activities"
+          },
+          "correctAnswer": "A",
+          "explanation": "Dates of milestones can be referenced in billing or invoicing plans."
+        },
+        {
+          "id": "ERP2_C6_T3_Q8",
+          "question": "Networks form the basis for planning which quantity structures?",
+          "options": {
+            "A": "Budgets, supplements, returns and transfers of funds",
+            "B": "Dates (scheduling), costs (costing), resources and material requirements",
+            "C": "Cost centers, profit centers, plants and company codes",
+            "D": "Settlement rules, overhead rates and interest calculation"
+          },
+          "correctAnswer": "B",
+          "explanation": "Dates and costs arise automatically via scheduling and costing."
+        },
+        {
+          "id": "ERP2_C6_T3_Q9",
+          "question": "Which activity categories does SAP PS have?",
+          "options": {
+            "A": "Planning, budgeting, execution and settlement",
+            "B": "Notification, planning, control and completion",
+            "C": "Stock, non-stock, text and document activities",
+            "D": "Internal processing, external processing, services and cost activities"
+          },
+          "correctAnswer": "D",
+          "explanation": "Cost activities plan additional primary costs."
+        },
+        {
+          "id": "ERP2_C6_T3_Q10",
+          "question": "What are project structure texts?",
+          "options": {
+            "A": "Original documents in Word or CAD formats stored in the DMS",
+            "B": "User-definable texts managed in a text catalog and classified into text types, assignable to WBS elements or activities",
+            "C": "Notes created automatically when the budget is exceeded",
+            "D": "Master data of the partners assigned to the WBS elements"
+          },
+          "correctAnswer": "B",
+          "explanation": "Document info records via SAP DMS handle original documents such as Excel, Word, PPT and CAD files."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C6_T4",
+      "topicName": "Planning resources, dates & costs",
+      "questions": [
+        {
+          "id": "ERP2_C6_T4_Q1",
+          "question": "Which aspects can be planned in a project system?",
+          "options": {
+            "A": "Resources, dates, materials, revenue, costs, payments and project structures",
+            "B": "Only the dates and costs of the project",
+            "C": "Only the resources and the materials of the project",
+            "D": "Only the budget and the settlement of the project"
+          },
+          "correctAnswer": "A",
+          "explanation": "Which aspect is prioritized depends on the type of project."
+        },
+        {
+          "id": "ERP2_C6_T4_Q2",
+          "question": "What is an internally processed activity used for?",
+          "options": {
+            "A": "To procure services that are provided by other companies",
+            "B": "To plan additional primary costs without capacity requirements",
+            "C": "To plan work carried out within the company, determining the output of machines or personnel",
+            "D": "To assign milestones to the project for billing purposes"
+          },
+          "correctAnswer": "C",
+          "explanation": "It requires a work center, work, duration and activity type so capacity requirements and costs can be calculated."
+        },
+        {
+          "id": "ERP2_C6_T4_Q3",
+          "question": "Which data must be defined for an internally processed activity so that capacity requirements and costs can be calculated?",
+          "options": {
+            "A": "Work center, work, duration and activity type",
+            "B": "Vendor, purchasing group, plant and storage location",
+            "C": "Budget profile, user status, supplement and transfer",
+            "D": "Settlement rule, overhead rate, interest and forecast"
+          },
+          "correctAnswer": "A",
+          "explanation": "The work center contains scheduling, capacity and costing data."
+        },
+        {
+          "id": "ERP2_C6_T4_Q4",
+          "question": "What is \"work\" in an internally processed activity?",
+          "options": {
+            "A": "The length of time for which the activity lasts",
+            "B": "The place where the activity is carried out",
+            "C": "The price used to calculate the planned costs",
+            "D": "The planned output of machines or personnel needed to complete the activity"
+          },
+          "correctAnswer": "D",
+          "explanation": "Duration specifies how long an activity lasts."
+        },
+        {
+          "id": "ERP2_C6_T4_Q5",
+          "question": "What do the activity type and the cost center derived from the work center specify?",
+          "options": {
+            "A": "The duration of the activity in working days",
+            "B": "A price for calculating the planned costs of an activity",
+            "C": "The capacity requirements of the activity",
+            "D": "The budget available for the activity"
+          },
+          "correctAnswer": "B",
+          "explanation": "This is how planned internal activity costs are calculated."
+        },
+        {
+          "id": "ERP2_C6_T4_Q6",
+          "question": "What is an externally processed activity?",
+          "options": {
+            "A": "An activity carried out by workers of the company in its own work centers",
+            "B": "An activity used only to plan additional primary costs in the network",
+            "C": "An activity for which a goods receipt is always posted to stock",
+            "D": "An activity that specifies services to be provided by other companies, processed through purchasing"
+          },
+          "correctAnswer": "D",
+          "explanation": "Example: commissioning an engineering office to design a machine."
+        },
+        {
+          "id": "ERP2_C6_T4_Q7",
+          "question": "What is automatically created when an externally processed activity is created?",
+          "options": {
+            "A": "A production order that is released automatically",
+            "B": "A purchase requisition that is processed further in purchasing",
+            "C": "A maintenance order for the work center",
+            "D": "A service entry sheet for the activity"
+          },
+          "correctAnswer": "B",
+          "explanation": "Data from a purchasing info record (prices, delivery times) can be used."
+        },
+        {
+          "id": "ERP2_C6_T4_Q8",
+          "question": "How does a service activity differ from an externally processed activity?",
+          "options": {
+            "A": "A service activity allows service specifications and value limits for unplanned services; services are entered via a service entry sheet instead of a goods receipt",
+            "B": "A service activity is processed in the company; an external one is not",
+            "C": "A service activity needs a goods receipt; an external activity does not",
+            "D": "A service activity creates a production order for the service"
+          },
+          "correctAnswer": "A",
+          "explanation": "The service purchasing process involves two steps: entry of the service and acceptance of the service."
+        },
+        {
+          "id": "ERP2_C6_T4_Q9",
+          "question": "Which tool can be used to level the capacities of work centers during project planning?",
+          "options": {
+            "A": "The Project Builder worklist",
+            "B": "The budget release function",
+            "C": "The Project Planning Board",
+            "D": "The settlement rule transaction"
+          },
+          "correctAnswer": "C",
+          "explanation": "It helps decide how much of a work center's capacity is used by the activities."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C6_T5",
+      "topicName": "Budgeting & execution",
+      "questions": [
+        {
+          "id": "ERP2_C6_T5_Q1",
+          "question": "How does a project budget differ from the project cost plan?",
+          "options": {
+            "A": "The budget is only an estimate and can be ignored during execution",
+            "B": "The budget is binding and approved by management as the anticipated development of costs",
+            "C": "The budget contains revenues while the cost plan contains payments",
+            "D": "The budget is created before the WBS is defined for the project"
+          },
+          "correctAnswer": "B",
+          "explanation": "Cost planning estimates costs as accurately as possible; funds are assigned as budget in the approval phase."
+        },
+        {
+          "id": "ERP2_C6_T5_Q2",
+          "question": "Which function assigns funds to a project and its components?",
+          "options": {
+            "A": "Budget carry forward",
+            "B": "Budget release",
+            "C": "Progress analysis",
+            "D": "Maintain original budget"
+          },
+          "correctAnswer": "D",
+          "explanation": "The budget profile determines whether funds are lump values or distributed by year."
+        },
+        {
+          "id": "ERP2_C6_T5_Q3",
+          "question": "What does the budget profile specify?",
+          "options": {
+            "A": "Which WBS elements are billing elements in the project",
+            "B": "Whether funds are assigned as lump values or distributed by year",
+            "C": "Which activities are internally or externally processed",
+            "D": "Which receivers are allowed in the settlement rule"
+          },
+          "correctAnswer": "B",
+          "explanation": "It is used with the maintain original budget function."
+        },
+        {
+          "id": "ERP2_C6_T5_Q4",
+          "question": "How can the original budget be changed after it has been frozen with a user status?",
+          "options": {
+            "A": "By overwriting the original budget amount directly",
+            "B": "By deleting the WBS elements and creating them again",
+            "C": "Only by defining supplements, returns and transfers",
+            "D": "By releasing the project to the next fiscal year"
+          },
+          "correctAnswer": "C",
+          "explanation": "A user status can prevent users from maintaining the overall project budget."
+        },
+        {
+          "id": "ERP2_C6_T5_Q5",
+          "question": "What does the budget release function do?",
+          "options": {
+            "A": "Makes funds available at various points within a fiscal year",
+            "B": "Transfers unused funds to the budget of the new fiscal year",
+            "C": "Approves the project cost plan for the next period",
+            "D": "Locks the original budget for all users"
+          },
+          "correctAnswer": "A",
+          "explanation": "Budget carry forward transfers funds not used in the previous year."
+        },
+        {
+          "id": "ERP2_C6_T5_Q6",
+          "question": "What does the budget carry forward function do?",
+          "options": {
+            "A": "Makes funds available at various points within the fiscal year",
+            "B": "Increases the original budget by a supplement",
+            "C": "Transfers funds not used in the previous year to the budget of the new fiscal year",
+            "D": "Settles the unused funds to a cost center"
+          },
+          "correctAnswer": "C",
+          "explanation": "It is the counterpart of the budget release function."
+        },
+        {
+          "id": "ERP2_C6_T5_Q7",
+          "question": "What do material components establish in SAP PS?",
+          "options": {
+            "A": "A link between PS and Sales and Distribution, Materials Management and Production Planning",
+            "B": "A link between PS and Human Capital Management and Asset Accounting",
+            "C": "A link between PS and Warehouse Management and Transportation",
+            "D": "A link between PS and Controlling and Financial Accounting only"
+          },
+          "correctAnswer": "A",
+          "explanation": "Material requirements in projects form the basis for procurement."
+        },
+        {
+          "id": "ERP2_C6_T5_Q8",
+          "question": "Which item category is used for materials kept in warehouse, project or sales order stock?",
+          "options": {
+            "A": "Non-stock item (category N)",
+            "B": "Stock item",
+            "C": "Service item",
+            "D": "Text item"
+          },
+          "correctAnswer": "B",
+          "explanation": "Reservations are created for stock items."
+        },
+        {
+          "id": "ERP2_C6_T5_Q9",
+          "question": "How is a non-stock item (item category N) procured?",
+          "options": {
+            "A": "Through the warehouse, with a reservation for the goods in stock",
+            "B": "Through the production order that is converted from a planned order",
+            "C": "Through a transfer posting from the project stock to the activity",
+            "D": "Directly by the network activity: a purchase requisition is created and the goods are posted to the activity, not to stock"
+          },
+          "correctAnswer": "D",
+          "explanation": "Non-stock items cannot be managed as project stock or sales order stock."
+        },
+        {
+          "id": "ERP2_C6_T5_Q10",
+          "question": "Which procurement element does requirements planning create for in-house production and for external procurement?",
+          "options": {
+            "A": "A production order for in-house; a purchase order for external",
+            "B": "A planned order for in-house production; a purchase requisition for external procurement",
+            "C": "A purchase requisition for in-house; a planned order for external",
+            "D": "A sales order for in-house; a delivery for external"
+          },
+          "correctAnswer": "B",
+          "explanation": "Planned elements are then converted into production orders and purchase orders."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C6_T6",
+      "topicName": "Period-end closing & settlement",
+      "questions": [
+        {
+          "id": "ERP2_C6_T6_Q1",
+          "question": "What is the purpose of period-end closing in a project?",
+          "options": {
+            "A": "To create the project definition and WBS for the next period",
+            "B": "To assign a budget profile to the WBS elements of the project",
+            "C": "To transfer the project to the maintenance planning plant",
+            "D": "To ensure that all data belonging to a period has been determined and is available for enterprise control"
+          },
+          "correctAnswer": "D",
+          "explanation": "It frames the period-related commercial transactions."
+        },
+        {
+          "id": "ERP2_C6_T6_Q2",
+          "question": "What does progress analysis do?",
+          "options": {
+            "A": "Capitalizes costs of WBS elements and sets up provisions",
+            "B": "Determines planned and actual project progress values and compares them",
+            "C": "Allocates overhead through percentage-based rates",
+            "D": "Settles costs and revenues to one or more receivers"
+          },
+          "correctAnswer": "B",
+          "explanation": "It allows corrective action if the project deviates from its plan."
+        },
+        {
+          "id": "ERP2_C6_T6_Q3",
+          "question": "What does results analysis do?",
+          "options": {
+            "A": "Compares planned and actual progress values of the whole project",
+            "B": "Adapts cost planning to changed circumstances of the project",
+            "C": "Allocates costs between cost centers using activity types",
+            "D": "Periodically values the project, analyzing capitalized costs of WBS elements and provisions, usually in the billing element"
+          },
+          "correctAnswer": "D",
+          "explanation": "It is usually performed in the billing element."
+        },
+        {
+          "id": "ERP2_C6_T6_Q4",
+          "question": "How is the cost to complete in a cost forecast determined?",
+          "options": {
+            "A": "Actual and commitment costs already incurred plus the updated cost to complete",
+            "B": "Planned costs minus actual costs already posted to the project",
+            "C": "The original budget plus supplements and transfers of funds",
+            "D": "The overhead rates multiplied by the primary cost elements"
+          },
+          "correctAnswer": "A",
+          "explanation": "The system values the remaining activities based on plan, forecast and actual values in the network."
+        },
+        {
+          "id": "ERP2_C6_T6_Q5",
+          "question": "How does overhead costing allocate overhead?",
+          "options": {
+            "A": "Through settlement rules stored in the sender objects",
+            "B": "Through activity types and the quantity of activity performed",
+            "C": "Through percentage-based or quantity-based overhead rates, based on primary cost elements posted as overhead",
+            "D": "Through the budget profile and the user statuses of the project"
+          },
+          "correctAnswer": "C",
+          "explanation": "Template allocation distributes overhead from business processes, cost centers or activity types."
+        },
+        {
+          "id": "ERP2_C6_T6_Q6",
+          "question": "What does project interest calculation do?",
+          "options": {
+            "A": "Values fund commitments using costs, revenues or payments to achieve the best possible payment flow",
+            "B": "Capitalizes the costs of WBS elements to fixed assets",
+            "C": "Compares the planned and actual dates of activities",
+            "D": "Calculates the interest on the budget of the previous year"
+          },
+          "correctAnswer": "A",
+          "explanation": "It is one of the period-end closing activities."
+        },
+        {
+          "id": "ERP2_C6_T6_Q7",
+          "question": "Which situations produce actual costs and revenues in a project?",
+          "options": {
+            "A": "Only vendor invoices and customer billing",
+            "B": "Only confirmations of network activities",
+            "C": "Material withdrawals and goods receipts, vendor invoices, customer billing, internal activity allocations and confirmation of network activities",
+            "D": "Only budget supplements and transfers of funds"
+          },
+          "correctAnswer": "C",
+          "explanation": "These costs are later transferred in settlement."
+        },
+        {
+          "id": "ERP2_C6_T6_Q8",
+          "question": "To which receivers can costs and revenues of a project be settled?",
+          "options": {
+            "A": "Only to the cost centers of the controlling area",
+            "B": "Only to G/L accounts in financial accounting",
+            "C": "Only to the next project in the project hierarchy",
+            "D": "G/L accounts in FI, fixed assets, cost accounting or profitability analysis objects, and PS objects"
+          },
+          "correctAnswer": "D",
+          "explanation": "Settlement allocates costs and revenues or results analysis data to one or more receivers."
+        },
+        {
+          "id": "ERP2_C6_T6_Q9",
+          "question": "What do settlement rules determine?",
+          "options": {
+            "A": "Which WBS elements are planning elements of the project",
+            "B": "Which portions of the sender's costs are transferred to which cost receivers",
+            "C": "Which activities are scheduled on which work centers",
+            "D": "Which budget profile applies to the original budget"
+          },
+          "correctAnswer": "B",
+          "explanation": "They are stored in the sender objects and contain distribution rules and settlement parameters."
+        },
+        {
+          "id": "ERP2_C6_T6_Q10",
+          "question": "How can settlement rules be created for WBS elements?",
+          "options": {
+            "A": "Only by the system at the time of technical completion",
+            "B": "Manually in the Project Builder, or with the Create Settlement Rule transaction or Fiori app using strategies",
+            "C": "Only by copying them from a vendor master record",
+            "D": "Only in the budget profile of the project"
+          },
+          "correctAnswer": "B",
+          "explanation": "Strategies can create rules for cost centers or profitability segments, or inherit predefined settlement rules."
         }
       ]
     }
