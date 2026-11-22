@@ -27,6 +27,13 @@
       "biIcon": "shield-lock-fill",
       "folder": "ATTT",
       "description": "Mật mã, kiểm soát truy cập, quản lý rủi ro (ALE/SLE), ATBM TMĐT"
+    },
+    {
+      "id": "NenTang",
+      "name": "Nền tảng",
+      "biIcon": "diagram-3-fill",
+      "folder": "Nền tảng",
+      "description": "Mạng máy tính: mô hình OSI, TCP/IP, thiết bị mạng, Wi-Fi, tường lửa, mã hóa, định tuyến"
     }
   ]
 }
