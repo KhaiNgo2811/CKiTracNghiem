@@ -9,26 +9,26 @@
     {
       "chapterId": "ERP2_C2",
       "chapterName": "Chapter 2 – Financial Accounting (FI)",
-      "topicCount": 7,
-      "questionCount": 89
+      "topicCount": 11,
+      "questionCount": 131
     },
     {
       "chapterId": "ERP2_C3",
       "chapterName": "Chapter 3 – Overhead Management (CO)",
-      "topicCount": 8,
-      "questionCount": 87
+      "topicCount": 10,
+      "questionCount": 109
     },
     {
       "chapterId": "ERP2_C4",
       "chapterName": "Chapter 4 – The Procurement Process (MM)",
-      "topicCount": 6,
-      "questionCount": 100
+      "topicCount": 11,
+      "questionCount": 157
     },
     {
       "chapterId": "ERP2_C5",
       "chapterName": "Chapter 5 – The Fulfillment Process (SD)",
-      "topicCount": 7,
-      "questionCount": 108
+      "topicCount": 12,
+      "questionCount": 158
     },
     {
       "chapterId": "ERP2_C6",
@@ -41,24 +41,6 @@
       "chapterName": "TS410 Unit 11 – Enterprise Asset Management (EAM)",
       "topicCount": 5,
       "questionCount": 55
-    },
-    {
-      "chapterId": "ERP2_C8",
-      "chapterName": "TS410 Unit 4 – Record to Report: FI & CO",
-      "topicCount": 6,
-      "questionCount": 64
-    },
-    {
-      "chapterId": "ERP2_C9",
-      "chapterName": "TS410 Unit 6 – Source to Pay: MM",
-      "topicCount": 5,
-      "questionCount": 57
-    },
-    {
-      "chapterId": "ERP2_C10",
-      "chapterName": "TS410 Unit 9 – Lead to Cash: SD",
-      "topicCount": 5,
-      "questionCount": 50
     }
   ],
   "totalQuestions": 727,

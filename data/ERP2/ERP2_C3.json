@@ -1093,6 +1093,282 @@
           "explanation": "The same settlement techniques are used for service orders in customer service."
         }
       ]
+    },
+    {
+      "topicId": "ERP2_C3_T9",
+      "topicName": "TS410 – Management Accounting (CO) & FI–CO integration",
+      "questions": [
+        {
+          "id": "ERP2_C3_T9_Q1",
+          "question": "What is the purpose of Management Accounting (CO)?",
+          "options": {
+            "A": "To meet the legal requirements of a country or reporting standard",
+            "B": "To record all monetary flows and evaluate the inventories",
+            "C": "To collect revenue and expenses by areas of responsibility and provide information for management decisions",
+            "D": "To produce the balance sheet for external stakeholders"
+          },
+          "correctAnswer": "C",
+          "explanation": "CO covers all functions necessary for controlling costs and revenues effectively."
+        },
+        {
+          "id": "ERP2_C3_T9_Q2",
+          "question": "Which is the primary source of data for CO?",
+          "options": {
+            "A": "Financial Accounting (FI): most expense postings in the G/L result in a cost posting in CO",
+            "B": "Human Capital Management, which posts all labor costs to CO",
+            "C": "Sales order management, which posts all revenue to CO",
+            "D": "Production planning, which posts all production costs to CO"
+          },
+          "correctAnswer": "A",
+          "explanation": "Expense postings can be journal postings, vendor invoices or depreciation postings."
+        },
+        {
+          "id": "ERP2_C3_T9_Q3",
+          "question": "What does Product Cost Controlling calculate?",
+          "options": {
+            "A": "The profit or loss of an organization per market segment",
+            "B": "The costs that occur at the cost centers for each period",
+            "C": "The costs incurred when a service is provided or a product is manufactured, e.g., the minimum price for profitable marketing",
+            "D": "The costs that are collected for temporary internal activities"
+          },
+          "correctAnswer": "C",
+          "explanation": "BOMs and routings can be used in CO-PC."
+        },
+        {
+          "id": "ERP2_C3_T9_Q4",
+          "question": "What does Profitability Analysis (CO-PA) do?",
+          "options": {
+            "A": "Calculates the cost of manufacturing a product or service",
+            "B": "Analyzes profit or loss per market segment by assigning costs to the revenues of each segment",
+            "C": "Allocates costs between cost centers and internal orders",
+            "D": "Records the depreciation of fixed assets in the G/L"
+          },
+          "correctAnswer": "B",
+          "explanation": "It gives a basis for calculating prices, targeting customers and choosing sales channels."
+        },
+        {
+          "id": "ERP2_C3_T9_Q5",
+          "question": "What does Cost Center Accounting take the costs of a company and do with them?",
+          "options": {
+            "A": "Assigns them to the market segments with the highest revenue",
+            "B": "Posts them to the balance sheet accounts of the company code",
+            "C": "Combines them in one internal order for the period",
+            "D": "Allocates them to the sub-areas that actually caused them"
+          },
+          "correctAnswer": "D",
+          "explanation": "Cost centers are separate areas within a controlling area at which costs are incurred."
+        },
+        {
+          "id": "ERP2_C3_T9_Q6",
+          "question": "In cost center accounting, what is the role of an activity type?",
+          "options": {
+            "A": "The category of a cost element used in assessments",
+            "B": "The type of activity that can be provided by a cost center, valued with a price",
+            "C": "The hierarchy node a cost center belongs to",
+            "D": "The profit center to which a cost center is assigned"
+          },
+          "correctAnswer": "B",
+          "explanation": "Activity outputs supplied by one cost center to others represent a utilization of resources."
+        },
+        {
+          "id": "ERP2_C3_T9_Q7",
+          "question": "What are internal orders used for?",
+          "options": {
+            "A": "To record the costs of customer orders for billing",
+            "B": "To post the depreciation of fixed assets to the G/L",
+            "C": "To group cost centers with similar characteristics",
+            "D": "To plan, collect and analyze the costs arising from internal activities"
+          },
+          "correctAnswer": "D",
+          "explanation": "Internal orders can settle costs to cost centers, ABC processes and other internal orders."
+        },
+        {
+          "id": "ERP2_C3_T9_Q8",
+          "question": "Which statement describes the difference between FI and CO regarding the level at which they are needed?",
+          "options": {
+            "A": "The level for CO is determined by law; FI analyzes costs worldwide",
+            "B": "Both are determined by law and identical in every country",
+            "C": "The level for FI is determined by law and differs per country; CO analyzes costs and revenues across country boundaries",
+            "D": "Neither is limited by legal reporting requirements"
+          },
+          "correctAnswer": "C",
+          "explanation": "Results in Management Accounting can be compared with those in FI (reconciliation)."
+        },
+        {
+          "id": "ERP2_C3_T9_Q9",
+          "question": "What is the Universal Journal in SAP S/4HANA, and what is its table?",
+          "options": {
+            "A": "The common line item store of actual data for FI and CO, table ACDOCA",
+            "B": "The list of all journal entry templates, table BKPF",
+            "C": "The header table of accounting documents, table BSEG",
+            "D": "The table of controlling objects, table COSP"
+          },
+          "correctAnswer": "A",
+          "explanation": "It is the single source of truth for all accounting components."
+        },
+        {
+          "id": "ERP2_C3_T9_Q10",
+          "question": "Which benefits does the Universal Journal data model provide?",
+          "options": {
+            "A": "One line item table with full detail, data stored only once so no reconciliation is needed, and fast multi-dimensional reporting without replication to BI",
+            "B": "Separate tables for FI and CO that are reconciled every night",
+            "C": "Aggregated totals only, to reduce the memory footprint",
+            "D": "Replication of all postings to BI for every report"
+          },
+          "correctAnswer": "A",
+          "explanation": "It also reduces the memory footprint through elimination of redundancy."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C3_T10",
+      "topicName": "TS410 – Cost centers & profit centers",
+      "questions": [
+        {
+          "id": "ERP2_C3_T10_Q1",
+          "question": "What is a cost center?",
+          "options": {
+            "A": "A management-oriented unit used for internal profit control",
+            "B": "A temporary object that collects the costs of an event",
+            "C": "A G/L account that records the costs of a department",
+            "D": "Master data in a CO area representing a delimited location where costs occur"
+          },
+          "correctAnswer": "D",
+          "explanation": "It supports cost determination and cost controlling."
+        },
+        {
+          "id": "ERP2_C3_T10_Q2",
+          "question": "According to which approaches can cost centers be defined?",
+          "options": {
+            "A": "Only by the legal entity (company code) they belong to",
+            "B": "Functional requirements, allocation criteria, activities and services provided, geographic location or area of responsibility",
+            "C": "Only by the product groups that they produce",
+            "D": "Only by the customers they supply with services"
+          },
+          "correctAnswer": "B",
+          "explanation": "The approach should be consistent throughout the enterprise."
+        },
+        {
+          "id": "ERP2_C3_T10_Q3",
+          "question": "What must each CO area have regarding cost centers?",
+          "options": {
+            "A": "A separate standard hierarchy for each company code",
+            "B": "A profit center for every cost center created",
+            "C": "One cost center for each G/L account",
+            "D": "A unique standard hierarchy that includes every cost center of the CO area"
+          },
+          "correctAnswer": "D",
+          "explanation": "The standard hierarchy node field in the cost center master data must be filled."
+        },
+        {
+          "id": "ERP2_C3_T10_Q4",
+          "question": "Which organizational area is a cost center mostly assigned to?",
+          "options": {
+            "A": "A profit center (its responsible organizational area)",
+            "B": "A plant",
+            "C": "A sales area",
+            "D": "A purchasing group"
+          },
+          "correctAnswer": "A",
+          "explanation": "Segments can be derived via the profit center entered in the cost center master record."
+        },
+        {
+          "id": "ERP2_C3_T10_Q5",
+          "question": "What is the cost center master record in terms of time?",
+          "options": {
+            "A": "Valid for all periods and assigned directly to the company code",
+            "B": "Valid only for one fiscal year and deleted at year end",
+            "C": "Time dependent and assigned to a node of the standard cost center hierarchy",
+            "D": "Independent of the standard hierarchy"
+          },
+          "correctAnswer": "C",
+          "explanation": "The control data can lock the cost center against planning and posting."
+        },
+        {
+          "id": "ERP2_C3_T10_Q6",
+          "question": "What are statistical key figures?",
+          "options": {
+            "A": "Non-monetary information planned and posted on cost centers, used for reporting and as distribution factors",
+            "B": "Monetary amounts allocated from one cost center to another",
+            "C": "Secondary cost elements used in assessments",
+            "D": "Prices valuing the activity types of a cost center"
+          },
+          "correctAnswer": "A",
+          "explanation": "Example: distributing facility costs by the square meters used."
+        },
+        {
+          "id": "ERP2_C3_T10_Q7",
+          "question": "What does the category \"Fixed\" mean for a statistical key figure?",
+          "options": {
+            "A": "Periodic values can be added to a total",
+            "B": "The value cannot be changed after posting",
+            "C": "Periodic values cannot be added; the total of a period is calculated as the average of single values",
+            "D": "The value is the same for all cost centers"
+          },
+          "correctAnswer": "C",
+          "explanation": "With category \"Total\" the periodic values can be added to a total."
+        },
+        {
+          "id": "ERP2_C3_T10_Q8",
+          "question": "What is Profit Center Accounting (PCA) used for?",
+          "options": {
+            "A": "Calculating the cost of manufacturing a product",
+            "B": "Recording all legal financial transactions of a company code",
+            "C": "Tracking costs at the location where they occur",
+            "D": "Evaluating specific areas of the organization, e.g., by region, function or product, to analyze internal profit and loss"
+          },
+          "correctAnswer": "D",
+          "explanation": "Typical questions: contribution of a unit, return on investment, cost management."
+        },
+        {
+          "id": "ERP2_C3_T10_Q9",
+          "question": "What is a profit center?",
+          "options": {
+            "A": "A delimited location where costs occur",
+            "B": "A management-oriented organizational unit used for internal control, essentially a company within the company",
+            "C": "A temporary collector of costs of an event",
+            "D": "The smallest unit with a legal set of books"
+          },
+          "correctAnswer": "B",
+          "explanation": "It is defined at CO area level and its master data is time dependent."
+        },
+        {
+          "id": "ERP2_C3_T10_Q10",
+          "question": "What makes profit centers unique among account assignment objects?",
+          "options": {
+            "A": "They can be assigned to balance sheet transactions as well as to profit and loss transactions",
+            "B": "They can only receive revenue postings",
+            "C": "They can only be assigned to cost centers",
+            "D": "They can be created without a controlling area"
+          },
+          "correctAnswer": "A",
+          "explanation": "Online document splitting provides balance sheet reporting at profit center level."
+        },
+        {
+          "id": "ERP2_C3_T10_Q11",
+          "question": "Which objects have fields for profit center assignment in their master records?",
+          "options": {
+            "A": "Only cost centers and internal orders",
+            "B": "Only G/L accounts and company codes",
+            "C": "Cost centers, business processes, internal orders, projects, production orders and cost objects",
+            "D": "Only plants and storage locations"
+          },
+          "correctAnswer": "C",
+          "explanation": "When the original object is posted, the system automatically posts to the profit center."
+        },
+        {
+          "id": "ERP2_C3_T10_Q12",
+          "question": "Do profitability segments have a master record?",
+          "options": {
+            "A": "No: a profitability segment combines characteristics such as customer, product, plant or distribution channel, and the profit center is always one of them",
+            "B": "Yes: they are master data defined at controlling area level",
+            "C": "Yes: they are assigned to a fixed asset in the master record",
+            "D": "No: they are posted only to the standard hierarchy node"
+          },
+          "correctAnswer": "A",
+          "explanation": "The profit center can be derived from the material and plant."
+        }
+      ]
     }
   ]
 }

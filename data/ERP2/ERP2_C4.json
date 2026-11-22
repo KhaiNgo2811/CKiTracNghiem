@@ -1237,6 +1237,720 @@
           "explanation": "Testing also checks that business rules and parameters are executed properly."
         }
       ]
+    },
+    {
+      "topicId": "ERP2_C4_T7",
+      "topicName": "TS410 – Source to Pay process & S/4HANA changes",
+      "questions": [
+        {
+          "id": "ERP2_C4_T7_Q1",
+          "question": "Which is the correct order of the steps in the source-to-pay business process?",
+          "options": {
+            "A": "Purchase order, requirements determination, goods receipt, payment, invoice verification, PO monitoring, source determination",
+            "B": "Source determination, goods receipt, purchase requisition, invoice verification, payment",
+            "C": "Invoice verification, goods receipt, purchase order, requirements determination, payment",
+            "D": "Requirements determination, source determination, purchase order, PO monitoring, goods receipt, invoice verification, payment"
+          },
+          "correctAnswer": "D",
+          "explanation": "Seven steps from requirement to payment of vendor liabilities."
+        },
+        {
+          "id": "ERP2_C4_T7_Q2",
+          "question": "How can a purchase requisition be created automatically?",
+          "options": {
+            "A": "By the goods receipt posting",
+            "B": "By Materials Requirements Planning (MRP), maintenance orders, production orders or networks",
+            "C": "By the automatic payment run",
+            "D": "By the invoice verification step"
+          },
+          "correctAnswer": "B",
+          "explanation": "It can also be created manually by the requesting department or initiated from SAP Ariba."
+        },
+        {
+          "id": "ERP2_C4_T7_Q3",
+          "question": "How can the buyer find the supplier with the best price?",
+          "options": {
+            "A": "By posting a valuated goods receipt",
+            "B": "By running the automatic payment program",
+            "C": "By checking the stock overview report",
+            "D": "By requesting quotations (RFQs) and comparing prices between supply sources or quotations"
+          },
+          "correctAnswer": "D",
+          "explanation": "Existing POs, outline agreements and info records are also supply sources."
+        },
+        {
+          "id": "ERP2_C4_T7_Q4",
+          "question": "Why should a goods receipt be entered with reference to the purchase order?",
+          "options": {
+            "A": "It reduces entries, lets the system check material and quantity against the PO and updates the PO history",
+            "B": "It automatically pays the vendor invoice",
+            "C": "It creates the purchase requisition retroactively",
+            "D": "It removes the need for a material document"
+          },
+          "correctAnswer": "A",
+          "explanation": "The system proposes all open PO items."
+        },
+        {
+          "id": "ERP2_C4_T7_Q5",
+          "question": "What does Logistics Invoice Verification (LIV) do?",
+          "options": {
+            "A": "Pays the vendor and clears the open item on the vendor account",
+            "B": "Posts the goods receipt against the purchase order",
+            "C": "Enters vendor invoices and credit memos relating to a PO and completes the procurement process in MM, excluding payment",
+            "D": "Creates the purchase requisition from the MRP run"
+          },
+          "correctAnswer": "C",
+          "explanation": "Posting the invoice updates the PO history and creates an open item on the vendor account."
+        },
+        {
+          "id": "ERP2_C4_T7_Q6",
+          "question": "What happens to foreign trade functionality in SAP S/4HANA on-premise?",
+          "options": {
+            "A": "It is not available in MM; SAP Global Trade Services (GTS) is the successor",
+            "B": "It remains part of standard MM unchanged",
+            "C": "It is replaced by SAP Ariba",
+            "D": "It is moved to Financial Accounting"
+          },
+          "correctAnswer": "A",
+          "explanation": "SAP GTS can be connected to SAP S/4HANA."
+        },
+        {
+          "id": "ERP2_C4_T7_Q7",
+          "question": "From which table is the actual stock quantity calculated on the fly in SAP S/4HANA?",
+          "options": {
+            "A": "The table MARD",
+            "B": "The table EKPO",
+            "C": "The new material document table MATDOC",
+            "D": "The table ACDOCA"
+          },
+          "correctAnswer": "C",
+          "explanation": "Having most information in one place gives simple and fast reporting."
+        },
+        {
+          "id": "ERP2_C4_T7_Q8",
+          "question": "What is obligatory for material valuation in SAP S/4HANA?",
+          "options": {
+            "A": "Actual Costing",
+            "B": "The statistical moving average price",
+            "C": "Foreign Trade",
+            "D": "The Material Ledger"
+          },
+          "correctAnswer": "D",
+          "explanation": "Actual Costing remains optional."
+        },
+        {
+          "id": "ERP2_C4_T7_Q9",
+          "question": "What is the effect of deactivating the statistical moving average price?",
+          "options": {
+            "A": "It makes Actual Costing mandatory for all materials",
+            "B": "Exclusive locks are no longer needed for standard price materials, so goods-movement throughput increases; it is not reversible",
+            "C": "It can be reversed at any time by any user",
+            "D": "It changes the financial valuation of all stock"
+          },
+          "correctAnswer": "B",
+          "explanation": "Materials with price control Moving Average are still limited by exclusive locking."
+        },
+        {
+          "id": "ERP2_C4_T7_Q10",
+          "question": "What do the two price controls for a material mean?",
+          "options": {
+            "A": "Standard gives fixed-price valuation; Moving Average lets any transaction change unit costs",
+            "B": "Standard changes with every goods movement; Moving Average is fixed",
+            "C": "Both are fixed prices that only differ by currency",
+            "D": "Standard is used for services; Moving Average for consumables only"
+          },
+          "correctAnswer": "A",
+          "explanation": "Standard price gives much higher throughput for goods movements."
+        },
+        {
+          "id": "ERP2_C4_T7_Q11",
+          "question": "Which channels does the new SAP S/4HANA output management support?",
+          "options": {
+            "A": "Fax, telex and EDI only",
+            "B": "Only SAP Script printing",
+            "C": "E-mail, printout and XML",
+            "D": "Only workflow events"
+          },
+          "correctAnswer": "C",
+          "explanation": "The new output management is based on BRF+ instead of NAST."
+        },
+        {
+          "id": "ERP2_C4_T7_Q12",
+          "question": "What is SAP Ariba in the intelligent-spend scenario?",
+          "options": {
+            "A": "The connection to the business network, a collaboration platform where partners exchange information",
+            "B": "The digital core that stores all transactions",
+            "C": "The planning extension for S&OP",
+            "D": "The tool for creating forms and logos"
+          },
+          "correctAnswer": "A",
+          "explanation": "The digital core is S/4HANA; IBP is the planning extension."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C4_T8",
+      "topicName": "TS410 – Organizational levels in procurement",
+      "questions": [
+        {
+          "id": "ERP2_C4_T8_Q1",
+          "question": "What is the client?",
+          "options": {
+            "A": "The smallest unit with a complete set of books, identified by a four-character key",
+            "B": "The highest organizational unit, self-contained legally, organizationally and in data, identified by a three-digit key",
+            "C": "A unit that subdivides the enterprise by purchasing requirements",
+            "D": "A unit that differentiates stocks of material within a plant"
+          },
+          "correctAnswer": "B",
+          "explanation": "Data created at client level applies to all company codes."
+        },
+        {
+          "id": "ERP2_C4_T8_Q2",
+          "question": "How is a company code defined in a client?",
+          "options": {
+            "A": "By a three-digit numeric key",
+            "B": "By a two-character key",
+            "C": "By the plant it belongs to",
+            "D": "By a four-character alphanumeric key"
+          },
+          "correctAnswer": "D",
+          "explanation": "Several company codes can be set up in one client."
+        },
+        {
+          "id": "ERP2_C4_T8_Q3",
+          "question": "What is the role of the purchasing organization?",
+          "options": {
+            "A": "It represents a buyer who contacts vendors",
+            "B": "It procures materials or services and negotiates purchase conditions with vendors",
+            "C": "It keeps stocks of material in a plant",
+            "D": "It produces the balance sheet of the company"
+          },
+          "correctAnswer": "B",
+          "explanation": "It subdivides the enterprise by purchasing requirements."
+        },
+        {
+          "id": "ERP2_C4_T8_Q5",
+          "question": "What is a plant?",
+          "options": {
+            "A": "A logistics unit that subdivides the enterprise into production, procurement and materials planning",
+            "B": "A unit of external accounting with its own balance sheet",
+            "C": "A group of buyers responsible for purchasing",
+            "D": "A key identifying the storage bin"
+          },
+          "correctAnswer": "A",
+          "explanation": "It can represent a production facility, a regional sales office or a maintenance location."
+        },
+        {
+          "id": "ERP2_C4_T8_Q6",
+          "question": "What is the relationship between plants and company codes?",
+          "options": {
+            "A": "A plant can belong to several company codes",
+            "B": "A company code can contain only one plant",
+            "C": "A company code may contain several plants, but a plant can belong to only one company code",
+            "D": "Plants and company codes are not related"
+          },
+          "correctAnswer": "C",
+          "explanation": "Specifying the plant therefore also specifies the company code."
+        },
+        {
+          "id": "ERP2_C4_T8_Q7",
+          "question": "How are storage locations assigned to plants?",
+          "options": {
+            "A": "Several storage locations can belong to one plant, but a storage location belongs to only one plant",
+            "B": "One storage location can belong to several plants",
+            "C": "Each plant has exactly one storage location",
+            "D": "Storage locations are assigned to company codes directly"
+          },
+          "correctAnswer": "A",
+          "explanation": "The same storage location key can be reused in different plants."
+        },
+        {
+          "id": "ERP2_C4_T8_Q8",
+          "question": "At which level is inventory management carried out?",
+          "options": {
+            "A": "At the client level",
+            "B": "At the storage location level within the plant",
+            "C": "At the purchasing group level",
+            "D": "At the company code level"
+          },
+          "correctAnswer": "B",
+          "explanation": "Storage locations differentiate stocks of materials in a plant."
+        },
+        {
+          "id": "ERP2_C4_T8_Q9",
+          "question": "How is a cross-company-code purchasing organization set up?",
+          "options": {
+            "A": "By assigning it to every plant",
+            "B": "By assigning it to one company code only",
+            "C": "By assigning it to a storage location",
+            "D": "By not assigning the purchasing organization to any company code"
+          },
+          "correctAnswer": "D",
+          "explanation": "The system asks for the company code when a PO is created."
+        },
+        {
+          "id": "ERP2_C4_T8_Q10",
+          "question": "What characterizes a plant-specific purchasing organization?",
+          "options": {
+            "A": "It procures for all plants in the client",
+            "B": "It is assigned to one company code and one plant and procures materials for that plant only",
+            "C": "It is not assigned to any company code",
+            "D": "It is assigned to several company codes"
+          },
+          "correctAnswer": "B",
+          "explanation": "A cross-plant purchasing organization is assigned to a company code and procures for its plants."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C4_T9",
+      "topicName": "TS410 – Material, vendor & info record master data",
+      "questions": [
+        {
+          "id": "ERP2_C4_T9_Q1",
+          "question": "Why is all material data stored in one material master record?",
+          "options": {
+            "A": "To eliminate data redundancy so purchasing, inventory management, planning and invoice verification use the same data",
+            "B": "To limit access to a single department",
+            "C": "To prevent changes after the material is created",
+            "D": "To avoid change documents for the material"
+          },
+          "correctAnswer": "A",
+          "explanation": "Each department works with its own view of the record."
+        },
+        {
+          "id": "ERP2_C4_T9_Q2",
+          "question": "Which data is stored at the client level of the material master?",
+          "options": {
+            "A": "The storage bin and picking data",
+            "B": "The purchasing group and price control",
+            "C": "Data valid for all plants, such as the base unit of measure, goods group and short text",
+            "D": "The warehouse number and storage type"
+          },
+          "correctAnswer": "C",
+          "explanation": "The purchase order text is also maintained at client level."
+        },
+        {
+          "id": "ERP2_C4_T9_Q3",
+          "question": "Which data is typically stored at plant level in the material master?",
+          "options": {
+            "A": "Purchasing group, purchase order unit of measure, shelf-life data and price control",
+            "B": "Base unit of measure and the material short text",
+            "C": "The storage bin of the material",
+            "D": "The vendor address and bank details"
+          },
+          "correctAnswer": "A",
+          "explanation": "Much purchasing, inventory and valuation data is kept at plant level."
+        },
+        {
+          "id": "ERP2_C4_T9_Q4",
+          "question": "Which data is stored at the storage location level?",
+          "options": {
+            "A": "The purchase order text",
+            "B": "The base unit of measure",
+            "C": "The price control of the material",
+            "D": "Data valid for a particular storage location, such as the storage bin"
+          },
+          "correctAnswer": "D",
+          "explanation": "Client, plant and storage location matter for external procurement."
+        },
+        {
+          "id": "ERP2_C4_T9_Q5",
+          "question": "What is the difference between creating and changing a material in the transactions?",
+          "options": {
+            "A": "Change can add new views; Create can only display data",
+            "B": "Create extends a material by adding missing views or levels; Change can only modify views and levels that already exist",
+            "C": "Both can add views and levels without limits",
+            "D": "Create deletes the existing change documents"
+          },
+          "correctAnswer": "B",
+          "explanation": "All changes are logged in change documents."
+        },
+        {
+          "id": "ERP2_C4_T9_Q6",
+          "question": "Which transaction is the single point of entry for business partners, customers and vendors in S/4HANA?",
+          "options": {
+            "A": "Transaction ME21N",
+            "B": "Transaction MIGO",
+            "C": "Transaction MIRO",
+            "D": "Transaction BP"
+          },
+          "correctAnswer": "D",
+          "explanation": "It can also be maintained through a Fiori app."
+        },
+        {
+          "id": "ERP2_C4_T9_Q7",
+          "question": "Which statement about the business partner category is true?",
+          "options": {
+            "A": "It can be changed at any time",
+            "B": "It determines the fields available for entry and cannot be changed after the partner is created",
+            "C": "It defines the purchasing organization",
+            "D": "It defines the number of company codes"
+          },
+          "correctAnswer": "B",
+          "explanation": "The categories are person, organization and group."
+        },
+        {
+          "id": "ERP2_C4_T9_Q8",
+          "question": "At which level is the data of the FI Vendor role maintained?",
+          "options": {
+            "A": "At the company code level",
+            "B": "At the client level",
+            "C": "At the purchasing organization level",
+            "D": "At the plant level"
+          },
+          "correctAnswer": "A",
+          "explanation": "It contains the reconciliation account and payment methods."
+        },
+        {
+          "id": "ERP2_C4_T9_Q9",
+          "question": "Where is the purchasing data of a supplier maintained?",
+          "options": {
+            "A": "In the FI Vendor role for each company code",
+            "B": "In the general role for each client",
+            "C": "In the Supplier role for each purchasing organization",
+            "D": "In the material master for each plant"
+          },
+          "correctAnswer": "C",
+          "explanation": "It includes PO currency, Incoterms and partner roles."
+        },
+        {
+          "id": "ERP2_C4_T9_Q10",
+          "question": "Which information does a purchasing info record store?",
+          "options": {
+            "A": "The stock quantities of a material per storage location",
+            "B": "Vendor-material information such as prices and conditions, delivery data, vendor data and the last PO number",
+            "C": "The G/L accounts used for goods receipts",
+            "D": "The payment run settings of the vendor"
+          },
+          "correctAnswer": "B",
+          "explanation": "It is stored at purchasing organization and plant level."
+        },
+        {
+          "id": "ERP2_C4_T9_Q11",
+          "question": "How do the two text types in an info record differ?",
+          "options": {
+            "A": "The memo is printed; the PO text is internal only",
+            "B": "Both texts are printed on the PO",
+            "C": "Neither is transferred to the PO item",
+            "D": "The internal memo is not printed; the PO text describes the PO item and is printed"
+          },
+          "correctAnswer": "D",
+          "explanation": "Both can be transferred to the PO item."
+        },
+        {
+          "id": "ERP2_C4_T9_Q12",
+          "question": "Where do conditions of a contract apply?",
+          "options": {
+            "A": "To all POs of the vendor",
+            "B": "To all contract release orders created with reference to the contract",
+            "C": "Only to the info record of one material",
+            "D": "Only to the goods receipt"
+          },
+          "correctAnswer": "B",
+          "explanation": "Info record conditions apply to PO items with that material and vendor."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C4_T10",
+      "topicName": "TS410 – Purchase requisitions, purchase orders & account assignment",
+      "questions": [
+        {
+          "id": "ERP2_C4_T10_Q2",
+          "question": "Who determines the source of supply for a purchase requisition?",
+          "options": {
+            "A": "The purchasing department, which assigns a source and then converts the requisition into a PO or RFQ",
+            "B": "The requesting department only",
+            "C": "The accounting department when the invoice arrives",
+            "D": "The warehouse after the goods receipt"
+          },
+          "correctAnswer": "A",
+          "explanation": "The source determination can be automated."
+        },
+        {
+          "id": "ERP2_C4_T10_Q3",
+          "question": "When must an account assignment be entered for a PO item?",
+          "options": {
+            "A": "For all stock materials",
+            "B": "Only for materials with moving average price",
+            "C": "For pure consumables, materials without a master record and services",
+            "D": "Only for items from info records"
+          },
+          "correctAnswer": "C",
+          "explanation": "Stock materials take the account assignment from the material master valuation class."
+        },
+        {
+          "id": "ERP2_C4_T10_Q4",
+          "question": "What does account assignment category K stand for?",
+          "options": {
+            "A": "An asset, with the asset number",
+            "B": "A cost center, together with a G/L consumption account",
+            "C": "A sales order",
+            "D": "A project network"
+          },
+          "correctAnswer": "B",
+          "explanation": "Category A is the asset."
+        },
+        {
+          "id": "ERP2_C4_T10_Q5",
+          "question": "How is the G/L account determined for account assignment category A?",
+          "options": {
+            "A": "Manually from the cost center",
+            "B": "From the purchasing group",
+            "C": "From the vendor master record",
+            "D": "Automatically from the asset number; it cannot be entered manually"
+          },
+          "correctAnswer": "D",
+          "explanation": "The asset number must be entered on the account assignment screen."
+        },
+        {
+          "id": "ERP2_C4_T10_Q6",
+          "question": "What do stock materials need for procurement?",
+          "options": {
+            "A": "An account assignment category and cost center",
+            "B": "A material master record; no account assignment category is given in the PO",
+            "C": "No master record and only a short text",
+            "D": "A purchase requisition from SAP Ariba"
+          },
+          "correctAnswer": "B",
+          "explanation": "The goods receipt posts to a stock account based on the valuation class."
+        },
+        {
+          "id": "ERP2_C4_T10_Q7",
+          "question": "What must be entered manually when procuring a consumable without a material master?",
+          "options": {
+            "A": "The valuation class and price control",
+            "B": "The storage location and storage bin",
+            "C": "The vendor bank details",
+            "D": "A short description, a material group and a purchase order unit"
+          },
+          "correctAnswer": "D",
+          "explanation": "This data cannot be fetched from a master record."
+        },
+        {
+          "id": "ERP2_C4_T10_Q8",
+          "question": "What happens when a purchase requisition for a consumable on a cost object is saved?",
+          "options": {
+            "A": "The vendor is paid automatically",
+            "B": "A material document is created",
+            "C": "A commitment is created in Management Accounting if commitment management is activated",
+            "D": "The stock value of the material increases"
+          },
+          "correctAnswer": "C",
+          "explanation": "The same happens when the PO is saved."
+        },
+        {
+          "id": "ERP2_C4_T10_Q10",
+          "question": "Which data is in the header of a purchase order?",
+          "options": {
+            "A": "Material, quantity, delivery date and price",
+            "B": "Document type, supplier, purchasing organization, purchasing group, company code, currency and payment terms",
+            "C": "Storage location and storage bin",
+            "D": "Material group and valuation class"
+          },
+          "correctAnswer": "B",
+          "explanation": "Items hold material, quantity, price, delivery date and plant."
+        },
+        {
+          "id": "ERP2_C4_T10_Q11",
+          "question": "What does the item category of a PO item determine?",
+          "options": {
+            "A": "The company code of the PO",
+            "B": "The payment terms of the vendor",
+            "C": "The currency of the invoice",
+            "D": "The procurement process for the item, e.g., consignment, subcontracting or stock transfer"
+          },
+          "correctAnswer": "D",
+          "explanation": "A standard PO is used for external suppliers."
+        },
+        {
+          "id": "ERP2_C4_T10_Q12",
+          "question": "Which type of order is used when the source of supply is a plant of your own company?",
+          "options": {
+            "A": "A standard purchase order",
+            "B": "A stock transport order",
+            "C": "A consignment order",
+            "D": "A purchase requisition"
+          },
+          "correctAnswer": "B",
+          "explanation": "Standard POs go to external suppliers."
+        },
+        {
+          "id": "ERP2_C4_T10_Q13",
+          "question": "Which data does the system propose when entering a PO?",
+          "options": {
+            "A": "The goods receipt quantity and storage location",
+            "B": "The invoice number and the bank account",
+            "C": "The cost center and the profit center",
+            "D": "Ordering address, payment terms and Incoterms from the vendor; material text and group from the material master; price from an info record"
+          },
+          "correctAnswer": "D",
+          "explanation": "Defaults reduce the entries needed."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C4_T11",
+      "topicName": "TS410 – Goods receipt, invoice verification & payment",
+      "questions": [
+        {
+          "id": "ERP2_C4_T11_Q1",
+          "question": "Which movement type is used to post a goods receipt for a PO to valuated stock?",
+          "options": {
+            "A": "Movement type 102",
+            "B": "Movement type 201",
+            "C": "Movement type 301",
+            "D": "Movement type 101"
+          },
+          "correctAnswer": "D",
+          "explanation": "Each movement type has a cancellation type, usually the number + 1."
+        },
+        {
+          "id": "ERP2_C4_T11_Q2",
+          "question": "Into which stock types can a goods receipt be posted?",
+          "options": {
+            "A": "Only unrestricted-use stock",
+            "B": "Unrestricted-use, quality inspection and blocked stock",
+            "C": "Only blocked and consignment stock",
+            "D": "Only quality inspection stock"
+          },
+          "correctAnswer": "B",
+          "explanation": "Withdrawals for consumption are possible only from unrestricted-use stock."
+        },
+        {
+          "id": "ERP2_C4_T11_Q3",
+          "question": "What does the movement type control?",
+          "options": {
+            "A": "Only the print output of the GR slip",
+            "B": "Only the vendor payment terms",
+            "C": "Only the PO currency",
+            "D": "The way goods are moved, the screen layout and the automatic account determination"
+          },
+          "correctAnswer": "D",
+          "explanation": "It is a three-character key."
+        },
+        {
+          "id": "ERP2_C4_T11_Q4",
+          "question": "What does posting a goods movement create?",
+          "options": {
+            "A": "A material document and, if valuation-relevant, an accounting document",
+            "B": "A purchase requisition and a quotation",
+            "C": "A vendor invoice and a payment document",
+            "D": "A cost center and a profit center"
+          },
+          "correctAnswer": "A",
+          "explanation": "Both documents are created simultaneously and are independent."
+        },
+        {
+          "id": "ERP2_C4_T11_Q5",
+          "question": "How can an incorrect material document be corrected?",
+          "options": {
+            "A": "By changing the quantity in the document",
+            "B": "By changing the movement type",
+            "C": "By canceling it and creating a new document, since quantities, material and movement type cannot be changed",
+            "D": "By deleting the document from the database"
+          },
+          "correctAnswer": "C",
+          "explanation": "Documents of goods movements are immutable."
+        },
+        {
+          "id": "ERP2_C4_T11_Q6",
+          "question": "How is the accounting document of a goods movement uniquely identified?",
+          "options": {
+            "A": "By company code, accounting document number and fiscal year",
+            "B": "By plant and storage location",
+            "C": "By material and movement type",
+            "D": "By purchasing group and vendor"
+          },
+          "correctAnswer": "A",
+          "explanation": "The company code is determined from the plant."
+        },
+        {
+          "id": "ERP2_C4_T11_Q7",
+          "question": "Which goods movement does not result in any FI posting?",
+          "options": {
+            "A": "A goods receipt of raw material",
+            "B": "A goods receipt of a consumable",
+            "C": "A transfer of raw material within one plant",
+            "D": "A scrapping of a valuated material"
+          },
+          "correctAnswer": "C",
+          "explanation": "Only valuation-relevant movements create accounting documents."
+        },
+        {
+          "id": "ERP2_C4_T11_Q8",
+          "question": "What is updated by a goods receipt of a stock material?",
+          "options": {
+            "A": "The vendor open item",
+            "B": "The output tax account",
+            "C": "The payment run proposal list",
+            "D": "On-hand stock quantity, the PO history and, via the Material Ledger, the moving average price"
+          },
+          "correctAnswer": "D",
+          "explanation": "Quality management may also create an inspection lot."
+        },
+        {
+          "id": "ERP2_C4_T11_Q9",
+          "question": "What does a GR of a consumable additionally create?",
+          "options": {
+            "A": "A stock transport order",
+            "B": "A controlling document in Management Accounting, clearing the commitment and posting actual costs",
+            "C": "A bank statement",
+            "D": "A new purchase info record"
+          },
+          "correctAnswer": "B",
+          "explanation": "FI and Material Ledger documents are created as well."
+        },
+        {
+          "id": "ERP2_C4_T11_Q10",
+          "question": "What does the invoice verification propose when entering an invoice with PO reference?",
+          "options": {
+            "A": "All items of the PO, regardless of earlier invoices",
+            "B": "Items not yet fully invoiced and the expected value, the quantity still to be invoiced times the order price",
+            "C": "Only the payment terms of the vendor",
+            "D": "The goods receipt quantity as the invoiced value"
+          },
+          "correctAnswer": "B",
+          "explanation": "If 100 were delivered and 60 invoiced, 40 pieces remain."
+        },
+        {
+          "id": "ERP2_C4_T11_Q11",
+          "question": "What happens when the invoice deviates from the PO beyond tolerances?",
+          "options": {
+            "A": "The system posts the invoice and pays it immediately",
+            "B": "The system deletes the PO",
+            "C": "The system reverses the goods receipt",
+            "D": "The system blocks the invoice for payment"
+          },
+          "correctAnswer": "D",
+          "explanation": "Price and quantity differences trigger tolerance checks."
+        },
+        {
+          "id": "ERP2_C4_T11_Q12",
+          "question": "What are effects of posting a supplier invoice?",
+          "options": {
+            "A": "Stock quantities increase and a material document is created",
+            "B": "An accounting document is created, the GR/IR account is cleared, the PO history is updated and an open vendor item is posted",
+            "C": "The vendor is paid and the open item is cleared",
+            "D": "The purchase requisition is converted into a PO"
+          },
+          "correctAnswer": "B",
+          "explanation": "The output tax account is also updated."
+        },
+        {
+          "id": "ERP2_C4_T11_Q13",
+          "question": "How are payment media created by the automatic payment program in S/4HANA?",
+          "options": {
+            "A": "By the Materials Requirements Planning run",
+            "B": "By the goods receipt transaction",
+            "C": "By the document splitting function",
+            "D": "By the Payment Medium Workbench (PMW), e.g., printed cheques, IDocs for EDI or DME data files"
+          },
+          "correctAnswer": "D",
+          "explanation": "Vendors can also be paid manually."
+        }
+      ]
     }
   ]
 }

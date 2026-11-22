@@ -1339,6 +1339,636 @@
           "explanation": "Various scenarios should use different pricing parameters and sales order types."
         }
       ]
+    },
+    {
+      "topicId": "ERP2_C5_T8",
+      "topicName": "TS410 – Lead to Cash process",
+      "questions": [
+        {
+          "id": "ERP2_C5_T8_Q1",
+          "question": "Which are the five phases of the Lead to Cash process in order?",
+          "options": {
+            "A": "Lead to Contact, Contact to Order, Order to Quote, Quote to Cash, Cash to Lead",
+            "B": "Contact to Lead, Lead to Opportunity, Opportunity to Quote, Quote to Order, Order to Cash",
+            "C": "Quote to Lead, Lead to Contact, Contact to Order, Order to Opportunity, Cash to Order",
+            "D": "Opportunity to Lead, Lead to Quote, Quote to Contact, Contact to Cash, Order to Quote"
+          },
+          "correctAnswer": "B",
+          "explanation": "Each phase is named after the step it comes from and the step it goes to."
+        },
+        {
+          "id": "ERP2_C5_T8_Q2",
+          "question": "What does Lead to Cash connect?",
+          "options": {
+            "A": "Vendor selection to vendor payment",
+            "B": "Plant maintenance to asset settlement",
+            "C": "Project planning to project settlement",
+            "D": "A customer's interest to buy (SAP Customer Experience) to the realization of revenue in the S/4HANA digital core"
+          },
+          "correctAnswer": "D",
+          "explanation": "It integrates the front office with the digital core."
+        },
+        {
+          "id": "ERP2_C5_T8_Q3",
+          "question": "In which step does a marketing specialist generate leads?",
+          "options": {
+            "A": "Lead to Opportunity",
+            "B": "Contact to Lead",
+            "C": "Quote to Order",
+            "D": "Order to Cash"
+          },
+          "correctAnswer": "B",
+          "explanation": "A lead is created when customer engagement is captured and scored."
+        },
+        {
+          "id": "ERP2_C5_T8_Q4",
+          "question": "What happens in the Lead to Opportunity phase?",
+          "options": {
+            "A": "The customer is billed for the delivered goods",
+            "B": "The quotation is priced and sent to the customer",
+            "C": "A sales representative decides whether to pursue or drop the lead and converts worthwhile leads into opportunities",
+            "D": "The marketing campaign is created"
+          },
+          "correctAnswer": "C",
+          "explanation": "Analytics tools can support this decision."
+        },
+        {
+          "id": "ERP2_C5_T8_Q5",
+          "question": "What happens in the Order to Cash phase?",
+          "options": {
+            "A": "The order is fulfilled, products are delivered or services performed, and the customer is billed",
+            "B": "Marketing generates leads",
+            "C": "The quote is reworked after customer feedback",
+            "D": "The sales representative assesses the opportunity"
+          },
+          "correctAnswer": "A",
+          "explanation": "The incoming payment closes the process."
+        },
+        {
+          "id": "ERP2_C5_T8_Q6",
+          "question": "What does the SAP Analytics Cloud contribute to Lead to Cash?",
+          "options": {
+            "A": "It stores all master data of the customer",
+            "B": "It posts the billing document to FI",
+            "C": "It captures real-time KPIs for the whole process from both SAP Sales Cloud and S/4HANA",
+            "D": "It replaces the sales order"
+          },
+          "correctAnswer": "C",
+          "explanation": "It gives a measurable end-to-end customer experience."
+        },
+        {
+          "id": "ERP2_C5_T8_Q8",
+          "question": "When does shipping processing in SD begin?",
+          "options": {
+            "A": "When the sales order is saved",
+            "B": "When the delivery document is created",
+            "C": "When the invoice is posted",
+            "D": "When the customer pays"
+          },
+          "correctAnswer": "B",
+          "explanation": "It copies materials and quantities from the sales order."
+        },
+        {
+          "id": "ERP2_C5_T8_Q9",
+          "question": "What does the billing document serve as?",
+          "options": {
+            "A": "The proof of a goods movement in inventory",
+            "B": "The request for picking in the warehouse",
+            "C": "The input for the availability check",
+            "D": "The basis for invoices and a data source for FI to monitor and process customer payments"
+          },
+          "correctAnswer": "D",
+          "explanation": "It copies data from the sales order and the delivery."
+        },
+        {
+          "id": "ERP2_C5_T8_Q10",
+          "question": "Which step closes the Sales and Distribution process?",
+          "options": {
+            "A": "The goods issue",
+            "B": "The creation of the billing document",
+            "C": "The delivery creation",
+            "D": "The incoming payment, which belongs to Financial Accounting"
+          },
+          "correctAnswer": "D",
+          "explanation": "Customer payment clears the open receivable."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C5_T9",
+      "topicName": "TS410 – Organizational levels in Sales & Distribution",
+      "questions": [
+        {
+          "id": "ERP2_C5_T9_Q1",
+          "question": "What does the sales organization represent?",
+          "options": {
+            "A": "The enterprise grouped by sales and distribution requirements, i.e., a regional, national or international subdivision of the market",
+            "B": "A means by which customers procure goods",
+            "C": "A group of materials or services",
+            "D": "The physical place where shipping is processed"
+          },
+          "correctAnswer": "A",
+          "explanation": "It is the highest summation level in sales statistics."
+        },
+        {
+          "id": "ERP2_C5_T9_Q2",
+          "question": "How many company codes can a sales organization be assigned to?",
+          "options": {
+            "A": "Several company codes at once",
+            "B": "No company code",
+            "C": "Exactly one; but several sales organizations can belong to one company code",
+            "D": "Only the plant, never a company code"
+          },
+          "correctAnswer": "C",
+          "explanation": "At least one sales organization is needed for order to cash."
+        },
+        {
+          "id": "ERP2_C5_T9_Q3",
+          "question": "What is a distribution channel?",
+          "options": {
+            "A": "A means by which customers get goods or services, such as wholesale, retail or internet trade",
+            "B": "A grouping of materials such as spare parts",
+            "C": "A responsible unit for shipping",
+            "D": "A unit of external accounting"
+          },
+          "correctAnswer": "A",
+          "explanation": "At least one is required in SD."
+        },
+        {
+          "id": "ERP2_C5_T9_Q4",
+          "question": "What tasks does a distribution channel perform?",
+          "options": {
+            "A": "Posts the goods issue and the invoice",
+            "B": "Defines the chart of accounts and fiscal year",
+            "C": "Controls picking and packing",
+            "D": "Defines responsibilities, achieves flexible pricing and differentiates sales statistics"
+          },
+          "correctAnswer": "D",
+          "explanation": "Several channels can be assigned to one sales organization."
+        },
+        {
+          "id": "ERP2_C5_T9_Q6",
+          "question": "How is a sales area defined?",
+          "options": {
+            "A": "As a combination of plant, storage location and shipping point",
+            "B": "As a combination of company code, plant and cost center",
+            "C": "As a combination of client, company code and segment",
+            "D": "As a combination of sales organization, distribution channel and division"
+          },
+          "correctAnswer": "D",
+          "explanation": "Each SD document belongs to exactly one sales area."
+        },
+        {
+          "id": "ERP2_C5_T9_Q7",
+          "question": "Which statement about a sales area is true?",
+          "options": {
+            "A": "A sales area can belong to several company codes",
+            "B": "The assignment of an SD document to its sales area cannot be changed",
+            "C": "The sales area of a document can be changed anytime",
+            "D": "A document can belong to several sales areas"
+          },
+          "correctAnswer": "B",
+          "explanation": "A sales area belongs to only one company code."
+        },
+        {
+          "id": "ERP2_C5_T9_Q8",
+          "question": "How are delivery plants assigned?",
+          "options": {
+            "A": "To a combination of sales organization and distribution channel; one plant can be assigned to several combinations",
+            "B": "To a division only",
+            "C": "To a customer only",
+            "D": "To a storage location only"
+          },
+          "correctAnswer": "A",
+          "explanation": "Several plants can be assigned to one combination."
+        },
+        {
+          "id": "ERP2_C5_T9_Q9",
+          "question": "What is the shipping point?",
+          "options": {
+            "A": "A unit that groups materials in a plant",
+            "B": "A unit that sells goods to customers",
+            "C": "The highest-level organizational unit of shipping, responsible for the entire shipping process",
+            "D": "A key for the legal entity that issues invoices"
+          },
+          "correctAnswer": "C",
+          "explanation": "It can be a loading ramp, a mail depot or a rail depot."
+        },
+        {
+          "id": "ERP2_C5_T9_Q10",
+          "question": "How are plants and shipping points related?",
+          "options": {
+            "A": "A plant can have only one shipping point",
+            "B": "A shipping point belongs to a sales organization only",
+            "C": "A shipping point can serve only one plant",
+            "D": "One plant can have several shipping points, and one shipping point can be assigned to several plants"
+          },
+          "correctAnswer": "D",
+          "explanation": "A shipping point is a physical place near the delivering plant."
+        },
+        {
+          "id": "ERP2_C5_T9_Q11",
+          "question": "How can a plant be linked to sales organizations?",
+          "options": {
+            "A": "A plant can belong to several company codes",
+            "B": "A plant belongs to one company code but can be assigned to several sales organizations that can sell from it",
+            "C": "A plant can be assigned to one sales organization only",
+            "D": "A plant is assigned to a distribution channel only"
+          },
+          "correctAnswer": "B",
+          "explanation": "Within a company code, several sales organizations can be active."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C5_T10",
+      "topicName": "TS410 – Master data for SD",
+      "questions": [
+        {
+          "id": "ERP2_C5_T10_Q1",
+          "question": "Which levels of the material master are relevant for SD?",
+          "options": {
+            "A": "Basic data (client), sales organization data (sales org and distribution channel) and sales: plant data (delivering plant)",
+            "B": "Only the storage location data",
+            "C": "Only the company code data",
+            "D": "Only the purchasing group data"
+          },
+          "correctAnswer": "A",
+          "explanation": "Basic data is valid for all organizational units in a client."
+        },
+        {
+          "id": "ERP2_C5_T10_Q2",
+          "question": "At which level is the customer role data of a business partner maintained?",
+          "options": {
+            "A": "At the company code level",
+            "B": "At the plant level",
+            "C": "At the sales area level (sales organization, distribution channel, division)",
+            "D": "At the client level only"
+          },
+          "correctAnswer": "C",
+          "explanation": "It contains data for orders, deliveries, invoices and customer payments."
+        },
+        {
+          "id": "ERP2_C5_T10_Q3",
+          "question": "In which role is the reconciliation account of a customer entered?",
+          "options": {
+            "A": "In the FI Customer role, for each company code",
+            "B": "In the general role of the business partner",
+            "C": "In the customer role of the sales area",
+            "D": "In the vendor role of the purchasing organization"
+          },
+          "correctAnswer": "A",
+          "explanation": "The FI Customer role is relevant for accounting."
+        },
+        {
+          "id": "ERP2_C5_T10_Q4",
+          "question": "Why is the name and address stored in the general role of the business partner?",
+          "options": {
+            "A": "It is only used in billing documents",
+            "B": "It must be maintained per sales area",
+            "C": "It must be maintained per company code",
+            "D": "It is relevant for both SD and accounting and stored once at client level to avoid redundancy"
+          },
+          "correctAnswer": "D",
+          "explanation": "It is valid for all organizational units in the client."
+        },
+        {
+          "id": "ERP2_C5_T10_Q5",
+          "question": "What does condition master data include?",
+          "options": {
+            "A": "Stock quantities and storage bins",
+            "B": "Prices, surcharges, discounts, freights and taxes",
+            "C": "Partner functions and payment terms",
+            "D": "Vendor bank details"
+          },
+          "correctAnswer": "B",
+          "explanation": "Conditions can depend on, e.g., customer and material pricing group."
+        },
+        {
+          "id": "ERP2_C5_T10_Q6",
+          "question": "What does the condition type control in a condition record?",
+          "options": {
+            "A": "The company code and the plant",
+            "B": "The shipping point and the route",
+            "C": "The sold-to party and the payer",
+            "D": "The condition class, scales, header or item level relevance and the validity period default"
+          },
+          "correctAnswer": "D",
+          "explanation": "Examples of classes are price and discount."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C5_T11",
+      "topicName": "TS410 – Sales order processing",
+      "questions": [
+        {
+          "id": "ERP2_C5_T11_Q1",
+          "question": "How is a sales document structured?",
+          "options": {
+            "A": "Header and item only",
+            "B": "Header, item and schedule line",
+            "C": "Order, delivery and billing",
+            "D": "Customer, material and plant"
+          },
+          "correctAnswer": "B",
+          "explanation": "Schedule lines hold delivery quantities and dates."
+        },
+        {
+          "id": "ERP2_C5_T11_Q2",
+          "question": "What data is stored in a schedule line?",
+          "options": {
+            "A": "Customer and payment data valid for the whole document",
+            "B": "Material and price information for the item",
+            "C": "Partner functions of the document",
+            "D": "Delivery quantities and delivery dates, belonging uniquely to an item"
+          },
+          "correctAnswer": "D",
+          "explanation": "An item with a follow-up delivery needs at least one schedule line."
+        },
+        {
+          "id": "ERP2_C5_T11_Q3",
+          "question": "Which partner functions are mandatory for sales order processing?",
+          "options": {
+            "A": "Contact person and forwarding agent",
+            "B": "Sold-to party, ship-to party, payer and bill-to party",
+            "C": "Sales employee and carrier",
+            "D": "Sold-to party and forwarding agent only"
+          },
+          "correctAnswer": "B",
+          "explanation": "They may be identical or different."
+        },
+        {
+          "id": "ERP2_C5_T11_Q4",
+          "question": "What does each mandatory partner function mean?",
+          "options": {
+            "A": "Sold-to receives the goods, ship-to pays the invoice, payer places the order, bill-to receives goods",
+            "B": "Sold-to pays, ship-to places the order, payer receives the goods and bill-to ships the goods",
+            "C": "Sold-to places the order, ship-to receives the goods, bill-to receives the invoice and payer pays the invoice",
+            "D": "Sold-to receives the invoice, ship-to places the order, payer receives the goods, bill-to pays"
+          },
+          "correctAnswer": "C",
+          "explanation": "Partner functions are copied from the customer master as default values."
+        },
+        {
+          "id": "ERP2_C5_T11_Q5",
+          "question": "What happens when the address of the ship-to party is changed manually in a sales document?",
+          "options": {
+            "A": "The master record is not affected",
+            "B": "The business partner master is updated",
+            "C": "The change is blocked by the system",
+            "D": "All other sales documents are changed"
+          },
+          "correctAnswer": "A",
+          "explanation": "Partners can also be defined at item level."
+        },
+        {
+          "id": "ERP2_C5_T11_Q6",
+          "question": "How does the system find prices, surcharges, discounts, freight and taxes in a sales order?",
+          "options": {
+            "A": "By asking the user for every price",
+            "B": "By copying them from the goods issue document",
+            "C": "By automatic pricing using the condition technique, with manual changes possible",
+            "D": "By reading them from the vendor info record"
+          },
+          "correctAnswer": "C",
+          "explanation": "Output determination also uses the condition technique."
+        },
+        {
+          "id": "ERP2_C5_T11_Q7",
+          "question": "At which level is the availability check in sales orders performed?",
+          "options": {
+            "A": "At plant level for the corresponding item",
+            "B": "At client level for the document",
+            "C": "At storage bin level for the delivery",
+            "D": "At company code level for the order"
+          },
+          "correctAnswer": "A",
+          "explanation": "The plant is determined automatically or entered manually."
+        },
+        {
+          "id": "ERP2_C5_T11_Q8",
+          "question": "In which sequence does the system determine the delivering plant automatically?",
+          "options": {
+            "A": "Material master, ship-to party master, customer-material info record",
+            "B": "Customer-material info record, ship-to party customer master, material master",
+            "C": "Ship-to master, material master, info record",
+            "D": "Sales organization, distribution channel, division"
+          },
+          "correctAnswer": "B",
+          "explanation": "The first valid default value found is used."
+        },
+        {
+          "id": "ERP2_C5_T11_Q9",
+          "question": "What is the incompletion log?",
+          "options": {
+            "A": "A log of all changes made in the document",
+            "B": "A list of open items of the customer",
+            "C": "A list of delivery blocks",
+            "D": "A list of fields required for the document or further processing that the user has not filled, shown automatically on saving"
+          },
+          "correctAnswer": "D",
+          "explanation": "Customizing decides which fields are part of the log."
+        },
+        {
+          "id": "ERP2_C5_T11_Q10",
+          "question": "What is output in SD?",
+          "options": {
+            "A": "The quantity of goods delivered to the customer",
+            "B": "The posting to the customer receivables account",
+            "C": "Information sent to the customer via media such as mail, EDI or fax, e.g., an order confirmation",
+            "D": "The picking list for the warehouse"
+          },
+          "correctAnswer": "C",
+          "explanation": "Forms are in SAPscript, Smartform or PDF."
+        }
+      ]
+    },
+    {
+      "topicId": "ERP2_C5_T12",
+      "topicName": "TS410 – Delivery, goods issue & billing",
+      "questions": [
+        {
+          "id": "ERP2_C5_T12_Q1",
+          "question": "Which organizational unit is responsible for creating deliveries?",
+          "options": {
+            "A": "The sales organization",
+            "B": "The distribution channel",
+            "C": "The division",
+            "D": "The shipping point"
+          },
+          "correctAnswer": "D",
+          "explanation": "Each outbound delivery is processed by one shipping point."
+        },
+        {
+          "id": "ERP2_C5_T12_Q2",
+          "question": "Why are order items with different shipping points not copied into the same outbound delivery?",
+          "options": {
+            "A": "Because they have different divisions",
+            "B": "Because each outbound delivery is processed by exactly one shipping point",
+            "C": "Because they have different payers",
+            "D": "Because they belong to different company codes"
+          },
+          "correctAnswer": "B",
+          "explanation": "The shipping point cannot be changed in the delivery."
+        },
+        {
+          "id": "ERP2_C5_T12_Q3",
+          "question": "Which characteristics must be equal to combine items of different sales orders in one outbound delivery?",
+          "options": {
+            "A": "Payer, billing date and destination country",
+            "B": "Division, material group and plant",
+            "C": "Sold-to party, sales area and company code",
+            "D": "Shipping point, due date and ship-to address"
+          },
+          "correctAnswer": "D",
+          "explanation": "Billing documents combine by payer, billing date and destination country."
+        },
+        {
+          "id": "ERP2_C5_T12_Q4",
+          "question": "How is a delivery document structured?",
+          "options": {
+            "A": "Header and item, without schedule lines",
+            "B": "Header, item and schedule line",
+            "C": "Header only",
+            "D": "Item and schedule line only"
+          },
+          "correctAnswer": "A",
+          "explanation": "Each schedule line of the order can become an item in the delivery."
+        },
+        {
+          "id": "ERP2_C5_T12_Q5",
+          "question": "What prerequisites must be met before an order can be delivered?",
+          "options": {
+            "A": "The invoice has been paid and the billing document posted",
+            "B": "The billing document exists and the payer is known",
+            "C": "A ship-to party, a plant and a shipping point exist, the schedule line has a confirmed quantity and the order is due",
+            "D": "The goods issue is already posted"
+          },
+          "correctAnswer": "C",
+          "explanation": "Collective processing can create deliveries in the background."
+        },
+        {
+          "id": "ERP2_C5_T12_Q6",
+          "question": "What are backorders in SAP S/4HANA?",
+          "options": {
+            "A": "Sales orders that cannot be (fully) confirmed by the availability check",
+            "B": "Sales orders that have been fully delivered",
+            "C": "Sales orders that have been canceled by the customer",
+            "D": "Sales orders waiting for payment"
+          },
+          "correctAnswer": "A",
+          "explanation": "Backorder processing can change existing confirmations."
+        },
+        {
+          "id": "ERP2_C5_T12_Q7",
+          "question": "What does a BOP segment contain?",
+          "options": {
+            "A": "The collection of all confirmation strategies",
+            "B": "A mass availability check of requirements",
+            "C": "Criteria identifying a set of requirements handled similarly, plus a prioritizer that ranks them",
+            "D": "The warehouse tasks for picking"
+          },
+          "correctAnswer": "C",
+          "explanation": "The standard availability check works on a first-come, first-served basis."
+        },
+        {
+          "id": "ERP2_C5_T12_Q8",
+          "question": "What is a BOP run?",
+          "options": {
+            "A": "A single check for one item during order entry",
+            "B": "A report on posted goods issues",
+            "C": "A set of delivery documents created in a batch",
+            "D": "A mass availability check of requirements, e.g., sales order items, based on a BOP variant, run online or in the background"
+          },
+          "correctAnswer": "D",
+          "explanation": "It is run, e.g., after an MRP run or before a delivery due list."
+        },
+        {
+          "id": "ERP2_C5_T12_Q9",
+          "question": "What does the BOP confirmation strategy \"Win\" mean?",
+          "options": {
+            "A": "Requirements lose their confirmation",
+            "B": "Requirements are fully confirmed on the request date; if that is not possible, the run stops with an alert",
+            "C": "Requirements may get a better, equal or worse confirmation",
+            "D": "Requirements only get equal or worse confirmation"
+          },
+          "correctAnswer": "B",
+          "explanation": "Win has processing priority 2."
+        },
+        {
+          "id": "ERP2_C5_T12_Q10",
+          "question": "What does the BOP confirmation strategy \"Lose\" do?",
+          "options": {
+            "A": "Requirements are fully confirmed on the request date",
+            "B": "Requirements keep or improve their confirmation",
+            "C": "Requirements lose their current confirmation, releasing quantity for more important requirements",
+            "D": "Requirements receive an earlier confirmation date"
+          },
+          "correctAnswer": "C",
+          "explanation": "Lose has processing priority 1."
+        },
+        {
+          "id": "ERP2_C5_T12_Q11",
+          "question": "What is the prerequisite for posting goods issue in standard configuration?",
+          "options": {
+            "A": "Picking-relevant items are completely picked, i.e., the pick quantity equals the delivery quantity",
+            "B": "The customer invoice has been posted",
+            "C": "The customer has paid the order",
+            "D": "The sales order has been billed"
+          },
+          "correctAnswer": "A",
+          "explanation": "Warehouse tasks execute the physical picking in EWM."
+        },
+        {
+          "id": "ERP2_C5_T12_Q12",
+          "question": "Which actions does the goods issue posting trigger automatically?",
+          "options": {
+            "A": "The creation of a purchase requisition and a quotation",
+            "B": "A debit posting to the customer receivables account",
+            "C": "A material document and accounting document reducing inventory, a controlling document, an update of the billing due list and the document flow",
+            "D": "The posting of the incoming payment"
+          },
+          "correctAnswer": "C",
+          "explanation": "A Material Ledger document is generated too."
+        },
+        {
+          "id": "ERP2_C5_T12_Q13",
+          "question": "Which accounting postings does the billing document trigger?",
+          "options": {
+            "A": "A debit to the customer receivables account and a credit to the revenue account",
+            "B": "A debit to inventory and a credit to receivables",
+            "C": "A debit to revenue and a credit to the bank account",
+            "D": "A debit to the GR/IR account and a credit to the vendor"
+          },
+          "correctAnswer": "A",
+          "explanation": "CO-PA and group reporting documents may also be created."
+        },
+        {
+          "id": "ERP2_C5_T12_Q14",
+          "question": "What does the document flow provide?",
+          "options": {
+            "A": "A list of customers with open items",
+            "B": "A list of all stocks per plant",
+            "C": "A list of all pricing conditions",
+            "D": "A list of linked preceding and subsequent documents showing the history and status of the SD process"
+          },
+          "correctAnswer": "D",
+          "explanation": "It helps to answer customer questions quickly."
+        },
+        {
+          "id": "ERP2_C5_T12_Q15",
+          "question": "What is the purpose of SAP Transportation Management (SAP TM)?",
+          "options": {
+            "A": "Managing the posting of customer invoices",
+            "B": "Supporting the physical transportation of goods: requirements, planning, carrier selection, execution and charge calculation",
+            "C": "Planning the production of finished goods",
+            "D": "Maintaining the vendor master data"
+          },
+          "correctAnswer": "B",
+          "explanation": "It can use sales orders, purchase orders and deliveries as transportation requirements."
+        }
+      ]
     }
   ]
 }

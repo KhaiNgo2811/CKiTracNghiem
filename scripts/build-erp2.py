@@ -10,7 +10,8 @@ from collections import Counter
 sys.path.insert(0, 'scripts/erp2')
 OUT = 'data/ERP2/'
 LETTERS = 'ABCD'
-MODULES = ['ch1', 'ch2', 'ch3', 'ch4', 'ch5', 'ts_ps', 'ts_eam', 'ts_fico', 'ts_mm', 'ts_sd']
+MODULES = ['ch1', 'ch2', 'ch3', 'ch4', 'ch5', 'ts_ps', 'ts_eam']
+EXTRA = {'ch2': ('ts_fico', [0, 2, 3, 5]), 'ch3': ('ts_fico', [1, 4]), 'ch4': ('ts_mm', None), 'ch5': ('ts_sd', None)}
 
 chapters = []
 seen_q = set()
@@ -19,7 +20,12 @@ longest = total = 0
 for name in MODULES:
     m = importlib.import_module(name)
     topics = []
-    for ti, (tname, items) in enumerate(m.TOPICS, 1):
+    all_topics = list(m.TOPICS)
+    if name in EXTRA:
+        em = importlib.import_module(EXTRA[name][0])
+        idx = EXTRA[name][1] or range(len(em.TOPICS))
+        all_topics += [('TS410 – ' + em.TOPICS[i][0], em.TOPICS[i][1]) for i in idx]
+    for ti, (tname, items) in enumerate(all_topics, 1):
         qs = []
         k = 0
         for (q, right, wrongs, expl) in items:
