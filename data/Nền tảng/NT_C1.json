@@ -16,7 +16,7 @@
             "D": "Hub"
           },
           "correctAnswer": "A",
-          "explanation": ""
+          "explanation": "**Router** (bộ định tuyến) kết nối các mạng khác nhau và chuyển tiếp gói tin giữa chúng theo địa chỉ IP. Modem chỉ chuyển đổi tín hiệu, Switch/Hub nối các thiết bị trong cùng một mạng."
         },
         {
           "id": "NT_C1_T1_Q2",
@@ -28,7 +28,7 @@
             "D": "FTP"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "**HTTP** là giao thức truyền tải web phổ biến nhất trên Internet. SMTP dùng gửi email, SNMP quản trị thiết bị mạng, FTP truyền tập tin."
         },
         {
           "id": "NT_C1_T1_Q3",
@@ -40,7 +40,7 @@
             "D": "128 bit"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "IPv4 dùng địa chỉ **32 bit** (4 octet, khoảng 4,3 tỷ địa chỉ). 128 bit là của IPv6."
         },
         {
           "id": "NT_C1_T1_Q4",
@@ -52,7 +52,7 @@
             "D": "Switch"
           },
           "correctAnswer": "D",
-          "explanation": ""
+          "explanation": "**Switch** hoạt động ở tầng 2 (Data Link), chuyển khung (frame) theo địa chỉ MAC. Router ở tầng 3, Repeater ở tầng 1, Firewall chủ yếu tầng 3–4 trở lên."
         },
         {
           "id": "NT_C1_T1_Q5",
@@ -64,7 +64,7 @@
             "D": "DNS"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "**DHCP** cấp phát địa chỉ IP tự động (kèm mặt nạ, gateway, DNS). DNS phân giải tên miền, TCP truyền tin cậy, IPSec bảo mật gói IP."
         },
         {
           "id": "NT_C1_T1_Q6",
@@ -76,7 +76,7 @@
             "D": "Mạng vệ tinh"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "CSMA/CD được thiết kế cho **mạng có dây dùng chung đường truyền** (Ethernet cáp đồng trục) để phát hiện xung đột. Mạng không dây dùng CSMA/CA vì không phát hiện xung đột được khi đang phát."
         },
         {
           "id": "NT_C1_T1_Q7",
@@ -88,7 +88,7 @@
             "D": "Gửi yêu cầu đến máy chủ"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "Khi phát hiện xung đột, các trạm **hủy bản tin, đợi một khoảng thời gian ngẫu nhiên (backoff) rồi gửi lại**. Gửi lại ngay sẽ lại va chạm tiếp."
         },
         {
           "id": "NT_C1_T1_Q8",
@@ -100,7 +100,7 @@
             "D": "Access Point"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "**Repeater** chỉ khuếch đại/tái tạo tín hiệu ở tầng vật lý để đi xa hơn, không phân tích dữ liệu. Router và Switch phân tích địa chỉ để chuyển tiếp."
         },
         {
           "id": "NT_C1_T1_Q9",
@@ -112,7 +112,7 @@
             "D": "Firewall"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "**Access Point** cho các thiết bị không dây kết nối vào mạng có dây. Hub/Switch chỉ nối thiết bị có dây, Firewall dùng để bảo vệ."
         },
         {
           "id": "NT_C1_T1_Q10",
@@ -124,7 +124,7 @@
             "D": "Modem"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "**Firewall** (tường lửa) lọc lưu lượng theo quy tắc để chặn truy cập trái phép từ bên ngoài."
         }
       ]
     },
@@ -142,7 +142,7 @@
             "D": "Quản lý phiên kết nối"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "Tầng Network lo **định tuyến và chuyển tiếp gói tin** giữa các mạng. Mã hóa là tầng Presentation, kiểm tra lỗi chủ yếu ở Data Link/Transport, quản lý phiên là tầng Session."
         },
         {
           "id": "NT_C1_T2_Q2",
@@ -154,7 +154,7 @@
             "D": "FTP"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "**IP** là giao thức của tầng Network. TCP ở tầng Transport; HTTP và FTP ở tầng Application."
         },
         {
           "id": "NT_C1_T2_Q3",
@@ -166,7 +166,7 @@
             "D": "Repeater"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "**Router** làm việc chủ yếu ở tầng Network (dựa vào địa chỉ IP). Switch là tầng 2, Hub và Repeater là tầng 1."
         },
         {
           "id": "NT_C1_T2_Q4",
@@ -178,7 +178,7 @@
             "D": "Địa chỉ cổng"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "Tầng Network định danh bằng **địa chỉ IP** (logic). Địa chỉ MAC/vật lý thuộc tầng Data Link, cổng (port) thuộc tầng Transport."
         },
         {
           "id": "NT_C1_T2_Q5",
@@ -190,7 +190,7 @@
             "D": "Bit"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "Đơn vị dữ liệu tầng Network là **Packet** (gói tin). Bit – Physical, Frame – Data Link, Segment – Transport."
         }
       ]
     },
@@ -208,7 +208,7 @@
             "D": "Quản lý địa chỉ IP"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "Tầng Transport **truyền dữ liệu tin cậy end-to-end** giữa các tiến trình/thiết bị. Định tuyến thuộc Network, mã hóa thuộc Presentation, địa chỉ IP thuộc Network."
         },
         {
           "id": "NT_C1_T3_Q2",
@@ -220,7 +220,7 @@
             "D": "ARP"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "**TCP** (và UDP) là giao thức tầng Transport. IP và ARP thuộc tầng thấp hơn, HTTP thuộc tầng Application."
         },
         {
           "id": "NT_C1_T3_Q3",
@@ -232,7 +232,7 @@
             "D": "UDP yêu cầu xác nhận từ người dùng"
           },
           "correctAnswer": "A",
-          "explanation": ""
+          "explanation": "UDP **không kiểm tra lỗi, không đảm bảo thứ tự và không bắt tay**, nên nhanh và nhẹ hơn TCP. UDP không có mã hóa, không phụ thuộc môi trường có dây và không cần người dùng xác nhận."
         },
         {
           "id": "NT_C1_T3_Q4",
@@ -244,7 +244,7 @@
             "D": "Packet"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "Đơn vị dữ liệu tầng Transport là **Segment** (TCP) / Datagram (UDP). Bit – Physical, Frame – Data Link, Packet – Network."
         },
         {
           "id": "NT_C1_T3_Q5",
@@ -256,7 +256,7 @@
             "D": "Mã hóa dữ liệu"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "**Số cổng (port)** xác định ứng dụng/dịch vụ đích trên thiết bị (vd HTTP:80). IP xác định thiết bị, không phải port."
         }
       ]
     },
@@ -274,7 +274,7 @@
             "D": "Một giao thức bảo mật"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "Phiên làm việc là **kết nối tạm thời giữa hai thiết bị để trao đổi dữ liệu**, có thiết lập – duy trì – kết thúc."
         },
         {
           "id": "NT_C1_T4_Q2",
@@ -286,7 +286,7 @@
             "D": "Tầng Application"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "**Tầng Session** (tầng 5) quản lý thiết lập, duy trì và kết thúc phiên."
         },
         {
           "id": "NT_C1_T4_Q3",
@@ -298,7 +298,7 @@
             "D": "Phân tích lưu lượng"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "Một phiên bắt đầu bằng **xác thực và thiết lập kết nối** giữa hai bên rồi mới trao đổi dữ liệu."
         },
         {
           "id": "NT_C1_T4_Q4",
@@ -310,7 +310,7 @@
             "D": "Đổi địa chỉ IP"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "Tầng Session dùng **điểm kiểm tra (checkpoint)** để khôi phục phiên từ vị trí gần nhất thay vì gửi lại toàn bộ."
         },
         {
           "id": "NT_C1_T4_Q5",
@@ -322,7 +322,7 @@
             "D": "Tải một tập tin"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "**Cuộc gọi video** duy trì kết nối liên tục có thiết lập và kết thúc, là ví dụ rõ nhất của phiên. Duyệt web, gửi email, tải file là các giao dịch rời rạc."
         }
       ]
     },
@@ -340,7 +340,7 @@
             "D": "ARP"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "**HTTP** là giao thức tầng ứng dụng. TCP – Transport, IP – Network, ARP – Data Link/Network."
         },
         {
           "id": "NT_C1_T5_Q2",
@@ -352,7 +352,7 @@
             "D": "Quản lý địa chỉ IP"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "Tầng ứng dụng **cung cấp giao diện cho người dùng và ứng dụng** truy cập dịch vụ mạng. Định tuyến, mã hóa, địa chỉ IP thuộc các tầng khác."
         },
         {
           "id": "NT_C1_T5_Q3",
@@ -364,7 +364,7 @@
             "D": "Phát video trực tuyến"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "**FTP** (File Transfer Protocol) dùng để truyền tập tin. Web dùng HTTP, email dùng SMTP."
         },
         {
           "id": "NT_C1_T5_Q4",
@@ -376,7 +376,7 @@
             "D": "SNMP"
           },
           "correctAnswer": "A",
-          "explanation": ""
+          "explanation": "**SMTP** dùng để gửi email. DNS phân giải tên miền, DHCP cấp IP, SNMP quản trị mạng."
         }
       ]
     },
@@ -394,7 +394,7 @@
             "D": "802.11g"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "**802.11ax (Wi-Fi 6)** có tốc độ cao nhất trong các chuẩn liệt kê; thứ tự: g < n < ac < ax."
         },
         {
           "id": "NT_C1_T6_Q2",
@@ -406,7 +406,7 @@
             "D": "6.8 GHz"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "Wi-Fi phổ biến dùng hai băng tần **2.4 GHz và 5 GHz** (Wi-Fi 6E thêm 6 GHz)."
         },
         {
           "id": "NT_C1_T6_Q3",
@@ -418,7 +418,7 @@
             "D": "Repeater"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "**Router** (có chức năng phát Wi-Fi) phát tín hiệu cho thiết bị kết nối. Switch không phát sóng, Modem điều chế tín hiệu, Repeater chỉ khuếch đại."
         },
         {
           "id": "NT_C1_T6_Q4",
@@ -430,7 +430,7 @@
             "D": "WPA3"
           },
           "correctAnswer": "D",
-          "explanation": ""
+          "explanation": "**WPA3** là chuẩn bảo mật mới nhất, an toàn hơn WPA2; WEP và WPA đã lỗi thời."
         }
       ]
     },
@@ -448,7 +448,7 @@
             "D": "Lưu trữ dữ liệu"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "Tường lửa **bảo vệ mạng khỏi truy cập trái phép** bằng cách lọc lưu lượng theo chính sách."
         },
         {
           "id": "NT_C1_T7_Q2",
@@ -460,7 +460,7 @@
             "D": "Tầng 2"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "Tường lửa truyền thống lọc ở **tầng 3 và 4** (IP, cổng). Loại thế hệ mới có thể kiểm tra đến tầng 7."
         },
         {
           "id": "NT_C1_T7_Q3",
@@ -472,7 +472,7 @@
             "D": "Proxy firewall"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "**Application-layer firewall** kiểm tra nội dung (tầng ứng dụng) của gói tin. Packet-filtering chỉ xét IP/port, stateful theo dõi trạng thái kết nối."
         },
         {
           "id": "NT_C1_T7_Q4",
@@ -484,7 +484,7 @@
             "D": "Trên thiết bị đầu cuối"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "Tường lửa có thể triển khai **trên cả phần cứng (thiết bị chuyên dụng) và phần mềm** (trên máy chủ, máy trạm)."
         },
         {
           "id": "NT_C1_T7_Q5",
@@ -496,7 +496,7 @@
             "D": "Tấn công bằng phần cứng"
           },
           "correctAnswer": "A",
-          "explanation": ""
+          "explanation": "Tường lửa giúp hạn chế **tấn công từ chối dịch vụ (DoS)** từ bên ngoài. Nó không ngăn được tấn công vật lý."
         }
       ]
     },
@@ -514,7 +514,7 @@
             "D": "Tăng khả năng định tuyến"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "Mục tiêu chính của mã hóa là **bảo vệ tính bí mật** của thông tin. Nó không nhằm tăng tốc, giảm dung lượng hay hỗ trợ định tuyến."
         },
         {
           "id": "NT_C1_T8_Q2",
@@ -526,7 +526,7 @@
             "D": "SMTP"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "**HTTPS** (HTTP trên TLS/SSL) mã hóa đầu cuối kết nối web. HTTP, FTP, SMTP gốc truyền dữ liệu dạng rõ."
         },
         {
           "id": "NT_C1_T8_Q3",
@@ -538,7 +538,7 @@
             "D": "Tấn công giả mạo"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "**Tấn công thụ động** (nghe lén, theo dõi) chỉ đánh cắp thông tin mà không sửa dữ liệu. Tấn công chủ động, DoS và giả mạo đều làm thay đổi hoặc gián đoạn hệ thống."
         },
         {
           "id": "NT_C1_T8_Q4",
@@ -550,7 +550,7 @@
             "D": "Tính ẩn danh"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "Chữ ký số đảm bảo **tính toàn vẹn và xác thực** (nguồn gốc, không bị sửa). Bí mật là việc của mã hóa."
         },
         {
           "id": "NT_C1_T8_Q5",
@@ -562,7 +562,7 @@
             "D": "SSH"
           },
           "correctAnswer": "A",
-          "explanation": ""
+          "explanation": "**IPsec** mã hóa ở tầng mạng (Network). SSL/TLS làm việc ở tầng trên (giữa Transport và Application), SSH ở tầng ứng dụng."
         }
       ]
     },
@@ -580,7 +580,7 @@
             "D": "255.255.255.0"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "**127.0.0.1** là địa chỉ loopback (tự trỏ về chính máy). 192.168.1.1 và 10.0.0.1 là địa chỉ riêng, 255.255.255.0 là mặt nạ mạng."
         },
         {
           "id": "NT_C1_T9_Q2",
@@ -592,7 +592,7 @@
             "D": "192.0.2.1"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "Dải riêng: 10.0.0.0/8, **172.16.0.0–172.31.255.255**, 192.168.0.0/16. Các địa chỉ còn lại là địa chỉ công cộng/tài liệu."
         },
         {
           "id": "NT_C1_T9_Q3",
@@ -604,7 +604,7 @@
             "D": "Mã hóa dữ liệu trước khi truyền"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "Bảng định tuyến giúp router **xác định đường đi tốt nhất để chuyển tiếp gói tin** đến mạng đích."
         },
         {
           "id": "NT_C1_T9_Q4",
@@ -616,7 +616,7 @@
             "D": "Giao thức định tuyến đang sử dụng"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "**Next Hop** là địa chỉ IP của router kế tiếp trên đường đi, không phải đích cuối cùng."
         },
         {
           "id": "NT_C1_T9_Q5",
@@ -628,7 +628,7 @@
             "D": "Tuyến có mặt nạ mạng dài nhất (most specific match)"
           },
           "correctAnswer": "D",
-          "explanation": ""
+          "explanation": "Router chọn tuyến **khớp cụ thể nhất (longest prefix match)**, tức là mặt nạ dài nhất."
         },
         {
           "id": "NT_C1_T9_Q6",
@@ -640,7 +640,7 @@
             "D": "ICMP"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "**DHCP** gán IP tự động. DNS phân giải tên, ARP ánh xạ IP–MAC, ICMP báo lỗi/ping."
         }
       ]
     },
@@ -658,7 +658,7 @@
             "Software as a Service",
             "Software-as-a-Service"
           ],
-          "explanation": ""
+          "explanation": "**SaaS** (Software as a Service): phần mềm được cung cấp qua Internet, người dùng không quản lý hạ tầng. Google Docs, Microsoft 365 là ví dụ điển hình."
         },
         {
           "id": "NT_C1_T10_Q2",
@@ -667,7 +667,7 @@
           "options": {},
           "correctAnswer": "192.168.10.63",
           "acceptedAnswers": [],
-          "explanation": ""
+          "explanation": "/26 có 64 địa chỉ mỗi mạng con (khối 192.168.10.0–.63); địa chỉ cuối của khối là **broadcast: 192.168.10.63**."
         },
         {
           "id": "NT_C1_T10_Q3",
@@ -683,7 +683,7 @@
             "Layer 3",
             "Tầng 3"
           ],
-          "explanation": ""
+          "explanation": "Tầng **Network** (tầng 3) thực hiện định tuyến gói tin giữa các mạng."
         },
         {
           "id": "NT_C1_T10_Q4",
@@ -699,7 +699,7 @@
             "Layer 4",
             "Tầng 4"
           ],
-          "explanation": ""
+          "explanation": "Tầng **Transport** (tầng 4) bảo đảm truyền tin cậy, đúng thứ tự, không trùng lặp (TCP)."
         },
         {
           "id": "NT_C1_T10_Q5",
@@ -713,7 +713,7 @@
             "layer 7",
             "7th"
           ],
-          "explanation": ""
+          "explanation": "Tầng ứng dụng là tầng **7** (trên cùng) của mô hình OSI."
         },
         {
           "id": "NT_C1_T10_Q6",
@@ -725,7 +725,7 @@
             "HTTPS",
             "HTTP/HTTPS"
           ],
-          "explanation": ""
+          "explanation": "**HTTP/HTTPS** là giao thức tầng ứng dụng để truyền tải nội dung web."
         },
         {
           "id": "NT_C1_T10_Q7",
@@ -741,7 +741,7 @@
             "Layer 7",
             "Tầng 7"
           ],
-          "explanation": ""
+          "explanation": "Tầng **Application** (tầng 7) giao tiếp trực tiếp với người dùng qua trình duyệt, email..."
         },
         {
           "id": "NT_C1_T10_Q8",
@@ -757,7 +757,7 @@
             "Layer 6",
             "Tầng 6"
           ],
-          "explanation": ""
+          "explanation": "Tầng **Presentation** (tầng 6) lo mã hóa, nén và chuyển đổi định dạng dữ liệu."
         },
         {
           "id": "NT_C1_T10_Q9",
@@ -766,7 +766,7 @@
           "options": {},
           "correctAnswer": "MQTT",
           "acceptedAnswers": [],
-          "explanation": ""
+          "explanation": "**MQTT** là giao thức publish/subscribe rất nhẹ, tối ưu cho IoT có tài nguyên hạn chế."
         },
         {
           "id": "NT_C1_T10_Q10",
@@ -779,7 +779,7 @@
             "Cổng kết nối",
             "Cổng IoT"
           ],
-          "explanation": ""
+          "explanation": "**IoT Gateway** đứng giữa cảm biến và Internet/đám mây, gom và chuyển dữ liệu, đôi khi xử lý biên."
         }
       ]
     }

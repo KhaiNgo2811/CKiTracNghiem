@@ -16,7 +16,7 @@
             "D": "Vì DI phá vỡ ranh giới giữa các ngành và tích hợp dữ liệu, quy tắc kinh doanh"
           },
           "correctAnswer": "D",
-          "explanation": ""
+          "explanation": "**DI phá vỡ ranh giới giữa các ngành và tích hợp dữ liệu, quy tắc kinh doanh**, nên mọi công nghệ phi số mới đều cần nền tảng này để hoạt động. Các phương án còn lại thu hẹp vai trò của DI một cách sai lệch."
         },
         {
           "id": "NT_C2_T1_Q2",
@@ -28,7 +28,7 @@
             "D": "Chỉ tập trung vào sản xuất thiết bị"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "DI giúp **theo dõi nhà cung cấp, nhận phản hồi khách hàng và tham gia chia sẻ tri thức**, tức duy trì quan hệ ra bên ngoài; không giới hạn trong nội bộ."
         },
         {
           "id": "NT_C2_T1_Q3",
@@ -40,7 +40,7 @@
             "D": "Điện toán biên (Edge Computing)"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "Slide liệt kê 5G, Cloud, Edge... nhưng **không nhắc Blockchain cho tiền mã hóa** (Blockchain chỉ được nói tới như nền tảng hạ tầng tin cậy)."
         },
         {
           "id": "NT_C2_T1_Q4",
@@ -52,7 +52,7 @@
             "D": "Loại bỏ hoàn toàn vai trò của con người"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "DI **kết nối các quy trình thành một tổng thể và chia sẻ dữ liệu giữa các phần**, chứ không chỉ phục vụ truyền thông nội bộ hay thay thế con người."
         },
         {
           "id": "NT_C2_T1_Q5",
@@ -64,7 +64,7 @@
             "D": "Một loại thiết bị phần cứng chuyên dụng"
           },
           "correctAnswer": "A",
-          "explanation": ""
+          "explanation": "**Hạ tầng số** là khả năng lưu trữ và trao đổi dữ liệu qua hệ thống truyền thông tập trung; không phải một phần mềm cá nhân, phương pháp quản lý hay thiết bị đơn lẻ."
         },
         {
           "id": "NT_C2_T1_Q6",
@@ -76,7 +76,7 @@
             "D": "50%"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "Theo IDC, **80%** người ra quyết định cho hạ tầng số là quan trọng hoặc mang tính quyết định."
         },
         {
           "id": "NT_C2_T1_Q7",
@@ -88,7 +88,7 @@
             "D": "Chỉ phục vụ cho kết nối vệ tinh"
           },
           "correctAnswer": "A",
-          "explanation": ""
+          "explanation": "Trung tâm dữ liệu mới cần **sẵn sàng cho AI và xanh hóa** (tiết kiệm năng lượng), chứ không loại bỏ cloud hay chỉ lưu trữ truyền thống."
         },
         {
           "id": "NT_C2_T1_Q8",
@@ -100,7 +100,7 @@
             "D": "An ninh mạng toàn diện"
           },
           "correctAnswer": "D",
-          "explanation": ""
+          "explanation": "**An ninh mạng toàn diện** nhấn mạnh bảo vệ hệ thống một cách đầy đủ và chủ động."
         },
         {
           "id": "NT_C2_T1_Q9",
@@ -112,7 +112,7 @@
             "D": "Điện toán đám mây lai"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "**Edge Computing + 5G/6G** đưa dữ liệu và xử lý gần nơi phát sinh, giảm độ trễ."
         },
         {
           "id": "NT_C2_T1_Q10",
@@ -124,7 +124,7 @@
             "D": "Kết nối vệ tinh"
           },
           "correctAnswer": "A",
-          "explanation": ""
+          "explanation": "**Blockchain** được xem là nền tảng cho hạ tầng tin cậy (dữ liệu bất biến, minh bạch)."
         },
         {
           "id": "NT_C2_T1_Q11",
@@ -136,7 +136,7 @@
             "D": "Máy tính cá nhân"
           },
           "correctAnswer": "A",
-          "explanation": ""
+          "explanation": "**Internet Backbone** là các tuyến dữ liệu chính nối mạng giữa châu lục, quốc gia và vùng, chứ không phải Wi-Fi gia đình, app hay máy cá nhân."
         },
         {
           "id": "NT_C2_T1_Q12",
@@ -148,7 +148,7 @@
             "D": "Các ứng dụng văn phòng truyền thống"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "**IoT** gồm robot, máy móc, cảm biến, sản phẩm, phương tiện và môi trường kết nối Internet."
         },
         {
           "id": "NT_C2_T1_Q13",
@@ -160,7 +160,7 @@
             "D": "Loại bỏ nhu cầu sử dụng hệ điều hành"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "**API & Integration** cho phép các nền tảng, hệ thống, ứng dụng phối hợp và chia sẻ thông tin."
         },
         {
           "id": "NT_C2_T1_Q14",
@@ -172,7 +172,7 @@
             "D": "Một phần mềm ứng dụng dành cho người dùng cuối"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "Hạ tầng số là **dịch vụ nền tảng cần thiết cho năng lực CNTT** của quốc gia, vùng, thành phố hoặc tổ chức."
         },
         {
           "id": "NT_C2_T1_Q15",
@@ -184,7 +184,7 @@
             "D": "Chỉ phục vụ cho kết nối vệ tinh"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "**Trung tâm dữ liệu** quản lý tính toán, lưu trữ dữ liệu và dịch vụ mạng; không thay thế hoàn toàn cloud."
         }
       ]
     },
@@ -202,7 +202,7 @@
             "D": "Tiết kiệm chi phí thiết bị và bảo dưỡng"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "Mạng máy tính **tăng** khả năng chia sẻ thông tin; vì vậy \"giảm khả năng chia sẻ\" là phát biểu sai (không phải lợi ích). Ba phương án còn lại đều là lợi ích thật của mạng."
         },
         {
           "id": "NT_C2_T2_Q2",
@@ -214,7 +214,7 @@
             "D": "WAN"
           },
           "correctAnswer": "A",
-          "explanation": ""
+          "explanation": "**LAN** (Local Area Network) giới hạn trong một tòa nhà, trường học. MAN là phạm vi thành phố, WAN/Internet là diện rộng."
         },
         {
           "id": "NT_C2_T2_Q3",
@@ -226,7 +226,7 @@
             "D": "Tăng chi phí bảo dưỡng hệ thống"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "**Email 1 phút so với thư 1 tháng** là ví dụ rõ về lợi ích truyền thông (nhanh, tức thì). Các phương án còn lại nói ngược lợi ích."
         },
         {
           "id": "NT_C2_T2_Q4",
@@ -238,7 +238,7 @@
             "D": "Một hệ thống phần mềm quản lý dữ liệu"
           },
           "correctAnswer": "B",
-          "explanation": ""
+          "explanation": "Mạng máy tính là **tập hợp máy tính nối với nhau qua môi trường truyền dẫn theo cấu trúc định trước** để trao đổi dữ liệu."
         },
         {
           "id": "NT_C2_T2_Q5",
@@ -250,7 +250,7 @@
             "D": "Sử dụng chung tài nguyên và chia sẻ thông tin"
           },
           "correctAnswer": "D",
-          "explanation": ""
+          "explanation": "Mục đích chính là **dùng chung tài nguyên và chia sẻ thông tin**, không phải tăng tốc CPU hay giảm bộ nhớ."
         },
         {
           "id": "NT_C2_T2_Q6",
@@ -262,7 +262,7 @@
             "D": "Thực hiện trên phạm vi toàn cầu"
           },
           "correctAnswer": "C",
-          "explanation": "Các đáp án còn lại: A: sai, LAN có thể hoạt động độc lập; B: sai; D: đặc điểm của WAN"
+          "explanation": "LAN **cho phép nhiều truy xuất trên đường truyền băng thông rộng trong phạm vi địa lý giới hạn**, có kết nối liên tục cho tài nguyên nội bộ. Phạm vi toàn cầu là đặc điểm của WAN, và LAN có thể hoạt động độc lập khỏi Internet."
         },
         {
           "id": "NT_C2_T2_Q7",
@@ -274,7 +274,7 @@
             "D": "Dung lượng bộ nhớ của máy chủ"
           },
           "correctAnswer": "C",
-          "explanation": "Các đáp án còn lại: A: yếu tố khác, không phải định nghĩa; B: liên quan hiệu năng máy tính; D: liên quan lưu trữ"
+          "explanation": "**Băng thông** là lượng dữ liệu truyền trên một đơn vị thời gian (vd Mbps). Số người dùng, tốc độ CPU và dung lượng bộ nhớ là các khái niệm khác."
         },
         {
           "id": "NT_C2_T2_Q8",
@@ -286,7 +286,7 @@
             "D": "Chỉ 2-3 máy"
           },
           "correctAnswer": "C",
-          "explanation": "Các đáp án còn lại: A: sai, khó quản lý khi vượt quá 15 máy; B: cần mô hình Client/Server hoặc Domain; D: chỉ là quy mô tối thiểu"
+          "explanation": "Mạng ngang hàng (peer-to-peer) phù hợp **tối đa khoảng 10–15 máy**; nhiều hơn khó quản lý và cần mô hình Client/Server hoặc Domain."
         },
         {
           "id": "NT_C2_T2_Q9",
@@ -298,7 +298,7 @@
             "D": "Sao lưu dữ liệu cá nhân"
           },
           "correctAnswer": "C",
-          "explanation": "Các đáp án còn lại: A: không liên quan; B: không liên quan; D: chức năng của backup/cloud storage"
+          "explanation": "**VPN** tạo kết nối riêng ảo, an toàn, đi qua Internet. Nó không liên quan tăng tốc CPU, thay hệ điều hành hay sao lưu."
         },
         {
           "id": "NT_C2_T2_Q10",
@@ -310,7 +310,7 @@
             "D": "Mạng ngang hàng chỉ dùng cho kết nối toàn cầu"
           },
           "correctAnswer": "B",
-          "explanation": "Các đáp án còn lại: A: sai, ngược lại cần quản trị tập trung; C: đặc điểm của client/server; D: sai, P2P thường dùng cho nhóm nhỏ, phạm vi cục bộ"
+          "explanation": "Client/Server dùng **server mạnh quản lý dữ liệu và quản trị tập trung**; mạng ngang hàng thì phân tán, không có CSDL tập trung."
         },
         {
           "id": "NT_C2_T2_Q11",
@@ -322,7 +322,7 @@
             "D": "Hoàn toàn độc lập, không liên kết"
           },
           "correctAnswer": "C",
-          "explanation": "Các đáp án còn lại: A: sai; B: sai; D: sai"
+          "explanation": "Các ISP **kết nối với nhau thành mạng lưới phân cấp (tier) và liên kết** tạo nên Internet toàn cầu."
         },
         {
           "id": "NT_C2_T2_Q12",
@@ -334,7 +334,7 @@
             "D": "Tăng tốc độ CPU"
           },
           "correctAnswer": "B",
-          "explanation": "Các đáp án còn lại: A: sai; C: sai; D: sai"
+          "explanation": "**Packet switch** (router, switch) **định tuyến và chuyển tiếp gói tin**, không lưu trữ lâu dài hay mã hóa dữ liệu người dùng."
         },
         {
           "id": "NT_C2_T2_Q13",
@@ -346,7 +346,7 @@
             "D": "Distributed application xử lý dữ liệu người dùng, packet switch chỉ chuyển tiếp dữ liệu"
           },
           "correctAnswer": "D",
-          "explanation": "Các đáp án còn lại: A: sai; B: sai; C: sai"
+          "explanation": "Ứng dụng phân tán chạy trên end system để **xử lý dữ liệu người dùng**; packet switch chỉ chuyển tiếp dữ liệu."
         },
         {
           "id": "NT_C2_T2_Q14",
@@ -358,7 +358,7 @@
             "D": "Quy định cách lưu trữ phần cứng"
           },
           "correctAnswer": "C",
-          "explanation": "Các đáp án còn lại: A: sai; B: sai; D: sai"
+          "explanation": "**Protocol** định nghĩa quy tắc trao đổi thông tin (định dạng, thứ tự, hành động) giữa các thực thể giao tiếp."
         },
         {
           "id": "NT_C2_T2_Q15",
@@ -370,7 +370,7 @@
             "D": "Máy in, bàn phím, chuột"
           },
           "correctAnswer": "B",
-          "explanation": "Các đáp án còn lại: A: sai; C: sai; D: sai"
+          "explanation": "Internet gồm **end systems, communication links và packet switches** phối hợp truyền dữ liệu."
         },
         {
           "id": "NT_C2_T2_Q16",
@@ -382,7 +382,7 @@
             "D": "WiFi sử dụng môi trường truyền không dây"
           },
           "correctAnswer": "D",
-          "explanation": "Các đáp án còn lại: A: sai; B: sai; C: sai"
+          "explanation": "Điểm khác biệt chính: **Wi-Fi dùng môi trường không dây**, còn Ethernet dùng cáp (có dây)."
         },
         {
           "id": "NT_C2_T2_Q17",
@@ -394,7 +394,7 @@
             "D": "Passive splitter"
           },
           "correctAnswer": "C",
-          "explanation": "Các đáp án còn lại: A: thuộc FTTH/PON; B: thuộc FTTH/PON; D: thuộc FTTH/PON"
+          "explanation": "**DSLAM** thuộc công nghệ DSL trên cáp đồng, không thuộc FTTH. Hệ FTTH/PON gồm OLT, splitter thụ động và ONT."
         },
         {
           "id": "NT_C2_T2_Q18",
@@ -406,7 +406,7 @@
             "D": "Ethernet"
           },
           "correctAnswer": "C",
-          "explanation": "Các đáp án còn lại: A: sai; B: sai, tầm ngắn; D: sai, có dây"
+          "explanation": "Truy cập không dây diện rộng gồm **5G và vệ tinh**. Bluetooth là tầm ngắn, Ethernet có dây, USB là cổng kết nối."
         },
         {
           "id": "NT_C2_T2_Q19",
@@ -418,7 +418,7 @@
             "D": "Các đường truyền quang biển"
           },
           "correctAnswer": "A",
-          "explanation": "Các đáp án còn lại: B: thuộc network core; C: sai; D: sai"
+          "explanation": "**Network edge** gồm các end systems và ứng dụng phân tán. Packet switch/router lõi thuộc network core."
         },
         {
           "id": "NT_C2_T2_Q20",
@@ -430,7 +430,7 @@
             "D": "Kết nối end system tới router biên đầu tiên"
           },
           "correctAnswer": "D",
-          "explanation": "Các đáp án còn lại: A: sai; B: sai; C: sai"
+          "explanation": "**Access network** nối end system tới router biên đầu tiên (edge router)."
         },
         {
           "id": "NT_C2_T2_Q21",
@@ -442,7 +442,7 @@
             "D": "Thời gian"
           },
           "correctAnswer": "D",
-          "explanation": "Các đáp án còn lại: A: sai; B: sai; C: sai, đó là FDM"
+          "explanation": "**TDM** (Time Division Multiplexing) chia tài nguyên theo **thời gian**. Chia theo tần số là FDM."
         },
         {
           "id": "NT_C2_T2_Q22",
@@ -454,7 +454,7 @@
             "D": "End systems và ứng dụng"
           },
           "correctAnswer": "C",
-          "explanation": "Các đáp án còn lại: A: sai; B: sai; D: thuộc network edge"
+          "explanation": "**Network core** gồm packet switches và các liên kết nối chúng. End systems và ứng dụng thuộc network edge."
         },
         {
           "id": "NT_C2_T2_Q23",
@@ -466,7 +466,7 @@
             "D": "Circuit switching chia nhỏ dữ liệu thành gói"
           },
           "correctAnswer": "B",
-          "explanation": "Các đáp án còn lại: A: sai; C: sai; D: sai"
+          "explanation": "**Packet switching không cần thiết lập kênh cố định trước**, dữ liệu chia thành gói. Circuit switching phải thiết lập mạch riêng trước khi truyền."
         },
         {
           "id": "NT_C2_T2_Q24",
@@ -478,7 +478,7 @@
             "D": "Chia theo địa chỉ IP"
           },
           "correctAnswer": "C",
-          "explanation": "Các đáp án còn lại: A: sai; B: sai, đó là TDM; D: sai"
+          "explanation": "**FDM** chia băng thông theo **tần số**; chia theo thời gian là TDM."
         },
         {
           "id": "NT_C2_T2_Q25",
@@ -490,7 +490,7 @@
             "D": "Mã hóa dữ liệu"
           },
           "correctAnswer": "C",
-          "explanation": "Các đáp án còn lại: A: sai; B: sai; D: sai"
+          "explanation": "**Multiplexing** cho phép nhiều tín hiệu chia sẻ cùng một đường truyền (bằng thời gian hoặc tần số)."
         }
       ]
     },
@@ -508,7 +508,7 @@
             "D": "Tầng Data Link"
           },
           "correctAnswer": "A",
-          "explanation": ""
+          "explanation": "Tầng **Network** chịu trách nhiệm định tuyến dữ liệu giữa các mạng bằng địa chỉ IP."
         },
         {
           "id": "NT_C2_T3_Q2",
@@ -520,7 +520,7 @@
             "D": "Network Access"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "Tầng **Transport** (TCP) đảm bảo truyền tin cậy giữa các host."
         },
         {
           "id": "NT_C2_T3_Q3",
@@ -532,7 +532,7 @@
             "D": "Tầng Network"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "Chuyển bit thành tín hiệu điện/quang là chức năng của tầng **Physical**."
         },
         {
           "id": "NT_C2_T3_Q4",
@@ -544,7 +544,7 @@
             "D": "8"
           },
           "correctAnswer": "C",
-          "explanation": ""
+          "explanation": "Mô hình OSI có **7 tầng**: Physical, Data Link, Network, Transport, Session, Presentation, Application."
         },
         {
           "id": "NT_C2_T3_Q5",
@@ -556,7 +556,7 @@
             "D": "HTTP"
           },
           "correctAnswer": "D",
-          "explanation": "Các đáp án còn lại: A: Network; B: Data Link; C: Transport"
+          "explanation": "**HTTP** thuộc tầng Application. IP – Network, Ethernet – Data Link, TCP – Transport."
         },
         {
           "id": "NT_C2_T3_Q6",
@@ -568,7 +568,7 @@
             "D": "Transport Layer"
           },
           "correctAnswer": "B",
-          "explanation": "Các đáp án còn lại: A: IP; C: HTTP, FTP, DNS; D: TCP, UDP (port)"
+          "explanation": "**Địa chỉ MAC** dùng ở tầng Data Link. Địa chỉ IP thuộc Network, HTTP/FTP/DNS thuộc Application, port thuộc Transport."
         },
         {
           "id": "NT_C2_T3_Q7",
@@ -580,7 +580,7 @@
             "D": "Presentation Layer"
           },
           "correctAnswer": "D",
-          "explanation": "Các đáp án còn lại: A: TCP, UDP; B: IP; C: HTTP, FTP, DNS"
+          "explanation": "**Presentation Layer** lo mã hóa, giải mã và nén dữ liệu. TCP/UDP thuộc Transport, IP thuộc Network."
         },
         {
           "id": "NT_C2_T3_Q8",
@@ -592,7 +592,7 @@
             "D": "Firewall"
           },
           "correctAnswer": "C",
-          "explanation": "Các đáp án còn lại: A: Data Link; B: Network; D: Network/Transport"
+          "explanation": "**Hub** hoạt động ở tầng Physical (chỉ lặp tín hiệu). Switch – Data Link, Router – Network, Firewall – Network/Transport."
         },
         {
           "id": "NT_C2_T3_Q9",
@@ -604,7 +604,7 @@
             "D": "Transport Layer"
           },
           "correctAnswer": "D",
-          "explanation": "Các đáp án còn lại: A: quản lý phiên; B: IP; C: HTTP, FTP, DNS"
+          "explanation": "**TCP và UDP** thuộc tầng Transport. Tầng Session quản lý phiên, Network là IP, Application là HTTP/FTP/DNS."
         },
         {
           "id": "NT_C2_T3_Q10",
@@ -616,7 +616,7 @@
             "D": "Network Layer"
           },
           "correctAnswer": "B",
-          "explanation": "Các đáp án còn lại: A: TCP, UDP; C: mã hóa, định dạng dữ liệu; D: IP"
+          "explanation": "**Session Layer** thiết lập, duy trì và kết thúc phiên giữa các ứng dụng."
         },
         {
           "id": "NT_C2_T3_Q11",
@@ -628,7 +628,7 @@
             "D": "Địa chỉ IP"
           },
           "correctAnswer": "C",
-          "explanation": "Các đáp án còn lại: A: Physical; B: Data Link; D: Network"
+          "explanation": "TCP thêm **số cổng và số thứ tự** vào segment. Địa chỉ IP do tầng Network thêm, địa chỉ MAC do tầng Data Link thêm."
         },
         {
           "id": "NT_C2_T3_Q12",
@@ -640,7 +640,7 @@
             "D": "Transport Layer"
           },
           "correctAnswer": "A",
-          "explanation": "Các đáp án còn lại: B: địa chỉ MAC; C: HTTP, DNS; D: số cổng (port)"
+          "explanation": "**Địa chỉ IP** được xử lý ở Network Layer (Internet layer). MAC thuộc Data Link, port thuộc Transport."
         },
         {
           "id": "NT_C2_T3_Q13",
@@ -652,7 +652,7 @@
             "D": "Transport Layer"
           },
           "correctAnswer": "D",
-          "explanation": "Các đáp án còn lại: A: địa chỉ MAC; B: HTTP, DNS; C: định tuyến IP"
+          "explanation": "**Transport Layer** đảm bảo thứ tự và độ tin cậy của gói tin (TCP)."
         },
         {
           "id": "NT_C2_T3_Q14",
@@ -664,7 +664,7 @@
             "D": "Không đảm bảo thứ tự gói tin"
           },
           "correctAnswer": "D",
-          "explanation": "Các đáp án còn lại: A: đặc điểm của TCP; B: đặc điểm của TCP; C: đặc điểm của TCP"
+          "explanation": "**UDP không đảm bảo thứ tự gói tin**, không bắt tay, không kiểm soát lỗi chặt chẽ. Ba phương án còn lại là đặc điểm của TCP."
         },
         {
           "id": "NT_C2_T3_Q15",
@@ -676,7 +676,7 @@
             "D": "HTTP"
           },
           "correctAnswer": "D",
-          "explanation": "Các đáp án còn lại: A: Internet/Network; B: Transport; C: Network Access"
+          "explanation": "**HTTP** hoạt động ở tầng Application của TCP/IP. IP – Internet, TCP – Transport, Ethernet – Network Access."
         }
       ]
     },
@@ -694,7 +694,7 @@
             "D": "Không có khả năng mở rộng"
           },
           "correctAnswer": "C",
-          "explanation": "Các đáp án còn lại: A: sai, P2P chạy trên end system (PC, laptop); B: sai, đó là đặc điểm của Client/Server; D: sai, P2P có khả năng tự mở rộng tốt"
+          "explanation": "P2P **không cần hạ tầng server đáng kể**, các peer tự trao đổi trực tiếp và mở rộng tốt. Phụ thuộc server trung tâm là đặc điểm của Client/Server."
         },
         {
           "id": "NT_C2_T4_Q2",
@@ -706,7 +706,7 @@
             "D": "Server process"
           },
           "correctAnswer": "C",
-          "explanation": "Các đáp án còn lại: A: thiết bị định tuyến, không phải tiến trình ứng dụng; B: thiết bị chuyển mạch, không phải tiến trình ứng dụng; D: bên tiếp nhận và trả lời request"
+          "explanation": "**Client process** là bên gửi request. Server process nhận và trả lời; router, switch không phải tiến trình ứng dụng."
         },
         {
           "id": "NT_C2_T4_Q3",
@@ -718,7 +718,7 @@
             "D": "Server luôn online và phục vụ yêu cầu"
           },
           "correctAnswer": "D",
-          "explanation": "Các đáp án còn lại: A: sai, thường ngược lại; B: đó là vai trò của server; C: sai, server phải luôn online"
+          "explanation": "Trong Client/Server, **server luôn online và phục vụ yêu cầu** (thường có địa chỉ cố định); client có thể kết nối gián đoạn."
         },
         {
           "id": "NT_C2_T4_Q4",
@@ -730,7 +730,7 @@
             "D": "Giao diện phần mềm giữa tiến trình và giao vận"
           },
           "correctAnswer": "D",
-          "explanation": "Các đáp án còn lại: A: đó là router; B: đó là TCP/UDP; C: sai, socket là khái niệm phần mềm"
+          "explanation": "**Socket** là giao diện phần mềm giữa tiến trình ứng dụng và tầng giao vận, không phải thiết bị hay giao thức."
         },
         {
           "id": "NT_C2_T4_Q5",
@@ -742,7 +742,7 @@
             "D": "End systems"
           },
           "correctAnswer": "D",
-          "explanation": "Các đáp án còn lại: A: thiết bị hạ tầng mạng; B: thiết bị hạ tầng mạng; C: thiết bị hạ tầng mạng"
+          "explanation": "Ứng dụng phân tán chạy trên **end systems** (máy tính, điện thoại); router, switch, gateway chỉ chuyển tiếp dữ liệu."
         },
         {
           "id": "NT_C2_T4_Q6",
@@ -754,7 +754,7 @@
             "D": "Reliable data transfer"
           },
           "correctAnswer": "A",
-          "explanation": "Các đáp án còn lại: A: chức năng của tầng Network, không phải Transport; B: dịch vụ của Transport; C: dịch vụ của Transport; D: dịch vụ của Transport"
+          "explanation": "**Routing** là chức năng của tầng Network. Reliable data transfer, throughput, timing (và bảo mật) là các dịch vụ của tầng Transport."
         },
         {
           "id": "NT_C2_T4_Q7",
@@ -766,7 +766,7 @@
             "D": "Không có các dịch vụ phức tạp của TCP"
           },
           "correctAnswer": "D",
-          "explanation": "Các đáp án còn lại: A: đặc điểm của TCP; B: đặc điểm của TCP; C: đặc điểm của TCP"
+          "explanation": "UDP \"nhẹ\" vì **không có các dịch vụ phức tạp của TCP** (bắt tay, tin cậy, kiểm soát tắc nghẽn)."
         },
         {
           "id": "NT_C2_T4_Q8",
@@ -778,7 +778,7 @@
             "D": "Xác định đường truyền"
           },
           "correctAnswer": "C",
-          "explanation": "Các đáp án còn lại: A: đó là vai trò của IP/MAC; B: router xác định bằng địa chỉ IP; D: không liên quan đến port"
+          "explanation": "**Port** xác định tiến trình/ứng dụng trên host; IP/MAC xác định thiết bị."
         },
         {
           "id": "NT_C2_T4_Q9",
@@ -790,7 +790,7 @@
             "D": "Connection-oriented"
           },
           "correctAnswer": "C",
-          "explanation": "Các đáp án còn lại: A: đặc điểm của TCP; B: đặc điểm của TCP; D: đặc điểm của TCP"
+          "explanation": "**TCP là connection-oriented**, vì vậy \"không thiết lập kết nối\" không thuộc TCP (mà là UDP). Congestion control và reliable transfer đều là của TCP."
         },
         {
           "id": "NT_C2_T4_Q10",
@@ -802,7 +802,7 @@
             "D": "DNS"
           },
           "correctAnswer": "A",
-          "explanation": "Các đáp án còn lại: B: port 20/21; C: port 25; D: port 53"
+          "explanation": "**HTTP dùng port 80**. FTP dùng 20/21, SMTP dùng 25, DNS dùng 53."
         },
         {
           "id": "NT_C2_T4_Q11",
