@@ -533,6 +533,35 @@ document.getElementById('btnNextQuestion').addEventListener('click', () => {
   renderQuizBody();
 });
 
+// Phím tắt khi làm bài: A/B/C/D = chọn đáp án, Enter = kiểm tra đáp án, → = câu sau, ← = câu trước
+document.addEventListener('keydown', (ev) => {
+  if (ev.ctrlKey || ev.altKey || ev.metaKey || ev.shiftKey || ev.isComposing) return;
+  const view = document.getElementById('view-quiz');
+  if (!view || view.classList.contains('d-none') || document.querySelector('.modal.show')) return;
+  if (!Quiz.state || !Quiz.state.questions || !Quiz.state.questions.length) return;
+  const t = ev.target;
+  const tag = t && t.tagName;
+  const inText = tag === 'TEXTAREA' || tag === 'SELECT' || (tag === 'INPUT' && t.type !== 'radio' && t.type !== 'checkbox');
+  if (ev.key === 'Enter') {
+    if (tag === 'TEXTAREA' || tag === 'BUTTON' || tag === 'SUMMARY' || (t && t.classList && t.classList.contains('fill-input'))) return;
+    const card = (t && t.closest && t.closest('.question-card')) || (quizViewMode === 'single' ? document.querySelector('#quizBody .question-card') : null);
+    const cb = card && card.querySelector('.btn-check-answer');
+    if (cb && !cb.disabled) { ev.preventDefault(); cb.click(); }
+  } else if (/^[a-dA-D]$/.test(ev.key) && !inText) {
+    const card = (t && t.closest && t.closest('.question-card')) || (quizViewMode === 'single' ? document.querySelector('#quizBody .question-card') : null);
+    const radio = card && card.querySelector(`input[type="radio"][value="${ev.key.toUpperCase()}"]`);
+    if (radio && !radio.disabled) {
+      ev.preventDefault();
+      radio.checked = true;
+      radio.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+  } else if ((ev.key === 'ArrowRight' || ev.key === 'ArrowLeft') && quizViewMode === 'single' && !inText) {
+    ev.preventDefault();
+    const btn = document.getElementById(ev.key === 'ArrowRight' ? 'btnNextQuestion' : 'btnPrevQuestion');
+    if (btn && !btn.disabled) btn.click();
+  }
+}, true);
+
 document.getElementById('btnSubmitQuiz').addEventListener('click', () => {
   const answered = Quiz.getAnsweredCount();
   const total = Quiz.getTotalCount();
