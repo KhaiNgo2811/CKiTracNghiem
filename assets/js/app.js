@@ -72,7 +72,7 @@ async function openChapter(chapterId) {
   };
   showView('view-chapter');
 
-  document.getElementById('chapterTitle').textContent = `${chapterMeta.chapterId} — ${chapterMeta.chapterName || data.chapterName}`;
+  document.getElementById('chapterTitle').textContent = `${chapterMeta.priority ? `[Ưu tiên ${chapterMeta.priority}] ` : ''}${chapterMeta.chapterId} — ${chapterMeta.chapterName || data.chapterName}`;
   const topicList = document.getElementById('topicListContainer');
   topicList.innerHTML = '';
 

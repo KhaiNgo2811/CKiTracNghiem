@@ -20,7 +20,7 @@ export function renderChapterCards(manifest, onOpenChapter) {
     col.innerHTML = `
       <div class="card chapter-card h-100 shadow-sm">
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">${ch.chapterId} — ${ch.chapterName}</h5>
+          <h5 class="card-title">${ch.priority ? `<span class="badge bg-danger me-2"><i class="bi bi-star-fill"></i> Ưu tiên ${ch.priority}</span>` : ''}${ch.chapterId} — ${ch.chapterName}</h5>
           <p class="text-muted mb-2"><i class="bi bi-diagram-3"></i> ${ch.topicCount} chủ đề · <i class="bi bi-patch-question"></i> ${ch.questionCount} câu hỏi</p>
           <div class="progress mb-2" style="height: 8px;">
             <div class="progress-bar" role="progressbar" style="width: ${progress}%"></div>
