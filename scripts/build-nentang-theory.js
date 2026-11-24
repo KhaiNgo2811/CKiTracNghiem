@@ -90,6 +90,7 @@ table(['Module', 'Chủ đề', 'Từ khóa quan trọng'], [
   ['8', 'Bảo mật cơ bản', 'Firewall, DMZ, IDS, mã hóa, chữ ký số, AAA'],
   ['9', 'Data Center, Cloud, IoE/IoT', 'IaaS/PaaS/SaaS, làm mát, Edge/Fog, Blockchain, IoE'],
   ['10', 'Mở rộng', 'Chia subnet, tính NetID, Wi-Fi (SSID)'],
+  ['B1–B9', 'Bổ sung từ “Ôn tập Nền tảng”', 'Phân loại mạng, băng thông/throughput, Hub vs Switch, OSI chi tiết, T568A/B, IP lớp A/B/C, chia subnet'],
 ], [1, 4, 8]);
 pb();
 
@@ -518,6 +519,193 @@ bl([
   '**SSID** = **tên mạng không dây**. Muốn tạo **nhiều mạng Wi-Fi** trên cùng một router → cấu hình **nhiều SSID**.',
   'Vào trang cấu hình cần **tài khoản đăng nhập** quản trị. Khi đổi mật khẩu Wi-Fi: **ghi nhớ mật khẩu mới** để không mất kết nối.',
   'Quản trị nên **thường xuyên đổi mật khẩu Wi-Fi**, dùng mã hóa **WPA2/WPA3**, cập nhật firmware.',
+]);
+pb();
+
+// ================= PHẦN BỔ SUNG TỪ "ÔN TẬP NỀN TẢNG" =================
+h1('Phần bổ sung – Ghi chú từ tài liệu “Ôn tập Nền tảng”');
+p('Phần này tổng hợp thêm từ bộ ghi chú ôn tập của lớp (PDF “ÔN TẬP NỀN TẢNG”), trình bày cùng định dạng với các module ở trên. Chỗ nào số liệu khác với phần trên sẽ có ghi chú.');
+
+h2('B1. Phân loại mạng');
+table(['Tiêu chí', 'Các loại'], [
+  ['**Theo mục đích xử lý**', '**Tập trung** (máy khách gửi yêu cầu về server xử lý); **Phân tán** (mỗi máy có nhiệm vụ và dữ liệu xử lý riêng); **Cộng tác** (server tách yêu cầu thành nhiều nhiệm vụ nhỏ, giao các client xử lý rồi gom kết quả gửi lại cho máy yêu cầu)'],
+  ['**Theo thiết kế (topology)**', 'Star, Bus, Ring, Tree, Fully connected, Mesh'],
+  ['**Theo cấu hình**', '**Client/Server** (tập trung) và **Peer-to-Peer** (ngang hàng)'],
+  ['**Theo vùng địa lý**', 'LAN, MAN, WAN, GAN, WLAN'],
+], [4, 9]);
+table(['Mạng', 'Đặc điểm'], [
+  ['**LAN**', 'Giới hạn địa lý (tòa nhà, phòng); nhiều truy xuất trên một đường truyền **băng thông rộng**; quản trị riêng; kết nối liên tục tới tài nguyên nội bộ. Thiết bị: **Router, Bridge, Hub, Ethernet Switch, Repeater**.'],
+  ['**WAN**', 'Vùng địa lý rộng, có thể toàn cầu; truy xuất qua **serial interface tốc độ thấp**; kết nối liên tục hay gián đoạn. Thiết bị: **Router, Communication Server, Modem, CSU/DSU, TA/NT1**.'],
+  ['**MAN**', 'Mạng đô thị nối các đơn vị hành chính của một thành phố/quốc gia.'],
+  ['**GAN**', 'Mạng toàn cầu.'],
+  ['**WLAN**', 'Mạng không dây.'],
+], [2.5, 10]);
+bl([
+  'Lợi ích mạng máy tính: tăng **độ tin cậy** của HTTT (bảo trì, lưu trữ, khôi phục), tạo môi trường truyền thông giữa nhiều người trên vùng rộng, nâng cao chất lượng thông tin, **tiết kiệm chi phí**.',
+  '**Client/Server**: **Host-centric** (mọi chức năng ứng dụng nằm trên máy chủ) và **File server** (hệ thống file tập trung).',
+  '**Peer-to-Peer**: mỗi máy vừa là client vừa là server, quyền hạn xử lý ngang nhau, **tự quản trị**; dữ liệu nằm trên từng máy nên **khó backup toàn hệ thống**. Ghi chú lớp: phù hợp **15–20 máy** (bộ quiz ghi 10–15 máy – nên nhớ cả hai, chọn theo phương án đề đưa ra).',
+]);
+
+h2('B2. Băng thông (Bandwidth) và Throughput');
+note([
+  '**Băng thông** = đại lượng đo **lưu lượng dữ liệu truyền trên một đơn vị thời gian** (bit/s). **Throughput** = lượng dữ liệu **đo thực tế**, luôn **nhỏ hơn** băng thông (**Throughput < Bandwidth**).',
+  'Băng thông của cả đường truyền được quyết định bởi **đoạn có băng thông thấp nhất**. Băng thông **không miễn phí**, phụ thuộc thiết bị và kỹ thuật mạng, là thước đo đánh giá hoạt động của mạng.',
+]);
+formula([
+  '**Thời gian tải file:** download tốt nhất **T = S / BW**; download bình thường **T = S / P**.',
+  'T (giây) – thời gian truyền; S (bit) – kích thước file; BW (bit/s) – băng thông lý thuyết từ nguồn đến đích; P (bit/s) – lưu lượng thực tế tại thời điểm truyền.',
+  '**Đơn vị:** 1 Kbps = 1024 bps ≈ 10³ bps; 1 Mbps ≈ 10⁶ bps; 1 Gbps = 1024 Mbps ≈ 10⁹ bps; 1 Tbps = 1024 Gbps ≈ 10¹² bps. 100 Mbps = 100 Mbit/s.',
+]);
+bl([
+  '**Yếu tố ảnh hưởng throughput:** PC (client), máy chủ (server), số người dùng trên mạng, chuyển mạng đến “cloud”, **mô hình thiết kế mạng**, kiểu dữ liệu truyền, **thời điểm trong ngày**.',
+  'Đường truyền mạng dùng **ánh sáng, điện, sóng vô tuyến**.',
+]);
+
+h2('B3. Mô hình thiết kế mạng, Hub và Switch');
+bl([
+  'Phổ biến ở Việt Nam: **Star, Bus, Tree**. **Star**: dùng một hub/switch nối các máy; **Bus**: đường truyền chính giới hạn hai đầu bằng **terminator**, mỗi trạm nối qua đầu **chữ T**. Dây nối từ máy tới thiết bị không quá **180 cm** (ghi chú lớp).',
+]);
+table(['', 'Hub (tầng 1)', 'Switch (tầng 2)'], [
+  ['Cách chuyển dữ liệu', '**Sao chép** dữ liệu ra **tất cả cổng còn lại** → mọi máy đều nhận', 'Dựa vào **địa chỉ MAC**, chỉ gửi **đúng máy đích**'],
+  ['Collision domain', 'Cả hệ thống hub + máy là **1 collision domain** → gắn càng nhiều máy càng nhiều đụng độ', '**Mỗi cổng = 1 collision domain** → khó đụng độ'],
+  ['Băng thông', 'Giảm khi thêm máy; **tốn băng thông**', '**Tiết kiệm băng thông**, tăng tốc độ mạng'],
+  ['Bảo mật / giá', 'Rủi ro bảo mật; rẻ', 'An toàn hơn; **giá cao hơn**'],
+], [3, 5, 5]);
+bl([
+  'MAC chỉ có hiệu lực trong **mạng nội bộ**, nên switch chỉ chuyển dữ liệu trong nội bộ; **Router** chuyển dữ liệu **ra bên ngoài bằng địa chỉ IP**.',
+  '**Số lần đợi tối đa** (retry) của collision là **16** (quy ước).',
+  '**Bridge**: hỗ trợ hub – xem địa chỉ MAC để quyết định **gửi hay hủy** dữ liệu (hub thì gửi đến toàn bộ máy).',
+  'Hub và Switch đều là thiết bị cho máy tính cắm vào cổng và chia sẻ dữ liệu cho nhau.',
+]);
+h2('B4. Collision và Collision domain');
+table(['Khái niệm', 'Ý nghĩa'], [
+  ['**Collision (đụng độ)**', 'Xảy ra khi **hai hay nhiều máy cùng lúc** gửi dữ liệu → xung đột.'],
+  ['**Collision domain**', 'Vùng mà nếu có hai máy gửi đồng thời thì xảy ra đụng độ. Switch **chia nhỏ** vùng này (mỗi cổng một vùng) nên khó đụng độ; hub thì **cả hệ thống là một vùng**.'],
+], [4, 9]);
+
+h2('B5. Mô hình OSI – ghi chú bổ sung');
+bl([
+  '**Nhóm tầng hệ thống mạng (1–3)**: **Physical** (bit đi qua dây nào, môi trường nào, nối mạng ra sao), **Data Link** (kiểm tra, sửa lỗi tại nơi nhận; “máy tính này với máy tính kia”), **Network** (trao đổi giữa hai mạng khác nhau, đánh địa chỉ; “mạng này với mạng kia”).',
+  '**Nhóm tầng ứng dụng (4–7)**: **Transport** (đảm bảo **nguyên vẹn dữ liệu** khi truyền), **Session** (điều khiển/ngắt phiên, **phân luồng** dữ liệu), **Presentation** (biểu diễn dữ liệu thống nhất, quy định kiểu dữ liệu), **Application** (ứng dụng cụ thể cho người dùng: Messenger, YouTube…).',
+  '**Dữ liệu từng tầng (PDU):** Physical = **Bits**; Data Link = **Frames**; Network = **Packets**; Transport = **Segment**; Session/Presentation/Application = **Data**.',
+]);
+h3('Tầng 1 – Physical');
+bl(['Chuyển **dòng bit thô** qua phương tiện truyền dẫn; đảm bảo bên nhận hiểu đúng; quy định đặc điểm nhận dữ liệu bằng **tín hiệu 1/0**.']);
+h3('Tầng 2 – Data Link (2 tầng con: MAC và LLC)');
+bl([
+  '**Địa chỉ MAC (Media Access Control)**: **48 bit** = **24 bit nhà sản xuất** + **24 bit đánh số thiết bị** → khoảng **2⁴⁸** thiết bị.',
+  '**LLC**: tầng con thiết lập và duy trì liên kết dữ liệu giữa các thiết bị, chịu trách nhiệm **điều khiển luồng và sửa lỗi**.',
+]);
+table(['Cơ chế truy cập', 'Phương pháp', 'Cách hoạt động'], [
+  ['**Tranh chấp**', '**CSMA/CA** (mạng không dây)', '**Tránh** đụng độ; chỉ chiếm đường truyền khi cảm nhận đường **đang rảnh**'],
+  ['**Tranh chấp**', '**CSMA/CD** (mạng có dây)', '**Chấp nhận** đụng độ: hai máy cùng thấy đường rảnh và cùng truyền thì phát hiện và xử lý'],
+  ['**Có điều khiển**', '**Token passing** (thẻ bài)', 'Một **token** lưu chuyển; thiết bị muốn truyền phải **chiếm token**'],
+  ['**Có điều khiển**', '**Polling** (dò tìm)', 'Thiết bị điều khiển chính **hỏi lần lượt** các thiết bị thứ cấp, chọn theo thứ tự và độ ưu tiên'],
+], [3, 4.5, 6]);
+h3('Tầng 3 – Network');
+bl([
+  'Thiết bị: **router**, (switch lớp 3); xác định **địa chỉ logic** bằng giao thức **IP**; dùng **bảng định tuyến**; điều khiển lưu lượng, kiểm soát lỗi.',
+  '**Mạng vật lý**: các máy và thiết bị nối nhau bằng đường truyền vật lý. **Mạng logic**: dãy máy trong cùng mạng vật lý cho phép **truyền thông trực tiếp** theo một giao thức mạng; máy khác mạng logic **không giao tiếp trực tiếp**, phải qua **router**.',
+]);
+table(['Kỹ thuật chuyển dữ liệu', 'Cách làm', 'Đặc điểm'], [
+  ['**Chuyển mạch (circuit switching)**', 'Thiết lập mạch trên đường cơ bản rồi mới truyền dữ liệu', 'Ổn định, chiếm kênh'],
+  ['**Chuyển thông điệp (message)**', 'Tách dữ liệu thành các thông điệp, đi nhiều đường khác nhau', 'Nhanh nhưng **rủi ro cao**'],
+  ['**Chuyển gói (packet)**', 'Tách thành các **gói**, tận dụng đường nào trống', 'Nhanh, tận dụng đường truyền, kết quả có thể **lộn xộn** (cần ráp lại)'],
+], [4, 5, 4.5]);
+bl([
+  'Định tuyến: **cứng** (con người cài – **static**) và **mềm** (máy tự thiết lập – **dynamic**). Router căn cứ **bảng định tuyến** để tìm **đường ngắn nhất**.',
+  'Hai phương pháp xây bảng định tuyến động: **vector cự ly (distance vector)** và **trạng thái kết nối (link-state)**.',
+]);
+h3('Tầng 4, 5 – Transport và Session');
+bl([
+  '**Transport**: kiểm soát **độ tin cậy** của một kết nối. **TCP** = hướng kết nối; **UDP** = phi kết nối (**nhanh hơn nhưng kém chính xác hơn**). Tùy ứng dụng chọn TCP hay UDP.',
+  '**Session**: thiết lập, quản lý và kết thúc kết nối giữa các ứng dụng.',
+]);
+table(['Chế độ truyền', 'Ý nghĩa'], [
+  ['**Simplex**', 'Chỉ **một chiều** A → B, không truyền ngược lại'],
+  ['**Half duplex**', 'Hai chiều nhưng **không đồng thời** (lần lượt)'],
+  ['**Full duplex**', 'Hai chiều **đồng thời**'],
+], [4, 9]);
+
+h2('B6. Môi trường truyền dẫn và cách bấm dây');
+bl([
+  '**Thiết bị truyền dẫn**: cáp đồng, cáp quang, không dây. **Phương tiện truyền dẫn**: phương tiện vật lý cho phép truyền tin giữa các thiết bị, gồm **hữu tuyến** và **vô tuyến**.',
+  '**Baseband**: một lần chỉ truyền **một loại dữ liệu**; **Broadband**: truyền được nhiều loại dữ liệu cùng lúc.',
+  '**Cáp đồng trục**: gồm lõi, lớp nhựa, màng bảo vệ, vỏ bọc ngoài; **không đắt**, dài khoảng **200–500 m**.',
+  '**Cáp xoắn đôi**: **8 sợi nhỏ** xoắn thành cặp, truyền độc lập; đắt hơn, dài tối đa **100 m**.',
+]);
+table(['Chuẩn', 'Thứ tự màu dây (chân 1 → 8)'], [
+  ['**T568A**', 'sọc xanh lá – xanh lá – sọc cam – xanh dương – sọc xanh dương – cam – sọc nâu – nâu'],
+  ['**T568B**', 'sọc cam – cam – sọc xanh lá – xanh dương – sọc xanh dương – xanh lá – sọc nâu – nâu'],
+], [3, 10]);
+bl([
+  'Chỉ cần quan tâm **4 dây: 1, 2, 3, 6** (truyền/nhận dữ liệu). Mẹo nhớ T568B: “**Cam – Lá – Lơ – Nâu**, sọc trước, trơn sau”.',
+  '**Dây thẳng**: hai đầu **cùng chuẩn**; **dây chéo**: một đầu T568A, một đầu T568B.',
+  '**Họ thiết bị**: **Họ I** = Computer, Router; **Họ II** = Hub, Switch. **Cùng họ → dây chéo; khác họ → dây thẳng.**',
+]);
+
+h2('B7. Địa chỉ IP – phân lớp và NetID');
+note([
+  '**IPv4**: 4 octet, **32 bit**. Mỗi địa chỉ gồm **NetID** (địa chỉ mạng) và **HostID** (địa chỉ máy trong mạng).',
+  '**NetID = IP address AND Subnet mask.** Các máy **cùng mạng** có **cùng NetID, cùng subnet mask, khác HostID**; khác mạng nếu khác NetID hoặc khác subnet mask.',
+]);
+table(['Lớp', 'Octet đầu', 'NetID', 'Netmask mặc định', 'Số mạng', 'Số máy/mạng'], [
+  ['**A**', '0 – 127', 'x.0.0.0', '255.0.0.0 (/8)', '128', '256×256×256'],
+  ['**B**', '128 – 191', 'x.x.0.0', '255.255.0.0 (/16)', '64×256', '256×256'],
+  ['**C**', '192 – 223', 'x.x.x.0', '255.255.255.0 (/24)', '32×256×256', '256'],
+], [1.5, 2.5, 2.5, 4, 3, 3.5]);
+bl([
+  'Lớp **D, E** thường không dùng cho máy thông thường (multicast/dự phòng).',
+  'Số máy dùng được thực tế = **tổng − 2** (bỏ địa chỉ mạng và địa chỉ broadcast).',
+  '**Lưu ý:** không thể dùng netmask của lớp **nhỏ hơn**, nhưng có thể dùng netmask của lớp **lớn hơn** (để chia mạng con).',
+]);
+formula([
+  '**Ví dụ NetID bằng AND nhị phân:** IP 156.89.123.89 (lớp B), mask 255.255.0.0 → 10011100.01011001.01111011.01011001 AND 11111111.11111111.00000000.00000000 → **NetID 156.89.0.0**.',
+  '203.162.7.123 / 255.255.255.0 → **203.162.7.0**; 20.162.7.123 / 255.0.0.0 → **20.0.0.0**; 153.162.7.123 / 255.255.0.0 → **153.162.0.0**.',
+  '**Hai IP cùng mạng lớp B, NetID 175.205:** 175.205.34.17 và 175.205.17.34 (HostID lần lượt 34.17 và 17.34).',
+]);
+h3('Địa chỉ đặc biệt và Private');
+bl([
+  '**Loopback 127.x.x.x**: dùng **kiểm tra card mạng**, không dùng cấu hình mạng.',
+  '**Broadcast**: địa chỉ **cuối cùng** của một mạng (ví dụ mạng 167.8.0.0 → broadcast **167.8.255.255**); giúp quảng bá/cập nhật bảng định tuyến. Số mạng con thực sự dùng được = tổng − 2 (bỏ địa chỉ đầu và cuối).',
+]);
+table(['Lớp', 'Khoảng Private', 'Số mạng'], [
+  ['A', '**10.0.0.0**', '1'],
+  ['B', '**172.16.0.0 – 172.31.0.0**', '16'],
+  ['C', '**192.168.x.0**', '256'],
+], [2, 7, 3]);
+p('Private address: dùng cho mạng cục bộ **không cần mua**, **không được cấp phát trên Internet**.');
+
+h2('B8. Bài tập – cùng mạng và broadcast');
+formula([
+  '**Đề:** IP1 = 133.69.73.85, IP2 = 133.69.97.123, subnet mask 255.255.192.0. Hai IP có cùng mạng không? Nếu cùng thì mạng nào, broadcast là gì?',
+  '**Cách giải:** mask đuôi 192 → **số bù = 256 − 192 = 64**. Các khối mạng ở octet 3: 0–63, **64–127**, 128–191, 192–255.',
+  '73 và 97 đều nằm trong 64–127 → cùng NetID **133.69.64.0**. Dải địa chỉ: 133.69.64.0 → 133.69.127.255 ⇒ **broadcast = 133.69.127.255**.',
+  'Các mạng liền kề: 133.69.0.0 – 133.69.63.255; **133.69.64.0 – 133.69.127.255**; 133.69.128.0 – 133.69.191.255.',
+]);
+
+h2('B9. Chia mạng con (subnetting) theo công thức của lớp');
+note([
+  '**Lý do chia mạng con**: một NetID thật trên Internet phải **mua**; nhu cầu tách mạng trong một đơn vị; số máy quá nhiều → chia nhỏ mạng.',
+  'Gọi **m** = số bit HostID ban đầu, **n** = số bit mượn. Số mạng con = **2ⁿ** (dùng được **2ⁿ − 2** nếu bỏ mạng đầu và cuối); số máy/mạng con = **2^(m−n) − 2**.',
+]);
+formula([
+  '**Số bù** (độ rộng mỗi khối mạng, trong octet bị cắt) = **2^(số bit host còn lại trong octet đó)**; **số trong subnet mask = 256 − số bù**.',
+]);
+table(['Bit mượn trong octet', 'Số mạng', 'Số bù', 'Số trong mask'], [
+  ['1', '2', '128', '128'], ['2', '4', '64', '192'], ['3', '8', '32', '224'], ['4', '16', '16', '240'],
+  ['5', '32', '8', '248'], ['6', '64', '4', '252'], ['7', '128', '2', '254'], ['8', '256', '1', '255'],
+], [4, 3, 3, 3]);
+formula([
+  '**Ví dụ số bù = 32 trên mạng 172.16.0.0:** Mạng 1: 172.16.0.0 – 172.16.31.255; Mạng 2: 172.16.32.0 – 172.16.63.255; Mạng 3: 172.16.64.0 – 172.16.95.255…',
+  '**Bài mẫu:** công ty có mạng 159.7.0.0 (lớp B, mask 255.255.0.0, **m = 16**), cần **14 phòng**, mỗi phòng **255 máy**, độc lập (khác mạng).',
+  'Hệ bất phương trình: **2ⁿ − 2 ≥ 14** → 2ⁿ ≥ 16 → n ≥ 4; **2^(16−n) − 2 ≥ 255** → 2^(16−n) ≥ 257 > 256 → 16 − n ≥ 9 → n ≤ 7. Vậy **4 ≤ n ≤ 7**, chọn một giá trị nguyên.',
+  'Chọn **n = 6** (mượn 6 bit): có **64 mạng**, **số bù = 4**, mask **255.255.252.0**: Mạng 1: 159.7.0.0 – 159.7.3.255; Mạng 2: 159.7.4.0 – 159.7.7.255; Mạng 3: 159.7.8.0 – 159.7.11.255; Mạng 4: 159.7.12.0 – 159.7.15.255; … Mạng 64: 159.7.252.0. Chọn ra 14 mạng để dùng.',
+  '**Cùng mạng** = nằm trong cùng khoảng mạng. Ví dụ **159.7.8.0 cùng mạng với 159.7.10.22**.',
+]);
+tip([
+  'Có nhiều đáp án n hợp lệ (4–7): đề trắc nghiệm hay cho sẵn mask. Ở Module 10 phía trên chọn n = 4 (mask 255.255.240.0, mỗi mạng 4094 máy) – cũng đúng vì thỏa cả hai điều kiện.',
+  'Khi hỏi “số bit mượn tối thiểu” chỉ cần điều kiện **2ⁿ ≥ số phòng** (cộng 2 nếu đề yêu cầu bỏ mạng đầu/cuối).',
 ]);
 pb();
 
