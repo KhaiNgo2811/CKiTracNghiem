@@ -7,6 +7,18 @@
       "questionCount": 64
     },
     {
+      "chapterId": "NT_C5",
+      "chapterName": "Đề ôn tập Mạng máy tính",
+      "topicCount": 9,
+      "questionCount": 111
+    },
+    {
+      "chapterId": "NT_C4",
+      "chapterName": "Câu hỏi tự luận – tư duy thiết kế hạ tầng",
+      "topicCount": 3,
+      "questionCount": 11
+    },
+    {
       "chapterId": "NT_C2",
       "chapterName": "Module Quiz – câu hỏi cuối bài",
       "topicCount": 10,
@@ -17,18 +29,6 @@
       "chapterName": "Quiz cuối chương",
       "topicCount": 10,
       "questionCount": 238
-    },
-    {
-      "chapterId": "NT_C4",
-      "chapterName": "Câu hỏi tự luận – tư duy thiết kế hạ tầng",
-      "topicCount": 3,
-      "questionCount": 11
-    },
-    {
-      "chapterId": "NT_C5",
-      "chapterName": "Đề ôn tập Mạng máy tính",
-      "topicCount": 9,
-      "questionCount": 111
     }
   ],
   "totalQuestions": 724,

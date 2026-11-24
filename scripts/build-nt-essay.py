@@ -137,6 +137,7 @@ m = json.load(open(OUT + 'manifest.json', encoding='utf-8-sig'))
 m['chapters'] = [c for c in m['chapters'] if c['chapterId'] != 'NT_C4']
 m['chapters'].append({'chapterId': 'NT_C4', 'chapterName': chapter['chapterName'], 'topicCount': len(chapter['topics']),
                       'questionCount': sum(len(t['questions']) for t in chapter['topics'])})
+m['chapters'].sort(key=lambda c: ['NT_C1', 'NT_C5', 'NT_C4', 'NT_C2', 'NT_C3'].index(c['chapterId']))  # ưu tiên: C1, C5, C4
 m['totalQuestions'] = sum(c['questionCount'] for c in m['chapters'])
 m['totalTopics'] = sum(c['topicCount'] for c in m['chapters'])
 json.dump(m, open(OUT + 'manifest.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
