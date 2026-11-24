@@ -4,7 +4,7 @@
 import Storage from './storage.js';
 import Quiz from './quiz.js';
 import { renderQuestionImages } from './images.js';
-import { isFill, matchFill, ansLabel } from './answer.js';
+import { isFill, isEssay, matchFill, ansLabel } from './answer.js';
 import { renderChapterCards, renderSummary, showWrongDetailModal } from './dashboard.js';
 
 let manifest = null;
@@ -341,7 +341,10 @@ function renderQuestionCard(q, index) {
   const flagged = Quiz.isFlagged(q.id);
   const checked = !!(Quiz.state.checkedQuestions && Quiz.state.checkedQuestions[String(q.id)]);
   const fillOk = isFill(q) && checked && matchFill(q, selected);
-  const optionsHtml = isFill(q)
+  const optionsHtml = isEssay(q)
+    ? `<div class="mb-2"><textarea class="form-control essay-input" data-qid="${q.id}" rows="7" maxlength="6000" placeholder="Tự trình bày câu trả lời của bạn theo dàn ý...">${escAttr(selected || '')}</textarea></div>
+       <details class="essay-guide mt-2"><summary class="btn btn-sm btn-outline-primary"><i class="bi bi-compass"></i> Xem định hướng trả lời</summary><div class="alert alert-info mt-2 mb-0 small">${fmtExplain(q.explanation)}</div></details>`
+    : isFill(q)
     ? `<div class="mb-2"><input type="text" class="form-control fill-input${checked ? (fillOk ? ' is-valid' : ' is-invalid') : ''}" data-qid="${q.id}" placeholder="Nhập đáp án của bạn..." value="${escAttr(selected || '')}" ${checked ? 'disabled' : ''} autocomplete="off" spellcheck="false"></div>`
     : Object.entries(q.options)
     .map(
@@ -417,6 +420,15 @@ function attachOptionListeners(container, onlyQid) {
         const idx = Quiz.state.questions.indexOf(q);
         card.outerHTML = renderQuestionCard(q, idx);
         attachOptionListeners(document.getElementById('quizBody'), qid);
+      });
+    }
+
+    const essayInput = card.querySelector('.essay-input');
+    if (essayInput) {
+      essayInput.addEventListener('input', () => {
+        Quiz.selectAnswer(qid, essayInput.value);
+        updateProgressBar();
+        renderQuizNavigator();
       });
     }
 
@@ -612,10 +624,13 @@ function resolveQuestionFromChapter(questionId, chapterData) {
 /** ====== TRANG KẾT QUẢ ====== */
 function renderResult(attempt) {
   showView('view-result');
-  const percent = attempt.total > 0 ? Math.round((attempt.correctCount / attempt.total) * 1000) / 10 : 0;
+  const denom = attempt.ungradedCount > 0 && attempt.gradedCount > 0 ? attempt.gradedCount : attempt.total;
+  const percent = denom > 0 ? Math.round((attempt.correctCount / denom) * 1000) / 10 : 0;
+  const essayOnly = attempt.gradedCount === 0 && attempt.total > 0 && attempt.answers.every((a) => a.type === 'essay');
 
-  document.getElementById('resultScoreText').textContent =
-    `${attempt.correctCount}/${attempt.total} câu đúng (${percent}%)`;
+  document.getElementById('resultScoreText').textContent = essayOnly
+    ? `Đã hoàn thành ${attempt.answers.filter((a) => a.selectedAnswer).length}/${attempt.total} câu tự luận (không chấm điểm)`
+    : `${attempt.correctCount}/${denom} câu đúng (${percent}%)`;
   document.getElementById('resultTimeText').textContent =
     `Thời gian làm bài: ${Quiz.formatTime(attempt.elapsedMs)}` +
     (attempt.timeLimitMs ? ` / ${Quiz.formatTime(attempt.timeLimitMs)}` : '') +
@@ -626,17 +641,18 @@ function renderResult(attempt) {
   const detailBody = document.getElementById('resultDetailBody');
   detailBody.innerHTML = attempt.answers
     .map((a, i) => {
-      const rowClass = a.isCorrect ? 'table-success' : 'table-danger';
+      const essay = a.type === 'essay';
+      const rowClass = essay ? '' : a.isCorrect ? 'table-success' : 'table-danger';
       const selectedText = a.selectedAnswer ? ansLabel(a, a.selectedAnswer) : '(chưa trả lời)';
-      const correctText = ansLabel(a, a.correctAnswer);
+      const correctText = essay ? `<div class="small">${fmtExplain(a.explanation)}</div>` : ansLabel(a, a.correctAnswer);
       const flagText = a.flagged ? '<br><span class="badge bg-warning text-dark mt-1">Đã gắn cờ</span>' : '';
       return `
         <tr class="${rowClass}">
           <td>${i + 1}</td>
-          <td>${a.question}${renderQuestionImages(a.images)}${a.explanation ? `<div class="small text-muted mt-2"><b><i class="bi bi-lightbulb-fill"></i> Giải thích:</b> ${fmtExplain(a.explanation)}</div>` : ''}${Storage.getNote(a.questionId) ? `<div class="small mt-2"><b><i class="bi bi-journal-text"></i> Ghi chú của bạn:</b> ${escAttr(Storage.getNote(a.questionId))}</div>` : ''}</td>
-          <td>${selectedText}${flagText}</td>
+          <td>${a.question}${renderQuestionImages(a.images)}${a.explanation && !essay ? `<div class="small text-muted mt-2"><b><i class="bi bi-lightbulb-fill"></i> Giải thích:</b> ${fmtExplain(a.explanation)}</div>` : ''}${Storage.getNote(a.questionId) ? `<div class="small mt-2"><b><i class="bi bi-journal-text"></i> Ghi chú của bạn:</b> ${escAttr(Storage.getNote(a.questionId))}</div>` : ''}</td>
+          <td style="white-space:pre-wrap">${essay ? escAttr(a.selectedAnswer || '(chưa trả lời)') : selectedText}${flagText}</td>
           <td>${correctText}</td>
-          <td class="text-center">${a.isCorrect ? '<i class="bi bi-check-circle-fill text-success fs-5"></i>' : '<i class="bi bi-x-circle-fill text-danger fs-5"></i>'}</td>
+          <td class="text-center">${essay ? '<i class="bi bi-pencil-square text-primary fs-5"></i>' : a.isCorrect ? '<i class="bi bi-check-circle-fill text-success fs-5"></i>' : '<i class="bi bi-x-circle-fill text-danger fs-5"></i>'}</td>
         </tr>`;
     })
     .join('');

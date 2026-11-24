@@ -76,7 +76,7 @@ const Storage = {
   _updateWrongStats(attempt) {
     const wrongStats = this._get(STORAGE_KEYS.WRONG_STATS, {});
     attempt.answers.forEach((ans) => {
-      if (!ans.isCorrect) {
+      if (!ans.isCorrect && ans.type !== 'essay') {
         if (!wrongStats[ans.questionId]) {
           wrongStats[ans.questionId] = {
             questionId: ans.questionId,

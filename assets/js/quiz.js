@@ -22,6 +22,7 @@ const Quiz = {
    * Không bắt buộc phải có `correctAnswer` — cho phép câu hỏi "practice" không chấm điểm.
    */
   isValidQuestion(q) {
+    if (q && q.type === 'essay') return !!q.question;
     if (q && q.type === 'fill') return !!q.correctAnswer;
     return q && q.options && Object.keys(q.options).length >= 2;
   },
@@ -46,7 +47,7 @@ const Quiz = {
 
     if (config.shuffleOptions) {
       questions = questions.map((q) => {
-        if (q.type === 'fill') return q;
+        if (q.type === 'fill' || q.type === 'essay') return q;
         const entries = Object.entries(q.options);
         const shuffled = this.shuffleArray(entries);
         const newOptions = {};

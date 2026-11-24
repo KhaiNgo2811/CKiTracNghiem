@@ -17,8 +17,14 @@
       "chapterName": "Quiz cuối chương",
       "topicCount": 10,
       "questionCount": 238
+    },
+    {
+      "chapterId": "NT_C4",
+      "chapterName": "Câu hỏi tự luận – tư duy thiết kế hạ tầng",
+      "topicCount": 3,
+      "questionCount": 11
     }
   ],
-  "totalQuestions": 597,
-  "totalTopics": 30
+  "totalQuestions": 608,
+  "totalTopics": 33
 }

@@ -7,6 +7,10 @@ export function isFill(q) {
   return !!q && q.type === 'fill';
 }
 
+export function isEssay(q) {
+  return !!q && q.type === 'essay';
+}
+
 /** Chuẩn hóa đáp án gõ tay: bỏ hoa/thường, dấu tiếng Việt, ký tự thừa; giữ chữ số, dấu chấm và gạch chéo */
 export function normalizeAnswer(text) {
   return String(text == null ? '' : text)
@@ -29,6 +33,6 @@ export function matchFill(q, typed) {
 /** Nhãn hiển thị cho một đáp án: "B. nội dung" với trắc nghiệm, hoặc chính chữ đã nhập/đáp án với điền khuyết */
 export function ansLabel(obj, key) {
   if (key === null || key === undefined || key === '') return '';
-  if (obj && obj.type === 'fill') return String(key);
+  if (obj && (obj.type === 'fill' || obj.type === 'essay')) return String(key);
   return `${key}. ${(obj && obj.options && obj.options[key]) || ''}`;
 }
