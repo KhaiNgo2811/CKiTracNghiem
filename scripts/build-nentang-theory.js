@@ -721,11 +721,21 @@ pb();
 // ================= PHỤ LỤC =================
 h1('Phụ lục');
 h2('A. Cổng (port) và giao thức cần thuộc');
-table(['Dịch vụ', 'Cổng', 'Giao thức vận chuyển'], [
-  ['HTTP', '80', 'TCP'], ['HTTPS', '443', 'TCP'], ['FTP – control / data (active)', '21 / 20', 'TCP'],
-  ['SMTP', '25', 'TCP'], ['POP3 / IMAP', '110 / 143', 'TCP'], ['DNS', '53', 'UDP (chủ yếu)'],
-  ['RIP', '520', 'UDP'], ['DHCP server / client', '67 / 68', 'UDP'], ['SSH / Telnet', '22 / 23', 'TCP'],
-], [6, 3, 4]);
+table(['Giao thức', 'Cổng', 'Vận chuyển', 'Công dụng'], [
+  ['**HTTP**', '80', 'TCP', 'Tải **trang web** (trình duyệt ↔ web server), không mã hóa'],
+  ['**HTTPS**', '443', 'TCP', 'Truy cập web **có mã hóa** (SSL/TLS): đăng nhập, thanh toán'],
+  ['**FTP** (control)', '21', 'TCP', 'Gửi **lệnh điều khiển** truyền file (đăng nhập, liệt kê, yêu cầu tải)'],
+  ['**FTP** (data, active)', '20', 'TCP', '**Truyền dữ liệu file** (upload/download) ở chế độ active'],
+  ['**SMTP**', '25', 'TCP', '**Gửi email** (máy khách → mail server, server → server)'],
+  ['**POP3**', '110', 'TCP', '**Nhận email**: tải thư về máy (thường xóa trên server)'],
+  ['**IMAP**', '143', 'TCP', '**Nhận email**: đọc thư ngay trên server, **đồng bộ** nhiều thiết bị'],
+  ['**DNS**', '53', 'UDP (chủ yếu)', '**Dịch tên miền → địa chỉ IP**'],
+  ['**DHCP**', '67 (server) / 68 (client)', 'UDP', '**Cấp địa chỉ IP tự động** (kèm subnet mask, gateway, DNS)'],
+  ['**RIP**', '520', 'UDP', '**Định tuyến**: các router trao đổi bảng định tuyến (distance vector)'],
+  ['**SSH**', '22', 'TCP', '**Điều khiển máy từ xa**, có mã hóa'],
+  ['**Telnet**', '23', 'TCP', 'Điều khiển máy từ xa, **không mã hóa** (kém an toàn)'],
+], [2.6, 2, 1.8, 6.6]);
+note(['Mẹo nhớ email: **SMTP = gửi**; **POP3 / IMAP = nhận**.', '**ICMP** (ping, traceroute) và **ARP** (đổi IP → MAC) **không dùng số cổng**.']);
 h2('B. Bảng so sánh các cặp dễ nhầm');
 table(['Dễ nhầm', 'Phân biệt'], [
   ['**TCP** vs **UDP**', 'Tin cậy, hướng kết nối vs nhanh, không kết nối, thời gian thực.'],
