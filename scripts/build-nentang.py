@@ -95,7 +95,7 @@ CLOZE = [
     ('Tầng _______ trong mô hình OSI chịu trách nhiệm định tuyến gói tin giữa các mạng.', 'Network', ['Tầng Network', 'Network Layer', 'Mạng', 'Tầng mạng', 'Layer 3', 'Tầng 3']),
     ('Tầng _______ đảm bảo dữ liệu được truyền tin cậy, có thứ tự và không bị trùng lặp.', 'Transport', ['Tầng Transport', 'Transport Layer', 'Giao vận', 'Vận chuyển', 'Layer 4', 'Tầng 4']),
     ('Tầng ứng dụng là tầng thứ _______ trong mô hình OSI, nơi người dùng tương tác trực tiếp với các dịch vụ mạng.', '7', ['bảy', 'tầng 7', 'layer 7', '7th']),
-    ('Giao thức _______ hoạt động ở tầng ứng dụng và được sử dụng để truyền tải nội dung web qua Internet.', 'HTTP', ['HTTPS', 'HTTP/HTTPS']),
+    ('Giao thức _______ hoạt động ở tầng ứng dụng và được sử dụng để truyền tải nội dung web qua Internet.', 'HTTP', ['HTTPS', 'HTTP/HTTPS', 'HTTP / HTTPS', 'HTTP và HTTPS', 'HTTP hoặc HTTPS', 'HTTP HTTPS']),
     ('Tầng _______ cung cấp giao diện trực tiếp giữa người dùng và mạng, ví dụ như trình duyệt web hoặc ứng dụng email.', 'Application', ['Tầng Application', 'Application Layer', 'Ứng dụng', 'Tầng ứng dụng', 'Layer 7', 'Tầng 7']),
     ('Tầng _______ xử lý việc mã hóa, nén và chuyển đổi định dạng dữ liệu giữa các hệ thống.', 'Presentation', ['Tầng Presentation', 'Presentation Layer', 'Trình bày', 'Tầng trình bày', 'Layer 6', 'Tầng 6']),
     ('Giao thức ________ được thiết kế nhẹ, phù hợp với thiết bị IoT có tài nguyên hạn chế và cần truyền dữ liệu hiệu quả.', 'MQTT', []),

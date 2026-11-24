@@ -723,9 +723,13 @@
           "correctAnswer": "HTTP",
           "acceptedAnswers": [
             "HTTPS",
-            "HTTP/HTTPS"
+            "HTTP/HTTPS",
+            "HTTP / HTTPS",
+            "HTTP và HTTPS",
+            "HTTP hoặc HTTPS",
+            "HTTP HTTPS"
           ],
-          "explanation": "**HTTP/HTTPS** là giao thức tầng ứng dụng để truyền tải nội dung web."
+          "explanation": "**HTTP** là giao thức tầng ứng dụng để truyền tải nội dung web (cổng 80); **HTTPS** là HTTP có mã hóa SSL/TLS (cổng 443). Trả lời HTTP, HTTPS hoặc cả hai đều đúng."
         },
         {
           "id": "NT_C1_T10_Q7",

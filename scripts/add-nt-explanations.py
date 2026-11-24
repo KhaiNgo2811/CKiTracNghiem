@@ -61,7 +61,7 @@ E.update({
  'NT_C1_T10_Q3': 'Tầng **Network** (tầng 3) thực hiện định tuyến gói tin giữa các mạng.',
  'NT_C1_T10_Q4': 'Tầng **Transport** (tầng 4) bảo đảm truyền tin cậy, đúng thứ tự, không trùng lặp (TCP).',
  'NT_C1_T10_Q5': 'Tầng ứng dụng là tầng **7** (trên cùng) của mô hình OSI.',
- 'NT_C1_T10_Q6': '**HTTP/HTTPS** là giao thức tầng ứng dụng để truyền tải nội dung web.',
+ 'NT_C1_T10_Q6': '**HTTP** là giao thức tầng ứng dụng để truyền tải nội dung web (cổng 80); **HTTPS** là HTTP có mã hóa SSL/TLS (cổng 443). Trả lời HTTP, HTTPS hoặc cả hai đều đúng.',
  'NT_C1_T10_Q7': 'Tầng **Application** (tầng 7) giao tiếp trực tiếp với người dùng qua trình duyệt, email...',
  'NT_C1_T10_Q8': 'Tầng **Presentation** (tầng 6) lo mã hóa, nén và chuyển đổi định dạng dữ liệu.',
  'NT_C1_T10_Q9': '**MQTT** là giao thức publish/subscribe rất nhẹ, tối ưu cho IoT có tài nguyên hạn chế.',
