@@ -23,8 +23,14 @@
       "chapterName": "Câu hỏi tự luận – tư duy thiết kế hạ tầng",
       "topicCount": 3,
       "questionCount": 11
+    },
+    {
+      "chapterId": "NT_C5",
+      "chapterName": "Đề ôn tập Mạng máy tính",
+      "topicCount": 9,
+      "questionCount": 111
     }
   ],
-  "totalQuestions": 608,
-  "totalTopics": 33
+  "totalQuestions": 719,
+  "totalTopics": 42
 }

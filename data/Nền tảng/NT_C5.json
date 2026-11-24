@@ -1,0 +1,1392 @@
+{
+  "chapterId": "NT_C5",
+  "chapterName": "Đề ôn tập Mạng máy tính",
+  "topics": [
+    {
+      "topicId": "NT_C5_T1",
+      "topicName": "Tầng mạng – IP, datagram, địa chỉ",
+      "questions": [
+        {
+          "id": "NT_C5_T1_Q1",
+          "question": "Trong datagram header, trường nào cho biết giao thức tầng giao vận (UDP, TCP) mà dữ liệu cần được chuyển tới?",
+          "options": {
+            "A": "Upper-layer protocol",
+            "B": "Type of service",
+            "C": "Version",
+            "D": "Identifier"
+          },
+          "correctAnswer": "A",
+          "explanation": "Trường **Upper-layer protocol** chỉ ra giao thức tầng trên (TCP = 6, UDP = 17) sẽ nhận dữ liệu."
+        },
+        {
+          "id": "NT_C5_T1_Q2",
+          "question": "Độ dài tối thiểu của header datagram IPv4 là bao nhiêu byte?",
+          "options": {
+            "A": "15",
+            "B": "25",
+            "C": "20",
+            "D": "30"
+          },
+          "correctAnswer": "C",
+          "explanation": "Header IPv4 không có Options dài **20 byte**."
+        },
+        {
+          "id": "NT_C5_T1_Q3",
+          "question": "Trong datagram header, trường nào bảo đảm datagram không đi vòng lặp mãi mãi?",
+          "options": {
+            "A": "Time-to-live",
+            "B": "Header length",
+            "C": "Datagram length",
+            "D": "Options"
+          },
+          "correctAnswer": "A",
+          "explanation": "**TTL** giảm 1 sau mỗi router; về 0 thì datagram bị hủy (và router gửi ICMP type 11)."
+        },
+        {
+          "id": "NT_C5_T1_Q4",
+          "question": "Trong datagram header, nhóm trường nào quản lý sự phân mảnh datagram?",
+          "options": {
+            "A": "Type of service, Datagram length, Fragmentation offset",
+            "B": "Fragmentation offset, Header checksum, Upper-layer protocol",
+            "C": "Options, Type of service, Version",
+            "D": "Identifier, Flags, Fragmentation offset"
+          },
+          "correctAnswer": "D",
+          "explanation": "Phân mảnh dùng **Identifier + Flags + Fragmentation offset** để đánh dấu và ráp lại các mảnh."
+        },
+        {
+          "id": "NT_C5_T1_Q5",
+          "question": "Các mảnh của datagram được ráp lại tại đâu?",
+          "options": {
+            "A": "Router nối với liên kết có khả năng vận chuyển cao hơn",
+            "B": "Máy đích",
+            "C": "Switch tốc độ cao",
+            "D": "Repeater"
+          },
+          "correctAnswer": "B",
+          "explanation": "Việc ráp lại (reassembly) chỉ thực hiện ở **end system đích**, không phải ở router."
+        },
+        {
+          "id": "NT_C5_T1_Q6",
+          "question": "Công thức nào đúng?",
+          "options": {
+            "A": "Netmask = IP address AND Net ID",
+            "B": "IP address = Net ID AND Netmask",
+            "C": "Net ID = IP address OR Netmask",
+            "D": "Net ID = IP address AND Netmask"
+          },
+          "correctAnswer": "D",
+          "explanation": "Phép **AND** giữa địa chỉ IP và subnet mask cho ra địa chỉ mạng (Net ID)."
+        },
+        {
+          "id": "NT_C5_T1_Q7",
+          "question": "Cho hai địa chỉ IP 133.69.85.85 và 133.69.93.234. Với subnet mask nào thì hai máy cùng mạng?",
+          "options": {
+            "A": "Chỉ 255.255.224.0",
+            "B": "Cả 255.255.224.0 và 255.255.240.0",
+            "C": "Chỉ 255.255.240.0",
+            "D": "Chỉ 255.255.248.0"
+          },
+          "correctAnswer": "B",
+          "explanation": "Octet thứ 3: 85 = 01010101, 93 = 01011101, khác nhau ở bit giá trị 8. Mask 224 (/19) và 240 (/20) không xét bit này nên cùng mạng; mask 248 (/21) có xét nên khác mạng."
+        },
+        {
+          "id": "NT_C5_T1_Q8",
+          "question": "Dải địa chỉ Private IPv4 là:",
+          "options": {
+            "A": "10.x.x.x; 172.16–31.x.x; 192.168.x.x",
+            "B": "100.x.x.x; 127.26–41.x.x; 162.198.x.x",
+            "C": "10.x.x.x; 172.26–41.x.x; 192.168.x.x",
+            "D": "100.x.x.x; 172.16–31.x.x; 162.198.x.x"
+          },
+          "correctAnswer": "A",
+          "explanation": "Ba dải riêng theo RFC 1918: 10.0.0.0/8, 172.16.0.0–172.31.255.255, 192.168.0.0/16."
+        },
+        {
+          "id": "NT_C5_T1_Q9",
+          "question": "Trong datagram header, trường nào cho biết phiên bản IP (IPv4, IPv6)?",
+          "options": {
+            "A": "Type of service",
+            "B": "Identifier",
+            "C": "Version",
+            "D": "Upper-layer protocol"
+          },
+          "correctAnswer": "C",
+          "explanation": "Trường **Version** (4 bit) xác định IPv4 hay IPv6."
+        },
+        {
+          "id": "NT_C5_T1_Q10",
+          "question": "Giao thức tầng mạng nào quy định địa chỉ, định dạng gói tin và cách xử lý gói tin?",
+          "options": {
+            "A": "Internet Control Message Protocol (ICMP)",
+            "B": "Internet Protocol (IP)",
+            "C": "Routing Protocols",
+            "D": "Address Resolution Protocol"
+          },
+          "correctAnswer": "B",
+          "explanation": "**IP** định nghĩa địa chỉ, khuôn dạng datagram và quy ước xử lý."
+        },
+        {
+          "id": "NT_C5_T1_Q11",
+          "question": "Giao thức tầng mạng nào dùng để xác định đường đi và xây dựng bảng định tuyến?",
+          "options": {
+            "A": "Internet Protocol (IP)",
+            "B": "Internet Control Message Protocol (ICMP)",
+            "C": "Address Resolution Protocol",
+            "D": "Routing Protocols"
+          },
+          "correctAnswer": "D",
+          "explanation": "**Routing protocols** (RIP, OSPF, BGP…) xây dựng bảng định tuyến."
+        },
+        {
+          "id": "NT_C5_T1_Q12",
+          "question": "Giao thức tầng mạng nào thông báo thông tin về khả năng kết nối, lỗi và điều khiển?",
+          "options": {
+            "A": "Internet Protocol (IP)",
+            "B": "Internet Control Message Protocol (ICMP)",
+            "C": "Routing Protocols",
+            "D": "Address Resolution Protocol"
+          },
+          "correctAnswer": "B",
+          "explanation": "**ICMP** báo lỗi và thông tin điều khiển (ping, host unreachable, TTL expired…)."
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C5_T2",
+      "topicName": "DHCP, NAT, ICMP, PING/Traceroute",
+      "questions": [
+        {
+          "id": "NT_C5_T2_Q1",
+          "question": "Khi một subnet không có DHCP server, router của nó chuyển yêu cầu tới DHCP server ở subnet khác thông qua:",
+          "options": {
+            "A": "DHCP forwarding",
+            "B": "DHCP forwarding relay",
+            "C": "DHCP relay agent",
+            "D": "DHCP mask agent"
+          },
+          "correctAnswer": "C",
+          "explanation": "Router đóng vai trò **DHCP relay agent** chuyển tiếp DHCP request/offer giữa hai subnet."
+        },
+        {
+          "id": "NT_C5_T2_Q2",
+          "question": "NAT hỗ trợ tối đa khoảng bao nhiêu kết nối đồng thời (với một địa chỉ IP WAN)?",
+          "options": {
+            "A": "2^16",
+            "B": "2^8",
+            "C": "2^24",
+            "D": "2^32"
+          },
+          "correctAnswer": "A",
+          "explanation": "Số hiệu cổng dài 16 bit nên NAT dùng cổng để phân biệt tối đa khoảng **65 536 (2^16)** kết nối."
+        },
+        {
+          "id": "NT_C5_T2_Q3",
+          "question": "Giao thức nào giúp các máy bên ngoài kết nối được tới máy nằm sau NAT?",
+          "options": {
+            "A": "Plug and Play NAT",
+            "B": "NAT conversion",
+            "C": "Universal Plug and Play (UPnP)",
+            "D": "Reversion Plug and Play"
+          },
+          "correctAnswer": "C",
+          "explanation": "**UPnP** cho phép ứng dụng tự cấu hình ánh xạ cổng trên router NAT (NAT traversal)."
+        },
+        {
+          "id": "NT_C5_T2_Q4",
+          "question": "Máy chạy lệnh PING gửi gói ICMP loại nào?",
+          "options": {
+            "A": "Type 0 code 0",
+            "B": "Type 8 code 0",
+            "C": "Type 11 code 0",
+            "D": "Type 3 code 2"
+          },
+          "correctAnswer": "B",
+          "explanation": "Echo request: **Type 8, code 0**."
+        },
+        {
+          "id": "NT_C5_T2_Q5",
+          "question": "Máy phản hồi lệnh PING gửi gói ICMP loại nào?",
+          "options": {
+            "A": "Type 8 code 0",
+            "B": "Type 11 code 0",
+            "C": "Type 3 code 2",
+            "D": "Type 0 code 0"
+          },
+          "correctAnswer": "D",
+          "explanation": "Echo reply: **Type 0, code 0**."
+        },
+        {
+          "id": "NT_C5_T2_Q6",
+          "question": "Khi TTL = 0, router gửi ICMP loại nào?",
+          "options": {
+            "A": "Type 0 code 0",
+            "B": "Type 11 code 0",
+            "C": "Type 8 code 0",
+            "D": "Type 3 code 2"
+          },
+          "correctAnswer": "B",
+          "explanation": "TTL hết hạn: **Time exceeded – Type 11, code 0** (nguyên lý của traceroute)."
+        },
+        {
+          "id": "NT_C5_T2_Q7",
+          "question": "Ứng dụng PING dùng để:",
+          "options": {
+            "A": "Tìm đường đi ngắn nhất từ máy gửi đến máy nhận",
+            "B": "Thể hiện đường đi từ máy gửi đến máy nhận",
+            "C": "Đếm số kết nối giữa hai máy",
+            "D": "Kiểm tra có thể gửi gói tin tới một địa chỉ hay không"
+          },
+          "correctAnswer": "D",
+          "explanation": "PING kiểm tra khả năng kết nối (reachability) và đo RTT."
+        },
+        {
+          "id": "NT_C5_T2_Q8",
+          "question": "Ứng dụng TRACEROUTE dùng để:",
+          "options": {
+            "A": "Kiểm tra có kết nối được tới một máy hay không",
+            "B": "Tìm đường đi ngắn nhất từ máy gửi đến máy nhận",
+            "C": "Thể hiện đường đi (các router) từ máy gửi đến máy nhận",
+            "D": "Đếm số kết nối giữa hai máy"
+          },
+          "correctAnswer": "C",
+          "explanation": "Traceroute tăng dần TTL và dựa vào ICMP type 11 để liệt kê từng hop."
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C5_T3",
+      "topicName": "Định tuyến RIP",
+      "questions": [
+        {
+          "id": "NT_C5_T3_Q1",
+          "question": "Phát biểu nào SAI về Routing Information Protocol (RIP)?",
+          "options": {
+            "A": "Là thuật toán định tuyến động",
+            "B": "Xây dựng bảng định tuyến từ các router kế bên",
+            "C": "Không được thiết kế cho mạng lớn, mạng diện rộng",
+            "D": "Tập hợp thông tin của tất cả router rồi mới xây dựng bảng định tuyến"
+          },
+          "correctAnswer": "D",
+          "explanation": "RIP là distance-vector: chỉ dựa vào thông tin các router láng giềng. Việc tập hợp thông tin toàn mạng là đặc trưng của link-state (OSPF)."
+        },
+        {
+          "id": "NT_C5_T3_Q2",
+          "question": "RIP dùng cổng và giao thức nào của tầng giao vận?",
+          "options": {
+            "A": "250, TCP",
+            "B": "520, UDP",
+            "C": "250, UDP",
+            "D": "520, TCP"
+          },
+          "correctAnswer": "B",
+          "explanation": "RIP chạy trên **UDP cổng 520**."
+        },
+        {
+          "id": "NT_C5_T3_Q3",
+          "question": "Ứng dụng nào chạy RIP trên Windows?",
+          "options": {
+            "A": "RIP Routing",
+            "B": "Routed",
+            "C": "Routing",
+            "D": "RIP Listener"
+          },
+          "correctAnswer": "D",
+          "explanation": "Trên Windows dùng **RIP Listener**."
+        },
+        {
+          "id": "NT_C5_T3_Q4",
+          "question": "Ứng dụng nào chạy RIP trên UNIX BSD?",
+          "options": {
+            "A": "Routed",
+            "B": "RIP Routing",
+            "C": "RIP Listener",
+            "D": "Routing"
+          },
+          "correctAnswer": "A",
+          "explanation": "Trên UNIX/BSD dùng tiến trình **routed**."
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C5_T4",
+      "topicName": "Tầng liên kết – MAC, ARP, Switch, cáp UTP",
+      "questions": [
+        {
+          "id": "NT_C5_T4_Q1",
+          "question": "Điều nào SAI về MAC address?",
+          "options": {
+            "A": "Gồm 48 bit",
+            "B": "Địa chỉ broadcast là FF-FF-FF-FF-FF-FF",
+            "C": "MAC address của card mạng thay đổi khi máy sang subnet khác",
+            "D": "Source và destination MAC address nằm cùng một mạng (mỗi chặng)"
+          },
+          "correctAnswer": "C",
+          "explanation": "MAC gắn với card mạng, không đổi khi chuyển subnet. Chỉ có MAC nguồn/đích trong frame thay đổi qua từng chặng."
+        },
+        {
+          "id": "NT_C5_T4_Q2",
+          "question": "Giao thức dịch giữa địa chỉ tầng mạng và địa chỉ tầng liên kết là:",
+          "options": {
+            "A": "Address Resolution Protocol (ARP)",
+            "B": "Domain Name System",
+            "C": "Network Address Translation",
+            "D": "Check Frame Protocol"
+          },
+          "correctAnswer": "A",
+          "explanation": "**ARP** ánh xạ IP → MAC trong cùng mạng."
+        },
+        {
+          "id": "NT_C5_T4_Q3",
+          "question": "Switch nhận gói tin, địa chỉ đích không có trong bảng chuyển tiếp thì sẽ:",
+          "options": {
+            "A": "Hủy gói tin",
+            "B": "Gửi ra một cổng ngẫu nhiên",
+            "C": "Gửi gói tin ra tất cả các cổng còn lại",
+            "D": "Đệm gói tin và tìm cổng ra"
+          },
+          "correctAnswer": "C",
+          "explanation": "Switch **flooding** ra mọi cổng trừ cổng vào."
+        },
+        {
+          "id": "NT_C5_T4_Q4",
+          "question": "Switch nhận gói tin mà bảng chuyển tiếp cho thấy cổng ra trùng cổng vào thì sẽ:",
+          "options": {
+            "A": "Gửi ra tất cả các cổng còn lại",
+            "B": "Hủy gói tin",
+            "C": "Gửi ra một cổng ngẫu nhiên",
+            "D": "Đệm gói tin và tìm cổng ra"
+          },
+          "correctAnswer": "B",
+          "explanation": "Đích nằm cùng đoạn mạng với nguồn nên switch **lọc (hủy)** gói tin."
+        },
+        {
+          "id": "NT_C5_T4_Q5",
+          "question": "Phát biểu nào SAI về Switch?",
+          "options": {
+            "A": "Tự xây dựng bảng chuyển tiếp từ các gói tin đầu vào",
+            "B": "Là \"trong suốt\" đối với end system và router",
+            "C": "Hai liên kết khác loại có thể nối vào một switch",
+            "D": "Admin phải cấu hình bảng chuyển tiếp ban đầu khi bắt đầu hoạt động"
+          },
+          "correctAnswer": "D",
+          "explanation": "Switch tự học (self-learning) nên không cần cấu hình bảng chuyển tiếp ban đầu."
+        },
+        {
+          "id": "NT_C5_T4_Q6",
+          "question": "Khi bấm dây chéo (crossover) hai đầu cáp UTP CAT5 vào đầu RJ45, cần lưu ý các cặp dây:",
+          "options": {
+            "A": "(1,2) – (3,6) – (4,5) – (7,8)",
+            "B": "(1,3) – (2,6) – (4,5) – (7,8)",
+            "C": "(1,2) – (4,7) – (3,5) – (6,8)",
+            "D": "(1,2) – (3,7) – (4,5) – (6,8)"
+          },
+          "correctAnswer": "B",
+          "explanation": "Cáp chéo đảo cặp truyền/nhận: chân 1↔3 và 2↔6."
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C5_T5",
+      "topicName": "Firewall và IDS",
+      "questions": [
+        {
+          "id": "NT_C5_T5_Q1",
+          "question": "Loại firewall nào xây dựng bảng trạng thái kết nối để đối chiếu với luồng gói tin?",
+          "options": {
+            "A": "Traditional Packet Filter",
+            "B": "Application Gateway",
+            "C": "Network Address Translation",
+            "D": "Stateful Filter"
+          },
+          "correctAnswer": "D",
+          "explanation": "**Stateful filter** theo dõi trạng thái từng kết nối."
+        },
+        {
+          "id": "NT_C5_T5_Q2",
+          "question": "Loại firewall nào kiểm tra các trường trong header của gói tin?",
+          "options": {
+            "A": "Stateful Filter",
+            "B": "Traditional Packet Filter",
+            "C": "Application Gateway",
+            "D": "Network Address Translation"
+          },
+          "correctAnswer": "B",
+          "explanation": "Packet filter chỉ xét header (IP, cổng, cờ TCP)."
+        },
+        {
+          "id": "NT_C5_T5_Q3",
+          "question": "Loại firewall nào hoạt động ở mức ứng dụng (ví dụ proxy, cache DNS)?",
+          "options": {
+            "A": "Traditional Packet Filter",
+            "B": "Stateful Filter",
+            "C": "Network Address Translation",
+            "D": "Application Gateway"
+          },
+          "correctAnswer": "D",
+          "explanation": "**Application gateway** xử lý theo từng ứng dụng."
+        },
+        {
+          "id": "NT_C5_T5_Q4",
+          "question": "Bastion host thuộc loại firewall nào?",
+          "options": {
+            "A": "Application Gateway",
+            "B": "Traditional Packet Filter",
+            "C": "Stateful Filter",
+            "D": "Network Address Translation"
+          },
+          "correctAnswer": "A",
+          "explanation": "Bastion host chạy proxy/ứng dụng chịu tấn công nên thuộc application gateway."
+        },
+        {
+          "id": "NT_C5_T5_Q5",
+          "question": "Bastion host thuộc mô hình firewall nào?",
+          "options": {
+            "A": "Chỉ Packet filtering router",
+            "B": "Chỉ Screened Host Firewall",
+            "C": "Screened Host Firewall và Screened-Subnet Firewall",
+            "D": "Chỉ Screened-Subnet Firewall"
+          },
+          "correctAnswer": "C",
+          "explanation": "Bastion host có mặt trong cả hai mô hình Screened Host và Screened-Subnet."
+        },
+        {
+          "id": "NT_C5_T5_Q6",
+          "question": "Vùng phi quân sự (DMZ) thuộc mô hình firewall nào?",
+          "options": {
+            "A": "Screened-Subnet Firewall",
+            "B": "Packet filtering router",
+            "C": "Screened Host Firewall",
+            "D": "Cả Screened Host và Screened-Subnet"
+          },
+          "correctAnswer": "A",
+          "explanation": "DMZ là mạng con đệm của **Screened-Subnet**."
+        },
+        {
+          "id": "NT_C5_T5_Q7",
+          "question": "Bastion host có hai network interface thuộc mô hình nào?",
+          "options": {
+            "A": "Single-Homed Bastion Host",
+            "B": "Screened Router",
+            "C": "Dual-Homed Bastion Host",
+            "D": "Multi-Homed Gateway"
+          },
+          "correctAnswer": "C",
+          "explanation": "Hai card mạng (một trong, một ngoài) = **dual-homed**."
+        },
+        {
+          "id": "NT_C5_T5_Q8",
+          "question": "Loại IDS nào dựa trên cơ sở dữ liệu các dạng tấn công đã biết?",
+          "options": {
+            "A": "Anomaly-based system",
+            "B": "Behavior-based system",
+            "C": "Packet-based system",
+            "D": "Signature-based system"
+          },
+          "correctAnswer": "D",
+          "explanation": "Signature-based so khớp \"chữ ký\" tấn công đã biết."
+        },
+        {
+          "id": "NT_C5_T5_Q9",
+          "question": "Loại IDS nào dựa vào các luồng gói tin \"bất thường\", có thể phát hiện tấn công mới?",
+          "options": {
+            "A": "Signature-based system",
+            "B": "Anomaly-based system",
+            "C": "Behavior-based system",
+            "D": "Packet-based system"
+          },
+          "correctAnswer": "B",
+          "explanation": "Anomaly-based phát hiện lệch khỏi mẫu hoạt động bình thường."
+        },
+        {
+          "id": "NT_C5_T5_Q10",
+          "question": "Trong Windows Firewall, phần nào cho phép máy bên ngoài thiết lập kết nối tới máy này?",
+          "options": {
+            "A": "Outbound Rules",
+            "B": "Inbound Rules",
+            "C": "Connection Rules",
+            "D": "Security Rules"
+          },
+          "correctAnswer": "B",
+          "explanation": "**Inbound** = kết nối vào."
+        },
+        {
+          "id": "NT_C5_T5_Q11",
+          "question": "Trong Windows Firewall, phần nào cho phép máy này thiết lập kết nối ra máy bên ngoài?",
+          "options": {
+            "A": "Inbound Rules",
+            "B": "Connection Rules",
+            "C": "Security Rules",
+            "D": "Outbound Rules"
+          },
+          "correctAnswer": "D",
+          "explanation": "**Outbound** = kết nối ra."
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C5_T6",
+      "topicName": "Mã hóa, chữ ký số, AAA",
+      "questions": [
+        {
+          "id": "NT_C5_T6_Q1",
+          "question": "Văn bản đã được mã hóa (encrypted) gọi là:",
+          "options": {
+            "A": "Plaintext",
+            "B": "Ciphertext",
+            "C": "Code",
+            "D": "Encryption"
+          },
+          "correctAnswer": "B",
+          "explanation": "**Ciphertext** là bản mã; plaintext là bản rõ."
+        },
+        {
+          "id": "NT_C5_T6_Q2",
+          "question": "Mã hóa và giải mã dùng cùng một khóa là loại mã hóa nào?",
+          "options": {
+            "A": "Digital Signature",
+            "B": "Message Digest",
+            "C": "Asymmetric",
+            "D": "Symmetric"
+          },
+          "correctAnswer": "D",
+          "explanation": "**Đối xứng** dùng một khóa chung."
+        },
+        {
+          "id": "NT_C5_T6_Q3",
+          "question": "Mã hóa và giải mã dùng khác khóa là loại mã hóa nào?",
+          "options": {
+            "A": "Digital Signature",
+            "B": "Asymmetric",
+            "C": "Message Digest",
+            "D": "Symmetric"
+          },
+          "correctAnswer": "B",
+          "explanation": "**Bất đối xứng** dùng cặp khóa public/private."
+        },
+        {
+          "id": "NT_C5_T6_Q4",
+          "question": "Loại khóa nào dùng để mã hóa (encrypting) trong mã hóa bất đối xứng?",
+          "options": {
+            "A": "Private Key",
+            "B": "Session Key",
+            "C": "Public Key",
+            "D": "Secret Key"
+          },
+          "correctAnswer": "C",
+          "explanation": "Bên gửi mã hóa bằng khóa công khai của người nhận."
+        },
+        {
+          "id": "NT_C5_T6_Q5",
+          "question": "Loại khóa nào dùng để giải mã (decrypting)?",
+          "options": {
+            "A": "Private Key",
+            "B": "Public Key",
+            "C": "Session Key",
+            "D": "Shared Key"
+          },
+          "correctAnswer": "A",
+          "explanation": "Người nhận giải mã bằng khóa riêng của mình."
+        },
+        {
+          "id": "NT_C5_T6_Q6",
+          "question": "Ứng dụng nào bảo đảm người nhận xác định được người gửi, người gửi không thể chối bỏ nội dung và người nhận không thể tự bịa thông tin?",
+          "options": {
+            "A": "Message Digest",
+            "B": "Symmetric",
+            "C": "Digital Signature",
+            "D": "Asymmetric"
+          },
+          "correctAnswer": "C",
+          "explanation": "**Chữ ký số** đảm bảo xác thực và chống chối bỏ (non-repudiation)."
+        },
+        {
+          "id": "NT_C5_T6_Q7",
+          "question": "Ứng dụng nào bảo đảm nội dung hợp đồng không bị thay đổi?",
+          "options": {
+            "A": "Message Digest",
+            "B": "Digital Signature",
+            "C": "Private Key & Public Key",
+            "D": "Symmetric & Asymmetric"
+          },
+          "correctAnswer": "A",
+          "explanation": "**Message digest** (hàm băm) đảm bảo toàn vẹn dữ liệu."
+        },
+        {
+          "id": "NT_C5_T6_Q8",
+          "question": "Ứng dụng nào bảo đảm xác thực các bên tham gia hợp đồng?",
+          "options": {
+            "A": "Message Digest",
+            "B": "Digital Signature",
+            "C": "Private Key & Public Key",
+            "D": "Symmetric & Asymmetric"
+          },
+          "correctAnswer": "B",
+          "explanation": "Chữ ký số xác thực danh tính bên ký."
+        },
+        {
+          "id": "NT_C5_T6_Q9",
+          "question": "Giao thức nào thường dùng cùng IMAP, SMTP, HTTP, FTP để bảo mật?",
+          "options": {
+            "A": "ICMP",
+            "B": "IPSec",
+            "C": "RIP",
+            "D": "SSL"
+          },
+          "correctAnswer": "D",
+          "explanation": "**SSL/TLS** mã hóa kết nối tầng ứng dụng (HTTPS, SMTPS, IMAPS, FTPS)."
+        },
+        {
+          "id": "NT_C5_T6_Q10",
+          "question": "Trong AAA, thuật ngữ nào liên quan đến xác thực người dùng?",
+          "options": {
+            "A": "Authorization",
+            "B": "Authentication",
+            "C": "Accounting",
+            "D": "Availability"
+          },
+          "correctAnswer": "B",
+          "explanation": "Authentication = xác thực."
+        },
+        {
+          "id": "NT_C5_T6_Q11",
+          "question": "Trong AAA, thuật ngữ nào liên quan đến phân quyền truy cập?",
+          "options": {
+            "A": "Authentication",
+            "B": "Accounting",
+            "C": "Availability",
+            "D": "Authorization"
+          },
+          "correctAnswer": "D",
+          "explanation": "Authorization = cấp quyền."
+        },
+        {
+          "id": "NT_C5_T6_Q12",
+          "question": "Trong AAA, log file liên quan đến thuật ngữ nào?",
+          "options": {
+            "A": "Authentication",
+            "B": "Accounting",
+            "C": "Authorization",
+            "D": "Availability"
+          },
+          "correctAnswer": "B",
+          "explanation": "Accounting = ghi nhận, kiểm toán."
+        },
+        {
+          "id": "NT_C5_T6_Q13",
+          "question": "Trong IIS, để cho phép mọi người dùng truy cập (không cần tài khoản) dùng:",
+          "options": {
+            "A": "Basic Authentication",
+            "B": "Windows Authentication",
+            "C": "Digest Authentication",
+            "D": "Anonymous Authentication"
+          },
+          "correctAnswer": "D",
+          "explanation": "Anonymous cho truy cập ẩn danh."
+        },
+        {
+          "id": "NT_C5_T6_Q14",
+          "question": "Trong IIS, để cho phép tài khoản người dùng cụ thể truy cập dùng:",
+          "options": {
+            "A": "Basic Authentication",
+            "B": "Anonymous Authentication",
+            "C": "Forms Authentication",
+            "D": "Certificate Mapping"
+          },
+          "correctAnswer": "A",
+          "explanation": "Basic yêu cầu username/password của tài khoản cụ thể."
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C5_T7",
+      "topicName": "Tầng ứng dụng – DNS, HTTP, FTP, mail, proxy",
+      "questions": [
+        {
+          "id": "NT_C5_T7_Q1",
+          "question": "Khi một máy chạy nhiều ứng dụng mạng, gói tin được chuyển đúng ứng dụng nhờ phân biệt bằng:",
+          "options": {
+            "A": "Port numbers",
+            "B": "Sockets",
+            "C": "Domain names",
+            "D": "IP addresses"
+          },
+          "correctAnswer": "A",
+          "explanation": "IP xác định máy, **số hiệu cổng** xác định tiến trình."
+        },
+        {
+          "id": "NT_C5_T7_Q2",
+          "question": "Giao thức ứng dụng nào dùng UDP của tầng giao vận?",
+          "options": {
+            "A": "HTTP",
+            "B": "FTP",
+            "C": "DNS",
+            "D": "SMTP"
+          },
+          "correctAnswer": "C",
+          "explanation": "DNS truy vấn thường dùng UDP cổng 53."
+        },
+        {
+          "id": "NT_C5_T7_Q3",
+          "question": "Loại truy vấn DNS mà một DNS server nhờ DNS server khác hỏi hộ và trả về Resource Record là:",
+          "options": {
+            "A": "Recursive",
+            "B": "Iterative",
+            "C": "dnsinformative",
+            "D": "nsinformative"
+          },
+          "correctAnswer": "A",
+          "explanation": "**Recursive**: server nhận truy vấn chịu trách nhiệm hỏi tiếp và trả kết quả cuối."
+        },
+        {
+          "id": "NT_C5_T7_Q4",
+          "question": "Để thiết lập quyền truy cập shared folder cho tài khoản truy cập từ xa, cần cấu hình:",
+          "options": {
+            "A": "Tab Security",
+            "B": "Giao thức SMB",
+            "C": "Giao thức NetBIOS",
+            "D": "Share permissions"
+          },
+          "correctAnswer": "D",
+          "explanation": "**Share permissions** áp dụng cho truy cập qua mạng."
+        },
+        {
+          "id": "NT_C5_T7_Q5",
+          "question": "Proxy server nhận kết nối từ Internet rồi chuyển tới web server nội bộ gọi là:",
+          "options": {
+            "A": "Forward proxy",
+            "B": "Reverse proxy",
+            "C": "NAT",
+            "D": "Traversal"
+          },
+          "correctAnswer": "B",
+          "explanation": "**Reverse proxy** đứng trước web server."
+        },
+        {
+          "id": "NT_C5_T7_Q6",
+          "question": "Proxy server nhận kết nối từ client trong LAN rồi ra Internet tới web server gọi là:",
+          "options": {
+            "A": "Reverse proxy",
+            "B": "NAT",
+            "C": "Traversal",
+            "D": "Forward proxy"
+          },
+          "correctAnswer": "D",
+          "explanation": "**Forward proxy** đại diện cho client."
+        },
+        {
+          "id": "NT_C5_T7_Q7",
+          "question": "Chức năng nào KHÔNG thuộc proxy server?",
+          "options": {
+            "A": "Trung gian giao tiếp giữa server và client",
+            "B": "Định tuyến, chia sẻ tài nguyên",
+            "C": "Cache dữ liệu, xác thực người dùng",
+            "D": "Đặt giới hạn truy cập như kích thước file, nguồn dữ liệu"
+          },
+          "correctAnswer": "B",
+          "explanation": "Định tuyến là nhiệm vụ của router, không phải proxy."
+        },
+        {
+          "id": "NT_C5_T7_Q8",
+          "question": "Trong HTTP, Conditional GET dùng để:",
+          "options": {
+            "A": "Xác định đối tượng có bị sửa đổi hay chưa trước khi tải về cache",
+            "B": "Giới hạn số kết nối tới server",
+            "C": "Xếp hàng chờ tới lượt mới gửi tập tin",
+            "D": "Giới hạn truy cập của client theo điều kiện"
+          },
+          "correctAnswer": "A",
+          "explanation": "Conditional GET (If-Modified-Since) tránh tải lại đối tượng chưa thay đổi."
+        },
+        {
+          "id": "NT_C5_T7_Q9",
+          "question": "Giao thức FTP, control connection trên server dùng cổng:",
+          "options": {
+            "A": "20",
+            "B": "53",
+            "C": "21",
+            "D": "80"
+          },
+          "correctAnswer": "C",
+          "explanation": "Control = 21, data (active) = 20."
+        },
+        {
+          "id": "NT_C5_T7_Q10",
+          "question": "Phát biểu nào SAI về SMTP?",
+          "options": {
+            "A": "Là giao thức gửi email đi",
+            "B": "Là giao thức lấy email về",
+            "C": "Mã hóa nội dung theo ASCII",
+            "D": "Dùng persistent connection"
+          },
+          "correctAnswer": "B",
+          "explanation": "SMTP chỉ để **gửi**; lấy thư về dùng POP3/IMAP."
+        },
+        {
+          "id": "NT_C5_T7_Q11",
+          "question": "Trong DNS, dịch vụ Alias nghĩa là:",
+          "options": {
+            "A": "Phân phối tải giữa các replicated server có IP khác nhau",
+            "B": "Dịch domain name sang địa chỉ IP",
+            "C": "Tích hợp địa chỉ IP vào end system",
+            "D": "Alias hostname dễ nhớ hơn canonical hostname"
+          },
+          "correctAnswer": "D",
+          "explanation": "Alias (CNAME) = tên dễ nhớ ánh xạ về tên chuẩn."
+        },
+        {
+          "id": "NT_C5_T7_Q12",
+          "question": "Trong DNS, dịch vụ Load distribution nghĩa là:",
+          "options": {
+            "A": "Alias hostname dễ nhớ hơn canonical hostname",
+            "B": "Phân phối tải giữa các replicated server có IP khác nhau",
+            "C": "Dịch domain name sang địa chỉ IP",
+            "D": "Tích hợp địa chỉ IP vào end system"
+          },
+          "correctAnswer": "B",
+          "explanation": "Một tên miền trả về nhiều IP, luân phiên để chia tải."
+        },
+        {
+          "id": "NT_C5_T7_Q13",
+          "question": "DNS record nào có Value là canonical hostname của mail server?",
+          "options": {
+            "A": "A",
+            "B": "NS",
+            "C": "CNAME",
+            "D": "MX"
+          },
+          "correctAnswer": "D",
+          "explanation": "Record **MX** chỉ mail server của domain."
+        },
+        {
+          "id": "NT_C5_T7_Q14",
+          "question": "Máy chủ nhận thư gồm các giao thức lấy email về (POP3, IMAP, HTTP) gọi là:",
+          "options": {
+            "A": "Incoming Mail Server",
+            "B": "Outgoing Mail Server",
+            "C": "Relay Mail Server",
+            "D": "Proxy Mail Server"
+          },
+          "correctAnswer": "A",
+          "explanation": "Incoming dùng POP3/IMAP; outgoing dùng SMTP."
+        },
+        {
+          "id": "NT_C5_T7_Q15",
+          "question": "Máy chủ passive FTP mở cổng:",
+          "options": {
+            "A": "21 và 20",
+            "B": "20 và một cổng ngẫu nhiên > 1023",
+            "C": "21 và một cổng ngẫu nhiên > 1023",
+            "D": "Hai cổng ngẫu nhiên > 1023"
+          },
+          "correctAnswer": "C",
+          "explanation": "Passive: control cổng 21, data cổng ngẫu nhiên > 1023 do server chọn."
+        },
+        {
+          "id": "NT_C5_T7_Q16",
+          "question": "Các đối tượng giao tiếp với nhau ở tầng ứng dụng là:",
+          "options": {
+            "A": "Process",
+            "B": "Socket",
+            "C": "Domain name",
+            "D": "IP address"
+          },
+          "correctAnswer": "A",
+          "explanation": "Các **tiến trình (process)** trên hai host trao đổi thông điệp."
+        },
+        {
+          "id": "NT_C5_T7_Q17",
+          "question": "Giao diện giữa tầng ứng dụng và tầng giao vận là:",
+          "options": {
+            "A": "Process",
+            "B": "Domain name",
+            "C": "Socket",
+            "D": "IP address"
+          },
+          "correctAnswer": "C",
+          "explanation": "**Socket** là cổng giao tiếp giữa hai tầng."
+        },
+        {
+          "id": "NT_C5_T7_Q18",
+          "question": "Resource Record (www.yourwebsite.vn, 111.24.35.57, A) nằm ở loại DNS server nào?",
+          "options": {
+            "A": "Root DNS Server",
+            "B": "TLD DNS Server",
+            "C": "Local DNS Server",
+            "D": "Authoritative DNS Server"
+          },
+          "correctAnswer": "D",
+          "explanation": "Bản ghi tên miền cụ thể do **authoritative server** của tổ chức lưu."
+        },
+        {
+          "id": "NT_C5_T7_Q19",
+          "question": "Các tên miền .com, .vn, .edu… do server nào quản lý?",
+          "options": {
+            "A": "Root server",
+            "B": "Top-level domain (TLD) server",
+            "C": "Authoritative server",
+            "D": "Local DNS server"
+          },
+          "correctAnswer": "B",
+          "explanation": "TLD server quản lý các miền cấp cao nhất."
+        },
+        {
+          "id": "NT_C5_T7_Q20",
+          "question": "Trên Windows, dịch vụ nào thực hiện truy vấn tới DNS server?",
+          "options": {
+            "A": "DNS Server",
+            "B": "DHCP Client",
+            "C": "DNS Client",
+            "D": "Resolver Server"
+          },
+          "correctAnswer": "C",
+          "explanation": "Dịch vụ **DNS Client** gửi truy vấn."
+        },
+        {
+          "id": "NT_C5_T7_Q21",
+          "question": "Passive FTP giải quyết vấn đề gì?",
+          "options": {
+            "A": "Firewall chặn kết nối từ server về client",
+            "B": "Tốc độ truyền file thấp",
+            "C": "Mất dữ liệu khi truyền",
+            "D": "Không có tài khoản truy cập"
+          },
+          "correctAnswer": "A",
+          "explanation": "Trong passive, client khởi tạo cả hai kết nối nên không bị firewall phía client chặn."
+        },
+        {
+          "id": "NT_C5_T7_Q22",
+          "question": "Trong Passive FTP, máy nào gửi yêu cầu kết nối?",
+          "options": {
+            "A": "Server cho data connection",
+            "B": "Server cho control connection",
+            "C": "Client cho cả control connection và data connection",
+            "D": "Chỉ client cho control connection"
+          },
+          "correctAnswer": "C",
+          "explanation": "Passive: client chủ động mở cả hai kết nối."
+        },
+        {
+          "id": "NT_C5_T7_Q23",
+          "question": "Trong Active FTP, máy nào gửi yêu cầu kết nối?",
+          "options": {
+            "A": "Client mở control connection, server mở data connection",
+            "B": "Client mở cả hai kết nối",
+            "C": "Server mở cả hai kết nối",
+            "D": "Server mở control, client mở data"
+          },
+          "correctAnswer": "A",
+          "explanation": "Active: client mở control (21), server mở data từ cổng 20 về client."
+        },
+        {
+          "id": "NT_C5_T7_Q24",
+          "question": "Máy chủ SMTP mở cổng nào?",
+          "options": {
+            "A": "21",
+            "B": "80",
+            "C": "110",
+            "D": "25"
+          },
+          "correctAnswer": "D",
+          "explanation": "SMTP dùng cổng **25**."
+        },
+        {
+          "id": "NT_C5_T7_Q25",
+          "question": "Máy chủ active FTP mở các cổng nào?",
+          "options": {
+            "A": "21 và 22",
+            "B": "20 và 21",
+            "C": "20 và 80",
+            "D": "21 và 110"
+          },
+          "correctAnswer": "B",
+          "explanation": "Active FTP: 21 (control), 20 (data)."
+        },
+        {
+          "id": "NT_C5_T7_Q26",
+          "question": "Máy chủ HTTP mở cổng nào?",
+          "options": {
+            "A": "21",
+            "B": "25",
+            "C": "443",
+            "D": "80"
+          },
+          "correctAnswer": "D",
+          "explanation": "HTTP dùng cổng **80** (HTTPS dùng 443)."
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C5_T8",
+      "topicName": "Tầng giao vận – TCP, UDP, port number",
+      "questions": [
+        {
+          "id": "NT_C5_T8_Q1",
+          "question": "Gói tin (segment) tầng giao vận được xử lý tại:",
+          "options": {
+            "A": "Switch",
+            "B": "Router",
+            "C": "Host end system",
+            "D": "Wireless Access Point"
+          },
+          "correctAnswer": "C",
+          "explanation": "Tầng giao vận chỉ chạy ở các **end system**."
+        },
+        {
+          "id": "NT_C5_T8_Q2",
+          "question": "Ứng dụng thời gian thực thường dùng giao thức tầng giao vận nào?",
+          "options": {
+            "A": "UDP",
+            "B": "TCP",
+            "C": "ICMP",
+            "D": "ARP"
+          },
+          "correctAnswer": "A",
+          "explanation": "UDP nhanh, không có thiết lập kết nối/truyền lại."
+        },
+        {
+          "id": "NT_C5_T8_Q3",
+          "question": "Ứng dụng chấp nhận mất một phần nhỏ dữ liệu sử dụng giao thức tầng giao vận nào?",
+          "options": {
+            "A": "TCP",
+            "B": "ICMP",
+            "C": "UDP",
+            "D": "ARP"
+          },
+          "correctAnswer": "C",
+          "explanation": "Ví dụ DNS, game trực tuyến, streaming."
+        },
+        {
+          "id": "NT_C5_T8_Q4",
+          "question": "Giao thức tầng giao vận nào hướng kết nối và tin cậy?",
+          "options": {
+            "A": "UDP",
+            "B": "TCP",
+            "C": "IP",
+            "D": "ICMP"
+          },
+          "correctAnswer": "B",
+          "explanation": "TCP: connection-oriented, reliable."
+        },
+        {
+          "id": "NT_C5_T8_Q5",
+          "question": "Giao thức tầng giao vận nào không kết nối và không tin cậy?",
+          "options": {
+            "A": "TCP",
+            "B": "IP",
+            "C": "FTP",
+            "D": "UDP"
+          },
+          "correctAnswer": "D",
+          "explanation": "UDP: connectionless, best-effort."
+        },
+        {
+          "id": "NT_C5_T8_Q6",
+          "question": "Trường nào trong header segment xác định socket mà dữ liệu cần chuyển đến?",
+          "options": {
+            "A": "IP address",
+            "B": "Port number",
+            "C": "MAC address",
+            "D": "Process Identifier (PID)"
+          },
+          "correctAnswer": "B",
+          "explanation": "Port number xác định tiến trình/socket."
+        },
+        {
+          "id": "NT_C5_T8_Q7",
+          "question": "Source port number là gì?",
+          "options": {
+            "A": "Port number của máy gửi",
+            "B": "Port number của máy nhận",
+            "C": "Port number của tiến trình máy nhận",
+            "D": "Port number của tiến trình máy gửi"
+          },
+          "correctAnswer": "D",
+          "explanation": "Port gắn với tiến trình ở phía gửi."
+        },
+        {
+          "id": "NT_C5_T8_Q8",
+          "question": "Destination port number là gì?",
+          "options": {
+            "A": "Port number của máy gửi",
+            "B": "Port number của máy nhận",
+            "C": "Port number của tiến trình máy nhận",
+            "D": "Port number của tiến trình máy gửi"
+          },
+          "correctAnswer": "C",
+          "explanation": "Port gắn với tiến trình ở phía nhận."
+        },
+        {
+          "id": "NT_C5_T8_Q9",
+          "question": "Port number được mã hóa bằng bao nhiêu bit?",
+          "options": {
+            "A": "16",
+            "B": "8",
+            "C": "24",
+            "D": "32"
+          },
+          "correctAnswer": "A",
+          "explanation": "16 bit → 0–65535."
+        },
+        {
+          "id": "NT_C5_T8_Q10",
+          "question": "Well-known port numbers gồm dải:",
+          "options": {
+            "A": "0 – 1023",
+            "B": "1024 – 49151",
+            "C": "49152 – 65535",
+            "D": "1 – 255"
+          },
+          "correctAnswer": "A",
+          "explanation": "Cổng 0–1023 dành cho các dịch vụ phổ biến."
+        },
+        {
+          "id": "NT_C5_T8_Q11",
+          "question": "Phát biểu nào SAI về port number?",
+          "options": {
+            "A": "Hai máy khách cùng giao tiếp một máy chủ có thể có port giống nhau",
+            "B": "Cùng một ứng dụng, port ở máy chủ có thể khác port ở máy khách",
+            "C": "Nhiều ứng dụng chạy cùng lúc trên một máy có thể dùng chung một port number",
+            "D": "Một ứng dụng có thể dùng từ hai port trở lên"
+          },
+          "correctAnswer": "C",
+          "explanation": "Mỗi port tại một thời điểm chỉ thuộc về một tiến trình trên một máy."
+        },
+        {
+          "id": "NT_C5_T8_Q12",
+          "question": "Dữ liệu truyền đồng thời hai hướng, gửi và nhận cùng lúc gọi là:",
+          "options": {
+            "A": "Full duplex",
+            "B": "Half duplex",
+            "C": "Simplex mode",
+            "D": "Complex mode"
+          },
+          "correctAnswer": "A",
+          "explanation": "**Full duplex** hai chiều đồng thời."
+        },
+        {
+          "id": "NT_C5_T8_Q13",
+          "question": "Trong TCP header, trường nào giúp phân đoạn và hợp đoạn dữ liệu theo thứ tự?",
+          "options": {
+            "A": "Source & Destination port number",
+            "B": "Receive window & Urgent data pointer",
+            "C": "Sequence & Acknowledgement number",
+            "D": "Flags & Internet checksum"
+          },
+          "correctAnswer": "C",
+          "explanation": "Hai số này đánh dấu thứ tự byte."
+        },
+        {
+          "id": "NT_C5_T8_Q14",
+          "question": "Trong TCP header, trường nào ghi chỉ số byte đầu tiên của đoạn dữ liệu được gửi đi?",
+          "options": {
+            "A": "Acknowledgement number",
+            "B": "Sequence number",
+            "C": "Receive window",
+            "D": "Urgent data pointer"
+          },
+          "correctAnswer": "B",
+          "explanation": "Sequence number = số thứ tự byte đầu của segment."
+        },
+        {
+          "id": "NT_C5_T8_Q15",
+          "question": "Trong TCP header, trường nào quản lý flow control?",
+          "options": {
+            "A": "Sequence number",
+            "B": "Internet Checksum",
+            "C": "Urgent Data Pointer",
+            "D": "Receive Window"
+          },
+          "correctAnswer": "D",
+          "explanation": "Receive window cho biết bộ đệm còn trống của bên nhận."
+        },
+        {
+          "id": "NT_C5_T8_Q16",
+          "question": "Khoảng thời gian từ lúc gửi gói tin đến lúc nhận được phản hồi gọi là:",
+          "options": {
+            "A": "TTL",
+            "B": "RTT",
+            "C": "MTU",
+            "D": "Timeout"
+          },
+          "correctAnswer": "B",
+          "explanation": "**RTT** (Round-Trip Time)."
+        },
+        {
+          "id": "NT_C5_T8_Q17",
+          "question": "Trong TCP header, trường nào dùng để kiểm lỗi?",
+          "options": {
+            "A": "Receive Window",
+            "B": "Urgent Data Pointer",
+            "C": "Acknowledgement number",
+            "D": "Internet Checksum"
+          },
+          "correctAnswer": "D",
+          "explanation": "Checksum phát hiện lỗi bit."
+        },
+        {
+          "id": "NT_C5_T8_Q18",
+          "question": "Trong TCP header, trường nào ghi chỉ số byte cuối cùng của dữ liệu khẩn cấp?",
+          "options": {
+            "A": "Sequence number",
+            "B": "Receive Window",
+            "C": "Urgent Data Pointer",
+            "D": "Internet Checksum"
+          },
+          "correctAnswer": "C",
+          "explanation": "Dùng cùng cờ URG."
+        },
+        {
+          "id": "NT_C5_T8_Q19",
+          "question": "Trong TCP header, trường nào ghi chỉ số byte đầu tiên của đoạn dữ liệu kế tiếp mà bên nhận yêu cầu gửi?",
+          "options": {
+            "A": "Acknowledgement Number",
+            "B": "Sequence number",
+            "C": "Receive Window",
+            "D": "Urgent Data Pointer"
+          },
+          "correctAnswer": "A",
+          "explanation": "ACK number = byte mong đợi tiếp theo."
+        },
+        {
+          "id": "NT_C5_T8_Q20",
+          "question": "Trong quá trình bắt tay TCP, cờ SYN được bật ở gói tin thứ mấy?",
+          "options": {
+            "A": "Gói 2 và 3",
+            "B": "Gói 1 và 3",
+            "C": "Gói 3 và 4",
+            "D": "Gói 1 và 2"
+          },
+          "correctAnswer": "D",
+          "explanation": "SYN, SYN+ACK, ACK: SYN bật ở gói 1 và 2."
+        },
+        {
+          "id": "NT_C5_T8_Q21",
+          "question": "Trong bắt tay TCP, cờ ACK được bật từ gói tin thứ mấy?",
+          "options": {
+            "A": "Gói thứ 1",
+            "B": "Gói thứ 2",
+            "C": "Gói thứ 3 trở đi",
+            "D": "Gói thứ 4"
+          },
+          "correctAnswer": "B",
+          "explanation": "ACK xuất hiện từ gói SYN+ACK (gói 2) trở đi."
+        },
+        {
+          "id": "NT_C5_T8_Q22",
+          "question": "Máy A nhận yêu cầu kết nối TCP nhưng không chấp nhận cổng được yêu cầu. Cờ nào bật trong gói phản hồi?",
+          "options": {
+            "A": "URG",
+            "B": "PSH",
+            "C": "FIN",
+            "D": "RST"
+          },
+          "correctAnswer": "D",
+          "explanation": "RST từ chối/đặt lại kết nối."
+        },
+        {
+          "id": "NT_C5_T8_Q23",
+          "question": "Cờ nào thông báo chuyển dữ liệu lên tầng trên ngay lập tức?",
+          "options": {
+            "A": "URG",
+            "B": "PSH",
+            "C": "RST",
+            "D": "FIN"
+          },
+          "correctAnswer": "B",
+          "explanation": "PSH yêu cầu đẩy dữ liệu lên ứng dụng ngay."
+        },
+        {
+          "id": "NT_C5_T8_Q24",
+          "question": "Cờ nào liên quan đến việc đóng kết nối?",
+          "options": {
+            "A": "URG",
+            "B": "PSH",
+            "C": "FIN",
+            "D": "RST"
+          },
+          "correctAnswer": "C",
+          "explanation": "FIN báo hết dữ liệu và kết thúc kết nối."
+        },
+        {
+          "id": "NT_C5_T8_Q25",
+          "question": "Cờ nào thông báo có dữ liệu khẩn cấp?",
+          "options": {
+            "A": "URG",
+            "B": "PSH",
+            "C": "RST",
+            "D": "FIN"
+          },
+          "correctAnswer": "A",
+          "explanation": "URG kết hợp Urgent Data Pointer."
+        }
+      ]
+    },
+    {
+      "topicId": "NT_C5_T9",
+      "topicName": "Internet tổng quan",
+      "questions": [
+        {
+          "id": "NT_C5_T9_Q1",
+          "question": "Trong sơ đồ network of networks, ISP kết nối với hai hay nhiều ISP nhà cung cấp gọi là:",
+          "options": {
+            "A": "Point of presence (PoP)",
+            "B": "Peering",
+            "C": "Internet exchange point (IXP)",
+            "D": "Multi-homing"
+          },
+          "correctAnswer": "D",
+          "explanation": "**Multi-homing**: nhiều nhà cung cấp để dự phòng/tối ưu."
+        },
+        {
+          "id": "NT_C5_T9_Q2",
+          "question": "Tổ chức sử dụng thiết bị, công nghệ để kết nối các ISP với nhau gọi là:",
+          "options": {
+            "A": "Point of presence (PoP)",
+            "B": "Internet exchange point (IXP)",
+            "C": "Multi-homing",
+            "D": "Peering"
+          },
+          "correctAnswer": "B",
+          "explanation": "IXP là nơi các ISP trao đổi lưu lượng."
+        },
+        {
+          "id": "NT_C5_T9_Q3",
+          "question": "Internet access ADSL (Asymmetric Digital Subscriber Line), chữ \"A\" (asymmetric) nghĩa là:",
+          "options": {
+            "A": "Nhiều kết nối cùng lúc trên một đường truyền",
+            "B": "Đường truyền được chia kênh",
+            "C": "Tách tín hiệu điện thoại khỏi Internet",
+            "D": "Kênh downstream và upstream có tốc độ khác nhau"
+          },
+          "correctAnswer": "D",
+          "explanation": "Asymmetric = bất đối xứng tốc độ tải xuống/tải lên."
+        },
+        {
+          "id": "NT_C5_T9_Q4",
+          "question": "Tài liệu về các tiêu chuẩn Internet, giao thức của IETF gọi là:",
+          "options": {
+            "A": "Requests for Comments (RFC)",
+            "B": "Internet protocols in deep",
+            "C": "Internet theories & protocols",
+            "D": "Internet Standards Book"
+          },
+          "correctAnswer": "A",
+          "explanation": "RFC do IETF công bố."
+        },
+        {
+          "id": "NT_C5_T9_Q5",
+          "question": "Các end system được kết nối với nhau qua:",
+          "options": {
+            "A": "Cables và routers",
+            "B": "Routers và radio spectrum",
+            "C": "Communication links và packet switches",
+            "D": "Wireless devices và routers"
+          },
+          "correctAnswer": "C",
+          "explanation": "Hạ tầng Internet gồm liên kết truyền thông và các thiết bị chuyển mạch gói."
+        }
+      ]
+    }
+  ]
+}
