@@ -268,7 +268,7 @@
             "D": "Tập hợp thông tin của tất cả router rồi mới xây dựng bảng định tuyến"
           },
           "correctAnswer": "D",
-          "explanation": "RIP là distance-vector: chỉ dựa vào thông tin các router láng giềng. Việc tập hợp thông tin toàn mạng là đặc trưng của link-state (OSPF)."
+          "explanation": "RIP là distance-vector: chỉ dựa vào thông tin các router láng giềng. Việc tập hợp thông tin toàn mạng là đặc trưng của link-state (OSPF). (Đề gốc đánh dấu đáp án khác – \"thuật toán định tuyến động\" – nhưng RIP đúng là dynamic nên đó là phát biểu đúng.)"
         },
         {
           "id": "NT_C5_T3_Q2",
@@ -370,19 +370,19 @@
             "D": "Admin phải cấu hình bảng chuyển tiếp ban đầu khi bắt đầu hoạt động"
           },
           "correctAnswer": "D",
-          "explanation": "Switch tự học (self-learning) nên không cần cấu hình bảng chuyển tiếp ban đầu."
+          "explanation": "Switch tự học (self-learning) nên không cần cấu hình bảng chuyển tiếp ban đầu. (Đề gốc đánh dấu \"trong suốt\" là sai, nhưng switch đúng là transparent.)"
         },
         {
           "id": "NT_C5_T4_Q6",
-          "question": "Khi bấm dây chéo (crossover) hai đầu cáp UTP CAT5 vào đầu RJ45, cần lưu ý các cặp dây:",
+          "question": "Khi bấm dây chéo hai đầu cáp UTP CAT5 vào đầu RJ45, cần lưu ý các cặp dây (cặp xoắn):",
           "options": {
-            "A": "(1,2) – (3,6) – (4,5) – (7,8)",
-            "B": "(1,3) – (2,6) – (4,5) – (7,8)",
+            "A": "(1,3) – (2,6) – (4,5) – (7,8)",
+            "B": "(1,2) – (3,6) – (4,5) – (7,8)",
             "C": "(1,2) – (4,7) – (3,5) – (6,8)",
             "D": "(1,2) – (3,7) – (4,5) – (6,8)"
           },
           "correctAnswer": "B",
-          "explanation": "Cáp chéo đảo cặp truyền/nhận: chân 1↔3 và 2↔6."
+          "explanation": "Chuẩn T568: các cặp xoắn là (1,2), (3,6), (4,5), (7,8); khi bấm chéo phải giữ đúng các cặp này (đáp án theo đề gốc)."
         }
       ]
     },
@@ -448,7 +448,7 @@
             "D": "Chỉ Screened-Subnet Firewall"
           },
           "correctAnswer": "C",
-          "explanation": "Bastion host có mặt trong cả hai mô hình Screened Host và Screened-Subnet."
+          "explanation": "Bastion host có mặt trong cả hai mô hình Screened Host và Screened-Subnet. (Đề gốc đánh dấu \"Packet filtering router\" – cần đối chiếu với slide giảng viên.)"
         },
         {
           "id": "NT_C5_T5_Q6",
@@ -622,7 +622,7 @@
             "D": "Symmetric & Asymmetric"
           },
           "correctAnswer": "B",
-          "explanation": "Chữ ký số xác thực danh tính bên ký."
+          "explanation": "Chữ ký số xác thực danh tính bên ký. (Đề gốc đánh dấu Message Digest và Symmetric & Asymmetric – không rõ ràng, nên đối chiếu với giảng viên.)"
         },
         {
           "id": "NT_C5_T6_Q9",
@@ -856,7 +856,7 @@
             "D": "MX"
           },
           "correctAnswer": "D",
-          "explanation": "Record **MX** chỉ mail server của domain."
+          "explanation": "Record **MX** chỉ mail server của domain. (Đề gốc đánh dấu CNAME, nhưng giá trị của bản ghi MX mới là tên chuẩn của mail server.)"
         },
         {
           "id": "NT_C5_T7_Q14",
@@ -1174,7 +1174,7 @@
             "D": "Flags & Internet checksum"
           },
           "correctAnswer": "C",
-          "explanation": "Hai số này đánh dấu thứ tự byte."
+          "explanation": "Hai số này đánh dấu thứ tự byte. (Đề gốc đánh dấu Source & Destination port – không đúng.)"
         },
         {
           "id": "NT_C5_T8_Q14",
@@ -1282,7 +1282,7 @@
             "D": "RST"
           },
           "correctAnswer": "D",
-          "explanation": "RST từ chối/đặt lại kết nối."
+          "explanation": "RST từ chối/đặt lại kết nối. (Đề gốc đánh dấu FIN; theo TCP thì cổng đóng sẽ trả RST.)"
         },
         {
           "id": "NT_C5_T8_Q23",
