@@ -543,10 +543,15 @@ document.addEventListener('keydown', (ev) => {
   const tag = t && t.tagName;
   const inText = tag === 'TEXTAREA' || tag === 'SELECT' || (tag === 'INPUT' && t.type !== 'radio' && t.type !== 'checkbox');
   if (ev.key === 'Enter') {
-    if (tag === 'TEXTAREA' || tag === 'BUTTON' || tag === 'SUMMARY' || (t && t.classList && t.classList.contains('fill-input'))) return;
+    const navBtn = t && (t.id === 'btnNextQuestion' || t.id === 'btnPrevQuestion');
+    if (tag === 'TEXTAREA' || (tag === 'BUTTON' && !navBtn) || tag === 'SUMMARY' || (t && t.classList && t.classList.contains('fill-input'))) return;
     const card = (t && t.closest && t.closest('.question-card')) || (quizViewMode === 'single' ? document.querySelector('#quizBody .question-card') : null);
     const cb = card && card.querySelector('.btn-check-answer');
-    if (cb && !cb.disabled) { ev.preventDefault(); cb.click(); }
+    // Câu điền khuyết / tự luận: Enter đưa con trỏ vào ô nhập để gõ ngay, không cần chuột
+    const box = card && card.querySelector('.fill-input:not([disabled]), .essay-input');
+    if (box && !box.value.trim()) { ev.preventDefault(); box.focus(); }
+    else if (cb && !cb.disabled) { ev.preventDefault(); cb.click(); }
+    else if (box) { ev.preventDefault(); box.focus(); }
   } else if (/^[a-dA-D]$/.test(ev.key) && !inText) {
     const card = (t && t.closest && t.closest('.question-card')) || (quizViewMode === 'single' ? document.querySelector('#quizBody .question-card') : null);
     const radio = card && card.querySelector(`input[type="radio"][value="${ev.key.toUpperCase()}"]`);
