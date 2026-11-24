@@ -780,6 +780,88 @@
             "Cổng IoT"
           ],
           "explanation": "**IoT Gateway** đứng giữa cảm biến và Internet/đám mây, gom và chuyển dữ liệu, đôi khi xử lý biên."
+        },
+        {
+          "id": "NT_C1_T10_E1",
+          "type": "fill",
+          "question": "Mô hình OSI và mô hình TCP/IP có cùng tầng (a) _______ (tầng giao vận; tầng mạng cũng trùng tên gọi chức năng).",
+          "options": {},
+          "correctAnswer": "Transport",
+          "acceptedAnswers": [
+            "Tầng Transport",
+            "Transport Layer",
+            "Giao vận",
+            "Tầng giao vận",
+            "Network",
+            "Network Layer",
+            "Tầng Network",
+            "Tầng mạng",
+            "Mạng",
+            "Internet"
+          ],
+          "explanation": "OSI và TCP/IP trùng nhau ở tầng **Transport** (giao vận: TCP, UDP) và tầng **Network** (mạng, còn gọi Internet trong TCP/IP: IP). Các tầng trên/dưới được gộp khác nhau (TCP/IP có 4 tầng, OSI có 7)."
+        },
+        {
+          "id": "NT_C1_T10_E2",
+          "type": "fill",
+          "question": "Khi bấm dây nối mạng LAN bằng cáp UTP, chỉ cần bấm đúng cặp màu (b) _______ (chân 1, 2) và cặp màu xanh lá (chân 3, 6).",
+          "options": {},
+          "correctAnswer": "Cam",
+          "acceptedAnswers": [
+            "Màu cam",
+            "Orange",
+            "Sọc cam",
+            "Cam và sọc cam",
+            "Sọc cam, cam",
+            "Cặp cam"
+          ],
+          "explanation": "Với Ethernet 10/100 Mbps chỉ dùng 4 dây **1, 2, 3, 6**. Theo chuẩn T568B: chân 1–2 là cặp **cam (sọc cam, cam)**, chân 3–6 là cặp **xanh lá (sọc xanh lá, xanh lá)**."
+        },
+        {
+          "id": "NT_C1_T10_E3",
+          "type": "fill",
+          "question": "Khi bấm dây nối mạng LAN bằng cáp UTP, chỉ cần bấm đúng cặp màu cam (chân 1, 2) và cặp màu (c) _______ (chân 3, 6).",
+          "options": {},
+          "correctAnswer": "Xanh lá",
+          "acceptedAnswers": [
+            "Xanh lá cây",
+            "Màu xanh lá",
+            "Green",
+            "Lá",
+            "Sọc xanh lá",
+            "Xanh lá và sọc xanh lá",
+            "Cặp xanh lá"
+          ],
+          "explanation": "Chân **3 và 6** thuộc cặp **xanh lá**; cùng với cặp cam (chân 1, 2) tạo thành 4 dây truyền/nhận dữ liệu của Ethernet 100 Mbps."
+        },
+        {
+          "id": "NT_C1_T10_E4",
+          "type": "fill",
+          "question": "Router cập nhật bảng định tuyến của mình thông qua địa chỉ (d) _______ của các mạng khác gửi đến.",
+          "options": {},
+          "correctAnswer": "Broadcast",
+          "acceptedAnswers": [
+            "Địa chỉ broadcast",
+            "Quảng bá",
+            "Địa chỉ quảng bá",
+            "Broadcast address"
+          ],
+          "explanation": "Mỗi mạng dùng **địa chỉ broadcast** (địa chỉ cuối của mạng, ví dụ 167.8.255.255) để quảng bá thông tin về mạng mình; router dựa vào đó cập nhật **bảng định tuyến**."
+        },
+        {
+          "id": "NT_C1_T10_E5",
+          "type": "fill",
+          "question": "Cơ chế (e) _______: tại một thời điểm chỉ có thể truyền hoặc nhận.",
+          "options": {},
+          "correctAnswer": "Half duplex",
+          "acceptedAnswers": [
+            "Half-duplex",
+            "Halfduplex",
+            "Bán song công",
+            "Half duplex mode",
+            "Song công một nửa"
+          ],
+          "explanation": "**Half duplex**: hai chiều nhưng luân phiên, mỗi thời điểm chỉ truyền **hoặc** nhận (như bộ đàm). **Full duplex** truyền và nhận đồng thời; **Simplex** chỉ một chiều."
         }
       ]
     }

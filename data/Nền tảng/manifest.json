@@ -4,7 +4,7 @@
       "chapterId": "NT_C1",
       "chapterName": "Bộ câu hỏi 1 – Mạng máy tính",
       "topicCount": 10,
-      "questionCount": 59
+      "questionCount": 64
     },
     {
       "chapterId": "NT_C2",
@@ -31,6 +31,6 @@
       "questionCount": 111
     }
   ],
-  "totalQuestions": 719,
+  "totalQuestions": 724,
   "totalTopics": 42
 }
