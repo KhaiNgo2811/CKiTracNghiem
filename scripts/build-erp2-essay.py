@@ -1,72 +1,134 @@
 # -*- coding: utf-8 -*-
-"""Sinh data/ERP2/ERP2_C8.json: câu hỏi tự luận (essay, tiếng Anh) kèm dàn ý và bài mẫu."""
+"""Sinh data/ERP2/ERP2_C8.json: câu tự luận (đề tiếng Anh, gợi ý trả lời tiếng Việt, giữ thuật ngữ SAP)."""
 import json
 
 OUT = 'data/ERP2/'
 
 
 def g(flow, *paragraphs):
-    return (f'<p class="mb-2"><b>Outline:</b> {flow}</p><p class="mb-2"><b>Model answer:</b></p>'
+    return (f'<p class="mb-2"><b>Mạch ý:</b> {flow}</p><p class="mb-2"><b>Bài trả lời tham khảo:</b></p>'
             + ''.join(f'<p class="mb-2">{x}</p>' for x in paragraphs))
 
 
+# Thứ tự topic và câu giữ nguyên với bản trước để id không đổi
 TOPICS = [
     ('Core business processes', [
         ('Describe the <b>procure-to-pay process</b> in SAP. For each step, explain its purpose, the documents created and the effect on accounting.',
-         g('Need → source → purchase order → goods receipt → invoice verification → payment → controls and integration.',
-           'Procure-to-pay covers everything from recognising a need for material to paying the vendor. It starts with a <b>purchase requisition</b>, an internal request that states what is needed, how much and when. The buyer then determines a source of supply, possibly by requesting quotations, and creates a <b>purchase order</b>, which is the formal commitment to the vendor. These first steps create no accounting entry because nothing has been received or owed.',
-           'At <b>goods receipt</b> the warehouse accepts the material. The system creates a material document and an accounting document: inventory is debited and the <b>GR/IR clearing account</b> is credited. At <b>invoice verification</b> the vendor invoice is compared with the purchase order and the goods receipt (<b>three-way match</b>). GR/IR is cleared and the vendor account is credited, while the payables reconciliation account is updated automatically. Finally, <b>payment</b> debits the vendor and credits the bank.',
-           'The process shows integration: MM performs the logistics steps and FI receives the financial consequences automatically through account determination. Tolerance limits and the three-way match protect the company from overpayment and fraud.')),
+         g('Nhu cầu → chọn nguồn → purchase order → goods receipt → invoice verification → payment → kiểm soát và tích hợp.',
+           'Procure-to-pay bao gồm toàn bộ công việc từ khi phát sinh nhu cầu vật tư đến khi trả tiền cho nhà cung cấp. Quy trình bắt đầu bằng <b>purchase requisition</b>, là đề nghị nội bộ nêu cần mua gì, bao nhiêu và khi nào. Bộ phận mua hàng xác định nguồn cung, có thể yêu cầu báo giá, rồi lập <b>purchase order</b> là cam kết chính thức với nhà cung cấp. Các bước này chưa tạo bút toán vì công ty chưa nhận hàng và chưa phát sinh nợ.',
+           'Khi <b>goods receipt</b>, kho nhận hàng, hệ thống tạo material document và accounting document: Nợ Inventory, Có <b>GR/IR clearing account</b>. Khi <b>invoice verification</b>, hóa đơn được đối chiếu với purchase order và phiếu nhận hàng (<b>three-way match</b>); GR/IR được xóa, ghi Có tài khoản nhà cung cấp và reconciliation account tự cập nhật. Cuối cùng <b>payment</b> ghi Nợ nhà cung cấp, Có Bank.',
+           'Quy trình thể hiện tính tích hợp: MM thực hiện phần hậu cần, FI tự nhận tác động tài chính nhờ automatic account determination. Tolerance limit và three-way match giúp công ty tránh trả thừa và gian lận.')),
         ('Describe the <b>order-to-cash process</b>. How does it integrate sales, warehouse and finance?',
-         g('Inquiry and quotation → sales order checks → delivery and goods issue → billing → payment → integration.',
-           'Order-to-cash turns a customer need into money received. It may begin with a customer <b>inquiry</b> and a <b>quotation</b>, which is a binding offer for a limited time. When the customer agrees, a <b>sales order</b> is created. At this point the system determines the price with the condition technique, checks material availability and proposes a delivery date.',
-           'Next an <b>outbound delivery</b> is created, and the warehouse picks and packs the goods. <b>Goods issue</b> records that the goods leave the company: inventory decreases and cost of goods sold is recorded. This is the first accounting impact. <b>Billing</b> then creates the invoice, debiting the customer receivable and crediting revenue. The process ends when the <b>customer payment</b> is posted, debiting the bank and clearing the receivable.',
-           'Sales, warehouse and finance work with the same data and the document flow links every step, so staff can trace the status of an order at any time. Automatic account determination means that logistics users do not enter accounting accounts themselves.')),
+         g('Inquiry, quotation → sales order → delivery và goods issue → billing → payment → tích hợp.',
+           'Order-to-cash biến nhu cầu của khách hàng thành tiền thu về. Khách có thể gửi <b>inquiry</b>, công ty trả lời bằng <b>quotation</b> là lời chào hàng có giá trị ràng buộc trong một thời hạn. Khi khách đồng ý, <b>sales order</b> được lập; lúc này hệ thống xác định giá bằng condition technique, kiểm tra hàng sẵn có (availability check) và đề xuất ngày giao.',
+           'Tiếp theo công ty tạo <b>outbound delivery</b>, kho lấy hàng và đóng gói. <b>Goods issue</b> ghi nhận hàng rời công ty: Nợ Cost of goods sold, Có Inventory, đây là tác động kế toán đầu tiên. <b>Billing</b> lập hóa đơn: Nợ phải thu khách hàng, Có Revenue. Quy trình kết thúc khi nhận <b>payment</b>: Nợ Bank, Có phải thu.',
+           'Bán hàng, kho và tài chính dùng chung dữ liệu, document flow nối các bước nên nhân viên tra được tình trạng đơn hàng bất cứ lúc nào. Nhờ account determination, người làm hậu cần không phải tự chọn tài khoản kế toán.')),
         ('A bicycle company receives a large customer order but does not have enough stock. Explain <b>how ERP processes work together</b> from the order until the money is collected.',
-         g('Sales order and availability check → obtain supply (buy components, produce) → goods receipt → deliver and bill → pay vendors, collect cash → role of FI and CO.',
-           'The sales department records a sales order in SD. The <b>availability check</b> shows that current stock and planned receipts cannot cover the quantity by the requested date, so the system proposes another date or partial delivery. If stock must be shared between customers, backorder processing can prioritise orders.',
-           'To cover the shortage, the company produces more bicycles and buys the missing components. Requirements lead to purchase requisitions, purchase orders and goods receipts in MM, followed by invoice verification and vendor payment. Production consumes the components and delivers finished bicycles into stock.',
-           'The warehouse then picks, packs and posts goods issue; SD bills the customer, and FI records the receivable and later the payment. Throughout, FI records the financial effects and CO tracks costs and responsibility. Because all modules share one database, a change in one area is immediately visible to the others, which reduces delays and duplicate data entry.')),
+         g('Sales order và availability check → bổ sung hàng (mua linh kiện, sản xuất) → giao, lập hóa đơn → trả nhà cung cấp, thu tiền → vai trò FI, CO.',
+           'Phòng kinh doanh nhập sales order trong SD. <b>Availability check</b> cho thấy tồn kho và hàng sắp về không đủ cho ngày khách yêu cầu, nên hệ thống đề xuất ngày khác hoặc giao từng phần. Nếu phải chia hàng giữa nhiều khách, backorder processing giúp ưu tiên đơn quan trọng.',
+           'Để bù phần thiếu, công ty sản xuất thêm xe và mua linh kiện còn thiếu. Nhu cầu dẫn đến purchase requisition, purchase order và goods receipt trong MM, sau đó là invoice verification và thanh toán cho nhà cung cấp. Sản xuất tiêu hao linh kiện và nhập thành phẩm vào kho.',
+           'Kho lấy hàng, đóng gói và ghi goods issue; SD lập hóa đơn; FI ghi nhận phải thu và sau đó là tiền thu về. Suốt quá trình, FI ghi tác động tài chính còn CO theo dõi chi phí và trách nhiệm. Vì mọi module dùng chung cơ sở dữ liệu nên thay đổi ở một nơi được nhìn thấy ngay ở nơi khác, giảm chậm trễ và nhập liệu trùng.')),
     ]),
     ('Accounting and controlling', [
         ('Explain how <b>financial accounting</b> receives and controls data from other processes. Include the general ledger, subledgers, reconciliation accounts and automatic account determination.',
-         g('Role of FI → G/L and subledgers → reconciliation accounts → automatic account determination → controls.',
-           'Financial accounting records all financially relevant events so that the company can produce legal financial statements. Its core is the <b>general ledger</b>, built from a chart of accounts and kept for each company code. Details for individual customers, vendors and assets are held in <b>subledgers</b>.',
-           'Each subledger is linked to a <b>reconciliation account</b>. When a vendor invoice is posted to the vendor, the reconciliation account is updated at the same time, and manual posting to it is blocked, so detail and totals always agree.',
-           'Logistics events reach FI through <b>automatic account determination</b>. A goods receipt, goods issue or billing document creates the accounting entry without user input about accounts. Data quality and internal control are supported by posting periods, document types, field status and tolerance groups. As a result, financial reports are timely, consistent and traceable back to the original business document.')),
+         g('Vai trò FI → G/L và subledger → reconciliation account → account determination → kiểm soát.',
+           'Financial accounting ghi nhận mọi sự kiện có tác động tài chính để công ty lập báo cáo theo luật định. Trọng tâm là <b>general ledger</b>, được xây dựng từ chart of accounts và duy trì theo từng company code. Chi tiết của từng khách hàng, nhà cung cấp, tài sản nằm trong <b>subledger</b>.',
+           'Mỗi subledger gắn với một <b>reconciliation account</b>. Khi ghi hóa đơn vào tài khoản nhà cung cấp, reconciliation account được cập nhật đồng thời và không cho ghi tay, nên chi tiết và tổng luôn khớp.',
+           'Các sự kiện hậu cần đến FI qua <b>automatic account determination</b>: goods receipt, goods issue hay billing tự sinh bút toán. Chất lượng dữ liệu và kiểm soát nội bộ được đảm bảo bằng posting period, document type, field status và tolerance group. Kết quả là báo cáo kịp thời, nhất quán và truy ngược được về chứng từ gốc.')),
         ('Describe the <b>overhead management process</b> in CO. How are costs collected and allocated, and why does it matter to managers?',
-         g('Costs arrive from FI → collected on cost objects → allocated (distribution, assessment, activity) → internal orders settled → decisions.',
-           'Overhead costs cannot be traced directly to one product, so CO first collects them where they arise. When an expense with a primary cost element is posted in FI, CO also receives it on a <b>cost center</b> or an <b>internal order</b>.',
-           'Support cost centers then pass their costs to the units that benefit. <b>Distribution</b> allocates costs at period end and keeps the original cost element. <b>Assessment</b> combines several costs under a secondary cost element. <b>Activity allocation</b> charges according to the quantity of service used, such as IT hours. Temporary costs, such as a trade show, are collected on an internal order and later moved to their receivers by <b>settlement</b>.',
-           'This shows managers the real cost of each department and activity, so they can compare plan and actual, assign responsibility, price products more accurately and decide where to reduce spending.')),
+         g('Chi phí từ FI → tập hợp trên đối tượng chi phí → phân bổ → settlement → giá trị cho quản lý.',
+           'Overhead là chi phí không truy được trực tiếp cho từng sản phẩm, nên CO trước hết tập hợp chúng tại nơi phát sinh. Khi một khoản chi gắn primary cost element được ghi trong FI, CO cũng nhận trên <b>cost center</b> hoặc <b>internal order</b>.',
+           'Các cost center phục vụ sau đó chuyển chi phí cho đơn vị hưởng lợi. <b>Distribution</b> phân bổ cuối kỳ và giữ nguyên cost element gốc. <b>Assessment</b> gộp nhiều chi phí vào một secondary cost element. <b>Activity allocation</b> tính theo lượng dịch vụ thực dùng, ví dụ giờ hỗ trợ IT. Chi phí tạm thời như hội chợ được gom trên internal order rồi chuyển đi bằng <b>settlement</b>.',
+           'Nhờ vậy nhà quản lý thấy chi phí thật của từng bộ phận và hoạt động, so sánh kế hoạch với thực tế, quy trách nhiệm, định giá sản phẩm chính xác hơn và quyết định nên cắt giảm ở đâu.')),
     ]),
     ('Projects and maintenance', [
         ('Describe the <b>life cycle of a project</b> in SAP PS, from definition to settlement.',
-         g('Project definition → WBS and network → planning → budget and release → execution → period-end and settlement.',
-           'A project is a unique task limited in time and budget. In SAP PS it starts with a <b>project definition</b>. The <b>work breakdown structure</b> divides the project into work packages, and a <b>network</b> lists the activities and their dependencies.',
-           'Planning then determines dates, resources, materials and costs. Management approves a <b>budget</b>, which is a binding limit, and releases the project. During execution, internal work is confirmed, materials are withdrawn or purchased and external services are received. Commitments and actual costs are compared with the budget, and milestones show progress and may trigger billing for a customer project.',
-           'At period end, progress and results analysis evaluate unfinished work. Finally, <b>settlement</b> transfers costs and revenues to receivers such as assets, accounts or profitability analysis. PS therefore connects SD, MM, HR, FI and CO around one project structure.')),
+         g('Project definition → WBS, network → hoạch định → budget và release → thực hiện → cuối kỳ và settlement.',
+           'Dự án là công việc mang tính duy nhất, giới hạn thời gian và ngân sách. Trong SAP PS, dự án bắt đầu bằng <b>project definition</b>. <b>Work breakdown structure (WBS)</b> chia dự án thành các gói công việc, còn <b>network</b> liệt kê các hoạt động và quan hệ phụ thuộc.',
+           'Giai đoạn hoạch định xác định thời gian, nguồn lực, vật tư và chi phí. Cấp quản lý phê duyệt <b>budget</b> là giới hạn bắt buộc và release dự án. Khi thực hiện, công việc nội bộ được confirm, vật tư được xuất hoặc mua, dịch vụ ngoài được nhận. Commitment và chi phí thực tế được so với budget; milestone thể hiện tiến độ và có thể kích hoạt lập hóa đơn cho dự án khách hàng.',
+           'Cuối kỳ, progress analysis và results analysis đánh giá phần dở dang. Cuối cùng <b>settlement</b> chuyển chi phí và doanh thu đến đối tượng nhận như tài sản, tài khoản hay profitability analysis. PS vì thế liên kết SD, MM, HR, FI và CO quanh một cấu trúc dự án.')),
         ('A production machine suddenly breaks down. Describe the <b>corrective maintenance process</b> in SAP EAM and its integration with other modules.',
-         g('Notification → planning → control → execution → completion and settlement → integration and benefit.',
-           'The operator first creates a <b>maintenance notification</b> that describes the problem, the affected equipment or functional location and the urgency. In <b>planning</b>, the maintenance planner creates a <b>maintenance order</b> with operations, spare parts, tools and estimated costs. In an emergency the order can be created immediately.',
-           'In the <b>control</b> phase the system checks material and capacity and the order is released. During <b>execution</b> technicians repair the machine and withdraw spare parts. Parts not in stock are bought through MM and charged to the order. In <b>completion</b>, technicians confirm working time and record causes and actions, and the order is set to technically completed.',
-           'The order collects all costs and <b>settles</b> them to the responsible cost center in CO, while FI records the related postings. The stored history helps the company analyse recurring failures and move towards preventive or predictive maintenance.')),
+         g('Notification → planning → control → execution → completion, settlement → tích hợp và lợi ích.',
+           'Người vận hành tạo <b>maintenance notification</b> mô tả sự cố, thiết bị hoặc functional location bị ảnh hưởng và mức khẩn cấp. Ở bước <b>planning</b>, người lập kế hoạch tạo <b>maintenance order</b> gồm công đoạn, phụ tùng, dụng cụ và chi phí dự kiến; trường hợp khẩn cấp có thể tạo order ngay.',
+           'Ở bước <b>control</b>, hệ thống kiểm tra vật tư, năng lực và order được release. Khi <b>execution</b>, kỹ thuật viên sửa máy và xuất phụ tùng; phụ tùng không có trong kho được mua qua MM và tính vào order. Ở <b>completion</b>, kỹ thuật viên xác nhận giờ công, ghi nguyên nhân, việc đã làm, rồi order được đặt technically completed.',
+           'Order tập hợp toàn bộ chi phí và <b>settle</b> về cost center chịu trách nhiệm trong CO, FI ghi nhận bút toán liên quan. Lịch sử bảo trì giúp công ty phân tích lỗi lặp lại và tiến tới bảo trì phòng ngừa hoặc dự đoán.')),
     ]),
     ('Implementation and enterprise structure', [
         ('A company is going to implement SAP. Describe the <b>steps of the implementation</b>, the role of configuration, and how the company should test the system.',
-         g('ASAP phases → configuration vs customization → data order → testing levels → success factors.',
-           'Following the ASAP approach, the company first prepares the project by setting goals, scope and team. In the <b>business blueprint</b> it documents how its processes should work. In <b>realization</b> the system is configured. <b>Final preparation</b> covers testing, user training and cutover, followed by <b>go-live</b> and support.',
-           'Configuration chooses options and values without changing code. Customization changes or adds code and should be used only when necessary, preferably as an enhancement so that upgrades remain safe. The enterprise structure is set up first, then business rules, then master data; old data must be cleansed before migration.',
-           'Testing proceeds from <b>unit</b> tests to <b>scenario</b> and <b>integration</b> tests and then <b>user acceptance</b>, with regression and performance tests as needed. Management support, clear requirements and trained users are important, because the system changes how people work and not only the software they use.')),
+         g('ASAP → configuration và customization → thứ tự dữ liệu → các mức testing → yếu tố thành công.',
+           'Theo ASAP, trước hết công ty chuẩn bị dự án: mục tiêu, phạm vi, đội ngũ. Ở <b>business blueprint</b> công ty mô tả quy trình mong muốn. Ở <b>realization</b> hệ thống được cấu hình. <b>Final preparation</b> gồm kiểm thử, đào tạo, chuyển đổi, sau đó là <b>go-live</b> và hỗ trợ.',
+           'Configuration là chọn tùy chọn và giá trị mà không sửa mã. Customization là sửa hoặc thêm mã, chỉ nên làm khi bắt buộc và ưu tiên enhancement để nâng cấp an toàn. Enterprise structure được thiết lập trước, rồi business rules, rồi master data; dữ liệu cũ phải được làm sạch trước khi chuyển.',
+           'Kiểm thử đi từ <b>unit test</b> đến <b>scenario</b>, <b>integration</b> rồi <b>user acceptance</b>, kèm regression và performance test khi cần. Sự ủng hộ của lãnh đạo, yêu cầu rõ ràng và người dùng được đào tạo rất quan trọng, vì hệ thống thay đổi cách làm việc chứ không chỉ thay phần mềm.')),
         ('Explain how you would design the <b>enterprise structure</b> for a company with several countries, factories and sales channels.',
-         g('Client → company codes → controlling area → plants and storage locations → purchasing and sales structure → trade-offs.',
-           'The enterprise structure represents the company in the system, so it must be designed before master data and transactions. The whole group is one <b>client</b>. Each legal entity, usually one per country, becomes a <b>company code</b> with its own books and currency. A <b>controlling area</b> can cover several company codes to give management a common view, provided they share the required accounting settings.',
-           'Factories and distribution centres are <b>plants</b>, each belonging to one company code, with <b>storage locations</b> inside. Purchasing can be organised centrally to gain bargaining power or per plant to stay flexible. Sales is organised by <b>sales organisation</b>, <b>distribution channel</b> and <b>division</b>, which together form sales areas, and shipping points handle deliveries.',
-           'The design should reflect legal requirements and real responsibilities while staying as simple as possible. An over-detailed structure increases maintenance work, and a structure that is too simple cannot produce the reports managers need.')),
+         g('Client → company code → controlling area → plant, storage location → mua hàng, bán hàng → đánh đổi.',
+           'Enterprise structure là hình ảnh của công ty trong hệ thống nên phải thiết kế trước master data và giao dịch. Cả tập đoàn là một <b>client</b>. Mỗi pháp nhân, thường mỗi quốc gia một pháp nhân, là một <b>company code</b> có sổ sách và đồng tiền riêng. Một <b>controlling area</b> có thể bao nhiều company code để quản trị có cái nhìn chung, với điều kiện chúng dùng chung các thiết lập kế toán cần thiết.',
+           'Nhà máy và trung tâm phân phối là các <b>plant</b>, mỗi plant thuộc một company code, bên trong có <b>storage location</b>. Mua hàng có thể tổ chức tập trung để tăng sức đàm phán hoặc theo plant để linh hoạt. Bán hàng tổ chức theo <b>sales organization</b>, <b>distribution channel</b> và <b>division</b>, ghép thành sales area; shipping point phụ trách giao hàng.',
+           'Thiết kế cần phản ánh yêu cầu pháp lý và trách nhiệm thực tế nhưng càng đơn giản càng tốt. Cấu trúc quá chi tiết làm tăng công bảo trì, còn quá đơn giản thì không ra được báo cáo nhà quản lý cần.')),
+    ]),
+    # ---- Câu tự luận lấy từ file "TEST ERP2 tổng hợp"
+    ('FI essays – accounts and statements (from review file)', [
+        ('Define <b>operating chart of accounts</b>.',
+         g('Chart of accounts là gì → operating dùng để làm gì → so với loại khác.',
+           'Chart of accounts là danh sách các tài khoản có thể dùng để tạo general ledger. <b>Operating chart of accounts</b> là bộ tài khoản dùng cho hoạt động ghi sổ hằng ngày của công ty. Ngoài ra còn có country-specific chart of accounts để đáp ứng quy định từng nước và group chart of accounts để lập báo cáo hợp nhất toàn tập đoàn.')),
+        ('Describe briefly the G/L account categories: <b>assets, liabilities, equity, revenue and expenses</b>.',
+         g('Ba loại trên balance sheet → hai loại trên income statement.',
+           '<b>Assets</b> là nguồn lực có giá trị do công ty sở hữu, có thể dùng để thực hiện nghĩa vụ tài chính. <b>Liabilities</b> là các khoản công ty còn nợ, như nợ nhà cung cấp hay vay ngân hàng. <b>Equity</b> là phần còn lại thuộc chủ sở hữu sau khi lấy tài sản trừ nợ. Ba loại này nằm trên balance sheet.',
+           '<b>Revenue</b> là tiền công ty kiếm được từ bán sản phẩm, dịch vụ. <b>Expenses</b> là chi phí để mua, sản xuất và bán chúng. Hai loại này nằm trên income statement.')),
+        ('How do the <b>chart of accounts</b> and <b>general ledger accounts</b> work together in FI configuration?',
+         g('CoA là danh mục → chọn tài khoản cho company code → bổ sung dữ liệu riêng.',
+           'Chart of accounts là danh mục tài khoản dùng chung, còn general ledger là bộ tài khoản thực sự dùng cho một company code. Công ty chọn trong chart of accounts những tài khoản cần thiết, rồi bổ sung dữ liệu riêng của company code như currency, tax category và reconciliation account. Do đó một tài khoản gồm <b>chart of accounts segment</b> dùng chung và <b>company code segment</b> riêng.')),
+        ('What are the <b>four key financial statements</b>, and how does <b>net income</b> flow between them?',
+         g('Bốn báo cáo → net income từ income statement → retained earnings → cash flow.',
+           'Bốn báo cáo gồm <b>balance sheet</b>, <b>income statement</b>, <b>statement of retained earnings</b> và <b>statement of cash flows</b>.',
+           'Net income là dòng cuối của income statement. Nó chuyển vào vốn chủ sở hữu trên balance sheet qua retained earnings: retained earnings cuối kỳ bằng số đầu kỳ cộng net income trừ dividends. Trên cash flow statement, net income là dòng đầu để tính dòng tiền từ hoạt động kinh doanh, sau đó điều chỉnh các khoản không dùng tiền như depreciation và amortization.')),
+        ('Which G/L accounts are <b>temporary</b> and closed at year end, and which are <b>permanent</b>?',
+         g('Tài khoản tạm thời → đóng sổ vào retained earnings → tài khoản thường xuyên.',
+           'Tài khoản <b>revenue</b> và <b>expense</b> là tạm thời: chúng chỉ tích lũy trong một năm, cuối năm được kết chuyển vào retained earnings qua period closing. Tài khoản trên balance sheet gồm <b>assets, liabilities và equity</b> là thường xuyên: không bị đóng, số dư được mang sang năm sau.')),
+        ('What are the key <b>enterprise structure elements</b> and <b>master data</b> necessary for financial accounting?',
+         g('Cơ cấu tổ chức → master data → vai trò của general ledger.',
+           'Về cơ cấu tổ chức, FI cần <b>client</b>, <b>company code</b> và <b>chart of accounts</b>. Về master data, quan trọng nhất là <b>general ledger accounts</b>. General ledger là cấu trúc chính của kế toán tài chính ở cấp company code; mọi giao dịch, hay ít nhất tác động tài chính của chúng, đều chảy qua đây nên nó cho cái nhìn tổng thể về hoạt động công ty.')),
+    ]),
+    ('FI essays – configuration and control (from review file)', [
+        ('Describe the purpose of <b>subsidiary ledgers</b>.',
+         g('Theo dõi chi tiết → tổng hợp lên control account → quy tắc trong SAP.',
+           'Subsidiary ledger theo dõi dữ liệu chi tiết cho từng khách hàng, nhà cung cấp và tài sản. Tổng số của chúng được phản ánh trong các tài khoản kiểm soát trên general ledger, SAP gọi là <b>reconciliation account</b>. Không được ghi trực tiếp vào reconciliation account; nghiệp vụ ghi vào subledger và tài khoản này tự cập nhật.')),
+        ('Discuss the relationship among <b>posting key, document type and field status group</b>.',
+         g('Mỗi thành phần kiểm soát gì → phải thống nhất → xử lý xung đột.',
+           '<b>Document type</b> cho biết bước nghiệp vụ tạo ra chứng từ, loại tài khoản được phép ghi và number range. <b>Posting key</b> quyết định ghi Nợ hay Có, loại tài khoản và trạng thái trường. <b>Field status group</b> gắn với G/L account bị ảnh hưởng cũng quy định trường nào bắt buộc, tùy chọn hay ẩn.',
+           'Vì nhiều nguồn cùng chi phối một giao dịch nên chúng phải thống nhất. Nếu không khớp, hệ thống phải xử lý xung đột theo mức ưu tiên và báo lỗi khi một nguồn ẩn trường còn nguồn kia bắt buộc nhập.')),
+        ('What is the purpose of <b>field status</b>? Explain the four statuses and how G/L master data differ from transactions.',
+         g('Mục đích → bốn trạng thái → khác biệt với giao dịch.',
+           'Field status quy định dữ liệu nào cần có khi tạo bản ghi hoặc thực hiện giao dịch, nhằm đảm bảo chất lượng dữ liệu. <b>Required</b> là bắt buộc nhập; <b>Optional</b> là có thể nhập hoặc không; <b>Display</b> chỉ xem, không sửa được; <b>Suppressed</b> là ẩn hoàn toàn. Với giao dịch chỉ có ba trạng thái, không có Display.')),
+        ('Explain the differences among <b>field groups, fields and field status</b>, and between <b>field status groups and field status variants</b>.',
+         g('Master data: field group → field → status. Giao dịch: field group → field status group → variant → company code.',
+           'Với G/L master data, <b>field group</b> là nhóm các trường dùng để định nghĩa tài khoản, ví dụ account control, account management, document entry. Mỗi nhóm gồm nhiều <b>field</b> như currency, tax category, reconciliation account, và mỗi trường phải được gán một <b>field status</b>. Thiết lập này đi theo account group.',
+           'Với chứng từ giao dịch, các field group được gom thành <b>field status group</b>, rồi nhiều field status group gom thành <b>field status variant</b>. Variant được gán cho một hoặc nhiều company code để company code đó sử dụng.')),
+        ('What is the primary purpose of <b>account groups</b>, and how do account groups for balance sheet accounts and reconciliation accounts differ?',
+         g('Gom tài khoản cùng đặc điểm → ví dụ GBI → khác biệt về field status.',
+           'Account group gom các tài khoản có đặc điểm giống nhau và kiểm soát number range cũng như field status của chúng. Ở GBI có các nhóm như Balance Sheet Accounts, Fixed Assets, Liquid Assets, Material Accounts, Profit &amp; Loss Accounts và Reconciliation Accounts.',
+           'Khác biệt lớn nhất là field status. Ví dụ ở field group account control, nhóm reconciliation accounts có trường bắt buộc, vài trường tùy chọn và phần còn lại bị ẩn, trong khi nhóm balance sheet accounts không có trường bắt buộc ở phần này.')),
+        ('What is the importance of <b>posting periods</b> and the <b>fiscal year variant</b>? What does “year dependent” mean?',
+         g('Posting period → special period → open period → fiscal year variant → year dependent.',
+           'Mỗi bút toán FI thuộc một <b>posting period</b>, thường là 12 kỳ ứng với 12 tháng. Có thêm tối đa 4 <b>special period</b> để tách kỳ cuối cho việc khóa sổ và bút toán điều chỉnh. Chỉ những kỳ đang mở mới cho ghi sổ, đây là một kiểm soát nội bộ.',
+           '<b>Fiscal year variant</b> xác định ngày bắt đầu, kết thúc năm tài chính, số kỳ thường, số kỳ đặc biệt và cách hệ thống suy ra kỳ khi ghi sổ. <b>Year dependent</b> nghĩa là phải khai báo việc phân kỳ theo ngày riêng cho từng năm, cần thiết khi cuối kỳ không rơi vào một ngày lịch cố định.')),
+        ('What is the purpose of <b>number ranges</b>, and how do they serve as an internal control?',
+         g('Number range gắn document type → số duy nhất → kiểm soát và truy vết.',
+           'Document number range gắn với từng <b>document type</b>, trong đó document type cho biết bước nghiệp vụ nào tạo ra chứng từ và loại tài khoản được ghi. Mỗi chứng từ nhận một số duy nhất trong khoảng cho phép.',
+           'Nhờ vậy chứng từ không trùng số, dễ phân loại và truy vết; khoảng trống hoặc bất thường trong dãy số giúp kiểm toán phát hiện thiếu sót hay gian lận.')),
+        ('Explain the purpose of <b>tolerance groups for employees</b>.',
+         g('Giới hạn theo người dùng → ví dụ → lợi ích kiểm soát.',
+           'Tolerance group cho nhân viên đặt giới hạn trên về số tiền mà một người được phép ghi sổ, ví dụ số tiền tối đa cho một chứng từ, một dòng và mức chênh lệch thanh toán được chấp nhận. Vượt giới hạn thì hệ thống không cho ghi. Đây là cách phân quyền theo cấp bậc, giảm rủi ro sai sót và gian lận.')),
+        ('What is <b>automatic account determination</b>, and how can an organization test that financial configuration is correct?',
+         g('Cơ chế → thành phần cấu hình → cách kiểm thử và giới hạn.',
+           '<b>Automatic account determination</b> là cơ chế giúp hệ thống tự ghi tác động kế toán vào general ledger khi các bước nghiệp vụ được thực hiện. Nó dựa trên các quy tắc cấu hình như document type, account type, posting key và những quy tắc riêng của từng quy trình.',
+           'Để kiểm tra cấu hình FI, công ty có thể nhập tay các bút toán vào general ledger rồi xác minh kết quả. Tuy nhiên chưa thể kiểm thử đầy đủ accounts payable và accounts receivable cho đến khi quy trình mua hàng và bán hàng được cấu hình.')),
+        ('Why is it usually best <b>not to change the source code</b> of an ERP system?',
+         g('Rủi ro khi nâng cấp → chi phí → phương án thay thế.',
+           'Sửa mã nguồn gốc (modification) khiến công ty gặp khó khi nâng cấp lên phiên bản SAP mới, vì phần đã sửa có thể bị ghi đè hoặc xung đột với mã của hãng. Việc này còn tốn công lập trình, kiểm thử và bảo trì. Vì vậy nên ưu tiên configuration; nếu vẫn chưa đủ thì dùng enhancement như user exit để bổ sung chức năng mà không đụng vào mã chuẩn.')),
     ]),
 ]
 
-chapter = {'chapterId': 'ERP2_C8', 'chapterName': 'Essay practice – business processes', 'topics': []}
+chapter = {'chapterId': 'ERP2_C8', 'chapterName': 'Essay practice – tự luận (gợi ý tiếng Việt)', 'topics': []}
 for ti, (tname, items) in enumerate(TOPICS, 1):
     qs = [{'id': f'ERP2_C8_T{ti}_Q{k}', 'type': 'essay', 'question': q, 'options': {}, 'explanation': a}
           for k, (q, a) in enumerate(items, 1)]
@@ -77,11 +139,12 @@ with open(OUT + 'ERP2_C8.json', 'w', encoding='utf-8') as f:
 
 with open(OUT + 'manifest.json', encoding='utf-8-sig') as f:
     m = json.load(f)
-m['chapters'] = [c for c in m['chapters'] if c['chapterId'] != 'ERP2_C8']
-m['chapters'].append({'chapterId': 'ERP2_C8', 'chapterName': chapter['chapterName'], 'topicCount': len(chapter['topics']),
-                      'questionCount': sum(len(t['questions']) for t in chapter['topics'])})
+entry = {'chapterId': 'ERP2_C8', 'chapterName': chapter['chapterName'], 'topicCount': len(chapter['topics']),
+         'questionCount': sum(len(t['questions']) for t in chapter['topics'])}
+m['chapters'] = [c for c in m['chapters'] if c['chapterId'] != 'ERP2_C8'] + [entry]
+m['chapters'].sort(key=lambda c: int(c['chapterId'].split('_C')[1]))
 m['totalQuestions'] = sum(c['questionCount'] for c in m['chapters'])
 m['totalTopics'] = sum(c['topicCount'] for c in m['chapters'])
 with open(OUT + 'manifest.json', 'w', encoding='utf-8') as f:
     json.dump(m, f, ensure_ascii=False, indent=2)
-print(m['totalQuestions'], 'questions')
+print(entry['questionCount'], 'essays;', m['totalQuestions'], 'total')

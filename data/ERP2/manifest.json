@@ -44,9 +44,9 @@
     },
     {
       "chapterId": "ERP2_C8",
-      "chapterName": "Essay practice – business processes",
-      "topicCount": 4,
-      "questionCount": 9
+      "chapterName": "Essay practice – tự luận (gợi ý tiếng Việt)",
+      "topicCount": 6,
+      "questionCount": 25
     },
     {
       "chapterId": "ERP2_C9",
@@ -55,6 +55,6 @@
       "questionCount": 128
     }
   ],
-  "totalQuestions": 864,
-  "totalTopics": 69
+  "totalQuestions": 880,
+  "totalTopics": 71
 }
