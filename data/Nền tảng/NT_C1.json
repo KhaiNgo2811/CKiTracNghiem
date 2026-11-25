@@ -1053,21 +1053,9 @@
             "Tầng Transport",
             "Transport Layer",
             "Giao vận",
-            "Tầng giao vận",
-            "Application",
-            "Application Layer",
-            "Tầng Application",
-            "Ứng dụng",
-            "Tầng ứng dụng",
-            "Network",
-            "Network Layer",
-            "Tầng Network",
-            "Tầng mạng",
-            "Mạng",
-            "Transport và Application",
-            "Application và Transport"
+            "Tầng giao vận"
           ],
-          "explanation": "Đáp án chuẩn nhất: **Transport** (giao vận: TCP, UDP) vì cả tên lẫn chức năng tương ứng một–một giữa hai mô hình. **Application** cũng trùng tên, nhưng tầng Application của TCP/IP gộp 3 tầng OSI (Application, Presentation, Session). **Network** tương ứng về chức năng, nhưng trong TCP/IP thường gọi là **Internet**."
+          "explanation": "Đáp án là **Transport** (tầng giao vận: TCP, UDP): tầng này có cùng tên và cùng chức năng, tương ứng một–một giữa OSI và TCP/IP."
         },
         {
           "id": "NT_C1_T10_E2",
