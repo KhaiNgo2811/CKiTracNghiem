@@ -542,7 +542,12 @@ document.addEventListener('keydown', (ev) => {
   const t = ev.target;
   const tag = t && t.tagName;
   const inText = tag === 'TEXTAREA' || tag === 'SELECT' || (tag === 'INPUT' && t.type !== 'radio' && t.type !== 'checkbox');
-  if (ev.key === 'Enter') {
+  // Câu tự luận: phím cách mở/đóng "Xem định hướng trả lời" (đang gõ chữ thì giữ nguyên dấu cách)
+  if (ev.key === ' ' && !inText && tag !== 'SUMMARY') {
+    const card = (t && t.closest && t.closest('.question-card')) || (quizViewMode === 'single' ? document.querySelector('#quizBody .question-card') : null);
+    const guide = card && card.querySelector('.essay-guide');
+    if (guide) { ev.preventDefault(); if (!ev.repeat) guide.open = !guide.open; }
+  } else if (ev.key === 'Enter') {
     const navBtn = t && (t.id === 'btnNextQuestion' || t.id === 'btnPrevQuestion');
     if (tag === 'TEXTAREA' || (tag === 'BUTTON' && !navBtn) || tag === 'SUMMARY' || (t && t.classList && t.classList.contains('fill-input'))) return;
     const card = (t && t.closest && t.closest('.question-card')) || (quizViewMode === 'single' ? document.querySelector('#quizBody .question-card') : null);
