@@ -645,6 +645,264 @@
       ]
     },
     {
+      "topicId": "NT_C1_T11",
+      "topicName": "Điện toán đám mây (Module 9)",
+      "questions": [
+        {
+          "id": "NT_C1_T11_Q1",
+          "question": "Năm nào Amazon ra mắt Elastic Compute Cloud (EC2), đánh dấu bước tiến lớn trong cung cấp tính toán theo yêu cầu?",
+          "options": {
+            "A": "2002",
+            "B": "1999",
+            "C": "2006",
+            "D": "2010"
+          },
+          "correctAnswer": "C",
+          "explanation": "Năm 2006 Amazon Web Services ra mắt EC2 cùng dịch vụ lưu trữ S3, cho phép thuê máy ảo theo giờ và trả tiền theo mức dùng, được xem là mốc khởi đầu của điện toán đám mây thương mại hiện đại. Năm 2002 AWS mới bắt đầu cung cấp một số dịch vụ web đầu tiên, còn 1999 và 2010 không phải năm ra mắt EC2."
+        },
+        {
+          "id": "NT_C1_T11_Q2",
+          "question": "Trong ba mô hình dịch vụ chính của Cloud, mô hình nào cung cấp hạ tầng như máy chủ cho thuê?",
+          "options": {
+            "A": "FaaS",
+            "B": "PaaS",
+            "C": "SaaS",
+            "D": "IaaS"
+          },
+          "correctAnswer": "D",
+          "explanation": "IaaS (Infrastructure as a Service) cung cấp hạ tầng tính toán như máy chủ ảo, lưu trữ và mạng để người dùng thuê và tự cài hệ điều hành, ví dụ Amazon EC2. PaaS cung cấp nền tảng để phát triển và triển khai ứng dụng, SaaS cung cấp phần mềm hoàn chỉnh qua Internet như Gmail, còn FaaS (chạy hàm theo sự kiện) không nằm trong ba mô hình chính."
+        },
+        {
+          "id": "NT_C1_T11_Q3",
+          "question": "Điện toán đám mây (Cloud Computing) là gì?",
+          "options": {
+            "A": "Một hình thức lưu trữ dữ liệu trên ổ cứng",
+            "B": "Một mô hình cung cấp tài nguyên CNTT qua Internet",
+            "C": "Một hệ điều hành dành cho máy chủ",
+            "D": "Một loại phần mềm quản lý dữ liệu"
+          },
+          "correctAnswer": "B",
+          "explanation": "Điện toán đám mây là mô hình cung cấp tài nguyên công nghệ thông tin như máy chủ, lưu trữ, mạng và phần mềm qua Internet theo nhu cầu, người dùng chỉ trả phí theo mức sử dụng mà không cần tự đầu tư hạ tầng. Nó không chỉ là lưu trữ trên ổ cứng, cũng không phải một hệ điều hành hay một phần mềm quản lý dữ liệu cụ thể."
+        },
+        {
+          "id": "NT_C1_T11_Q4",
+          "question": "Khái niệm “multi-cloud” được hiểu là gì?",
+          "options": {
+            "A": "Sử dụng Cloud kết hợp với mạng LAN",
+            "B": "Sử dụng nhiều máy chủ trong một trung tâm dữ liệu",
+            "C": "Sử dụng nhiều dịch vụ từ một nhà cung cấp Cloud",
+            "D": "Sử dụng nhiều nhà cung cấp Cloud khác nhau"
+          },
+          "correctAnswer": "D",
+          "explanation": "Multi-cloud là chiến lược dùng dịch vụ của nhiều nhà cung cấp đám mây khác nhau, ví dụ kết hợp AWS, Azure và Google Cloud, để tránh phụ thuộc vào một nhà cung cấp và tận dụng thế mạnh của từng bên. Dùng nhiều dịch vụ của cùng một nhà cung cấp thì không phải multi-cloud, còn kết hợp Cloud với hạ tầng nội bộ là hybrid cloud."
+        },
+        {
+          "id": "NT_C1_T11_Q5",
+          "question": "Ai là người đã đề xuất ý tưởng điện toán như một tiện ích công cộng, đặt nền móng cho Cloud?",
+          "options": {
+            "A": "Larry Page",
+            "B": "John McCarthy",
+            "C": "Jeff Bezos",
+            "D": "Bill Gates"
+          },
+          "correctAnswer": "B",
+          "explanation": "Năm 1961, nhà khoa học máy tính John McCarthy đề xuất ý tưởng điện toán có thể được cung cấp như một tiện ích công cộng, giống điện hay nước, và người dùng chỉ trả tiền theo mức dùng. Ý tưởng này được xem là nền tảng tư tưởng của điện toán đám mây. Larry Page, Jeff Bezos và Bill Gates là những người sáng lập các công ty công nghệ lớn, không phải người đề xuất ý tưởng này."
+        },
+        {
+          "id": "NT_C1_T11_Q6",
+          "question": "Lợi ích chính của doanh nghiệp khi sử dụng điện toán đám mây là gì?",
+          "options": {
+            "A": "Tăng chi phí nhân sự IT",
+            "B": "Hạn chế khả năng ảo hóa ứng dụng",
+            "C": "Giảm độ phức tạp trong cơ cấu doanh nghiệp",
+            "D": "Giảm khả năng sử dụng tài nguyên tính toán"
+          },
+          "correctAnswer": "C",
+          "explanation": "Khi dùng điện toán đám mây, doanh nghiệp không phải tự xây dựng và vận hành hạ tầng CNTT phức tạp mà thuê tài nguyên theo nhu cầu, nên cơ cấu tổ chức gọn hơn, giảm chi phí đầu tư và nhân sự vận hành. Các đáp án còn lại đều mô tả điều ngược lại: cloud giảm chứ không tăng chi phí nhân sự IT, hỗ trợ chứ không hạn chế ảo hóa, và giúp tăng khả năng sử dụng tài nguyên tính toán."
+        },
+        {
+          "id": "NT_C1_T11_Q7",
+          "question": "Điện toán đám mây thường được cung cấp dưới những hình thức dịch vụ nào?",
+          "options": {
+            "A": "HTTP, FTP, SMTP",
+            "B": "IaaS, PaaS, SaaS",
+            "C": "Blockchain, Edge, Hybrid",
+            "D": "LAN, WAN, VPN"
+          },
+          "correctAnswer": "B",
+          "explanation": "Ba mô hình dịch vụ chính của Cloud là IaaS (hạ tầng như máy chủ, lưu trữ, mạng), PaaS (nền tảng để phát triển và triển khai ứng dụng) và SaaS (phần mềm hoàn chỉnh qua Internet). HTTP, FTP, SMTP là giao thức tầng ứng dụng, Hybrid là mô hình triển khai chứ không phải mô hình dịch vụ, còn LAN, WAN, VPN là các loại mạng."
+        },
+        {
+          "id": "NT_C1_T11_Q8",
+          "question": "Ứng dụng ERP trên nền tảng Cloud giúp doanh nghiệp đạt được điều gì?",
+          "options": {
+            "A": "Tối ưu quy trình kinh doanh",
+            "B": "Giảm khả năng bảo mật thông tin",
+            "C": "Giảm hiệu suất hệ thống",
+            "D": "Loại bỏ hoàn toàn nhu cầu lưu trữ dữ liệu"
+          },
+          "correctAnswer": "A",
+          "explanation": "ERP trên Cloud (ví dụ SAP S/4HANA Cloud) tích hợp các quy trình tài chính, mua hàng, bán hàng, sản xuất trên một nền tảng duy nhất, truy cập mọi lúc mọi nơi, triển khai nhanh và dễ mở rộng, giúp doanh nghiệp tối ưu quy trình kinh doanh và giảm chi phí hạ tầng. Cloud không làm giảm bảo mật hay hiệu suất, và doanh nghiệp vẫn cần lưu trữ dữ liệu, chỉ là lưu trên nền tảng đám mây."
+        },
+        {
+          "id": "NT_C1_T11_Q9",
+          "question": "Nền tảng nào sau đây là dịch vụ AI/ML chuyên biệt trên Cloud?",
+          "options": {
+            "A": "Cisco WebEx",
+            "B": "Microsoft Word",
+            "C": "Dropbox",
+            "D": "AWS SageMaker"
+          },
+          "correctAnswer": "D",
+          "explanation": "Amazon SageMaker là dịch vụ của AWS giúp xây dựng, huấn luyện và triển khai mô hình học máy (machine learning) trên Cloud. Cisco WebEx là phần mềm họp trực tuyến, Microsoft Word là phần mềm soạn thảo văn bản, Dropbox là dịch vụ lưu trữ và chia sẻ tệp, đều không phải dịch vụ AI/ML chuyên biệt."
+        },
+        {
+          "id": "NT_C1_T11_Q10",
+          "question": "Lợi ích cốt lõi nào sau đây KHÔNG phải của Cloud Computing?",
+          "options": {
+            "A": "Giảm khả năng truy cập dữ liệu",
+            "B": "Tăng cường tính linh hoạt và khả năng mở rộng",
+            "C": "Giảm chi phí đầu tư hạ tầng ban đầu",
+            "D": "Tối ưu hiệu suất và tăng tốc độ triển khai"
+          },
+          "correctAnswer": "A",
+          "explanation": "Cloud Computing giúp tăng khả năng truy cập dữ liệu vì người dùng truy cập qua Internet từ bất kỳ đâu và trên nhiều thiết bị, nên “giảm khả năng truy cập” không phải lợi ích. Ba đáp án còn lại đều là lợi ích điển hình: linh hoạt và dễ mở rộng, giảm chi phí đầu tư hạ tầng ban đầu, tối ưu hiệu suất và triển khai nhanh."
+        },
+        {
+          "id": "NT_C1_T11_Q11",
+          "question": "Xu hướng tương lai nào của Cloud Computing cho phép phát triển ứng dụng mà không cần quản lý hạ tầng?",
+          "options": {
+            "A": "Multi-Cloud",
+            "B": "Blockchain",
+            "C": "Hybrid Cloud",
+            "D": "Serverless với FaaS"
+          },
+          "correctAnswer": "D",
+          "explanation": "Serverless với FaaS (Function as a Service), ví dụ AWS Lambda, cho phép lập trình viên chỉ viết các hàm xử lý theo sự kiện, còn nhà cung cấp tự lo việc cấp phát, mở rộng và quản lý máy chủ, nên không cần quản lý hạ tầng. Multi-Cloud là dùng nhiều nhà cung cấp, Hybrid Cloud là kết hợp Cloud với hạ tầng nội bộ, còn Blockchain là công nghệ sổ cái phân tán, đều không nhằm mục đích này."
+        },
+        {
+          "id": "NT_C1_T11_Q12",
+          "question": "Trong các dịch vụ Cloud, dịch vụ nào cho phép lập trình viên chỉ viết code giao diện, còn backend được cung cấp sẵn?",
+          "options": {
+            "A": "IaaS",
+            "B": "SaaS",
+            "C": "BaaS",
+            "D": "PaaS"
+          },
+          "correctAnswer": "C",
+          "explanation": "BaaS (Backend as a Service) cung cấp sẵn các thành phần backend như cơ sở dữ liệu, xác thực người dùng, lưu trữ file và push notification qua API/SDK (ví dụ Firebase, Supabase), nên lập trình viên chủ yếu viết phần giao diện. PaaS cung cấp môi trường để tự viết cả frontend lẫn backend. IaaS chỉ cho thuê hạ tầng, còn SaaS là phần mềm hoàn chỉnh cho người dùng cuối, không phải để lập trình."
+        },
+        {
+          "id": "NT_C1_T11_Q13",
+          "question": "Điểm khác biệt giữa FaaS và PaaS là gì?",
+          "options": {
+            "A": "FaaS yêu cầu cài đặt phần mềm, PaaS không cần",
+            "B": "FaaS chỉ dùng cho AI, PaaS chỉ dùng cho IoT",
+            "C": "FaaS miễn phí, PaaS tính phí",
+            "D": "FaaS chạy code chức năng độc lập, PaaS cung cấp môi trường phát triển ứng dụng"
+          },
+          "correctAnswer": "D",
+          "explanation": "FaaS (như AWS Lambda) chạy từng hàm nhỏ theo sự kiện (event-driven), tự co giãn và tính tiền theo số lần/thời gian thực thi. PaaS cung cấp nền tảng đầy đủ (runtime, database, công cụ triển khai) để xây dựng và chạy cả ứng dụng. Cả hai đều không bắt người dùng cài đặt hạ tầng, đều tính phí theo mức sử dụng và không bị giới hạn theo lĩnh vực AI hay IoT."
+        },
+        {
+          "id": "NT_C1_T11_Q14",
+          "question": "Điểm khác biệt lớn nhất giữa IaaS và PaaS là gì?",
+          "options": {
+            "A": "IaaS miễn phí, PaaS tính phí",
+            "B": "IaaS cung cấp phần mềm, PaaS cung cấp phần cứng",
+            "C": "IaaS cho thuê hạ tầng, PaaS cung cấp môi trường phát triển",
+            "D": "IaaS chỉ dùng cho doanh nghiệp lớn"
+          },
+          "correctAnswer": "C",
+          "explanation": "IaaS (như EC2) cho thuê máy ảo, lưu trữ, mạng và người dùng tự quản lý từ hệ điều hành trở lên. PaaS (như Heroku, App Engine) lo luôn hệ điều hành, runtime và middleware nên người dùng chỉ tập trung vào code và dữ liệu. Đáp án B đảo ngược vai trò, còn A và D sai vì cả hai đều tính phí theo mức dùng và phù hợp với mọi quy mô."
+        },
+        {
+          "id": "NT_C1_T11_Q15",
+          "question": "Trong các mô hình triển khai Cloud, mô hình nào phù hợp nhất cho doanh nghiệp vừa và nhỏ muốn tiết kiệm chi phí?",
+          "options": {
+            "A": "Multi-cloud",
+            "B": "Public Cloud",
+            "C": "Private Cloud",
+            "D": "Hybrid Cloud"
+          },
+          "correctAnswer": "B",
+          "explanation": "Public Cloud dùng chung hạ tầng của nhà cung cấp, trả tiền theo mức sử dụng, không cần đầu tư máy chủ hay đội vận hành riêng, rất hợp với doanh nghiệp vừa và nhỏ. Private Cloud đòi hỏi đầu tư và vận hành riêng nên tốn kém, còn Hybrid và Multi-cloud phức tạp hơn khi quản lý và thường chỉ cần thiết khi có yêu cầu đặc thù về bảo mật hoặc tránh phụ thuộc nhà cung cấp."
+        },
+        {
+          "id": "NT_C1_T11_Q16",
+          "question": "Trong các dịch vụ Cloud, dịch vụ nào phù hợp nhất để triển khai ứng dụng AI/ML phức tạp?",
+          "options": {
+            "A": "FaaS",
+            "B": "PaaS",
+            "C": "SaaS",
+            "D": "IaaS"
+          },
+          "correctAnswer": "D",
+          "explanation": "Huấn luyện và triển khai mô hình AI/ML phức tạp cần quyền kiểm soát phần cứng như GPU/TPU, cấu hình hệ điều hành, thư viện và cụm máy tính, đúng thế mạnh của IaaS. FaaS bị giới hạn về thời gian chạy và tài nguyên mỗi lần gọi, còn SaaS chỉ cung cấp phần mềm dựng sẵn nên không cho tùy biến. PaaS vẫn dùng được cho ML ở mức đơn giản, nhưng với yêu cầu “phức tạp” thì IaaS linh hoạt nhất."
+        },
+        {
+          "id": "NT_C1_T11_Q17",
+          "question": "Điểm khác biệt giữa Multi-cloud và Hybrid Cloud là gì?",
+          "options": {
+            "A": "Multi-cloud miễn phí, Hybrid tính phí",
+            "B": "Multi-cloud dùng nhiều nhà cung cấp, Hybrid kết hợp cloud và on-premise",
+            "C": "Multi-cloud tập trung dữ liệu, Hybrid phân tán dữ liệu",
+            "D": "Multi-cloud chỉ dùng cho doanh nghiệp nhỏ, Hybrid cho doanh nghiệp lớn"
+          },
+          "correctAnswer": "B",
+          "explanation": "Multi-cloud là dùng cùng lúc nhiều nhà cung cấp cloud (ví dụ AWS cùng Azure) để tránh phụ thuộc một bên và tận dụng thế mạnh từng nơi. Hybrid Cloud là kết hợp hạ tầng cloud với hạ tầng tại chỗ (on-premise hoặc private cloud), thường để giữ dữ liệu nhạy cảm trong nội bộ. Hai mô hình không khác nhau về giá, quy mô doanh nghiệp hay cách tập trung dữ liệu."
+        },
+        {
+          "id": "NT_C1_T11_Q18",
+          "question": "Trong các thách thức của Cloud, yếu tố nào liên quan trực tiếp đến pháp lý?",
+          "options": {
+            "A": "Quản lý phức tạp",
+            "B": "Tuân thủ quy định bảo mật dữ liệu",
+            "C": "Chi phí cao",
+            "D": "Thiếu nhân lực IT"
+          },
+          "correctAnswer": "B",
+          "explanation": "Dữ liệu trên cloud có thể nằm ở quốc gia khác nên phải tuân thủ các quy định như GDPR (châu Âu), HIPAA (y tế Mỹ) hay luật về lưu trữ dữ liệu trong nước (data residency). Quản lý phức tạp, chi phí và thiếu nhân lực là thách thức về kỹ thuật, vận hành và tài chính, không liên quan trực tiếp đến pháp lý."
+        },
+        {
+          "id": "NT_C1_T11_Q19",
+          "question": "So sánh SaaS và PaaS, đâu là lợi thế nổi bật của SaaS đối với người dùng cuối?",
+          "options": {
+            "A": "Không cần quản lý hạ tầng",
+            "B": "Cho phép tùy chỉnh hệ điều hành",
+            "C": "Tích hợp dễ dàng với hệ thống mạng",
+            "D": "Không cần cài đặt phần mềm"
+          },
+          "correctAnswer": "D",
+          "explanation": "Người dùng SaaS (Gmail, Google Docs, Salesforce) chỉ cần trình duyệt hoặc ứng dụng nhẹ để dùng ngay, mọi việc cài đặt, cập nhật và vận hành do nhà cung cấp lo. Việc không phải quản lý hạ tầng cũng đúng với PaaS nên không tạo ra điểm khác biệt nổi bật. Tùy chỉnh hệ điều hành là đặc điểm của IaaS, còn tích hợp mạng không phải lợi thế riêng của SaaS."
+        },
+        {
+          "id": "NT_C1_T11_Q20",
+          "question": "So sánh Data Center truyền thống và Cloud, đâu là ưu điểm nổi bật của Cloud?",
+          "options": {
+            "A": "Không cần nhân sự IT",
+            "B": "Tốc độ xử lý cao hơn",
+            "C": "Chi phí đầu tư ban đầu thấp hơn",
+            "D": "Bảo mật tuyệt đối"
+          },
+          "correctAnswer": "C",
+          "explanation": "Cloud theo mô hình trả tiền theo mức dùng (pay-as-you-go), không phải mua máy chủ và xây phòng máy ngay từ đầu, đồng thời co giãn tài nguyên linh hoạt theo nhu cầu. Cloud vẫn cần nhân sự IT để cấu hình và quản trị, không đảm bảo bảo mật tuyệt đối (còn mô hình trách nhiệm chia sẻ), và tốc độ xử lý phụ thuộc cấu hình chứ không mặc nhiên cao hơn."
+        },
+        {
+          "id": "NT_C1_T11_Q21",
+          "question": "Điện toán biên (Edge Computing) khác với Cloud Computing ở điểm nào?",
+          "options": {
+            "A": "Edge xử lý dữ liệu ngay tại nguồn, Cloud xử lý tập trung",
+            "B": "Edge miễn phí, Cloud tính phí",
+            "C": "Edge chỉ dùng cho AI, Cloud chỉ dùng cho IoT",
+            "D": "Edge không cần mạng Internet"
+          },
+          "correctAnswer": "A",
+          "explanation": "Edge Computing đưa việc xử lý đến gần nơi dữ liệu sinh ra (thiết bị, gateway, trạm biên), còn Cloud xử lý tại các Data Center tập trung ở xa. Hai mô hình thường bổ sung cho nhau: Edge xử lý nhanh tại chỗ, Cloud lo phân tích sâu và lưu trữ dài hạn. Edge không miễn phí, không giới hạn theo lĩnh vực AI hay IoT, và vẫn thường cần kết nối mạng để đồng bộ với Cloud (chỉ có thể hoạt động tạm thời khi mất kết nối)."
+        }
+      ]
+    },
+    {
       "topicId": "NT_C1_T10",
       "topicName": "Điền khuyết (gõ đáp án)",
       "questions": [
