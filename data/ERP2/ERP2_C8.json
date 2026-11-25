@@ -174,7 +174,7 @@
           "type": "essay",
           "question": "What is the primary purpose of <b>account groups</b>, and how do account groups for balance sheet accounts and reconciliation accounts differ?",
           "options": {},
-          "explanation": "<p class=\"mb-2\"><b>Mạch ý:</b> Gom tài khoản cùng đặc điểm → ví dụ GBI → khác biệt về field status.</p><p class=\"mb-2\"><b>Bài trả lời tham khảo:</b></p><p class=\"mb-2\">Account group gom các tài khoản có đặc điểm giống nhau và kiểm soát number range cũng như field status của chúng. Ở GBI có các nhóm như Balance Sheet Accounts, Fixed Assets, Liquid Assets, Material Accounts, Profit &amp; Loss Accounts và Reconciliation Accounts.</p><p class=\"mb-2\">Khác biệt lớn nhất là field status. Ví dụ ở field group account control, nhóm reconciliation accounts có trường bắt buộc, vài trường tùy chọn và phần còn lại bị ẩn, trong khi nhóm balance sheet accounts không có trường bắt buộc ở phần này.</p>"
+          "explanation": "<p class=\"mb-2\"><b>Mạch ý:</b> Gom tài khoản cùng đặc điểm → ví dụ GBI → khác biệt về field status.</p><p class=\"mb-2\"><b>Bài trả lời tham khảo:</b></p><p class=\"mb-2\">Account group gom các tài khoản có đặc điểm giống nhau và kiểm soát number range cũng như field status của chúng. Ví dụ có các nhóm như Balance Sheet Accounts, Fixed Assets, Liquid Assets, Material Accounts, Profit &amp; Loss Accounts và Reconciliation Accounts.</p><p class=\"mb-2\">Khác biệt lớn nhất là field status. Ví dụ ở field group account control, nhóm reconciliation accounts có trường bắt buộc, vài trường tùy chọn và phần còn lại bị ẩn, trong khi nhóm balance sheet accounts không có trường bắt buộc ở phần này.</p>"
         },
         {
           "id": "ERP2_C8_T6_Q6",

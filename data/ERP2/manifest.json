@@ -4,13 +4,13 @@
       "chapterId": "ERP2_C1",
       "chapterName": "Chapter 1 – Introduction to Business Process Configuration",
       "topicCount": 4,
-      "questionCount": 58
+      "questionCount": 55
     },
     {
       "chapterId": "ERP2_C2",
       "chapterName": "Chapter 2 – Financial Accounting (FI)",
       "topicCount": 11,
-      "questionCount": 131
+      "questionCount": 127
     },
     {
       "chapterId": "ERP2_C3",
@@ -22,13 +22,13 @@
       "chapterId": "ERP2_C4",
       "chapterName": "Chapter 4 – The Procurement Process (MM)",
       "topicCount": 11,
-      "questionCount": 157
+      "questionCount": 155
     },
     {
       "chapterId": "ERP2_C5",
       "chapterName": "Chapter 5 – The Fulfillment Process (SD)",
       "topicCount": 12,
-      "questionCount": 158
+      "questionCount": 157
     },
     {
       "chapterId": "ERP2_C6",
@@ -55,6 +55,6 @@
       "questionCount": 120
     }
   ],
-  "totalQuestions": 872,
+  "totalQuestions": 862,
   "totalTopics": 71
 }

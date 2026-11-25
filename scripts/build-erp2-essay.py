@@ -105,7 +105,7 @@ TOPICS = [
            'Với chứng từ giao dịch, các field group được gom thành <b>field status group</b>, rồi nhiều field status group gom thành <b>field status variant</b>. Variant được gán cho một hoặc nhiều company code để company code đó sử dụng.')),
         ('What is the primary purpose of <b>account groups</b>, and how do account groups for balance sheet accounts and reconciliation accounts differ?',
          g('Gom tài khoản cùng đặc điểm → ví dụ GBI → khác biệt về field status.',
-           'Account group gom các tài khoản có đặc điểm giống nhau và kiểm soát number range cũng như field status của chúng. Ở GBI có các nhóm như Balance Sheet Accounts, Fixed Assets, Liquid Assets, Material Accounts, Profit &amp; Loss Accounts và Reconciliation Accounts.',
+           'Account group gom các tài khoản có đặc điểm giống nhau và kiểm soát number range cũng như field status của chúng. Ví dụ có các nhóm như Balance Sheet Accounts, Fixed Assets, Liquid Assets, Material Accounts, Profit &amp; Loss Accounts và Reconciliation Accounts.',
            'Khác biệt lớn nhất là field status. Ví dụ ở field group account control, nhóm reconciliation accounts có trường bắt buộc, vài trường tùy chọn và phần còn lại bị ẩn, trong khi nhóm balance sheet accounts không có trường bắt buộc ở phần này.')),
         ('What is the importance of <b>posting periods</b> and the <b>fiscal year variant</b>? What does “year dependent” mean?',
          g('Posting period → special period → open period → fiscal year variant → year dependent.',

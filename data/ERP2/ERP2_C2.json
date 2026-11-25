@@ -197,18 +197,6 @@
           },
           "correctAnswer": "C",
           "explanation": "Operating = A/R, A/P and daily activities; financing = cash from investors and dividends."
-        },
-        {
-          "id": "ERP2_C2_T1_Q17",
-          "question": "Which standards does the book assume GBI uses exclusively for its financial reporting?",
-          "options": {
-            "A": "GAAP",
-            "B": "IFRS",
-            "C": "COSO",
-            "D": "Sarbanes-Oxley"
-          },
-          "correctAnswer": "A",
-          "explanation": "The discussion is limited to GAAP, but concepts can be adapted to other standards."
         }
       ]
     },
@@ -541,18 +529,6 @@
           "explanation": "It is a two-digit key; the number of posting periods can range from 0 to 999 and special periods from 0 to 4."
         },
         {
-          "id": "ERP2_C2_T4_Q6",
-          "question": "Which fiscal year variant is described: 12 normal periods, 1 special period and a calendar year (January–December)?",
-          "options": {
-            "A": "K1",
-            "B": "V9",
-            "C": "24",
-            "D": "GL00"
-          },
-          "correctAnswer": "A",
-          "explanation": "Variant 24 defines 24 half-month periods; V9 is non-year-dependent, October–September, with four special periods."
-        },
-        {
           "id": "ERP2_C2_T4_Q7",
           "question": "What does a posting period variant identify?",
           "options": {
@@ -737,18 +713,6 @@
           },
           "correctAnswer": "B",
           "explanation": "GBI's field status variant GL00 includes groups ZEXP, ZGBS, ZMMA, ZRAA and ZREV."
-        },
-        {
-          "id": "ERP2_C2_T5_Q12",
-          "question": "Field status group ZEXP in the GBI example contains field groups relevant when posting to:",
-          "options": {
-            "A": "Revenue accounts",
-            "B": "Bank accounts",
-            "C": "Reconciliation accounts",
-            "D": "Expense accounts"
-          },
-          "correctAnswer": "D",
-          "explanation": "ZREV is relevant for posting to revenue accounts."
         }
       ]
     },
@@ -842,7 +806,7 @@
         },
         {
           "id": "ERP2_C2_T6_Q8",
-          "question": "The GBI employee tolerance allows a document up to $500,000 total and $100,000 per line item. What happens if an employee tries to post a $600,000 document?",
+          "question": "An employee tries to post a document that exceeds the limit of their tolerance group. What happens?",
           "options": {
             "A": "The system does not execute (post) the transaction",
             "B": "The system posts the document but flags it for review",
@@ -863,18 +827,6 @@
           },
           "correctAnswer": "C",
           "explanation": "Differences are posted as a discount or to a separate gain/loss account."
-        },
-        {
-          "id": "ERP2_C2_T6_Q10",
-          "question": "In the GBI tolerance example, how much payment difference may an employee accept?",
-          "options": {
-            "A": "10% or $100, whichever is larger",
-            "B": "5% or $500, whichever is smaller",
-            "C": "Any amount up to $100,000",
-            "D": "10% or $100, whichever is smaller"
-          },
-          "correctAnswer": "D",
-          "explanation": "Up to $10 is automatically posted as a discount if within 5% of the line item amount."
         },
         {
           "id": "ERP2_C2_T6_Q11",

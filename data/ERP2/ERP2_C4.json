@@ -181,18 +181,6 @@
           "explanation": "When scheduling deliveries or payment dates, the system includes only working days."
         },
         {
-          "id": "ERP2_C4_T2_Q5",
-          "question": "How is the factory calendar of GBI defined?",
-          "options": {
-            "A": "All days of the week are workdays with no holiday calendar attached (365 working days)",
-            "B": "Only Monday to Friday are workdays",
-            "C": "Only U.S. public holidays are excluded",
-            "D": "Each plant has its own calendar at the plant level"
-          },
-          "correctAnswer": "A",
-          "explanation": "This lets GBI schedule activities for any day of the year."
-        },
-        {
           "id": "ERP2_C4_T2_Q6",
           "question": "At which level are factory calendars and holiday calendars defined?",
           "options": {
@@ -311,18 +299,6 @@
           },
           "correctAnswer": "D",
           "explanation": "This model standardizes procurement and exploits economies of scale."
-        },
-        {
-          "id": "ERP2_C4_T2_Q16",
-          "question": "Which purchasing model has GBI adopted?",
-          "options": {
-            "A": "Only the enterprise-level model with GL00",
-            "B": "A hybrid model: a central purchasing organization (GL00) plus country-specific purchasing organizations (US00, DE00)",
-            "C": "Only a plant-specific model with one purchasing organization per plant",
-            "D": "Only the cross-plant model with US00 and DE00"
-          },
-          "correctAnswer": "B",
-          "explanation": "GL00 negotiates contracts for the enterprise; US00 and DE00 take advantage of local customs."
         },
         {
           "id": "ERP2_C4_T2_Q17",
@@ -734,7 +710,7 @@
         },
         {
           "id": "ERP2_C4_T4_Q15",
-          "question": "If all plants of GBI use the same valuation group code, what must be true of the company codes?",
+          "question": "If all plants use the same valuation grouping code, what must be true of the company codes?",
           "options": {
             "A": "They must use the same currency",
             "B": "They must have the same purchasing organization",

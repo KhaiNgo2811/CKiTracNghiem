@@ -605,18 +605,6 @@
           },
           "correctAnswer": "D",
           "explanation": "GBI uses RVAJUS for U.S. sales areas and RVAA01 for German sales areas."
-        },
-        {
-          "id": "ERP2_C5_T3_Q17",
-          "question": "Which pricing procedure is assigned to all sales areas in the GBI U.S. company code?",
-          "options": {
-            "A": "RVAA01",
-            "B": "RVAJUS",
-            "C": "PR0000",
-            "D": "RB00"
-          },
-          "correctAnswer": "B",
-          "explanation": "RVAA01 is for the German company code."
         }
       ]
     },

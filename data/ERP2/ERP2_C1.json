@@ -218,7 +218,7 @@
         },
         {
           "id": "ERP2_C1_T2_Q5",
-          "question": "Which enterprise structure element represents the whole enterprise (for example, GBI)?",
+          "question": "Which enterprise structure element represents the whole enterprise?",
           "options": {
             "A": "Company code",
             "B": "Plant",
@@ -251,30 +251,6 @@
           },
           "correctAnswer": "D",
           "explanation": "Factories and distribution centers are represented by plants."
-        },
-        {
-          "id": "ERP2_C1_T2_Q8",
-          "question": "In the GBI example, which U.S. facility is a factory where bicycles are produced?",
-          "options": {
-            "A": "Miami",
-            "B": "San Diego",
-            "C": "Dallas",
-            "D": "Hamburg"
-          },
-          "correctAnswer": "C",
-          "explanation": "Dallas is the U.S. factory; Miami and San Diego are distribution centers."
-        },
-        {
-          "id": "ERP2_C1_T2_Q9",
-          "question": "In the GBI example, which German facility is a distribution center?",
-          "options": {
-            "A": "Heidelberg",
-            "B": "Hamburg",
-            "C": "Dallas",
-            "D": "Miami"
-          },
-          "correctAnswer": "A",
-          "explanation": "Hamburg is the German factory; Heidelberg is a distribution center."
         },
         {
           "id": "ERP2_C1_T2_Q10",
@@ -539,18 +515,6 @@
           },
           "correctAnswer": "A",
           "explanation": "Date, time, location and quantity are examples of situational data entered by the user."
-        },
-        {
-          "id": "ERP2_C1_T4_Q3",
-          "question": "In the GBI sales order example, which order type is a standard order and which a rush order?",
-          "options": {
-            "A": "SO is a standard order; OR is a rush order",
-            "B": "Both OR and SO are standard orders",
-            "C": "OR is a standard order; SO is a rush order",
-            "D": "OR is a return order; SO is a rush order"
-          },
-          "correctAnswer": "C",
-          "explanation": "The order type is selected from configured choices."
         },
         {
           "id": "ERP2_C1_T4_Q4",
