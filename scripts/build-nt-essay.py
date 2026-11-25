@@ -3,125 +3,95 @@
 import json
 
 OUT = 'data/Nền tảng/'
-FRAME = ('<b>Khung tư duy chung:</b> Bối cảnh &amp; yêu cầu → Kiến trúc đề xuất → Công nghệ/thiết bị chọn và <i>vì sao</i> → '
-         'Rủi ro, bảo mật, chi phí → Kết luận/lộ trình.')
-
-
-def g(*lines):
-    return '<br>'.join(lines)
+def g(flow, *paragraphs):
+    """Định hướng trả lời: một dòng mạch ý + bài trả lời mẫu viết thành đoạn văn (gắn với UEL)."""
+    return (f'<p class="mb-2"><b>Mạch ý:</b> {flow}</p><p class="mb-2"><b>Bài trả lời tham khảo:</b></p>'
+            + ''.join(f'<p class="mb-2">{x}</p>' for x in paragraphs))
 
 
 TOPICS = []
-
 # ------------------------------------------------------------------ T1
 TOPICS.append(('Thiết kế & phát triển hạ tầng cho trường (UEL)', [
     ('Với vai trò là sinh viên Trường Đại học Kinh tế – Luật (UEL), hãy vận dụng kiến thức môn Nền tảng công nghệ thông tin để '
      '<b>thiết kế và đề xuất hướng phát triển hạ tầng CNTT</b> của trường (mạng, máy chủ/trung tâm dữ liệu, dịch vụ cho giảng viên – sinh viên). '
      'Nêu rõ lý do lựa chọn.',
-     g(FRAME, '<b>1. Bối cảnh &amp; nhu cầu của UEL</b> (nêu 3–4 ý): hàng chục nghìn sinh viên + giảng viên, nhiều cơ sở, dịch vụ cần chạy 24/7 '
-       '(cổng đào tạo, LMS/e-learning, thư viện số, email, thi trực tuyến, quản trị nhân sự – tài chính); đỉnh tải vào đợt đăng ký học phần, thi.',
-       '<b>2. Kiến trúc tổng thể</b> (nên có sơ đồ hoặc mô tả theo tầng): mạng truy cập (Wi-Fi + LAN) → mạng lõi/phân phối → '
-       'trung tâm dữ liệu/Cloud → dịch vụ ứng dụng → người dùng. Kết nối giữa các cơ sở bằng WAN/VPN, ra Internet qua ISP (nên có 2 đường).',
-       '<b>3. Chọn công nghệ và giải thích:</b> VLAN tách mạng sinh viên – giảng viên – quản trị; Wi-Fi 6 (WPA3) phủ giảng đường, ký túc xá; '
-       'Switch lớp 2/3, Router, Firewall; DHCP/DNS; hệ thống máy chủ ảo hóa hoặc Cloud hybrid.',
-       '<b>4. Bảo mật:</b> firewall, phân quyền, xác thực tập trung (SSO), mã hóa (HTTPS/VPN), sao lưu.',
-       '<b>5. Tính sẵn sàng &amp; mở rộng:</b> dự phòng (redundancy), cân bằng tải, khả năng mở rộng khi tăng sinh viên.',
-       '<b>6. Chi phí – lộ trình:</b> giai đoạn 1 ổn định hạ tầng hiện có, giai đoạn 2 chuyển dịch Cloud/ảo hóa, giai đoạn 3 Smart Campus (IoT, AI).',
-       '<b>Điểm cộng:</b> gắn với các khái niệm đã học (mô hình OSI/TCP-IP, Client/Server, Cloud IaaS/PaaS/SaaS, Digital Infrastructure) và nêu ví dụ thực tế tại UEL.')),
+     g('Nhu cầu của UEL → kiến trúc đề xuất → công nghệ và lý do → bảo mật, sẵn sàng → lộ trình.',
+       'Là một sinh viên UEL, em nhận thấy mọi hoạt động học tập và quản lý của trường đều dựa vào hạ tầng công nghệ thông tin: cổng đào tạo, đăng ký học phần, hệ thống học trực tuyến (LMS), thư viện số, email, thi trực tuyến và công tác tài chính, nhân sự. Các dịch vụ này phục vụ rất đông sinh viên và giảng viên, cần chạy liên tục và thường tăng tải đột biến vào đợt đăng ký học phần hay mùa thi. Vì vậy hạ tầng của trường phải đáp ứng ba yêu cầu: ổn định, an toàn và dễ mở rộng.',
+       'Về kiến trúc, em đề xuất tổ chức theo từng lớp. Người dùng kết nối qua mạng truy cập gồm Wi-Fi và mạng LAN tại giảng đường, thư viện, phòng máy; lưu lượng được tập trung về mạng phân phối và mạng lõi; sau đó đến trung tâm dữ liệu hoặc Cloud, nơi chạy các ứng dụng và lưu cơ sở dữ liệu. Các cơ sở của trường được nối với nhau bằng WAN hoặc VPN, và nên có hai đường Internet từ hai nhà cung cấp để một đường gặp sự cố thì đường kia vẫn hoạt động.',
+       'Về công nghệ, trường nên chia VLAN để tách mạng sinh viên, giảng viên và quản trị, vừa giảm lưu lượng quảng bá vừa hạn chế truy cập trái phép. Switch lớp 2 và lớp 3 đảm nhiệm chuyển mạch và định tuyến nội bộ, router và firewall đứng ở biên mạng, DHCP cấp địa chỉ tự động, DNS phân giải tên miền. Máy chủ nên được ảo hóa để dùng chung tài nguyên, kết hợp Cloud theo mô hình hybrid: dữ liệu nhạy cảm giữ tại trường, các dịch vụ cần co giãn đưa lên Cloud.',
+       'Hạ tầng này phải đi kèm bảo mật và dự phòng: xác thực tập trung bằng tài khoản trường, phân quyền theo vai trò, mã hóa bằng HTTPS và VPN, sao lưu định kỳ, nguồn điện dự phòng và cân bằng tải cho các hệ thống quan trọng.',
+       'Do chi phí có hạn, em đề xuất lộ trình ba giai đoạn: trước hết ổn định mạng và Wi-Fi hiện có, tiếp theo ảo hóa máy chủ và chuyển dần dịch vụ phù hợp lên Cloud, cuối cùng phát triển Smart Campus với IoT và AI. Cách làm này giúp UEL đầu tư đúng chỗ, không gián đoạn việc học và vẫn sẵn sàng cho chuyển đổi số.')),
     ('Thiết kế hệ thống mạng cho một cơ sở của UEL gồm: khu giảng đường, thư viện, phòng máy, ký túc xá và khu hành chính. '
      'Hãy mô tả cách <b>phân chia mạng (VLAN/mạng con)</b>, thiết bị cần dùng và cách bảo đảm kết nối ổn định.',
-     g('<b>Tư duy:</b> tách theo <i>đối tượng người dùng</i> và <i>mức độ an toàn</i>, rồi mới chọn thiết bị.',
-       '<b>1. Phân vùng:</b> VLAN Hành chính – VLAN Giảng viên – VLAN Sinh viên (Wi-Fi) – VLAN Phòng máy/Lab – VLAN Ký túc xá – VLAN Máy chủ/DMZ – VLAN Camera/IoT. '
-       'Mỗi VLAN một mạng con IP riêng (có thể trình bày ví dụ 10.10.x.0/24), định tuyến giữa VLAN qua Switch lớp 3/Firewall với chính sách riêng.',
-       '<b>2. Thiết bị theo mô hình 3 lớp:</b> Access (Switch PoE, Access Point) → Distribution (Switch L3) → Core (Switch/Router lõi) → Firewall → Internet/WAN.',
-       '<b>3. Dịch vụ mạng:</b> DHCP cấp IP tự động, DNS nội bộ, NAT ra Internet, cân bằng tải/2 đường ISP.',
-       '<b>4. Ổn định:</b> dự phòng đường truyền và thiết bị lõi, UPS, giám sát (SNMP), băng thông ưu tiên cho dịch vụ học tập/thi.',
-       '<b>5. Liên hệ lý thuyết:</b> Switch tầng 2 – Router tầng 3 (OSI), CSMA/CA cho Wi-Fi, Network edge/access/core.')),
+     g('Phân vùng theo người dùng và mức an toàn → thiết bị theo ba lớp → dịch vụ mạng → độ ổn định.',
+       'Khi thiết kế mạng cho một cơ sở của UEL, em sẽ phân chia theo đối tượng sử dụng và mức độ an toàn trước, rồi mới chọn thiết bị. Cụ thể, mạng được tách thành các VLAN cho khu hành chính, giảng viên, sinh viên dùng Wi-Fi, phòng máy, ký túc xá, máy chủ và camera. Mỗi VLAN là một mạng con riêng, ví dụ 10.10.10.0/24 cho hành chính, 10.10.20.0/24 cho giảng viên. Nhờ đó sinh viên ở ký túc xá không truy cập thẳng được vào máy của phòng tài chính, và sự cố ở một khu cũng không lan sang khu khác.',
+       'Thiết bị được bố trí theo mô hình ba lớp. Lớp truy cập gồm switch cấp nguồn qua dây (PoE) và các Access Point để người dùng kết nối. Lớp phân phối dùng switch lớp 3 để định tuyến giữa các VLAN và áp chính sách. Lớp lõi chuyển dữ liệu tốc độ cao, sau đó đi qua firewall ra Internet. Cách phân lớp này gắn với mô hình OSI: switch làm việc ở tầng 2 theo địa chỉ MAC, router làm việc ở tầng 3 theo địa chỉ IP.',
+       'Mạng cần có DHCP để cấp IP tự động cho số lượng lớn thiết bị của sinh viên, DNS nội bộ cho các trang của trường và NAT để nhiều máy dùng chung địa chỉ công cộng.',
+       'Để kết nối ổn định, em đề xuất dự phòng thiết bị lõi và đường truyền, dùng hai nhà cung cấp Internet, gắn UPS cho phòng máy chủ, giám sát mạng thường xuyên và ưu tiên băng thông cho hệ thống học tập, thi cử. Như vậy khi cả giảng đường và thư viện cùng truy cập, hoặc một đường truyền bị đứt, việc dạy và học vẫn diễn ra bình thường.')),
     ('Vì sao cần <b>Wi-Fi phủ sóng toàn trường</b> và quản lý truy cập tập trung? Hãy đề xuất giải pháp Wi-Fi cho UEL '
      '(chuẩn Wi-Fi, bảo mật, phân quyền sinh viên/khách).',
-     g('<b>Tư duy:</b> nhu cầu → chuẩn kỹ thuật → bảo mật → quản lý.',
-       '<b>1. Nhu cầu:</b> sinh viên học, thi, tra cứu thư viện bằng điện thoại/laptop; mật độ thiết bị cao trong giảng đường lớn.',
-       '<b>2. Kỹ thuật:</b> Wi-Fi 6 (802.11ax), hai băng tần 2.4 GHz và 5 GHz, mô hình nhiều Access Point quản lý bằng bộ điều khiển (WLC); '
-       'khảo sát vị trí đặt AP để tránh nhiễu, chia kênh.',
-       '<b>3. Bảo mật &amp; phân quyền:</b> WPA3-Enterprise, đăng nhập bằng tài khoản trường (802.1X/SSO) thay vì một mật khẩu chung; '
-       'SSID riêng cho Sinh viên – Giảng viên – Khách, giới hạn băng thông và vùng truy cập theo từng nhóm.',
-       '<b>4. Vận hành:</b> giám sát số thiết bị, lưu nhật ký truy cập, hỗ trợ roaming giữa các tòa nhà.')),
+     g('Nhu cầu → chuẩn kỹ thuật → bảo mật và phân quyền → vận hành.',
+       'Sinh viên UEL ngày nay học tập chủ yếu bằng laptop và điện thoại: xem tài liệu trên LMS, làm bài kiểm tra trực tuyến, tra cứu thư viện số. Vì thế Wi-Fi cần phủ khắp giảng đường, thư viện, khu tự học và ký túc xá. Nếu mỗi khu tự lắp một bộ phát riêng thì tín hiệu chồng lấn, mật khẩu bị chia sẻ rộng rãi và nhà trường không biết ai đang dùng mạng, do đó cần quản lý tập trung.',
+       'Em đề xuất dùng chuẩn Wi-Fi 6 vì chịu được mật độ thiết bị cao trong giảng đường lớn, chạy trên cả băng tần 2.4 GHz và 5 GHz. Nhiều Access Point được đặt theo khảo sát thực tế và do một bộ điều khiển trung tâm quản lý, giúp phân kênh hợp lý và cho phép chuyển vùng khi sinh viên đi từ tòa nhà này sang tòa nhà khác. Về nguyên lý, mạng không dây dùng CSMA/CA để tránh đụng độ.',
+       'Về bảo mật, thay vì một mật khẩu chung, mỗi người đăng nhập bằng tài khoản trường theo chuẩn WPA3-Enterprise (802.1X). Trường phát ba SSID cho giảng viên, sinh viên và khách, mỗi nhóm có giới hạn băng thông và vùng truy cập riêng; khách chỉ ra được Internet, không vào được mạng nội bộ.',
+       'Cuối cùng, bộ phận kỹ thuật cần theo dõi số thiết bị kết nối, lưu nhật ký truy cập và bổ sung điểm phát ở nơi thường nghẽn. Giải pháp này vừa thuận tiện cho người học vừa giữ an toàn cho dữ liệu của trường.')),
 ]))
 
 # ------------------------------------------------------------------ T2
 TOPICS.append(('Trung tâm dữ liệu & điện toán đám mây', [
     ('Tại sao một trường đại học như UEL <b>cần có Trung tâm dữ liệu (Data Center)</b>? Hãy nêu vai trò/tác dụng của nó và cho ví dụ cụ thể.',
-     g(FRAME.replace('Bối cảnh &amp; yêu cầu', 'Vì sao cần'),
-       '<b>1. Vì sao cần:</b> dữ liệu và dịch vụ của trường (điểm, học phí, hồ sơ, bài giảng, bài thi) phải được <i>lưu trữ tập trung, an toàn, hoạt động liên tục 24/7</i>; '
-       'phân tán trên máy cá nhân sẽ khó bảo mật, khó sao lưu, dễ mất.',
-       '<b>2. Vai trò/tác dụng</b> (theo slide: quản lý tính toán, lưu trữ dữ liệu và dịch vụ mạng):',
-       '• <b>Tính toán:</b> chạy các hệ thống ứng dụng (cổng đào tạo, LMS, email, thi online).',
-       '• <b>Lưu trữ:</b> CSDL sinh viên, tài liệu, thư viện số; có sao lưu và khôi phục thảm họa.',
-       '• <b>Mạng &amp; kết nối:</b> phân phối dịch vụ đến người dùng qua mạng nội bộ, Internet.',
-       '• <b>Bảo mật &amp; sẵn sàng:</b> kiểm soát truy cập vật lý, firewall, nguồn điện dự phòng (UPS, máy phát), làm mát, giám sát.',
-       '• <b>Tiết kiệm &amp; dễ quản trị:</b> dùng chung tài nguyên bằng ảo hóa, quản lý tập trung.',
-       '<b>3. Ví dụ tại UEL:</b> đợt đăng ký học phần – hàng chục nghìn sinh viên truy cập cùng lúc; nếu máy chủ nằm rải rác, hệ thống sẽ quá tải/sập. '
-       'Data Center cho phép cân bằng tải, mở rộng tài nguyên và giữ điểm số, hồ sơ an toàn khi có sự cố điện hoặc hỏng phần cứng.',
-       '<b>4. Xu hướng:</b> Data Center hiện đại cần sẵn sàng cho AI và “xanh hóa” (tiết kiệm năng lượng), có thể kết hợp Cloud (hybrid).')),
+     g('Vì sao cần → vai trò (tính toán, lưu trữ, mạng, an toàn) → ví dụ tại UEL → xu hướng.',
+       'Một trường đại học như UEL tạo ra và sử dụng lượng dữ liệu rất lớn mỗi ngày: hồ sơ sinh viên, điểm số, học phí, bài giảng, bài thi. Những dữ liệu này vừa quan trọng vừa nhạy cảm, và các dịch vụ dựa trên chúng phải hoạt động liên tục. Nếu dữ liệu nằm rải rác trên máy cá nhân hay máy chủ đặt tạm ở từng phòng ban thì rất khó bảo mật, khó sao lưu và dễ mất mát. Vì vậy trường cần một Trung tâm dữ liệu, tức nơi tập trung máy chủ, thiết bị lưu trữ, thiết bị mạng cùng hệ thống điện, làm mát và an ninh để vận hành chúng.',
+       'Vai trò đầu tiên của Data Center là tính toán: nó chạy các hệ thống ứng dụng như cổng đào tạo, LMS, email và thi trực tuyến. Vai trò thứ hai là lưu trữ: cơ sở dữ liệu sinh viên, tài liệu và thư viện số được quản lý tập trung, có sao lưu và phương án khôi phục khi xảy ra thảm họa. Vai trò thứ ba là cung cấp dịch vụ mạng, đưa các ứng dụng đến người dùng qua mạng nội bộ và Internet. Bên cạnh đó, Data Center còn bảo đảm an toàn và tính sẵn sàng nhờ kiểm soát ra vào, firewall, UPS, máy phát điện, hệ thống làm mát và giám sát; đồng thời tiết kiệm chi phí vì nhiều hệ thống dùng chung tài nguyên bằng ảo hóa.',
+       'Ví dụ rõ nhất tại UEL là đợt đăng ký học phần. Rất nhiều sinh viên truy cập cùng một lúc; nếu chỉ có một máy chủ đơn lẻ, hệ thống dễ quá tải và sập. Với Data Center, yêu cầu được cân bằng tải sang nhiều máy chủ, tài nguyên có thể bổ sung khi cần, và nếu mất điện hay hỏng phần cứng thì điểm số, hồ sơ vẫn được giữ an toàn nhờ nguồn dự phòng và bản sao lưu.',
+       'Trong tương lai, Data Center của trường nên hướng đến tiết kiệm năng lượng, sẵn sàng cho các ứng dụng AI và có thể kết hợp với Cloud. Tóm lại, Data Center là nền móng giúp hoạt động số của UEL diễn ra liên tục, an toàn và dễ phát triển.')),
     ('UEL nên <b>tự xây Data Center tại chỗ (on-premise)</b>, <b>thuê Cloud</b> hay <b>kết hợp (hybrid)</b>? Hãy phân tích ưu – nhược điểm và đưa ra lựa chọn có lập luận.',
-     g('<b>Tư duy:</b> so sánh theo tiêu chí rồi <i>chốt phương án kèm điều kiện</i> (không trả lời “tùy”).',
-       '<b>1. Tiêu chí so sánh:</b> chi phí đầu tư/vận hành, khả năng mở rộng, bảo mật &amp; kiểm soát dữ liệu, độ sẵn sàng, nhân lực vận hành, tuân thủ quy định.',
-       '<b>2. On-premise:</b> kiểm soát tốt dữ liệu nhạy cảm, độ trễ thấp trong nội bộ; nhưng vốn đầu tư lớn, khó mở rộng nhanh, cần nhân lực.',
-       '<b>3. Cloud (IaaS/PaaS/SaaS):</b> trả theo mức dùng, mở rộng linh hoạt (đỉnh tải đăng ký học phần), triển khai nhanh; nhưng phụ thuộc nhà cung cấp và Internet, lo ngại dữ liệu.',
-       '<b>4. Đề xuất Hybrid:</b> dữ liệu nhạy cảm (hồ sơ, điểm, tài chính) giữ nội bộ/private; dịch vụ co giãn (LMS, website, email, lưu trữ tài liệu, SaaS như Microsoft 365) đưa lên Cloud.',
-       '<b>5. Kết luận &amp; lộ trình:</b> chuyển dần từng dịch vụ, bảo đảm sao lưu và kế hoạch dự phòng.')),
+     g('Tiêu chí so sánh → on-premise → Cloud → chọn hybrid kèm lý do → lộ trình.',
+       'Để chọn phương án cho UEL, cần so sánh theo chi phí đầu tư và vận hành, khả năng mở rộng, mức độ kiểm soát dữ liệu, độ sẵn sàng và nhân lực kỹ thuật.',
+       'Nếu tự xây Data Center tại chỗ, trường kiểm soát tốt dữ liệu và truy cập nội bộ nhanh, nhưng phải đầu tư lớn ngay từ đầu, cần đội ngũ vận hành và khó tăng tài nguyên trong thời gian ngắn. Ngược lại, thuê Cloud giúp triển khai nhanh, trả theo mức dùng và co giãn linh hoạt, rất hợp với những lúc tải tăng đột biến như đăng ký học phần; tuy nhiên trường phụ thuộc vào Internet, vào nhà cung cấp và phải cân nhắc việc đặt dữ liệu cá nhân bên ngoài.',
+       'Em chọn mô hình hybrid. Dữ liệu nhạy cảm như hồ sơ, điểm và tài chính được giữ tại hạ tầng của trường hoặc private cloud để dễ kiểm soát. Các dịch vụ cần co giãn hoặc phổ biến như website, LMS, email và lưu trữ tài liệu được đưa lên public cloud, ví dụ dùng Microsoft 365 theo hình thức SaaS. Cách này tận dụng được ưu điểm của cả hai bên mà không phải đầu tư quá lớn.',
+       'Việc chuyển đổi nên làm từng bước, bắt đầu từ dịch vụ ít rủi ro, luôn có sao lưu và phương án quay lại khi gặp sự cố. Lựa chọn hybrid chỉ hiệu quả khi trường quản lý tốt kết nối giữa hai môi trường và phân quyền rõ ràng.')),
     ('Hãy trình bày các mô hình dịch vụ đám mây <b>IaaS, PaaS, SaaS</b> và cho ví dụ ứng dụng trong môi trường trường đại học (UEL).',
-     g('<b>Tư duy:</b> định nghĩa → ai quản lý phần nào → ví dụ → khi nào dùng.',
-       '<b>• IaaS</b> (hạ tầng): thuê máy chủ ảo, lưu trữ, mạng; trường tự cài hệ điều hành và ứng dụng. Ví dụ: thuê máy chủ ảo để chạy hệ thống thi trực tuyến mùa cao điểm.',
-       '<b>• PaaS</b> (nền tảng): nhà cung cấp lo hạ tầng + môi trường chạy, trường chỉ phát triển ứng dụng. Ví dụ: nhóm phát triển của trường xây ứng dụng tra cứu lịch học trên nền tảng PaaS.',
-       '<b>• SaaS</b> (phần mềm): dùng phần mềm hoàn chỉnh qua Internet. Ví dụ: Microsoft 365, Google Workspace, hệ thống LMS dạng dịch vụ.',
-       '<b>Gợi ý ghi điểm:</b> vẽ bảng “ai quản lý gì” (trường vs nhà cung cấp) và nêu lợi ích: giảm chi phí đầu tư, mở rộng nhanh, nhưng cần quan tâm bảo mật và phụ thuộc nhà cung cấp.')),
+     g('Khái niệm chung → ba mô hình (ai quản lý gì, ví dụ tại UEL) → khi nào chọn cái nào.',
+       'Điện toán đám mây là mô hình cung cấp tài nguyên công nghệ thông tin qua Internet theo nhu cầu. Ba mô hình dịch vụ chính khác nhau ở phần việc mà nhà cung cấp làm thay cho người dùng.',
+       'IaaS cung cấp hạ tầng gồm máy chủ ảo, lưu trữ và mạng; trường tự cài hệ điều hành và ứng dụng. Ví dụ, UEL có thể thuê thêm máy chủ ảo để chạy hệ thống thi trực tuyến vào mùa thi rồi trả lại khi xong. PaaS cung cấp sẵn nền tảng để phát triển và chạy ứng dụng, trường chỉ cần lo mã nguồn và dữ liệu; chẳng hạn một nhóm sinh viên viết ứng dụng tra cứu lịch học và đưa lên nền tảng PaaS mà không phải cấu hình máy chủ. SaaS cung cấp phần mềm hoàn chỉnh dùng ngay qua trình duyệt, ví dụ Microsoft 365, Google Workspace hay một hệ thống LMS dạng dịch vụ.',
+       'Như vậy, từ IaaS đến SaaS, quyền kiểm soát của trường giảm dần nhưng công sức vận hành cũng nhẹ đi. UEL nên dùng SaaS cho các nhu cầu phổ thông, PaaS khi muốn tự phát triển ứng dụng riêng và IaaS khi cần tùy biến sâu. Dù chọn mô hình nào cũng phải chú ý bảo mật tài khoản, dữ liệu cá nhân và sự phụ thuộc vào nhà cung cấp.')),
     ('Hệ thống đăng ký học phần của UEL thường quá tải ở giờ đầu mở cổng. Hãy đề xuất giải pháp hạ tầng để hệ thống <b>luôn sẵn sàng và chịu tải cao</b>.',
-     g('<b>Tư duy:</b> nguyên nhân → giải pháp theo từng tầng → kiểm tra.',
-       '<b>1. Nguyên nhân:</b> lượng truy cập tăng đột biến cùng lúc, một máy chủ/đường truyền là điểm nghẽn.',
-       '<b>2. Giải pháp:</b>',
-       '• <b>Cân bằng tải</b> (load balancer) chia yêu cầu cho nhiều máy chủ ứng dụng.',
-       '• <b>Mở rộng theo chiều ngang</b> (thêm máy chủ ảo/ Cloud tự co giãn).',
-       '• <b>Bộ nhớ đệm (cache)</b> và tối ưu CSDL; hàng đợi để xử lý tuần tự.',
-       '• <b>Dự phòng:</b> máy chủ/CSDL dự phòng, 2 đường Internet, nguồn điện dự phòng.',
-       '• <b>Băng thông &amp; mạng:</b> ưu tiên lưu lượng (QoS) cho hệ thống đăng ký.',
-       '<b>3. Vận hành:</b> thử tải trước đợt đăng ký, giám sát thời gian thực, kế hoạch khôi phục khi sự cố.')),
+     g('Nguyên nhân → giải pháp từng tầng → dự phòng → kiểm thử và vận hành.',
+       'Giả sử hệ thống đăng ký học phần của UEL quá tải ngay khi mở cổng, nguyên nhân thường là lượng truy cập tăng đột biến trong vài phút, trong khi một máy chủ, một cơ sở dữ liệu hoặc một đường truyền trở thành điểm nghẽn.',
+       'Giải pháp trước hết là đặt bộ cân bằng tải để chia yêu cầu cho nhiều máy chủ ứng dụng, và mở rộng theo chiều ngang bằng cách thêm máy chủ ảo, có thể thuê Cloud tự co giãn trong đúng đợt đăng ký. Tiếp theo là giảm việc cho cơ sở dữ liệu: dùng bộ nhớ đệm cho dữ liệu ít thay đổi như danh sách môn học, tối ưu chỉ mục, và đưa yêu cầu vào hàng đợi để xử lý lần lượt.',
+       'Về độ sẵn sàng, cần máy chủ và cơ sở dữ liệu dự phòng, hai đường Internet, nguồn điện dự phòng, đồng thời ưu tiên băng thông cho hệ thống đăng ký. Ngoài hạ tầng, trường có thể chia khung giờ đăng ký theo khóa để giảm đỉnh tải.',
+       'Trước mỗi đợt, bộ phận kỹ thuật nên thử tải với số người truy cập giả lập, trong khi vận hành thì giám sát liên tục và có sẵn kế hoạch khôi phục. Kết hợp các biện pháp này giúp sinh viên đăng ký được ổn định và công bằng hơn.')),
 ]))
 
 # ------------------------------------------------------------------ T3
 TOPICS.append(('An toàn thông tin & xu hướng hạ tầng số', [
     ('Hãy đề xuất các biện pháp <b>bảo mật hệ thống mạng và dữ liệu</b> của UEL (sinh viên, giảng viên, nhân viên). Giải thích tác dụng của từng biện pháp.',
-     g('<b>Tư duy:</b> bảo vệ theo <i>nhiều lớp</i> (defense in depth) và theo nguyên tắc bảo mật CIA: bí mật – toàn vẹn – sẵn sàng.',
-       '<b>1. Biên mạng:</b> Firewall lọc truy cập trái phép, IDS/IPS phát hiện tấn công, chặn DoS.',
-       '<b>2. Phân vùng:</b> VLAN/DMZ tách mạng sinh viên khỏi mạng quản trị và máy chủ dữ liệu.',
-       '<b>3. Mã hóa:</b> HTTPS/TLS cho web, VPN cho truy cập từ xa, WPA3 cho Wi-Fi, IPsec giữa các cơ sở.',
-       '<b>4. Xác thực &amp; phân quyền:</b> tài khoản trường, SSO, xác thực nhiều lớp (MFA), phân quyền tối thiểu.',
-       '<b>5. Dữ liệu:</b> sao lưu định kỳ và khôi phục thảm họa; chữ ký số để bảo đảm toàn vẹn/xác thực văn bản điện tử.',
-       '<b>6. Con người:</b> đào tạo nhận thức (chống phishing), chính sách mật khẩu, nhật ký và giám sát.')),
+     g('Nguyên tắc CIA và phòng thủ nhiều lớp → biên mạng, phân vùng → mã hóa, xác thực → dữ liệu → con người.',
+       'Mạng của UEL lưu giữ thông tin cá nhân và kết quả học tập của nhiều người, nên việc bảo vệ cần bảo đảm ba yêu cầu: bí mật, toàn vẹn và sẵn sàng. Em đề xuất phòng thủ theo nhiều lớp để nếu một lớp bị vượt qua thì vẫn còn lớp khác.',
+       'Ở biên mạng, firewall lọc truy cập trái phép và hệ thống IDS/IPS phát hiện, ngăn chặn hành vi tấn công. Bên trong, VLAN và vùng DMZ tách mạng sinh viên khỏi mạng quản trị và máy chủ dữ liệu; web công khai của trường đặt trong DMZ để kẻ tấn công chiếm được web cũng khó đi tiếp vào trong.',
+       'Dữ liệu truyền đi cần được mã hóa bằng HTTPS cho website, VPN cho giảng viên làm việc từ xa và WPA3 cho Wi-Fi. Người dùng đăng nhập bằng tài khoản trường, có xác thực nhiều lớp và chỉ được cấp quyền vừa đủ; ví dụ giảng viên chỉ nhập được điểm của lớp mình dạy. Dữ liệu quan trọng phải sao lưu định kỳ, còn văn bản điện tử nên dùng chữ ký số để chống sửa đổi và chối bỏ.',
+       'Cuối cùng, con người là mắt xích dễ bị khai thác nhất, vì vậy trường cần hướng dẫn sinh viên, giảng viên nhận biết thư lừa đảo, đặt mật khẩu mạnh, đồng thời ghi nhật ký và giám sát để phát hiện sớm sự cố.')),
     ('Hãy phân tích <b>xu hướng hạ tầng số</b> (5G, Edge Computing, IoT, Cloud, AI, an ninh mạng) và đề xuất cách UEL có thể áp dụng để xây dựng <b>Smart Campus</b>.',
-     g('<b>Tư duy:</b> mỗi xu hướng → vấn đề nó giải quyết → ví dụ ở trường.',
-       '• <b>Cloud:</b> triển khai nhanh, co giãn dịch vụ học tập số.',
-       '• <b>5G/Wi-Fi 6:</b> kết nối tốc độ cao, mật độ thiết bị lớn tại giảng đường, ký túc xá.',
-       '• <b>IoT:</b> cảm biến điều hòa/chiếu sáng, điểm danh thông minh, camera, quản lý chỗ ngồi thư viện.',
-       '• <b>Edge Computing:</b> xử lý dữ liệu camera/cảm biến ngay tại chỗ để giảm độ trễ và băng thông.',
-       '• <b>AI &amp; Data:</b> phân tích dữ liệu học tập, trợ lý ảo hỗ trợ sinh viên, dự báo nguy cơ bỏ học.',
-       '• <b>An ninh mạng toàn diện:</b> bảo vệ chủ động xuyên suốt các thành phần trên.',
-       '<b>Kết luận:</b> hạ tầng số là nền tảng — không có hạ tầng số tốt thì các công nghệ mới không thể thành công.')),
+     g('Smart Campus là gì → mỗi xu hướng giải quyết việc gì ở trường → điều kiện và kết luận.',
+       'Smart Campus là khuôn viên đại học dùng hạ tầng số để việc học, quản lý và sinh hoạt thuận tiện, tiết kiệm và an toàn hơn. Với UEL, các xu hướng công nghệ có thể bổ sung cho nhau để đạt mục tiêu đó.',
+       'Cloud giúp trường triển khai nhanh và co giãn các dịch vụ học tập số. 5G và Wi-Fi 6 bảo đảm kết nối tốc độ cao cho rất nhiều thiết bị cùng lúc. IoT cho phép lắp cảm biến để tự điều chỉnh điều hòa, đèn chiếu sáng, điểm danh thông minh hay theo dõi chỗ trống ở thư viện. Edge Computing xử lý dữ liệu camera và cảm biến ngay tại chỗ, nhờ đó giảm độ trễ và đỡ tốn băng thông. AI có thể làm trợ lý ảo trả lời thắc mắc của sinh viên hoặc phân tích dữ liệu học tập để phát hiện sớm người học gặp khó khăn.',
+       'Càng nhiều thiết bị kết nối thì rủi ro càng lớn, nên an ninh mạng phải được tính ngay từ đầu, cùng với việc bảo vệ dữ liệu cá nhân. Em đề xuất UEL thí điểm ở một khu, ví dụ thư viện, đánh giá hiệu quả rồi mới nhân rộng. Hạ tầng số tốt chính là nền tảng để các công nghệ mới phát huy tác dụng.')),
     ('So sánh mô hình <b>Client/Server</b> và <b>Peer-to-Peer</b>; theo bạn, mô hình nào phù hợp cho hệ thống e-learning của UEL và mô hình nào phù hợp để nhóm sinh viên chia sẻ tài liệu nội bộ? Giải thích.',
-     g('<b>Tư duy:</b> so sánh theo tiêu chí → gắn với từng tình huống → kết luận.',
-       '<b>1. Client/Server:</b> server luôn online, quản lý dữ liệu và người dùng tập trung, dễ phân quyền/bảo mật/sao lưu; cần server mạnh, có điểm lỗi tập trung.',
-       '<b>2. Peer-to-Peer:</b> các máy ngang hàng chia sẻ trực tiếp, không cần hạ tầng đáng kể, mở rộng tốt nhưng khó quản trị và bảo mật; phù hợp nhóm nhỏ.',
-       '<b>3. Áp dụng:</b> e-learning UEL (nhiều người dùng, dữ liệu nhạy cảm, cần phân quyền) → <b>Client/Server</b> (kết hợp Cloud). '
-       'Nhóm bạn chia sẻ tài liệu tạm thời → có thể dùng P2P/chia sẻ ngang hàng, lưu ý bản quyền và an toàn.',
-       '<b>4. Liên hệ:</b> socket, tiến trình client/server, địa chỉ IP + cổng (port).')),
+     g('So sánh hai mô hình → áp vào hai tình huống ở UEL → liên hệ lý thuyết.',
+       'Trong mô hình Client/Server, máy chủ luôn hoạt động và nắm giữ dữ liệu, các máy khách gửi yêu cầu đến để được phục vụ. Cách này dễ quản lý người dùng, phân quyền và sao lưu, nhưng cần máy chủ đủ mạnh và nếu máy chủ hỏng thì dịch vụ bị gián đoạn. Trong mô hình Peer-to-Peer, các máy ngang hàng, mỗi máy vừa xin vừa cung cấp tài nguyên; chi phí thấp, dễ thiết lập nhưng khó quản trị, khó bảo mật và chỉ hợp với nhóm nhỏ.',
+       'Với hệ thống e-learning của UEL, em chọn Client/Server vì có nhiều người dùng, dữ liệu điểm và bài thi nhạy cảm, cần phân quyền rõ giữa sinh viên và giảng viên; có thể đặt máy chủ trên Cloud để chịu tải tốt hơn. Còn khi một nhóm vài sinh viên cần chia sẻ tạm tài liệu làm đồ án trong cùng mạng, Peer-to-Peer là đủ và tiện, miễn là chú ý bản quyền và phòng mã độc.',
+       'Về kỹ thuật, ở cả hai mô hình các tiến trình đều trao đổi qua socket, được xác định bằng địa chỉ IP và số cổng. Khác biệt nằm ở vai trò của từng máy, do đó chọn mô hình nào phải dựa vào quy mô và yêu cầu an toàn của công việc.')),
     ('Nêu và giải thích <b>3 lý do</b> cần thiết kế hạ tầng mạng của trường theo <b>mô hình phân tầng (OSI/TCP-IP)</b>. Cho ví dụ ở UEL.',
-     g('<b>Tư duy:</b> mỗi lý do kèm một ví dụ cụ thể.',
-       '<b>1. Chia nhỏ độ phức tạp:</b> mỗi tầng một nhiệm vụ (Physical – cáp/sóng, Data Link – MAC/Switch, Network – IP/Router, Transport – TCP/UDP, Application – HTTP/DNS) nên dễ thiết kế, xử lý sự cố. '
-       'Ví dụ: sinh viên không vào được cổng đào tạo → kiểm tra lần lượt Wi-Fi/cáp, địa chỉ IP, DNS, dịch vụ web.',
-       '<b>2. Chuẩn hóa &amp; tương thích:</b> thiết bị nhiều hãng vẫn làm việc cùng nhau nhờ giao thức chuẩn (Ethernet, IP, TCP, HTTP).',
-       '<b>3. Dễ nâng cấp/thay thế:</b> đổi công nghệ ở một tầng (Wi-Fi 5 → Wi-Fi 6) mà không phải thay đổi ứng dụng trên các tầng trên.',
-       '<b>Gợi ý:</b> vẽ nhanh quá trình đóng gói dữ liệu khi sinh viên mở trang web của trường (HTTP → TCP → IP → Ethernet/Wi-Fi).')),
+     g('Giới thiệu mô hình → ba lý do, mỗi lý do một ví dụ ở UEL → kết luận.',
+       'Mô hình phân tầng chia việc truyền thông thành nhiều tầng, mỗi tầng một nhiệm vụ và cung cấp dịch vụ cho tầng trên. OSI có bảy tầng, còn TCP/IP gộp lại thành bốn tầng.',
+       'Lý do thứ nhất là giảm độ phức tạp và dễ xử lý sự cố. Khi sinh viên UEL không vào được cổng đào tạo, kỹ thuật viên có thể kiểm tra lần lượt từ sóng Wi-Fi hoặc dây cáp, đến địa chỉ MAC và switch, địa chỉ IP và router, rồi DNS và dịch vụ web để khoanh đúng chỗ lỗi.',
+       'Lý do thứ hai là chuẩn hóa và tương thích. Laptop, điện thoại của sinh viên và thiết bị mạng của nhiều hãng khác nhau vẫn làm việc được với nhau vì cùng tuân theo các giao thức chuẩn như Ethernet, IP, TCP và HTTP.',
+       'Lý do thứ ba là dễ nâng cấp. Trường có thể đổi từ Wi-Fi 5 sang Wi-Fi 6 ở tầng dưới mà không phải viết lại cổng đào tạo hay hệ thống LMS ở tầng ứng dụng.',
+       'Tóm lại, thiết kế phân tầng giúp mạng của UEL dễ xây dựng, dễ bảo trì và phát triển lâu dài. Khi một sinh viên mở trang web của trường, dữ liệu được đóng gói lần lượt qua HTTP, TCP, IP rồi Ethernet hoặc Wi-Fi, và được mở gói theo thứ tự ngược lại ở phía nhận.')),
 ]))
+
+
 
 chapter = {'chapterId': 'NT_C4', 'chapterName': 'Câu hỏi tự luận – tư duy thiết kế hạ tầng', 'topics': []}
 for ti, (tname, items) in enumerate(TOPICS, 1):
