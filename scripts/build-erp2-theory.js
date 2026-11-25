@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const {
   Document, Packer, Paragraph, TextRun, Table, TableRow, TableCell, HeadingLevel, AlignmentType,
-  LevelFormat, BorderStyle, WidthType, ShadingType, PageBreak, Footer, PageNumber,
+  LevelFormat, BorderStyle, ImageRun, WidthType, ShadingType, PageBreak, Footer, PageNumber,
 } = require('docx');
 
 const FONT = 'Arial';
@@ -64,6 +64,14 @@ const note = (lines) => box('Key points', lines, 'E8F3FF', '3B82F6');
 const formula = (lines) => box('Example / formula', lines, 'EEF8EE', '3E9B4F');
 
 
+// Chèn sơ đồ (tạo bằng scripts/make-erp2-figs.py) kèm chú thích
+function fig(name, caption, width = 600) {
+  const data = fs.readFileSync(path.join(__dirname, 'erp2-figs', name + '.png'));
+  const height = Math.round(width * data.readUInt32BE(20) / data.readUInt32BE(16));
+  C.push(new Paragraph({ alignment: AlignmentType.CENTER, keepNext: true, spacing: { before: 120 }, children: [new ImageRun({ data, transformation: { width, height } })] }));
+  C.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 160 }, children: [new TextRun({ text: caption, italics: true, size: 18, color: '555555', font: FONT })] }));
+}
+
 // ================= COVER =================
 C.push(new Paragraph({ spacing: { before: 2600, after: 200 }, alignment: AlignmentType.CENTER, children: [new TextRun({ text: 'THEORY REVIEW GUIDE', bold: true, size: 40, font: FONT, color: '1F3A5F' })] }));
 C.push(new Paragraph({ spacing: { after: 200 }, alignment: AlignmentType.CENTER, children: [new TextRun({ text: 'ERP 2 – BUSINESS PROCESS CONFIGURATION WITH SAP', bold: true, size: 34, font: FONT })] }));
@@ -81,6 +89,7 @@ bl([
 ]);
 h2('The big picture');
 p('An ERP system integrates business processes on one shared database. A business event is entered once, and the system carries its consequences to every area that needs them: goods received in purchasing also update stock and accounting. **Configuration** is how a company adapts the standard system to its own structure and rules.');
+fig('integration', 'All modules work on one shared database', 500);
 terms([
   ['Process integration', 'One transaction updates logistics and accounting at the same time, avoiding re-entry and inconsistencies.'],
   ['Enterprise structure', 'The organisational units that represent the company in the system. Everything else is built on it.'],
@@ -105,8 +114,10 @@ terms([
 ]);
 h2('Implementation logic (ASAP)');
 p('The project moves from **project preparation** (goals and team) to **business blueprint** (documented requirements), **realization** (configuration), **final preparation** (testing, training, cutover), **go-live** and **operation**. The idea is to agree on the processes before building them.');
+fig('asap', 'ASAP implementation phases', 560);
 h2('Four types of data');
 p('**Enterprise structure data** comes first, then **business rules and parameters**, then **master data**; **transaction data** appears only when processes run. The order matters because each type depends on the previous one.');
+fig('data', 'Order in which the types of data are created', 560);
 h2('Testing');
 terms([
   ['Unit test', 'Checks one single step or transaction.'],
@@ -150,6 +161,7 @@ terms([
 ]);
 h2('Financial statements');
 p('The **balance sheet** shows assets, liabilities and equity at a point in time (Assets = Liabilities + Equity). The **income statement** shows revenue and expenses over a period. Profit or loss moves to **retained earnings** at year end. The **cash flow statement** explains changes in cash.');
+fig('subledger', 'Subledgers feed the general ledger through reconciliation accounts', 500);
 h2('Model essay answers');
 essay('Explain the relationship between subledgers and the general ledger.', [
   'The general ledger gives the overall financial picture, but it would be unreadable if every customer and vendor had its own G/L account. Subledgers therefore keep the detail, and each is linked to a reconciliation account in the G/L. When a vendor invoice is posted, the vendor account is updated directly and the reconciliation account is updated at the same moment. Because users cannot post to the reconciliation account by hand, the totals stay consistent.',
@@ -179,6 +191,7 @@ terms([
   ['Settlement', 'Moves the costs collected in an order to their final receivers according to settlement rules.'],
   ['Real vs statistical posting', 'A real posting carries the cost; a statistical posting is only for information.'],
 ]);
+fig('allocation', 'How overhead moves in CO', 500);
 h2('Model essay answers');
 essay('Compare distribution, assessment and activity allocation.', [
   'All three move overhead from the unit that incurred it to the units that benefit. Distribution and assessment happen at period end after costs have accumulated: distribution preserves the original cost type, while assessment merges them into one allocation cost. Activity allocation does not wait; it charges according to the service consumed, for example IT support hours. The more precise the cause-and-effect link, the fairer the result, but the more data must be recorded.',
@@ -191,6 +204,7 @@ pb();
 // ================= CH 4 =================
 h1('Chapter 4. Procurement (MM) – Procure to Pay');
 h2('Process logic');
+fig('p2p', 'Procure-to-pay (green steps post to accounting)', 560);
 table(['Step', 'Purpose', 'Accounting effect'], [
   ['**Purchase requisition**', 'Internal request to buy', 'None'],
   ['**Source determination / RFQ**', 'Choose the supplier', 'None'],
@@ -215,6 +229,7 @@ terms([
   ['Tolerance limit', 'Acceptable deviation; beyond it the system warns, blocks or rejects.'],
   ['Material document', 'Evidence of a goods movement, usually accompanied by an accounting document.'],
 ]);
+fig('threeway', 'Three-way match', 450);
 h2('Model essay answers');
 essay('Describe procure-to-pay and its accounting consequences.', [
   'The process begins with a purchase requisition expressing a need, followed by choosing a source and issuing a purchase order. None of these changes the books, since nothing has been received or owed yet. At goods receipt the company owns the material, so inventory increases and the GR/IR account holds the not-yet-invoiced amount. Invoice verification checks the three documents, clears GR/IR and records the debt to the vendor. Payment then removes the debt and reduces cash.',
@@ -227,6 +242,7 @@ pb();
 // ================= CH 5 =================
 h1('Chapter 5. Fulfillment (SD) – Order to Cash');
 h2('Process logic');
+fig('o2c', 'Order-to-cash (green steps post to accounting)', 560);
 table(['Step', 'Purpose', 'Accounting effect'], [
   ['**Inquiry and quotation**', 'Customer asks; seller makes a binding offer', 'None'],
   ['**Sales order**', 'Confirm what, how many, when and at what price', 'None'],
@@ -250,6 +266,7 @@ terms([
   ['Document flow', 'The chain linking preceding and following documents, used to track an order.'],
   ['Customer-material info record', 'Data specific to one customer and one material.'],
 ]);
+fig('salesarea', 'Sales enterprise structure', 430);
 h2('Model essay answers');
 essay('Describe order-to-cash and its integration with FI.', [
   'The process turns a customer need into cash. After inquiry and quotation, the sales order records the agreement and the system checks availability and determines price. The goods are then picked, packed and issued. Goods issue is the first accounting event because ownership of stock leaves the company. Billing records revenue and a receivable, and the process ends when payment clears that receivable.',
@@ -257,6 +274,7 @@ essay('Describe order-to-cash and its integration with FI.', [
 essay('Explain pricing with the condition technique.', [
   'Instead of one fixed price, SAP builds the price from separate conditions such as a base price, discounts and freight. For each condition type the system follows an access sequence, searching from the most specific record to the most general one. The pricing procedure arranges the conditions into the final amount. The benefit is that prices can differ by customer, material or channel without changing any program.',
 ]);
+fig('pricing', 'Condition technique: from procedure to the stored value', 560);
 pb();
 
 // ================= PS =================
@@ -275,6 +293,7 @@ terms([
   ['Results analysis', 'Values unfinished work at period end so profit is reported in the right period.'],
   ['Settlement', 'Transfers collected costs and revenues to receivers such as accounts, assets or profitability analysis.'],
 ]);
+fig('wbs', 'Example: WBS (what) and activities (how)', 500);
 h2('Model essay answers');
 essay('Explain the structure of a project in SAP PS.', [
   'A project begins with the project definition. The work breakdown structure then answers what must be delivered by dividing the project into levels of work packages. The network answers how and when the work is done by listing activities and their order. Linking activities to WBS elements lets dates and costs add up through the hierarchy, giving managers control at each level.',
@@ -303,6 +322,7 @@ terms([
 ]);
 h2('Process logic');
 p('**Notification** records the problem. **Planning** creates the order and lists work and materials. **Control** checks material and capacity and releases the order. **Execution** performs the work and withdraws materials. **Completion** records time and findings, closes the work technically and settles the costs.');
+fig('eam', 'Corrective maintenance and settlement', 560);
 h2('Model essay answers');
 essay('Describe the corrective maintenance process and its integration.', [
   'When equipment fails, a notification captures the problem. A planner turns it into a maintenance order, and after availability checks the order is released and carried out. Materials come from stock or are bought through MM, labour is confirmed as internal activity, and CO collects these costs on the order. After completion the costs are settled to the responsible cost center, and the history helps prevent the next failure.',
