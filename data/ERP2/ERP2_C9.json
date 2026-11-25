@@ -1,0 +1,1442 @@
+{
+ "chapterId": "ERP2_C9",
+ "chapterName": "Combined test bank (from review file)",
+ "topics": [
+  {
+   "topicId": "ERP2_C9_T1",
+   "topicName": "Introduction & enterprise structure",
+   "questions": [
+    {
+     "id": "ERP2_C9_T1_Q1",
+     "question": "The material master is grouped into different views or segments based on which factors?<br>(1) Processes that use the materials<br>(2) Material type<br>(3) Organizational level<br>(4) Material composition<br>(5) Material description<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1, 2 and 3",
+      "B": "2, 3 and 5",
+      "C": "1, 2 and 4",
+      "D": "2, 3 and 4"
+     },
+     "correctAnswer": "A",
+     "explanation": "Correct items: <b>1, 2 and 3</b> – Processes that use the materials; Material type; Organizational level."
+    },
+    {
+     "id": "ERP2_C9_T1_Q2",
+     "question": "Is this statement correct? <br><i>User acceptance testing is the lowest level of testing in the system. Each process step, which is represented by an individual transaction in the ERP system is executed.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false. <i>Note: The lowest level of testing is <b>unit testing</b>; user acceptance testing comes near go-live. (corrected from the source file)</i>"
+    },
+    {
+     "id": "ERP2_C9_T1_Q3",
+     "question": "Is this statement correct? <br><i>Business Rules &amp; Parameters change often.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false."
+    },
+    {
+     "id": "ERP2_C9_T1_Q4",
+     "question": "Is this statement correct? <br><i>Business rules like payment terms for vendors are part of Master Data and are configured separately?</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false."
+    },
+    {
+     "id": "ERP2_C9_T1_Q5",
+     "question": "Is this statement correct? <br><i>The Enterprise Structure change often.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false."
+    },
+    {
+     "id": "ERP2_C9_T1_Q6",
+     "question": "Is this statement correct? <br><i>An enterprise (client level) can have more than one company code assigned to it.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T1_Q7",
+     "question": "Is this statement correct? <br><i>An enterprise comprises of two companies, one located in the US and one in Germany. They may purchase from the same vendor, but may have different relationships (e.g., different payment terms). Consequently, master data for the same vendor must be defined separately for each.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    }
+   ]
+  },
+  {
+   "topicId": "ERP2_C9_T2",
+   "topicName": "Financial accounting (FI)",
+   "questions": [
+    {
+     "id": "ERP2_C9_T2_Q1",
+     "question": "What does the posting key control?<br>(1) Account type<br>(2) G/L document number<br>(3) Posting date<br>(4) Field status<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1 and 2",
+      "B": "1 and 4",
+      "C": "2 and 4",
+      "D": "3 and 4"
+     },
+     "correctAnswer": "B",
+     "explanation": "Correct items: <b>1 and 4</b> – Account type; Field status."
+    },
+    {
+     "id": "ERP2_C9_T2_Q2",
+     "question": "You post an invoice to acquire a new company car. Which account types do you enter in the invoice?<br>(1) Vendor account<br>(2) Asset account<br>(3) G/L expense account<br>(4) Material account<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1 and 2",
+      "B": "1 and 3",
+      "C": "3 and 4",
+      "D": "2 and 3"
+     },
+     "correctAnswer": "D",
+     "explanation": "Correct items: <b>2 and 3</b> – Asset account; G/L expense account."
+    },
+    {
+     "id": "ERP2_C9_T2_Q3",
+     "question": "What are the benefits of using a business partner in SAP S/4HANA?<br>(1) Vendors are managed separately from customers<br>(2) It provides a harmonized architecture<br>(3) General data is unique to each role<br>(4) You can maintain multiple addresses for an entity<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1 and 2",
+      "B": "2 and 3",
+      "C": "2 and 4",
+      "D": "1 and 4"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct items: <b>2 and 4</b> – It provides a harmonized architecture; You can maintain multiple addresses for an entity."
+    },
+    {
+     "id": "ERP2_C9_T2_Q4",
+     "question": "Which of the following organizational levels are defined in SAP S/4HANA Finance?<br>(1) Segment<br>(2) Controlling area<br>(3) Company code<br>(4) Payroll area<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "2 and 3",
+      "B": "1 and 2",
+      "C": "1 and 3",
+      "D": "1 and 4"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct items: <b>1 and 3</b> – Segment; Company code."
+    },
+    {
+     "id": "ERP2_C9_T2_Q5",
+     "question": "Is this statement correct? <br><i>Accounting principles provide a guideline or rules for application of accounting concepts and include GAAP and IFRS / IAS.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T2_Q6",
+     "question": "Is this statement correct? <br><i>Accounts receivable accounting records and manages all accounting transactions for the customers of an organization. It is an integral part of the procurement process.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false. <i>Note: Accounts receivable belongs to <b>fulfillment</b>, not procurement. (corrected from the source file)</i>"
+    },
+    {
+     "id": "ERP2_C9_T2_Q7",
+     "question": "Is this statement correct? <br><i>Company code is the organizational unit representing the independent and legal accounting entity.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T2_Q8",
+     "question": "Is this statement correct? <br><i>Company code is used to represent a legal entity and is the key organizational level for financial accounting.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T2_Q9",
+     "question": "Is this statement correct? <br><i>Display only fields reveal entered information which can be useful for entry of required fields and cannot be modified by users.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T2_Q10",
+     "question": "Is this statement correct? <br><i>Reconciliation accounts are posted directly to whereas the subsidiary ledger gets the direct posting</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false. <i>Note: It is the reverse: the subledger is posted directly and the reconciliation account is updated automatically. (corrected from the source file)</i>"
+    },
+    {
+     "id": "ERP2_C9_T2_Q11",
+     "question": "Is this statement correct? <br><i>The country-specific CoA helps an organization to meet legal requirements by providing the required general ledger accounts for each country in which the company code conducts business.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T2_Q12",
+     "question": "Is this statement correct? <br><i>The general ledger accounts are the key part of master data required for a basic financial accounting set up.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T2_Q13",
+     "question": "Is this statement correct? <br><i>The most important master data related to financial accounting is the general ledger.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T2_Q14",
+     "question": "Is this statement correct? <br><i>The primary cost element is associated with G/L account.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T2_Q15",
+     "question": "Is this statement correct? <br><i>Tolerance groups provide controls for how much certain people in the company can post to the system.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T2_Q16",
+     "question": "Is this statement correct? <br><i>A company code is a legal separate entity used for financial accounting reporting.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T2_Q17",
+     "question": "Is this statement correct? <br><i>Account Group is assigned to G/L account, and the G/L account inherits the field statuses from the account group.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T2_Q18",
+     "question": "Is this statement correct? <br><i>Each line item must have one and only one posting key associated with it.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T2_Q19",
+     "question": "Is this statement correct? <br><i>The general ledger accounts include data from both the chart of accounts and the company code levels.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T2_Q20",
+     "question": "Is this statement correct? <br><i>The general ledger is an instance of the chart of accounts.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T2_Q21",
+     "question": "Is this statement correct? <br><i>We can post a document in SAP outside the number range we set</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false."
+    },
+    {
+     "id": "ERP2_C9_T2_Q22",
+     "question": "Is this statement correct? <br><i>When a company receives payment from the customer, it needs to debit its bank account.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T2_Q23",
+     "question": "Is this statement correct? <br><i>Group chart of accounts enables a company to provide consolidated corporate reports by including the general ledger accounts used by all company codes in the entire corporate group.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T2_Q24",
+     "question": "Is this statement correct? <br><i>The most important master data related to financial accounting is the client.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false. <i>Note: The client is an organisational level, not master data; the key FI master data are the G/L accounts. (corrected from the source file)</i>"
+    },
+    {
+     "id": "ERP2_C9_T2_Q25",
+     "question": "Is this statement correct? <br><i>The primary purpose of general ledger (G/L) accounting is to capture and record all data generated by the execution of business process steps that have a financial accounting impact.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T2_Q26",
+     "question": "Is this statement correct? <br><i>The statement of cash flows shows the flow of cash coming into the company and going out of the company as operating, financing and investing activities.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    }
+   ]
+  },
+  {
+   "topicId": "ERP2_C9_T3",
+   "topicName": "Management accounting (CO)",
+   "questions": [
+    {
+     "id": "ERP2_C9_T3_Q1",
+     "question": "What must two company codes have in common if you want to link them to the same controlling area?<br>(1) Company code currency<br>(2) Operational chart of accounts<br>(3) Fiscal year variant<br>(4) Country<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "3 and 4",
+      "B": "1 and 3",
+      "C": "2 and 3",
+      "D": "2 and 4"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct items: <b>2 and 3</b> – Operational chart of accounts; Fiscal year variant."
+    },
+    {
+     "id": "ERP2_C9_T3_Q2",
+     "question": "Which documents are created when you post a valuated goods receipt for consumable materials?<br>(1) Sales order document<br>(2) Accounting document<br>(3) Vendor invoice document<br>(4) Controlling document<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1 and 2",
+      "B": "1 and 4",
+      "C": "2 and 4",
+      "D": "3 and 4"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct items: <b>2 and 4</b> – Accounting document; Controlling document."
+    },
+    {
+     "id": "ERP2_C9_T3_Q3",
+     "question": "Is this statement correct? <br><i>A company code can be assigned to one and only one controlling area.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T3_Q4",
+     "question": "Is this statement correct? <br><i>An overhead management method includes cost center accounting and internal order account.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T3_Q5",
+     "question": "Is this statement correct? <br><i>Cost accounting needs to follow GAAP or IFRS.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false. <i>Note: Cost (management) accounting is internal and need not follow GAAP or IFRS. (corrected from the source file)</i>"
+    },
+    {
+     "id": "ERP2_C9_T3_Q6",
+     "question": "Is this statement correct? <br><i>External settlement happens when costs from financial accounting needs to transfer to the management accounting side of SAP (also known as controlling (CO).</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false. <i>Note: External settlement sends costs from CO to FI (for example to an asset), not from FI to CO. (corrected from the source file)</i>"
+    },
+    {
+     "id": "ERP2_C9_T3_Q7",
+     "question": "Is this statement correct? <br><i>In product costing, the costs of production are made up of direct labor and direct material.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false. <i>Note: Production cost also includes indirect (overhead) cost. (corrected from the source file)</i>"
+    },
+    {
+     "id": "ERP2_C9_T3_Q8",
+     "question": "Is this statement correct? <br><i>Management accounting, which is sometimes referred to as cost accounting, because of the main focus of management of costs, includes the internal accounting processes of a company.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T3_Q9",
+     "question": "Is this statement correct? <br><i>One controlling area can be assigned to multiple company codes.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T3_Q10",
+     "question": "Is this statement correct? <br><i>Overhead costs are costs that can be directly assigned to products or services.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false. <i>Note: Overhead costs <b>cannot</b> be traced directly to products or services. (corrected from the source file)</i>"
+    },
+    {
+     "id": "ERP2_C9_T3_Q11",
+     "question": "Is this statement correct? <br><i>Primary cost elements are created on the management accounting side of SAP.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false. <i>Note: Primary cost elements come from FI general ledger accounts. (corrected from the source file)</i>"
+    },
+    {
+     "id": "ERP2_C9_T3_Q12",
+     "question": "Is this statement correct? <br><i>The actual transactions are posted to the cost center groups.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false. <i>Note: Actual postings go to cost centers; groups are only for reporting and allocation. (corrected from the source file)</i>"
+    },
+    {
+     "id": "ERP2_C9_T3_Q13",
+     "question": "Is this statement correct? <br><i>We need to set up cost elements and cost centers in managerial accounting.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    }
+   ]
+  },
+  {
+   "topicId": "ERP2_C9_T4",
+   "topicName": "Procurement (MM)",
+   "questions": [
+    {
+     "id": "ERP2_C9_T4_Q1",
+     "question": "Is this statement correct? <br><i>A goods receipt cannot be posted without reference to an order.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false."
+    },
+    {
+     "id": "ERP2_C9_T4_Q2",
+     "question": "Is this statement correct? <br><i>A goods issue results in the creation of appropriate material, FI, and CO documents.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T4_Q3",
+     "question": "Is this statement correct? <br><i>A goods issue, unlike a goods receipt, can be posted without reference to an order.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false."
+    },
+    {
+     "id": "ERP2_C9_T4_Q4",
+     "question": "Is this statement correct? <br><i>A goods issue, unlike a goods receipt, results in a decrease in inventory.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T4_Q5",
+     "question": "A purchase requisition is",
+     "options": {
+      "A": "A confirmation for purchasing materials.",
+      "B": "A request to purchase materials.",
+      "C": "A confirmation of an inbound delivery.",
+      "D": "Proof of delivery."
+     },
+     "correctAnswer": "B",
+     "explanation": "Correct answer: <b>A request to purchase materials.</b>."
+    },
+    {
+     "id": "ERP2_C9_T4_Q6",
+     "question": "Which of the steps listed below are part of the procurement process?<br>(1) Create transfer order<br>(2) Create requisition<br>(3) Send payment<br>(4) Process sales order<br>(5) Process STO<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "2 and 3",
+      "B": "2 and 5",
+      "C": "3 and 5",
+      "D": "3 and 4"
+     },
+     "correctAnswer": "A",
+     "explanation": "Correct items: <b>2 and 3</b> – Create requisition; Send payment."
+    },
+    {
+     "id": "ERP2_C9_T4_Q7",
+     "question": "Which of the following statements concerning the procurement process are TRUE?<br>(1) Vendor billing is one of the steps.<br>(2) Only one FI document is created.<br>(3) Goods receipt is one of the steps.<br>(4) The send payment step involves creation of an FI document.<br>(5) Two material documents are created.<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "2, 3 and 4",
+      "B": "1, 3 and 4",
+      "C": "1, 4 and 5",
+      "D": "1, 2 and 3"
+     },
+     "correctAnswer": "B",
+     "explanation": "Correct items: <b>1, 3 and 4</b> – Vendor billing is one of the steps.; Goods receipt is one of the steps.; The send payment step involves creation of an FI document.."
+    },
+    {
+     "id": "ERP2_C9_T4_Q8",
+     "question": "Identify the steps in the procurement process for which an FI document is created.<br>(1) Goods receipt<br>(2) Goods issue<br>(3) Billing<br>(4) Purchase order<br>(5) Receive invoice<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1 and 5",
+      "B": "1 and 4",
+      "C": "1 and 2",
+      "D": "4 and 5"
+     },
+     "correctAnswer": "A",
+     "explanation": "Correct items: <b>1 and 5</b> – Goods receipt; Receive invoice."
+    },
+    {
+     "id": "ERP2_C9_T4_Q9",
+     "question": "Which of the following are strategies for acquiring materials?<br>(1) Internally from a vendor<br>(2) Externally from a storage location<br>(3) Externally from a plant<br>(4) Internally from another plant<br>(5) Externally from a vendor<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "4 and 5",
+      "B": "1 and 5",
+      "C": "3 and 5",
+      "D": "3 and 4"
+     },
+     "correctAnswer": "A",
+     "explanation": "Correct items: <b>4 and 5</b> – Internally from another plant; Externally from a vendor."
+    },
+    {
+     "id": "ERP2_C9_T4_Q10",
+     "question": "Identify the GL entries that are posted when a payment is sent to a vendor.<br>(1) The vendor account is credited,<br>(2) The vendor account is debited.<br>(3) The accounts payable reconciliation account is debited.<br>(4) The bank account is credited.<br>(5) The bank account is debited.<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "3, 4 and 5",
+      "B": "1, 2 and 4",
+      "C": "1, 3 and 4",
+      "D": "2, 3 and 4"
+     },
+     "correctAnswer": "D",
+     "explanation": "Correct items: <b>2, 3 and 4</b> – The vendor account is debited.; The accounts payable reconciliation account is debited.; The bank account is credited.."
+    },
+    {
+     "id": "ERP2_C9_T4_Q11",
+     "question": "Which one of the steps listed most likely would be the final step in the procurement process?",
+     "options": {
+      "A": "Send payment",
+      "B": "Confirm transfer order",
+      "C": "STO",
+      "D": "Goods issue"
+     },
+     "correctAnswer": "A",
+     "explanation": "Correct answer: <b>Send payment</b>."
+    },
+    {
+     "id": "ERP2_C9_T4_Q12",
+     "question": "In which of the following processes is a material document NOT created?",
+     "options": {
+      "A": "Fulfillment",
+      "B": "Inventory management",
+      "C": "Production",
+      "D": "Warehouse management"
+     },
+     "correctAnswer": "D",
+     "explanation": "Correct answer: <b>Warehouse management</b>."
+    },
+    {
+     "id": "ERP2_C9_T4_Q13",
+     "question": "Receive invoice is a step in which process?",
+     "options": {
+      "A": "Fulfillment",
+      "B": "Inventory management",
+      "C": "Warehouse management",
+      "D": "Procurement"
+     },
+     "correctAnswer": "D",
+     "explanation": "Correct answer: <b>Procurement</b>."
+    },
+    {
+     "id": "ERP2_C9_T4_Q14",
+     "question": "A company has decided to acquire materials via internal procurement. What is the likely next step?",
+     "options": {
+      "A": "Create an STO",
+      "B": "Create a sales order",
+      "C": "Initiate shipping",
+      "D": "Post a goods receipt"
+     },
+     "correctAnswer": "A",
+     "explanation": "Correct answer: <b>Create an STO</b>."
+    },
+    {
+     "id": "ERP2_C9_T4_Q15",
+     "question": "Which one of the following statements about the goods receipt step in the procurement process is TRUE?",
+     "options": {
+      "A": "Both FI and material documents are created.",
+      "B": "One material document is created, but no FI documents are.",
+      "C": "No FI or material documents are created.",
+      "D": "None of the above"
+     },
+     "correctAnswer": "A",
+     "explanation": "Correct answer: <b>Both FI and material documents are created.</b>."
+    },
+    {
+     "id": "ERP2_C9_T4_Q16",
+     "question": "In the procurement process, a purchase requisition is created during which step?",
+     "options": {
+      "A": "Availability check",
+      "B": "Source of supply determination",
+      "C": "Requirements determination",
+      "D": "Purchase order processing"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct answer: <b>Requirements determination</b>."
+    },
+    {
+     "id": "ERP2_C9_T4_Q17",
+     "question": "What is the FI effect of a goods receipt posting in the external procurement process?",
+     "options": {
+      "A": "No financial effect takes place at this step, so no FI document is created.",
+      "B": "Debit and credit to the inventory account",
+      "C": "Debit inventory, credit GR/IR",
+      "D": "Debit GR/IR, credit inventory"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct answer: <b>Debit inventory, credit GR/IR</b>."
+    },
+    {
+     "id": "ERP2_C9_T4_Q18",
+     "question": "What is the general ledger impact when a vendor invoice is received and verified?",
+     "options": {
+      "A": "Debit GR/IR, credit vendor subledger account",
+      "B": "Debit vendor subledger account, debit GR/IR",
+      "C": "Debit inventory, credit GR/IR",
+      "D": "Debit vendor subledger account, credit COGS"
+     },
+     "correctAnswer": "A",
+     "explanation": "Correct answer: <b>Debit GR/IR, credit vendor subledger account</b>."
+    },
+    {
+     "id": "ERP2_C9_T4_Q19",
+     "question": "Is this statement correct? <br><i>Sales order processing and payment are steps in the procurement process.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false."
+    },
+    {
+     "id": "ERP2_C9_T4_Q20",
+     "question": "Is this statement correct? <br><i>Creating a purchase order is a step in the fulfillment process.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false."
+    },
+    {
+     "id": "ERP2_C9_T4_Q21",
+     "question": "Is this statement correct? <br><i>There is a controlling (CO) impact in the billing step of the procurement process.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false."
+    },
+    {
+     "id": "ERP2_C9_T4_Q22",
+     "question": "Is this statement correct? <br><i>A purchase requisition is converted to a PO in the purchase order processing step in the procurement process.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T4_Q23",
+     "question": "Is this statement correct? <br><i>In the internal procurement process, the debits and credits for the GL account postings at the goods issue step are calculated based on the valuation price at the sending plant.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T4_Q24",
+     "question": "Is this statement correct? <br><i>At the time of a goods receipt in an internal procurement process, both material and FI documents are created.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false."
+    },
+    {
+     "id": "ERP2_C9_T4_Q25",
+     "question": "Is this statement correct? <br><i>At the time of a goods receipt in an external procurement process, the material document consists of a single line item.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T4_Q26",
+     "question": "Is this statement correct? <br><i>When an invoice from a vendor is received, a credit entry is posted to the GR/IR account.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false. <i>Note: At invoice verification the GR/IR account is <b>debited</b> (cleared) and the vendor account is credited. (corrected from the source file)</i>"
+    },
+    {
+     "id": "ERP2_C9_T4_Q27",
+     "question": "Is this statement correct? <br><i>A typical procurement process starts with the creation of a purchase requisition.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T4_Q28",
+     "question": "Is this statement correct? <br><i>During Goods Receipt, both FI and material documents are created.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T4_Q29",
+     "question": "Is this statement correct? <br><i>If the valuation level is set at the plant level, the same material can have different prices at different plant and can be valued differently for eat plant.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T4_Q30",
+     "question": "Is this statement correct? <br><i>The plant is an organizational unit in an enterprise that is responsible for procuring materials and services, negotiating with vendors about the conditions of purchasing from them and for all the various transactions related to procuring materials and services.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false. <i>Note: This describes the <b>purchasing organisation</b>, not the plant. (corrected from the source file)</i>"
+    }
+   ]
+  },
+  {
+   "topicId": "ERP2_C9_T5",
+   "topicName": "Fulfillment (SD)",
+   "questions": [
+    {
+     "id": "ERP2_C9_T5_Q1",
+     "question": "Which of the steps listed below are part of the fulfillment process.<br>(1) Purchase order sent to vendor<br>(2) Goods receipt posted<br>(3) Billing<br>(4) STO processing<br>(5) Sales order processing<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1 and 3",
+      "B": "3 and 5",
+      "C": "3 and 4",
+      "D": "1 and 5"
+     },
+     "correctAnswer": "B",
+     "explanation": "Correct items: <b>3 and 5</b> – Billing; Sales order processing."
+    },
+    {
+     "id": "ERP2_C9_T5_Q2",
+     "question": "The sales order processing step in the fulfillment process includes which of the following activities?<br>(1) Materials are shipped.<br>(2) An availability check is executed.<br>(3) A goods receipt is posted.<br>(4) A sales order is created.<br>(5) A goods issue is posted.<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1 and 2",
+      "B": "2 and 4",
+      "C": "2 and 3",
+      "D": "1 and 4"
+     },
+     "correctAnswer": "B",
+     "explanation": "Correct items: <b>2 and 4</b> – An availability check is executed.; A sales order is created.."
+    },
+    {
+     "id": "ERP2_C9_T5_Q3",
+     "question": "The shipping step involves which of the following activities?<br>(1) Creating a delivery document.<br>(2) Authorizing picking, packing, and goods issue.<br>(3) Processing a purchase order.<br>(4) Authorizing picking, packing, and goods receipt.<br>(5) Creating a transfer order.<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1 and 3",
+      "B": "1 and 2",
+      "C": "2 and 3",
+      "D": "1 and 4"
+     },
+     "correctAnswer": "B",
+     "explanation": "Correct items: <b>1 and 2</b> – Creating a delivery document.; Authorizing picking, packing, and goods issue.."
+    },
+    {
+     "id": "ERP2_C9_T5_Q4",
+     "question": "What are the GL entries when a customer invoice is generated?<br>(1) The accounts payable reconciliation account is debited.<br>(2) The accounts receivable reconciliation account is debited.<br>(3) The customer subledger account is debited.<br>(4) The revenue account is credited.<br>(5) The vendor subledger account is credited.<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1, 2 and 3",
+      "B": "2, 3 and 4",
+      "C": "1, 2 and 4",
+      "D": "2, 4 and 5"
+     },
+     "correctAnswer": "B",
+     "explanation": "Correct items: <b>2, 3 and 4</b> – The accounts receivable reconciliation account is debited.; The customer subledger account is debited.; The revenue account is credited.."
+    },
+    {
+     "id": "ERP2_C9_T5_Q5",
+     "question": "Shipping, billing, and payment are steps in which process?",
+     "options": {
+      "A": "Warehouse management",
+      "B": "Fulfillment",
+      "C": "Production",
+      "D": "Procurement"
+     },
+     "correctAnswer": "B",
+     "explanation": "Correct answer: <b>Fulfillment</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q6",
+     "question": "Identify the step in the fulfillment process for which a material document is created.",
+     "options": {
+      "A": "Goods issue",
+      "B": "Create requisition",
+      "C": "Goods receipt",
+      "D": "Transfer order"
+     },
+     "correctAnswer": "A",
+     "explanation": "Correct answer: <b>Goods issue</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q7",
+     "question": "What is the general ledger impact of the goods issue step in the fulfillment process?",
+     "options": {
+      "A": "Debit GR/IR, credit inventory",
+      "B": "Debit inventory, credit COGS",
+      "C": "Debit and credit to the inventory account",
+      "D": "Debit COGS, credit inventory"
+     },
+     "correctAnswer": "D",
+     "explanation": "Correct answer: <b>Debit COGS, credit inventory</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q8",
+     "question": "Calculate the debit and credit for the goods issue step in the fulfillment process, based on the following data. (Note: You need to pick the right price for this calculation.) Materials sold (trading goods): Printers Quantities sold: 100 Price for customer: $120.00 Current average moving price: $85.00 Price from vendor: $84.00 Average price 30 days before customer order was placed: $86.00",
+     "options": {
+      "A": "$8,600",
+      "B": "$12,000",
+      "C": "$8,400",
+      "D": "$8,500"
+     },
+     "correctAnswer": "D",
+     "explanation": "Correct answer: <b>$8,500</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q9",
+     "question": "What is the GL entry when a company receives a payment from a customer?",
+     "options": {
+      "A": "Debit revenue, credit customer",
+      "B": "Debit customer, credit revenue",
+      "C": "Debit bank, credit customer, credit accounts reconciliation account",
+      "D": "Debit accounts reconciliation account, debit customer, credit bank"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct answer: <b>Debit bank, credit customer, credit accounts reconciliation account</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q10",
+     "question": "Is this statement correct? <br><i>The availability check in the fulfillment process can trigger the procurement process.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T5_Q11",
+     "question": "Is this statement correct? <br><i>The fulfillment process can trigger the procurement process.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T5_Q12",
+     "question": "Is this statement correct? <br><i>There is a controlling (CO) impact in the goods issue step of the fulfillment process.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T5_Q13",
+     "question": "Is this statement correct? <br><i>The goods issue step in in the fulfillment process results in the creation of FI and material documents and also has a CO impact.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T5_Q14",
+     "question": "Is this statement correct? <br><i>The shipping step involves creating a delivery document.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T5_Q15",
+     "question": "Is this statement correct? <br><i>The delivery document is a request to move materials from one plant to another.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false."
+    },
+    {
+     "id": "ERP2_C9_T5_Q16",
+     "question": "Is this statement correct? <br><i>The amount of the debit and credit for the goods issue step in fulfillment is based on current moving average price of the material.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T5_Q17",
+     "question": "Is this statement correct? <br><i>When a payment from a customer is received, an automatic posting is made to the accounts receivable reconciliation account.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T5_Q18",
+     "question": "What is the correct sequence of steps in the order-to-cash business process?",
+     "options": {
+      "A": "Create sales order Check availability Process a delivery document Post goods issue",
+      "B": "Check availability Create sales order Post goods issue Billing",
+      "C": "Check availability Create sales order Billing Post goods issue",
+      "D": "Create sales order Check availability Plan transportation Post goods issue"
+     },
+     "correctAnswer": "A",
+     "explanation": "Correct answer: <b>Create sales order Check availability Process a delivery document Post goods issue</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q19",
+     "question": "What does the material ledger in SAP S/4HANA enable?<br>(1) Reporting for parallel accounting<br>(2) Reporting of all materials required during maintenance processing<br>(3) Material valuation in multiple currencies<br>(4) Recording of all business transactions<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1 and 2",
+      "B": "2 and 3",
+      "C": "1 and 3",
+      "D": "3 and 4"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct items: <b>1 and 3</b> – Reporting for parallel accounting; Material valuation in multiple currencies."
+    },
+    {
+     "id": "ERP2_C9_T5_Q20",
+     "question": "At which points in the order-to-cash process are postings made to the general ledger?<br>(1) Saving the sales order<br>(2) Confirming a transfer order<br>(3) Posting a goods issue<br>(4) Saving the invoice<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1 and 3",
+      "B": "2 and 4",
+      "C": "3 and 4",
+      "D": "2 and 3"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct items: <b>3 and 4</b> – Posting a goods issue; Saving the invoice."
+    },
+    {
+     "id": "ERP2_C9_T5_Q21",
+     "question": "What happens when you post a goods issue for a delivery document in sales?<br>(1) An invoice is created<br>(2) Inventory quantities are updated<br>(3) An accounting journal entry is created<br>(4) A warehouse transfer order is created<br>(5) The billing due list is updated<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "2, 4 and 5",
+      "B": "3, 4 and 5",
+      "C": "2, 3 and 5",
+      "D": "1, 3 and 5"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct items: <b>2, 3 and 5</b> – Inventory quantities are updated; An accounting journal entry is created; The billing due list is updated."
+    },
+    {
+     "id": "ERP2_C9_T5_Q22",
+     "question": "Which of the following are variations of the basic fulfillment process?<br>(1) Quote to cash<br>(2) Procure to pay<br>(3) Requisition to pay<br>(4) Inquiry to cash<br>(5) Plan to produce<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1 and 5",
+      "B": "1 and 4",
+      "C": "4 and 5",
+      "D": "1 and 3"
+     },
+     "correctAnswer": "B",
+     "explanation": "Correct items: <b>1 and 4</b> – Quote to cash; Inquiry to cash."
+    },
+    {
+     "id": "ERP2_C9_T5_Q23",
+     "question": "Payment terms are declared by the buyer at what step?",
+     "options": {
+      "A": "Purchase Order",
+      "B": "Quotation",
+      "C": "Customer Inquiry",
+      "D": "Sales Order"
+     },
+     "correctAnswer": "A",
+     "explanation": "Correct answer: <b>Purchase Order</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q24",
+     "question": "Which of the following are documents associated with the fulfillment process?<br>(1) Picking list (picking request)<br>(2) Packing list<br>(3) Bill material<br>(4) Customer master<br>(5) Customer invoice<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1, 2 and 4",
+      "B": "1, 2 and 3",
+      "C": "1, 3 and 5",
+      "D": "1, 2 and 5"
+     },
+     "correctAnswer": "D",
+     "explanation": "Correct items: <b>1, 2 and 5</b> – Picking list (picking request); Packing list; Customer invoice. <i>Note: Picking list, packing list and customer invoice are all fulfillment documents. (corrected from the source file)</i>"
+    },
+    {
+     "id": "ERP2_C9_T5_Q25",
+     "question": "Is this statement correct? <br><i>Organizational elements essential to the fulfillment process include client, company code, sales area and plant</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T5_Q26",
+     "question": "Which of the following types of data is NOT included in a quotation?",
+     "options": {
+      "A": "Material master",
+      "B": "Pricing conditions",
+      "C": "Vendor master",
+      "D": "Customer master"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct answer: <b>Vendor master</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q27",
+     "question": "Organizational data in a delivery document consist of which of the following?<br>(1) Client<br>(2) Company Code<br>(3) Quantity<br>(4) Shedule lines<br>(5) Shipping point<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1, 3 and 5",
+      "B": "1, 2 and 4",
+      "C": "1, 4 and 5",
+      "D": "1, 2 and 5"
+     },
+     "correctAnswer": "D",
+     "explanation": "Correct items: <b>1, 2 and 5</b> – Client; Company Code; Shipping point. <i>Note: Client, company code and shipping point are organisational data; quantity and schedule lines are not. (corrected from the source file)</i>"
+    },
+    {
+     "id": "ERP2_C9_T5_Q28",
+     "question": "What document is NOT created during the billing step of fulfillment process?",
+     "options": {
+      "A": "A CO document",
+      "B": "An invoice",
+      "C": "A material document",
+      "D": "An FI document"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct answer: <b>A material document</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q29",
+     "question": "A company does not have enough stock for a customer order, so it ships what it has now and will ship the rest later. Which term best describes the remaining quantity?",
+     "options": {
+      "A": "Backorder",
+      "B": "Balked shipment",
+      "C": "Picking",
+      "D": "Rejected shipment"
+     },
+     "correctAnswer": "A",
+     "explanation": "Correct answer: <b>Backorder</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q30",
+     "question": "Which one of the following represents the correct order of process steps for fulfillment process?",
+     "options": {
+      "A": "Pre-sales activity, payment, sales order processing, inventory sourcing, shipping, billing",
+      "B": "Pre-sales activity, sales order processing, shipping, billing, inventory sourcing, payment",
+      "C": "Pre-sales activity, sales order processing, inventory sourcing, shipping, billing, payment",
+      "D": "Sales order processing, pre-sales activity, inventory sourcing, billing, billing, payment"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct answer: <b>Pre-sales activity, sales order processing, inventory sourcing, shipping, billing, payment</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q31",
+     "question": "When using an ES, the person responsible for preparing shipments can retrieve a list of orders that need to be shipped. Such a list is called",
+     "options": {
+      "A": "Billing due list",
+      "B": "Delivery due list",
+      "C": "Order due list",
+      "D": "Customer due list"
+     },
+     "correctAnswer": "B",
+     "explanation": "Correct answer: <b>Delivery due list</b>. <i>Note: Orders waiting to be shipped are listed in the <b>delivery due list</b>; the billing due list is for invoicing. (corrected from the source file)</i>"
+    },
+    {
+     "id": "ERP2_C9_T5_Q32",
+     "question": "In fulfillment process, which department prepares and sends the shipment?",
+     "options": {
+      "A": "Sales",
+      "B": "Accounting",
+      "C": "Warehouse",
+      "D": "Purcchasing"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct answer: <b>Warehouse</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q33",
+     "question": "Which of the following organizational levels is NOT relevant to the fulfillment process?",
+     "options": {
+      "A": "Shipping point",
+      "B": "Storage location",
+      "C": "Purchasing organization",
+      "D": "Plant"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct answer: <b>Purchasing organization</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q34",
+     "question": "Which of the following organizational levels is associated with the method used to distribute material to a customer?",
+     "options": {
+      "A": "Sales organization",
+      "B": "Sales area",
+      "C": "Sales group",
+      "D": "Distribution chanel"
+     },
+     "correctAnswer": "D",
+     "explanation": "Correct answer: <b>Distribution chanel</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q35",
+     "question": "Which reporting options does SAP ERP system support?",
+     "options": {
+      "A": "Online lists",
+      "B": "Work lists",
+      "C": "Analytics",
+      "D": "All of the above"
+     },
+     "correctAnswer": "D",
+     "explanation": "Correct answer: <b>All of the above</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q36",
+     "question": "Material master data are grouped into views. Which one of the following combination of views is relevant to the fulfillment process?",
+     "options": {
+      "A": "Basic data, company data, sales plant data",
+      "B": "Basic data, sales organization data, client data",
+      "C": "Client data, sales area data, sales plant data",
+      "D": "Basic data, sales organization data, sales plant data"
+     },
+     "correctAnswer": "D",
+     "explanation": "Correct answer: <b>Basic data, sales organization data, sales plant data</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q37",
+     "question": "What are the partner functions that customers can play in the fulfillment process?<br>(1) Sold-to-party<br>(2) Bill-to-party<br>(3) Ship-to-party<br>(4) Receiver<br>(5) Payer<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1, 2, 3 and 5",
+      "B": "1, 2, 3 and 4",
+      "C": "2, 3, 4 and 5",
+      "D": "1, 3, 4 and 5"
+     },
+     "correctAnswer": "A",
+     "explanation": "Correct items: <b>1, 2, 3 and 5</b> – Sold-to-party; Bill-to-party; Ship-to-party; Payer. <i>Note: The four partner functions are sold-to, ship-to, bill-to and payer. (corrected from the source file)</i>"
+    },
+    {
+     "id": "ERP2_C9_T5_Q38",
+     "question": "What is the final step in the fulfillment process?",
+     "options": {
+      "A": "Receipt goods from a vendor",
+      "B": "Delivery of goods to customer",
+      "C": "Receipt a customer purchase order",
+      "D": "Receipt payment from customer"
+     },
+     "correctAnswer": "D",
+     "explanation": "Correct answer: <b>Receipt payment from customer</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q39",
+     "question": "Pre-sales activity includes all of the follwing except",
+     "options": {
+      "A": "Customer inquiries",
+      "B": "Customer purchase orders",
+      "C": "Tracking customer contacts",
+      "D": "Quotation"
+     },
+     "correctAnswer": "B",
+     "explanation": "Correct answer: <b>Customer purchase orders</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q40",
+     "question": "Which of the following statement regarding customer master data is NOT true?",
+     "options": {
+      "A": "They include data that are stored at client level",
+      "B": "They contain data that are need to make postings in FI",
+      "C": "They are valid for a specific sales area",
+      "D": "They include that are needed to make postings in CO"
+     },
+     "correctAnswer": "D",
+     "explanation": "Correct answer: <b>They include that are needed to make postings in CO</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q41",
+     "question": "Typically, which of the following information would you find in an invoice?<br>(1) Bill to address<br>(2) Ship to address<br>(3) Quantity<br>(4) Requested delivery date<br>(5) Price<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "2, 3, 4 and 5",
+      "B": "1, 2, 3 and 5",
+      "C": "1, 2, 4 and 5",
+      "D": "1, 2, 3 and 4"
+     },
+     "correctAnswer": "B",
+     "explanation": "Correct items: <b>1, 2, 3 and 5</b> – Bill to address; Ship to address; Quantity; Price."
+    },
+    {
+     "id": "ERP2_C9_T5_Q42",
+     "question": "Material master data in a delivery document consist of which of the following? (Material master data trong một delivery document bao gồm)13<br>(1) Material description<br>(2) Unit of measure<br>(3) Quantity<br>(4) Weight<br>(5) Billing date<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1, 4 and 5",
+      "B": "1, 2 and 4",
+      "C": "1, 2 and 3",
+      "D": "1, 3 and 4"
+     },
+     "correctAnswer": "B",
+     "explanation": "Correct items: <b>1, 2 and 4</b> – Material description; Unit of measure; Weight."
+    },
+    {
+     "id": "ERP2_C9_T5_Q43",
+     "question": "Which of the following steps in the fulfillment process have an impact on the financials of the company receiving the order from customer?<br>(1) Receive customer inquiry<br>(2) Send quotation<br>(3) Receive customer purchase order<br>(4) Send shipment<br>(5) Receive customer payment<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "2 and 5",
+      "B": "1 and 4",
+      "C": "4 and 5",
+      "D": "3 and 5"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct items: <b>4 and 5</b> – Send shipment; Receive customer payment."
+    },
+    {
+     "id": "ERP2_C9_T5_Q44",
+     "question": "Which of the following is not a key step in the fulfillment process?",
+     "options": {
+      "A": "Sales order processing",
+      "B": "Inventory sourcing",
+      "C": "Pre-sales activity",
+      "D": "Invoice verification"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct answer: <b>Pre-sales activity</b>."
+    },
+    {
+     "id": "ERP2_C9_T5_Q45",
+     "question": "Which one of the following are examples of sales units?<br>(1) Cartons<br>(2) Data<br>(3) Crates<br>(4) Barrels<br>(5) Cases<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "1, 2, 3 and 4",
+      "B": "1, 2, 3 and 5",
+      "C": "1, 3, 4 and 5",
+      "D": "2, 3, 4 and 5"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct items: <b>1, 3, 4 and 5</b> – Cartons; Crates; Barrels; Cases."
+    },
+    {
+     "id": "ERP2_C9_T5_Q46",
+     "question": "Is this statement correct? <br><i>A loading point is sub division of a shipping point. It is used to designate special handling that materials may require. One shipping point may have only one loading point assigned to it.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false. <i>Note: One shipping point can have <b>several</b> loading points. (corrected from the source file)</i>"
+    },
+    {
+     "id": "ERP2_C9_T5_Q47",
+     "question": "Is this statement correct? <br><i>A sales area is a combination of distribution chain and division.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    },
+    {
+     "id": "ERP2_C9_T5_Q48",
+     "question": "Is this statement correct? <br><i>A sales organization can be assigned to multiple company codes.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "B",
+     "explanation": "<b>No</b> – the statement is false. <i>Note: A sales organisation belongs to exactly <b>one</b> company code. (corrected from the source file)</i>"
+    },
+    {
+     "id": "ERP2_C9_T5_Q49",
+     "question": "Is this statement correct? <br><i>The standard SAP System contains access sequences that are predefined for each of the standard condition types.</i>",
+     "options": {
+      "A": "Yes",
+      "B": "No"
+     },
+     "correctAnswer": "A",
+     "explanation": "<b>Yes</b> – the statement is true."
+    }
+   ]
+  },
+  {
+   "topicId": "ERP2_C9_T6",
+   "topicName": "Project System & Maintenance (PS, EAM)",
+   "questions": [
+    {
+     "id": "ERP2_C9_T6_Q1",
+     "question": "How can you post internal labor costs to a network activity?<br>(1) Confirmation<br>(2) Service entry sheet<br>(3) Distribution<br>(4) Activity allocation<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "2 and 4",
+      "B": "1 and 4",
+      "C": "3 and 4",
+      "D": "1 and 3"
+     },
+     "correctAnswer": "B",
+     "explanation": "Correct items: <b>1 and 4</b> – Confirmation; Activity allocation."
+    },
+    {
+     "id": "ERP2_C9_T6_Q2",
+     "question": "What are the process steps in corrective maintenance?",
+     "options": {
+      "A": "Create Task List Create Plan Schedule Plan Complete Order Billing",
+      "B": "Create Task List Create Plan Schedule Plan Release Order Complete Order",
+      "C": "Create Notification Create Order Release Order Execute Order Complete Order",
+      "D": "Create Notification Release Order Execute Order Complete Order Billing"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct answer: <b>Create Notification Create Order Release Order Execute Order Complete Order</b>."
+    },
+    {
+     "id": "ERP2_C9_T6_Q3",
+     "question": "Which objects can you settle?<br>(1) Cost center<br>(2) Maintenance order<br>(3) Profitability segment<br>(4) Work breakdown structure (WBS) element<br><b>Choose the correct combination:</b>",
+     "options": {
+      "A": "3 and 4",
+      "B": "1 and 4",
+      "C": "2 and 4",
+      "D": "2 and 3"
+     },
+     "correctAnswer": "C",
+     "explanation": "Correct items: <b>2 and 4</b> – Maintenance order; Work breakdown structure (WBS) element. <i>Note: Maintenance orders and WBS elements are senders that can be settled; cost centers are allocated, not settled. (corrected from the source file)</i>"
+    }
+   ]
+  }
+ ]
+}
