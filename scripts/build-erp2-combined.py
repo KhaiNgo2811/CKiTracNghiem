@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Sinh data/ERP2/ERP2_C9.json từ file 'TEST ERP2 tổng hợp.pdf' (đã tách câu sẵn vào b1.json).
 Chạy: python scripts/build-erp2-combined.py scripts/erp2-combined-source.json
-- True/False -> Yes/No
+- True/False -> viết lại thành ABCD (erp2_c9_mc.py)
 - Câu nhiều đáp án -> trắc nghiệm 4 phương án tổ hợp
 - Chỉ lấy câu trong phạm vi thi (danh sách PICK đã soát tay)
 """
@@ -126,6 +126,9 @@ chapter = {'chapterId': 'ERP2_C9', 'chapterName': 'Combined test bank (from revi
 for ti, (name, picks) in enumerate(PICK.items(), 1):
     qs = [convert(x, f'ERP2_C9_T{ti}_Q{k}') for k, x in enumerate(picks, 1)]
     chapter['topics'].append({'topicId': f'ERP2_C9_T{ti}', 'topicName': name, 'questions': qs})
+
+import erp2_c9_mc
+erp2_c9_mc.apply(chapter)  # Yes/No -> ABCD
 
 with open(OUT + 'ERP2_C9.json', 'w', encoding='utf-8') as f:
     json.dump(chapter, f, ensure_ascii=False, indent=1)
