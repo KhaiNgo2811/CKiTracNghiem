@@ -1046,7 +1046,7 @@
         {
           "id": "NT_C1_T10_E1",
           "type": "fill",
-          "question": "Mô hình OSI và mô hình TCP/IP có cùng tầng (a) _______ (tầng giao vận; tầng mạng cũng trùng tên gọi chức năng).",
+          "question": "Mô hình OSI và mô hình TCP/IP có cùng tầng (a) _______.",
           "options": {},
           "correctAnswer": "Transport",
           "acceptedAnswers": [
@@ -1054,14 +1054,20 @@
             "Transport Layer",
             "Giao vận",
             "Tầng giao vận",
+            "Application",
+            "Application Layer",
+            "Tầng Application",
+            "Ứng dụng",
+            "Tầng ứng dụng",
             "Network",
             "Network Layer",
             "Tầng Network",
             "Tầng mạng",
             "Mạng",
-            "Internet"
+            "Transport và Application",
+            "Application và Transport"
           ],
-          "explanation": "OSI và TCP/IP trùng nhau ở tầng **Transport** (giao vận: TCP, UDP) và tầng **Network** (mạng, còn gọi Internet trong TCP/IP: IP). Các tầng trên/dưới được gộp khác nhau (TCP/IP có 4 tầng, OSI có 7)."
+          "explanation": "Đáp án chuẩn nhất: **Transport** (giao vận: TCP, UDP) vì cả tên lẫn chức năng tương ứng một–một giữa hai mô hình. **Application** cũng trùng tên, nhưng tầng Application của TCP/IP gộp 3 tầng OSI (Application, Presentation, Session). **Network** tương ứng về chức năng, nhưng trong TCP/IP thường gọi là **Internet**."
         },
         {
           "id": "NT_C1_T10_E2",

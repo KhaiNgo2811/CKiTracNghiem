@@ -3,9 +3,10 @@
 import json
 D = 'data/Nền tảng/'
 NEW = [
- ('Mô hình OSI và mô hình TCP/IP có cùng tầng (a) _______ (tầng giao vận; tầng mạng cũng trùng tên gọi chức năng).', 'Transport',
-  ['Tầng Transport', 'Transport Layer', 'Giao vận', 'Tầng giao vận', 'Network', 'Network Layer', 'Tầng Network', 'Tầng mạng', 'Mạng', 'Internet'],
-  'OSI và TCP/IP trùng nhau ở tầng **Transport** (giao vận: TCP, UDP) và tầng **Network** (mạng, còn gọi Internet trong TCP/IP: IP). Các tầng trên/dưới được gộp khác nhau (TCP/IP có 4 tầng, OSI có 7).'),
+ ('Mô hình OSI và mô hình TCP/IP có cùng tầng (a) _______.', 'Transport',
+  ['Tầng Transport', 'Transport Layer', 'Giao vận', 'Tầng giao vận', 'Application', 'Application Layer', 'Tầng Application', 'Ứng dụng', 'Tầng ứng dụng',
+   'Network', 'Network Layer', 'Tầng Network', 'Tầng mạng', 'Mạng', 'Transport và Application', 'Application và Transport'],
+  'Đáp án chuẩn nhất: **Transport** (giao vận: TCP, UDP) vì cả tên lẫn chức năng tương ứng một–một giữa hai mô hình. **Application** cũng trùng tên, nhưng tầng Application của TCP/IP gộp 3 tầng OSI (Application, Presentation, Session). **Network** tương ứng về chức năng, nhưng trong TCP/IP thường gọi là **Internet**.'),
  ('Khi bấm dây nối mạng LAN bằng cáp UTP, chỉ cần bấm đúng cặp màu (b) _______ (chân 1, 2) và cặp màu xanh lá (chân 3, 6).', 'Cam',
   ['Màu cam', 'Orange', 'Sọc cam', 'Cam và sọc cam', 'Sọc cam, cam', 'Cặp cam'],
   'Với Ethernet 10/100 Mbps chỉ dùng 4 dây **1, 2, 3, 6**. Theo chuẩn T568B: chân 1–2 là cặp **cam (sọc cam, cam)**, chân 3–6 là cặp **xanh lá (sọc xanh lá, xanh lá)**.'),
