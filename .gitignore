@@ -8,3 +8,4 @@ __pycache__/
 
 # Hình cắt từ giáo trình (bản quyền)
 data/ERP2/book-figs/
+scripts/erp2-combined-source.json
