@@ -1,0 +1,87 @@
+# -*- coding: utf-8 -*-
+"""Sinh data/ERP2/ERP2_C8.json: câu hỏi tự luận (essay, tiếng Anh) kèm dàn ý và bài mẫu."""
+import json
+
+OUT = 'data/ERP2/'
+
+
+def g(flow, *paragraphs):
+    return (f'<p class="mb-2"><b>Outline:</b> {flow}</p><p class="mb-2"><b>Model answer:</b></p>'
+            + ''.join(f'<p class="mb-2">{x}</p>' for x in paragraphs))
+
+
+TOPICS = [
+    ('Core business processes', [
+        ('Describe the <b>procure-to-pay process</b> in SAP. For each step, explain its purpose, the documents created and the effect on accounting.',
+         g('Need → source → purchase order → goods receipt → invoice verification → payment → controls and integration.',
+           'Procure-to-pay covers everything from recognising a need for material to paying the vendor. It starts with a <b>purchase requisition</b>, an internal request that states what is needed, how much and when. The buyer then determines a source of supply, possibly by requesting quotations, and creates a <b>purchase order</b>, which is the formal commitment to the vendor. These first steps create no accounting entry because nothing has been received or owed.',
+           'At <b>goods receipt</b> the warehouse accepts the material. The system creates a material document and an accounting document: inventory is debited and the <b>GR/IR clearing account</b> is credited. At <b>invoice verification</b> the vendor invoice is compared with the purchase order and the goods receipt (<b>three-way match</b>). GR/IR is cleared and the vendor account is credited, while the payables reconciliation account is updated automatically. Finally, <b>payment</b> debits the vendor and credits the bank.',
+           'The process shows integration: MM performs the logistics steps and FI receives the financial consequences automatically through account determination. Tolerance limits and the three-way match protect the company from overpayment and fraud.')),
+        ('Describe the <b>order-to-cash process</b>. How does it integrate sales, warehouse and finance?',
+         g('Inquiry and quotation → sales order checks → delivery and goods issue → billing → payment → integration.',
+           'Order-to-cash turns a customer need into money received. It may begin with a customer <b>inquiry</b> and a <b>quotation</b>, which is a binding offer for a limited time. When the customer agrees, a <b>sales order</b> is created. At this point the system determines the price with the condition technique, checks material availability and proposes a delivery date.',
+           'Next an <b>outbound delivery</b> is created, and the warehouse picks and packs the goods. <b>Goods issue</b> records that the goods leave the company: inventory decreases and cost of goods sold is recorded. This is the first accounting impact. <b>Billing</b> then creates the invoice, debiting the customer receivable and crediting revenue. The process ends when the <b>customer payment</b> is posted, debiting the bank and clearing the receivable.',
+           'Sales, warehouse and finance work with the same data and the document flow links every step, so staff can trace the status of an order at any time. Automatic account determination means that logistics users do not enter accounting accounts themselves.')),
+        ('A bicycle company receives a large customer order but does not have enough stock. Explain <b>how ERP processes work together</b> from the order until the money is collected.',
+         g('Sales order and availability check → obtain supply (buy components, produce) → goods receipt → deliver and bill → pay vendors, collect cash → role of FI and CO.',
+           'The sales department records a sales order in SD. The <b>availability check</b> shows that current stock and planned receipts cannot cover the quantity by the requested date, so the system proposes another date or partial delivery. If stock must be shared between customers, backorder processing can prioritise orders.',
+           'To cover the shortage, the company produces more bicycles and buys the missing components. Requirements lead to purchase requisitions, purchase orders and goods receipts in MM, followed by invoice verification and vendor payment. Production consumes the components and delivers finished bicycles into stock.',
+           'The warehouse then picks, packs and posts goods issue; SD bills the customer, and FI records the receivable and later the payment. Throughout, FI records the financial effects and CO tracks costs and responsibility. Because all modules share one database, a change in one area is immediately visible to the others, which reduces delays and duplicate data entry.')),
+    ]),
+    ('Accounting and controlling', [
+        ('Explain how <b>financial accounting</b> receives and controls data from other processes. Include the general ledger, subledgers, reconciliation accounts and automatic account determination.',
+         g('Role of FI → G/L and subledgers → reconciliation accounts → automatic account determination → controls.',
+           'Financial accounting records all financially relevant events so that the company can produce legal financial statements. Its core is the <b>general ledger</b>, built from a chart of accounts and kept for each company code. Details for individual customers, vendors and assets are held in <b>subledgers</b>.',
+           'Each subledger is linked to a <b>reconciliation account</b>. When a vendor invoice is posted to the vendor, the reconciliation account is updated at the same time, and manual posting to it is blocked, so detail and totals always agree.',
+           'Logistics events reach FI through <b>automatic account determination</b>. A goods receipt, goods issue or billing document creates the accounting entry without user input about accounts. Data quality and internal control are supported by posting periods, document types, field status and tolerance groups. As a result, financial reports are timely, consistent and traceable back to the original business document.')),
+        ('Describe the <b>overhead management process</b> in CO. How are costs collected and allocated, and why does it matter to managers?',
+         g('Costs arrive from FI → collected on cost objects → allocated (distribution, assessment, activity) → internal orders settled → decisions.',
+           'Overhead costs cannot be traced directly to one product, so CO first collects them where they arise. When an expense with a primary cost element is posted in FI, CO also receives it on a <b>cost center</b> or an <b>internal order</b>.',
+           'Support cost centers then pass their costs to the units that benefit. <b>Distribution</b> allocates costs at period end and keeps the original cost element. <b>Assessment</b> combines several costs under a secondary cost element. <b>Activity allocation</b> charges according to the quantity of service used, such as IT hours. Temporary costs, such as a trade show, are collected on an internal order and later moved to their receivers by <b>settlement</b>.',
+           'This shows managers the real cost of each department and activity, so they can compare plan and actual, assign responsibility, price products more accurately and decide where to reduce spending.')),
+    ]),
+    ('Projects and maintenance', [
+        ('Describe the <b>life cycle of a project</b> in SAP PS, from definition to settlement.',
+         g('Project definition → WBS and network → planning → budget and release → execution → period-end and settlement.',
+           'A project is a unique task limited in time and budget. In SAP PS it starts with a <b>project definition</b>. The <b>work breakdown structure</b> divides the project into work packages, and a <b>network</b> lists the activities and their dependencies.',
+           'Planning then determines dates, resources, materials and costs. Management approves a <b>budget</b>, which is a binding limit, and releases the project. During execution, internal work is confirmed, materials are withdrawn or purchased and external services are received. Commitments and actual costs are compared with the budget, and milestones show progress and may trigger billing for a customer project.',
+           'At period end, progress and results analysis evaluate unfinished work. Finally, <b>settlement</b> transfers costs and revenues to receivers such as assets, accounts or profitability analysis. PS therefore connects SD, MM, HR, FI and CO around one project structure.')),
+        ('A production machine suddenly breaks down. Describe the <b>corrective maintenance process</b> in SAP EAM and its integration with other modules.',
+         g('Notification → planning → control → execution → completion and settlement → integration and benefit.',
+           'The operator first creates a <b>maintenance notification</b> that describes the problem, the affected equipment or functional location and the urgency. In <b>planning</b>, the maintenance planner creates a <b>maintenance order</b> with operations, spare parts, tools and estimated costs. In an emergency the order can be created immediately.',
+           'In the <b>control</b> phase the system checks material and capacity and the order is released. During <b>execution</b> technicians repair the machine and withdraw spare parts. Parts not in stock are bought through MM and charged to the order. In <b>completion</b>, technicians confirm working time and record causes and actions, and the order is set to technically completed.',
+           'The order collects all costs and <b>settles</b> them to the responsible cost center in CO, while FI records the related postings. The stored history helps the company analyse recurring failures and move towards preventive or predictive maintenance.')),
+    ]),
+    ('Implementation and enterprise structure', [
+        ('A company is going to implement SAP. Describe the <b>steps of the implementation</b>, the role of configuration, and how the company should test the system.',
+         g('ASAP phases → configuration vs customization → data order → testing levels → success factors.',
+           'Following the ASAP approach, the company first prepares the project by setting goals, scope and team. In the <b>business blueprint</b> it documents how its processes should work. In <b>realization</b> the system is configured. <b>Final preparation</b> covers testing, user training and cutover, followed by <b>go-live</b> and support.',
+           'Configuration chooses options and values without changing code. Customization changes or adds code and should be used only when necessary, preferably as an enhancement so that upgrades remain safe. The enterprise structure is set up first, then business rules, then master data; old data must be cleansed before migration.',
+           'Testing proceeds from <b>unit</b> tests to <b>scenario</b> and <b>integration</b> tests and then <b>user acceptance</b>, with regression and performance tests as needed. Management support, clear requirements and trained users are important, because the system changes how people work and not only the software they use.')),
+        ('Explain how you would design the <b>enterprise structure</b> for a company with several countries, factories and sales channels.',
+         g('Client → company codes → controlling area → plants and storage locations → purchasing and sales structure → trade-offs.',
+           'The enterprise structure represents the company in the system, so it must be designed before master data and transactions. The whole group is one <b>client</b>. Each legal entity, usually one per country, becomes a <b>company code</b> with its own books and currency. A <b>controlling area</b> can cover several company codes to give management a common view, provided they share the required accounting settings.',
+           'Factories and distribution centres are <b>plants</b>, each belonging to one company code, with <b>storage locations</b> inside. Purchasing can be organised centrally to gain bargaining power or per plant to stay flexible. Sales is organised by <b>sales organisation</b>, <b>distribution channel</b> and <b>division</b>, which together form sales areas, and shipping points handle deliveries.',
+           'The design should reflect legal requirements and real responsibilities while staying as simple as possible. An over-detailed structure increases maintenance work, and a structure that is too simple cannot produce the reports managers need.')),
+    ]),
+]
+
+chapter = {'chapterId': 'ERP2_C8', 'chapterName': 'Essay practice – business processes', 'topics': []}
+for ti, (tname, items) in enumerate(TOPICS, 1):
+    qs = [{'id': f'ERP2_C8_T{ti}_Q{k}', 'type': 'essay', 'question': q, 'options': {}, 'explanation': a}
+          for k, (q, a) in enumerate(items, 1)]
+    chapter['topics'].append({'topicId': f'ERP2_C8_T{ti}', 'topicName': tname, 'questions': qs})
+
+with open(OUT + 'ERP2_C8.json', 'w', encoding='utf-8') as f:
+    json.dump(chapter, f, ensure_ascii=False, indent=2)
+
+with open(OUT + 'manifest.json', encoding='utf-8-sig') as f:
+    m = json.load(f)
+m['chapters'] = [c for c in m['chapters'] if c['chapterId'] != 'ERP2_C8']
+m['chapters'].append({'chapterId': 'ERP2_C8', 'chapterName': chapter['chapterName'], 'topicCount': len(chapter['topics']),
+                      'questionCount': sum(len(t['questions']) for t in chapter['topics'])})
+m['totalQuestions'] = sum(c['questionCount'] for c in m['chapters'])
+m['totalTopics'] = sum(c['topicCount'] for c in m['chapters'])
+with open(OUT + 'manifest.json', 'w', encoding='utf-8') as f:
+    json.dump(m, f, ensure_ascii=False, indent=2)
+print(m['totalQuestions'], 'questions')

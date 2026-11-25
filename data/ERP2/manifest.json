@@ -41,8 +41,14 @@
       "chapterName": "TS410 Unit 11 – Enterprise Asset Management (EAM)",
       "topicCount": 5,
       "questionCount": 55
+    },
+    {
+      "chapterId": "ERP2_C8",
+      "chapterName": "Essay practice – business processes",
+      "topicCount": 4,
+      "questionCount": 9
     }
   ],
-  "totalQuestions": 727,
-  "totalTopics": 59
+  "totalQuestions": 736,
+  "totalTopics": 63
 }
