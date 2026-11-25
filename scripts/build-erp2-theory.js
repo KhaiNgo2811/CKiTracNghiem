@@ -72,6 +72,13 @@ function fig(name, caption, width = 600) {
   C.push(new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 160 }, children: [new TextRun({ text: caption, italics: true, size: 18, color: '555555', font: FONT })] }));
 }
 
+// Hình cắt từ giáo trình (scripts/crop-erp2-bookfigs.py); bỏ qua nếu máy không có
+function book(name, caption, width = 580) {
+  if (!fs.existsSync(path.join(__dirname, '..', 'data', 'ERP2', 'book-figs', name + '.png'))) return;
+  const src = name[0] === 'B' ? 'Business Process Configuration with SAP ERP, Fig. ' : 'SAP TS410, Fig. ';
+  fig('../../data/ERP2/book-figs/' + name, caption + ' (' + src + name.slice(1) + ')', width);
+}
+
 // ================= COVER =================
 C.push(new Paragraph({ spacing: { before: 2600, after: 200 }, alignment: AlignmentType.CENTER, children: [new TextRun({ text: 'THEORY REVIEW GUIDE', bold: true, size: 40, font: FONT, color: '1F3A5F' })] }));
 C.push(new Paragraph({ spacing: { after: 200 }, alignment: AlignmentType.CENTER, children: [new TextRun({ text: 'ERP 2 – BUSINESS PROCESS CONFIGURATION WITH SAP', bold: true, size: 34, font: FONT })] }));
@@ -112,6 +119,7 @@ terms([
   ['Business rules and parameters', 'Rules express company practices; parameters set the limits within which data and actions are valid.'],
   ['Data migration and cleansing', 'Moving data from the legacy system after removing wrong and duplicated records.'],
 ]);
+book('B1-2', 'Enterprise structure across modules', 480);
 h2('Implementation logic (ASAP)');
 p('The project moves from **project preparation** (goals and team) to **business blueprint** (documented requirements), **realization** (configuration), **final preparation** (testing, training, cutover), **go-live** and **operation**. The idea is to agree on the processes before building them.');
 fig('asap', 'ASAP implementation phases', 560);
@@ -162,6 +170,8 @@ terms([
 h2('Financial statements');
 p('The **balance sheet** shows assets, liabilities and equity at a point in time (Assets = Liabilities + Equity). The **income statement** shows revenue and expenses over a period. Profit or loss moves to **retained earnings** at year end. The **cash flow statement** explains changes in cash.');
 fig('subledger', 'Subledgers feed the general ledger through reconciliation accounts', 500);
+book('T38', 'Organisational levels in financials and logistics', 520);
+book('B2-8', 'Subledger and reconciliation account postings', 580);
 h2('Model essay answers');
 essay('Explain the relationship between subledgers and the general ledger.', [
   'The general ledger gives the overall financial picture, but it would be unreadable if every customer and vendor had its own G/L account. Subledgers therefore keep the detail, and each is linked to a reconciliation account in the G/L. When a vendor invoice is posted, the vendor account is updated directly and the reconciliation account is updated at the same moment. Because users cannot post to the reconciliation account by hand, the totals stay consistent.',
@@ -192,6 +202,10 @@ terms([
   ['Real vs statistical posting', 'A real posting carries the cost; a statistical posting is only for information.'],
 ]);
 fig('allocation', 'How overhead moves in CO', 500);
+book('B3-2', 'Costs flowing from FI to CO', 580);
+book('B3-5', 'Periodic allocation: distribution', 580);
+book('B3-6', 'Periodic allocation: assessment', 580);
+book('B3-8', 'Internal activity allocation', 580);
 h2('Model essay answers');
 essay('Compare distribution, assessment and activity allocation.', [
   'All three move overhead from the unit that incurred it to the units that benefit. Distribution and assessment happen at period end after costs have accumulated: distribution preserves the original cost type, while assessment merges them into one allocation cost. Activity allocation does not wait; it charges according to the service consumed, for example IT support hours. The more precise the cause-and-effect link, the fairer the result, but the more data must be recorded.',
@@ -230,6 +244,11 @@ terms([
   ['Material document', 'Evidence of a goods movement, usually accompanied by an accounting document.'],
 ]);
 fig('threeway', 'Three-way match', 450);
+book('B4-1', 'Basic procurement process', 580);
+book('T172', 'Source-to-pay cycle', 580);
+book('T177', 'Procurement organisational levels', 520);
+book('B4-7', 'Enterprise-level purchasing model', 580);
+book('B4-16', 'Accounting consequences of procurement', 580);
 h2('Model essay answers');
 essay('Describe procure-to-pay and its accounting consequences.', [
   'The process begins with a purchase requisition expressing a need, followed by choosing a source and issuing a purchase order. None of these changes the books, since nothing has been received or owed yet. At goods receipt the company owns the material, so inventory increases and the GR/IR account holds the not-yet-invoiced amount. Invoice verification checks the three documents, clears GR/IR and records the debt to the vendor. Payment then removes the debt and reduces cash.',
@@ -267,6 +286,12 @@ terms([
   ['Customer-material info record', 'Data specific to one customer and one material.'],
 ]);
 fig('salesarea', 'Sales enterprise structure', 430);
+book('B5-1', 'Typical fulfillment process', 580);
+book('T373', 'Lead to cash: process, roles and system steps', 580);
+book('T377', 'Enterprise structure in sales', 520);
+book('B5-11', 'Sales areas', 580);
+book('T403', 'Sales document structure', 580);
+book('B5-37', 'Revenue account determination', 580);
 h2('Model essay answers');
 essay('Describe order-to-cash and its integration with FI.', [
   'The process turns a customer need into cash. After inquiry and quotation, the sales order records the agreement and the system checks availability and determines price. The goods are then picked, packed and issued. Goods issue is the first accounting event because ownership of stock leaves the company. Billing records revenue and a receivable, and the process ends when payment clears that receivable.',
@@ -275,6 +300,7 @@ essay('Explain pricing with the condition technique.', [
   'Instead of one fixed price, SAP builds the price from separate conditions such as a base price, discounts and freight. For each condition type the system follows an access sequence, searching from the most specific record to the most general one. The pricing procedure arranges the conditions into the final amount. The benefit is that prices can differ by customer, material or channel without changing any program.',
 ]);
 fig('pricing', 'Condition technique: from procedure to the stored value', 560);
+book('B5-27', 'Price determination flow', 580);
 pb();
 
 // ================= PS =================
@@ -294,6 +320,9 @@ terms([
   ['Settlement', 'Transfers collected costs and revenues to receivers such as accounts, assets or profitability analysis.'],
 ]);
 fig('wbs', 'Example: WBS (what) and activities (how)', 500);
+book('T471', 'Project phases', 580);
+book('T481', 'Networks and activities', 580);
+book('T521', 'Project settlement', 580);
 h2('Model essay answers');
 essay('Explain the structure of a project in SAP PS.', [
   'A project begins with the project definition. The work breakdown structure then answers what must be delivered by dividing the project into levels of work packages. The network answers how and when the work is done by listing activities and their order. Linking activities to WBS elements lets dates and costs add up through the hierarchy, giving managers control at each level.',
@@ -323,6 +352,10 @@ terms([
 h2('Process logic');
 p('**Notification** records the problem. **Planning** creates the order and lists work and materials. **Control** checks material and capacity and releases the order. **Execution** performs the work and withdraws materials. **Completion** records time and findings, closes the work technically and settles the costs.');
 fig('eam', 'Corrective maintenance and settlement', 560);
+book('T525', 'Corrective maintenance process', 580);
+book('T529', 'Organisational levels in EAM', 580);
+book('T535', 'Functional location structure', 580);
+book('T561', 'Elements of a maintenance order', 580);
 h2('Model essay answers');
 essay('Describe the corrective maintenance process and its integration.', [
   'When equipment fails, a notification captures the problem. A planner turns it into a maintenance order, and after availability checks the order is released and carried out. Materials come from stock or are bought through MM, labour is confirmed as internal activity, and CO collects these costs on the order. After completion the costs are settled to the responsible cost center, and the history helps prevent the next failure.',

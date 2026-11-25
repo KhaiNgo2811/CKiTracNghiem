@@ -5,3 +5,6 @@ data/**/*.pdf
 
 __pycache__/
 *.pyc
+
+# Hình cắt từ giáo trình (bản quyền)
+data/ERP2/book-figs/
